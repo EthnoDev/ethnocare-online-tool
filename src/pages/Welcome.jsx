@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import PageWrapper from "../components/PageWrapper";
 import SelectableOption from "../components/SelectableOption";
+import RedirectLogo from "../assets/redirect-logo.svg";
 
 export default function Welcome() {
   const navigate = useNavigate();
@@ -50,7 +51,21 @@ export default function Welcome() {
           />
 
           <SelectableOption
-            label="FAQ"
+            label={
+              <span className="flex items-center justify-center gap-2">
+                <span>FAQ</span>
+                <img
+                  src={RedirectLogo}
+                  alt=""
+                  aria-hidden="true"
+                  className={`h-4 w-4 transition-colors ${
+                    goingTo === "faq"
+                      ? "brightness-0 invert" // turns SVG white
+                      : "opacity-100"
+                  }`}
+                />
+              </span>
+            }
             description="Use this tool to get answers to your questions"
             selected={goingTo === "faq"}
             onClick={() =>
@@ -60,7 +75,7 @@ export default function Welcome() {
                   "_blank",
                   "noopener,noreferrer"
                 );
-                setGoingTo(null); // reset selected state
+                setGoingTo(null);
               })
             }
           />
