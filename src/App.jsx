@@ -12,6 +12,8 @@ import MainWelcome from "./pages/Welcome";
 import ReturnWelcome from "./pages/return/Welcome";
 import ReturnIdentification from "./pages/return/Identification"; 
 import RecommendationWelcome from "./pages/recommendation/Welcome";
+import SizingWelcome from "./pages/sizing/Welcome";
+import AssistanceWelcome from "./pages/assistance/Welcome";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -21,6 +23,8 @@ function AnimatedRoutes() {
         <Route path="/" element={<MainWelcome />} />
         <Route path="/return" element={<ReturnWelcome />} />
         <Route path="/recommendation" element={<RecommendationWelcome />} />
+        <Route path="/sizing" element={<SizingWelcome />} />
+        <Route path="/assistance" element={<AssistanceWelcome />} />
         <Route path="/return/identification" element={<ReturnIdentification />} />
       </Routes>
     </AnimatePresence>
