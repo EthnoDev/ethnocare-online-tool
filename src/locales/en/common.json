@@ -1,0 +1,58 @@
+{
+  "cta": {
+    "start": "START",
+    "next": "Next",
+    "back": "Back",
+    "confirm": "CONFIRM",
+    "restart": "Find a new size",
+    "sizings": "Sizings in PDF",
+    "sizingsPopup": "Sizing Charts in PDF",
+    "header":"OVERLAY REIMBURSEMENT CODE : L-5657"
+  },
+  "products": {
+    "tt": "Overlay Transtibial",
+    "tf": "Overlay Transfemoral",
+    "underlay tt": "Underlay Transtibial"
+  },
+  "units": {
+    "imperial": "Imperial (Inch)",
+    "metric": "Metric (Centimeter)"
+  },
+  "suspension": {
+    "title": "Choose your suspension",
+    "tt-locking": "Distal locking",
+    "tt-lanyard": "Lanyard",
+    "tt-suspension-sleeve": "Suspension sleeve",
+    "tt-distal-seal": "Distal seal",
+    "tt-distal-lanyard": "Distal lanyard",
+    "tt-cushion": "Cushion",
+
+    "tf-distal-locking": "Distal locking",
+    "tf-lanyard": "Lanyard",
+    "tf-distal-seal": "Distal seal",
+    "tf-cushion": "Cushion"
+  },
+  "orientation": {
+    "left": "Left",
+    "right": "Right"
+  },
+  "footer": {
+    "select_language": "Select your language",
+    "sizing_pdfs_title": "Sizing Charts in PDF :"
+  },
+  "inputs": { "enter_measurement": "Enter measurement" },
+  "email": {
+    "placeholder": "example@mail.com",
+    "send": "Send",
+    "please_wait": "Please wait...",
+    "success": "Thank you! Your submission has been received!"
+  },
+  "popup": {
+    "notice_title": "Notice",
+    "notice_description": "It seems that we don't have your size available at the moment. Please verify that your size fits within our ranges:",
+    "label_length": "Length",
+    "label_circumference": "Circumference",
+    "contact_line": "If your measurements fall outside our size range, please contact us at:",
+    "cta_ok": "OK"
+  }
+}

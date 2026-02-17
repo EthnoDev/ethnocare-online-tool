@@ -1,0 +1,6 @@
+{
+  "missingData": "Missing size data. Please complete all steps.",
+  "noMatch": "No matching product found for the selected values.",
+  "invalid_email": "Please enter a valid email.",
+  "submit_failed": "We couldn't send the email. Please try again."
+}

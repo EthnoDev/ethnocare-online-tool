@@ -1,0 +1,101 @@
+{
+  "welcome": {
+    "title": "Guide des Tailles",
+    "description": "Cet outil vous aide à trouver la bonne taille d’Overlay.",
+    "description2": "Code de remboursement Overlay :",
+    "description3": "Code de remboursement :"
+  },
+  "unitSelection": {
+    "title": "Unités",
+    "description": "Sélectionnez votre système de mesure."
+  },
+  "productSelection": {
+    "title": "Produit",
+    "description": "Sélectionnez le produit pour lequel vous souhaitez trouver une taille."
+  },
+  "suspensionSelection": {
+    "title": "Type de suspension",
+    "description": "Sélectionnez votre système de suspension."
+  },
+  "circumferenceTTstandard": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence (C) à {{distance}} de l’extrémité distale.",
+    "alt": "Schéma de mesure de la circonférence (TT - Standard)"
+  },
+  "lengthTTstandard": {
+    "title": "Longueur",
+    "description": "Mesurez la longueur (L) du bas de l’emboîture jusqu’à la ligne de découpe poplitée.",
+    "imageAlt": "Longueur TT Standard"
+  },
+  "circumferenceTTdistal": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence (C) au sommet du joint."
+  },
+  "lengthTTdistal": {
+    "title": "Longueur",
+    "description": "Mesurez la longueur (L) du haut du joint jusqu’à la ligne de découpe poplitée."
+  },
+  "circumferenceTFstandard": {
+  "title": "Circonférence",
+  "description_metric": "Mesurez la circonférence (C) à 8 cm de l’extrémité distale.",
+  "description_imperial": "Mesurez la circonférence (C) à 3,1 po de l’extrémité distale."
+  },
+  "lengthTFstandard": {
+    "title": "Longueur",
+    "description": "Mesurez la longueur (L) de l’extrémité du manchon jusqu’au périnée."
+  },
+  "circumferenceTFdistal": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence (C) à {{distance}} du haut du joint."
+  },
+  "lengthTFdistal": {
+    "title": "Longueur",
+    "description": "Mesurez la longueur (L) du haut du joint jusqu’au périnée."
+  },
+  "lengthUnderlayTT": {
+    "title": "Longueur",
+    "description": "Mesurez la longueur (L) du manchon coupé."
+  },
+  "circumferenceUnderlayTT": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence (C) à {{distance}} de l’extrémité distale."
+  },
+  "orientation": {
+    "title": "Orientation",
+    "description": "Choisissez l’orientation du produit.",
+    "noteTitle": "L’orientation dépend de la préférence de l’utilisateur.",
+    "noteBody": "La plupart des utilisateurs choisissent la même orientation que le côté où l’Overlay sera porté."
+  },
+  "sizeTT": {
+  "title": "Taille",
+  "description": "Selon vos réponses :",
+  "product": "Produit ",
+  "system": "Système ",
+  "circumference": "Circonférence : {{value}} {{unit}}",
+  "length": "Longueur : {{value}} {{unit}}",
+  "orientation": "Orientation ",
+  "save_title": "Enregistrez votre sélection!",
+  "save_description": "Recevez immédiatement votre code produit et les ressources d'ajustement par courriel."
+  },
+  "sizeTF": {
+  "title": "Taille",
+  "description": "Selon vos réponses :",
+  "product": "Produit ",
+  "system": "Système ",
+  "circumference": "Circonférence : {{value}} {{unit}}",
+  "length": "Longueur : {{value}} {{unit}}",
+  "note_cushion_title": "Avis important",
+  "note_cushion_body": "Les liners sans verrouillage peuvent nécessiter des modifications personnalisées de l’Overlay. Veuillez nous contacter à <bold>clinics@ethnocare.ca</bold> en indiquant vos mesures et des détails sur votre système de suspension.",
+  "save_title": "Enregistrez votre sélection!",
+  "save_description": "Recevez immédiatement votre code produit et les ressources d’ajustement par courriel."
+  },
+  "sizeUnderlay": {
+  "title": "Taille",
+  "description": "Selon vos réponses :",
+  "product": "Produit ",
+  "circumference": "Circonférence : {{value}} {{unit}}",
+  "length": "Longueur : {{value}} {{unit}}",
+  "save_title": "Enregistrez votre sélection!",
+  "save_description": "Recevez immédiatement votre code produit et les ressources d’ajustement par courriel."
+  }
+}

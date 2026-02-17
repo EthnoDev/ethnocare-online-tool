@@ -1,0 +1,118 @@
+{
+  "welcome": {
+    "title": "Overlay-Größenassistent",
+    "description": "Dieses Tool hilft Ihnen, die richtige Overlay-Größe zu finden.",
+    "description2": "Overlay-Erstattungscode:",
+    "description3": "Erstattungscode:"
+  },
+
+  "unitSelection": {
+    "title": "Einheiten",
+    "description": "Wählen Sie Ihr gewünschtes Messsystem."
+  },
+
+  "productSelection": {
+    "title": "Produkt",
+    "description": "Wählen Sie das Produkt aus, für das Sie eine Größe bestimmen möchten."
+  },
+
+  "suspensionSelection": {
+    "title": "Suspensionstyp",
+    "description": "Wählen Sie Ihr Suspensionssystem."
+  },
+
+  "circumferenceTTstandard": {
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) in {{distance}} Abstand vom distalen Ende.",
+    "alt": "Umfangsmessung (TT – Standard)"
+  },
+
+  "lengthTTstandard": {
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) vom Schaftboden bis zur poplitealen Trimmlinie.",
+    "imageAlt": "Längenmessung TT Standard"
+  },
+
+  "circumferenceTTdistal": {
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) am oberen Rand der Dichtung."
+  },
+
+  "lengthTTdistal": {
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) vom oberen Rand der Dichtung bis zur poplitealen Trimmlinie."
+  },
+
+  "circumferenceTFstandard": {
+    "title": "Umfang",
+    "description_metric": "Messen Sie den Umfang (C) 8 cm vom distalen Ende entfernt.",
+    "description_imperial": "Messen Sie den Umfang (C) 3,1 Zoll vom distalen Ende entfernt."
+  },
+
+  "lengthTFstandard": {
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) vom Ende des Liners bis zum Perineum."
+  },
+
+  "circumferenceTFdistal": {
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) in {{distance}} Abstand vom oberen Rand der Dichtung."
+  },
+
+  "lengthTFdistal": {
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) vom oberen Rand der Dichtung bis zum Perineum."
+  },
+
+  "lengthUnderlayTT": {
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) des zugeschnittenen Liners."
+  },
+
+  "circumferenceUnderlayTT": {
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) in {{distance}} Abstand vom distalen Ende."
+  },
+
+  "orientation": {
+    "title": "Ausrichtung",
+    "description": "Wählen Sie die Produktausrichtung.",
+    "noteTitle": "Die Ausrichtung basiert auf der Benutzerpräferenz.",
+    "noteBody": "Die meisten Nutzer wählen die Ausrichtung entsprechend der Seite, auf der das Overlay getragen wird."
+  },
+
+  "sizeTT": {
+    "title": "Größe",
+    "description": "Basierend auf Ihren Angaben:",
+    "product": "Produkt ",
+    "system": "System ",
+    "circumference": "Umfang : {{value}} {{unit}}",
+    "length": "Länge : {{value}} {{unit}}",
+    "orientation": "Ausrichtung ",
+    "save_title": "Auswahl speichern!",
+    "save_description": "Erhalten Sie Ihren Produktcode und Anpassungsressourcen sofort per E-Mail."
+  },
+
+  "sizeTF": {
+    "title": "Größe",
+    "description": "Basierend auf Ihren Angaben:",
+    "product": "Produkt ",
+    "system": "System ",
+    "circumference": "Umfang : {{value}} {{unit}}",
+    "length": "Länge : {{value}} {{unit}}",
+    "note_cushion_title": "Wichtiger Hinweis",
+    "note_cushion_body": "Cushion-Systeme können individuelle Anpassungen am Overlay erfordern. Bitte kontaktieren Sie uns unter <bold>clinics@ethnocare.ca</bold> mit Ihren Maßen und Details zu Ihrem Suspensionssystem.",
+    "save_title": "Auswahl speichern!",
+    "save_description": "Erhalten Sie Ihren Produktcode und Anpassungsressourcen sofort per E-Mail."
+  },
+
+  "sizeUnderlay": {
+    "title": "Größe",
+    "description": "Basierend auf Ihren Angaben:",
+    "product": "Produkt ",
+    "circumference": "Umfang : {{value}} {{unit}}",
+    "length": "Länge : {{value}} {{unit}}",
+    "save_title": "Auswahl speichern!",
+    "save_description": "Erhalten Sie Ihren Produktcode und Anpassungsressourcen sofort per E-Mail."
+  }
+}

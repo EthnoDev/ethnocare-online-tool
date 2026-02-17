@@ -1,0 +1,58 @@
+{
+  "cta": {
+    "start": "EMPEZAR",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "confirm": "CONFIRMAR",
+    "restart": "Buscar otra talla",
+    "sizings": "Tallas en PDF",
+    "sizingsPopup": "Guía de Tallas en PDF",
+    "header":"CÓDIGO DE REEMBOLSO OVERLAY : L-5657"
+  },
+  "products": {
+    "tt": "Overlay Transtibial",
+    "tf": "Overlay Transfemoral",
+    "underlay tt": "Underlay Transtibial"
+  },
+  "units": {
+    "imperial": "Imperial (Pulgada)",
+    "metric": "Métrico (Centímetro)"
+  },
+  "suspension": {
+    "title": "Elige tu suspensión",
+    "tt-locking": "Bloqueo distal",
+    "tt-lanyard": "Cordón",
+    "tt-suspension-sleeve": "Funda de suspensión",
+    "tt-distal-seal": "Sellado distal",
+    "tt-distal-lanyard": "Cordón distal",
+    "tt-cushion": "Cojín",
+
+    "tf-distal-locking": "Bloqueo distal",
+    "tf-lanyard": "Cordón",
+    "tf-distal-seal": "Sellado distal",
+    "tf-cushion": "Cojín"
+  },
+  "orientation": {
+    "left": "Izquierda",
+    "right": "Derecha"
+  },
+  "footer": {
+    "select_language": "Selecciona tu idioma",
+    "sizing_pdfs_title": "Tablas de tallas en PDF :"
+  },
+  "inputs": { "enter_measurement": "Ingresar medida" },
+  "email": {
+    "placeholder": "ejemplo@correo.com",
+    "send": "Enviar",
+    "please_wait": "Por favor, espera...",
+    "success": "¡Gracias! ¡Hemos recibido tu envío!"
+  },
+  "popup": {
+    "notice_title": "Aviso",
+    "notice_description": "Parece que no tenemos disponible su talla en este momento. Por favor, verifique que sus medidas se encuentren dentro de nuestros rangos:",
+    "label_length": "Longitud",
+    "label_circumference": "Circunferencia",
+    "contact_line": "Si sus medidas están fuera de nuestro rango de tallas, contáctenos en:",
+    "cta_ok": "OK"
+  }
+}

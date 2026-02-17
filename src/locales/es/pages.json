@@ -1,0 +1,101 @@
+{
+  "welcome": {
+    "title": "Herramienta de Tallaje Overlay",
+    "description": "Esta herramienta le ayuda a encontrar su talla correcta de Overlay.",
+    "description2": "Código de reembolso de Overlay :",
+    "description3": "Código de reembolso :"
+  },
+  "unitSelection": {
+    "title": "Unidades",
+    "description": "Seleccione su sistema de medida."
+  },
+  "productSelection": {
+    "title": "Producto",
+    "description": "Seleccione el producto para el que desea encontrar una talla."
+  },
+  "suspensionSelection": {
+    "title": "Tipo de suspensión",
+    "description": "Seleccione su sistema de suspensión."
+  },
+  "circumferenceTTstandard": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) a {{distance}} del extremo distal.",
+    "alt": "Diagrama de medición de circunferencia (TT - Estándar)"
+  },
+  "lengthTTstandard": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) desde la base del encaje hasta la línea de recorte poplítea.",
+    "imageAlt": "Longitud TT Estándar"
+  },
+  "circumferenceTTdistal": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) en la parte superior del sello."
+  },
+  "lengthTTdistal": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea."
+  },
+  "circumferenceTFstandard": {
+  "title": "Circunferencia",
+  "description_metric": "Mida la circunferencia (C) a 8 cm del extremo distal.",
+  "description_imperial": "Mida la circunferencia (C) a 3.1 pulg del extremo distal."
+  },
+  "lengthTFstandard": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) desde el extremo del liner hasta el perineo."
+  },
+  "circumferenceTFdistal": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) a {{distance}} desde la parte superior del sello."
+  },
+  "lengthTFdistal": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) desde la parte superior del sello hasta el perineo."
+  },
+  "lengthUnderlayTT": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) del liner cortado."
+  },
+  "circumferenceUnderlayTT": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) a {{distance}} del extremo distal."
+  },
+  "orientation": {
+    "title": "Orientación",
+    "description": "Elija la orientación del producto.",
+    "noteTitle": "La orientación depende de la preferencia del usuario.",
+    "noteBody": "La mayoría de los usuarios eligen la misma orientación que el lado donde se usará el Overlay."
+  },
+  "sizeTT": {
+  "title": "Tamaño",
+  "description": "Según sus respuestas :",
+  "product": "Producto ",
+  "system": "Sistema ",
+  "circumference": "Circunferencia : {{value}} {{unit}}",
+  "length": "Longitud : {{value}} {{unit}}",
+  "orientation": "Orientación ",
+  "save_title": "¡Guarde su selección!",
+  "save_description": "Reciba su código de producto y recursos de ajuste por correo electrónico al instante."
+  },
+  "sizeTF": {
+  "title": "Tamaño",
+  "description": "Según sus respuestas :",
+  "product": "Producto ",
+  "system": "Sistema ",
+  "circumference": "Circunferencia : {{value}} {{unit}}",
+  "length": "Longitud : {{value}} {{unit}}",
+  "note_cushion_title": "Aviso importante",
+  "note_cushion_body": "Los sistemas con cojín pueden requerir modificaciones personalizadas del Overlay. Comuníquese con nosotros a <bold>clinics@ethnocare.ca</bold> indicando sus medidas y detalles sobre su sistema de suspensión.",
+  "save_title": "¡Guarde su selección!",
+  "save_description": "Reciba su código de producto y recursos de ajuste por correo electrónico."
+  },
+  "sizeUnderlay": {
+  "title": "Tamaño",
+  "description": "Según sus respuestas :",
+  "product": "Producto ",
+  "circumference": "Circunferencia : {{value}} {{unit}}",
+  "length": "Longitud : {{value}} {{unit}}",
+  "save_title": "¡Guarde su selección!",
+  "save_description": "Reciba su código de producto y recursos de ajuste por correo electrónico."
+  }
+}

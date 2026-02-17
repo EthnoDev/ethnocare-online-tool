@@ -1,0 +1,6 @@
+{
+  "missingData": "Données manquantes. Veuillez compléter toutes les étapes.",
+  "noMatch": "Aucun produit correspondant pour les valeurs sélectionnées.",
+  "invalid_email": "Veuillez entrer une adresse courriel valide.",
+  "submit_failed": "Nous n'avons pas pu envoyer le courriel. Veuillez réessayer."
+}

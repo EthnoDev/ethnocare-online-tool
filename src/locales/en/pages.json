@@ -1,0 +1,101 @@
+{
+  "welcome": {
+    "title": "Overlay Sizing Tool",
+    "description": "This sizing tool helps you find your correct Overlay size.",
+    "description2": "Overlay reimbursement code :",
+    "description3":"Reimbursement code :"
+  },
+  "unitSelection": {
+    "title": "Units",
+    "description": "Select your desired measurement system."
+  },
+  "productSelection": {
+    "title": "Product",
+    "description": "Select the product you want to find a size for."
+  },
+  "suspensionSelection": {
+    "title": "Suspension Type",
+    "description": "Select your suspension system."
+  },
+  "circumferenceTTstandard": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at {{distance}} from the distal end.",
+    "alt": "Circumference (TT - Standard) measurement diagram"
+  },
+  "lengthTTstandard": {
+    "title": "Length",
+    "description": "Measure the length (L) from the bottom of the socket to the popliteal trim line.",
+    "imageAlt": "Length TT Standard"
+  },
+  "circumferenceTTdistal": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at the top of the seal."
+  },
+  "lengthTTdistal": {
+    "title": "Length",
+    "description": "Measure the length (L) from the top of the seal to the popliteal trim line."
+  },
+  "circumferenceTFstandard": {
+  "title": "Circumference",
+  "description_metric": "Measure the circumference (C) at 8 cm from the distal end.",
+  "description_imperial": "Measure the circumference (C) at 3.1 in from the distal end."
+  },
+  "lengthTFstandard": {
+    "title": "Length",
+    "description": "Measure the length (L) from the end of the liner to the perineum."
+  },
+  "circumferenceTFdistal": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at {{distance}} from the top of the seal."
+  },
+  "lengthTFdistal": {
+    "title": "Length",
+    "description": "Measure the length (L) from the top of the seal to the perineum."
+  },
+  "lengthUnderlayTT": {
+    "title": "Length",
+    "description": "Measure the length (L) of the cut liner."
+  },
+  "circumferenceUnderlayTT": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at {{distance}} from the distal end."
+  },
+  "orientation": {
+    "title": "Orientation",
+    "description": "Choose your product orientation.",
+    "noteTitle": "The orientation is based on user preference.",
+    "noteBody": "Most users choose the same orientation as the side where the Overlay will be worn."
+  },
+  "sizeTT": {
+    "title": "Size",
+    "description": "Based on your answers :",
+    "product": "Product ",
+    "system": "System ",
+    "circumference": "Circumference : {{value}} {{unit}}",
+    "length": "Length : {{value}} {{unit}}",
+    "orientation": "Orientation ",
+    "save_title": "Save your selection!",
+    "save_description": "Get your product code and fitting resources by email instantly."
+  },
+  "sizeTF": {
+    "title": "Size",
+    "description": "Based on your answers :",
+    "product": "Product ",
+    "system": "System ",
+    "circumference": "Circumference : {{value}} {{unit}}",
+    "length": "Length : {{value}} {{unit}}",
+    "note_cushion_title": "Important notice",
+    "note_cushion_body": "Cushion systems may require custom modifications to the Overlay. Please contact us at <bold>clinics@ethnocare.ca</bold> with your sizes and details about your suspension system.",
+    "save_title": "Save your selection!",
+    "save_description": "Get your product code and fitting resources by email instantly."
+  },
+  "sizeUnderlay": {
+    "title": "Size",
+    "description": "Based on your answers :",
+    "product": "Product ",
+    "circumference": "Circumference : {{value}} {{unit}}",
+    "length": "Length : {{value}} {{unit}}",
+    "save_title": "Save your selection!",
+    "save_description": "Get your product code and fitting resources by email instantly."
+  }
+}

@@ -1,0 +1,58 @@
+{
+    "cta": {
+        "start": "START",
+        "next": "Weiter",
+        "back": "Zurück",
+        "confirm": "BESTÄTIGEN",
+        "restart": "Neue Größe finden",
+        "sizings": "Größentabellen als PDF",
+        "sizingsPopup": "Größentabellen als PDF",
+        "header":"OVERLAY-ERSTATTUNGSCODE : L-5657"
+    },
+    "products": {
+        "tt": "Overlay Transtibial",
+        "tf": "Overlay Transfemoral",
+        "underlay tt": "Underlay Transtibial"
+    },
+    "units": {
+        "imperial": "Imperial (Zoll)",
+        "metric": "Metrisch (Zentimeter)"
+    },
+    "suspension": {
+        "title": "Wählen Sie Ihr Suspensionssystem",
+        "tt-locking": "Distale Arretierung",
+        "tt-lanyard": "Zugsystem",
+        "tt-suspension-sleeve": "Suspensionsmanschette",
+        "tt-distal-seal": "Distale Abdichtung",
+        "tt-distal-lanyard": "Distales Zugsystem",
+        "tt-cushion": "Polster",
+
+        "tf-distal-locking": "Distale Arretierung",
+        "tf-lanyard": "Zugsystem",
+        "tf-distal-seal": "Distale Abdichtung",
+        "tf-cushion": "Polster"
+    },
+    "orientation": {
+        "left": "Links",
+        "right": "Rechts"
+    },
+    "footer": {
+        "select_language": "Sprache auswählen",
+        "sizing_pdfs_title": "Größentabellen als PDF :"
+    },
+    "inputs": { "enter_measurement": "Messwert eingeben" },
+    "email": {
+        "placeholder": "beispiel@mail.com",
+        "send": "Senden",
+        "please_wait": "Bitte warten...",
+        "success": "Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt."   
+    },
+    "popup": {
+        "notice_title": "Hinweis",
+        "notice_description": "Es scheint, dass Ihre Größe derzeit nicht verfügbar ist. Bitte überprüfen Sie, ob Ihre Maße innerhalb unserer Größenbereiche liegen:",
+        "label_length": "Länge",
+        "label_circumference": "Umfang",
+        "contact_line": "Wenn Ihre Maße außerhalb unseres Größenbereichs liegen, kontaktieren Sie uns bitte unter:",
+        "cta_ok": "OK"
+    }
+}
