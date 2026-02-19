@@ -13,11 +13,7 @@ export default function Welcome() {
     setIsStarting(true);
 
     setTimeout(() => {
-      // If your sizing flow starts at /units, keep this:
-      //navigate("/units");
-
-      // If you later want it under /sizing, swap to:
-      // navigate("/sizing/units");
+      navigate("/sizing/units");
     }, 200);
   };
 

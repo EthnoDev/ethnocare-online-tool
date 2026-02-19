@@ -1,4 +1,4 @@
-// src/pages/assistance/ProductSelection.jsx
+// src/pages/sizing/ProductSelection.jsx
 import PageWrapper from "../../components/PageWrapper";
 
 // product images
@@ -10,7 +10,7 @@ export default function ProductSelection() {
   return (
     <PageWrapper
       showBack={true}
-      backTo="/assistance"
+      backTo="/sizing"
       code={true}
     >
       <div className="w-full max-w-md mt-2">
@@ -19,16 +19,13 @@ export default function ProductSelection() {
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          Select your Ethnocare product to get started
+          Select the product you want to find a size for.
         </p>
 
         {/* Product options */}
         <div className="mt-8 space-y-6 flex flex-col items-center">
           {/* Overlay */}
-          <button
-            type="button"
-            className="cursor-pointer focus:outline-none"
-          >
+          <button type="button" className="cursor-pointer focus:outline-none">
             <img
               src={OverlayImg}
               alt="Overlay"
@@ -37,10 +34,7 @@ export default function ProductSelection() {
           </button>
 
           {/* Underlay */}
-          <button
-            type="button"
-            className="cursor-pointer focus:outline-none"
-          >
+          <button type="button" className="cursor-pointer focus:outline-none">
             <img
               src={UnderlayImg}
               alt="Underlay"
@@ -49,10 +43,7 @@ export default function ProductSelection() {
           </button>
 
           {/* Liner */}
-          <button
-            type="button"
-            className="cursor-pointer focus:outline-none"
-          >
+          <button type="button" className="cursor-pointer focus:outline-none">
             <img
               src={LinerImg}
               alt="Liner"
