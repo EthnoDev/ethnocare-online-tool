@@ -14,6 +14,7 @@ import ReturnIdentification from "./pages/return/Identification";
 import RecommendationWelcome from "./pages/recommendation/Welcome";
 import SizingWelcome from "./pages/sizing/Welcome";
 import AssistanceWelcome from "./pages/assistance/Welcome";
+import AssistanceProductSelection from "./pages/assistance/ProductSelection";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function AnimatedRoutes() {
         <Route path="/recommendation" element={<RecommendationWelcome />} />
         <Route path="/sizing" element={<SizingWelcome />} />
         <Route path="/assistance" element={<AssistanceWelcome />} />
+        <Route path="/assistance/product" element={<AssistanceProductSelection />} />
         <Route path="/return/identification" element={<ReturnIdentification />} />
       </Routes>
     </AnimatePresence>

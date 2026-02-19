@@ -13,8 +13,7 @@ export default function Welcome() {
     setIsStarting(true);
 
     setTimeout(() => {
-      // later: navigate("/assistance/step-1");
-      alert("Assistance flow coming soon");
+      navigate("/assistance/product");
     }, 200);
   };
 
