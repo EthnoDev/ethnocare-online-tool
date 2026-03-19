@@ -7,10 +7,12 @@ import UnderlayImg from "../../assets/products/underlay.png";
 import LinerImg from "../../assets/products/liner.png";
 
 export default function ProductSelection() {
+  const amputation = localStorage.getItem("amputation");
+
   return (
     <PageWrapper
       showBack={true}
-      backTo="/sizing/amputation"   // adjust later if needed
+      backTo="/sizing/amputation"
       code={true}
     >
       <div className="w-full max-w-md mt-2">
@@ -22,9 +24,8 @@ export default function ProductSelection() {
           Select the product you want to find a size for.
         </p>
 
-        {/* Product options */}
         <div className="mt-8 space-y-6 flex flex-col items-center">
-          {/* Overlay */}
+          {/* Overlay - always shown */}
           <button type="button" className="cursor-pointer focus:outline-none">
             <img
               src={OverlayImg}
@@ -33,23 +34,26 @@ export default function ProductSelection() {
             />
           </button>
 
-          {/* Underlay */}
-          <button type="button" className="cursor-pointer focus:outline-none">
-            <img
-              src={UnderlayImg}
-              alt="Underlay"
-              className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
-            />
-          </button>
+          {/* Only show these for transtibial */}
+          {amputation === "transtibial" && (
+            <>
+              <button type="button" className="cursor-pointer focus:outline-none">
+                <img
+                  src={UnderlayImg}
+                  alt="Underlay"
+                  className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+                />
+              </button>
 
-          {/* Liner */}
-          <button type="button" className="cursor-pointer focus:outline-none">
-            <img
-              src={LinerImg}
-              alt="Liner"
-              className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
-            />
-          </button>
+              <button type="button" className="cursor-pointer focus:outline-none">
+                <img
+                  src={LinerImg}
+                  alt="Liner"
+                  className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+                />
+              </button>
+            </>
+          )}
         </div>
       </div>
     </PageWrapper>

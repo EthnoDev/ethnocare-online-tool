@@ -17,12 +17,12 @@ export default function AmputationSelection() {
 
   const handleSelect = (type) => {
     if (selected) return;
-    setSelected(type);
 
-    localStorage.setItem("sizing_amputation", type);
+    setSelected(type);
+    localStorage.setItem("amputation", type);
 
     setTimeout(() => {
-      // navigate("/sizing/next-step");
+      navigate("/sizing/product");
     }, 200);
   };
 
@@ -40,14 +40,14 @@ export default function AmputationSelection() {
         <div className="mt-8 space-y-6 flex flex-col items-center">
           <button
             type="button"
-            onClick={() => handleSelect("tt")}
+            onClick={() => handleSelect("transtibial")}
             className="cursor-pointer focus:outline-none"
             aria-label="Transtibial"
             title="Transtibial"
           >
             <div
               className={`rounded-xl ${
-                selected === "tt"
+                selected === "transtibial"
                   ? "ring-4 ring-[#090C41]"
                   : "ring-1 ring-gray-300 hover:ring-2 hover:ring-black"
               }`}
@@ -62,14 +62,14 @@ export default function AmputationSelection() {
 
           <button
             type="button"
-            onClick={() => handleSelect("tf")}
+            onClick={() => handleSelect("transfemoral")}
             className="cursor-pointer focus:outline-none"
             aria-label="Transfemoral"
             title="Transfemoral"
           >
             <div
               className={`rounded-xl ${
-                selected === "tf"
+                selected === "transfemoral"
                   ? "ring-4 ring-[#090C41]"
                   : "ring-1 ring-gray-300 hover:ring-2 hover:ring-black"
               }`}
