@@ -1,4 +1,3 @@
-// src/pages/return/Identification.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
@@ -6,16 +5,16 @@ import SelectableOption from "../../components/SelectableOption";
 
 export default function Identification() {
   const navigate = useNavigate();
-  const [selected, setSelected] = useState(null); // "user" | "distributor"
+  const [selected, setSelected] = useState(null); // "user/clinic" | "distributor"
 
   const handleSelect = (key) => {
-    if (selected) return; // prevent double clicks
+    if (selected) return;
     setSelected(key);
 
+    localStorage.setItem("user", key);
+
     setTimeout(() => {
-      // TODO: replace these with your real next pages
-      //if (key === "user") navigate("/return/user"); 
-      //if (key === "distributor") navigate("/return/distributor");
+      navigate("/return/assistance-tool");
     }, 200);
   };
 
@@ -39,8 +38,8 @@ export default function Identification() {
         <div className="mt-8 space-y-5 flex flex-col items-center">
           <SelectableOption
             label="User / Clinic"
-            selected={selected === "user"}
-            onClick={() => handleSelect("user")}
+            selected={selected === "user/clinic"}
+            onClick={() => handleSelect("user/clinic")}
           />
 
           <SelectableOption

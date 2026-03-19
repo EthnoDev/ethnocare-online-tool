@@ -10,7 +10,8 @@ import { Analytics } from "@vercel/analytics/react";
 // Pages
 import MainWelcome from "./pages/Welcome"; 
 import ReturnWelcome from "./pages/return/Welcome";
-import ReturnIdentification from "./pages/return/Identification"; 
+import ReturnIdentification from "./pages/return/Identification";
+import AssistanceTool from "./pages/return/AssistanceTool"; 
 import RecommendationWelcome from "./pages/recommendation/Welcome";
 import SizingWelcome from "./pages/sizing/Welcome";
 import UnitsSelection from "./pages/sizing/UnitsSelection";
@@ -26,6 +27,8 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<MainWelcome />} />
         <Route path="/return" element={<ReturnWelcome />} />
+        <Route path="/return/identification" element={<ReturnIdentification />} />
+        <Route path="/return/assistance-tool" element={<AssistanceTool />} />
         <Route path="/recommendation" element={<RecommendationWelcome />} />
         <Route path="/sizing" element={<SizingWelcome />} />
         <Route path="/sizing/units" element={<UnitsSelection />} />
@@ -33,7 +36,6 @@ function AnimatedRoutes() {
         <Route path="/sizing/product" element={<SizingProductSelection />} />
         <Route path="/assistance" element={<AssistanceWelcome />} />
         <Route path="/assistance/product" element={<AssistanceProductSelection />} />
-        <Route path="/return/identification" element={<ReturnIdentification />} />
       </Routes>
     </AnimatePresence>
   );
