@@ -14,6 +14,7 @@ import ReturnIdentification from "./pages/return/Identification";
 import RecommendationWelcome from "./pages/recommendation/Welcome";
 import SizingWelcome from "./pages/sizing/Welcome";
 import UnitsSelection from "./pages/sizing/UnitsSelection";
+import AmputationSelection from "./pages/sizing/AmputationSelection";
 import SizingProductSelection from "./pages/sizing/ProductSelection";
 import AssistanceWelcome from "./pages/assistance/Welcome";
 import AssistanceProductSelection from "./pages/assistance/ProductSelection";
@@ -28,6 +29,7 @@ function AnimatedRoutes() {
         <Route path="/recommendation" element={<RecommendationWelcome />} />
         <Route path="/sizing" element={<SizingWelcome />} />
         <Route path="/sizing/units" element={<UnitsSelection />} />
+        <Route path="/sizing/amputation" element={<AmputationSelection />} />
         <Route path="/sizing/product" element={<SizingProductSelection />} />
         <Route path="/assistance" element={<AssistanceWelcome />} />
         <Route path="/assistance/product" element={<AssistanceProductSelection />} />

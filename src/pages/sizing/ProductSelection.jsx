@@ -10,7 +10,7 @@ export default function ProductSelection() {
   return (
     <PageWrapper
       showBack={true}
-      backTo="/sizing"
+      backTo="/sizing/amputation"   // adjust later if needed
       code={true}
     >
       <div className="w-full max-w-md mt-2">

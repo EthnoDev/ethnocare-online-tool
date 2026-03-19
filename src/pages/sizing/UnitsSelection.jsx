@@ -16,7 +16,7 @@ export default function UnitsSelection() {
     localStorage.setItem("sizing_units", unit); // "imperial" or "metric"
 
     setTimeout(() => {
-      navigate("/sizing/product"); // ✅ goes to ProductSelection.jsx
+      navigate("/sizing/amputation"); // ✅ goes to AmputationSelection.jsx
     }, 200);
   };
 
