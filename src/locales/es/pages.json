@@ -12,5 +12,10 @@
     "description4":"La herramienta de preguntas frecuentes proporciona respuestas a las preguntas más frecuentes sobre los productos Ethnocare.",
     "option5":"Recomendación",
     "description5":"La herramienta de recomendación lo ayuda a encontrar los mejores productos Ethnocare según sus necesidades."
+  },
+  "welcomeRecommendation": {
+    "title": "Buscador de soluciones",
+    "description": "Responda las siguientes preguntas para obtener una recomendación de producto personalizada.",
+    "startButton": "Comenzar"
   }
 }

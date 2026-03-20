@@ -12,5 +12,10 @@
     "description4":"L'outil FAQ fournit des réponses aux questions fréquemment posées sur les produits Ethnocare.",
     "option5":"Recommandation",
     "description5":"L'outil de recommandation vous aide à trouver les meilleurs produits Ethnocare en fonction de vos besoins."
+  },
+  "welcomeRecommendation": {
+    "title": "Chercheur de solution",
+    "description": "Répondez aux questions suivantes pour obtenir une recommandation de produit personnalisée.",
+    "startButton": "Commencer"
   }
 }

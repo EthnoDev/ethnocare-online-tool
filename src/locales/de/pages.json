@@ -12,5 +12,10 @@
     "description4": "Das FAQ-Tool bietet Antworten auf häufig gestellte Fragen zu Ethnocare-Produkten.",
     "option5": "Empfehlung",
     "description5": "Das Empfehlungstool hilft Ihnen dabei, basierend auf Ihren Bedürfnissen die besten Ethnocare-Produkte zu finden."
+  },
+  "welcomeRecommendation": {
+    "title": "Lösungsfinder",
+    "description": "Beantworten Sie die folgenden Fragen, um eine personalisierte Produktempfehlung zu erhalten.",
+    "startButton": "Starten"
   }
 }

@@ -12,5 +12,10 @@
     "description4":"The FAQ tool provides answers to frequently asked questions about Ethnocare products.",
     "option5":"Recommendation",
     "description5":"The recommendation tool helps you find the best Ethnocare products based on your needs."
+  },
+  "welcomeRecommendation": {
+    "title": "Solution Finder",
+    "description": "Answer the following questions to get a personalized product recommendation.",
+    "startButton": "Start"
   }
 }
