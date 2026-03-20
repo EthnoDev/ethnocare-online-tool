@@ -2,10 +2,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
+import { useTranslation } from "react-i18next";
 import SelectableOption from "../../components/SelectableOption";
 
 export default function AssistanceSizeSelection() {
   const navigate = useNavigate();
+  const { t } = useTranslation("pages");
   const [selected, setSelected] = useState(null);
   const [isRouting, setIsRouting] = useState(false);
 
@@ -36,11 +38,11 @@ export default function AssistanceSizeSelection() {
     >
       <div className="w-full max-w-md mt-2">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          Size
+          {t("sizeAssistance.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          What is your product size
+          {t("sizeAssistance.description")}
         </p>
       </div>
     </PageWrapper>

@@ -12,6 +12,7 @@ export default function AssistanceAmputationSelection() {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const [selected, setSelected] = useState(null);
+  const { t } = useTranslation("pages");
 
   const tfImage = i18n.language === "fr" ? TF_FR : TF;
 
@@ -30,11 +31,11 @@ export default function AssistanceAmputationSelection() {
     <PageWrapper showBack={true} backTo="/assistance" code={true}>
       <div className="w-full max-w-md mt-2">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          Amputation
+          {t("amputationAssistance.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          What is your amputation type.
+          {t("amputationAssistance.description")}
         </p>
 
         <div className="mt-8 space-y-6 flex flex-col items-center">

@@ -1,6 +1,7 @@
 // src/pages/assistance/ProductSelection.jsx
 import { useNavigate } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
+import { useTranslation } from "react-i18next";
 
 // product images
 import OverlayImg from "../../assets/products/overlay.png";
@@ -9,6 +10,7 @@ import LinerImg from "../../assets/products/liner.png";
 
 export default function ProductSelection() {
   const navigate = useNavigate();
+  const { t } = useTranslation("pages");
   
   // Retrieve the amputation type to filter available products
   const amputation = localStorage.getItem("amputation");
@@ -31,11 +33,11 @@ export default function ProductSelection() {
     >
       <div className="w-full max-w-md mt-2">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          Product
+          {t("productAssistance.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          Select your Ethnocare product to get started
+          {t("productAssistance.description")}
         </p>
 
         {/* Product options */}

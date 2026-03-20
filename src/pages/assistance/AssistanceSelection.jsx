@@ -43,11 +43,11 @@ export default function AssistanceSelection() {
     >
       <div className="w-full max-w-md mt-2">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          Request
+          {t("assistanceAssistance.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          What are you looking for
+          {t("assistanceAssistance.description")}
         </p>
 
         <div className="mt-8 flex gap-4 justify-center">
@@ -55,7 +55,7 @@ export default function AssistanceSelection() {
           <SelectableOption
             label={
               <span className="flex items-center justify-center gap-1">
-                User Guide
+                {t("assistanceAssistance.option1")}
                 <img
                   src={RedirectLogo}
                   alt=""
@@ -75,7 +75,7 @@ export default function AssistanceSelection() {
 
           {/* Assistance Flow Option */}
           <SelectableOption
-            label="Assistance"
+            label={t("assistanceAssistance.option2")}
             selected={selected === "Assistance"}
             onClick={() => handleSelect("Assistance")}
             className={isRouting ? "pointer-events-none opacity-80" : ""}

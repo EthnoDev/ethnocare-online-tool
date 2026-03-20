@@ -35,5 +35,28 @@
     "descriptionDistributor": "¿El que devuelve intentó los pasos de solución de problemas proporcionados en la herramienta de asistencia?",
     "option1": "Sí, continuar",
     "option2": "No, intentemos"
+  },
+  "welcomeAssistance": {
+    "title": "Herramienta de asistencia",
+    "description": "Use esta herramienta para obtener ayuda y soporte para el uso de los productos Ethnocare.",
+    "startButton": "Comenzar"
+  },
+  "amputationAssistance": {
+    "title": "Amputación",
+    "description": "¿Cuál es su tipo de amputación?"
+  },
+  "productAssistance": {
+    "title": "Producto",
+    "description": "¿Con qué producto necesita ayuda?"
+  },
+  "assistanceAssistance": {
+    "title": "Solicitud",
+    "description": "¿Qué estás buscando?",
+    "option1": "Guía del usuario",
+    "option2": "Asistencia"
+  },
+  "sizeAssistance": {
+    "title": "Tamaño",
+    "description": "¿Cuál es el tamaño de su producto?"
   }
 }
