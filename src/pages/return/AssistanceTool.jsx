@@ -4,7 +4,7 @@ import PageWrapper from "../../components/PageWrapper";
 import SelectableOption from "../../components/SelectableOption";
 import RedirectLogo from "../../assets/redirect-logo.svg";
 
-export default function AssistanceTool() {
+export default function ReturnAssistanceTool() {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
   const user = localStorage.getItem("user");

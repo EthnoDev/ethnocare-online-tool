@@ -4,7 +4,7 @@ import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import SelectableOption from "../../components/SelectableOption";
 
-export default function UnitsSelection() {
+export default function SizingUnitsSelection() {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null); // "imperial" | "metric"
 

@@ -8,7 +8,7 @@ import TT from "../../assets/amputation/transtibial.png";
 import TF from "../../assets/amputation/transfemoral.png";
 import TF_FR from "../../assets/amputation/transfemoral_FR.png";
 
-export default function AmputationSelection() {
+export default function SizingAmputationSelection() {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const [selected, setSelected] = useState(null);
