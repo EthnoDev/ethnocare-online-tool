@@ -13,7 +13,7 @@ export default function Welcome() {
     setIsStarting(true);
 
     setTimeout(() => {
-      navigate("/assistance/product");
+      navigate("/assistance/amputation");
     }, 200);
   };
 

@@ -18,6 +18,7 @@ import UnitsSelection from "./pages/sizing/UnitsSelection";
 import AmputationSelection from "./pages/sizing/AmputationSelection";
 import SizingProductSelection from "./pages/sizing/ProductSelection";
 import AssistanceWelcome from "./pages/assistance/Welcome";
+import AssistanceAmputationSelection from "./pages/assistance/AmputationSelection";
 import AssistanceProductSelection from "./pages/assistance/ProductSelection";
 
 function AnimatedRoutes() {
@@ -35,6 +36,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/amputation" element={<AmputationSelection />} />
         <Route path="/sizing/product" element={<SizingProductSelection />} />
         <Route path="/assistance" element={<AssistanceWelcome />} />
+        <Route path="/assistance/amputation" element={<AssistanceAmputationSelection />} />
         <Route path="/assistance/product" element={<AssistanceProductSelection />} />
       </Routes>
     </AnimatePresence>
