@@ -1,4 +1,5 @@
 // src/pages/assistance/ProductSelection.jsx
+import { useNavigate } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 
 // product images
@@ -7,8 +8,20 @@ import UnderlayImg from "../../assets/products/underlay.png";
 import LinerImg from "../../assets/products/liner.png";
 
 export default function ProductSelection() {
+  const navigate = useNavigate();
+  
   // Retrieve the amputation type to filter available products
   const amputation = localStorage.getItem("amputation");
+
+  const handleSelect = (productName) => {
+    // Save the selection to localStorage
+    localStorage.setItem("product", productName);
+
+    // Brief delay for visual feedback before navigating
+    setTimeout(() => {
+      navigate("/assistance/selection");
+    }, 200);
+  };
 
   return (
     <PageWrapper
@@ -31,6 +44,7 @@ export default function ProductSelection() {
           {/* Overlay - Always visible */}
           <button
             type="button"
+            onClick={() => handleSelect("overlay")}
             className="cursor-pointer focus:outline-none"
           >
             <img
@@ -46,6 +60,7 @@ export default function ProductSelection() {
               {/* Underlay */}
               <button
                 type="button"
+                onClick={() => handleSelect("underlay")}
                 className="cursor-pointer focus:outline-none"
               >
                 <img
@@ -58,6 +73,7 @@ export default function ProductSelection() {
               {/* Liner */}
               <button
                 type="button"
+                onClick={() => handleSelect("liner")}
                 className="cursor-pointer focus:outline-none"
               >
                 <img
