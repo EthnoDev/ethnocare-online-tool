@@ -3,10 +3,12 @@ import { useState } from "react";
 import PageWrapper from "../components/PageWrapper";
 import SelectableOption from "../components/SelectableOption";
 import RedirectLogo from "../assets/redirect-logo.svg";
+import { useTranslation } from "react-i18next";
 
 export default function Welcome() {
   const navigate = useNavigate();
   const [goingTo, setGoingTo] = useState(null);
+  const { t } = useTranslation("pages");
 
   const delayedNav = (key, action) => {
     if (goingTo) return;
@@ -21,31 +23,31 @@ export default function Welcome() {
     <PageWrapper showBack={false} backTo="/" code={true}>
       <div className="w-full max-w-md mt-6">
         <h1 className="text-4xl font-bold text-center text-slate-900 leading-tight">
-          Ethnocare Online Tool
+          {t("welcome.title")}
         </h1>
 
         <p className="mt-5 text-center text-lg text-slate-500">
-          Select the tool you need
+          {t("welcome.description")}
         </p>
 
         <div className="mt-8 space-y-6">
           <SelectableOption
-            label="Sizing"
-            description="The sizing tool aims to guide you to find your correct product size."
+            label={t("welcome.option1")}
+            description={t("welcome.description1")}
             selected={goingTo === "sizing"}
             onClick={() => delayedNav("sizing", () => navigate("/sizing"))}
           />
 
           <SelectableOption
-            label="Assistance"
-            description="The assistance tool will help you resolve product issues."
+            label={t("welcome.option2")}
+            description={t("welcome.description2")}
             selected={goingTo === "assistance"}
             onClick={() => delayedNav("assistance", () => navigate("/assistance"))}
           />
 
           <SelectableOption
-            label="Return"
-            description="Use this tool if you want to return a product"
+            label={t("welcome.option3")}
+            description={t("welcome.description3")}
             selected={goingTo === "return"}
             onClick={() => delayedNav("return", () => navigate("/return"))}
           />
@@ -53,7 +55,7 @@ export default function Welcome() {
           <SelectableOption
             label={
               <span className="flex items-center justify-center gap-2">
-                <span>FAQ</span>
+                <span>{t("welcome.option4")}</span>
                 <img
                   src={RedirectLogo}
                   alt=""
@@ -66,7 +68,7 @@ export default function Welcome() {
                 />
               </span>
             }
-            description="Use this tool to get answers to your questions"
+            description={t("welcome.description4")}
             selected={goingTo === "faq"}
             onClick={() =>
               delayedNav("faq", () => {
@@ -83,8 +85,8 @@ export default function Welcome() {
 
         <div className="mt-20">
           <SelectableOption
-            label="Recommendation"
-            description="Use this tool to get recommendations based on your problems"
+            label={t("welcome.option5")}
+            description={t("welcome.description5")}
             variant="solid"
             selected={goingTo === "recommendation"}
             onClick={() =>
