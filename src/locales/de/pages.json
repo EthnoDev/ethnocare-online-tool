@@ -17,5 +17,23 @@
     "title": "Lösungsfinder",
     "description": "Beantworten Sie die folgenden Fragen, um eine personalisierte Produktempfehlung zu erhalten.",
     "startButton": "Starten"
+  },
+  "welcomeReturn": {
+    "title": "Rückgabetool",
+    "description": "Verwenden Sie dieses Tool, um ein Produkt zurückzugeben.",
+    "startButton": "Starten"
+  },
+  "identificationReturn": {
+    "title": "Identifikation",
+    "description": "Sind Sie ein Benutzer/Klinik oder ein Distributor?",
+    "option1": "Benutzer/Klinik",
+    "option2": "Distributor"
+  },
+  "assistanceToolReturn": {
+    "title": "Unterstützungstool",
+    "descriptionClinic": "Haben Sie die in dem Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
+    "descriptionDistributor": "Hat der Rücksender die in dem Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
+    "option1": "Ja, weiter",
+    "option2": "Nein"
   }
 }

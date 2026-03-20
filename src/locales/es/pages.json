@@ -17,5 +17,23 @@
     "title": "Buscador de soluciones",
     "description": "Responda las siguientes preguntas para obtener una recomendación de producto personalizada.",
     "startButton": "Comenzar"
+  },
+  "welcomeReturn": {
+    "title": "Herramienta de devolución",
+    "description": "Use esta herramienta para devolver un producto.",
+    "startButton": "Comenzar"
+  },
+  "identificationReturn": {
+    "title": "Identificación",
+    "description": "¿Eres un usuario/clínica o un distribuidor?",
+    "option1": "Usuario/Clínica",
+    "option2": "Distribuidor"
+  },
+  "assistanceToolReturn": {
+    "title": "Herramienta de asistencia",
+    "descriptionClinic": "¿Probó los pasos de solución de problemas proporcionados en la herramienta de asistencia?",
+    "descriptionDistributor": "¿El que devuelve intentó los pasos de solución de problemas proporcionados en la herramienta de asistencia?",
+    "option1": "Sí, continuar",
+    "option2": "No, intentemos"
   }
 }

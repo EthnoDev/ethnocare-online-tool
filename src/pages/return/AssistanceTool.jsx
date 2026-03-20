@@ -3,16 +3,18 @@ import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import SelectableOption from "../../components/SelectableOption";
 import RedirectLogo from "../../assets/redirect-logo.svg";
+import { useTranslation } from "react-i18next";
 
 export default function ReturnAssistanceTool() {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
   const user = localStorage.getItem("user");
+  const { t } = useTranslation("pages");
 
   const description =
     user === "distributor"
-      ? "Has the returnee tried to use the Ethnocare assistance widget"
-      : "Did you tried to use the Ethnocare assistance widget";
+      ? t("assistanceToolReturn.descriptionDistributor")
+      : t("assistanceToolReturn.descriptionClinic");
 
   const handleSelect = (key) => {
     if (selected) return;
@@ -43,7 +45,7 @@ export default function ReturnAssistanceTool() {
     >
       <div className="w-full max-w-md mt-2">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          Assistance Tool
+          {t("assistanceToolReturn.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
@@ -52,7 +54,7 @@ export default function ReturnAssistanceTool() {
 
         <div className="mt-8 space-y-5 flex flex-col items-center">
           <SelectableOption
-            label="Yes, continue"
+            label={t("assistanceToolReturn.option1")}
             selected={selected === "yes"}
             onClick={() => handleSelect("yes")}
           />
@@ -60,7 +62,7 @@ export default function ReturnAssistanceTool() {
           <SelectableOption
             label={
               <span className="flex items-center justify-center gap-2">
-                <span>No, let's try</span>
+                <span>{t("assistanceToolReturn.option2")}</span>
                 <img
                   src={RedirectLogo}
                   alt=""

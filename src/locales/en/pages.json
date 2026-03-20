@@ -17,5 +17,23 @@
     "title": "Solution Finder",
     "description": "Answer the following questions to get a personalized product recommendation.",
     "startButton": "Start"
+  },
+  "welcomeReturn": {
+    "title": "Return Tool",
+    "description": "Use this tool to return a product.",
+    "startButton": "Start"
+  },
+  "identificationReturn": {
+    "title": "Identification",
+    "description": "Are you a user/clinic or a distributor?",
+    "option1": "User/Clinic",
+    "option2": "Distributor"
+  },
+  "assistanceToolReturn": {
+    "title": "Assistance Tool",
+    "descriptionClinic": "Did you try the troubleshooting steps provided in the assistance tool?",
+    "descriptionDistributor": "Did the returnee try the troubleshooting steps provided in the assistance tool?",
+    "option1": "Yes, continue",
+    "option2": "No, let's try"
   }
 }

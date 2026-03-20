@@ -17,5 +17,23 @@
     "title": "Chercheur de solution",
     "description": "Répondez aux questions suivantes pour obtenir une recommandation de produit personnalisée.",
     "startButton": "Commencer"
+  },
+  "welcomeReturn": {
+    "title": "Outil de retour",
+    "description": "Utilisez cet outil pour retourner un produit.",
+    "startButton": "Commencer"
+  },
+  "identificationReturn": {
+    "title": "Identification",
+    "description": "Êtes-vous un utilisateur/clinique ou un distributeur ?",
+    "option1": "Utilisateur/Clinique",
+    "option2": "Distributeur"
+  },
+  "assistanceToolReturn": {
+    "title": "Outil d'assistance",
+    "descriptionClinic": "Avez-vous essayé les étapes de dépannage fournies dans l'outil d'assistance ?",
+    "descriptionDistributor": "Le retourneur a-t-il essayé les étapes de dépannage fournies dans l'outil d'assistance ?",
+    "option1": "Oui, continuer",
+    "option2": "Non, essayons"
   }
 }
