@@ -17,6 +17,10 @@ import SizingWelcome from "./pages/sizing/Welcome";
 import SizingUnitsSelection from "./pages/sizing/UnitsSelection";
 import SizingAmputationSelection from "./pages/sizing/AmputationSelection";
 import SizingProductSelection from "./pages/sizing/ProductSelection";
+import SizingTTSuspensionSelection from "./pages/sizing/overlay/TT/SuspensionSelection";
+import SizingTTCircumference from "./pages/sizing/overlay/TT/Circumference";
+import SizingTTCircumferenceVac from "./pages/sizing/overlay/TT/CircumferenceVac";
+import SizingTFSuspensionSelection from "./pages/sizing/overlay/TF/SuspensionSelection";
 import AssistanceWelcome from "./pages/assistance/Welcome";
 import AssistanceAmputationSelection from "./pages/assistance/AmputationSelection";
 import AssistanceProductSelection from "./pages/assistance/ProductSelection";
@@ -37,6 +41,10 @@ function AnimatedRoutes() {
         <Route path="/sizing/units" element={<SizingUnitsSelection />} />
         <Route path="/sizing/amputation" element={<SizingAmputationSelection />} />
         <Route path="/sizing/product" element={<SizingProductSelection />} />
+        <Route path="/sizing/TTsuspension" element={<SizingTTSuspensionSelection />} />
+        <Route path="/sizing/TTcircumference" element={<SizingTTCircumference />} />
+        <Route path="/sizing/TTcircumference-vac" element={<SizingTTCircumferenceVac />} />
+        <Route path="/sizing/TFsuspension" element={<SizingTFSuspensionSelection />} />
         <Route path="/assistance" element={<AssistanceWelcome />} />
         <Route path="/assistance/amputation" element={<AssistanceAmputationSelection />} />
         <Route path="/assistance/product" element={<AssistanceProductSelection />} />

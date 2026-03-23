@@ -77,5 +77,18 @@
   "productSizing": {
     "title": "Produkt",
     "description": "Für welches Produkt benötigen Sie eine Größenbestimmung?"
+  },
+  "suspensionSizing": {
+    "title": "Suspension",
+    "description": "Welche Art von Suspension verwenden Sie?"
+  },
+  "circumferenceTTSizing": {
+    "title": "Umfangsmessung",
+    "description_metric": "Messen Sie den Umfang Ihres Stumpfes 4 cm über dem Ende des Stumpfes und geben Sie ihn hier ein.",
+    "description_imperial": "Messen Sie den Umfang Ihres Stumpfes 1,5 Zoll über dem Ende des Stumpfes und geben Sie ihn hier ein."
+  },
+  "circumferenceTTVacSizing": {
+    "title": "Umfangsmessung",
+    "description": "Messen Sie den Umfang (C) Ihres Stumpfes am oberen Ende der Dichtung."
   }
 }

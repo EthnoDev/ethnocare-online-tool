@@ -77,5 +77,18 @@
   "productSizing": {
     "title": "Product",
     "description": "Select the product you want to find a size for."
+  },
+  "suspensionSizing": {
+    "title": "Suspension Type",
+    "description": "Select your suspension system"
+  },
+  "circumferenceTTSizing": {
+    "title": "Circumference",
+    "description_metric": "Measure the circumference (C) at 4 cm from the distal end.",
+    "description_imperial": "Measure the circumference (C) at 1.5 in from the distal end."
+  },
+  "circumferenceTTVacSizing": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at the top of the seal"
   }
 }

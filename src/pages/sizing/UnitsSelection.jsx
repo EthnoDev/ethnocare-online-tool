@@ -15,7 +15,7 @@ export default function SizingUnitsSelection() {
     setSelected(unit);
 
     // ✅ save for future pages
-    localStorage.setItem("sizing_units", unit); // "imperial" or "metric"
+    localStorage.setItem("units", unit); // "imperial" or "metric"
 
     setTimeout(() => {
       navigate("/sizing/amputation"); // ✅ goes to AmputationSelection.jsx

@@ -77,5 +77,18 @@
   "productSizing": {
     "title": "Produit",
     "description": "Pour quel produit avez-vous besoin de dimensionnement ?"
-   }
+  },
+  "suspensionSizing": {
+    "title": "Suspension Type",
+    "description": "Sélectionnez votre système de suspension"
+  },
+  "circumferenceTTSizing": {
+    "title": "Circonférence",
+    "description_metric": "Mesurez la circonférence de votre moignon à 4 cm sous la proéminence osseuse la plus basse.",
+    "description_imperial": "Mesurez la circonférence de votre moignon à 1,5 pouces sous la proéminence osseuse la plus basse."
+  },
+  "circumferenceTTVacSizing": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence (C) de votre moignon au sommet du joint"
+  }
 }

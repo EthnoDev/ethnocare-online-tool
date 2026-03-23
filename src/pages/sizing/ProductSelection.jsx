@@ -1,4 +1,5 @@
 // src/pages/sizing/ProductSelection.jsx
+import { useNavigate } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 
@@ -8,8 +9,30 @@ import UnderlayImg from "../../assets/products/underlay.png";
 import LinerImg from "../../assets/products/liner.png";
 
 export default function ProductSelection() {
-  const amputation = localStorage.getItem("amputation");
+  const navigate = useNavigate();
   const { t } = useTranslation("pages");
+  const amputation = localStorage.getItem("amputation");
+
+  const handleSelect = (product) => {
+    // Save selection to storage
+    localStorage.setItem("product", product);
+
+    // Navigation logic for Overlay
+    if (product === "overlay") {
+      if (amputation === "transtibial") {
+        setTimeout(() => navigate("/sizing/TTsuspension"), 200);
+        return;
+      }
+      if (amputation === "transfemoral") {
+        setTimeout(() => navigate("/sizing/TFsuspension"), 200);
+        return;
+      }
+    }
+    // Placeholder for Underlay and Liner navigation (Transtibial only)
+    if (product === "underlay" || product === "liner") {
+      // setTimeout(() => navigate("/sizing/next-step"), 200);
+    }
+  };
 
   return (
     <PageWrapper
@@ -28,7 +51,11 @@ export default function ProductSelection() {
 
         <div className="mt-8 space-y-6 flex flex-col items-center">
           {/* Overlay - always shown */}
-          <button type="button" className="cursor-pointer focus:outline-none">
+          <button 
+            type="button" 
+            onClick={() => handleSelect("overlay")}
+            className="cursor-pointer focus:outline-none"
+          >
             <img
               src={OverlayImg}
               alt="Overlay"
@@ -39,7 +66,12 @@ export default function ProductSelection() {
           {/* Only show these for transtibial */}
           {amputation === "transtibial" && (
             <>
-              <button type="button" className="cursor-pointer focus:outline-none">
+              {/* Underlay */}
+              <button 
+                type="button" 
+                onClick={() => handleSelect("underlay")}
+                className="cursor-pointer focus:outline-none"
+              >
                 <img
                   src={UnderlayImg}
                   alt="Underlay"
@@ -47,7 +79,12 @@ export default function ProductSelection() {
                 />
               </button>
 
-              <button type="button" className="cursor-pointer focus:outline-none">
+              {/* Liner */}
+              <button 
+                type="button" 
+                onClick={() => handleSelect("liner")}
+                className="cursor-pointer focus:outline-none"
+              >
                 <img
                   src={LinerImg}
                   alt="Liner"

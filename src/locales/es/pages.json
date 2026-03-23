@@ -77,5 +77,18 @@
   "productSizing": {
     "title": "Producto",
     "description": "Seleccione el producto para el que desea encontrar una talla."
-  }
+  },
+  "suspensionSizing": {
+    "title": "Tipo de suspensión",
+    "description": "Seleccione su sistema de suspensión"
+  },
+  "circumferenceTTSizing": {
+    "title": "Circunferencia",
+    "description_metric": "Mida la circunferencia de su muñón a 4 cm por debajo del borde proximal del muñón.",
+    "description_imperial": "Mida la circunferencia de su muñón a 1,5 pulgadas por debajo del borde proximal del muñón."
+   },
+   "circumferenceTTVacSizing": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) de su muñón en la parte superior del sello"
+   }
 }
