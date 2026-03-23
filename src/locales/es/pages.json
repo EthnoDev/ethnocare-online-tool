@@ -58,5 +58,16 @@
   "sizeAssistance": {
     "title": "Tamaño",
     "description": "¿Cuál es el tamaño de su producto?"
+  },
+  "welcomeSizing": {
+    "title": "Herramienta de dimensionamiento",
+    "description": "Use esta herramienta para encontrar el tamaño correcto del producto Ethnocare para usted.",
+    "startButton": "Comenzar"
+  },
+  "unitsSizing": {
+    "title": "Unidades",
+    "description": "¿En qué unidades desea ingresar sus medidas?",
+    "option1": "Imperial (Pulgadas)",
+    "option2": "Métrico (Centímetros)"
   }
 }
