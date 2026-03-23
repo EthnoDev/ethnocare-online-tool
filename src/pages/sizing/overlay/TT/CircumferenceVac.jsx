@@ -44,7 +44,7 @@ export default function CircumferenceVac() {
           <img
             src={TTCircumferenceVac}
             alt="Circumference TT Distal Seal"
-            className="w-64 h-auto object-contain rounded-xl"
+            className="w-74 h-auto object-contain rounded-xl"
           />
         </div>
 

@@ -47,7 +47,7 @@ export default function Circumference() {
           <img
             src={selectedImage}
             alt="Circumference"
-            className="w-64 h-auto object-contain rounded-xl"
+            className="w-74 h-auto object-contain rounded-xl"
           />
         </div>
 
