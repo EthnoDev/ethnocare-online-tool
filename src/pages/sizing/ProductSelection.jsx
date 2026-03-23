@@ -1,5 +1,6 @@
 // src/pages/sizing/ProductSelection.jsx
 import PageWrapper from "../../components/PageWrapper";
+import { useTranslation } from "react-i18next";
 
 // product images
 import OverlayImg from "../../assets/products/overlay.png";
@@ -8,6 +9,7 @@ import LinerImg from "../../assets/products/liner.png";
 
 export default function ProductSelection() {
   const amputation = localStorage.getItem("amputation");
+  const { t } = useTranslation("pages");
 
   return (
     <PageWrapper
@@ -17,11 +19,11 @@ export default function ProductSelection() {
     >
       <div className="w-full max-w-md mt-2">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          Product
+          {t("productSizing.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          Select the product you want to find a size for.
+          {t("productSizing.description")}
         </p>
 
         <div className="mt-8 space-y-6 flex flex-col items-center">

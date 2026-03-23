@@ -10,7 +10,7 @@ import TF_FR from "../../assets/amputation/transfemoral_FR.png";
 
 export default function SizingAmputationSelection() {
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation("pages");
   const [selected, setSelected] = useState(null);
 
   const tfImage = i18n.language === "fr" ? TF_FR : TF;
@@ -30,11 +30,11 @@ export default function SizingAmputationSelection() {
     <PageWrapper showBack={true} backTo="/sizing/units" code={true}>
       <div className="w-full max-w-md mt-2">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          Amputation
+          {t("amputationSizing.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          What is your amputation type.
+          {t("amputationSizing.description")}
         </p>
 
         <div className="mt-8 space-y-6 flex flex-col items-center">

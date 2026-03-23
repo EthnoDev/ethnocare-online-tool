@@ -69,5 +69,13 @@
     "description": "¿En qué unidades desea ingresar sus medidas?",
     "option1": "Imperial (Pulgadas)",
     "option2": "Métrico (Centímetros)"
+  },
+  "amputationSizing": {
+    "title": "Amputación",
+    "description": "¿Cuál es su tipo de amputación?"
+  },
+  "productSizing": {
+    "title": "Producto",
+    "description": "Seleccione el producto para el que desea encontrar una talla."
   }
 }

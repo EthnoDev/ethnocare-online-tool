@@ -69,5 +69,13 @@
     "description": "Select your preferred units of measurement.",
     "option1": "Imperial (Inch)",
     "option2": "Metric (Centimeter)"
+  },
+  "amputationSizing": {
+    "title": "Amputation",
+    "description": "What is your amputation type?"
+  },
+  "productSizing": {
+    "title": "Product",
+    "description": "Select the product you want to find a size for."
   }
 }

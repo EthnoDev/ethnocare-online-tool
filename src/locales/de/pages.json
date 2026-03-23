@@ -69,5 +69,13 @@
     "description": "Welche Einheiten möchten Sie verwenden?",
     "option1": "Imperial (Zoll)",
     "option2": "Metrisch (Zentimeter)"
+  },
+  "amputationSizing": {
+    "title": "Amputation",
+    "description": "Was ist Ihr Amputationstyp?"
+  },
+  "productSizing": {
+    "title": "Produkt",
+    "description": "Für welches Produkt benötigen Sie eine Größenbestimmung?"
   }
 }

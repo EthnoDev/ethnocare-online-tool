@@ -69,5 +69,13 @@
     "description": "Dans quelles unités souhaitez-vous entrer vos mesures",
     "option1": "Impérial (Pouces)",
     "option2": "Métrique (Centimètres)"
-  }
+  },
+  "amputationSizing": {
+    "title": "Amputation",
+    "description": "Quel est votre type d'amputation ?"
+  },
+  "productSizing": {
+    "title": "Produit",
+    "description": "Pour quel produit avez-vous besoin de dimensionnement ?"
+   }
 }
