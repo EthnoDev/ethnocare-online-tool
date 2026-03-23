@@ -6,7 +6,7 @@ import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
 
 // Assets
-import TTDistalSealImg from "../../../../assets/circumferences/TT/vac.svg";
+import TTCircumferenceVac from "../../../../assets/circumferences/TT/vac.svg";
 
 export default function CircumferenceVac() {
   const [result, setResult] = useState(null);
@@ -42,7 +42,7 @@ export default function CircumferenceVac() {
 
         <div className="mt-8 flex justify-center">
           <img
-            src={TTDistalSealImg}
+            src={TTCircumferenceVac}
             alt="Circumference TT Distal Seal"
             className="w-64 h-auto object-contain rounded-xl"
           />
