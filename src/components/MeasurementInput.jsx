@@ -10,8 +10,8 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
   const { t } = useTranslation("common");
 
   useEffect(() => {
-    const stored = localStorage.getItem("overlay_units");
-    setUnit(stored === "Imperial" ? "in" : "cm");
+    const stored = localStorage.getItem("units");
+    setUnit(stored === "imperial" ? "in" : "cm");
   }, []);
 
   const handleChange = (e) => {

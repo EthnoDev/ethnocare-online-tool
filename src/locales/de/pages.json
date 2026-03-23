@@ -90,5 +90,13 @@
   "circumferenceTTVacSizing": {
     "title": "Umfangsmessung",
     "description": "Messen Sie den Umfang (C) Ihres Stumpfes am oberen Ende der Dichtung."
+  },
+  "lengthTTSizing": {
+    "title": "Längenmessung",
+    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle."
+  },
+  "lengthTTVacSizing": {
+    "title": "Längenmessung",
+    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle."
   }
 }

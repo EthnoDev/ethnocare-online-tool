@@ -90,5 +90,13 @@
   "circumferenceTTVacSizing": {
     "title": "Circumference",
     "description": "Measure the circumference (C) at the top of the seal"
+  },
+  "lengthTTSizing": {
+    "title": "Length",
+    "description": "Measure the length (L) from the top of the seal to the popliteal trim line"
+  },
+  "lengthTTVacSizing": {
+    "title": "Length",
+    "description": "Measure the length (L) from the top of the seal to the popliteal trim line"
   }
 }

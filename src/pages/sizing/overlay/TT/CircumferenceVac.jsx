@@ -18,9 +18,9 @@ export default function CircumferenceVac() {
     // Consistent with your previous file's key "circumference"
     localStorage.setItem("circumference", value);
     
-    //setTimeout(() => {
-      //navigate("/sizing/TTlengthVac"); 
-    //}, 200);
+    setTimeout(() => {
+      navigate("/sizing/TTlength-vac"); 
+    }, 200);
   };
 
   return (

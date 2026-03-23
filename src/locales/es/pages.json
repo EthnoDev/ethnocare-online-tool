@@ -90,5 +90,13 @@
    "circumferenceTTVacSizing": {
     "title": "Circunferencia",
     "description": "Mida la circunferencia (C) de su muñón en la parte superior del sello"
-   }
+   },
+    "lengthTTSizing": {
+      "title": "Longitud",
+      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea"
+    },
+    "lengthTTVacSizing": {
+      "title": "Longitud",
+      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea"
+    }
 }

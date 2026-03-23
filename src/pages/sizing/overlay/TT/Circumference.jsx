@@ -23,7 +23,7 @@ export default function Circumference() {
     setResult(res);
     localStorage.setItem("circumference", res);
     // Navigate to next step
-    //setTimeout(() => navigate("/assistance/overlay/TT/length"), 200);
+    setTimeout(() => navigate("/sizing/TTlength"), 200);
   };
 
   return (

@@ -90,5 +90,13 @@
   "circumferenceTTVacSizing": {
     "title": "Circonférence",
     "description": "Mesurez la circonférence (C) de votre moignon au sommet du joint"
+  },
+  "lengthTTSizing": {
+    "title": "Longueur",
+    "description": "Mesurez la longueur (L) du haut du joint jusqu'à la ligne de découpe poplitée"
+  },
+  "lengthTTVacSizing": {
+    "title": "Longueur",
+    "description": "Mesurez la longueur (L) du haut du joint jusqu'à la ligne de découpe poplitée"
   }
 }
