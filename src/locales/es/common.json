@@ -40,7 +40,9 @@
     "select_language": "Selecciona tu idioma",
     "sizing_pdfs_title": "Tablas de tallas en PDF :"
   },
-  "inputs": { "enter_measurement": "Ingresar medida" },
+  "inputs": { "enter_measurement": "Ingresar medida",
+   "additional_instruction": "Instrucción adicional"
+  },
   "email": {
     "placeholder": "ejemplo@correo.com",
     "send": "Enviar",

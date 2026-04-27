@@ -40,7 +40,10 @@
     "select_language": "Select your language",
     "sizing_pdfs_title": "Sizing Charts in PDF :"
   },
-  "inputs": { "enter_measurement": "Enter measurement" },
+  "inputs": {
+    "enter_measurement": "Enter measurement",
+    "additional_instruction": "Additional instruction"
+  },
   "email": {
     "placeholder": "example@mail.com",
     "send": "Send",

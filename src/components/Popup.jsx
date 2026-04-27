@@ -62,8 +62,8 @@ export default function Popup({ type, onClose }) {
       <p className="text-sm font-bold underline text-[#090C41] mb-6">clinics@ethnocare.ca</p>
 
       <button
-        onClick={() => setTimeout(onClose, 200)}
-        className="px-4 py-2 bg-[#090C41] text-white rounded-md hover:bg-[#1a1e6f] transition"
+        onClick={() => setTimeout(onClose, 100)}
+        className="px-4 py-2 bg-[#090C41] text-white rounded-md hover:bg-[#1a1e6f] transition cursor-pointer"
         >
         OK
     </button>

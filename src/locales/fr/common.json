@@ -40,7 +40,9 @@
     "select_language": "Sélectionnez votre langue",
     "sizing_pdfs_title": "Guide des Tailles en PDF :"
   },
-  "inputs": { "enter_measurement": "Saisir la mesure" },
+  "inputs": { "enter_measurement": "Saisir la mesure",
+   "additional_instruction": "Instruction supplémentaire"
+  },
   "email": {
     "placeholder": "exemple@courriel.com",
     "send": "Envoyer",

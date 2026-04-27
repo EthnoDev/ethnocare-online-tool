@@ -40,7 +40,9 @@
         "select_language": "Sprache auswählen",
         "sizing_pdfs_title": "Größentabellen als PDF :"
     },
-    "inputs": { "enter_measurement": "Messwert eingeben" },
+    "inputs": { "enter_measurement": "Messwert eingeben",
+     "additional_instruction": "Zusätzliche Anweisung"
+    },
     "email": {
         "placeholder": "beispiel@mail.com",
         "send": "Senden",
