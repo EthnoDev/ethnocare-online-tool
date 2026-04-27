@@ -108,5 +108,12 @@
     "description": "Choose your product orientation",
     "note_title": "Orientation is based on preference",
     "note_body": "Most users choose the same orientation as the side where the Overlay will be worn."
+  },
+  "TTSizing": {
+    "title": "Size",
+    "description": "Based on your answers :",
+    "option1": "Size Option 1",
+    "option2": "Size Option 2",
+    "option3": "Size Option 3" 
   }
 }

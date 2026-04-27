@@ -23,6 +23,7 @@ import SizingTTCircumferenceVac from "./pages/sizing/overlay/TT/CircumferenceVac
 import SizingTTLength from "./pages/sizing/overlay/TT/Length";
 import SizingTTLengthVac from "./pages/sizing/overlay/TT/LengthVac";
 import OrientationSelection from "./pages/sizing/overlay/TT/OrientationSelection";
+import SizeTT from "./pages/sizing/overlay/TT/Size";
 import SizingTFSuspensionSelection from "./pages/sizing/overlay/TF/SuspensionSelection";
 import AssistanceWelcome from "./pages/assistance/Welcome";
 import AssistanceAmputationSelection from "./pages/assistance/AmputationSelection";
@@ -50,6 +51,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/TTlength" element={<SizingTTLength />} />
         <Route path="/sizing/TTlength-vac" element={<SizingTTLengthVac />} />
         <Route path="/sizing/TTorientation" element={<OrientationSelection />} />
+        <Route path="/sizing/TTsize" element={<SizeTT />} />
         <Route path="/sizing/TFsuspension" element={<SizingTFSuspensionSelection />} />
         <Route path="/assistance" element={<AssistanceWelcome />} />
         <Route path="/assistance/amputation" element={<AssistanceAmputationSelection />} />

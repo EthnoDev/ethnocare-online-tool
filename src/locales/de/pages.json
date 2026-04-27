@@ -108,5 +108,12 @@
     "description": "Wählen Sie die Orientierung Ihres Produkts.",
     "note_title": "Die Orientierung basiert auf der Präferenz",
     "note_body": "Die meisten Benutzer wählen die gleiche Orientierung wie die Seite, an der das Overlay getragen wird."
+  },
+  "TTSizing": {
+    "title": "Größe",
+    "description": "Basierend auf Ihren Antworten :",
+    "option1": "Größenoption 1",
+    "option2": "Größenoption 2",
+    "option3": "Größenoption 3"
   }
 }

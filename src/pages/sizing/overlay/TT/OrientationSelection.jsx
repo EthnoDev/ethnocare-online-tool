@@ -53,7 +53,7 @@ export default function OrientationSelection() {
     localStorage.setItem("orientation", optionId);
 
     setTimeout(() => {
-      navigate("/sizing/results"); 
+      navigate("/sizing/TTsize"); 
     }, 200);
   };
 
