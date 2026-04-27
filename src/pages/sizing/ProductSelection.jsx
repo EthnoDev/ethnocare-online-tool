@@ -18,7 +18,7 @@ export default function ProductSelection() {
     localStorage.setItem("product", product);
 
     // Navigation logic for Overlay
-    if (product === "overlay") {
+    if (product === "Overlay") {
       if (amputation === "transtibial") {
         setTimeout(() => navigate("/sizing/TTsuspension"), 200);
         return;
@@ -29,7 +29,7 @@ export default function ProductSelection() {
       }
     }
     // Placeholder for Underlay and Liner navigation (Transtibial only)
-    if (product === "underlay" || product === "liner") {
+    if (product === "Underlay" || product === "Liner") {
       // setTimeout(() => navigate("/sizing/next-step"), 200);
     }
   };
@@ -53,7 +53,7 @@ export default function ProductSelection() {
           {/* Overlay - always shown */}
           <button 
             type="button" 
-            onClick={() => handleSelect("overlay")}
+            onClick={() => handleSelect("Overlay")}
             className="cursor-pointer focus:outline-none"
           >
             <img
@@ -69,7 +69,7 @@ export default function ProductSelection() {
               {/* Underlay */}
               <button 
                 type="button" 
-                onClick={() => handleSelect("underlay")}
+                onClick={() => handleSelect("Underlay")}
                 className="cursor-pointer focus:outline-none"
               >
                 <img
@@ -82,7 +82,7 @@ export default function ProductSelection() {
               {/* Liner */}
               <button 
                 type="button" 
-                onClick={() => handleSelect("liner")}
+                onClick={() => handleSelect("Liner")}
                 className="cursor-pointer focus:outline-none"
               >
                 <img

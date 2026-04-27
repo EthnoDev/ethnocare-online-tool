@@ -112,8 +112,10 @@
   "TTSizing": {
     "title": "Size",
     "description": "Based on your answers :",
-    "option1": "Size Option 1",
-    "option2": "Size Option 2",
-    "option3": "Size Option 3" 
+    "product": "Product",
+    "system": "System",
+    "circumference": "Circumference",
+    "length": "Length",
+    "orientation": "Orientation"
   }
 }

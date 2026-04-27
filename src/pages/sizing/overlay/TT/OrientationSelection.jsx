@@ -35,13 +35,13 @@ export default function OrientationSelection() {
   }, []);
 
   const orientationImages = {
-    left: { en: Left_en, fr: Left_fr, es: Left_es, de: Left_de },
-    right: { en: Right_en, fr: Right_fr, es: Right_es, de: Right_de },
+    Left: { en: Left_en, fr: Left_fr, es: Left_es, de: Left_de },
+    Right: { en: Right_en, fr: Right_fr, es: Right_es, de: Right_de },
   };
 
   const options = [
-    { id: "left", tKey: "left" },
-    { id: "right", tKey: "right" },
+    { id: "Left", tKey: "Left" },
+    { id: "Right", tKey: "Right" },
   ].map(opt => ({
     ...opt,
     src: orientationImages[opt.id][lang] || orientationImages[opt.id].en

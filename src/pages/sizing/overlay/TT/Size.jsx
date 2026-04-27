@@ -13,10 +13,10 @@ export default function SizeTT() {
   const { t, i18n } = useTranslation(["pages", "common"]);
 
   /** ---------- Data Retrieval ---------- */
-  const product = localStorage.getItem("product") || "Transtibial";
+  // Usually 'product' stores "Overlay" or "Underlay"
+  const product = localStorage.getItem("product") || "Overlay"; 
   const suspensionId = localStorage.getItem("overlay_suspension") || "—";
   
-  // Clean keys based on your updated files
   const circumferenceRaw = localStorage.getItem("overlay_raw_circumference") || "—";
   const circumferenceMapped = localStorage.getItem("circumference") || "—";
   
@@ -29,22 +29,20 @@ export default function SizeTT() {
   /** ---------- Logic & Formatting ---------- */
   const currentLang = (i18n.language || "en").split("-")[0];
 
-  // Suspension Label Translation
+  // Combined Product + Amputation Line
+  // This assumes this specific file is for Transtibial (TT)
+  const productAmputation = `${product} TT`;
+
   const suspensionLabel = suspensionId !== "—" 
     ? t(`suspension.${suspensionId.toLowerCase().replace("tt-", "tt-")}`, { ns: "common" }) 
     : "—";
 
-  // Orientation Label Translation
-  const orientationLabel = orientation !== "—" 
-    ? t(`common:${orientation.toLowerCase()}`, { defaultValue: orientation }) 
-    : "—";
+  const orientationLabel = orientation === "—" ? "—" : t(`orientation.${orientation.toLowerCase()}`, { ns: "common" });
 
-  // Generate Size Code: e.g., OV28-SH-R
   const sizeCode = (circumferenceMapped !== "—" && lengthMapped !== "—" && orientation !== "—")
     ? `OV${circumferenceMapped}-${lengthMapped}-${orientation.charAt(0).toUpperCase()}`
     : "XXXXX";
 
-  // German specific mapping (if applicable)
   const germanSizeMap = {
     "OV35-SH-L": "211B18=1LL", "OV35-SH-R": "211B18=1LR",
     "OV28-SH-L": "211B18=1ML", "OV28-SH-R": "211B18=1MR",
@@ -62,62 +60,59 @@ export default function SizeTT() {
 
   return (
     <PageWrapper showBack backTo="/sizing/TTorientation" currentStep={5} totalSteps={5} code={true}>
-      <div className="w-full max-w-2xl mt-2 text-center">
-        <h1 className="text-3xl font-bold text-slate-900 leading-tight mb-2">
+      <div className="w-full max-w-2xl mt-4 text-center">
+        <h1 className="text-[34px] font-semibold font-sans mb-2 text-slate-900">
           {t("TTSizing.title")}
         </h1>
 
-        {/* Size Code Display */}
-        <div className="flex flex-col items-center my-6">
-          <p className="text-5xl font-black text-[#090C41] tracking-tight">{sizeCode}</p>
+        <div className="flex flex-col items-center mb-6">
+          <p className="text-[40px] font-bold font-sans text-[#090C41]">{sizeCode}</p>
           {germanAltCode && (
-            <p className="text-lg font-bold text-slate-400 mt-1">{germanAltCode}</p>
+            <p className="text-[20px] font-bold text-gray-500 font-sans -mt-2">{germanAltCode}</p>
           )}
         </div>
 
-        {/* Summary Table & Image */}
-        <div className="w-full max-w-lg mx-auto flex flex-col md:flex-row items-center md:items-start justify-center gap-8 text-left bg-slate-50 p-6 rounded-2xl border border-slate-100">
+        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
           <img
             src={TTProductImg}
             alt="TT Product"
-            className="w-32 h-auto object-contain rounded-lg"
+            className="w-[180px] h-auto object-contain rounded-xl shadow-sm"
           />
 
-          <div className="flex-1 space-y-2 text-sm text-slate-600">
-            <p className="text-slate-900 font-bold border-b border-slate-200 pb-1 mb-2">
-              {t("TTSizing.description")}
-            </p>
-            <p><strong>{t("TTSizing.product")}:</strong> {product}</p>
-            <p><strong>{t("TTSizing.system")}:</strong> {suspensionLabel}</p>
-            <p><strong>{t("TTSizing.circumference")}:</strong> {circumferenceRaw} {unit}</p>
-            <p><strong>{t("TTSizing.length")}:</strong> {lengthRaw} {unit}</p>
-            <p><strong>{t("TTSizing.orientation")}:</strong> {orientationLabel}</p>
+          <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
+            <div className="space-y-1">
+              <p className="text-slate-900"><strong>{t("TTSizing.description")}</strong></p>
+              {/* Product + Amputation Line */}
+              <p>{t("TTSizing.product")}: {productAmputation}</p>
+              <p>{t("TTSizing.system")}: {suspensionLabel}</p>
+              <p>{t("TTSizing.circumference")}: {circumferenceRaw} {unit}</p>
+              <p>{t("TTSizing.length")}: {lengthRaw} {unit}</p>
+              <p>{t("TTSizing.orientation")}: {orientationLabel}</p>
+            </div>
           </div>
         </div>
 
-        {/* Restart Button */}
-        <div className="mt-8">
+        <div className="flex justify-center">
           <button
             onClick={handleRestart}
-            className={`px-8 py-3 rounded-xl border font-bold transition-all cursor-pointer ${
-              isRestarting
+            className={`px-6 py-3 text-base rounded-xl border font-sans font-semibold transition-all cursor-pointer
+              ${isRestarting
                 ? "bg-[#090C41] text-white border-[#090C41]"
-                : "bg-white text-slate-900 border-slate-200 hover:border-slate-900"
-            }`}
+                : "bg-white text-black border-gray-300 hover:border-black"
+              }`}
           >
             {t("cta.restart", { ns: "common" })}
           </button>
         </div>
 
-        {/* Email Capture Section */}
-        <div className="mt-12 text-left max-w-md mx-auto border-t border-slate-100 pt-8">
-          <h2 className="text-xl font-bold text-slate-900">{t("TTSizing.save_title")}</h2>
-          <p className="text-xs text-slate-500 mt-1 mb-4 leading-relaxed">
+        <div className="mt-10 text-left font-sans max-w-md mx-auto">
+          <h2 className="text-[25px] font-semibold text-slate-900">{t("TTSizing.save_title")}</h2>
+          <p className="text-[12px] text-gray-700 leading-snug mb-2">
             {t("TTSizing.save_description")}
           </p>
 
           <EmailCapture
-            selection={{ sizeCode, product }}
+            selection={{ sizeCode, product: productAmputation }}
             onConfirm={(email) => {
               localStorage.setItem("saved_size_code", sizeCode);
               console.log("Result saved for:", email);
