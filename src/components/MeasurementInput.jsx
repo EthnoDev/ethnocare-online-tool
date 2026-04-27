@@ -159,7 +159,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           <button
             type="submit"
             disabled={isConfirming}
-            className={`w-1/3 px-4 py-2 rounded-xl border font-sans font-medium transition-all flex items-center justify-center
+            className={`w-1/3 px-4 py-2 rounded-xl border font-sans font-medium transition-all flex items-center justify-center cursor-pointer disabled:cursor-not-allowed
               ${
                 isConfirming
                   ? "bg-[#090C41] text-white border-[#090C41]"

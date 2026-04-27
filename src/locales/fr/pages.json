@@ -98,5 +98,9 @@
   "lengthTTVacSizing": {
     "title": "Longueur",
     "description": "Mesurez la longueur (L) du haut du joint jusqu'à la ligne de découpe poplitée"
+  },
+  "orientationTTSizing": {
+    "title": "Orientation",
+    "description": "Choisissez l'orientation de votre produit"
   }
 }

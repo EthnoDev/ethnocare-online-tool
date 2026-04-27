@@ -98,5 +98,9 @@
   "lengthTTVacSizing": {
     "title": "Längenmessung",
     "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle."
+  },
+  "orientationTTSizing": {
+    "title": "Orientierung",
+    "description": "Wählen Sie die Orientierung Ihres Produkts."
   }
 }

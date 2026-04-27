@@ -98,5 +98,9 @@
   "lengthTTVacSizing": {
     "title": "Length",
     "description": "Measure the length (L) from the top of the seal to the popliteal trim line"
+  },
+  "orientationTTSizing": {
+    "title": "Orientation",
+    "description": "Choose your product orientation"
   }
 }

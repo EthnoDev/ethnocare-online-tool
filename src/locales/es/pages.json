@@ -98,5 +98,9 @@
     "lengthTTVacSizing": {
       "title": "Longitud",
       "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea"
+    },
+    "orientationTTSizing": {
+      "title": "Orientación",
+      "description": "Seleccione la orientación de su producto"
     }
 }

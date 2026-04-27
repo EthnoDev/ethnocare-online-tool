@@ -35,9 +35,9 @@ export default function Length() {
     // Updated variable name to "length"
     localStorage.setItem("length", res);
     
-    //setTimeout(() => {
-      //navigate("/sizing/TTorientation");
-    //}, 200);
+    setTimeout(() => {
+      navigate("/sizing/TTorientation");
+    }, 200);
   };
 
   return (

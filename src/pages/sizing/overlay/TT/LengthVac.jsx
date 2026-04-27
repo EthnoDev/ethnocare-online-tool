@@ -35,10 +35,10 @@ export default function LengthVac() {
     // Consistent variable name "length"
     localStorage.setItem("length", res);
     
-    //setTimeout(() => {
+    setTimeout(() => {
       // Directing to a shared or Vac-specific orientation page
-      //navigate("/sizing/TTorientationVac");
-    //}, 200);
+      navigate("/sizing/TTorientation");
+    }, 200);
   };
 
   return (
