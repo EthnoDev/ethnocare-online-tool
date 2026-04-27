@@ -1,7 +1,7 @@
 // src/pages/assistance/overlay/TT/LengthVac.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
 
@@ -10,6 +10,7 @@ import TLVac_en from "../../../../assets/lengths/TT/vac.svg";
 import TLVac_fr from "../../../../assets/lengths/TT/vac_fr.svg";
 import TLVac_es from "../../../../assets/lengths/TT/vac_es.svg";
 import TLVac_de from "../../../../assets/lengths/TT/vac_de.svg";
+import ExclamationIcon from "../../../../assets/exclamation.svg";
 
 /** ---------- Helpers ---------- */
 const baseLang = (code) => (code || "en").split("-")[0];
@@ -32,11 +33,9 @@ export default function LengthVac() {
 
   const handleConfirm = (res) => {
     setResult(res);
-    // Consistent variable name "length"
     localStorage.setItem("length", res);
     
     setTimeout(() => {
-      // Directing to a shared or Vac-specific orientation page
       navigate("/sizing/TTorientation");
     }, 200);
   };
@@ -72,6 +71,34 @@ export default function LengthVac() {
             measurement="length"
             onConfirm={handleConfirm}
           />
+        </div>
+
+        {/* Notice Section - Matching the darker design from Length.jsx */}
+        <div className="w-full max-w-sm mx-auto mt-10">
+          <div className="border border-gray-300 rounded-2xl p-4 bg-gray-200">
+            <div className="flex items-start gap-3 text-left">
+              <img
+                src={ExclamationIcon}
+                alt="Notice"
+                className="shrink-0 w-5 h-5 opacity-100"
+              />
+              <div className="flex-1">
+                <p className="text-[15px] font-bold text-slate-900 leading-tight">
+                  {t("lengthTTVacSizing.note_title")}
+                </p>
+                <p className="mt-1.5 text-[13px] text-slate-700 leading-snug">
+                  <Trans
+                    ns="pages"
+                    i18nKey="lengthTTVacSizing.note_body"
+                    components={{ 
+                        bold: <strong className="font-bold text-[#090C41]" />,
+                        underline: <span className="underline" />
+                    }}
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </PageWrapper>

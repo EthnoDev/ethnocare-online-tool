@@ -93,14 +93,20 @@
    },
     "lengthTTSizing": {
       "title": "Longitud",
-      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea"
+      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea",
+      "note_title": "Paciente sin socket",
+      "note_body": "Puede medir la longitud desde el extremo de la funda hasta la fosa poplítea y reportar las dimensiones anteriores (Asegúrese de medir las dimensiones lineales)."
     },
     "lengthTTVacSizing": {
       "title": "Longitud",
-      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea"
+      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea",
+      "note_title": "Paciente sin socket",
+      "note_body": "Puede medir la longitud desde el extremo de la funda hasta la fosa poplítea y reportar las dimensiones anteriores (Asegúrese de medir las dimensiones lineales)."
     },
     "orientationTTSizing": {
       "title": "Orientación",
-      "description": "Seleccione la orientación de su producto"
+      "description": "Seleccione la orientación de su producto",
+      "note_title": "La orientación se basa en la preferencia",
+      "note_body": "La mayoría de los usuarios eligen la misma orientación que el lado donde se usará el Overlay."
     }
 }

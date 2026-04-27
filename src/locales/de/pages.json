@@ -93,14 +93,20 @@
   },
   "lengthTTSizing": {
     "title": "Längenmessung",
-    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle."
+    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle.",
+    "note_title": "Patient ohne Socket",
+    "note_body": "Sie können die Länge vom Ende der Liner bis zur Kniekehle messen und die oben genannten Maße angeben (Stellen Sie sicher, dass Sie lineare Maße messen)."
   },
   "lengthTTVacSizing": {
     "title": "Längenmessung",
-    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle."
+    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle.",
+    "note_title": "Patient ohne Socket",
+    "note_body": "Sie können die Länge vom Ende der Liner bis zur Kniekehle messen und die oben genannten Maße angeben (Stellen Sie sicher, dass Sie lineare Maße messen)."
   },
   "orientationTTSizing": {
     "title": "Orientierung",
-    "description": "Wählen Sie die Orientierung Ihres Produkts."
+    "description": "Wählen Sie die Orientierung Ihres Produkts.",
+    "note_title": "Die Orientierung basiert auf der Präferenz",
+    "note_body": "Die meisten Benutzer wählen die gleiche Orientierung wie die Seite, an der das Overlay getragen wird."
   }
 }

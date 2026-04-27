@@ -93,14 +93,20 @@
   },
   "lengthTTSizing": {
     "title": "Length",
-    "description": "Measure the length (L) from the top of the seal to the popliteal trim line"
+    "description": "Measure the length (L) from the top of the seal to the popliteal trim line",
+    "note_title": "Patient with no socket",
+    "note_body": "You can measure the length from end of liner to the popliteal fossea and report the dimensions above (Make sure to measure linear dimensions)."
   },
   "lengthTTVacSizing": {
     "title": "Length",
-    "description": "Measure the length (L) from the top of the seal to the popliteal trim line"
+    "description": "Measure the length (L) from the top of the seal to the popliteal trim line",
+    "note_title": "Patient with no socket",
+    "note_body": "You can measure the length from end of liner to the popliteal fossea and report the dimensions above (Make sure to measure linear dimensions)."
   },
   "orientationTTSizing": {
     "title": "Orientation",
-    "description": "Choose your product orientation"
+    "description": "Choose your product orientation",
+    "note_title": "Orientation is based on preference",
+    "note_body": "Most users choose the same orientation as the side where the Overlay will be worn."
   }
 }
