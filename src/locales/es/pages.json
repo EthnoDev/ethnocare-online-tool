@@ -135,5 +135,18 @@
     "circumferenceTFVacSizing": {
       "title": "Circunferencia",
       "description": "Mida la circunferencia (C) a {{distance}} desde la parte superior del sello."
-     }
+    },
+    "TFSizing": {
+      "title": "Tamaño",
+      "description": "Basado en sus respuestas :",
+      "product": "Producto",
+      "system": "Sistema",
+      "circumference": "Circunferencia",
+      "length": "Longitud",
+      "orientation": "Orientación",
+      "email_title": "¡Guarde su selección!",
+      "email_description": "Reciba al instante su código de producto y los recursos de ajuste por correo electrónico.",
+      "note_cushion_title": "Aviso importante",
+      "note_cushion_body": "Los sistemas con cojín pueden requerir modificaciones personalizadas del Overlay. Comuníquese con nosotros a <bold>clinics@ethnocare.ca</bold> indicando sus medidas y detalles sobre su sistema de suspensión."
+    }
 }

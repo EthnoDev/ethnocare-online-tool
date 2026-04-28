@@ -135,5 +135,17 @@
   "circumferenceTFVacSizing": {
     "title": "Umfangsmessung",
     "description": "Messen Sie den Umfang (C) Ihres Stumpfes {{distance}} vom oberen Ende der Dichtung."
+  },
+  "TFSizing": {
+    "title": "Größe",
+    "description": "Basierend auf Ihren Antworten :",
+    "product": "Produkt",
+    "system": "System",
+    "circumference": "Umfang",
+    "length": "Länge",
+    "email_title": "Speichern Sie Ihre Auswahl!",
+    "email_description": "Erhalten Sie sofort Ihren Produktcode und die Anpassungsressourcen per E-Mail.",
+    "note_cushion_title": "Wichtiger Hinweis",
+    "note_cushion_body": "Cushion-Systeme können individuelle Anpassungen am Overlay erfordern. Bitte kontaktieren Sie uns unter <bold>clinics@ethnocare.ca</bold> mit Ihren Maßen und Details zu Ihrem Suspensionssystem."
   }
 }

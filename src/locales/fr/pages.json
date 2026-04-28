@@ -135,5 +135,17 @@
   "circumferenceTFVacSizing": {
     "title": "Circonférence",
     "description": "Mesurez la circonférence (C) à {{distance}} du haut du joint."
+  },
+  "TFSizing": {
+    "title": "Taille",
+    "description": "En fonction de vos réponses :",
+    "product": "Produit",
+    "system": "Système",  
+    "circumference": "Circonférence",
+    "length": "Longueur",
+    "email_title": "Sauvegardez votre sélection!",
+    "email_description": "Recevez instantanément votre code produit et les ressources de montage par email.",
+    "note_cushion_title": "Avis important",
+    "note_cushion_body": "Les liners sans verrouillage peuvent nécessiter des modifications personnalisées de l’Overlay. Veuillez nous contacter à <bold>clinics@ethnocare.ca</bold> en indiquant vos mesures et des détails sur votre système de suspension."
   }
 }

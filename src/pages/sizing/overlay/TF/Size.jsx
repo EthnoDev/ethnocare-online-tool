@@ -103,15 +103,15 @@ export default function SizeTF() {
           <div className="w-full max-w-md mx-auto mt-2 mb-10">
             <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
               <div className="flex items-start gap-3 text-left">
-                <img src={ExclamationIcon} alt="Notice" className="shrink-0 w-5 h-5 mt-0.5" />
+                <img src={ExclamationIcon} alt="Notice" className="shrink-0 w-5 h-5" />
                 <div className="flex-1">
                   <p className="text-[15px] font-bold text-slate-900 leading-tight">
-                    {t("sizeTF.note_cushion_title")}
+                    {t("TFSizing.note_cushion_title")}
                   </p>
                   <p className="mt-1.5 text-[13px] text-slate-600 leading-snug">
                     <Trans
                       ns="pages"
-                      i18nKey="sizeTF.note_cushion_body"
+                      i18nKey="TFSizing.note_cushion_body"
                       components={{ bold: <strong className="font-bold underline text-[#090C41]" /> }}
                     />
                   </p>

@@ -135,5 +135,17 @@
   "circumferenceTFVacSizing": {
     "title": "Circumference",
     "description": "Measure the circumference (C) at {{distance}} from the top of the seal."
+  },
+  "TFSizing": {
+    "title": "Size",
+    "description": "Based on your answers :",
+    "product": "Product",
+    "system": "System",
+    "circumference": "Circumference",
+    "length": "Length",
+    "email_title": "Save your selection!",
+    "email_description": "Get your product code and fitting resources by email instantly.",
+    "note_cushion_title": "Important notice",
+    "note_cushion_body": "Cushion systems may require custom modifications to the Overlay. Please contact us at <bold>clinics@ethnocare.ca</bold> with your sizes and details about your suspension system."
   }
 }
