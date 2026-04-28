@@ -116,6 +116,8 @@
     "system": "System",
     "circumference": "Umfang",
     "length": "Länge",
-    "orientation": "Orientierung"
+    "orientation": "Orientierung",
+    "email_title": "Speichern Sie Ihre Auswahl!",
+    "email_description": "Erhalten Sie sofort Ihren Produktcode und die Anpassungsressourcen per E-Mail."
   }
 }

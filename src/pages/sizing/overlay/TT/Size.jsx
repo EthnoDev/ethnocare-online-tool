@@ -106,9 +106,9 @@ export default function SizeTT() {
         </div>
 
         <div className="mt-10 text-left font-sans max-w-md mx-auto">
-          <h2 className="text-[25px] font-semibold text-slate-900">{t("TTSizing.save_title")}</h2>
+          <h2 className="text-[25px] font-semibold text-slate-900">{t("TTSizing.email_title")}</h2>
           <p className="text-[12px] text-gray-700 leading-snug mb-2">
-            {t("TTSizing.save_description")}
+            {t("TTSizing.email_description")}
           </p>
 
           <EmailCapture

@@ -116,6 +116,8 @@
       "system": "Sistema",
       "circumference": "Circunferencia",
       "length": "Longitud",
-      "orientation": "Orientación"
+      "orientation": "Orientación",
+      "email_title": "¡Guarde su selección!",
+      "email_description": "Reciba al instante su código de producto y los recursos de ajuste por correo electrónico."
     }
 }
