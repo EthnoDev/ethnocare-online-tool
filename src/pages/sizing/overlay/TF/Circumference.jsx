@@ -19,9 +19,9 @@ export default function Circumference() {
 
   const handleConfirm = (res) => {
     localStorage.setItem("circumference", res);
-    //setTimeout(() => {
-      //navigate("/sizing/TForientation");
-    //}, 200);
+    setTimeout(() => {
+      navigate("/sizing/TFsize");
+    }, 200);
   };
 
   return (

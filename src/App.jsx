@@ -29,6 +29,7 @@ import SizingTFLength from "./pages/sizing/overlay/TF/Length";
 import SizingTFLengthVac from "./pages/sizing/overlay/TF/LengthVac";
 import SizingTFCircumference from "./pages/sizing/overlay/TF/Circumference";
 import SizingTFCircumferenceVac from "./pages/sizing/overlay/TF/CircumferenceVac";
+import SizeTF from "./pages/sizing/overlay/TF/Size";
 import AssistanceWelcome from "./pages/assistance/Welcome";
 import AssistanceAmputationSelection from "./pages/assistance/AmputationSelection";
 import AssistanceProductSelection from "./pages/assistance/ProductSelection";
@@ -61,6 +62,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/TFlength-vac" element={<SizingTFLengthVac />} />
         <Route path="/sizing/TFcircumference" element={<SizingTFCircumference />} />
         <Route path="/sizing/TFcircumference-vac" element={<SizingTFCircumferenceVac />} />
+        <Route path="/sizing/TFsize" element={<SizeTF />} />
         <Route path="/assistance" element={<AssistanceWelcome />} />
         <Route path="/assistance/amputation" element={<AssistanceAmputationSelection />} />
         <Route path="/assistance/product" element={<AssistanceProductSelection />} />

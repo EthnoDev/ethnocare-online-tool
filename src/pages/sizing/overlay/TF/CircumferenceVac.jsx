@@ -22,10 +22,9 @@ export default function CircumferenceVac() {
 
   const handleConfirm = (res) => {
     localStorage.setItem("circumference", res);
-    //setTimeout(() => {
-      // Step 3 -> 4: Final step is usually Orientation or Results
-      //navigate("/sizing/TForientation");
-    //}, 200);
+    setTimeout(() => {
+      navigate("/sizing/TFsize");
+    }, 200);
   };
 
   return (
