@@ -63,9 +63,14 @@ export default function SuspensionSelection() {
     setSelected(optionId);
     localStorage.setItem("overlay_suspension", optionId);
 
-    //setTimeout(() => {
-      //navigate("/sizing/size"); // Or your specific next step
-    //}, 200);
+    // Logic: If distal seal, go to TFlength-vac, otherwise TFlength
+    setTimeout(() => {
+      if (optionId === "TF-distal-seal") {
+        navigate("/sizing/TFlength-vac");
+      } else {
+        navigate("/sizing/TFlength");
+      }
+    }, 200);
   };
 
   return (

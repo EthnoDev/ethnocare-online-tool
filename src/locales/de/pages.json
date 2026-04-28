@@ -119,5 +119,21 @@
     "orientation": "Orientierung",
     "email_title": "Speichern Sie Ihre Auswahl!",
     "email_description": "Erhalten Sie sofort Ihren Produktcode und die Anpassungsressourcen per E-Mail."
+  },
+  "lengthTFSizing": {
+    "title": "Längenmessung",
+    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle."
+  },
+  "lengthTFVacSizing": {
+    "title": "Längenmessung",
+    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle."
+  },
+  "circumferenceTFSizing": {
+    "title": "Umfangsmessung",
+    "description": "Messen Sie den Umfang Ihres Stumpfes {{distance}} über dem Ende des Stumpfes und geben Sie ihn hier ein."
+  },
+  "circumferenceTFVacSizing": {
+    "title": "Umfangsmessung",
+    "description": "Messen Sie den Umfang (C) Ihres Stumpfes {{distance}} vom oberen Ende der Dichtung."
   }
 }

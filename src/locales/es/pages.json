@@ -119,5 +119,21 @@
       "orientation": "Orientación",
       "email_title": "¡Guarde su selección!",
       "email_description": "Reciba al instante su código de producto y los recursos de ajuste por correo electrónico."
-    }
+    },
+    "lengthTFSizing": {
+      "title": "Longitud",
+      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea"
+    },
+    "lengthTFVacSizing": {
+      "title": "Longitud",
+      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea"
+    },
+    "circumferenceTFSizing": {
+      "title": "Circunferencia",
+      "description": "Mida la circunferencia (C) de su muñón a {{distance}} por debajo del borde proximal del muñón."
+    },
+    "circumferenceTFVacSizing": {
+      "title": "Circunferencia",
+      "description": "Mida la circunferencia (C) a {{distance}} desde la parte superior del sello."
+     }
 }

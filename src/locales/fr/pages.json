@@ -119,5 +119,21 @@
     "orientation": "Orientation",
     "email_title": "Sauvegardez votre sélection!",
     "email_description": "Recevez instantanément votre code produit et les ressources de montage par email."
+  },
+  "lengthTFSizing": {
+    "title": "Longueur",
+    "description": "Mesurez la longueur (L) du haut du joint jusqu'à la ligne de découpe poplitée"
+  },
+  "lengthTFVacSizing": {
+    "title": "Longueur",
+    "description": "Mesurez la longueur (L) du haut du joint jusqu'à la ligne de découpe poplitée"
+  },
+  "circumferenceTFSizing": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence de votre moignon à {{distance}} sous la proéminence osseuse la plus basse."
+  },
+  "circumferenceTFVacSizing": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence (C) à {{distance}} du haut du joint."
   }
 }

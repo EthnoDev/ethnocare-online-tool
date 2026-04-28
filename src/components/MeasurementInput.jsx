@@ -22,7 +22,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
   const convertToCm = (val) => (unit === "in" ? val * 2.54 : val);
 
   const mapMeasurement = (valCm) => {
-    /* ... keeping your existing mapping logic ... */
+    // TT OVERLAY
     if (product === "ttdistal" || product === "ttstandard") {
       if (measurement === "circumference") {
         if (valCm >= 24 && valCm < 29.5) return 23;
@@ -33,8 +33,52 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
         if (valCm >= 19) return "LG";
       }
     }
-    // (rest of mapping remains the same)
-    return null; 
+
+    // TT UNDERLAY
+    if (product === "underlaytt") {
+      if (measurement === "length") {
+        if (valCm >= 23 && valCm < 26) return "SH";
+        if (valCm >= 26 && valCm < 30) return "MD";
+        if (valCm >= 30 && valCm < 33) return "LG";
+        if (valCm >= 33) return "XL";
+      } else if (measurement === "circumference") {
+        if (valCm >= 15 && valCm < 25) return 23;
+        if (valCm >= 25 && valCm < 33) return 28;
+        if (valCm >= 33 && valCm < 42) return 35;
+      }
+    }
+
+    // TF STANDARD
+    if (product === "tfstandard") {
+      if (measurement === "length") {
+        if (valCm >= 20 && valCm < 24) return "SH";
+        if (valCm >= 24 && valCm < 32) return "LG";
+        if (valCm >= 32) return "XL";
+      } else if (measurement === "circumference") {
+        if (valCm >= 32 && valCm < 36) return 32;
+        if (valCm >= 36 && valCm < 40) return 38;
+        if (valCm >= 40 && valCm < 45) return 40;
+        if (valCm >= 45 && valCm < 48) return 44;
+        if (valCm >= 48 && valCm < 52) return 48;
+        if (valCm >= 52 && valCm < 62) return 52;
+      }
+    }
+
+    // TF DISTAL
+    if (product === "tfdistal") {
+      if (measurement === "length") {
+        if (valCm >= 20 && valCm < 24) return "SH";
+        if (valCm >= 24) return "LG";
+      } else if (measurement === "circumference") {
+        if (valCm >= 32 && valCm < 38) return 32;
+        if (valCm >= 38 && valCm < 42) return 38;
+        if (valCm >= 42 && valCm < 47) return 40;
+        if (valCm >= 47 && valCm < 50) return 44;
+        if (valCm >= 50 && valCm < 54) return 48;
+        if (valCm >= 54 && valCm < 62) return 52;
+      }
+    }
+    return null;
   };
 
   const handleConfirmClick = () => {

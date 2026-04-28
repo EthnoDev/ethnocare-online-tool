@@ -119,5 +119,21 @@
     "orientation": "Orientation",
     "email_title": "Save your selection!",
     "email_description": "Get your product code and fitting resources by email instantly."
+  },
+  "lengthTFSizing": {
+    "title": "Length",
+    "description": "Measure the length (L) from the end of the liner to the perineum"
+  },
+  "lengthTFVacSizing": {
+    "title": "Length",
+    "description": "Measure the length (L) from the top of the seal to the perineum"
+  },
+  "circumferenceTFSizing": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at {{distance}} from the distal end."
+  },
+  "circumferenceTFVacSizing": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at {{distance}} from the top of the seal."
   }
 }
