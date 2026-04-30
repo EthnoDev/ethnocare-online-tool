@@ -148,5 +148,11 @@
       "email_description": "Reciba al instante su código de producto y los recursos de ajuste por correo electrónico.",
       "note_cushion_title": "Aviso importante",
       "note_cushion_body": "Los sistemas con cojín pueden requerir modificaciones personalizadas del Overlay. Comuníquese con nosotros a <bold>clinics@ethnocare.ca</bold> indicando sus medidas y detalles sobre su sistema de suspensión."
+    },
+    "sealUnderlaySizing": {
+      "title": "Selección de sello",
+      "description": "Elija dónde se hará el sello con su forro",
+      "open_description": "Recomendamos usar la posición de sellado abierta ya que permite que el underlay se adhiera por encima del forro y evacue el exceso de humedad.",
+      "closed_description": "Si prefiere un diseño más clásico o le preocupa el sellado del forro, puede elegir la versión cerrada."
     }
 }

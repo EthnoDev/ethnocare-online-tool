@@ -147,5 +147,11 @@
     "email_description": "Recevez instantanément votre code produit et les ressources de montage par email.",
     "note_cushion_title": "Avis important",
     "note_cushion_body": "Les liners sans verrouillage peuvent nécessiter des modifications personnalisées de l’Overlay. Veuillez nous contacter à <bold>clinics@ethnocare.ca</bold> en indiquant vos mesures et des détails sur votre système de suspension."
+  },
+  "sealUnderlaySizing": {
+    "title": "Sélection du joint",
+    "description": "Choisissez où le joint sera fait avec votre doublure",
+    "open_description": "Nous recommandons d'utiliser la position de scellement ouverte car elle permet à l'underlay de coller au-dessus de la doublure et d'évacuer l'excès d'humidité.",
+    "closed_description": "Si vous préférez un design plus classique ou que le scellement de la doublure est une préoccupation, vous pouvez choisir la version fermée."
   }
 }

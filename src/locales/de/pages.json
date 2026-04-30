@@ -147,5 +147,11 @@
     "email_description": "Erhalten Sie sofort Ihren Produktcode und die Anpassungsressourcen per E-Mail.",
     "note_cushion_title": "Wichtiger Hinweis",
     "note_cushion_body": "Cushion-Systeme können individuelle Anpassungen am Overlay erfordern. Bitte kontaktieren Sie uns unter <bold>clinics@ethnocare.ca</bold> mit Ihren Maßen und Details zu Ihrem Suspensionssystem."
+  },
+  "sealUnderlaySizing": {
+    "title": "Siegelauswahl",
+    "description": "Wählen Sie aus, wo der Siegel mit Ihrem Liner gemacht wird",
+    "open_description": "Wir empfehlen die offene Versiegelungsposition, da sie es dem Unterlage ermöglicht, über dem Liner zu haften und überschüssige Feuchtigkeit abzuleiten.",
+    "closed_description": "Wenn Sie ein klassischeres Design bevorzugen oder das Versiegeln des Liners ein Anliegen ist, können Sie die geschlossene Version wählen."
   }
 }

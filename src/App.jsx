@@ -30,6 +30,8 @@ import SizingTFLengthVac from "./pages/sizing/overlay/TF/LengthVac";
 import SizingTFCircumference from "./pages/sizing/overlay/TF/Circumference";
 import SizingTFCircumferenceVac from "./pages/sizing/overlay/TF/CircumferenceVac";
 import SizeTF from "./pages/sizing/overlay/TF/Size";
+import SizingUnderlaySealSelection from "./pages/sizing/underlay/SealSelection";
+import SizingUnderlayLength from "./pages/sizing/underlay/Length";
 import AssistanceWelcome from "./pages/assistance/Welcome";
 import AssistanceAmputationSelection from "./pages/assistance/AmputationSelection";
 import AssistanceProductSelection from "./pages/assistance/ProductSelection";
@@ -68,6 +70,8 @@ function AnimatedRoutes() {
         <Route path="/assistance/product" element={<AssistanceProductSelection />} />
         <Route path="/assistance/selection" element={<AssistanceSelection />} />
         <Route path="/assistance/size" element={<AssistanceSizeSelection />} />
+        <Route path="/sizing/underlay/seal" element={<SizingUnderlaySealSelection />} />
+        <Route path="/sizing/underlay/length" element={<SizingUnderlayLength />} />
       </Routes>
     </AnimatePresence>
   );

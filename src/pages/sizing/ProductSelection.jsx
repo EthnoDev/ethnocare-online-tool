@@ -28,9 +28,10 @@ export default function ProductSelection() {
         return;
       }
     }
-    // Placeholder for Underlay and Liner navigation (Transtibial only)
-    if (product === "Underlay" || product === "Liner") {
-      // setTimeout(() => navigate("/sizing/next-step"), 200);
+    // Navigation logic for Underlay (Transtibial only)
+    if (product === "Underlay") {
+      setTimeout(() => navigate("/sizing/underlay/seal"), 200);
+      return;
     }
   };
 

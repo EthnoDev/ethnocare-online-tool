@@ -147,5 +147,11 @@
     "email_description": "Get your product code and fitting resources by email instantly.",
     "note_cushion_title": "Important notice",
     "note_cushion_body": "Cushion systems may require custom modifications to the Overlay. Please contact us at <bold>clinics@ethnocare.ca</bold> with your sizes and details about your suspension system."
+  },
+  "sealUnderlaySizing": {
+    "title": "Seal Selection",
+    "description": "Choose where the seal will be done with your liner",
+    "open_description": "We recommend using the Open sealing position as it allows the underlay to stick above the liner and evacuate the excess humidity.",
+    "closed_description": "If you prefer a more classical design or that liner sealing is a concern you can choose the closed version"
   }
 }
