@@ -158,5 +158,9 @@
     "lengthUnderlaySizing": {
       "title": "Longitud",
       "description": "Mida la longitud (L) de su forro cortado"
+    },
+    "circumferenceUnderlaySizing": {
+      "title": "Circunferencia",
+      "description": "Mida la circunferencia (C) a {{distance}} desde el extremo distal."
     }
 }

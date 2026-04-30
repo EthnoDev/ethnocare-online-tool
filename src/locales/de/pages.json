@@ -157,5 +157,9 @@
   "lengthUnderlaySizing": {
     "title": "Länge",
     "description": "Messen Sie die Länge (L) Ihres geschnittenen Liners"
+  },
+  "circumferenceUnderlaySizing": {
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende."
   }
 }

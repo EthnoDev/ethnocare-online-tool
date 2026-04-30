@@ -30,7 +30,9 @@ export default function Length() {
   const handleConfirm = (value) => {
     // Store the value returned from the component
     localStorage.setItem("underlay_length", value);
-    navigate("/sizing/underlay/circumference"); 
+    setTimeout(() => {
+      navigate("/sizing/underlay/circumference");
+    }, 200);
   };
 
   return (

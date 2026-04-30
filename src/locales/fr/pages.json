@@ -157,5 +157,9 @@
   "lengthUnderlaySizing": {
     "title": "Longueur",
     "description": "Mesurez la longueur (L) de votre doublure coupée"
+  },
+  "circumferenceUnderlaySizing": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence (C) à {{distance}} de l'extrémité distale."
   }
 }

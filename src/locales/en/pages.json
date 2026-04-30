@@ -157,5 +157,9 @@
   "lengthUnderlaySizing": {
     "title": "Length",
     "description": "Measure the length (L) of your cutted liner"
+  },
+  "circumferenceUnderlaySizing": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at {{distance}} from the distal end."
   }
 }
