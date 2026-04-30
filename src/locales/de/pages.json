@@ -161,5 +161,12 @@
   "circumferenceUnderlaySizing": {
     "title": "Umfang",
     "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende."
+  },
+  "siliconeUnderlaySizing": {
+    "title": "Silikonauswahl",
+    "description": "Optional für zusätzlichen Halt",
+    "image_caption": "Sie können wählen, ob Sie Silikon für zusätzlichen Halt auf dem Liner und dem Stumpf hinzufügen möchten. Diese Option wird für Personen empfohlen, die eine Bewegung des Unterlage am Stumpf befürchten oder die bereits ein Verrutschen des Unterlage erlebt haben.",
+    "option1": "Mit Silikon",
+    "option2": "Ohne Silikon"
   }
 }

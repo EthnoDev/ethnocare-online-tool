@@ -23,7 +23,7 @@ export default function Circumference() {
     
     // 200ms delay before navigation
     setTimeout(() => {
-      navigate("/sizing/underlay/results"); 
+      navigate("/sizing/underlay/silicone"); 
     }, 200);
   };
 

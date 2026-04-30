@@ -9,7 +9,7 @@ export default function SelectableOption({
   const sizeClasses = compact ? "px-4 py-2" : "py-3 w-[200px]";
 
   const base =
-    "cursor-pointer rounded-xl text-center font-medium font-sans transition-all duration-200 border";
+    "cursor-pointer rounded-md text-center font-medium font-sans transition-all duration-200 border";
 
   const outline =
     "bg-white text-black border-gray-300 hover:border-black";

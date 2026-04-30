@@ -162,5 +162,12 @@
     "circumferenceUnderlaySizing": {
       "title": "Circunferencia",
       "description": "Mida la circunferencia (C) a {{distance}} desde el extremo distal."
+    },
+    "siliconeUnderlaySizing": {
+      "title": "Silicona",
+      "description": "Opcional para mayor adherencia",
+      "image_caption": "Puede optar por agregar silicona para una mayor adherencia en el forro y el muñón. Esta opción se recomienda para personas que temen el movimiento del underlay en el muñón, o para personas que ya han experimentado deslizamiento del underlay.",
+      "option1": "Con silicona",
+      "option2": "Sin silicona"
     }
 }

@@ -139,7 +139,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
             value={value}
             onChange={handleChange}
             placeholder={t("inputs.enter_measurement")}
-            className="w-full px-4 py-3 pr-16 border border-gray-300 hover:border-black rounded-xl font-sans transition-all focus:outline-none"
+            className="w-full px-4 py-3 pr-16 border border-gray-300 hover:border-black rounded-md font-sans transition-all focus:outline-none"
             autoFocus
           />
           <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black font-sans">
@@ -160,7 +160,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           <button
             type="submit"
             disabled={isConfirming}
-            className={`w-auto min-w-[100px] px-6 py-2 rounded-xl border font-sans font-bold transition-all flex items-center justify-center cursor-pointer disabled:cursor-not-allowed uppercase text-[14px]
+            className={`w-auto min-w-[100px] px-6 py-2 rounded-md border font-sans font-semibold transition-all flex items-center justify-center cursor-pointer disabled:cursor-not-allowed uppercase text-[14px]
               ${
                 isConfirming
                   ? "bg-[#090C41] text-white border-[#090C41]"

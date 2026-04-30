@@ -161,5 +161,12 @@
   "circumferenceUnderlaySizing": {
     "title": "Circumference",
     "description": "Measure the circumference (C) at {{distance}} from the distal end."
+  },
+  "siliconeUnderlaySizing": {
+    "title": "Silicone",
+    "description": "Optional for added grip",
+    "image_caption": "You can choose to add silicone for added grip on the liner and residual limb. This option is recommended for people who fear underlay movement on the limb, or people who already experienced underlay slip.",
+    "option1": "With silicone",
+    "option2": "Without silicone"
   }
 }

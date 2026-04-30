@@ -79,8 +79,8 @@ export default function SealSelection() {
               />
             </div>
             <div className="mt-4 text-center">
-              {/* Text color is now strictly slate-500 with no conditional logic */}
-              <p className="text-sm max-w-[300px] leading-snug text-slate-500">
+              {/* Added italic class below */}
+              <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
                 {t("sealUnderlaySizing.open_description")}
               </p>
             </div>
@@ -106,8 +106,8 @@ export default function SealSelection() {
               />
             </div>
             <div className="mt-4 text-center">
-              {/* Text color is now strictly slate-500 with no conditional logic */}
-              <p className="text-sm max-w-[300px] leading-snug text-slate-500">
+              {/* Added italic class below */}
+              <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
                 {t("sealUnderlaySizing.closed_description")}
               </p>
             </div>
