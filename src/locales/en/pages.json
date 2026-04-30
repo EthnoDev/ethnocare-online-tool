@@ -153,5 +153,9 @@
     "description": "Choose where the seal will be done with your liner",
     "open_description": "We recommend using the Open sealing position as it allows the underlay to stick above the liner and evacuate the excess humidity.",
     "closed_description": "If you prefer a more classical design or that liner sealing is a concern you can choose the closed version"
+  },
+  "lengthUnderlaySizing": {
+    "title": "Length",
+    "description": "Measure the length (L) of your cutted liner"
   }
 }

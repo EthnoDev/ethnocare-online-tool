@@ -154,5 +154,9 @@
       "description": "Elija dónde se hará el sello con su forro",
       "open_description": "Recomendamos usar la posición de sellado abierta ya que permite que el underlay se adhiera por encima del forro y evacue el exceso de humedad.",
       "closed_description": "Si prefiere un diseño más clásico o le preocupa el sellado del forro, puede elegir la versión cerrada."
+    },
+    "lengthUnderlaySizing": {
+      "title": "Longitud",
+      "description": "Mida la longitud (L) de su forro cortado"
     }
 }

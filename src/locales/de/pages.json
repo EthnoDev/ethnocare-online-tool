@@ -153,5 +153,9 @@
     "description": "Wählen Sie aus, wo der Siegel mit Ihrem Liner gemacht wird",
     "open_description": "Wir empfehlen die offene Versiegelungsposition, da sie es dem Unterlage ermöglicht, über dem Liner zu haften und überschüssige Feuchtigkeit abzuleiten.",
     "closed_description": "Wenn Sie ein klassischeres Design bevorzugen oder das Versiegeln des Liners ein Anliegen ist, können Sie die geschlossene Version wählen."
+  },
+  "lengthUnderlaySizing": {
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) Ihres geschnittenen Liners"
   }
 }
