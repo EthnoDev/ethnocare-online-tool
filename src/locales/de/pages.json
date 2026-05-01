@@ -112,7 +112,7 @@
   "TTSizing": {
     "title": "Größe",
     "description": "Basierend auf Ihren Antworten :",
-    "amputation": "Amputation",
+    "amp": "Amputation",
     "system": "System",
     "circumference": "Umfang",
     "length": "Länge",
@@ -139,7 +139,7 @@
   "TFSizing": {
     "title": "Größe",
     "description": "Basierend auf Ihren Antworten :",
-    "amputation": "Amputation",
+    "amp": "Amputation",
     "system": "System",
     "circumference": "Umfang",
     "length": "Länge",
@@ -172,7 +172,7 @@
   "UnderlaySizing": {
     "title": "Größe",
     "description": "Basierend auf Ihren Antworten :",
-    "amputation": "Amputation",
+    "amp": "Amputation",
     "circumference": "Umfang",
     "length": "Linerlänge",
     "seal": "Design",

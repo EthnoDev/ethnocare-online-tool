@@ -101,7 +101,7 @@ export default function SizeTF() {
           <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
             <div className="space-y-1">
               <p className="text-slate-900"><strong>{t("TFSizing.description")}</strong></p>
-              <p>{t("TFSizing.amputation")}: {amputation}</p>
+              <p>{t("TFSizing.amp")}: {amputation}</p>
               <p>{t("TFSizing.system")}: {suspensionLabel}</p>
               <p>{t("TFSizing.circumference")}: {circumferenceRaw} {unit}</p>
               <p>{t("TFSizing.length")}: {lengthRaw} {unit}</p>
@@ -135,7 +135,7 @@ export default function SizeTF() {
         <div className="flex justify-center">
           <button
             onClick={handleRestart}
-            className={`px-6 py-3 text-base rounded-xl border font-sans font-semibold transition-all cursor-pointer
+            className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer uppercase
               ${isRestarting
                 ? "bg-[#090C41] text-white border-[#090C41]"
                 : "bg-white text-black border-gray-300 hover:border-black"

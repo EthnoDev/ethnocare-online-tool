@@ -112,7 +112,7 @@
   "TTSizing": {
     "title": "Taille",
     "description": "En fonction de vos réponses :",
-    "amputation": "Amputation",
+    "amp": "Amputation",
     "system": "Système",  
     "circumference": "Circonférence",
     "length": "Longueur",
@@ -139,7 +139,7 @@
   "TFSizing": {
     "title": "Taille",
     "description": "En fonction de vos réponses :",
-    "amputation": "Amputation",
+    "amp": "Amputation",
     "system": "Système",  
     "circumference": "Circonférence",
     "length": "Longueur",
@@ -172,7 +172,7 @@
   "UnderlaySizing": {
     "title": "Taille",
     "description": "En fonction de vos réponses :",
-    "amputation": "Amputation",
+    "amp": "Amputation",
     "circumference": "Circonférence",
     "length": "Longueur de la doublure",
     "seal": "Design",

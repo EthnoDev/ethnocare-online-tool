@@ -80,7 +80,7 @@ export default function SizeUnderlay() {
             <div className="space-y-1">
               <p className="text-slate-900"><strong>{t("UnderlaySizing.description")}</strong></p>
               
-              <p>{t("UnderlaySizing.amputation")}: {amputation}</p>
+              <p>{t("UnderlaySizing.amp")}: {amputation}</p>
               
               <p>
                 {t("UnderlaySizing.circumference")}: {circumferenceRaw} {unit}

@@ -87,7 +87,7 @@ export default function SizeTT() {
             <div className="space-y-1">
               <p className="text-slate-900"><strong>{t("TTSizing.description")}</strong></p>
               {/* Product + Amputation Line */}
-              <p>{t("TTSizing.amputation")}: {amputation}</p>
+              <p>{t("TTSizing.amp")}: {amputation}</p>
               <p>{t("TTSizing.system")}: {suspensionLabel}</p>
               <p>{t("TTSizing.circumference")}: {circumferenceRaw} {unit}</p>
               <p>{t("TTSizing.length")}: {lengthRaw} {unit}</p>
@@ -99,7 +99,7 @@ export default function SizeTT() {
         <div className="flex justify-center">
           <button
             onClick={handleRestart}
-            className={`px-6 py-3 text-base rounded-xl border font-sans font-semibold transition-all cursor-pointer
+            className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer uppercase
               ${isRestarting
                 ? "bg-[#090C41] text-white border-[#090C41]"
                 : "bg-white text-black border-gray-300 hover:border-black"
