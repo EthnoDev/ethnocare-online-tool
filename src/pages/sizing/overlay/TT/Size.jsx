@@ -13,6 +13,10 @@ export default function SizeTT() {
   const { t, i18n } = useTranslation(["pages", "common"]);
 
   /** ---------- Data Retrieval ---------- */
+  // Get and capitalize only the first letter
+  const rawAmputation = localStorage.getItem("amputation") || "tt"; 
+  const amputation = rawAmputation.charAt(0).toUpperCase() + rawAmputation.slice(1).toLowerCase();
+
   // Usually 'product' stores "Overlay" or "Underlay"
   const product = localStorage.getItem("product") || "Overlay"; 
   const suspensionId = localStorage.getItem("overlay_suspension") || "—";
@@ -83,7 +87,7 @@ export default function SizeTT() {
             <div className="space-y-1">
               <p className="text-slate-900"><strong>{t("TTSizing.description")}</strong></p>
               {/* Product + Amputation Line */}
-              <p>{t("TTSizing.product")}: {productAmputation}</p>
+              <p>{t("TTSizing.amputation")}: {amputation}</p>
               <p>{t("TTSizing.system")}: {suspensionLabel}</p>
               <p>{t("TTSizing.circumference")}: {circumferenceRaw} {unit}</p>
               <p>{t("TTSizing.length")}: {lengthRaw} {unit}</p>

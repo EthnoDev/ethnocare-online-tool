@@ -112,7 +112,7 @@
     "TTSizing": {
       "title": "Tamaño",
       "description": "Basado en sus respuestas :",
-      "product": "Producto",
+      "amputation": "Amputación",
       "system": "Sistema",
       "circumference": "Circunferencia",
       "length": "Longitud",
@@ -139,7 +139,7 @@
     "TFSizing": {
       "title": "Tamaño",
       "description": "Basado en sus respuestas :",
-      "product": "Producto",
+      "amputation": "Amputación",
       "system": "Sistema",
       "circumference": "Circunferencia",
       "length": "Longitud",

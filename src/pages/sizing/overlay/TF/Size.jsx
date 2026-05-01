@@ -14,6 +14,17 @@ export default function SizeTF() {
   const { t, i18n } = useTranslation(["pages", "common"]);
 
   /** ---------- Data Retrieval ---------- */
+  // Get and capitalize only the first letter
+  const rawAmputation = localStorage.getItem("amputation") || "tf"; 
+  
+  // 1. Initial capitalization (e.g., "transfemoral" -> "Transfemoral")
+  let amputation = rawAmputation.charAt(0).toUpperCase() + rawAmputation.slice(1).toLowerCase();
+
+  // 2. Small change: Handle French accent for Transfémoral
+  if (amputation.toLowerCase() === "transfemoral" && i18n.language.startsWith("fr")) {
+    amputation = "Transfémoral";
+  }
+
   const product = localStorage.getItem("product") || "Overlay"; 
   const suspensionId = localStorage.getItem("overlay_suspension") || "—";
   
@@ -90,7 +101,7 @@ export default function SizeTF() {
           <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
             <div className="space-y-1">
               <p className="text-slate-900"><strong>{t("TFSizing.description")}</strong></p>
-              <p>{t("TFSizing.product")}: {productAmputation}</p>
+              <p>{t("TFSizing.amputation")}: {amputation}</p>
               <p>{t("TFSizing.system")}: {suspensionLabel}</p>
               <p>{t("TFSizing.circumference")}: {circumferenceRaw} {unit}</p>
               <p>{t("TFSizing.length")}: {lengthRaw} {unit}</p>
