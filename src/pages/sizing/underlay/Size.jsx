@@ -57,7 +57,7 @@ export default function SizeUnderlay() {
       totalSteps={5} 
       code={true}
     >
-      <div className="w-full max-w-2xl mt-4 text-center">
+      <div className="w-full max-w-2xl text-center">
         {/* 1. Title */}
         <h1 className="text-[34px] font-semibold font-sans mb-2 text-slate-900">
           {t("UnderlaySizing.title")}

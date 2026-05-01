@@ -24,7 +24,7 @@ export default function SizingUnitsSelection() {
 
   return (
     <PageWrapper showBack={true} backTo="/sizing" code={true}>
-      <div className="w-full max-w-md mt-2">
+      <div className="w-full max-w-md">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("unitsSizing.title")}
         </h1>

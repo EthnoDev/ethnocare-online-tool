@@ -29,7 +29,7 @@ export default function AssistanceAmputationSelection() {
 
   return (
     <PageWrapper showBack={true} backTo="/assistance" code={true}>
-      <div className="w-full max-w-md mt-2">
+      <div className="w-full max-w-md">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("amputationAssistance.title")}
         </h1>

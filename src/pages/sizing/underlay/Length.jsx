@@ -43,7 +43,7 @@ export default function Length() {
       totalSteps={5} 
       code={true}
     >
-      <div className="w-100 max-w-md mt-2 flex flex-col items-center">
+      <div className="w-100 max-w-md flex flex-col items-center">
         {/* 1. Title */}
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("lengthUnderlaySizing.title")}
