@@ -168,5 +168,14 @@
     "image_caption": "Vous pouvez choisir d'ajouter du silicone pour une meilleure adhérence sur la doublure et le moignon. Cette option est recommandée pour les personnes qui craignent le mouvement de l'underlay sur le moignon, ou pour celles qui ont déjà expérimenté le glissement de l'underlay.",
     "option1": "Avec silicone",
     "option2": "Sans silicone"
+  },
+  "UnderlaySizing": {
+    "title": "Taille",
+    "description": "En fonction de vos réponses :",
+    "amputation": "Amputation",
+    "circumference": "Circonférence",
+    "length": "Longueur de la doublure",
+    "seal": "Design",
+    "silicone": "Silicone"
   }
 }

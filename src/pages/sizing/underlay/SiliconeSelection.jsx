@@ -21,7 +21,7 @@ export default function SiliconeSelection() {
 
     // Testing destination with 200ms delay
     setTimeout(() => {
-      navigate("/sizing/underlay/circumference");
+      navigate("/sizing/underlay/size");
     }, 200);
   };
 
@@ -65,13 +65,13 @@ export default function SiliconeSelection() {
           <SelectableOption
             label={t("siliconeUnderlaySizing.option1")}
             selected={selected === "standard"}
-            onClick={() => handleSelect("standard")}
+            onClick={() => handleSelect("yes-silicone")}
           />
 
           <SelectableOption
             label={t("siliconeUnderlaySizing.option2")}
             selected={selected === "distal"}
-            onClick={() => handleSelect("distal")}
+            onClick={() => handleSelect("no-silicone")}
           />
         </div>
       </div>

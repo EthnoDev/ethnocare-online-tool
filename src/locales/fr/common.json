@@ -36,6 +36,14 @@
     "left": "Gauche",
     "right": "Droite"
   },
+  "seal": {
+    "open-seal": "Ouvert",
+    "closed-seal": "Fermé"
+  },
+  "silicone": {
+    "yes-silicone": "Oui",
+    "no-silicone": "Non"
+  },
   "footer": {
     "select_language": "Sélectionnez votre langue",
     "sizing_pdfs_title": "Guide des Tailles en PDF :"

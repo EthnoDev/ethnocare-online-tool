@@ -36,6 +36,14 @@
     "left": "Left",
     "right": "Right"
   },
+  "seal": {
+    "open-seal": "Open",
+    "closed-seal": "Closed"
+  },
+  "silicone": {
+    "yes-silicone": "Yes",
+    "no-silicone": "No"
+  },
   "footer": {
     "select_language": "Select your language",
     "sizing_pdfs_title": "Sizing Charts in PDF :"

@@ -168,5 +168,14 @@
     "image_caption": "You can choose to add silicone for added grip on the liner and residual limb. This option is recommended for people who fear underlay movement on the limb, or people who already experienced underlay slip.",
     "option1": "With silicone",
     "option2": "Without silicone"
+  },
+  "UnderlaySizing": {
+    "title": "Size",
+    "description": "Based on your answers :",
+    "amputation": "Amputation",
+    "circumference": "Circumference",
+    "length": "Liner length",
+    "seal": "Design",
+    "silicone": "Silicone"
   }
 }

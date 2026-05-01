@@ -36,6 +36,14 @@
         "left": "Links",
         "right": "Rechts"
     },
+    "seal": {
+        "open-seal": "Offen",
+        "closed-seal": "Geschlossen"
+    },
+    "silicone": {
+        "yes-silicone": "Ja",
+        "no-silicone": "Nein"
+    },
     "footer": {
         "select_language": "Sprache auswählen",
         "sizing_pdfs_title": "Größentabellen als PDF :"

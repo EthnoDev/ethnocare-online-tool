@@ -168,5 +168,14 @@
     "image_caption": "Sie können wählen, ob Sie Silikon für zusätzlichen Halt auf dem Liner und dem Stumpf hinzufügen möchten. Diese Option wird für Personen empfohlen, die eine Bewegung des Unterlage am Stumpf befürchten oder die bereits ein Verrutschen des Unterlage erlebt haben.",
     "option1": "Mit Silikon",
     "option2": "Ohne Silikon"
+  },
+  "UnderlaySizing": {
+    "title": "Größe",
+    "description": "Basierend auf Ihren Antworten :",
+    "amputation": "Amputation",
+    "circumference": "Umfang",
+    "length": "Linerlänge",
+    "seal": "Design",
+    "silicone": "Silikon"
   }
 }

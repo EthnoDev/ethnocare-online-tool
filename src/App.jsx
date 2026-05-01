@@ -34,6 +34,7 @@ import SizingUnderlaySealSelection from "./pages/sizing/underlay/SealSelection";
 import SizingUnderlayLength from "./pages/sizing/underlay/Length";
 import SizingUnderlayCircumference from "./pages/sizing/underlay/Circumference";
 import SizingUnderlaySiliconeSelection from "./pages/sizing/underlay/SiliconeSelection";
+import SizeUnderlay from "./pages/sizing/underlay/Size";
 import AssistanceWelcome from "./pages/assistance/Welcome";
 import AssistanceAmputationSelection from "./pages/assistance/AmputationSelection";
 import AssistanceProductSelection from "./pages/assistance/ProductSelection";
@@ -76,6 +77,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/underlay/length" element={<SizingUnderlayLength />} />
         <Route path="/sizing/underlay/circumference" element={<SizingUnderlayCircumference />} />
         <Route path="/sizing/underlay/silicone" element={<SizingUnderlaySiliconeSelection />} />
+        <Route path="/sizing/underlay/size" element={<SizeUnderlay />} />
       </Routes>
     </AnimatePresence>
   );

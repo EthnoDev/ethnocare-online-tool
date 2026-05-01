@@ -36,6 +36,14 @@
     "left": "Izquierda",
     "right": "Derecha"
   },
+  "seal": {
+    "open-seal": "Abierto",
+    "closed-seal": "Cerrado"
+  },
+  "silicone": {
+    "yes-silicone": "Sí",
+    "no-silicone": "No"
+  },
   "footer": {
     "select_language": "Selecciona tu idioma",
     "sizing_pdfs_title": "Tablas de tallas en PDF :"
