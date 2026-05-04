@@ -15,12 +15,12 @@
   },
   "welcomeRecommendation": {
     "title": "Solution Finder",
-    "description": "Answer the following questions to get a personalized product recommendation.",
+    "description": "Answer the following questions to get a personalized product recommendation",
     "startButton": "Start"
   },
   "welcomeReturn": {
     "title": "Return Tool",
-    "description": "Use this tool to return a product.",
+    "description": "Use this tool to return a product",
     "startButton": "Start"
   },
   "identificationReturn": {
@@ -38,7 +38,7 @@
   },
   "welcomeAssistance": {
     "title": "Assistance Tool",
-    "description": "Use this tool to get help and support for using Ethnocare products.",
+    "description": "Use this tool to get help and support for using Ethnocare products",
     "startButton": "Start"
   },
   "amputationAssistance": {
@@ -61,14 +61,14 @@
   },
   "welcomeSizing": {
     "title": "Sizing Tool",
-    "description": "Use this tool to find the right size of Ethnocare product for you.",
+    "description": "Use this tool to find the right size of Ethnocare product for you",
     "startButton": "Start"
   },
   "unitsSizing": {
     "title": "Units",
-    "description": "Select your preferred units of measurement.",
-    "option1": "Imperial (Inch)",
-    "option2": "Metric (Centimeter)"
+    "description": "Select your preferred units of measurement",
+    "option1": "Imperial (Inches)",
+    "option2": "Metric (Centimeters)"
   },
   "amputationSizing": {
     "title": "Amputation",
@@ -76,7 +76,7 @@
   },
   "productSizing": {
     "title": "Product",
-    "description": "Select the product you want to find a size for."
+    "description": "Select the product you want to find a size for"
   },
   "suspensionSizing": {
     "title": "Suspension Type",
@@ -84,8 +84,8 @@
   },
   "circumferenceTTSizing": {
     "title": "Circumference",
-    "description_metric": "Measure the circumference (C) at 4 cm from the distal end.",
-    "description_imperial": "Measure the circumference (C) at 1.5 in from the distal end."
+    "description_metric": "Measure the circumference (C) at 4 cm from the distal end",
+    "description_imperial": "Measure the circumference (C) at 1.5 in from the distal end"
   },
   "circumferenceTTVacSizing": {
     "title": "Circumference",
@@ -95,13 +95,13 @@
     "title": "Length",
     "description": "Measure the length (L) from the top of the seal to the popliteal trim line",
     "note_title": "Patient with no socket",
-    "note_body": "You can measure the length from end of liner to the popliteal fossea and report the dimensions above (Make sure to measure linear dimensions)."
+    "note_body": "You can measure the length from the end of the liner to the popliteal fossa and report the dimensions above (Make sure to measure linear dimensions)."
   },
   "lengthTTVacSizing": {
     "title": "Length",
     "description": "Measure the length (L) from the top of the seal to the popliteal trim line",
     "note_title": "Patient with no socket",
-    "note_body": "You can measure the length from end of liner to the popliteal fossea and report the dimensions above (Make sure to measure linear dimensions)."
+    "note_body": "You can measure the length from the end of the liner to the popliteal fossa and report the dimensions above (Make sure to measure linear dimensions)."
   },
   "orientationTTSizing": {
     "title": "Orientation",
@@ -111,7 +111,7 @@
   },
   "TTSizing": {
     "title": "Size",
-    "description": "Based on your answers :",
+    "description": "Based on your answers:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Circumference",
@@ -130,15 +130,15 @@
   },
   "circumferenceTFSizing": {
     "title": "Circumference",
-    "description": "Measure the circumference (C) at {{distance}} from the distal end."
+    "description": "Measure the circumference (C) at {{distance}} from the distal end"
   },
   "circumferenceTFVacSizing": {
     "title": "Circumference",
-    "description": "Measure the circumference (C) at {{distance}} from the top of the seal."
+    "description": "Measure the circumference (C) at {{distance}} from the top of the seal"
   },
   "TFSizing": {
     "title": "Size",
-    "description": "Based on your answers :",
+    "description": "Based on your answers:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Circumference",
@@ -152,26 +152,26 @@
     "title": "Seal Selection",
     "description": "Choose where the seal will be done with your liner",
     "open_description": "We recommend using the Open sealing position as it allows the underlay to stick above the liner and evacuate the excess humidity.",
-    "closed_description": "If you prefer a more classical design or that liner sealing is a concern you can choose the closed version"
+    "closed_description": "If you prefer a more classical design, or if liner sealing is a concern, you can choose the closed version."
   },
   "lengthUnderlaySizing": {
     "title": "Length",
-    "description": "Measure the length (L) of your cutted liner"
+    "description": "Measure the length (L) of your cut liner"
   },
   "circumferenceUnderlaySizing": {
     "title": "Circumference",
-    "description": "Measure the circumference (C) at {{distance}} from the distal end."
+    "description": "Measure the circumference (C) at {{distance}} from the distal end"
   },
   "siliconeUnderlaySizing": {
     "title": "Silicone",
     "description": "Optional for added grip",
-    "image_caption": "You can choose to add silicone for added grip on the liner and residual limb. This option is recommended for people who fear underlay movement on the limb, or people who already experienced underlay slip.",
+    "image_caption": "You can choose to add silicone for added grip on the liner and residual limb. This option is recommended for people who are concerned about underlay movement on the limb.",
     "option1": "With silicone",
     "option2": "Without silicone"
   },
   "UnderlaySizing": {
     "title": "Size",
-    "description": "Based on your answers :",
+    "description": "Based on your answers:",
     "amp": "Amputation",
     "circumference": "Circumference",
     "length": "Liner length",
