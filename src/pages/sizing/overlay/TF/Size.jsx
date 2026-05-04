@@ -95,7 +95,7 @@ export default function SizeTF() {
           <img
             src={TFProductImg}
             alt="TF Product"
-            className="w-[180px] h-auto object-contain rounded-xl shadow-sm"
+            className="w-[180px] h-auto object-contain rounded-xl"
           />
 
           <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
