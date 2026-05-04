@@ -2,43 +2,43 @@
   "welcome": {
     "title": "Herramienta en línea Ethnocare",
     "description": "Seleccione la herramienta que desea usar",
-    "option1":"Tamaño",
-    "description1": "La herramienta de tamaño tiene como objetivo guiarlo para encontrar el tamaño correcto del producto Ethnocare.",
-    "option2":"Asistencia",
-    "description2":"La herramienta de asistencia proporciona ayuda y soporte para el uso de los productos Ethnocare.",
-    "option3":"Devolución",
-    "description3":"La herramienta de devolución le permite gestionar las devoluciones e intercambios de productos Ethnocare.",
-    "option4":"Preguntas frecuentes",
-    "description4":"La herramienta de preguntas frecuentes proporciona respuestas a las preguntas más frecuentes sobre los productos Ethnocare.",
-    "option5":"Recomendación",
-    "description5":"La herramienta de recomendación lo ayuda a encontrar los mejores productos Ethnocare según sus necesidades."
+    "option1": "Talla",
+    "description1": "La herramienta de talla tiene como objetivo guiarlo para encontrar la talla correcta del producto Ethnocare.",
+    "option2": "Asistencia",
+    "description2": "La herramienta de asistencia proporciona ayuda y soporte para el uso de los productos Ethnocare.",
+    "option3": "Devolución",
+    "description3": "La herramienta de devolución le permite gestionar las devoluciones y cambios de productos Ethnocare.",
+    "option4": "FAQ",
+    "description4": "La herramienta de preguntas frecuentes proporciona respuestas a las preguntas más comunes sobre los productos Ethnocare.",
+    "option5": "Recomendación",
+    "description5": "La herramienta de recomendación lo ayuda a encontrar los mejores productos Ethnocare según sus necesidades."
   },
   "welcomeRecommendation": {
     "title": "Buscador de soluciones",
-    "description": "Responda las siguientes preguntas para obtener una recomendación de producto personalizada.",
+    "description": "Responda las siguientes preguntas para obtener una recomendación de producto personalizada",
     "startButton": "Comenzar"
   },
   "welcomeReturn": {
     "title": "Herramienta de devolución",
-    "description": "Use esta herramienta para devolver un producto.",
+    "description": "Use esta herramienta para devolver un producto",
     "startButton": "Comenzar"
   },
   "identificationReturn": {
     "title": "Identificación",
-    "description": "¿Eres un usuario/clínica o un distribuidor?",
+    "description": "¿Es usted un usuario/clínica o un distribuidor?",
     "option1": "Usuario/Clínica",
     "option2": "Distribuidor"
   },
   "assistanceToolReturn": {
     "title": "Herramienta de asistencia",
     "descriptionClinic": "¿Probó los pasos de solución de problemas proporcionados en la herramienta de asistencia?",
-    "descriptionDistributor": "¿El que devuelve intentó los pasos de solución de problemas proporcionados en la herramienta de asistencia?",
+    "descriptionDistributor": "¿El remitente intentó los pasos de solución de problemas proporcionados en la herramienta de asistencia?",
     "option1": "Sí, continuar",
     "option2": "No, intentemos"
   },
   "welcomeAssistance": {
     "title": "Herramienta de asistencia",
-    "description": "Use esta herramienta para obtener ayuda y soporte para el uso de los productos Ethnocare.",
+    "description": "Use esta herramienta para obtener ayuda y soporte para el uso de los productos Ethnocare",
     "startButton": "Comenzar"
   },
   "amputationAssistance": {
@@ -51,22 +51,22 @@
   },
   "assistanceAssistance": {
     "title": "Solicitud",
-    "description": "¿Qué estás buscando?",
+    "description": "¿Qué está buscando?",
     "option1": "Guía del usuario",
     "option2": "Asistencia"
   },
   "sizeAssistance": {
-    "title": "Tamaño",
-    "description": "¿Cuál es el tamaño de su producto?"
+    "title": "Talla",
+    "description": "¿Cuál es la talla de su producto?"
   },
   "welcomeSizing": {
-    "title": "Herramienta de dimensionamiento",
-    "description": "Use esta herramienta para encontrar el tamaño correcto del producto Ethnocare para usted.",
+    "title": "Herramienta de tallas",
+    "description": "Use esta herramienta para encontrar la talla de producto Ethnocare adecuada para usted",
     "startButton": "Comenzar"
   },
   "unitsSizing": {
     "title": "Unidades",
-    "description": "¿En qué unidades desea ingresar sus medidas?",
+    "description": "Seleccione sus unidades de medida preferidas",
     "option1": "Imperial (Pulgadas)",
     "option2": "Métrico (Centímetros)"
   },
@@ -76,7 +76,7 @@
   },
   "productSizing": {
     "title": "Producto",
-    "description": "Seleccione el producto para el que desea encontrar una talla."
+    "description": "Seleccione el producto para el cual desea encontrar una talla"
   },
   "suspensionSizing": {
     "title": "Tipo de suspensión",
@@ -84,99 +84,98 @@
   },
   "circumferenceTTSizing": {
     "title": "Circunferencia",
-    "description_metric": "Mida la circunferencia de su muñón a 4 cm por debajo del borde proximal del muñón.",
-    "description_imperial": "Mida la circunferencia de su muñón a 1,5 pulgadas por debajo del borde proximal del muñón."
-   },
-   "circumferenceTTVacSizing": {
+    "description_metric": "Mida la circunferencia de su muñón a 4 cm del extremo distal",
+    "description_imperial": "Mida la circunferencia de su muñón a 1.5 pulgadas del extremo distal"
+  },
+  "circumferenceTTVacSizing": {
     "title": "Circunferencia",
     "description": "Mida la circunferencia (C) de su muñón en la parte superior del sello"
-   },
-    "lengthTTSizing": {
-      "title": "Longitud",
-      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea",
-      "note_title": "Paciente sin socket",
-      "note_body": "Puede medir la longitud desde el extremo de la funda hasta la fosa poplítea y reportar las dimensiones anteriores (Asegúrese de medir las dimensiones lineales)."
-    },
-    "lengthTTVacSizing": {
-      "title": "Longitud",
-      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea",
-      "note_title": "Paciente sin socket",
-      "note_body": "Puede medir la longitud desde el extremo de la funda hasta la fosa poplítea y reportar las dimensiones anteriores (Asegúrese de medir las dimensiones lineales)."
-    },
-    "orientationTTSizing": {
-      "title": "Orientación",
-      "description": "Seleccione la orientación de su producto",
-      "note_title": "La orientación se basa en la preferencia",
-      "note_body": "La mayoría de los usuarios eligen la misma orientación que el lado donde se usará el Overlay."
-    },
-    "TTSizing": {
-      "title": "Tamaño",
-      "description": "Basado en sus respuestas :",
-      "amp": "Amputación",
-      "system": "Sistema",
-      "circumference": "Circunferencia",
-      "length": "Longitud",
-      "orientation": "Orientación",
-      "email_title": "¡Guarde su selección!",
-      "email_description": "Reciba al instante su código de producto y los recursos de ajuste por correo electrónico."
-    },
-    "lengthTFSizing": {
-      "title": "Longitud",
-      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea"
-    },
-    "lengthTFVacSizing": {
-      "title": "Longitud",
-      "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea"
-    },
-    "circumferenceTFSizing": {
-      "title": "Circunferencia",
-      "description": "Mida la circunferencia (C) de su muñón a {{distance}} por debajo del borde proximal del muñón."
-    },
-    "circumferenceTFVacSizing": {
-      "title": "Circunferencia",
-      "description": "Mida la circunferencia (C) a {{distance}} desde la parte superior del sello."
-    },
-    "TFSizing": {
-      "title": "Tamaño",
-      "description": "Basado en sus respuestas :",
-      "amp": "Amputación",
-      "system": "Sistema",
-      "circumference": "Circunferencia",
-      "length": "Longitud",
-      "orientation": "Orientación",
-      "email_title": "¡Guarde su selección!",
-      "email_description": "Reciba al instante su código de producto y los recursos de ajuste por correo electrónico.",
-      "note_cushion_title": "Aviso importante",
-      "note_cushion_body": "Los sistemas con cojín pueden requerir modificaciones personalizadas del Overlay. Comuníquese con nosotros a <bold>clinics@ethnocare.ca</bold> indicando sus medidas y detalles sobre su sistema de suspensión."
-    },
-    "sealUnderlaySizing": {
-      "title": "Selección de sello",
-      "description": "Elija dónde se hará el sello con su forro",
-      "open_description": "Recomendamos usar la posición de sellado abierta ya que permite que el underlay se adhiera por encima del forro y evacue el exceso de humedad.",
-      "closed_description": "Si prefiere un diseño más clásico o le preocupa el sellado del forro, puede elegir la versión cerrada."
-    },
-    "lengthUnderlaySizing": {
-      "title": "Longitud",
-      "description": "Mida la longitud (L) de su forro cortado"
-    },
-    "circumferenceUnderlaySizing": {
-      "title": "Circunferencia",
-      "description": "Mida la circunferencia (C) a {{distance}} desde el extremo distal."
-    },
-    "siliconeUnderlaySizing": {
-      "title": "Silicona",
-      "description": "Opcional para mayor adherencia",
-      "image_caption": "Puede optar por agregar silicona para una mayor adherencia en el forro y el muñón. Esta opción se recomienda para personas que temen el movimiento del underlay en el muñón, o para personas que ya han experimentado deslizamiento del underlay.",
-      "option1": "Con silicona",
-      "option2": "Sin silicona"
-    },
-    "UnderlaySizing": {
-      "title": "Tamaño",
-      "description": "Basado en sus respuestas :",
-      "amp": "Amputación",
-      "circumference": "Circunferencia",
-      "length": "Longitud del forro",
-      "seal": "Diseño",
-      "silicone": "Silicona"
-    }
+  },
+  "lengthTTSizing": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea",
+    "note_title": "Paciente sin socket",
+    "note_body": "Puede medir la longitud desde el extremo del liner hasta la fosa poplítea (Asegúrese de medir dimensiones lineales)."
+  },
+  "lengthTTVacSizing": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea",
+    "note_title": "Paciente sin socket",
+    "note_body": "Puede medir la longitud desde el extremo del liner hasta la fosa poplítea (Asegúrese de medir dimensiones lineales)."
+  },
+  "orientationTTSizing": {
+    "title": "Orientación",
+    "description": "Elija la orientación de su producto",
+    "note_title": "La orientación se basa en la preferencia",
+    "note_body": "La mayoría de los usuarios eligen el mismo lado donde se usará el Overlay."
+  },
+  "TTSizing": {
+    "title": "Talla",
+    "description": "Basado en sus respuestas:",
+    "amp": "Amputación",
+    "system": "Sistema",
+    "circumference": "Circunferencia",
+    "length": "Longitud",
+    "orientation": "Orientación",
+    "email_title": "¡Guarde su selección!",
+    "email_description": "Reciba al instante su código de producto y recursos de ajuste por correo electrónico."
+  },
+  "lengthTFSizing": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) desde el extremo del liner hasta el periné"
+  },
+  "lengthTFVacSizing": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) desde la parte superior del sello hasta el periné"
+  },
+  "circumferenceTFSizing": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) de su muñón a {{distance}} del extremo distal"
+  },
+  "circumferenceTFVacSizing": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) a {{distance}} de la parte superior del sello"
+  },
+  "TFSizing": {
+    "title": "Talla",
+    "description": "Basado en sus respuestas:",
+    "amp": "Amputación",
+    "system": "Sistema",
+    "circumference": "Circunferencia",
+    "length": "Longitud",
+    "email_title": "¡Guarde su selección!",
+    "email_description": "Reciba al instante su código de producto y recursos de ajuste por correo electrónico.",
+    "note_cushion_title": "Aviso importante",
+    "note_cushion_body": "Los sistemas de cojín pueden requerir modificaciones personalizadas del Overlay. Contáctenos en <bold>clinics@ethnocare.ca</bold> con sus medidas y detalles sobre su sistema de suspensión."
+  },
+  "sealUnderlaySizing": {
+    "title": "Selección de sello",
+    "description": "Elija dónde se ubicará el sello en su liner",
+    "open_description": "Recomendamos la posición de sellado abierta, ya que permite que el Underlay se adhiera por encima del liner y evacue el exceso de humedad.",
+    "closed_description": "Si prefiere un diseño clásico o si le preocupa el sellado del liner, elija la versión cerrada."
+  },
+  "lengthUnderlaySizing": {
+    "title": "Longitud",
+    "description": "Mida la longitud (L) de su liner cortado"
+  },
+  "circumferenceUnderlaySizing": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) a {{distance}} del extremo distal"
+  },
+  "siliconeUnderlaySizing": {
+    "title": "Silicona",
+    "description": "Opcional para mayor agarre",
+    "image_caption": "Puede optar por agregar silicona para mayor agarre en el liner y el muñón. Se recomienda si le preocupa el movimiento del Underlay.",
+    "option1": "Con silicona",
+    "option2": "Sin silicona"
+  },
+  "UnderlaySizing": {
+    "title": "Talla",
+    "description": "Basado en sus respuestas:",
+    "amp": "Amputación",
+    "circumference": "Circunferencia",
+    "length": "Longitud del liner",
+    "seal": "Diseño",
+    "silicone": "Silicona"
+  }
 }
