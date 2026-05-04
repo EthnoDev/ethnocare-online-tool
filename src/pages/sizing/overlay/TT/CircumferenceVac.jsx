@@ -48,7 +48,7 @@ export default function CircumferenceVac() {
           />
         </div>
 
-        <div className="mt-8">
+        <div className="w-full">
           <MeasurementInput
             product="ttdistal"
             measurement="circumference"

@@ -56,7 +56,7 @@ export default function CircumferenceVac() {
         </div>
 
         {/* 4. Measurement Input */}
-        <div className="mt-8 flex flex-col items-center">
+        <div className="w-full">
           <MeasurementInput
             product="tfdistal"
             measurement="circumference"

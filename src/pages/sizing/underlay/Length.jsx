@@ -59,12 +59,12 @@ export default function Length() {
           <img
             src={LENGTH_IMAGES[lang] || LENGTH_IMAGES.en}
             alt="Length Measurement Diagram"
-            className="h-auto w-full block max-w-[320px]"
+            className="w-74 h-auto object-contain rounded-xl"
           />
         </div>
 
         {/* 4. Measurement Input */}
-        <div className="mt-10 w-full">
+        <div className="w-full">
           <MeasurementInput
             product="underlaytt"
             measurement="length"

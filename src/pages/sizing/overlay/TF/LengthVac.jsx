@@ -63,7 +63,7 @@ export default function LengthVac() {
         </div>
 
         {/* 4. Measurement Input - Explicitly set to tfdistal */}
-        <div className="mt-8">
+        <div className="w-full">
           <MeasurementInput
             product="tfdistal"
             measurement="length"

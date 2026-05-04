@@ -51,12 +51,12 @@ export default function Circumference() {
           <img
             src={selectedImage}
             alt={`${isImperial ? "imperial" : "metric"} circumference diagram`}
-            className="h-auto w-full block max-w-[320px]"
+            className="w-74 h-auto object-contain rounded-xl"
           />
         </div>
 
         {/* 4. Measurement Input */}
-        <div className="mt-10 w-full">
+        <div className="w-full">
           <MeasurementInput
             product="underlaytt"
             measurement="circumference"

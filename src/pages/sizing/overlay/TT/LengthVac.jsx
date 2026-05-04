@@ -65,7 +65,7 @@ export default function LengthVac() {
           />
         </div>
 
-        <div className="mt-8">
+        <div className="w-full">
           <MeasurementInput
             product="ttdistal"
             measurement="length"

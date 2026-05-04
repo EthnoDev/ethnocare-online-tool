@@ -49,7 +49,7 @@ export default function Circumference() {
           />
         </div>
 
-        <div className="mt-8 flex flex-col items-center">
+        <div className="w-full">
           <MeasurementInput
             product="tfstandard"
             measurement="circumference"

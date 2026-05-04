@@ -51,7 +51,7 @@ export default function Circumference() {
           />
         </div>
 
-        <div className="mt-8">
+        <div className="w-full">
           <MeasurementInput
             product="ttstandard"
             measurement="circumference"

@@ -63,7 +63,7 @@ export default function Length() {
         </div>
 
         {/* 4. Measurement Input */}
-        <div className="mt-8">
+        <div className="w-full">
           <MeasurementInput
             product="tfstandard"
             measurement="length"
