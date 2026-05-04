@@ -15,35 +15,35 @@
   },
   "welcomeRecommendation": {
     "title": "Lösungsfinder",
-    "description": "Beantworten Sie die folgenden Fragen, um eine personalisierte Produktempfehlung zu erhalten.",
+    "description": "Beantworten Sie die folgenden Fragen, um eine personalisierte Produktempfehlung zu erhalten",
     "startButton": "Starten"
   },
   "welcomeReturn": {
     "title": "Rückgabetool",
-    "description": "Verwenden Sie dieses Tool, um ein Produkt zurückzugeben.",
+    "description": "Verwenden Sie dieses Tool, um ein Produkt zurückzugeben",
     "startButton": "Starten"
   },
   "identificationReturn": {
     "title": "Identifikation",
-    "description": "Sind Sie ein Benutzer/Klinik oder ein Distributor?",
-    "option1": "Benutzer/Klinik",
-    "option2": "Distributor"
+    "description": "Sind Sie ein Anwender/eine Klinik oder ein Fachhändler?",
+    "option1": "Anwender/Klinik",
+    "option2": "Fachhändler"
   },
   "assistanceToolReturn": {
     "title": "Unterstützungstool",
-    "descriptionClinic": "Haben Sie die in dem Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
-    "descriptionDistributor": "Hat der Rücksender die in dem Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
+    "descriptionClinic": "Haben Sie die im Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
+    "descriptionDistributor": "Hat der Kunde die im Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
     "option1": "Ja, weiter",
-    "option2": "Nein"
+    "option2": "Nein, versuchen wir es"
   },
   "welcomeAssistance": {
     "title": "Unterstützungstool",
-    "description": "Verwenden Sie dieses Tool, um Hilfe und Unterstützung bei der Verwendung von Ethnocare-Produkten zu erhalten.",
+    "description": "Verwenden Sie dieses Tool, um Hilfe und Unterstützung bei der Verwendung von Ethnocare-Produkten zu erhalten",
     "startButton": "Starten"
   },
   "amputationAssistance": {
     "title": "Amputation",
-    "description": "Was ist Ihr Amputationstyp?"
+    "description": "Welche Art der Amputation liegt vor?"
   },
   "productAssistance": {
     "title": "Produkt",
@@ -61,117 +61,117 @@
   },
   "welcomeSizing": {
     "title": "Größenbestimmungstool",
-    "description": "Verwenden Sie dieses Tool, um die richtige Größe für Ihr Ethnocare-Produkt zu finden.",
+    "description": "Verwenden Sie dieses Tool, um die richtige Größe für Ihr Ethnocare-Produkt zu finden",
     "startButton": "Starten"
   },
   "unitsSizing": {
     "title": "Einheiten",
-    "description": "Welche Einheiten möchten Sie verwenden?",
+    "description": "Welches Maßsystem möchten Sie verwenden?",
     "option1": "Imperial (Zoll)",
     "option2": "Metrisch (Zentimeter)"
   },
   "amputationSizing": {
     "title": "Amputation",
-    "description": "Was ist Ihr Amputationstyp?"
+    "description": "Welche Art der Amputation liegt vor?"
   },
   "productSizing": {
     "title": "Produkt",
-    "description": "Für welches Produkt benötigen Sie eine Größenbestimmung?"
+    "description": "Für welches Produkt möchten Sie die Größe bestimmen?"
   },
   "suspensionSizing": {
-    "title": "Suspension",
-    "description": "Welche Art von Suspension verwenden Sie?"
+    "title": "Aufhängungssystem",
+    "description": "Welche Art der Aufhängung/Haftung verwenden Sie?"
   },
   "circumferenceTTSizing": {
-    "title": "Umfangsmessung",
-    "description_metric": "Messen Sie den Umfang Ihres Stumpfes 4 cm über dem Ende des Stumpfes und geben Sie ihn hier ein.",
-    "description_imperial": "Messen Sie den Umfang Ihres Stumpfes 1,5 Zoll über dem Ende des Stumpfes und geben Sie ihn hier ein."
+    "title": "Umfang",
+    "description_metric": "Messen Sie den Umfang (C) Ihres Stumpfes 4 cm über dem distalen Ende",
+    "description_imperial": "Messen Sie den Umfang (C) Ihres Stumpfes 1,5 Zoll über dem distalen Ende"
   },
   "circumferenceTTVacSizing": {
-    "title": "Umfangsmessung",
-    "description": "Messen Sie den Umfang (C) Ihres Stumpfes am oberen Ende der Dichtung."
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) Ihres Stumpfes am oberen Ende der Dichtung"
   },
   "lengthTTSizing": {
-    "title": "Längenmessung",
-    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle.",
-    "note_title": "Patient ohne Socket",
-    "note_body": "Sie können die Länge vom Ende der Liner bis zur Kniekehle messen und die oben genannten Maße angeben (Stellen Sie sicher, dass Sie lineare Maße messen)."
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle",
+    "note_title": "Patient ohne Prothesenschaft",
+    "note_body": "Sie können die Länge vom Ende des Liners bis zur Kniekehle messen (Stellen Sie sicher, dass Sie linear messen)."
   },
   "lengthTTVacSizing": {
-    "title": "Längenmessung",
-    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle.",
-    "note_title": "Patient ohne Socket",
-    "note_body": "Sie können die Länge vom Ende der Liner bis zur Kniekehle messen und die oben genannten Maße angeben (Stellen Sie sicher, dass Sie lineare Maße messen)."
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle",
+    "note_title": "Patient ohne Prothesenschaft",
+    "note_body": "Sie können die Länge vom Ende des Liners bis zur Kniekehle messen (Stellen Sie sicher, dass Sie linear messen)."
   },
   "orientationTTSizing": {
-    "title": "Orientierung",
-    "description": "Wählen Sie die Orientierung Ihres Produkts.",
-    "note_title": "Die Orientierung basiert auf der Präferenz",
-    "note_body": "Die meisten Benutzer wählen die gleiche Orientierung wie die Seite, an der das Overlay getragen wird."
+    "title": "Ausrichtung",
+    "description": "Wählen Sie die Ausrichtung Ihres Produkts",
+    "note_title": "Die Ausrichtung basiert auf persönlicher Vorliebe",
+    "note_body": "Die meisten Benutzer wählen die gleiche Seite, an der das Overlay getragen wird."
   },
   "TTSizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten :",
+    "description": "Basierend auf Ihren Antworten:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Umfang",
     "length": "Länge",
-    "orientation": "Orientierung",
-    "email_title": "Speichern Sie Ihre Auswahl!",
-    "email_description": "Erhalten Sie sofort Ihren Produktcode und die Anpassungsressourcen per E-Mail."
+    "orientation": "Ausrichtung",
+    "email_title": "Auswahl speichern!",
+    "email_description": "Erhalten Sie Ihren Produktcode und Anpassungshinweise sofort per E-Mail."
   },
   "lengthTFSizing": {
-    "title": "Längenmessung",
-    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle."
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) vom Ende des Liners bis zum Damm (Perineum)"
   },
   "lengthTFVacSizing": {
-    "title": "Längenmessung",
-    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle."
+    "title": "Länge",
+    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zum Damm (Perineum)"
   },
   "circumferenceTFSizing": {
-    "title": "Umfangsmessung",
-    "description": "Messen Sie den Umfang Ihres Stumpfes {{distance}} über dem Ende des Stumpfes und geben Sie ihn hier ein."
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) Ihres Stumpfes {{distance}} vom distalen Ende entfernt"
   },
   "circumferenceTFVacSizing": {
-    "title": "Umfangsmessung",
-    "description": "Messen Sie den Umfang (C) Ihres Stumpfes {{distance}} vom oberen Ende der Dichtung."
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) Ihres Stumpfes {{distance}} oberhalb der Dichtung"
   },
   "TFSizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten :",
+    "description": "Basierend auf Ihren Antworten:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Umfang",
     "length": "Länge",
-    "email_title": "Speichern Sie Ihre Auswahl!",
-    "email_description": "Erhalten Sie sofort Ihren Produktcode und die Anpassungsressourcen per E-Mail.",
+    "email_title": "Auswahl speichern!",
+    "email_description": "Erhalten Sie Ihren Produktcode und Anpassungshinweise sofort per E-Mail.",
     "note_cushion_title": "Wichtiger Hinweis",
-    "note_cushion_body": "Cushion-Systeme können individuelle Anpassungen am Overlay erfordern. Bitte kontaktieren Sie uns unter <bold>clinics@ethnocare.ca</bold> mit Ihren Maßen und Details zu Ihrem Suspensionssystem."
+    "note_cushion_body": "Cushion-Systeme erfordern möglicherweise individuelle Anpassungen am Overlay. Bitte kontaktieren Sie uns unter <bold>clinics@ethnocare.ca</bold> mit Ihren Maßen und Details zu Ihrem Aufhängungssystem."
   },
   "sealUnderlaySizing": {
-    "title": "Siegelauswahl",
-    "description": "Wählen Sie aus, wo der Siegel mit Ihrem Liner gemacht wird",
-    "open_description": "Wir empfehlen die offene Versiegelungsposition, da sie es dem Unterlage ermöglicht, über dem Liner zu haften und überschüssige Feuchtigkeit abzuleiten.",
-    "closed_description": "Wenn Sie ein klassischeres Design bevorzugen oder das Versiegeln des Liners ein Anliegen ist, können Sie die geschlossene Version wählen."
+    "title": "Dichtungsauswahl",
+    "description": "Wählen Sie die Position der Dichtung auf Ihrem Liner",
+    "open_description": "Wir empfehlen die offene Position, da das Underlay so über den Liner ragen und überschüssige Feuchtigkeit ableiten kann.",
+    "closed_description": "Wenn Sie ein klassisches Design bevorzugen oder die Abdichtung des Liners ein Problem darstellt, wählen Sie die geschlossene Version."
   },
   "lengthUnderlaySizing": {
     "title": "Länge",
-    "description": "Messen Sie die Länge (L) Ihres geschnittenen Liners"
+    "description": "Messen Sie die Länge (L) Ihres zugeschnittenen Liners"
   },
   "circumferenceUnderlaySizing": {
     "title": "Umfang",
-    "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende."
+    "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende entfernt"
   },
   "siliconeUnderlaySizing": {
-    "title": "Silikonauswahl",
-    "description": "Optional für zusätzlichen Halt",
-    "image_caption": "Sie können wählen, ob Sie Silikon für zusätzlichen Halt auf dem Liner und dem Stumpf hinzufügen möchten. Diese Option wird für Personen empfohlen, die eine Bewegung des Unterlage am Stumpf befürchten oder die bereits ein Verrutschen des Unterlage erlebt haben.",
+    "title": "Silikon-Option",
+    "description": "Optional für besseren Halt",
+    "image_caption": "Sie können Silikon für besseren Halt auf dem Liner und dem Stumpf hinzufügen. Dies wird empfohlen, wenn Sie Bedenken bezüglich eines Verrutschens des Underlays haben.",
     "option1": "Mit Silikon",
     "option2": "Ohne Silikon"
   },
   "UnderlaySizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten :",
+    "description": "Basierend auf Ihren Antworten:",
     "amp": "Amputation",
     "circumference": "Umfang",
     "length": "Linerlänge",
