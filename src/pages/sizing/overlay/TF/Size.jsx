@@ -80,14 +80,14 @@ export default function SizeTF() {
       code={true}
     >
       <div className="w-full max-w-2xl text-center">
-        <h1 className="text-[34px] font-semibold font-sans mb-2 text-slate-900">
+        <h1 className="text-3xl font-semibold font-sans mb-2 text-slate-900">
           {t("TFSizing.title")}
         </h1>
 
         <div className="flex flex-col items-center mb-6">
-          <p className="text-[40px] font-bold font-sans text-[#090C41]">{sizeCode}</p>
+          <p className="text-4xl font-bold font-sans text-[#090C41]">{sizeCode}</p>
           {germanAltCode && (
-            <p className="text-[20px] font-bold text-gray-500 font-sans -mt-2">{germanAltCode}</p>
+            <p className="text-xl font-bold text-gray-500 font-sans -mt-2">{germanAltCode}</p>
           )}
         </div>
 
@@ -146,8 +146,8 @@ export default function SizeTF() {
         </div>
 
         <div className="mt-10 text-left font-sans max-w-md mx-auto">
-          <h2 className="text-[25px] font-semibold text-slate-900">{t("TFSizing.email_title")}</h2>
-          <p className="text-[12px] text-gray-700 leading-snug mb-2">
+          <h2 className="text-2xl font-semibold text-slate-900">{t("TFSizing.email_title")}</h2>
+          <p className="text-xs text-gray-700 leading-snug mb-2">
             {t("TFSizing.email_description")}
           </p>
 
