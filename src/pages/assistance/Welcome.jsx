@@ -26,11 +26,11 @@ export default function Welcome() {
           {t("welcomeAssistance.title")}
         </h1>
 
-        <p className="mt-6 text-center text-base text-slate-500 leading-relaxed px-8">
+        <p className="mt-3 text-center text-base text-slate-500 leading-relaxed px-8">
           {t("welcomeAssistance.description")}
         </p>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <SelectableOption
             label={t("welcomeAssistance.startButton")}
             selected={isStarting}

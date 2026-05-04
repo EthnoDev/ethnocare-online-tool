@@ -26,11 +26,11 @@ export default function Welcome() {
           {t("welcomeSizing.title")}
         </h1>
 
-        <p className="mt-6 text-center text-base text-slate-500 leading-relaxed px-8">
+        <p className="mt-3 text-center text-base text-slate-500 leading-relaxed px-8">
           {t("welcomeSizing.description")}
         </p>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <SelectableOption
             label={t("welcomeSizing.startButton")}
             selected={isStarting}

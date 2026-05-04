@@ -57,7 +57,7 @@ export default function SealSelection() {
           {t("sealUnderlaySizing.description")}
         </p>
 
-        <div className="mt-10 flex flex-col items-center gap-10">
+        <div className="mt-8 flex flex-col items-center gap-10">
           
           {/* Option: Open Seal */}
           <button

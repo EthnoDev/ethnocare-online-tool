@@ -27,11 +27,11 @@ export default function Welcome() {
           {t("welcomeRecommendation.title")}
         </h1>
 
-        <p className="mt-6 text-center text-base text-slate-500 leading-relaxed px-8">
+        <p className="mt-3 text-center text-base text-slate-500 leading-relaxed px-8">
           {t("welcomeRecommendation.description")}
         </p>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <SelectableOption
             label={t("welcomeRecommendation.startButton")}
             selected={isStarting}

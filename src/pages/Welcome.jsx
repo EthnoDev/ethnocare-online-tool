@@ -26,7 +26,7 @@ export default function Welcome() {
           {t("welcome.title")}
         </h1>
 
-        <p className="mt-5 text-center text-lg text-slate-500">
+        <p className="mt-3 text-center text-lg text-slate-500">
           {t("welcome.description")}
         </p>
 
