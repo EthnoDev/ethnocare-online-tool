@@ -37,7 +37,7 @@ export default function SelectableOption({
       </button>
 
       {description ? (
-        <p className="mt-2 text-center text-sm text-slate-500 leading-snug">
+        <p className="mt-2 text-center text-sm text-slate-500 leading-snug italic">
           {description}
         </p>
       ) : null}
