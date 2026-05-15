@@ -14,10 +14,9 @@ export default function ProductSelection() {
   const amputation = localStorage.getItem("amputation");
 
   const handleSelect = (product) => {
-    // Save selection to storage
     localStorage.setItem("product", product);
 
-    // Navigation logic for Overlay
+    // 1. Overlay Logic
     if (product === "Overlay") {
       if (amputation === "transtibial") {
         setTimeout(() => navigate("/sizing/TTsuspension"), 200);
@@ -28,19 +27,28 @@ export default function ProductSelection() {
         return;
       }
     }
-    // Navigation logic for Underlay (Transtibial only)
+
+    // 2. Underlay Logic (Transtibial only)
     if (product === "Underlay") {
       setTimeout(() => navigate("/sizing/underlay/seal"), 200);
       return;
     }
+
+    // 3. Liner Logic (Now available for both)
+    if (product === "Liner") {
+      if (amputation === "transtibial") {
+        setTimeout(() => navigate("/sizing/liner/tt/circumference"), 200);
+        return;
+      }
+      //if (amputation === "transfemoral") {
+        //setTimeout(() => navigate("/sizing/TFsuspension"), 200);
+        //return;
+      //}
+    }
   };
 
   return (
-    <PageWrapper
-      showBack={true}
-      backTo="/sizing/amputation"
-      code={true}
-    >
+    <PageWrapper showBack={true} backTo="/sizing/amputation" code={true}>
       <div className="w-full max-w-md">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("productSizing.title")}
@@ -51,7 +59,7 @@ export default function ProductSelection() {
         </p>
 
         <div className="mt-8 space-y-6 flex flex-col items-center">
-          {/* Overlay - always shown */}
+          {/* Overlay - Always Shown */}
           <button 
             type="button" 
             onClick={() => handleSelect("Overlay")}
@@ -64,36 +72,33 @@ export default function ProductSelection() {
             />
           </button>
 
-          {/* Only show these for transtibial */}
+          {/* Underlay - Transtibial Only */}
           {amputation === "transtibial" && (
-            <>
-              {/* Underlay */}
-              <button 
-                type="button" 
-                onClick={() => handleSelect("Underlay")}
-                className="cursor-pointer focus:outline-none"
-              >
-                <img
-                  src={UnderlayImg}
-                  alt="Underlay"
-                  className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
-                />
-              </button>
-
-              {/* Liner */}
-              <button 
-                type="button" 
-                onClick={() => handleSelect("Liner")}
-                className="cursor-pointer focus:outline-none"
-              >
-                <img
-                  src={LinerImg}
-                  alt="Liner"
-                  className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
-                />
-              </button>
-            </>
+            <button 
+              type="button" 
+              onClick={() => handleSelect("Underlay")}
+              className="cursor-pointer focus:outline-none"
+            >
+              <img
+                src={UnderlayImg}
+                alt="Underlay"
+                className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+              />
+            </button>
           )}
+
+          {/* Liner - Always Shown (Now available for Transfemoral too) */}
+          <button 
+            type="button" 
+            onClick={() => handleSelect("Liner")}
+            className="cursor-pointer focus:outline-none"
+          >
+            <img
+              src={LinerImg}
+              alt="Liner"
+              className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+            />
+          </button>
         </div>
       </div>
     </PageWrapper>
