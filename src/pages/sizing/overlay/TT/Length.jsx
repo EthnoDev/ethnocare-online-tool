@@ -82,10 +82,10 @@ export default function Length() {
                 className="shrink-0 w-5 h-5 opacity-100"
               />
               <div className="flex-1">
-                <p className="text-[15px] font-bold text-slate-900 leading-tight">
+                <p className="text-md font-bold text-slate-900 leading-tight">
                   {t("lengthTTSizing.note_title")}
                 </p>
-                <p className="mt-1.5 text-[13px] text-slate-600 leading-snug">
+                <p className="mt-1.5 text-sm text-slate-600 leading-snug">
                   <Trans
                     ns="pages"
                     i18nKey="lengthTTSizing.note_body"

@@ -152,7 +152,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           <button
             type="button"
             onClick={() => setShowPopup(true)}
-            className="text-[13px] text-slate-600 font-sans leading-tight mt-1 text-left cursor-pointer hover:text-black transition-colors"
+            className="text-sm text-slate-600 font-sans leading-tight mt-1 text-left cursor-pointer hover:text-black transition-colors"
           >
             {t("inputs.additional_instruction", "Additional instruction")}
           </button>
@@ -160,7 +160,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           <button
             type="submit"
             disabled={isConfirming}
-            className={`w-auto min-w-[100px] px-6 py-2 rounded-md border font-sans font-semibold transition-all flex items-center justify-center cursor-pointer disabled:cursor-not-allowed uppercase text-[14px]
+            className={`w-auto min-w-[100px] px-6 py-2 rounded-md border font-sans font-semibold transition-all flex items-center justify-center cursor-pointer disabled:cursor-not-allowed uppercase text-sm
               ${
                 isConfirming
                   ? "bg-[#090C41] text-white border-[#090C41]"

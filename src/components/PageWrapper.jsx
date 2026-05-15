@@ -52,7 +52,7 @@ export default function PageWrapper({
           {showBack && (
             <button
               onClick={() => navigate(backTo)}
-              className="flex items-center gap-2 text-[18px] text-black font-sans cursor-pointer"
+              className="flex items-center gap-2 text-lg text-black font-sans cursor-pointer"
               aria-label={t("cta.back")}
               title={t("cta.back")}
             >
