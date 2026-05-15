@@ -104,7 +104,7 @@ export default function EmailCapture({
             {...xfade}
             role="status"
             aria-live="polite"
-            className="min-h-[42px] w-full rounded-xl bg-gray-200 text-gray-800 font-sans text-sm font-semibold
+            className="min-h-[42px] w-full rounded-md bg-gray-200 text-gray-800 font-sans text-sm font-semibold
                        px-4 py-2 flex items-center justify-center text-center leading-snug"
           >
             {t("email.success", { ns: "common" })}
@@ -117,7 +117,7 @@ export default function EmailCapture({
                 value={email}
                 onChange={handleChange}
                 placeholder={t("email.placeholder", { ns: "common" })}
-                className="min-w-0 flex-1 h-[42px] px-4 border border-gray-300 hover:border-black rounded-xl
+                className="min-w-0 flex-1 h-[42px] px-4 border border-gray-300 hover:border-black rounded-md
                            font-sans text-base leading-none appearance-none focus:outline-none"
                 autoCorrect="off"
                 autoCapitalize="none"
@@ -129,7 +129,7 @@ export default function EmailCapture({
                 disabled={isSubmitting}
                 aria-disabled={isSubmitting}
                 aria-busy={isSubmitting}
-                className={`relative h-[42px] px-6 rounded-xl border font-sans text-base font-semibold leading-none shrink-0
+                className={`relative h-[42px] px-6 rounded-md border font-sans text-base font-semibold leading-none shrink-0
                             transition-colors duration-200
                             ${isSubmitting
                               ? "bg-[#090C41] text-white border-[#090C41]"
