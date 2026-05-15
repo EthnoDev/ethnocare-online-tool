@@ -177,5 +177,9 @@
     "length": "Linerlänge",
     "seal": "Design",
     "silicone": "Silikon"
+  },
+  "circumferenceLinerTTSizing": {
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende entfernt"
   }
 }

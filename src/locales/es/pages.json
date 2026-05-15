@@ -177,5 +177,9 @@
     "length": "Longitud del liner",
     "seal": "Diseño",
     "silicone": "Silicona"
+  },
+  "circumferenceLinerTTSizing": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) a {{distance}} del extremo distal"
   }
 }

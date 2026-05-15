@@ -177,5 +177,9 @@
     "length": "Liner length",
     "seal": "Design",
     "silicone": "Silicone"
+  },
+  "circumferenceLinerTTSizing": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at {{distance}} from the distal end"
   }
 }

@@ -177,5 +177,9 @@
     "length": "Longueur du manchon",
     "seal": "Design",
     "silicone": "Silicone"
+  },
+  "circumferenceLinerTTSizing": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence (C) à {{distance}} de l'extrémité distale"
   }
 }
