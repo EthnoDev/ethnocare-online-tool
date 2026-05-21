@@ -16,6 +16,18 @@ export default function AssistanceSelection() {
   const [isRouting, setIsRouting] = useState(false);
 
   const product = localStorage.getItem("product");
+  const amputation = localStorage.getItem("amputation");
+
+  const getUserGuidePath = () => {
+    if (product === "liner") return "/User Guides/Liner_User_Guide.pdf";
+    if (product === "underlay") return "/User Guides/Underlay_User_Guide.pdf";
+    if (product === "overlay") {
+      return amputation === "transfemoral"
+        ? "/User Guides/OV_TF_User_Guide.pdf"
+        : "/User Guides/OV_TT_User_Guide.pdf";
+    }
+    return null;
+  };
 
   const handleSelect = (value) => {
     if (isRouting) return; 
@@ -25,8 +37,8 @@ export default function AssistanceSelection() {
 
     setTimeout(() => {
       if (value === "User Guide") {
-        // Logic for PDF opening can go here later
-        // window.open("/path-to-pdf.pdf", "_blank");
+        const path = getUserGuidePath();
+        if (path) window.open(path, "_blank");
         setIsRouting(false);
         setSelected(null);
       } else if (value === "Assistance") {
