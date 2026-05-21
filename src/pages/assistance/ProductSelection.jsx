@@ -56,35 +56,32 @@ export default function ProductSelection() {
             />
           </button>
 
+          {/* Liner */}
+          <button
+            type="button"
+            onClick={() => handleSelect("liner")}
+            className="cursor-pointer focus:outline-none"
+          >
+            <img
+              src={LinerImg}
+              alt="Liner"
+              className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+            />
+          </button>
+
           {/* Only show Underlay and Liner for transtibial users */}
           {amputation === "transtibial" && (
-            <>
-              {/* Underlay */}
-              <button
-                type="button"
-                onClick={() => handleSelect("underlay")}
-                className="cursor-pointer focus:outline-none"
-              >
-                <img
-                  src={UnderlayImg}
-                  alt="Underlay"
-                  className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
-                />
-              </button>
-
-              {/* Liner */}
-              <button
-                type="button"
-                onClick={() => handleSelect("liner")}
-                className="cursor-pointer focus:outline-none"
-              >
-                <img
-                  src={LinerImg}
-                  alt="Liner"
-                  className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
-                />
-              </button>
-            </>
+            <button
+              type="button"
+              onClick={() => handleSelect("underlay")}
+              className="cursor-pointer focus:outline-none"
+            >
+              <img
+                src={UnderlayImg}
+                alt="Underlay"
+                className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+              />
+            </button>
           )}
         </div>
       </div>
