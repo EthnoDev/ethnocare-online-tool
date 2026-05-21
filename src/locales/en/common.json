@@ -46,7 +46,10 @@
   },
   "footer": {
     "select_language": "Select your language",
-    "sizing_pdfs_title": "Sizing Charts in PDF :"
+    "sizing_pdfs_title": "Sizing Charts in PDF :",
+    "contact_us": "Contact us :",
+    "mail":"Mail : ",
+    "phone":"Phone : "
   },
   "inputs": {
     "enter_measurement": "Enter measurement",

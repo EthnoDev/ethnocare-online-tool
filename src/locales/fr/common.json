@@ -46,7 +46,10 @@
   },
   "footer": {
     "select_language": "Sélectionnez votre langue",
-    "sizing_pdfs_title": "Guide des Tailles en PDF :"
+    "sizing_pdfs_title": "Guide des Tailles en PDF :",
+    "contact_us": "Contactez-nous :",
+    "mail":"Mail : ",
+    "phone":"Téléphone : "
   },
   "inputs": { "enter_measurement": "Saisir la mesure",
    "additional_instruction": "Instruction supplémentaire"

@@ -46,7 +46,10 @@
   },
   "footer": {
     "select_language": "Selecciona tu idioma",
-    "sizing_pdfs_title": "Tablas de tallas en PDF :"
+    "sizing_pdfs_title": "Tablas de tallas en PDF :",
+    "contact_us": "Contáctanos :",
+    "mail":"Correo : ",
+    "phone":"Teléfono : "
   },
   "inputs": { "enter_measurement": "Ingresar medida",
    "additional_instruction": "Instrucción adicional"
