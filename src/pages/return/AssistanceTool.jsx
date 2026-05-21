@@ -52,7 +52,7 @@ export default function ReturnAssistanceTool() {
           {description}
         </p>
 
-        <div className="mt-8 space-y-5 flex flex-col items-center">
+        <div className="mt-8 space-y-6 flex flex-col items-center">
           <SelectableOption
             label={t("assistanceToolReturn.option1")}
             selected={selected === "yes"}

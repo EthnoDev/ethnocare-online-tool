@@ -37,7 +37,7 @@ export default function Identification() {
           {t("identificationReturn.description")}
         </p>
 
-        <div className="mt-8 space-y-5 flex flex-col items-center">
+        <div className="mt-8 space-y-6 flex flex-col items-center">
           <SelectableOption
             label={t("identificationReturn.option1")}
             selected={selected === "user/clinic"}

@@ -33,7 +33,7 @@ export default function SizingUnitsSelection() {
           {t("unitsSizing.description")}
         </p>
 
-        <div className="mt-8 space-y-5 flex flex-col items-center">
+        <div className="mt-8 space-y-6 flex flex-col items-center">
           <SelectableOption
             label={t("unitsSizing.option1")}
             selected={selected === "imperial"}
