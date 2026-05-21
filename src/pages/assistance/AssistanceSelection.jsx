@@ -15,6 +15,8 @@ export default function AssistanceSelection() {
   const [selected, setSelected] = useState(null);
   const [isRouting, setIsRouting] = useState(false);
 
+  const product = localStorage.getItem("product");
+
   const handleSelect = (value) => {
     if (isRouting) return; 
     
@@ -51,7 +53,7 @@ export default function AssistanceSelection() {
         </p>
 
         <div className="mt-8 flex gap-4 justify-center">
-          {/* User Guide Option */}
+          {/* User Guide Option - always visible */}
           <SelectableOption
             label={
               <span className="flex items-center justify-center gap-1">
@@ -73,14 +75,16 @@ export default function AssistanceSelection() {
             className={isRouting ? "pointer-events-none opacity-80" : ""}
           />
 
-          {/* Assistance Flow Option */}
-          <SelectableOption
-            label={t("assistanceAssistance.option2")}
-            selected={selected === "Assistance"}
-            onClick={() => handleSelect("Assistance")}
-            className={isRouting ? "pointer-events-none opacity-80" : ""}
-            aria-disabled={isRouting}
-          />
+          {/* Assistance Flow Option - only for overlay */}
+          {product === "overlay" && (
+            <SelectableOption
+              label={t("assistanceAssistance.option2")}
+              selected={selected === "Assistance"}
+              onClick={() => handleSelect("Assistance")}
+              className={isRouting ? "pointer-events-none opacity-80" : ""}
+              aria-disabled={isRouting}
+            />
+          )}
         </div>
       </div>
     </PageWrapper>
