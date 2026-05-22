@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
-import { useNavigate, useLocation } from "react-router-dom"; // ✅ CHANGED
+import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 import ProgressBar from "./ProgressBar";
 import EthnocareLogo from "../assets/ethnocare-logo.svg";
 import LanguageButton from "./LanguageButton";
+import DownloadLogo from "../assets/download.svg";
+import SelectableOption from "./SelectableOption";
+import SizingChartsPopup from "./SizingPdfPopup";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -26,11 +30,35 @@ export default function PageWrapper({
   totalSteps = null,
 }) {
   const navigate = useNavigate();
-  const location = useLocation(); // ✅ NEW
-  const { t } = useTranslation("common");
+  const location = useLocation();
+  const { t, i18n } = useTranslation("common");
 
-  // ✅ CHANGED: show only on Assistance pages (never on "/")
+  const [chartsOpen, setChartsOpen] = useState(false);
+
   const showContactCard = location.pathname.startsWith("/assistance");
+  const showSizingCharts = location.pathname.startsWith("/sizing");
+
+  // PDF suffix helpers
+  const getOverlayPdfSuffix = () => {
+    const lang = i18n.language || "en";
+    if (lang.startsWith("fr")) return "FR";
+    if (lang.startsWith("es")) return "ES";
+    if (lang.startsWith("de")) return "DE";
+    return "EN";
+  };
+
+  const getUnderlayPdfSuffix = () => {
+    const lang = i18n.language || "en";
+    if (lang.startsWith("fr")) return "FR";
+    return "EN";
+  };
+
+  const overlayPdfSuffix = getOverlayPdfSuffix();
+  const underlayPdfSuffix = getUnderlayPdfSuffix();
+
+  const ttPdfPath = `/OVTT_SIZING-CHART_${overlayPdfSuffix}.pdf`;
+  const tfPdfPath = `/OVTF_SIZING-CHART_${overlayPdfSuffix}.pdf`;
+  const underlayTtPdfPath = `/UDTT_SIZING-CHART_${underlayPdfSuffix}.pdf`;
 
   return (
     <motion.div
@@ -76,18 +104,16 @@ export default function PageWrapper({
 
       {/* Footer */}
       <footer className="w-full mt-10 flex flex-col items-center">
-        {/* ✅ Contact card only on /assistance routes */}
+        {/* Contact card only on /assistance routes */}
         {showContactCard && (
           <div className="max-w-xs w-full text-center rounded-xl border border-gray-200 bg-white shadow-sm px-4 py-3 font-sans">
             <p className="font-semibold">{t("footer.contact_us")}</p>
-
             <p className="text-sm mt-1">
               {t("footer.mail")}{" "}
               <a href="mailto:Clinics@ethnocare.ca" className="underline">
                 Clinics@ethnocare.ca
               </a>
             </p>
-
             <p className="text-sm">
               {t("footer.phone")}{" "}
               <a href="tel:+14189345669" className="underline">
@@ -103,9 +129,39 @@ export default function PageWrapper({
             alt="Ethnocare"
             className="h-4 w-auto object-contain"
           />
-          <LanguageButton />
+          <div className="flex items-center gap-3">
+            {/* Sizing charts button only on /assistance/size */}
+            {showSizingCharts && (
+              <SelectableOption
+                compact
+                selected={false}
+                onClick={() => setChartsOpen(true)}
+                label={
+                  <span className="flex items-center gap-2 justify-center">
+                    <img
+                      src={DownloadLogo}
+                      alt=""
+                      className="h-4 w-4"
+                      aria-hidden="true"
+                    />
+                    <span>{t("cta.sizings")}</span>
+                  </span>
+                }
+              />
+            )}
+            <LanguageButton />
+          </div>
         </div>
       </footer>
+
+      {chartsOpen && (
+        <SizingChartsPopup
+          onClose={() => setChartsOpen(false)}
+          ttPdfPath={ttPdfPath}
+          tfPdfPath={tfPdfPath}
+          underlayTtPdfPath={underlayTtPdfPath}
+        />
+      )}
     </motion.div>
   );
 }
