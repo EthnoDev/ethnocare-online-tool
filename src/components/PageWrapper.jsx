@@ -56,9 +56,10 @@ export default function PageWrapper({
   const overlayPdfSuffix = getOverlayPdfSuffix();
   const underlayPdfSuffix = getUnderlayPdfSuffix();
 
-  const ttPdfPath = `/OVTT_SIZING-CHART_${overlayPdfSuffix}.pdf`;
-  const tfPdfPath = `/OVTF_SIZING-CHART_${overlayPdfSuffix}.pdf`;
-  const underlayTtPdfPath = `/UDTT_SIZING-CHART_${underlayPdfSuffix}.pdf`;
+  // Updated to point to the "Sizing Charts" folder inside the public directory
+  const ttPdfPath = `/Sizing%20Charts/OVTT_SIZING-CHART_${overlayPdfSuffix}.pdf`;
+  const tfPdfPath = `/Sizing%20Charts/OVTF_SIZING-CHART_${overlayPdfSuffix}.pdf`;
+  const underlayTtPdfPath = `/Sizing%20Charts/UDTT_SIZING-CHART_${underlayPdfSuffix}.pdf`;
 
   return (
     <motion.div
