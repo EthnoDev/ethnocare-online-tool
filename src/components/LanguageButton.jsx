@@ -22,7 +22,8 @@ export default function LanguageButton() {
       <button
         type="button"
         onClick={handleOpen}
-        className="px-4 py-2 rounded-xl cursor-pointer font-sans font-medium transition-all border flex items-center gap-2
+        // Added shrink-0 right at the beginning of the className string
+        className="shrink-0 px-4 py-2 rounded-xl cursor-pointer font-sans font-medium transition-all border flex items-center gap-2
                    bg-black text-white border-black hover:bg-[#090C41] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
         aria-haspopup="dialog"
         aria-expanded={open}
