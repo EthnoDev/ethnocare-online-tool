@@ -3,11 +3,16 @@
         "start": "START",
         "next": "Weiter",
         "back": "Zurück",
+        "skip": "Überspringen",
         "confirm": "BESTÄTIGEN",
         "restart": "Neue Größe finden",
         "sizings": "Größentabellen als PDF",
         "sizingsPopup": "Größentabellen als PDF",
-        "header":"OVERLAY-ERSTATTUNGSCODE : L-5657 (USA)"
+        "header":"OVERLAY-ERSTATTUNGSCODE : L-5657 (USA)",
+        "circumference": "Umfang",
+        "length": "Länge",
+        "orientation": "Seite",
+        "suspension": "Suspension"
     },
     "products": {
         "tt": "Overlay Transtibial",

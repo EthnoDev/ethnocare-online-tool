@@ -57,7 +57,21 @@
   },
   "sizeAssistance": {
     "title": "Size",
-    "description": "What is your product size?"
+    "description": "What is your product size?",
+    "errorCircumference": "Please choose a circumference.",
+    "errorLength": "Please choose a length.",
+    "errorSide": "Please choose a side.",
+    "errorSuspension": "Please choose a suspension."
+  },
+  "problemAssistance": {
+    "title": "Problem",
+    "description": "Select the issue with your product",
+    "tibialPressurePoint": "Tibial Pressure Point",
+    "badFit": "Bad Fit",
+    "airLoss": "Air Loss",
+    "overlaySlide": "Overlay Slides",
+    "inflationDeflation": "Inflation/Deflation",
+    "other": "Other"
   },
   "welcomeSizing": {
     "title": "Sizing Tool",

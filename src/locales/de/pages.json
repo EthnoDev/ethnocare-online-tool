@@ -57,7 +57,21 @@
   },
   "sizeAssistance": {
     "title": "Größe",
-    "description": "Welche Größe hat Ihr Produkt?"
+    "description": "Welche Größe hat Ihr Produkt?",
+    "errorCircumference": "Bitte geben Sie den Umfang an.",
+    "errorLength": "Bitte geben Sie die Länge an.",
+    "errorSide": "Bitte wählen Sie eine Seite aus.",
+    "errorSuspension": "Bitte wählen Sie eine Aufhängung aus."
+  },
+  "problemAssistance": {
+    "title": "Problem",
+    "description": "Wählen Sie das Problem mit Ihrem Produkt aus",
+    "tibialPressurePoint": "Tibialer Druckpunkt",
+    "badFit": "Schlechte Passform",
+    "airLoss": "Luftverlust",
+    "overlaySlide": "Overlay rutscht",
+    "inflationDeflation": "Aufblasen/Entleeren",
+    "other": "Andere"
   },
   "welcomeSizing": {
     "title": "Größenbestimmungstool",

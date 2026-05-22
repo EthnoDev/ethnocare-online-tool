@@ -3,11 +3,16 @@
     "start": "START",
     "next": "Next",
     "back": "Back",
+    "skip": "Skip",
     "confirm": "CONFIRM",
     "restart": "Find a new size",
     "sizings": "Sizings in PDF",
     "sizingsPopup": "Sizing Charts in PDF",
-    "header":"OVERLAY REIMBURSEMENT CODE : L-5657 (USA)"
+    "header":"OVERLAY REIMBURSEMENT CODE : L-5657 (USA)",
+    "circumference": "Circumference",
+    "length": "Length",
+    "orientation": "Side",
+    "suspension": "Suspension"
   },
   "products": {
     "tt": "Overlay Transtibial",

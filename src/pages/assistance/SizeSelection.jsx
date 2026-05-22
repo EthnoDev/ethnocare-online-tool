@@ -45,14 +45,14 @@ export default function AssistanceSizeSelection() {
   const validate = () => {
     const next = {};
 
-    if (!circumference) next.circumference = t("sizeTt.errorCircumference", "Please choose a circumference.");
-    if (!length)        next.length        = t("sizeTt.errorLength",        "Please choose a length.");
+    if (!circumference) next.circumference = t("sizeAssistance.errorCircumference");
+    if (!length)        next.length        = t("sizeAssistance.errorLength");
 
     if (amputation === "transtibial" && !side)
-      next.side = t("sizeTt.errorSide", "Please choose a side.");
+      next.side = t("sizeAssistance.errorSide");
 
     if (amputation === "transfemoral" && !suspension)
-      next.suspension = t("sizeTf.errorSuspension", "Please choose a suspension.");
+      next.suspension = t("sizeAssistance.errorSuspension");
 
     setErrors(next);
 
@@ -90,8 +90,7 @@ export default function AssistanceSizeSelection() {
 
     setIsRouting(true);
     setTimeout(() => {
-      navigate("/assistance/next-step"); // update to your actual next route
-      setIsRouting(false);
+      navigate("/assistance/problem");
     }, 200);
   };
 
@@ -100,8 +99,7 @@ export default function AssistanceSizeSelection() {
     setIsRouting(true);
     localStorage.setItem("product_code", "N/A");
     setTimeout(() => {
-      navigate("/assistance/next-step"); // update to your actual next route
-      setIsRouting(false);
+      navigate("/assistance/problem"); // update to your actual next route
     }, 200);
   };
 
@@ -129,7 +127,7 @@ export default function AssistanceSizeSelection() {
 
         <div className="mt-6 space-y-6">
         {/* Circumference */}
-        <Group title={t("sizeTt.circumference")} error={errors.circumference} sectionRef={refCirc}>
+        <Group title={t("common:cta.circumference")} error={errors.circumference} sectionRef={refCirc}>
           {circumferenceOptions.map((val) => (
             <SelectableOption2
               key={val}
@@ -145,7 +143,7 @@ export default function AssistanceSizeSelection() {
         </Group>
 
         {/* Length */}
-        <Group title={t("sizeTt.length")} error={errors.length} sectionRef={refLen}>
+        <Group title={t("common:cta.length")} error={errors.length} sectionRef={refLen}>
           {lengthOptions.map((val) => (
             <SelectableOption2
               key={val}
@@ -162,7 +160,7 @@ export default function AssistanceSizeSelection() {
 
         {/* Side — transtibial only */}
         {amputation === "transtibial" && (
-          <Group title={t("sizeTt.side")} error={errors.side} sectionRef={refSide}>
+          <Group title={t("common:cta.orientation")} error={errors.side} sectionRef={refSide}>
             {["Left", "Right"].map((val) => (
               <SelectableOption2
                 key={val}
@@ -180,7 +178,7 @@ export default function AssistanceSizeSelection() {
 
         {/* Suspension — transfemoral only */}
         {amputation === "transfemoral" && (
-          <Group title={t("pages:sizeTf.suspension")} error={errors.suspension} sectionRef={refSusp}>
+          <Group title={t("common:cta.suspension")} error={errors.suspension} sectionRef={refSusp}>
             {["PIN", "VAC"].map((val) => (
               <SelectableOption2
                 key={val}
@@ -197,7 +195,7 @@ export default function AssistanceSizeSelection() {
         )}
         </div>
 
-        <div className="h-14" />
+        <div className="h-10" />
 
         <SelectableOption
           label={t("common:cta.confirm")}
@@ -208,7 +206,7 @@ export default function AssistanceSizeSelection() {
         <button
           type="button"
           onClick={handleSkip}
-          className="w-full py-3 rounded-xl text-gray-400 hover:text-gray-600 transition"
+          className="w-full py-3 rounded-xl text-gray-400 hover:text-gray-600 transition cursor-pointer"
         >
           {t("common:cta.skip")}
         </button>

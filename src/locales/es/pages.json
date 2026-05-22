@@ -57,7 +57,21 @@
   },
   "sizeAssistance": {
     "title": "Talla",
-    "description": "¿Cuál es la talla de su producto?"
+    "description": "¿Cuál es la talla de su producto?",
+    "errorCircumference": "Por favor, elija una circunferencia.",
+    "errorLength": "Por favor, elija una longitud.",
+    "errorSide": "Por favor, elija un lado.",
+    "errorSuspension": "Por favor, elija una suspensión."
+  },
+  "problemAssistance": {
+    "title": "Problema",
+    "description": "Seleccione el problema con su producto",
+    "tibialPressurePoint": "Punto de presión tibial",
+    "badFit": "Mala adaptación",
+    "airLoss": "Pérdida de aire",
+    "overlaySlide": "Deslizamiento del Overlay",
+    "inflationDeflation": "Inflado/Desinflado",
+    "other": "Otro"
   },
   "welcomeSizing": {
     "title": "Herramienta de tallas",

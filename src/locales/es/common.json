@@ -3,11 +3,16 @@
     "start": "EMPEZAR",
     "next": "Siguiente",
     "back": "Atrás",
+    "skip": "Saltar",
     "confirm": "CONFIRMAR",
     "restart": "Buscar otra talla",
     "sizings": "Tallas en PDF",
     "sizingsPopup": "Guía de Tallas en PDF",
-    "header":"CÓDIGO DE REEMBOLSO OVERLAY : L-5657 (USA)"
+    "header":"CÓDIGO DE REEMBOLSO OVERLAY : L-5657 (USA)",
+    "circumference": "Circunferencia",
+    "length": "Longitud",
+    "orientation": "Lado",
+    "suspension": "Suspensión"
   },
   "products": {
     "tt": "Overlay Transtibial",
