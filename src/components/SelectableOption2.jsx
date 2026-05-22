@@ -20,7 +20,7 @@ export default function SelectableOption2({
       aria-pressed={selected}
       className={[
         // fixed box
-        "inline-flex items-center justify-center gap-2 rounded-xl font-medium font-sans transition-all",
+        "inline-flex items-center justify-center gap-2 rounded-xl font-medium font-sans transition-all cursor-pointer",
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#090C41]",
         widthClass,                    // fixed width
         heightClass,                   // fixed height
