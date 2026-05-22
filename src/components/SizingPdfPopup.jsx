@@ -28,7 +28,7 @@ export default function SizingPdfPopup({
     <button
       type="button"
       onClick={() => openPdf(url)}
-      className="flex items-center gap-1 text-sm underline underline-offset-4 decoration-[1px]"
+      className="flex items-center gap-1 text-sm underline underline-offset-4 decoration-[1px] cursor-pointer"
     >
       <span>{label}</span>
       <img
@@ -61,7 +61,7 @@ export default function SizingPdfPopup({
             {/* Close */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 w-5 h-5"
+              className="absolute top-4 right-4 w-5 h-5 cursor-pointer"
               aria-label="Close"
               title="Close"
             >
