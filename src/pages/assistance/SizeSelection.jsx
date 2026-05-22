@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 import SelectableOption from "../../components/SelectableOption";
+import SelectableOption2 from "../../components/SelectableOption2";
 
 export default function AssistanceSizeSelection() {
   const navigate = useNavigate();
