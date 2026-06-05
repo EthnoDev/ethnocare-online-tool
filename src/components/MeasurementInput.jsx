@@ -95,9 +95,9 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
     }
 
     if (measurement === "circumference") {
-      localStorage.setItem("overlay_raw_circumference", numericValue);
+      localStorage.setItem("raw_circumference", numericValue);
     } else if (measurement === "length") {
-      localStorage.setItem("overlay_raw_length", numericValue);
+      localStorage.setItem("raw_length", numericValue);
     }
 
     const valCm = convertToCm(numericValue);

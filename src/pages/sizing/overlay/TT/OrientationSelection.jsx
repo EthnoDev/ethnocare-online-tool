@@ -28,7 +28,7 @@ export default function OrientationSelection() {
   const lang = baseLang(i18n.language);
 
   const backPath = useMemo(() => {
-    const suspension = localStorage.getItem("overlay_suspension");
+    const suspension = localStorage.getItem("suspension");
     return suspension === "TT-distal-seal" 
       ? "/sizing/TTlength-vac" 
       : "/sizing/TTlength";

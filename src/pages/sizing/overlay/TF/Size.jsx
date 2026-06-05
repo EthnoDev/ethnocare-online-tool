@@ -26,13 +26,13 @@ export default function SizeTF() {
   }
 
   const product = localStorage.getItem("product") || "Overlay"; 
-  const suspensionId = localStorage.getItem("overlay_suspension") || "—";
+  const suspensionId = localStorage.getItem("suspension") || "—";
   
   const circumferenceMapped = localStorage.getItem("tfstandard_circumference") || localStorage.getItem("tfdistal_circumference") || "—";
-  const circumferenceRaw = localStorage.getItem("overlay_raw_circumference") || "—";
+  const circumferenceRaw = localStorage.getItem("raw_circumference") || "—";
   
   const lengthMapped = localStorage.getItem("tfstandard_length") || localStorage.getItem("tfdistal_length") || "—";
-  const lengthRaw = localStorage.getItem("overlay_raw_length") || "—";
+  const lengthRaw = localStorage.getItem("raw_length") || "—";
   
   const unit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
 

@@ -22,10 +22,10 @@ export default function SizeUnderlay() {
   const sealId = localStorage.getItem("underlay_seal") || "—"; 
   const siliconeId = localStorage.getItem("underlay_silicone") || "—"; 
   
-  const circumferenceRaw = localStorage.getItem("overlay_raw_circumference") || "—"; 
+  const circumferenceRaw = localStorage.getItem("raw_circumference") || "—"; 
   const circumferenceMapped = localStorage.getItem("underlay_circumference") || "—";
   
-  const lengthRaw = localStorage.getItem("overlay_raw_length") || "—";
+  const lengthRaw = localStorage.getItem("raw_length") || "—";
   const lengthMapped = localStorage.getItem("underlay_length") || "—";
 
   /** ---------- Logic & Formatting ---------- */

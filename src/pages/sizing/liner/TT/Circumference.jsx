@@ -26,7 +26,7 @@ export default function LinerTTCircumference() {
     if (!inputValue) return;
 
     // Save the raw circumference measurement
-    localStorage.setItem("liner_tt_raw_circumference", inputValue);
+    localStorage.setItem("circumference", inputValue);
 
     // Navigate to the next step (usually Length)
     setTimeout(() => {

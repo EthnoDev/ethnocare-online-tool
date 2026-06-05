@@ -72,7 +72,7 @@ export default function SuspensionSelection() {
     if (selected) return;
 
     setSelected(optionId);
-    localStorage.setItem("overlay_suspension", optionId);
+    localStorage.setItem("suspension", optionId);
 
     setTimeout(() => {
       // Logic: If Distal Seal, handle differently. Otherwise, go to Circumference.

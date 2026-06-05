@@ -19,12 +19,12 @@ export default function SizeTT() {
 
   // Usually 'product' stores "Overlay" or "Underlay"
   const product = localStorage.getItem("product") || "Overlay"; 
-  const suspensionId = localStorage.getItem("overlay_suspension") || "—";
+  const suspensionId = localStorage.getItem("suspension") || "—";
   
-  const circumferenceRaw = localStorage.getItem("overlay_raw_circumference") || "—";
+  const circumferenceRaw = localStorage.getItem("raw_circumference") || "—";
   const circumferenceMapped = localStorage.getItem("circumference") || "—";
   
-  const lengthRaw = localStorage.getItem("overlay_raw_length") || "—";
+  const lengthRaw = localStorage.getItem("raw_length") || "—";
   const lengthMapped = localStorage.getItem("length") || "—";
   
   const orientation = localStorage.getItem("orientation") || "—";

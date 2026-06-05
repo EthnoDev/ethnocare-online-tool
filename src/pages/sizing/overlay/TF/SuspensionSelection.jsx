@@ -61,7 +61,7 @@ export default function SuspensionSelection() {
     if (selected) return;
 
     setSelected(optionId);
-    localStorage.setItem("overlay_suspension", optionId);
+    localStorage.setItem("suspension", optionId);
 
     // Logic: If distal seal, go to TFlength-vac, otherwise TFlength
     setTimeout(() => {
