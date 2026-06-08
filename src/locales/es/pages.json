@@ -75,7 +75,11 @@
   },
   "pressurePointsAssistance": {
     "title": "Rotación",
-    "description": "Gire su Overlay entre 30 y 180 grados."
+    "description": "Gire su Overlay entre 30 y 180 grados"
+  },
+  "otherAssistance": {
+    "title": "Contáctenos",
+    "description": "Parece que necesitamos más información para ayudarlo"
   },
   "welcomeSizing": {
     "title": "Herramienta de tallas",

@@ -75,7 +75,11 @@
   },
   "pressurePointsAssistance": {
     "title": "Rotation",
-    "description": "Faites pivoter votre Overlay entre 30 et 180 degrés."
+    "description": "Faites pivoter votre Overlay entre 30 et 180 degrés"
+  },
+  "otherAssistance": {
+    "title": "Contactez-nous",
+    "description": "Il semble que nous ayons besoin de plus d'informations pour vous aider"
   },
   "welcomeSizing": {
     "title": "Outil de Dimensionnement",

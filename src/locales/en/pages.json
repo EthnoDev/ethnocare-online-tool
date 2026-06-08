@@ -75,7 +75,11 @@
   },
   "pressurePointsAssistance": {
     "title": "Rotation",
-    "description": "Rotate your Overlay between 30 and 180 degrees."
+    "description": "Rotate your Overlay between 30 and 180 degrees"
+  },
+  "otherAssistance": {
+    "title": "Contact Us",
+    "description": "It looks like we need more information to help you"
   },
   "welcomeSizing": {
     "title": "Sizing Tool",
