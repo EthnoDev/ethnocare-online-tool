@@ -77,6 +77,12 @@
     "title": "Rotación",
     "description": "Gire su Overlay entre 30 y 180 grados"
   },
+  "badFitAssistance": {
+    "title": "Mal Ajuste",
+    "description": "¿Cuál es el problema que encuentra con el ajuste de su producto?",
+    "option1": "Tamaño",
+    "option2": "Movimiento del Overlay"
+  },
   "otherAssistance": {
     "title": "Contáctenos",
     "description": "Parece que necesitamos más información para ayudarlo"

@@ -77,6 +77,12 @@
     "title": "Rotation",
     "description": "Rotate your Overlay between 30 and 180 degrees"
   },
+  "badFitAssistance": {
+    "title": "Bad Fit",
+    "description": "What is the problem you are experiencing with the fit of your product?",
+    "option1": "Sizing",
+    "option2": "Overlay Movement"
+  },
   "otherAssistance": {
     "title": "Contact Us",
     "description": "It looks like we need more information to help you"
