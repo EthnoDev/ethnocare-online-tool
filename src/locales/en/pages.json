@@ -66,7 +66,7 @@
   "problemAssistance": {
     "title": "Problem",
     "description": "Select the issue with your product",
-    "tibialPressurePoint": "Tibial Pressure Point",
+    "pressurePoints": "Pressure Points",
     "badFit": "Bad Fit",
     "airLoss": "Air Loss",
     "overlaySlide": "Overlay Slides",

@@ -13,22 +13,13 @@ export default function ProblemSelection() {
 
   const [selectedProblemKey, setSelectedProblemKey] = useState(null);
 
-  const transtibialProblems = [
-    { key: "tibialPressurePoint", label: t("problemAssistance.tibialPressurePoint"), route: "/assistance/tibial-point" },
-    { key: "badFit",              label: t("problemAssistance.badFit"),              route: "/assistance/bad-fit" },
-    { key: "airLoss",             label: t("problemAssistance.airLoss"),             route: "/assistance/air-loss" },
-    { key: "inflationDeflation",  label: t("problemAssistance.inflationDeflation"),  route: "/assistance/infdef-issues" },
-    { key: "other",               label: t("problemAssistance.other"),               route: "/assistance/other-issues" },
-  ];
-
-  const transfemoralProblems = [
-    { key: "airLoss",            label: t("problemAssistance.airLoss"),            route: "/assistance/air-loss" },
+  const problems = [
+    { key: "pressurePoints",     label: t("problemAssistance.pressurePoints"),     route: "/assistance/tibial-point" },
     { key: "badFit",             label: t("problemAssistance.badFit"),             route: "/assistance/bad-fit" },
+    { key: "airLoss",            label: t("problemAssistance.airLoss"),            route: "/assistance/air-loss" },
     { key: "inflationDeflation", label: t("problemAssistance.inflationDeflation"), route: "/assistance/infdef-issues" },
     { key: "other",              label: t("problemAssistance.other"),              route: "/assistance/other-issues" },
   ];
-
-  const problems = amputation === "transtibial" ? transtibialProblems : transfemoralProblems;
 
   const handleSelect = (problem) => {
     setSelectedProblemKey(problem.key);

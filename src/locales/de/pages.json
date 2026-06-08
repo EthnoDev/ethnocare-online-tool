@@ -66,7 +66,7 @@
   "problemAssistance": {
     "title": "Problem",
     "description": "Wählen Sie das Problem mit Ihrem Produkt aus",
-    "tibialPressurePoint": "Tibialer Druckpunkt",
+    "pressurePoints": "Druckpunkte",
     "badFit": "Schlechte Passform",
     "airLoss": "Luftverlust",
     "overlaySlide": "Overlay rutscht",

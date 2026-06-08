@@ -66,7 +66,7 @@
   "problemAssistance": {
     "title": "Problème",
     "description": "Sélectionnez le problème avec votre produit",
-    "tibialPressurePoint": "Point de Pression Tibial",
+    "pressurePoints": "Points de Pression",
     "badFit": "Mauvais Ajustement",
     "airLoss": "Perte d'Air",
     "overlaySlide": "Glissement de l'Overlay",
