@@ -72,5 +72,28 @@
     "label_circumference": "Circunferencia",
     "contact_line": "Si sus medidas están fuera de nuestro rango de tallas, contáctenos en:",
     "cta_ok": "OK"
+  },
+  "contactForm": {
+    "question": "¿Necesitas asistencia adicional ?",
+    "order": "Envíanos un mensaje",
+    "question2": "Escríbenos un mensaje",
+    "order2": "Explica tu problema, danos detalles y tu información de contacto",
+
+    "success": "¡Gracias! Tu mensaje ha sido recibido.",
+    "labelMessage": "Tu mensaje",
+    "labelEmail": "Tu correo",
+    "placeholderMessage": "Ejemplo de mensaje…",
+    "placeholderEmail": "contacto@correo.com",
+    "errorMessageRequired": "Por favor ingresa un mensaje.",
+    "errorEmailRequired": "Por favor ingresa un correo.",
+    "errorEmailInvalid": "Por favor ingresa un correo válido.",
+
+    "summaryHeadingDefault": "Basado en tus respuestas :",
+    "summaryProduct": "Producto :",
+    "summaryIssue": "Problema :",
+    "summaryDetail": "Detalle :",
+
+    "buttonSend": "Enviar",
+    "submitError": "No pudimos enviar tu mensaje. Por favor, inténtalo de nuevo."
   }
 }

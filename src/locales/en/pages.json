@@ -73,6 +73,10 @@
     "inflationDeflation": "Inflation/Deflation",
     "other": "Other"
   },
+  "pressurePointsAssistance": {
+    "title": "Rotation",
+    "description": "Rotate your Overlay between 30 and 180 degrees."
+  },
   "welcomeSizing": {
     "title": "Sizing Tool",
     "description": "Use this tool to find the right size of Ethnocare product for you",

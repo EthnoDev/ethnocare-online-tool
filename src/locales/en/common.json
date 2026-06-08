@@ -73,5 +73,29 @@
     "label_circumference": "Circumference",
     "contact_line": "If your measurements fall outside our size range, please contact us at:",
     "cta_ok": "OK"
+  },
+  "contactForm": {
+    "question": "Do you need additional assistance ?",
+    "order": "Send us a message",
+    "question2": "Write us a message",
+    "order2": "Explain your issue, give us details and your contact information",
+
+    "success": "Thank you! Your message has been received.",
+    "labelMessage": "Your message",
+    "labelEmail": "Your email",
+    "placeholderMessage": "Example message…",
+    "placeholderEmail": "contact@mail.com",
+
+    "errorMessageRequired": "Please enter a message.",
+    "errorEmailRequired": "Please enter an email.",
+    "errorEmailInvalid": "Please enter a valid email.",
+
+    "summaryHeadingDefault": "Based on your answers :",
+    "summaryProduct": "Product :",
+    "summaryIssue": "Issue :",
+    "summaryDetail": "Detail :",
+
+    "buttonSend": "Send",
+    "submitError": "We couldn't send your message. Please try again."
   }
 }

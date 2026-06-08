@@ -73,6 +73,10 @@
     "inflationDeflation": "Aufblasen/Entleeren",
     "other": "Andere"
   },
+  "pressurePointsAssistance": {
+    "title": "Rotation",
+    "description": "Drehen Sie Ihr Overlay zwischen 30 und 180 Grad."
+  },
   "welcomeSizing": {
     "title": "Größenbestimmungstool",
     "description": "Verwenden Sie dieses Tool, um die richtige Größe für Ihr Ethnocare-Produkt zu finden",

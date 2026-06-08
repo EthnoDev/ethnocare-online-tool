@@ -72,5 +72,29 @@
     "label_circumference": "Circonférence",
     "contact_line": "Si vos mesures se trouvent en dehors de notre gamme de tailles, veuillez nous contacter à :",
     "cta_ok": "OK"
+  },
+  "contactForm": {
+    "question": "Avez-vous besoin d'une assistance supplémentaire ?",
+    "order": "Envoyez-nous un message",
+    "question2": "Écrivez-nous un message",
+    "order2": "Expliquez votre problème, donnez-nous des détails et vos informations de contact",
+
+    "success": "Merci ! Votre message a été reçu.",
+    "labelMessage": "Votre message",
+    "labelEmail": "Votre email",
+    "placeholderMessage": "Exemple de message…",
+    "placeholderEmail": "contact@mail.com",
+
+    "errorMessageRequired": "Veuillez entrer un message.",
+    "errorEmailRequired": "Veuillez entrer un email.",
+    "errorEmailInvalid": "Veuillez entrer un email valide.",
+
+    "summaryHeadingDefault": "En fonction de vos réponses :",
+    "summaryProduct": "Produit :",
+    "summaryIssue": "Problème :",
+    "summaryDetail": "Détail :",
+
+    "buttonSend": "Envoyer",
+    "submitError": "Nous n'avons pas pu envoyer votre message. Veuillez réessayer."
   }
 }

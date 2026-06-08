@@ -73,6 +73,10 @@
     "inflationDeflation": "Inflado/Desinflado",
     "other": "Otro"
   },
+  "pressurePointsAssistance": {
+    "title": "Rotación",
+    "description": "Gire su Overlay entre 30 y 180 grados."
+  },
   "welcomeSizing": {
     "title": "Herramienta de tallas",
     "description": "Use esta herramienta para encontrar la talla de producto Ethnocare adecuada para usted",

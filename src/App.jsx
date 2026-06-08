@@ -42,6 +42,7 @@ import AssistanceProductSelection from "./pages/assistance/ProductSelection";
 import AssistanceSelection from "./pages/assistance/AssistanceSelection";
 import AssistanceSizeSelection from "./pages/assistance/SizeSelection";
 import AssistanceProblemSelection from "./pages/assistance/ProblemSelection";
+import AssistancePressurePoints from "./pages/assistance/problems/PressurePoints";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -76,6 +77,7 @@ function AnimatedRoutes() {
         <Route path="/assistance/selection" element={<AssistanceSelection />} />
         <Route path="/assistance/size" element={<AssistanceSizeSelection />} />
         <Route path="/assistance/problem" element={<AssistanceProblemSelection />} />
+        <Route path="/assistance/problem/pressure-points" element={<AssistancePressurePoints />} />
         <Route path="/sizing/underlay/seal" element={<SizingUnderlaySealSelection />} />
         <Route path="/sizing/underlay/length" element={<SizingUnderlayLength />} />
         <Route path="/sizing/underlay/circumference" element={<SizingUnderlayCircumference />} />

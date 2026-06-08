@@ -72,5 +72,29 @@
         "label_circumference": "Umfang",
         "contact_line": "Wenn Ihre Maße außerhalb unseres Größenbereichs liegen, kontaktieren Sie uns bitte unter:",
         "cta_ok": "OK"
+    },
+    "contactForm": {
+        "question": "Benötigen Sie weitere Hilfe ?",
+        "order": "Senden Sie uns eine Nachricht",
+        "question2": "Schreiben Sie uns eine Nachricht",
+        "order2": "Erklären Sie Ihr Problem, geben Sie uns Details und Ihre Kontaktinformationen",
+
+        "success": "Danke! Ihre Nachricht wurde empfangen.",
+        "labelMessage": "Ihre Nachricht",
+        "labelEmail": "Ihre E-Mail",
+        "placeholderMessage": "Beispielnachricht…",
+        "placeholderEmail": "beispiel@email.com",
+
+        "errorMessageRequired": "Bitte geben Sie eine Nachricht ein.",
+        "errorEmailRequired": "Bitte geben Sie eine E-Mail ein.",
+        "errorEmailInvalid": "Bitte geben Sie eine gültige E-Mail ein.",
+
+        "summaryHeadingDefault": "Basierend auf Ihren Antworten :",
+        "summaryProduct": "Produkt :",
+        "summaryIssue": "Problem :",
+        "summaryDetail": "Detail :",
+
+        "buttonSend": "Senden",
+        "submitError": "Wir konnten Ihre Nachricht nicht senden. Bitte versuchen Sie es erneut."
     }
 }

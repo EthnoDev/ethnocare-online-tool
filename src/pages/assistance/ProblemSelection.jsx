@@ -14,16 +14,16 @@ export default function ProblemSelection() {
   const [selectedProblemKey, setSelectedProblemKey] = useState(null);
 
   const problems = [
-    { key: "pressurePoints",     label: t("problemAssistance.pressurePoints"),     route: "/assistance/tibial-point" },
-    { key: "badFit",             label: t("problemAssistance.badFit"),             route: "/assistance/bad-fit" },
-    { key: "airLoss",            label: t("problemAssistance.airLoss"),            route: "/assistance/air-loss" },
-    { key: "inflationDeflation", label: t("problemAssistance.inflationDeflation"), route: "/assistance/infdef-issues" },
-    { key: "other",              label: t("problemAssistance.other"),              route: "/assistance/other-issues" },
+    { key: "pressurePoints",     label: t("problemAssistance.pressurePoints"),     route: "/assistance/problem/pressure-points" },
+    { key: "badFit",             label: t("problemAssistance.badFit"),             route: "/assistance/problem/bad-fit" },
+    { key: "airLoss",            label: t("problemAssistance.airLoss"),            route: "/assistance/problem/air-loss" },
+    { key: "inflationDeflation", label: t("problemAssistance.inflationDeflation"), route: "/assistance/problem/infdef-issues" },
+    { key: "other",              label: t("problemAssistance.other"),              route: "/assistance/problem/other-issues" },
   ];
 
   const handleSelect = (problem) => {
     setSelectedProblemKey(problem.key);
-    localStorage.setItem("problem_key", `pages:identifyProblem.${problem.key}`);
+    localStorage.setItem("problem_key", `pages:problemAssistance.${problem.key}`);
     navigate(problem.route);
   };
 
