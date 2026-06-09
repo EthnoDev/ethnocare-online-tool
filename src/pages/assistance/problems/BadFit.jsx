@@ -18,10 +18,13 @@ export default function BadFit() {
     // localStorage.setItem("detail", fitIssue); 
     // localStorage.setItem("detail_key", `pages:badFitAssistance.${fitIssue}`);
 
-    // 🔴 Commented out navigation for now
-    // setTimeout(() => {
-    //   navigate("/assistance/contact"); 
-    // }, 200);
+    // Navigation logic with standard 200ms delay
+    setTimeout(() => {
+      if (fitIssue === "overlay-movement") {
+        navigate("/assistance/problem/moving");
+      }
+      // You can add your "sizing" destination condition here later if needed
+    }, 200);
   };
 
   return (

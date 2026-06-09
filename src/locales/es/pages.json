@@ -81,7 +81,11 @@
     "title": "Mal Ajuste",
     "description": "¿Cuál es el problema que encuentra con el ajuste de su producto?",
     "option1": "Tamaño",
-    "option2": "Movimiento del Overlay"
+    "option2": "Deslizamiento del Overlay"
+  },
+  "movingAssistance": {
+    "title": "Deslizamiento del Overlay",
+    "description": "¿Su Overlay se desliza sobre su liner?"
   },
   "otherAssistance": {
     "title": "Contáctenos",

@@ -81,8 +81,12 @@
     "title": "Mauvais Fit",
     "description": "Quel est le problème que vous rencontrez avec le fit de votre produit ?",
     "option1": "Taille",
-    "option2": "Mouvement de l'Overlay"
+    "option2": "Glissement de l'Overlay"
    },
+  "movingAssistance": {
+    "title": "Glissement de l'Overlay",
+    "description": "Votre Overlay glisse-t-il sur votre liner ?"
+  },
   "otherAssistance": {
     "title": "Contactez-nous",
     "description": "Il semble que nous ayons besoin de plus d'informations pour vous aider"

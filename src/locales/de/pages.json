@@ -81,7 +81,11 @@
     "title": "Schlechte Passform",
     "description": "Welches Problem haben Sie mit der Passform Ihres Produkts?",
     "option1": "Größe",
-    "option2": "Bewegung des Overlays"
+    "option2": "Overlay rutscht"
+  },
+  "movingAssistance": {
+    "title": "Overlay rutscht",
+    "description": "Rutscht Ihr Overlay auf Ihrem Liner?"
   },
   "otherAssistance": {
     "title": "Kontaktieren Sie uns",
