@@ -14,6 +14,9 @@ export default function BadFit() {
     if (selected) return; // Prevent double clicks
     setSelected(fitIssue);
 
+    // Dynamic update for the parent problem key based on sub-selection
+    localStorage.setItem("problem_key", `pages:badFitAssistance.${fitIssue}`);
+
     // 🔴 Commented out detail storage for now
     // localStorage.setItem("detail", fitIssue); 
     // localStorage.setItem("detail_key", `pages:badFitAssistance.${fitIssue}`);
