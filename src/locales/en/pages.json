@@ -87,7 +87,11 @@
   },
   "movingAssistance": {
     "title": "Overlay Slipping",
-    "description": "Does your Overlay slip on your liner?"
+    "description": "Does your Overlay slip on your liner?",
+    "slides-up": "Upward",
+    "slides-down": "Downward",
+    "shifts-sideways": "Rotation",
+    "rolls": "Top hem rolling down"
   },
   "stirrupAssistance": {
     "title": "Stirrup",

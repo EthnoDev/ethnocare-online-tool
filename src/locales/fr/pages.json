@@ -87,7 +87,11 @@
    },
   "movingAssistance": {
     "title": "Glissement de l'Overlay",
-    "description": "Votre Overlay glisse-t-il sur votre liner ?"
+    "description": "Votre Overlay glisse-t-il sur votre liner ?",
+    "slides-up": "Vers le haut",
+    "slides-down": "Vers le bas",
+    "shifts-sideways": "Rotation",
+    "rolls": "Roulement de l'ourlet supérieur vers le bas"
   },
   "otherAssistance": {
     "title": "Contactez-nous",

@@ -63,9 +63,9 @@ export default function Moving() {
     if (selected) return; // Prevent double clicks
     setSelected(id);
 
-    // 🔴 Commented out detail storage for now
-    // localStorage.setItem("detail", id);
-    // localStorage.setItem("detail_key", `pages:movingAssistance.${id}`);
+    // Storage updates are now active
+    localStorage.setItem("detail", id);
+    localStorage.setItem("detail_key", `pages:movingAssistance.${id}`);
 
     // Navigation trigger with standard 200ms animation delay
     setTimeout(() => {

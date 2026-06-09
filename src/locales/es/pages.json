@@ -87,7 +87,11 @@
   },
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",
-    "description": "¿Su Overlay se desliza sobre su liner?"
+    "description": "¿Su Overlay se desliza sobre su liner?",
+    "slides-up": "Hacia arriba",
+    "slides-down": "Hacia abajo",
+    "shifts-sideways": "Rotación",
+    "rolls": "Dobladillo superior enrollándose hacia abajo"
   },
   "otherAssistance": {
     "title": "Contáctenos",

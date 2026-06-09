@@ -87,7 +87,11 @@
   },
   "movingAssistance": {
     "title": "Overlay rutscht",
-    "description": "Rutscht Ihr Overlay auf Ihrem Liner?"
+    "description": "Rutscht Ihr Overlay auf Ihrem Liner?",
+    "slides-up": "Nach oben",
+    "slides-down": "Nach unten",
+    "shifts-sideways": "Rotation",
+    "rolls": "Oberer Saum rollt nach unten"
   },
   "otherAssistance": {
     "title": "Kontaktieren Sie uns",
