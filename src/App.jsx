@@ -45,6 +45,7 @@ import AssistanceProblemSelection from "./pages/assistance/ProblemSelection";
 import AssistancePressurePoints from "./pages/assistance/problems/PressurePoints";
 import AssistanceBadFit from "./pages/assistance/problems/BadFit";
 import AssistanceMoving from "./pages/assistance/problems/Moving";
+import AssistanceStirrup from "./pages/assistance/problems/Stirrup";
 import AssistanceOther from "./pages/assistance/problems/Other";
 
 function AnimatedRoutes() {
@@ -83,6 +84,7 @@ function AnimatedRoutes() {
         <Route path="/assistance/problem/pressure-points" element={<AssistancePressurePoints />} />
         <Route path="/assistance/problem/bad-fit" element={<AssistanceBadFit />} />
         <Route path="/assistance/problem/moving" element={<AssistanceMoving />} />
+        <Route path="/assistance/problem/stirrup" element={<AssistanceStirrup />} />
         <Route path="/assistance/problem/other" element={<AssistanceOther />} />
         <Route path="/sizing/underlay/seal" element={<SizingUnderlaySealSelection />} />
         <Route path="/sizing/underlay/length" element={<SizingUnderlayLength />} />

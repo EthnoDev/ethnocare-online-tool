@@ -87,6 +87,10 @@
     "title": "Overlay Slipping",
     "description": "Does your Overlay slip on your liner?"
   },
+  "stirrupAssistance": {
+    "title": "Stirrup",
+    "imageDescription": "The stirrup is designed specifically for when the integrated sillicone is not enough to hold the Overlay in place. This solution will keep your Overlay secure all day long."
+  },
   "otherAssistance": {
     "title": "Contact Us",
     "description": "It looks like we need more information to help you"

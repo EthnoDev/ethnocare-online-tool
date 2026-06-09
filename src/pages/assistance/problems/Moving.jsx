@@ -67,10 +67,12 @@ export default function Moving() {
     // localStorage.setItem("detail", id);
     // localStorage.setItem("detail_key", `pages:movingAssistance.${id}`);
 
-    // 🔴 Commented out navigation for now
-    // setTimeout(() => {
-    //   navigate("/assistance/contact");
-    // }, 200);
+    // Navigation trigger with standard 200ms animation delay
+    setTimeout(() => {
+      if (id === "slides-up") {
+        navigate("/assistance/problem/stirrup");
+      }
+    }, 200);
   };
 
   return (
