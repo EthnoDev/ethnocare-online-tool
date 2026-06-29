@@ -34,7 +34,7 @@ export default function Stirrup() {
           </div>
 
           {/* Description Text block (Formatted precisely like reference file) */}
-          <div className="mt-4 text-center">
+          <div className="mt-2 text-center">
             <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
               {t("stirrupAssistance.imageDescription")}
             </p>

@@ -94,7 +94,7 @@ export default function SuspensionSelection() {
           {t("suspensionSizing.description", { ns: "pages" })}
         </p>
 
-        <div className="mt-8 grid grid-cols-2 gap-4">
+        <div className="mt-8 grid grid-cols-2 gap-6">
           {options.map(({ id, src, tKey }) => (
             <button
               key={id}

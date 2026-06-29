@@ -74,7 +74,7 @@ export default function OrientationSelection() {
         </p>
 
         {/* Orientation Grid */}
-        <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 px-12 max-w-sm mx-auto">
+        <div className="mt-8 grid grid-cols-2 gap-6 px-12 max-w-sm mx-auto">
           {options.map(({ id, src }) => (
             <button
               key={id}

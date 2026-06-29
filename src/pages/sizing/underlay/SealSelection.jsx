@@ -57,8 +57,7 @@ export default function SealSelection() {
           {t("sealUnderlaySizing.description")}
         </p>
 
-        <div className="mt-8 flex flex-col items-center gap-10">
-          
+        <div className="mt-8 flex flex-col items-center space-y-6">
           {/* Option: Open Seal */}
           <button
             type="button"
@@ -78,7 +77,7 @@ export default function SealSelection() {
                 className="h-auto w-full block rounded-xl max-w-[320px] object-cover" 
               />
             </div>
-            <div className="mt-4 text-center">
+            <div className="mt-2 text-center">
               {/* Added italic class below */}
               <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
                 {t("sealUnderlaySizing.open_description")}
@@ -105,7 +104,7 @@ export default function SealSelection() {
                 className="h-auto w-full block rounded-xl max-w-[320px] object-cover" 
               />
             </div>
-            <div className="mt-4 text-center">
+            <div className="mt-2 text-center">
               {/* Added italic class below */}
               <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
                 {t("sealUnderlaySizing.closed_description")}

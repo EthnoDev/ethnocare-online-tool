@@ -125,7 +125,7 @@ export default function AssistanceSizeSelection() {
           {t("sizeAssistance.description")}
         </p>
 
-        <div className="mt-6 space-y-6">
+        <div className="mt-8 space-y-6">
         {/* Circumference */}
         <Group title={t("common:cta.circumference")} error={errors.circumference} sectionRef={refCirc}>
           {circumferenceOptions.map((val) => (

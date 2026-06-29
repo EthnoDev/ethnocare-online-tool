@@ -89,8 +89,8 @@ export default function SuspensionSelection() {
           {t("suspensionSizing.description", { ns: "pages" })}
         </p>
 
-        {/* Layout matches TT exactly: gap-4, no extra px-10 padding */}
-        <div className="mt-8 grid grid-cols-2 gap-4">
+        {/* Layout matches TT exactly: gap-6, no extra px-10 padding */}
+        <div className="mt-8 grid grid-cols-2 gap-6">
           {options.map(({ id, src, tKey }) => (
             <button
               key={id}

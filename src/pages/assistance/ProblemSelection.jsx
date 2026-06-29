@@ -54,7 +54,7 @@ export default function ProblemSelection() {
           {t("problemAssistance.description")}
         </p>
 
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-3">
           {problems.map((problem) => (
             <SelectableOption
               key={problem.key}

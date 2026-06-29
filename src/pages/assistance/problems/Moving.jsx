@@ -94,7 +94,7 @@ export default function Moving() {
         </p>
 
         {/* Options Grid (2x2) with tighter gap sizing overrides */}
-        <div className="mt-8 grid grid-cols-2 gap-y-8 gap-x-8 justify-center mx-auto max-w-[340px]">
+        <div className="mt-8 grid grid-cols-2 gap-y-6 gap-x-6 justify-center mx-auto max-w-[340px]">
           {slideOptions.map((option) => (
             <button
               key={option.id}

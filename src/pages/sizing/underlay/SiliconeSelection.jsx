@@ -54,14 +54,14 @@ export default function SiliconeSelection() {
         </div>
 
         {/* 4. Description under the image */}
-        <div className="mt-4 text-center">
+        <div className="mt-2 text-center">
           <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
             {t("siliconeUnderlaySizing.image_caption")}
           </p>
         </div>
 
         {/* 5. Horizontal Options */}
-        <div className="mt-10 flex flex-row items-center justify-center gap-4 ">
+        <div className="mt-8 flex flex-row items-center justify-center gap-6 ">
           <SelectableOption
             label={t("siliconeUnderlaySizing.option1")}
             selected={selected === "yes-silicone"}

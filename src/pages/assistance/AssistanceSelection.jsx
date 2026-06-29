@@ -64,7 +64,7 @@ export default function AssistanceSelection() {
           {t("assistanceAssistance.description")}
         </p>
 
-        <div className="mt-8 flex gap-4 justify-center">
+        <div className="mt-8 flex flex-col items-center space-y-6">
           {/* User Guide Option - always visible */}
           <SelectableOption
             label={
