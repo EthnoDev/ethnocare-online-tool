@@ -14,6 +14,10 @@
     "orientation": "Side",
     "suspension": "Suspension"
   },
+  "amputation": {
+    "tt": "Transtibial",
+    "tf": "Transfemoral"
+  },
   "products": {
     "tt": "Overlay Transtibial",
     "tf": "Overlay Transfemoral",

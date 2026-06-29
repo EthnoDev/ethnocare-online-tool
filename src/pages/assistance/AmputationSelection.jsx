@@ -12,7 +12,7 @@ export default function AssistanceAmputationSelection() {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const [selected, setSelected] = useState(null);
-  const { t } = useTranslation("pages");
+  const { t } = useTranslation(["pages", "common"]);
 
   const tfImage = i18n.language === "fr" ? TF_FR : TF;
 
@@ -43,8 +43,8 @@ export default function AssistanceAmputationSelection() {
             type="button"
             onClick={() => handleSelect("transtibial")}
             className="cursor-pointer focus:outline-none"
-            aria-label="Transtibial"
-            title="Transtibial"
+            aria-label={t("common:amputation.tt")}
+            title={t("common:amputation.tt")}
           >
             <div
               className={`rounded-xl ${
@@ -55,7 +55,7 @@ export default function AssistanceAmputationSelection() {
             >
               <img
                 src={TT}
-                alt="Transtibial"
+                alt={t("common:amputation.tt")}
                 className="w-60 h-auto object-contain rounded-xl block"
               />
             </div>
@@ -65,8 +65,8 @@ export default function AssistanceAmputationSelection() {
             type="button"
             onClick={() => handleSelect("transfemoral")}
             className="cursor-pointer focus:outline-none"
-            aria-label="Transfemoral"
-            title="Transfemoral"
+            aria-label={t("common:amputation.tf")}
+            title={t("common:amputation.tf")}
           >
             <div
               className={`rounded-xl ${
@@ -77,7 +77,7 @@ export default function AssistanceAmputationSelection() {
             >
               <img
                 src={tfImage}
-                alt="Transfemoral"
+                alt={t("common:amputation.tf")}
                 className="w-60 h-auto object-contain rounded-xl block"
               />
             </div>
