@@ -31,7 +31,9 @@ import UpFR from "../../../assets/slides/up_FR.svg";
 export default function Moving() {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
-  const { t, i18n } = useTranslation("pages");
+  
+  // 1. Added "common" to the hook namespaces array
+  const { t, i18n } = useTranslation(["pages", "common"]);
 
   // Determine which localized file cluster to display
   const currentLang = i18n.language || "en";
@@ -52,22 +54,21 @@ export default function Moving() {
 
   const images = getDynamicImages();
 
+  // 2. Updated labels to reference the keys from common.json
   const slideOptions = [
-    { id: "slides-up", src: images.up, label: "Slides Up" },
-    { id: "slides-down", src: images.down, label: "Slides Down" },
-    { id: "shifts-sideways", src: images.shift, label: "Shifts Sideways" },
-    { id: "rolls", src: images.roll, label: "Rolls" },
+    { id: "slides-up", src: images.up, label: t("common:sliding.up") },
+    { id: "slides-down", src: images.down, label: t("common:sliding.down") },
+    { id: "shifts-sideways", src: images.shift, label: t("common:sliding.rotate") },
+    { id: "rolls", src: images.roll, label: t("common:sliding.roll") },
   ];
 
   const handleSelect = (id) => {
     if (selected) return; // Prevent double clicks
     setSelected(id);
 
-    // Storage updates are now active
     localStorage.setItem("detail", id);
     localStorage.setItem("detail_key", `pages:movingAssistance.${id}`);
 
-    // Navigation trigger with standard 200ms animation delay
     setTimeout(() => {
       if (id === "slides-up") {
         navigate("/assistance/problem/stirrup");
@@ -93,7 +94,7 @@ export default function Moving() {
           {t("movingAssistance.description")}
         </p>
 
-        {/* Options Grid (2x2) with tighter gap sizing overrides */}
+        {/* Options Grid (2x2) */}
         <div className="mt-8 grid grid-cols-2 gap-y-6 gap-x-6 justify-center mx-auto max-w-[340px]">
           {slideOptions.map((option) => (
             <button

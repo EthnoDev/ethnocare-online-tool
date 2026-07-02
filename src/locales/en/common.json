@@ -12,7 +12,8 @@
     "circumference": "Circumference",
     "length": "Length",
     "orientation": "Side",
-    "suspension": "Suspension"
+    "suspension": "Suspension",
+    "pressurePoints": "Overlay Rotation"
   },
   "amputation": {
     "tt": "Transtibial",
@@ -44,6 +45,12 @@
   "orientation": {
     "left": "Left",
     "right": "Right"
+  },
+  "sliding": {
+    "up": "Upward",
+    "down": "Downward",
+    "rotate": "Rotation",
+    "roll": "Top hem rolling down"
   },
   "seal": {
     "open-seal": "Open",

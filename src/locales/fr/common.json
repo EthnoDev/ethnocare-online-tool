@@ -12,7 +12,8 @@
     "circumference": "Circonférence",
     "length": "Longueur",
     "orientation": "Côté",
-    "suspension": "Suspension"
+    "suspension": "Suspension",
+    "pressurePoints": "Rotation de l'Overlay"
   },
   "amputation": {
     "tt": "Transtibial",
@@ -44,6 +45,12 @@
   "orientation": {
     "left": "Gauche",
     "right": "Droite"
+  },
+  "sliding": {
+    "up": "Vers le haut",
+    "down": "Vers le bas",
+    "rotate": "Rotation",
+    "roll": "Roulement de l'ourlet supérieur vers le bas"
   },
   "seal": {
     "open-seal": "Ouvert",

@@ -12,7 +12,8 @@
     "circumference": "Circunferencia",
     "length": "Longitud",
     "orientation": "Lado",
-    "suspension": "Suspensión"
+    "suspension": "Suspensión",
+    "pressurePoints": "Rotación del Overlay"
   },
   "amputation": {
     "tt": "Transtibial",
@@ -44,6 +45,12 @@
   "orientation": {
     "left": "Izquierda",
     "right": "Derecha"
+  },
+  "sliding": {
+    "up": "Hacia arriba",
+    "down": "Hacia abajo",
+    "rotate": "Rotación",
+    "roll": "Dobladillo superior enrollado hacia abajo"
   },
   "seal": {
     "open-seal": "Abierto",

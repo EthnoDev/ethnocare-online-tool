@@ -29,7 +29,7 @@ export default function PressurePoints() {
         <div className="mt-8 text-left space-y-6">
         <img
           src={pressureImage}
-          alt="Pressure points guide"
+          alt={t("common:cta.pressurePoints")}
           className="w-52 sm:w-56 h-auto mx-auto"
         />
 
