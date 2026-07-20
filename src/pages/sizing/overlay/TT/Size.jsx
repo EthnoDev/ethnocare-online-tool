@@ -1,3 +1,4 @@
+// src/pages/assistance/overlay/TT/SizeTT.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -33,9 +34,8 @@ export default function SizeTT() {
   /** ---------- Logic & Formatting ---------- */
   const currentLang = (i18n.language || "en").split("-")[0];
 
-  // Combined Product + Amputation Line
-  // This assumes this specific file is for Transtibial (TT)
-  const productAmputation = `${product} TT`;
+  // Combined Product + Amputation Line pulling from common translations
+  const productAmputation = t("common:products.tt");
 
   const suspensionLabel = suspensionId !== "—" 
     ? t(`suspension.${suspensionId.toLowerCase().replace("tt-", "tt-")}`, { ns: "common" }) 
@@ -79,7 +79,7 @@ export default function SizeTT() {
         <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
           <img
             src={TTProductImg}
-            alt="TT Product"
+            alt={t("common:products.tt")}
             className="w-[180px] h-auto object-contain rounded-xl"
           />
 

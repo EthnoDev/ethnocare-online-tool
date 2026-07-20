@@ -15,6 +15,16 @@
         "suspension": "Suspension",
         "pressurePoints": "Overlay-Rotation"
     },
+    "pages": {
+        "circumference_tt_vac": "TT Umfang distal Seal",
+        "length_tt_vac": "TT Länge distal Seal",
+        "circumference_tt": "TT Umfang",
+        "length_tt": "TT Länge",
+        "circumference_tf": "TF Umfang",
+        "length_tf": "TF Länge",
+        "circumference_tf_vac": "TF Umfang distal Seal",
+        "length_tf_vac": "TF Länge distal Seal"
+    },
     "amputation": {
         "tt": "Transtibial",
         "tf": "Transfemoral"

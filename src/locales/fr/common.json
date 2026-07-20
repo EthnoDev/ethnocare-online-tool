@@ -15,6 +15,16 @@
     "suspension": "Suspension",
     "pressurePoints": "Rotation de l'Overlay"
   },
+  "pages": {
+    "circumference_tt_vac": "Circonférence TT joint distal",
+    "length_tt_vac": "Longueur TT joint distal",
+    "circumference_tt": "Circonférence TT",
+    "length_tt": "Longueur TT",
+    "circumference_tf": "Circonférence TF",
+    "length_tf": "Longueur TF",
+    "circumference_tf_vac": "Circonférence TF joint distal",
+    "length_tf_vac": "Longueur TF joint distal"
+  },
   "amputation": {
     "tt": "Transtibial",
     "tf": "Transfémoral"

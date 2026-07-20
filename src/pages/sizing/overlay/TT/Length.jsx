@@ -18,7 +18,9 @@ const baseLang = (code) => (code || "en").split("-")[0];
 export default function Length() {
   const [result, setResult] = useState(null);
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation("pages");
+  
+  // Loaded both "pages" and "common" namespaces
+  const { t, i18n } = useTranslation(["pages", "common"]);
 
   const lang = baseLang(i18n.language);
   const imgMap = {
@@ -59,7 +61,7 @@ export default function Length() {
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
-            alt="Length Measurement"
+            alt={t("common:pages.length_tt")}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>
@@ -78,10 +80,11 @@ export default function Length() {
             <div className="flex items-start gap-3 text-left">
               <img
                 src={ExclamationIcon}
-                alt="Notice"
+                alt={t("common:popup.notice_title")}
                 className="shrink-0 w-5 h-5 opacity-100"
               />
               <div className="flex-1">
+                {/* Fixed back to lengthTTSizing.note_title */}
                 <p className="text-md font-bold text-slate-900 leading-tight">
                   {t("lengthTTSizing.note_title")}
                 </p>

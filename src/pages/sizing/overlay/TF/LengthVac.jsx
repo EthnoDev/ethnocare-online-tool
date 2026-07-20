@@ -57,7 +57,7 @@ export default function LengthVac() {
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
-            alt="TF Vacuum Length Measurement"
+            alt={t("common:pages.length_tf_vac")}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>

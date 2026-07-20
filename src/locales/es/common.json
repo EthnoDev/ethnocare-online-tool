@@ -15,6 +15,16 @@
     "suspension": "Suspensión",
     "pressurePoints": "Rotación del Overlay"
   },
+  "pages": {
+    "circumference_tt_vac": "Circunferencia TT sello distal",
+    "length_tt_vac": "Longitud TT sello distal",
+    "circumference_tt": "Circunferencia TT",
+    "length_tt": "Longitud TT",
+    "circumference_tf": "Circunferencia TF",
+    "length_tf": "Longitud TF",
+    "circumference_tf_vac": "Circunferencia TF sello distal",
+    "length_tf_vac": "Longitud TF sello distal"
+  },
   "amputation": {
     "tt": "Transtibial",
     "tf": "Transfemoral"

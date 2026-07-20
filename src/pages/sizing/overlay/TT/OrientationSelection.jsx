@@ -15,7 +15,7 @@ import Right_fr from "../../../../assets/orientations/right_fr.svg";
 import Right_es from "../../../../assets/orientations/right_es.svg";
 import Right_de from "../../../../assets/orientations/right_de.svg";
 
-import ExclamationIcon from "../../../../assets/exclamation.svg"; // Ensure path is correct
+import ExclamationIcon from "../../../../assets/exclamation.svg"; 
 
 /** ---------- Helpers ---------- */
 const baseLang = (code) => (code || "en").split("-")[0];
@@ -40,8 +40,8 @@ export default function OrientationSelection() {
   };
 
   const options = [
-    { id: "Left", tKey: "Left" },
-    { id: "Right", tKey: "Right" },
+    { id: "Left" },
+    { id: "Right" },
   ].map(opt => ({
     ...opt,
     src: orientationImages[opt.id][lang] || orientationImages[opt.id].en
@@ -81,7 +81,8 @@ export default function OrientationSelection() {
               type="button"
               onClick={() => handleSelect(id)}
               className="cursor-pointer focus:outline-none flex justify-center"
-              aria-label={t(`common:${id}`, id)}
+              // Corrected namespaces path to match common.json's "orientation.left/right"
+              aria-label={t(`common:orientation.${id.toLowerCase()}`)}
             >
               <div
                 className={`rounded-xl overflow-hidden transition-all duration-150 max-w-[160px] ${
@@ -92,7 +93,8 @@ export default function OrientationSelection() {
               >
                 <img 
                   src={src} 
-                  alt={id} 
+                  // Corrected translation path mapping
+                  alt={t(`common:orientation.${id.toLowerCase()}`)} 
                   className="w-full h-auto block"
                 />
               </div>
@@ -100,13 +102,13 @@ export default function OrientationSelection() {
           ))}
         </div>
 
-        {/* Notice Section - Matching the uploaded design */}
+        {/* Notice Section */}
         <div className="w-full max-w-sm mx-auto mt-10">
           <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
             <div className="flex items-start gap-3 text-left">
               <img
                 src={ExclamationIcon}
-                alt="Notice"
+                alt={t("common:popup.notice_title")}
                 className="shrink-0 w-5 h-5 opacity-100"
               />
               <div className="flex-1">

@@ -18,7 +18,9 @@ const baseLang = (code) => (code || "en").split("-")[0];
 export default function LengthVac() {
   const [result, setResult] = useState(null);
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation("pages");
+  
+  // Loaded both namespaces to get access to common.json
+  const { t, i18n } = useTranslation(["pages", "common"]);
 
   // Pick the localized image
   const lang = baseLang(i18n.language);
@@ -60,7 +62,7 @@ export default function LengthVac() {
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
-            alt="Length Measurement Vac"
+            alt={t("common:pages.length_tt_vac")}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>
@@ -79,7 +81,7 @@ export default function LengthVac() {
             <div className="flex items-start gap-3 text-left">
               <img
                 src={ExclamationIcon}
-                alt="Notice"
+                alt={t("common:popup.notice_title")}
                 className="shrink-0 w-5 h-5 opacity-100"
               />
               <div className="flex-1">

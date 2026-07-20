@@ -11,11 +11,12 @@ import TTCircumferenceVac from "../../../../assets/circumferences/TT/vac.svg";
 export default function CircumferenceVac() {
   const [result, setResult] = useState(null);
   const navigate = useNavigate();
-  const { t } = useTranslation("pages");
+  
+  // Loaded both "pages" and "common" namespaces
+  const { t } = useTranslation(["pages", "common"]);
 
   const handleConfirm = (value) => {
     setResult(value);
-    // Consistent with your previous file's key "circumference"
     localStorage.setItem("circumference", value);
     
     setTimeout(() => {
@@ -43,7 +44,7 @@ export default function CircumferenceVac() {
         <div className="mt-8 flex justify-center">
           <img
             src={TTCircumferenceVac}
-            alt="Circumference TT Distal Seal"
+            alt={t("common:pages.circumference_tt_vac")}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>

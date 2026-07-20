@@ -1,3 +1,4 @@
+// src/pages/assistance/overlay/TF/SizeTF.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
@@ -38,7 +39,9 @@ export default function SizeTF() {
 
   /** ---------- Logic & Formatting ---------- */
   const currentLang = (i18n.language || "en").split("-")[0];
-  const productAmputation = `${product} TF`;
+  
+  // Combined Product + Amputation Line pulling from common translations
+  const productAmputation = t("common:products.tf");
 
   const isDistalSeal = suspensionId === "TF-distal-seal";
   const isCushion    = suspensionId === "TF-cushion";
@@ -94,7 +97,7 @@ export default function SizeTF() {
         <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-8">
           <img
             src={TFProductImg}
-            alt="TF Product"
+            alt={t("common:products.tf")}
             className="w-[180px] h-auto object-contain rounded-xl"
           />
 
@@ -114,7 +117,11 @@ export default function SizeTF() {
           <div className="w-full max-w-md mx-auto mt-2 mb-10">
             <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
               <div className="flex items-start gap-3 text-left">
-                <img src={ExclamationIcon} alt="Notice" className="shrink-0 w-5 h-5" />
+                <img 
+                  src={ExclamationIcon} 
+                  alt={t("common:popup.notice_title")} 
+                  className="shrink-0 w-5 h-5" 
+                />
                 <div className="flex-1">
                   <p className="text-md font-bold text-slate-900 leading-tight">
                     {t("TFSizing.note_cushion_title")}

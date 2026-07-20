@@ -12,7 +12,9 @@ import TTCircumferenceI from "../../../../assets/circumferences/TT/pinI.svg";
 export default function Circumference() {
   const [result, setResult] = useState(null);
   const navigate = useNavigate();
-  const { t } = useTranslation("pages");
+  
+  // Loaded both namespaces to get access to common.json
+  const { t } = useTranslation(["pages", "common"]);
 
   // Logic for units and image selection
   const isImperial = localStorage.getItem("units") === "imperial";
@@ -46,7 +48,7 @@ export default function Circumference() {
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
-            alt="Circumference"
+            alt={t("common:pages.circumference_tt")}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>

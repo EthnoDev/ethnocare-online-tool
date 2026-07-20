@@ -50,7 +50,7 @@ export default function CircumferenceVac() {
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
-            alt="TF Vacuum Circumference Measurement"
+            alt={t("common:pages.circumference_tf_vac")}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>

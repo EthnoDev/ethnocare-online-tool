@@ -1,3 +1,4 @@
+// src/pages/sizing/SizingAmputationSelection.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -10,8 +11,10 @@ import TF_FR from "../../assets/amputation/transfemoral_FR.png";
 
 export default function SizingAmputationSelection() {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation("pages");
   const [selected, setSelected] = useState(null);
+  
+  // Single hook setup calling both namespaces and exposing i18n
+  const { t, i18n } = useTranslation(["pages", "common"]);
 
   const tfImage = i18n.language === "fr" ? TF_FR : TF;
 
@@ -38,12 +41,13 @@ export default function SizingAmputationSelection() {
         </p>
 
         <div className="mt-8 space-y-6 flex flex-col items-center">
+          {/* Transtibial Option */}
           <button
             type="button"
             onClick={() => handleSelect("transtibial")}
             className="cursor-pointer focus:outline-none"
-            aria-label="Transtibial"
-            title="Transtibial"
+            aria-label={t("common:amputation.tt")}
+            title={t("common:amputation.tt")}
           >
             <div
               className={`rounded-xl ${
@@ -54,18 +58,19 @@ export default function SizingAmputationSelection() {
             >
               <img
                 src={TT}
-                alt="Transtibial"
+                alt={t("common:amputation.tt")}
                 className="w-60 h-auto object-contain rounded-xl block"
               />
             </div>
           </button>
 
+          {/* Transfemoral Option */}
           <button
             type="button"
             onClick={() => handleSelect("transfemoral")}
             className="cursor-pointer focus:outline-none"
-            aria-label="Transfemoral"
-            title="Transfemoral"
+            aria-label={t("common:amputation.tf")}
+            title={t("common:amputation.tf")}
           >
             <div
               className={`rounded-xl ${
@@ -76,7 +81,7 @@ export default function SizingAmputationSelection() {
             >
               <img
                 src={tfImage}
-                alt="Transfemoral"
+                alt={t("common:amputation.tf")}
                 className="w-60 h-auto object-contain rounded-xl block"
               />
             </div>
