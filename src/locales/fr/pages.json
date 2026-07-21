@@ -228,5 +228,9 @@
     "k2_description": "Capacité à franchir des bordures, des escaliers ou des surfaces inégales",
     "k3_description": "Ambulateur communautaire; cadence variée, franchit la plupart des obstacles",
     "k4_description": "Utilisateur à fort impact; adulte actif, athlète ou enfant"
+  },
+  "materialLinerSizing": {
+    "title": "Matériau",
+    "description": "Sélectionnez le matériau de votre manchon"
   }
 }

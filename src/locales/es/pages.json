@@ -228,5 +228,9 @@
     "k2_description": "Capacidad para atravesar bordillos, escaleras o superficies irregulares",
     "k3_description": "Ambulante comunitario; cadencia variada, atraviesa la mayoría de las barreras",
     "k4_description": "Usuario de alto impacto; adulto activo, atleta o niño"
+  },
+  "materialLinerSizing": {
+    "title": "Material",
+    "description": "Seleccione el material de su liner"
   }
 }

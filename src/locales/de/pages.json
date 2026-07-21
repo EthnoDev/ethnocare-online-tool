@@ -228,5 +228,9 @@
     "k2_description": "Fähigkeit, Bordsteine, Treppen oder unebene Flächen zu überwinden",
     "k3_description": "Gemeinschaftsspaziergänger; variiert das Tempo, überwindet die meisten Hindernisse",
     "k4_description": "Hochleistungsbenutzer; aktiver Erwachsener, Sportler oder Kind"
+  },
+  "materialLinerSizing": {
+    "title": "Material",
+    "description": "Wählen Sie das Material Ihres Liners aus"
   }
 }

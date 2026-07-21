@@ -232,5 +232,9 @@
     "k2_description": "Ability for traversing curbs, stairs, or uneven surfaces",
     "k3_description": "Community ambulator; varied cadence, traverses most barriers",
     "k4_description": "High-impact user; active adult, athlete, or child"
+  },
+  "materialLinerSizing": {
+    "title": "Material",
+    "description": "Select your liner material"
   }
 }
