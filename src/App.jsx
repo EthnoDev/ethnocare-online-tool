@@ -37,6 +37,7 @@ import SizingUnderlayCircumference2 from "./pages/sizing/underlay/Circumference2
 import SizingUnderlaySiliconeSelection from "./pages/sizing/underlay/SiliconeSelection";
 import SizeUnderlay from "./pages/sizing/underlay/Size";
 import SizingLinerActivityLevelSelection from "./pages/sizing/liner/ActivityLevelSelection";
+import SizingLinerMaterialSelection from "./pages/sizing/liner/MaterialSelection";
 import AssistanceWelcome from "./pages/assistance/Welcome";
 import AssistanceAmputationSelection from "./pages/assistance/AmputationSelection";
 import AssistanceProductSelection from "./pages/assistance/ProductSelection";
@@ -94,6 +95,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/underlay/silicone" element={<SizingUnderlaySiliconeSelection />} />
         <Route path="/sizing/underlay/size" element={<SizeUnderlay />} />
         <Route path="/sizing/liner/activity-level" element={<SizingLinerActivityLevelSelection />} />
+        <Route path="/sizing/liner/material" element={<SizingLinerMaterialSelection />} />
       </Routes>
     </AnimatePresence>
   );

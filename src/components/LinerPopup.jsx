@@ -57,7 +57,7 @@ export default function LinerPopup({ onClose, onConfirm }) {
             </p>
 
             {/* Action Buttons using SelectableOption */}
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center justify-center">
               <div className="flex-1">
                 <SelectableOption
                   compact

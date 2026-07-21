@@ -223,6 +223,10 @@
   },
   "activityLevelLinerSizing": {
     "title": "Aktivitätsniveau",
-    "description": "Wählen Sie Ihr Aktivitätsniveau aus"
+    "description": "Wählen Sie Ihr Aktivitätsniveau aus",
+    "k1_description": "Begrenzter Haushaltsspaziergänger; geht auf ebenen Flächen",
+    "k2_description": "Fähigkeit, Bordsteine, Treppen oder unebene Flächen zu überwinden",
+    "k3_description": "Gemeinschaftsspaziergänger; variiert das Tempo, überwindet die meisten Hindernisse",
+    "k4_description": "Hochleistungsbenutzer; aktiver Erwachsener, Sportler oder Kind"
   }
 }

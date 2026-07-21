@@ -227,6 +227,10 @@
   },
   "activityLevelLinerSizing": {
     "title": "Activity Level",
-    "description": "Select your activity level"
+    "description": "Select your activity level",
+    "k1_description": "Limited household ambulator; walks on level surfaces",
+    "k2_description": "Ability for traversing curbs, stairs, or uneven surfaces",
+    "k3_description": "Community ambulator; varied cadence, traverses most barriers",
+    "k4_description": "High-impact user; active adult, athlete, or child"
   }
 }

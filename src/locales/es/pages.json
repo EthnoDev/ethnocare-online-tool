@@ -223,6 +223,10 @@
   },
   "activityLevelLinerSizing": {
     "title": "Nivel de actividad",
-    "description": "Seleccione su nivel de actividad"
+    "description": "Seleccione su nivel de actividad",
+    "k1_description": "Ambulante doméstico limitado; camina en superficies planas",
+    "k2_description": "Capacidad para atravesar bordillos, escaleras o superficies irregulares",
+    "k3_description": "Ambulante comunitario; cadencia variada, atraviesa la mayoría de las barreras",
+    "k4_description": "Usuario de alto impacto; adulto activo, atleta o niño"
   }
 }

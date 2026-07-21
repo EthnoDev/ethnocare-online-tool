@@ -223,6 +223,10 @@
   },
   "activityLevelLinerSizing": {
     "title": "Niveau d'activité",
-    "description": "Sélectionnez votre niveau d'activité"
+    "description": "Sélectionnez votre niveau d'activité",
+    "k1_description": "Ambulateur domestique limité; marche sur des surfaces planes",
+    "k2_description": "Capacité à franchir des bordures, des escaliers ou des surfaces inégales",
+    "k3_description": "Ambulateur communautaire; cadence variée, franchit la plupart des obstacles",
+    "k4_description": "Utilisateur à fort impact; adulte actif, athlète ou enfant"
   }
 }
