@@ -221,8 +221,8 @@
     "seal": "Design",
     "silicone": "Silikon"
   },
-  "circumferenceLinerTTSizing": {
-    "title": "Umfang",
-    "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende entfernt"
+  "activityLevelLinerSizing": {
+    "title": "Aktivitätsniveau",
+    "description": "Wählen Sie Ihr Aktivitätsniveau aus"
   }
 }

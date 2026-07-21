@@ -50,8 +50,9 @@ export default function PageWrapper({
     totalSteps = underlaySeal === "open-seal" ? 5 : 4;
   } else if (product === "Overlay") {
     totalSteps = (amputation === "transfemoral" || amputation === "tf") ? 4 : 5;
+  } else if (product === "Liner") {
+    totalSteps = 6;
   } else {
-
   }
 
   // --- Language-dependent PDF suffix helpers ---

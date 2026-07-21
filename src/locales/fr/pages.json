@@ -221,8 +221,8 @@
     "seal": "Design",
     "silicone": "Silicone"
   },
-  "circumferenceLinerTTSizing": {
-    "title": "Circonférence",
-    "description": "Mesurez la circonférence (C) à {{distance}} de l'extrémité distale"
+  "activityLevelLinerSizing": {
+    "title": "Niveau d'activité",
+    "description": "Sélectionnez votre niveau d'activité"
   }
 }

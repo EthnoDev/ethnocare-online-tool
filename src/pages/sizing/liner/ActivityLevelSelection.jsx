@@ -12,18 +12,15 @@ export default function ActivityLevelSelection() {
       currentStep={1} 
       code={true}
     >
-      <div className="w-full max-w-md flex flex-col items-center font-sans">
+      <div className="w-full max-w-md">
         {/* 1. Title */}
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          {t("activityLevelSizing.title", "Select Activity Level")}
+          {t("activityLevelLinerSizing.title")}
         </h1>
 
         {/* 2. Description */}
         <p className="mt-3 text-center text-base text-slate-500">
-          {t(
-            "activityLevelSizing.description",
-            "Choose the activity level that best matches the patient's daily routine."
-          )}
+          {t("activityLevelLinerSizing.description")}
         </p>
 
         {/* Options / Form elements will go here */}
