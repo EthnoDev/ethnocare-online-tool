@@ -232,5 +232,9 @@
   "materialLinerSizing": {
     "title": "Matériau",
     "description": "Sélectionnez le matériau de votre manchon"
+  },
+  "circumferenceLinerSizing": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence (C) à {{distance}} de l'extrémité distale"
   }
 }

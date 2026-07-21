@@ -232,5 +232,9 @@
   "materialLinerSizing": {
     "title": "Material",
     "description": "Wählen Sie das Material Ihres Liners aus"
+  },
+  "circumferenceLinerSizing": {
+    "title": "Umfang",
+    "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende entfernt"
   }
 }

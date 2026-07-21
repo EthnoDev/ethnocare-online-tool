@@ -232,5 +232,9 @@
   "materialLinerSizing": {
     "title": "Material",
     "description": "Seleccione el material de su liner"
+  },
+  "circumferenceLinerSizing": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia (C) a {{distance}} del extremo distal"
   }
 }

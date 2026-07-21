@@ -236,5 +236,9 @@
   "materialLinerSizing": {
     "title": "Material",
     "description": "Select your liner material"
+  },
+  "circumferenceLinerSizing": {
+    "title": "Circumference",
+    "description": "Measure the circumference (C) at {{distance}} from the distal end"
   }
 }
