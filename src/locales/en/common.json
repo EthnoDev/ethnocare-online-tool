@@ -133,5 +133,11 @@
     "description": "It seems that we don't have your size available at the moment, however you can choose the closed underlay by clicking on the button below",
     "cta": "Closed Underlay",
     "contact_line": "If you want to help us develop the underlay closed, you can send us your limb measurements at:"
+  },
+  "linerPopup": {
+    "title": "Notice",
+    "description": "The Ethnocare Liner is currently only available for purchase in Canada.",
+    "option1": "Go back",
+    "option2": "Pursue"
   }
 }

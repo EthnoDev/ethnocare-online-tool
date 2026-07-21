@@ -132,5 +132,11 @@
     "description": "Il semble que nous n’ayons pas votre taille pour le moment, cependant vous pouvez choisir l'underlay fermé en cliquant sur le bouton ci-dessous",
     "cta": "Underlay Fermé",
     "contact_line": "Si vous souhaitez nous aider à développer l’underlay fermé, vous pouvez nous envoyer les mesures de votre membre à :"
+  },
+  "linerPopup": {
+    "title": "Avis",
+    "description": "Le Liner Ethnocare est seulement disponible à l'achat au Canada.",
+    "option1": "Retour",
+    "option2": "Continuer"
   }
 }

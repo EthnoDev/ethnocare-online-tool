@@ -1,9 +1,11 @@
 // src/pages/sizing/ProductSelection.jsx
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
+import LinerPopup from "../../components/LinerPopup";
 
-// product images
+// Product images
 import OverlayImg from "../../assets/products/overlay.png";
 import UnderlayImg from "../../assets/products/underlay.png";
 import LinerImg from "../../assets/products/liner.png";
@@ -12,6 +14,8 @@ export default function ProductSelection() {
   const navigate = useNavigate();
   const { t } = useTranslation("pages");
   const amputation = localStorage.getItem("amputation");
+
+  const [showLinerPopup, setShowLinerPopup] = useState(false);
 
   const handleSelect = (product) => {
     localStorage.setItem("product", product);
@@ -34,17 +38,15 @@ export default function ProductSelection() {
       return;
     }
 
-    // 3. Liner Logic (Now available for both)
+    // 3. Liner Logic - Opens Popup
     if (product === "Liner") {
-      if (amputation === "transtibial") {
-        setTimeout(() => navigate("/sizing/liner/tt/circumference"), 200);
-        return;
-      }
-      //if (amputation === "transfemoral") {
-        //setTimeout(() => navigate("/sizing/TFsuspension"), 200);
-        //return;
-      //}
+      setShowLinerPopup(true);
     }
+  };
+
+  const handleConfirmLiner = () => {
+    setShowLinerPopup(false);
+    setTimeout(() => navigate("/sizing/liner/activity-level"), 200);
   };
 
   return (
@@ -60,8 +62,8 @@ export default function ProductSelection() {
 
         <div className="mt-8 space-y-6 flex flex-col items-center">
           {/* Overlay - Always Shown */}
-          <button 
-            type="button" 
+          <button
+            type="button"
             onClick={() => handleSelect("Overlay")}
             className="cursor-pointer focus:outline-none"
           >
@@ -74,8 +76,8 @@ export default function ProductSelection() {
 
           {/* Underlay - Transtibial Only */}
           {amputation === "transtibial" && (
-            <button 
-              type="button" 
+            <button
+              type="button"
               onClick={() => handleSelect("Underlay")}
               className="cursor-pointer focus:outline-none"
             >
@@ -87,9 +89,9 @@ export default function ProductSelection() {
             </button>
           )}
 
-          {/* Liner - Always Shown (Now available for Transfemoral too) */}
-          <button 
-            type="button" 
+          {/* Liner - Always Shown */}
+          <button
+            type="button"
             onClick={() => handleSelect("Liner")}
             className="cursor-pointer focus:outline-none"
           >
@@ -101,6 +103,14 @@ export default function ProductSelection() {
           </button>
         </div>
       </div>
+
+      {/* Liner Availability Notice Popup */}
+      {showLinerPopup && (
+        <LinerPopup
+          onClose={() => setShowLinerPopup(false)}
+          onConfirm={handleConfirmLiner}
+        />
+      )}
     </PageWrapper>
   );
 }
