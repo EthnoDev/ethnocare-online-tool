@@ -26,7 +26,9 @@
     "length_tf_vac": "Longueur TF joint distal",
     "length_udtt": "Longueur Underlay TT",
     "circumference_udtt": "Circonférence Underlay TT",
-    "circumference2_udtt": "Circonférence supérieure Underlay TT"
+    "circumference2_udtt": "Circonférence supérieure Underlay TT",
+    "circumference_linertt": "Circonférence Liner TT",
+    "circumference_linertf": "Circonférence Liner TF"
   },
   "amputation": {
     "tt": "Transtibial",

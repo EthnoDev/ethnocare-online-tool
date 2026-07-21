@@ -26,7 +26,9 @@
         "length_tf_vac": "TF Länge distal Seal",
         "length_udtt": "Underlay TT Länge",
         "circumference_udtt": "Underlay TT Umfang",
-        "circumference2_udtt": "Oberer Underlay TT Umfang"
+        "circumference2_udtt": "Oberer Underlay TT Umfang",
+        "circumference_linertt": "TT Liner Umfang",
+        "circumference_linertf": "TF Liner Umfang"
     },
     "amputation": {
         "tt": "Transtibial",

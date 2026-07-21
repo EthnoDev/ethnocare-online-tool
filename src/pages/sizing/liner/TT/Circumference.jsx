@@ -1,13 +1,26 @@
 // src/pages/sizing/liner/tt/Circumference.jsx
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
+import MeasurementInput from "../../../../components/MeasurementInput";
+
+// SVG Imports
+import ttImperialSvg from "../../../../assets/circumferences/Liner/TT/Imperial.svg";
+import ttMetricSvg from "../../../../assets/circumferences/Liner/TT/Metric.svg";
 
 export default function Circumference() {
   const { t } = useTranslation(["pages", "common"]);
 
-  // Unit and dynamic distance calculation
+  // Unit and dynamic distance / asset selection
   const isImperial = localStorage.getItem("units") === "imperial";
   const distance = isImperial ? "1.5 in" : "4 cm";
+  const selectedImage = isImperial ? ttImperialSvg : ttMetricSvg;
+
+  const handleConfirm = (res) => {
+    setResult(res);
+    localStorage.setItem("circumference", res);
+    // Navigate to next step
+    //setTimeout(() => navigate("/sizing/TTlength"), 200);
+  };
 
   return (
     <PageWrapper
@@ -27,7 +40,22 @@ export default function Circumference() {
           {t("circumferenceLinerSizing.description", { distance })}
         </p>
 
-        {/* Options / Form elements will go here */}
+        {/* 3. Circumference Image */}
+        <div className="mt-8 flex justify-center">
+          <img
+            src={selectedImage}
+            alt={t("common:pages.circumference_linertt")}
+            className="w-74 h-auto object-contain rounded-xl"
+          />
+        </div>
+
+        <div className="w-full">
+            <MeasurementInput
+                product="ttstandard"
+                measurement="circumference"
+                onConfirm={handleConfirm}
+            />
+        </div>
       </div>
     </PageWrapper>
   );
