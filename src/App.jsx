@@ -38,6 +38,8 @@ import SizingUnderlaySiliconeSelection from "./pages/sizing/underlay/SiliconeSel
 import SizeUnderlay from "./pages/sizing/underlay/Size";
 import SizingLinerActivityLevelSelection from "./pages/sizing/liner/ActivityLevelSelection";
 import SizingLinerMaterialSelection from "./pages/sizing/liner/MaterialSelection";
+import SizingLinerTTCircumference from "./pages/sizing/liner/TT/Circumference";
+import SizingLinerTFCircumference from "./pages/sizing/liner/TF/Circumference";
 import AssistanceWelcome from "./pages/assistance/Welcome";
 import AssistanceAmputationSelection from "./pages/assistance/AmputationSelection";
 import AssistanceProductSelection from "./pages/assistance/ProductSelection";
@@ -96,6 +98,8 @@ function AnimatedRoutes() {
         <Route path="/sizing/underlay/size" element={<SizeUnderlay />} />
         <Route path="/sizing/liner/activity-level" element={<SizingLinerActivityLevelSelection />} />
         <Route path="/sizing/liner/material" element={<SizingLinerMaterialSelection />} />
+        <Route path="/sizing/liner/tt/circumference" element={<SizingLinerTTCircumference />} />
+        <Route path="/sizing/liner/tf/circumference" element={<SizingLinerTFCircumference />} />
       </Routes>
     </AnimatePresence>
   );

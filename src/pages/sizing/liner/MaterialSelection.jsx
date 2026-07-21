@@ -88,9 +88,12 @@ export default function MaterialSelection() {
     setSelectedMaterial(materialKey);
     localStorage.setItem("liner_material", materialKey);
 
+    const targetPath = isTranstibial
+      ? "/sizing/liner/tt/circumference"
+      : "/sizing/liner/tf/circumference";
+
     setTimeout(() => {
-      // Adjust next path as needed for your flow
-      navigate("/sizing/liner/tt/circumference");
+      navigate(targetPath);
     }, 200);
   };
 
