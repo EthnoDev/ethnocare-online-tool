@@ -23,7 +23,10 @@
         "circumference_tf": "TF Umfang",
         "length_tf": "TF Länge",
         "circumference_tf_vac": "TF Umfang distal Seal",
-        "length_tf_vac": "TF Länge distal Seal"
+        "length_tf_vac": "TF Länge distal Seal",
+        "length_udtt": "Underlay TT Länge",
+        "circumference_udtt": "Underlay TT Umfang",
+        "circumference2_udtt": "Oberer Underlay TT Umfang"
     },
     "amputation": {
         "tt": "Transtibial",
@@ -64,7 +67,9 @@
     },
     "seal": {
         "open-seal": "Offen",
-        "closed-seal": "Geschlossen"
+        "closed-seal": "Geschlossen",
+        "open-title": "Offene Abdichtung",
+        "closed-title": "Geschlossene Abdichtung"
     },
     "silicone": {
         "yes-silicone": "Ja",
@@ -92,7 +97,11 @@
         "label_length": "Länge",
         "label_circumference": "Umfang",
         "contact_line": "Wenn Ihre Maße außerhalb unseres Größenbereichs liegen, kontaktieren Sie uns bitte unter:",
-        "cta_ok": "OK"
+        "cta_ok": "OK",
+        "underlay_open_title": "Underlay TT - Offen",
+        "underlay_closed_title": "Underlay TT - Geschlossen",
+        "label_circumferenceDistal": "Umfang\n10 cm / 3.9 Inch vom distalen Ende",
+        "label_circumferenceUpper": "Umfang\nOberes Liner"
     },
     "contactForm": {
         "question": "Benötigen Sie weitere Hilfe ?",
@@ -117,5 +126,11 @@
 
         "buttonSend": "Senden",
         "submitError": "Wir konnten Ihre Nachricht nicht senden. Bitte versuchen Sie es erneut."
+    },
+    "redirectionPopup": {
+        "title": "Hinweis",
+        "description": "Es scheint, dass Ihre Größe derzeit nicht verfügbar ist, aber Sie können die geschlossene Underlay auswählen, indem Sie auf die Schaltfläche unten klicken",
+        "cta": "Underlay Geschlossen",
+        "contact_line": "Wenn Sie uns helfen möchten, das geschlossene Underlay zu entwickeln, können Sie uns Ihre Gliedmaßenmaße senden an:"
     }
 }

@@ -11,31 +11,41 @@ export default function Circumference() {
   const navigate = useNavigate();
   const { t } = useTranslation(["pages", "common"]);
 
+  // Retrieve seal selection from localStorage
+  const seal = localStorage.getItem("underlay_seal");
+
+  // Dynamic back path and step based on seal type
+  const backTo = seal === "closed-seal" ? "/sizing/underlay/length" : "/sizing/underlay/seal";
+  const currentStep = seal === "closed-seal" ? 3 : 2;
+
   // Logic for units and image selection
   const isImperial = localStorage.getItem("units") === "imperial";
   const selectedImage = isImperial ? ImperialImg : MetricImg;
   
-  // Updated distance variables: 3.9 in for imperial, 10 cm for metric
+  // Dynamic distance text: 3.9 in for imperial, 10 cm for metric
   const distance = isImperial ? "3.9 in" : "10 cm";
 
   const handleConfirm = (value) => {
     localStorage.setItem("underlay_circumference", value);
     
-    // 200ms delay before navigation
+    // Dynamic navigation based on seal type
     setTimeout(() => {
-      navigate("/sizing/underlay/silicone"); 
+      navigate(
+        seal === "closed-seal"
+          ? "/sizing/underlay/size"
+          : "/sizing/underlay/circumference-2"
+      ); 
     }, 200);
   };
 
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/sizing/underlay/length" 
-      currentStep={3} 
-      totalSteps={5} 
+      backTo={backTo} 
+      currentStep={currentStep} 
       code={true}
     >
-      <div className="w-100 max-w-md flex flex-col items-center">
+      <div className="w-full max-w-md">
         {/* 1. Title */}
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("circumferenceUnderlaySizing.title")}
@@ -50,7 +60,7 @@ export default function Circumference() {
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
-            alt={`${isImperial ? "imperial" : "metric"} circumference diagram`}
+            alt={t("pages.circumference_udtt", { ns: "common" })}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>

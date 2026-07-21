@@ -204,6 +204,10 @@
     "title": "Circumference",
     "description": "Measure the circumference (C) at {{distance}} from the distal end"
   },
+  "circumference2UnderlaySizing": {
+    "title": "Circumference",
+    "description": "Measure the upper liner circumference (C2) on the skin."
+  },
   "siliconeUnderlaySizing": {
     "title": "Silicone",
     "description": "Optional for added grip",
@@ -216,6 +220,7 @@
     "description": "Based on your answers:",
     "amp": "Amputation",
     "circumference": "Circumference",
+    "circumference2": "Upper Circumference",
     "length": "Liner length",
     "seal": "Design",
     "silicone": "Silicone"

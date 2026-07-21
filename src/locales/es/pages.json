@@ -200,6 +200,10 @@
     "title": "Circunferencia",
     "description": "Mida la circunferencia (C) a {{distance}} del extremo distal"
   },
+  "circumference2UnderlaySizing": {
+    "title": "Circunferencia",
+    "description": "Mida la circunferencia superior del liner (C2) sobre la piel."
+  },
   "siliconeUnderlaySizing": {
     "title": "Silicona",
     "description": "Opcional para mayor agarre",
@@ -212,6 +216,7 @@
     "description": "Basado en sus respuestas:",
     "amp": "Amputación",
     "circumference": "Circunferencia",
+    "circumference2": "Circunferencia superior",
     "length": "Longitud del liner",
     "seal": "Diseño",
     "silicone": "Silicona"

@@ -1,3 +1,4 @@
+// src/pages/assistance/underlay/SealSelection.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -36,7 +37,11 @@ export default function SealSelection() {
     localStorage.setItem("underlay_seal", optionId);
 
     setTimeout(() => {
-      navigate("/sizing/underlay/length");
+      navigate(
+        optionId === "closed-seal"
+          ? "/sizing/underlay/length"
+          : "/sizing/underlay/circumference"
+      );
     }, 200);
   };
 
@@ -44,11 +49,9 @@ export default function SealSelection() {
     <PageWrapper 
       showBack={true} 
       backTo="/sizing/product" 
-      currentStep={1} 
-      totalSteps={5} 
-      code={true}
+      currentStep={null}
     >
-      <div className="w-100 max-w-md">
+      <div className="w-full max-w-md">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("sealUnderlaySizing.title")}
         </h1>
@@ -73,12 +76,11 @@ export default function SealSelection() {
             >
               <img
                 src={SEAL_IMAGES.open[lang] || SEAL_IMAGES.open.en}
-                alt="Open Seal"
+                alt={t("common:seal.open-title")}
                 className="h-auto w-full block rounded-xl max-w-[320px] object-cover" 
               />
             </div>
             <div className="mt-2 text-center">
-              {/* Added italic class below */}
               <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
                 {t("sealUnderlaySizing.open_description")}
               </p>
@@ -100,12 +102,11 @@ export default function SealSelection() {
             >
               <img
                 src={SEAL_IMAGES.closed[lang] || SEAL_IMAGES.closed.en}
-                alt="Closed Seal"
+                alt={t("common:seal.closed-title")}
                 className="h-auto w-full block rounded-xl max-w-[320px] object-cover" 
               />
             </div>
             <div className="mt-2 text-center">
-              {/* Added italic class below */}
               <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
                 {t("sealUnderlaySizing.closed_description")}
               </p>

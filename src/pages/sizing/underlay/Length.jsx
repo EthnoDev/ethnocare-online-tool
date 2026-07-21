@@ -1,3 +1,4 @@
+// src/pages/assistance/underlay/Length.jsx
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
@@ -27,20 +28,30 @@ export default function Length() {
   // Determine current language key
   const lang = pickLang(baseLang(i18n.language));
 
+  // Retrieve selected seal type from localStorage
+  const seal = localStorage.getItem("underlay_seal");
+
+  // Dynamic back path based on seal type
+  const backTo = seal === "closed-seal" ? "/sizing/underlay/seal" : "/sizing/underlay/circumference-2";
+
   const handleConfirm = (value) => {
     // Store the value returned from the component
     localStorage.setItem("underlay_length", value);
+
     setTimeout(() => {
-      navigate("/sizing/underlay/circumference");
+      navigate(
+        seal === "closed-seal"
+          ? "/sizing/underlay/circumference"
+          : "/sizing/underlay/size"
+      );
     }, 200);
   };
 
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/sizing/underlay/seal" 
-      currentStep={2} 
-      totalSteps={5} 
+      backTo={backTo} 
+      currentStep={seal === "closed-seal" ? 2 : 4} 
       code={true}
     >
       <div className="w-100 max-w-md flex flex-col items-center">
@@ -58,7 +69,7 @@ export default function Length() {
         <div className="mt-8 flex justify-center">
           <img
             src={LENGTH_IMAGES[lang] || LENGTH_IMAGES.en}
-            alt="Length Measurement Diagram"
+            alt={t("common:pages.length_udtt")}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>

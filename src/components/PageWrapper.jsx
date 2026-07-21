@@ -25,20 +25,36 @@ export default function PageWrapper({
   children,
   showBack = false,
   backTo = "/",
-  code = false,
   currentStep = null,
-  totalSteps = null,
+  code = false,
 }) {
   const navigate = useNavigate();
   const location = useLocation();
   const { t, i18n } = useTranslation("common");
 
   const [chartsOpen, setChartsOpen] = useState(false);
+  const openCharts = () => setChartsOpen(true);
+  const closeCharts = () => setChartsOpen(false);
 
+  // Route-based visibility checks
   const showContactCard = location.pathname.startsWith("/assistance");
   const showSizingCharts = location.pathname.startsWith("/sizing");
 
-  // PDF suffix helpers
+  // Dynamic totalSteps calculation based on stored selection
+  const product = localStorage.getItem("product") || "";
+  const underlaySeal = localStorage.getItem("underlay_seal") || "";
+  const amputation = (localStorage.getItem("amputation") || "").toLowerCase();
+
+  let totalSteps;
+  if (product === "Underlay") {
+    totalSteps = underlaySeal === "open-seal" ? 5 : 4;
+  } else if (product === "Overlay") {
+    totalSteps = (amputation === "transfemoral" || amputation === "tf") ? 4 : 5;
+  } else {
+
+  }
+
+  // --- Language-dependent PDF suffix helpers ---
   const getOverlayPdfSuffix = () => {
     const lang = i18n.language || "en";
     if (lang.startsWith("fr")) return "FR";
@@ -56,7 +72,6 @@ export default function PageWrapper({
   const overlayPdfSuffix = getOverlayPdfSuffix();
   const underlayPdfSuffix = getUnderlayPdfSuffix();
 
-  // Updated to point to the "Sizing Charts" folder inside the public directory
   const ttPdfPath = `/Sizing%20Charts/OVTT_SIZING-CHART_${overlayPdfSuffix}.pdf`;
   const tfPdfPath = `/Sizing%20Charts/OVTF_SIZING-CHART_${overlayPdfSuffix}.pdf`;
   const underlayTtPdfPath = `/Sizing%20Charts/UDTT_SIZING-CHART_${underlayPdfSuffix}.pdf`;
@@ -68,15 +83,16 @@ export default function PageWrapper({
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
-      className="min-h-screen bg-gray-50 px-6 pt-4 pb-4 flex flex-col items-center"
+      className="min-h-screen bg-gray-50 px-6 pt-4 pb-6 flex flex-col items-center"
     >
       {code && (
-        <div className="-mx-6 w-screen bg-black text-white text-center font-sans font-semibold py-2 mb-2">
+        <div className="-mx-6 w-screen bg-black text-white text-center font-sans font-semibold py-2">
           {t("cta.header")}
         </div>
       )}
 
-      <div className="w-full flex flex-col gap-3 mb-4 sm:grid sm:grid-cols-3 sm:items-center sm:gap-0">
+      {/* Top: Back + Progress */}
+      <div className="w-full flex flex-col mt-2 gap-3 mb-4 sm:grid sm:grid-cols-3 sm:items-center sm:gap-0">
         <div className="flex justify-start">
           {showBack && (
             <button
@@ -91,14 +107,15 @@ export default function PageWrapper({
         </div>
 
         <div className="flex justify-center">
-          {currentStep !== null && totalSteps !== null && (
+          {currentStep !== null && (
             <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
           )}
         </div>
 
-        <div />
+        <div /> {/* right spacer */}
       </div>
 
+      {/* Main content */}
       <div className="flex-grow w-full flex flex-col items-center">
         {children}
       </div>
@@ -124,6 +141,7 @@ export default function PageWrapper({
           </div>
         )}
 
+        {/* Logo + Actions Row */}
         <div className="w-full mt-4 flex items-center justify-between">
           <img
             src={EthnocareLogo}
@@ -131,12 +149,12 @@ export default function PageWrapper({
             className="h-4 w-auto object-contain"
           />
           <div className="flex items-center gap-3">
-            {/* Sizing charts button only on /assistance/size */}
+            {/* Sizing charts button only on /sizing routes */}
             {showSizingCharts && (
               <SelectableOption
                 compact
                 selected={false}
-                onClick={() => setChartsOpen(true)}
+                onClick={openCharts}
                 label={
                   <span className="flex items-center gap-2 justify-center">
                     <img
@@ -157,7 +175,7 @@ export default function PageWrapper({
 
       {chartsOpen && (
         <SizingChartsPopup
-          onClose={() => setChartsOpen(false)}
+          onClose={closeCharts}
           ttPdfPath={ttPdfPath}
           tfPdfPath={tfPdfPath}
           underlayTtPdfPath={underlayTtPdfPath}

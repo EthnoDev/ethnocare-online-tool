@@ -23,7 +23,10 @@
     "circumference_tf": "Circunferencia TF",
     "length_tf": "Longitud TF",
     "circumference_tf_vac": "Circunferencia TF sello distal",
-    "length_tf_vac": "Longitud TF sello distal"
+    "length_tf_vac": "Longitud TF sello distal",
+    "length_udtt": "Longitud Underlay TT",
+    "circumference_udtt": "Circunferencia Underlay TT",
+    "circumference2_udtt": "Circunferencia superior Underlay TT"
   },
   "amputation": {
     "tt": "Transtibial",
@@ -64,7 +67,9 @@
   },
   "seal": {
     "open-seal": "Abierto",
-    "closed-seal": "Cerrado"
+    "closed-seal": "Cerrado",
+    "open-title": "Sello Abierto",
+    "closed-title": "Sello Cerrado"
   },
   "silicone": {
     "yes-silicone": "Sí",
@@ -92,7 +97,11 @@
     "label_length": "Longitud",
     "label_circumference": "Circunferencia",
     "contact_line": "Si sus medidas están fuera de nuestro rango de tallas, contáctenos en:",
-    "cta_ok": "OK"
+    "cta_ok": "OK",
+    "underlay_open_title": "Underlay TT - Abierto",
+    "underlay_closed_title": "Underlay TT - Cerrado",
+    "label_circumferenceDistal": "Circunferencia\n10 cm / 3.9 Inch del extremo distal",
+    "label_circumferenceUpper": "Circunferencia\nParte superior del liner"
   },
   "contactForm": {
     "question": "¿Necesitas asistencia adicional ?",
@@ -116,5 +125,11 @@
 
     "buttonSend": "Enviar",
     "submitError": "No pudimos enviar tu mensaje. Por favor, inténtalo de nuevo."
+  },
+  "redirectionPopup": {
+    "title": "Aviso",
+    "description": "Parece que no tenemos disponible su talla en este momento, sin embargo, puede elegir la underlay cerrada haciendo clic en el botón a continuación",
+    "cta": "Underlay Cerrado",
+    "contact_line": "Si desea ayudarnos a desarrollar el underlay cerrado, puede enviarnos las medidas de su miembro a:"
   }
 }

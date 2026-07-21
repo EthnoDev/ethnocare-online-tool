@@ -23,7 +23,10 @@
     "circumference_tf": "TF Circumference",
     "length_tf": "TF Length",
     "circumference_tf_vac": "Distal Seal TF Circumference",
-    "length_tf_vac": "Distal Seal TF Length"
+    "length_tf_vac": "Distal Seal TF Length",
+    "length_udtt": "Underlay TT Length",
+    "circumference_udtt": "Underlay TT Circumference",
+    "circumference2_udtt": "Upper Underlay TT Circumference"
   },
   "amputation": {
     "tt": "Transtibial",
@@ -64,7 +67,9 @@
   },
   "seal": {
     "open-seal": "Open",
-    "closed-seal": "Closed"
+    "closed-seal": "Closed",
+    "open-title": "Open Seal",
+    "closed-title": "Closed Seal"
   },
   "silicone": {
     "yes-silicone": "Yes",
@@ -93,7 +98,11 @@
     "label_length": "Length",
     "label_circumference": "Circumference",
     "contact_line": "If your measurements fall outside our size range, please contact us at:",
-    "cta_ok": "OK"
+    "cta_ok": "OK",
+    "underlay_open_title": "Underlay TT - Open",
+    "underlay_closed_title": "Underlay TT - Closed",
+    "label_circumferenceDistal": "Circumference\n10 cm / 3.9 Inch distal end",
+    "label_circumferenceUpper": "Circumference\nUpper liner"
   },
   "contactForm": {
     "question": "Do you need additional assistance ?",
@@ -118,5 +127,11 @@
 
     "buttonSend": "Send",
     "submitError": "We couldn't send your message. Please try again."
+  },
+  "redirectionPopup": {
+    "title": "Notice",
+    "description": "It seems that we don't have your size available at the moment, however you can choose the closed underlay by clicking on the button below",
+    "cta": "Closed Underlay",
+    "contact_line": "If you want to help us develop the underlay closed, you can send us your limb measurements at:"
   }
 }

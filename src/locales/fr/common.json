@@ -23,7 +23,10 @@
     "circumference_tf": "Circonférence TF",
     "length_tf": "Longueur TF",
     "circumference_tf_vac": "Circonférence TF joint distal",
-    "length_tf_vac": "Longueur TF joint distal"
+    "length_tf_vac": "Longueur TF joint distal",
+    "length_udtt": "Longueur Underlay TT",
+    "circumference_udtt": "Circonférence Underlay TT",
+    "circumference2_udtt": "Circonférence supérieure Underlay TT"
   },
   "amputation": {
     "tt": "Transtibial",
@@ -64,7 +67,9 @@
   },
   "seal": {
     "open-seal": "Ouvert",
-    "closed-seal": "Fermé"
+    "closed-seal": "Fermé",
+    "open-title": "Joint Ouvert",
+    "closed-title": "Joint Fermé"
   },
   "silicone": {
     "yes-silicone": "Oui",
@@ -92,7 +97,11 @@
     "label_length": "Longueur",
     "label_circumference": "Circonférence",
     "contact_line": "Si vos mesures se trouvent en dehors de notre gamme de tailles, veuillez nous contacter à :",
-    "cta_ok": "OK"
+    "cta_ok": "OK",
+    "underlay_open_title": "Underlay TT - Ouvert",
+    "underlay_closed_title": "Underlay TT - Fermé",
+    "label_circumferenceDistal": "Circonférence\n10 cm / 3.9 Inch de l'extrémité distale",
+    "label_circumferenceUpper": "Circonférence\nManchon supérieur"
   },
   "contactForm": {
     "question": "Avez-vous besoin d'une assistance supplémentaire ?",
@@ -117,5 +126,11 @@
 
     "buttonSend": "Envoyer",
     "submitError": "Nous n'avons pas pu envoyer votre message. Veuillez réessayer."
+  },
+  "redirectionPopup": {
+    "title": "Avis",
+    "description": "Il semble que nous n’ayons pas votre taille pour le moment, cependant vous pouvez choisir l'underlay fermé en cliquant sur le bouton ci-dessous",
+    "cta": "Underlay Fermé",
+    "contact_line": "Si vous souhaitez nous aider à développer l’underlay fermé, vous pouvez nous envoyer les mesures de votre membre à :"
   }
 }

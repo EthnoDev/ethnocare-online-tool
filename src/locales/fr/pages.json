@@ -200,6 +200,10 @@
     "title": "Circonférence",
     "description": "Mesurez la circonférence (C) à {{distance}} de l'extrémité distale"
   },
+  "circumference2UnderlaySizing": {
+    "title": "Circonférence",
+    "description": "Mesurez la circonférence supérieure du manchon (C2) sur la peau."
+  },
   "siliconeUnderlaySizing": {
     "title": "Silicone",
     "description": "Optionnel pour une meilleure adhérence",
@@ -212,6 +216,7 @@
     "description": "En fonction de vos réponses:",
     "amp": "Amputation",
     "circumference": "Circonférence",
+    "circumference2": "Circonférence supérieure",
     "length": "Longueur du manchon",
     "seal": "Design",
     "silicone": "Silicone"

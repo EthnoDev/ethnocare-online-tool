@@ -200,6 +200,10 @@
     "title": "Umfang",
     "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende entfernt"
   },
+  "circumference2UnderlaySizing": {
+    "title": "Umfang",
+    "description": "Messen Sie den oberen Umfang des Liners (C2) auf der Haut."
+  },
   "siliconeUnderlaySizing": {
     "title": "Silikon-Option",
     "description": "Optional für besseren Halt",
@@ -212,6 +216,7 @@
     "description": "Basierend auf Ihren Antworten:",
     "amp": "Amputation",
     "circumference": "Umfang",
+    "circumference2": "Oberer Umfang",
     "length": "Linerlänge",
     "seal": "Design",
     "silicone": "Silikon"

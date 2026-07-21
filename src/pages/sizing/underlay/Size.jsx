@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 
 // Assets
-import UTTProductImg from "../../../assets/products/utt.png";
+import ClosedUnderlayImg from "../../../assets/products/closedUnderlay.svg";
+import OpenUnderlayImg from "../../../assets/products/openUnderlay.svg";
 
 export default function SizeUnderlay() {
   const navigate = useNavigate();
@@ -12,17 +13,16 @@ export default function SizeUnderlay() {
   const { t } = useTranslation(["pages", "common"]);
 
   /** ---------- Data Retrieval ---------- */
-  const product = "Underlay";
   const unit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
   
-  // Get and capitalize only the first letter
+  // Amputation label formatting
   const rawAmputation = localStorage.getItem("amputation") || "tt"; 
   const amputation = rawAmputation.charAt(0).toUpperCase() + rawAmputation.slice(1).toLowerCase();
 
   const sealId = localStorage.getItem("underlay_seal") || "—"; 
-  const siliconeId = localStorage.getItem("underlay_silicone") || "—"; 
   
   const circumferenceRaw = localStorage.getItem("raw_circumference") || "—"; 
+  const circumference2Raw = localStorage.getItem("raw_circumference2") || "—";
   const circumferenceMapped = localStorage.getItem("underlay_circumference") || "—";
   
   const lengthRaw = localStorage.getItem("raw_length") || "—";
@@ -30,19 +30,22 @@ export default function SizeUnderlay() {
 
   /** ---------- Logic & Formatting ---------- */
   
-  // Using the common namespace pattern from your example
   const sealLabel = sealId !== "—" 
     ? t(`seal.${sealId.toLowerCase()}`, { ns: "common" }) 
     : "—";
 
-  const siliconeLabel = siliconeId !== "—" 
-    ? t(`silicone.${siliconeId.toLowerCase()}`, { ns: "common" }) 
-    : "—";
-
-  // Size Code Logic: UDTT-[Circumference]-[Length]
+  // Size Code Logic: UDTT-[Circumference]-[Length] or UDTT-[Circumference]-[Length]-C
   const sizeCode = (circumferenceMapped !== "—" && lengthMapped !== "—")
-    ? `UDTT-${circumferenceMapped}-${lengthMapped}`
+    ? `UDTT-${circumferenceMapped}-${lengthMapped}${sealId === "closed-seal" ? "-C" : ""}`
     : "UDTT-XX-XX";
+
+  // Dynamic back navigation based on seal type
+  const backTo = sealId === "closed-seal" 
+    ? "/sizing/underlay/circumference" 
+    : "/sizing/underlay/length";
+
+  // Dynamic step count based on seal type (4 for closed-seal, 5 for open-seal)
+  const currentStep = sealId === "closed-seal" ? 4 : 5;
 
   const handleRestart = () => {
     setIsRestarting(true);
@@ -52,9 +55,8 @@ export default function SizeUnderlay() {
   return (
     <PageWrapper 
       showBack 
-      backTo="/sizing/underlay/silicone" 
-      currentStep={5} 
-      totalSteps={5} 
+      backTo={backTo} 
+      currentStep={currentStep} 
       code={true}
     >
       <div className="w-full max-w-2xl text-center">
@@ -71,7 +73,7 @@ export default function SizeUnderlay() {
         {/* 3. Product Summary Card */}
         <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
           <img
-            src={UTTProductImg}
+            src={sealId === "closed-seal" ? ClosedUnderlayImg : OpenUnderlayImg}
             alt="Underlay TT Product"
             className="w-[180px] h-auto object-contain rounded-xl"
           />
@@ -81,18 +83,20 @@ export default function SizeUnderlay() {
               <p className="text-slate-900"><strong>{t("UnderlaySizing.description")}</strong></p>
               
               <p>{t("UnderlaySizing.amp")}: {amputation}</p>
-              
+              <p>{t("UnderlaySizing.seal")}: {sealLabel}</p>
               <p>
                 {t("UnderlaySizing.circumference")}: {circumferenceRaw} {unit}
               </p>
               
+              {sealId === "open-seal" && (
+                <p>
+                  {t("UnderlaySizing.circumference2")}: {circumference2Raw} {unit}
+                </p>
+              )}
+
               <p>
                 {t("UnderlaySizing.length")}: {lengthRaw} {unit}
               </p>
-
-              {/* Localized Seal and Silicone labels */}
-              <p>{t("UnderlaySizing.seal")}: {sealLabel}</p>
-              <p>{t("UnderlaySizing.silicone")}: {siliconeLabel}</p>
             </div>
           </div>
         </div>

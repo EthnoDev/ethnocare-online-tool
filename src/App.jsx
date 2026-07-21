@@ -33,6 +33,7 @@ import SizeTF from "./pages/sizing/overlay/TF/Size";
 import SizingUnderlaySealSelection from "./pages/sizing/underlay/SealSelection";
 import SizingUnderlayLength from "./pages/sizing/underlay/Length";
 import SizingUnderlayCircumference from "./pages/sizing/underlay/Circumference";
+import SizingUnderlayCircumference2 from "./pages/sizing/underlay/Circumference2";
 import SizingUnderlaySiliconeSelection from "./pages/sizing/underlay/SiliconeSelection";
 import SizeUnderlay from "./pages/sizing/underlay/Size";
 import SizingLinerTTCircumference from "./pages/sizing/liner/TT/Circumference";
@@ -89,6 +90,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/underlay/seal" element={<SizingUnderlaySealSelection />} />
         <Route path="/sizing/underlay/length" element={<SizingUnderlayLength />} />
         <Route path="/sizing/underlay/circumference" element={<SizingUnderlayCircumference />} />
+        <Route path="/sizing/underlay/circumference-2" element={<SizingUnderlayCircumference2 />} />
         <Route path="/sizing/underlay/silicone" element={<SizingUnderlaySiliconeSelection />} />
         <Route path="/sizing/underlay/size" element={<SizeUnderlay />} />
         <Route path="/sizing/liner/tt/circumference" element={<SizingLinerTTCircumference />} />

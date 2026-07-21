@@ -27,7 +27,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       if (measurement === "circumference") {
         if (valCm >= 24 && valCm < 29.5) return 23;
         if (valCm >= 29.5 && valCm < 36) return 28;
-        if (valCm >= 36 && valCm < 42) return 35;
+        if (valCm >= 36 && valCm <= 42) return 35; // Fixed upper bound boundary
       } else if (measurement === "length") {
         if (valCm >= 13.5 && valCm < 19) return "SH";
         if (valCm >= 19) return "LG";
@@ -36,15 +36,34 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
 
     // TT UNDERLAY
     if (product === "underlaytt") {
-      if (measurement === "length") {
-        if (valCm >= 23 && valCm < 26) return "SH";
-        if (valCm >= 26 && valCm < 30) return "MD";
-        if (valCm >= 30 && valCm < 33) return "LG";
-        if (valCm >= 33) return "XL";
-      } else if (measurement === "circumference") {
-        if (valCm >= 15 && valCm < 25) return 23;
-        if (valCm >= 25 && valCm < 33) return 28;
-        if (valCm >= 33 && valCm < 42) return 35;
+      const seal = localStorage.getItem("underlay_seal");
+
+      if (seal === "closed-seal") {
+        if (measurement === "length") {
+          if (valCm >= 27 && valCm <= 37) return "SH";
+          if (valCm > 37) return "LG";
+        } else if (measurement === "circumference") {
+          if (valCm >= 20 && valCm < 25) return 23;
+          if (valCm >= 25 && valCm < 30) return 28;
+          if (valCm >= 30 && valCm <= 42) return 35;
+        }
+      } else {
+        // open-seal (default)
+        if (measurement === "length") {
+          if (valCm >= 23 && valCm < 26) return "SH";
+          if (valCm >= 26 && valCm < 30) return "MD";
+          if (valCm >= 30 && valCm < 33) return "LG";
+          if (valCm >= 33) return "XL";
+        } else if (measurement === "circumference") {
+          if (valCm >= 20 && valCm < 25) return 23;
+          if (valCm >= 25 && valCm < 30) return 28;
+          if (valCm >= 30 && valCm <= 42) return 35;
+        } else if (measurement === "circumference2") {
+          const c1 = parseInt(localStorage.getItem("underlaytt_circumference"));
+          const threshold = c1 === 23 ? 35 : c1 === 28 ? 45 : c1 === 35 ? 55 : null;
+          if (threshold === null) return null;
+          return valCm > threshold ? "override-closed" : "keep-open";
+        }
       }
     }
 
@@ -60,7 +79,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
         if (valCm >= 40 && valCm < 45) return 40;
         if (valCm >= 45 && valCm < 48) return 44;
         if (valCm >= 48 && valCm < 52) return 48;
-        if (valCm >= 52 && valCm < 62) return 52;
+        if (valCm >= 52 && valCm <= 62) return 52; // Fixed upper bound boundary
       }
     }
 
@@ -75,7 +94,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
         if (valCm >= 42 && valCm < 47) return 40;
         if (valCm >= 47 && valCm < 50) return 44;
         if (valCm >= 50 && valCm < 54) return 48;
-        if (valCm >= 54 && valCm < 62) return 52;
+        if (valCm >= 54 && valCm <= 62) return 52; // Fixed upper bound boundary
       }
     }
     return null;
@@ -98,6 +117,8 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       localStorage.setItem("raw_circumference", numericValue);
     } else if (measurement === "length") {
       localStorage.setItem("raw_length", numericValue);
+    } else if (measurement === "circumference2") {
+      localStorage.setItem("raw_circumference2", numericValue);
     }
 
     const valCm = convertToCm(numericValue);
