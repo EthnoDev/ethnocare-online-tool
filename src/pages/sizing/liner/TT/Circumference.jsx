@@ -2,7 +2,6 @@
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
-
 // SVG Imports
 import ttImperialSvg from "../../../../assets/circumferences/Liner/TT/Imperial.svg";
 import ttMetricSvg from "../../../../assets/circumferences/Liner/TT/Metric.svg";
