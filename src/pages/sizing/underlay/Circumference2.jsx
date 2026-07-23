@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import MeasurementInput from "../../../components/MeasurementInput";
-import RedirectionPopup from "../../../components/RedirectionPopup";
+import RedirectionPopup from "../../../components/UnderlayRedirectionPopup";
 
 // Assets
 import Circumference2Img from "../../../assets/circumferences/Underlay/Circumference2.svg";

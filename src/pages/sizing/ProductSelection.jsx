@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
-import LinerPopup from "../../components/LinerPopup";
+import LinerPopup from "../../components/LinerRedirectionPopup";
 
 // Product images
 import OverlayImg from "../../assets/products/overlay.png";
