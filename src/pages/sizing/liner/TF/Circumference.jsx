@@ -1,12 +1,17 @@
-// src/pages/sizing/liner/tf/Circumference.jsx
+// src/pages/sizing/liner/TF/Circumference.jsx
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
+import { useNavigate } from "react-router-dom";
+
 // SVG Imports
 import tfImperialSvg from "../../../../assets/circumferences/Liner/TF/Imperial.svg";
 import tfMetricSvg from "../../../../assets/circumferences/Liner/TF/Metric.svg";
 
 export default function Circumference() {
+  const [result, setResult] = useState(null);
+  const navigate = useNavigate();
   const { t } = useTranslation(["pages", "common"]);
 
   // Unit and dynamic distance / asset selection
@@ -18,7 +23,7 @@ export default function Circumference() {
     setResult(res);
     localStorage.setItem("circumference", res);
     // Navigate to next step
-    //setTimeout(() => navigate("/sizing/TTlength"), 200);
+    setTimeout(() => navigate("/sizing/liner/length"), 200);
   };
 
   return (
