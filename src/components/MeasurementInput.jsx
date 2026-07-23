@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useTranslation, Trans } from "react-i18next"; // Added Trans
+import { useTranslation, Trans } from "react-i18next";
 import Popup from "./Popup";
 
 export default function MeasurementInput({ product, measurement, onConfirm }) {
@@ -7,7 +7,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
   const [value, setValue] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const [isConfirming, setIsConfirming] = useState(false);
-  const { t } = useTranslation(["common", "pages"]); // Ensure pages is loaded for specific instructions
+  const { t } = useTranslation(["common", "pages"]);
 
   useEffect(() => {
     const stored = localStorage.getItem("units");
@@ -22,19 +22,80 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
   const convertToCm = (val) => (unit === "in" ? val * 2.54 : val);
 
   const mapMeasurement = (valCm) => {
+    const material = (localStorage.getItem("liner_material") || "").toLowerCase();
+
+    // ----------------------------------------------------
+    // LINER LOGIC (ttLiner & tfLiner)
+    // ----------------------------------------------------
+    if (product === "ttLiner" || product === "tfLiner") {
+      // GEL Material (Applies to both ttLiner & tfLiner)
+      if (material === "gel") {
+        const matches = [];
+        if (valCm >= 15 && valCm <= 22) matches.push("S");
+        if (valCm >= 19 && valCm <= 29) matches.push("M");
+        if (valCm >= 23 && valCm <= 37) matches.push("L");
+        if (valCm >= 27 && valCm <= 40) matches.push("XL");
+        if (valCm >= 31 && valCm <= 53) matches.push("XXL");
+
+        return matches.length > 0 ? matches.join(",") : null;
+      }
+
+      // TT LINER (s30 / s40)
+      if (product === "ttLiner") {
+        if (valCm >= 16 && valCm < 18) return 16;
+        if (valCm >= 18 && valCm < 20) return 18;
+        if (valCm >= 20 && valCm < 21) return 20;
+        if (valCm >= 21 && valCm < 22) return 21;
+        if (valCm >= 22 && valCm < 23.5) return 22;
+        if (valCm >= 23.5 && valCm < 25) return 23.5;
+        if (valCm >= 25 && valCm < 26.5) return 25;
+        if (valCm >= 26.5 && valCm < 28) return 26.5;
+        if (valCm >= 28 && valCm < 30) return 28;
+        if (valCm >= 30 && valCm < 32) return 30;
+        if (valCm >= 32 && valCm < 34) return 32;
+        if (valCm >= 34 && valCm < 36) return 34;
+        if (valCm >= 36 && valCm < 38) return 36;
+        if (valCm >= 38 && valCm < 40) return 38;
+        if (valCm >= 40 && valCm < 42) return 40;
+        if (valCm >= 42 && valCm < 45) return 42;
+        if (valCm >= 45 && valCm < 47) return 45;
+      }
+
+      // TF LINER (s30 / s40)
+      if (product === "tfLiner") {
+        if (valCm >= 25 && valCm < 26.5) return 25;
+        if (valCm >= 26.5 && valCm < 28) return 26.5;
+        if (valCm >= 28 && valCm < 30) return 28;
+        if (valCm >= 30 && valCm < 32) return 30;
+        if (valCm >= 32 && valCm < 34) return 32;
+        if (valCm >= 34 && valCm < 36) return 34;
+        if (valCm >= 36 && valCm < 38) return 36;
+        if (valCm >= 38 && valCm < 40) return 38;
+        if (valCm >= 40 && valCm < 42) return 40;
+        if (valCm >= 42 && valCm < 45) return 42;
+        if (valCm >= 45 && valCm < 50) return 45;
+        if (valCm >= 50 && valCm < 55) return 50;
+        if (valCm >= 55 && valCm < 57) return 55;
+      }
+    }
+
+    // ----------------------------------------------------
     // TT OVERLAY
+    // ----------------------------------------------------
     if (product === "ttdistal" || product === "ttstandard") {
       if (measurement === "circumference") {
         if (valCm >= 24 && valCm < 29.5) return 23;
         if (valCm >= 29.5 && valCm < 36) return 28;
-        if (valCm >= 36 && valCm <= 42) return 35; // Fixed upper bound boundary
+        if (valCm >= 36 && valCm <= 42) return 35;
       } else if (measurement === "length") {
         if (valCm >= 13.5 && valCm < 19) return "SH";
         if (valCm >= 19) return "LG";
       }
     }
 
+    // ----------------------------------------------------
     // TT UNDERLAY
+    // ----------------------------------------------------
     if (product === "underlaytt") {
       const seal = localStorage.getItem("underlay_seal");
 
@@ -67,7 +128,9 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       }
     }
 
+    // ----------------------------------------------------
     // TF STANDARD
+    // ----------------------------------------------------
     if (product === "tfstandard") {
       if (measurement === "length") {
         if (valCm >= 20 && valCm < 24) return "SH";
@@ -79,11 +142,13 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
         if (valCm >= 40 && valCm < 45) return 40;
         if (valCm >= 45 && valCm < 48) return 44;
         if (valCm >= 48 && valCm < 52) return 48;
-        if (valCm >= 52 && valCm <= 62) return 52; // Fixed upper bound boundary
+        if (valCm >= 52 && valCm <= 62) return 52;
       }
     }
 
+    // ----------------------------------------------------
     // TF DISTAL
+    // ----------------------------------------------------
     if (product === "tfdistal") {
       if (measurement === "length") {
         if (valCm >= 20 && valCm < 24) return "SH";
@@ -94,9 +159,10 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
         if (valCm >= 42 && valCm < 47) return 40;
         if (valCm >= 47 && valCm < 50) return 44;
         if (valCm >= 50 && valCm < 54) return 48;
-        if (valCm >= 54 && valCm <= 62) return 52; // Fixed upper bound boundary
+        if (valCm >= 54 && valCm <= 62) return 52;
       }
     }
+
     return null;
   };
 
@@ -145,7 +211,12 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
     handleConfirmClick();
   };
 
-  const popupType = product === "underlaytt" ? "underlaytt" : product === "tfstandard" || product === "tfdistal" ? "tf" : "tt";
+  const popupType =
+    product === "underlaytt"
+      ? "underlaytt"
+      : product === "tfstandard" || product === "tfdistal" || product === "tfLiner"
+      ? "tf"
+      : "tt";
 
   return (
     <div className="relative w-full max-w-[320px] mx-auto mt-10">
@@ -169,7 +240,6 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
         </div>
 
         <div className="flex items-start justify-between gap-4 px-1">
-          {/* Made clickable to open popup */}
           <button
             type="button"
             onClick={() => setShowPopup(true)}
@@ -177,7 +247,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           >
             {t("inputs.additional_instruction", "Additional instruction")}
           </button>
-          
+
           <button
             type="submit"
             disabled={isConfirming}

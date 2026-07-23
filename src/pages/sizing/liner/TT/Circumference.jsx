@@ -50,7 +50,7 @@ export default function Circumference() {
 
         <div className="w-full">
             <MeasurementInput
-                product="ttstandard"
+                product="ttLiner"
                 measurement="circumference"
                 onConfirm={handleConfirm}
             />
