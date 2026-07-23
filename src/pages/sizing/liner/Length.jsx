@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
+import SelectableOption from "../../../components/SelectableOption";
 
 // Asset Imports
 import gelSvg from "../../../assets/lengths/Liner/gel.svg";
@@ -11,6 +12,8 @@ import siliconeSvg from "../../../assets/lengths/Liner/silicone.svg";
 export default function Length() {
   const { t } = useTranslation(["pages", "common"]);
   const navigate = useNavigate();
+
+  const [selectedOption, setSelectedOption] = useState(null);
 
   // Determine back navigation path based on saved amputation type
   const amputation = localStorage.getItem("amputation");
@@ -34,6 +37,19 @@ export default function Length() {
 
   // Select image based on material
   const selectedImage = isSilicone ? siliconeSvg : gelSvg;
+
+  // Handlers for option selections
+  const handleSmallSelect = () => {
+    setSelectedOption("small");
+    localStorage.setItem("length_choice", "small");
+    // Handle navigation or next step action here if needed
+  };
+
+  const handleConfirmSelect = () => {
+    setSelectedOption("confirm");
+    localStorage.setItem("length_choice", "confirm");
+    // Handle navigation or next step action here if needed
+  };
 
   return (
     <PageWrapper
@@ -60,6 +76,27 @@ export default function Length() {
             alt={isSilicone ? "Silicone Liner Length" : "Gel Liner Length"}
             className="w-74 h-auto object-contain rounded-xl"
           />
+        </div>
+
+        {/* 4. Horizontal Options */}
+        <div className="mt-8 flex items-center justify-center">
+          <div className="flex-1">
+            <SelectableOption
+              compact
+              selected={selectedOption === "small"}
+              onClick={handleSmallSelect}
+              label={t("common:cta.small")}
+            />
+          </div>
+
+          <div className="flex-1">
+            <SelectableOption
+              compact
+              selected={selectedOption === "confirm"}
+              onClick={handleConfirmSelect}
+              label={t("common:cta.confirm")}
+            />
+          </div>
         </div>
       </div>
     </PageWrapper>

@@ -13,7 +13,8 @@
         "length": "Länge",
         "orientation": "Seite",
         "suspension": "Suspension",
-        "pressurePoints": "Overlay-Rotation"
+        "pressurePoints": "Overlay-Rotation",
+        "small": "ZU KLEIN"
     },
     "pages": {
         "circumference_tt_vac": "TT Umfang distal Seal",
