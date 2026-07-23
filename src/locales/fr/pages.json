@@ -240,5 +240,9 @@
   "lengthLinerSizing": {
     "title": "Longueur",
     "description":"Veuillez noter que nos manchons sont {{distance}}. Veuillez vérifier que vous n'avez pas besoin d'une taille plus longue."
+  },
+  "suspensionLinerSizing": {
+    "title": "Suspension",
+    "description": "Sélectionnez votre système de suspension"
   }
 }

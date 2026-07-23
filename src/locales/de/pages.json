@@ -240,5 +240,9 @@
   "lengthLinerSizing": {
     "title": "Länge",
     "description":"Bitte beachten Sie, dass unsere Liner {{distance}} sind. Bitte überprüfen Sie, ob Sie keine längere Größe benötigen."
+  },
+  "suspensionLinerSizing": {
+    "title": "Suspension",
+    "description": "Wählen Sie Ihr Suspensionssystem aus"
   }
 }

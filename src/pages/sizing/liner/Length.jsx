@@ -42,13 +42,15 @@ export default function Length() {
   const handleSmallSelect = () => {
     setSelectedOption("small");
     localStorage.setItem("length_choice", "small");
-    // Handle navigation or next step action here if needed
   };
 
   const handleConfirmSelect = () => {
     setSelectedOption("confirm");
-    localStorage.setItem("length_choice", "confirm");
-    // Handle navigation or next step action here if needed
+
+    // Navigate to suspension page with smooth feedback delay
+    setTimeout(() => {
+      navigate("/sizing/liner/suspension");
+    }, 200);
   };
 
   return (
