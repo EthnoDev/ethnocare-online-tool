@@ -236,5 +236,9 @@
   "circumferenceLinerSizing": {
     "title": "Umfang",
     "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende entfernt"
+  },
+  "lengthLinerSizing": {
+    "title": "Länge",
+    "description":"Bitte beachten Sie, dass unsere Liner {{distance}} sind. Bitte überprüfen Sie, ob Sie keine längere Größe benötigen."
   }
 }

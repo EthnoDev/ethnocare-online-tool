@@ -1,9 +1,16 @@
 // src/pages/sizing/liner/Length.jsx
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 
+// Asset Imports
+import gelSvg from "../../../assets/lengths/Liner/gel.svg";
+import siliconeSvg from "../../../assets/lengths/Liner/silicone.svg";
+
 export default function Length() {
   const { t } = useTranslation(["pages", "common"]);
+  const navigate = useNavigate();
 
   // Determine back navigation path based on saved amputation type
   const amputation = localStorage.getItem("amputation");
@@ -11,6 +18,22 @@ export default function Length() {
     amputation === "transfemoral"
       ? "/sizing/liner/tf/circumference"
       : "/sizing/liner/tt/circumference";
+
+  // Determine dynamic distance string based on units & material
+  const isImperial = localStorage.getItem("units") === "imperial";
+  const linerMaterial = localStorage.getItem("liner_material");
+  const isSilicone = linerMaterial === "s30" || linerMaterial === "s40";
+
+  let distance = "";
+  if (isSilicone) {
+    distance = isImperial ? "13.8 in ± 0.8 in" : "35 cm ± 2 cm";
+  } else {
+    // Gel
+    distance = isImperial ? "15.7 in ± 0.8 in" : "40 cm ± 2 cm";
+  }
+
+  // Select image based on material
+  const selectedImage = isSilicone ? siliconeSvg : gelSvg;
 
   return (
     <PageWrapper
@@ -25,10 +48,19 @@ export default function Length() {
           {t("lengthLinerSizing.title")}
         </h1>
 
-        {/* 2. Description */}
+        {/* 2. Description with dynamic distance translation */}
         <p className="mt-3 text-center text-base text-slate-500">
-          {t("lengthLinerSizing.description")}
+          {t("lengthLinerSizing.description", { distance })}
         </p>
+
+        {/* 3. Length Image */}
+        <div className="mt-8 flex justify-center">
+          <img
+            src={selectedImage}
+            alt={isSilicone ? "Silicone Liner Length" : "Gel Liner Length"}
+            className="w-74 h-auto object-contain rounded-xl"
+          />
+        </div>
       </div>
     </PageWrapper>
   );

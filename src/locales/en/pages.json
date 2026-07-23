@@ -240,5 +240,9 @@
   "circumferenceLinerSizing": {
     "title": "Circumference",
     "description": "Measure the circumference (C) at {{distance}} from the distal end"
+  },
+  "lengthLinerSizing": {
+    "title": "Length",
+    "description":"Please note that our liners are {{distance}}. Please verify that you do not need a longer size."
   }
 }

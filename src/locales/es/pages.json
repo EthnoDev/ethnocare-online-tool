@@ -236,5 +236,9 @@
   "circumferenceLinerSizing": {
     "title": "Circunferencia",
     "description": "Mida la circunferencia (C) a {{distance}} del extremo distal"
+  },
+  "lengthLinerSizing": {
+    "title": "Longitud",
+    "description":"Tenga en cuenta que nuestros liners son {{distance}}. Verifique que no necesite un tamaño más largo."
   }
 }
