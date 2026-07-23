@@ -14,7 +14,8 @@
     "orientation": "Côté",
     "suspension": "Suspension",
     "pressurePoints": "Rotation de l'Overlay",
-    "small": "TROP PETIT"
+    "small": "TROP PETIT",
+    "home": "Retour à la page d'accueil"
   },
   "pages": {
     "circumference_tt_vac": "Circonférence TT joint distal",

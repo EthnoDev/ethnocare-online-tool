@@ -14,7 +14,8 @@
     "orientation": "Side",
     "suspension": "Suspension",
     "pressurePoints": "Overlay Rotation",
-    "small": "TOO SMALL"
+    "small": "TOO SMALL",
+    "home": "Return to Home Page"
   },
   "pages": {
     "circumference_tt_vac": "Distal Seal TT Circumference",

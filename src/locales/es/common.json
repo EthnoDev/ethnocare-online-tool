@@ -14,7 +14,8 @@
     "orientation": "Lado",
     "suspension": "Suspensión",
     "pressurePoints": "Rotación del Overlay",
-    "small": "DEMASIADO PEQUEÑO"
+    "small": "DEMASIADO PEQUEÑO",
+    "home": "Volver a la página de inicio"
   },
   "pages": {
     "circumference_tt_vac": "Circunferencia TT sello distal",

@@ -39,13 +39,15 @@ export default function Length() {
   const selectedImage = isSilicone ? siliconeSvg : gelSvg;
 
   // Handlers for option selections
-  const handleSmallSelect = () => {
-    setSelectedOption("small");
-    localStorage.setItem("length_choice", "small");
+  const handleLeftSelect = () => {
+    const choice = isSilicone ? "small" : "home";
+    setSelectedOption(choice);
+    //localStorage.setItem("length_choice", choice);
   };
 
   const handleConfirmSelect = () => {
     setSelectedOption("confirm");
+    //localStorage.setItem("length_choice", "confirm");
 
     // Navigate to suspension page with smooth feedback delay
     setTimeout(() => {
@@ -82,15 +84,17 @@ export default function Length() {
 
         {/* 4. Horizontal Options */}
         <div className="mt-8 flex items-center justify-center">
+          {/* Left Option: Dynamic (Small for Silicone, Home for Gel) */}
           <div className="flex-1">
             <SelectableOption
               compact
-              selected={selectedOption === "small"}
-              onClick={handleSmallSelect}
-              label={t("common:cta.small")}
+              selected={selectedOption === (isSilicone ? "small" : "home")}
+              onClick={handleLeftSelect}
+              label={isSilicone ? t("common:cta.small") : t("common:cta.home")}
             />
           </div>
 
+          {/* Right Option: Always Confirm */}
           <div className="flex-1">
             <SelectableOption
               compact
