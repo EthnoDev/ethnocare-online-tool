@@ -103,7 +103,10 @@
         "underlay_open_title": "Underlay TT - Offen",
         "underlay_closed_title": "Underlay TT - Geschlossen",
         "label_circumferenceDistal": "Umfang\n10 cm / 3.9 Inch vom distalen Ende",
-        "label_circumferenceUpper": "Umfang\nOberes Liner"
+        "label_circumferenceUpper": "Umfang\nOberes Liner",
+        "labelDistal": "Umfang Distales Ende",
+        "labelProximal": "Umfang Proximales Ende",
+        "silicone": "Silikon"
     },
     "contactForm": {
         "question": "Benötigen Sie weitere Hilfe ?",

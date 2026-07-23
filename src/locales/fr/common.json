@@ -103,7 +103,10 @@
     "underlay_open_title": "Underlay TT - Ouvert",
     "underlay_closed_title": "Underlay TT - Fermé",
     "label_circumferenceDistal": "Circonférence\n10 cm / 3.9 Inch de l'extrémité distale",
-    "label_circumferenceUpper": "Circonférence\nManchon supérieur"
+    "label_circumferenceUpper": "Circonférence\nManchon supérieur",
+    "labelDistal": "Circonférence Extrémité Distale",
+    "labelProximal": "Circonférence Extrémité Proximale",
+    "silicone": "Silicone"
   },
   "contactForm": {
     "question": "Avez-vous besoin d'une assistance supplémentaire ?",

@@ -50,21 +50,87 @@ export default function Popup({ type, onClose }) {
     },
   ];
 
-  const isUnderlayTT = type === "underlaytt";
+  const ttLinerTables = [
+    {
+      title: `Liner TT - ${t("popup.silicone")}`,
+      rows: [
+        {
+          label: t("popup.labelDistal"),
+          value: "Min : 16 cm / 6.2 Inch\nMax : 45 cm / 17.7 Inch",
+        },
+        {
+          label: t("popup.labelProximal"),
+          value: "Min : 20 cm / 7.8 Inch\nMax : 48.5 cm / 19 Inch",
+        },
+      ],
+    },
+    {
+      title: "Liner TT - Gel",
+      rows: [
+        {
+          label: t("popup.labelDistal"),
+          value: "Min : 15 cm / 5.9 Inch\nMax : 53 cm / 20.8 Inch",
+        },
+        {
+          label: t("popup.labelProximal"),
+          value: "Min : 24 cm / 9.4 Inch\nMax : 70 cm / 27.5 Inch",
+        },
+      ],
+    },
+  ];
+
+  const tfLinerTables = [
+    {
+      title: `Liner TF - ${t("popup.silicone")}`,
+      rows: [
+        {
+          label: t("popup.labelDistal"),
+          value: "Min : 25 cm / 9.8 Inch\nMax : 55 cm / 21.6 Inch",
+        },
+        {
+          label: t("popup.labelProximal"),
+          value: "Min : 28.5 cm / 11.2 Inch\nMax : 63 cm / 24.8 Inch",
+        },
+      ],
+    },
+    {
+      title: "Liner TF - Gel",
+      rows: [
+        {
+          label: t("popup.labelDistal"),
+          value: "Min : 15 cm / 5.9 Inch\nMax : 53 cm / 20.8 Inch",
+        },
+        {
+          label: t("popup.labelProximal"),
+          value: "Min : 24 cm / 9.4 Inch\nMax : 70 cm / 27.5 Inch",
+        },
+      ],
+    },
+  ];
+
+  const multiTables =
+    type === "underlaytt"
+      ? underlayTTTables
+      : type === "ttLiner"
+      ? ttLinerTables
+      : type === "tfLiner"
+      ? tfLinerTables
+      : null;
+
   const { title, length, circumference } = tableData[type] || {};
 
   return (
     <PageTransitionWrapper>
       <div className="w-full flex justify-center px-4">
-        <div className="bg-white shadow-xl rounded-xl p-6 w-full max-w-sm text-center font-sans border border-gray-200">
+        <div className="bg-white shadow-xl rounded-xl p-6 w-full max-w-sm text-center font-sans border border-gray-200 max-h-[90vh] overflow-y-auto">
           <h2 className="text-xl font-semibold mb-4">{t("popup.notice_title")}</h2>
           <p className="text-gray-600 text-sm mb-6">
             {t("popup.notice_description")}
           </p>
 
-          {isUnderlayTT ? (
+          {multiTables ? (
             <div className="flex flex-col gap-4 mb-4">
-              {underlayTTTables.map((table) => (
+              {multiTables.map((table) => (
                 <table key={table.title} className="w-full border border-gray-300 text-sm">
                   <thead>
                     <tr>
@@ -116,7 +182,7 @@ export default function Popup({ type, onClose }) {
           <p className="text-sm font-bold underline text-[#090C41] mb-6">clinics@ethnocare.ca</p>
 
           <button
-            onClick={() => setTimeout(onClose, 200)}
+            onClick={() => setTimeout(onClose, 100)}
             className="px-4 py-2 bg-[#090C41] text-white rounded-md hover:bg-[#1a1e6f] transition cursor-pointer"
           >
             OK

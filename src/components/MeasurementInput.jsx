@@ -214,7 +214,11 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
   const popupType =
     product === "underlaytt"
       ? "underlaytt"
-      : product === "tfstandard" || product === "tfdistal" || product === "tfLiner"
+      : product === "ttLiner"
+      ? "ttLiner"
+      : product === "tfLiner"
+      ? "tfLiner"
+      : product === "tfstandard" || product === "tfdistal"
       ? "tf"
       : "tt";
 

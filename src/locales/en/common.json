@@ -104,7 +104,10 @@
     "underlay_open_title": "Underlay TT - Open",
     "underlay_closed_title": "Underlay TT - Closed",
     "label_circumferenceDistal": "Circumference\n10 cm / 3.9 Inch distal end",
-    "label_circumferenceUpper": "Circumference\nUpper liner"
+    "label_circumferenceUpper": "Circumference\nUpper liner",
+    "labelDistal": "Circumference Distal End",
+    "labelProximal": "Circumference Proximal End",
+    "silicone": "Silicone"
   },
   "contactForm": {
     "question": "Do you need additional assistance ?",
