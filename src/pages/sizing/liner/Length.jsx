@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import SelectableOption from "../../../components/SelectableOption";
+import LinerRedirectionPopup2 from "../../../components/LinerRedirectionPopup2";
 
 // Asset Imports
 import gelSvg from "../../../assets/lengths/Liner/gel.svg";
@@ -14,6 +15,7 @@ export default function Length() {
   const navigate = useNavigate();
 
   const [selectedOption, setSelectedOption] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   // Determine back navigation path based on saved amputation type
   const amputation = localStorage.getItem("amputation");
@@ -40,10 +42,11 @@ export default function Length() {
 
   // Handlers for option selections
   const handleLeftSelect = () => {
-    const choice = isSilicone ? "small" : "home";
-    setSelectedOption(choice);
-
-    if (choice === "home") {
+    if (isSilicone) {
+      setSelectedOption("small");
+      setShowPopup(true);
+    } else {
+      setSelectedOption("home");
       setTimeout(() => {
         navigate("/");
       }, 200);
@@ -109,6 +112,22 @@ export default function Length() {
           </div>
         </div>
       </div>
+
+      {/* 5. Too Small Popup (Silicone Flow) */}
+      {showPopup && (
+        <LinerRedirectionPopup2
+          onClose={() => setShowPopup(false)}
+          onSelectGel={() => {
+            setShowPopup(false);
+            localStorage.setItem("liner_material", "gel");
+            navigate("/sizing/liner/material"); // Adjust to your gel sizing route
+          }}
+          onHome={() => {
+            setShowPopup(false);
+            navigate("/");
+          }}
+        />
+      )}
     </PageWrapper>
   );
 }

@@ -1,0 +1,110 @@
+// src/components/LinerRedirectionPopup2.jsx
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import XIcon from "../assets/x.svg";
+import PageTransitionWrapper from "./PageTransitionWrapper";
+
+export default function LinerRedirectionPopup2({
+  onClose,
+  onSelectGel,
+  onHome,
+}) {
+  const { t } = useTranslation("common");
+
+  useEffect(() => {
+    const onKey = (e) => e.key === "Escape" && onClose?.();
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  // Determine unit and dynamic gel distance
+  const isImperial = localStorage.getItem("units") === "imperial";
+  const gelDistance = isImperial ? "15.7 in ± 0.8 in" : "40 cm ± 2 cm";
+
+  return (
+    <>
+      {/* Backdrop */}
+      <div
+        className="fixed inset-0 bg-black/40 backdrop-blur-sm z-10 cursor-default"
+        onClick={onClose}
+      />
+
+      {/* Centered card */}
+      <div
+        className="fixed inset-0 flex items-center justify-center z-20 pointer-events-none"
+        role="dialog"
+        aria-modal="true"
+      >
+        <PageTransitionWrapper>
+          <div
+            className="bg-white p-6 rounded-xl shadow-lg relative w-[300px] text-center font-sans pointer-events-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button (X) */}
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 w-5 h-5 cursor-pointer flex items-center justify-center"
+              aria-label="Close"
+            >
+              <img src={XIcon} alt="" className="w-5 h-5 pointer-events-none" />
+            </button>
+
+            {/* Title */}
+            <h2 className="text-xl font-semibold mb-4 mt-2 text-slate-900">
+              {t("tooSmallPopup.title")}
+            </h2>
+
+            {/* Description 1 */}
+            <p className="text-gray-600 text-sm mt-4 mb-3 leading-snug">
+              {t("tooSmallPopup.description")}
+            </p>
+
+            {/* Description 2 (Bold Gel Distance) */}
+            <p className="text-slate-900 font-bold text-sm mb-6 leading-snug">
+              {t("tooSmallPopup.description2", { distance: gelDistance })}
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col gap-2.5">
+              {/* Gel Option Button */}
+              <button
+                onClick={() => setTimeout(onSelectGel, 200)}
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#090C41] text-white rounded-md font-semibold text-sm hover:bg-[#1a1e6f] transition cursor-pointer"
+              >
+                <svg
+                  className="w-4 h-4 stroke-current"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2.5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                  />
+                </svg>
+                <span>{t("tooSmallPopup.gelButton")}</span>
+              </button>
+
+              {/* Return to Home Button */}
+              <button
+                onClick={() => setTimeout(onHome, 200)}
+                className="w-full flex items-center justify-center px-4 py-3 border border-slate-300 text-slate-700 rounded-md font-medium text-sm hover:bg-slate-50 transition cursor-pointer"
+              >
+                {t("tooSmallPopup.homeButton")}
+              </button>
+            </div>
+
+            {/* Contact Line Section (Matching Popup.jsx) */}
+            <p className="text-gray-600 text-sm mt-6">
+              {t("tooSmallPopup.contact_line")}
+            </p>
+            <p className="text-sm font-bold underline text-[#090C41]">
+              clinics@ethnocare.ca
+            </p>
+          </div>
+        </PageTransitionWrapper>
+      </div>
+    </>
+  );
+}
