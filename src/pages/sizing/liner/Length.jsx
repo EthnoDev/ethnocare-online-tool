@@ -96,7 +96,7 @@ export default function Length() {
 
         {/* 4. Horizontal Options */}
         <div className="mt-8 flex items-center justify-center">
-          {/* Left Option: Dynamic (Small for Silicone, Home for Gel) */}
+          {/* Left Option: Dynamic (Small for Silicone, Home for Gel) - Outline Style */}
           <div className="flex-1">
             <SelectableOption
               compact
@@ -106,10 +106,11 @@ export default function Length() {
             />
           </div>
 
-          {/* Right Option: Always Confirm */}
-          <div className="flex-1">
+          {/* Right Option: Always Confirm - Solid Dark Blue Style */}
+          <div className="flex-1 [&_button]:bg-[#090C41] [&_button]:text-white [&_button]:border-[#090C41] [&_button]:hover:bg-[#1a1e6f]">
             <SelectableOption
               compact
+              variant="solid"
               selected={selectedOption === "confirm"}
               onClick={handleConfirmSelect}
               label={t("common:cta.confirm")}
@@ -119,20 +120,20 @@ export default function Length() {
       </div>
 
       {/* 5. Too Small Popup (Silicone Flow) */}
-        {showPopup && (
+      {showPopup && (
         <LinerRedirectionPopup2
-            onClose={() => setShowPopup(false)}
-            onSelectGel={() => {
+          onClose={() => setShowPopup(false)}
+          onSelectGel={() => {
             localStorage.setItem("liner_material", "gel");
             // Direct action—let the button's 200ms internal timeout handle the delay
-            setShowPopup(false); 
-            }}
-            onHome={() => {
+            setShowPopup(false);
+          }}
+          onHome={() => {
             // Direct navigation—let the button's 200ms internal timeout handle the transition delay
             navigate("/");
-            }}
+          }}
         />
-        )}
+      )}
     </PageWrapper>
   );
 }
