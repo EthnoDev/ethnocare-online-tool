@@ -111,10 +111,10 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       } else {
         // open-seal (default)
         if (measurement === "length") {
-          if (valCm >= 23 && valCm < 26) return "SH";
-          if (valCm >= 26 && valCm < 30) return "MD";
-          if (valCm >= 30 && valCm < 33) return "LG";
-          if (valCm >= 33) return "XL";
+          if (valCm >= 23 && valCm < 28) return "SH";
+          if (valCm >= 28 && valCm < 33) return "MD";
+          if (valCm >= 33 && valCm < 38) return "LG";
+          if (valCm >= 38) return "XL";
         } else if (measurement === "circumference") {
           if (valCm >= 20 && valCm < 25) return 23;
           if (valCm >= 25 && valCm < 30) return 28;
