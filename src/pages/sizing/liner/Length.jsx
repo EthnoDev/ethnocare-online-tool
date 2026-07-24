@@ -43,18 +43,18 @@ export default function Length() {
   // Handlers for option selections
   const handleLeftSelect = () => {
     if (isSilicone) {
-        // 1. Show click state immediately
-        setSelectedOption("small");
-        // 2. Wait 200ms for visual feedback, then open popup and reset selection
-        setTimeout(() => {
+      // 1. Show click state immediately
+      setSelectedOption("small");
+      // 2. Wait 200ms for visual feedback, then open popup and reset selection
+      setTimeout(() => {
         setShowPopup(true);
         setSelectedOption(null);
-        }, 200);
+      }, 200);
     } else {
-        setSelectedOption("home");
-        setTimeout(() => {
+      setSelectedOption("home");
+      setTimeout(() => {
         navigate("/");
-        }, 200);
+      }, 200);
     }
   };
 
@@ -119,19 +119,20 @@ export default function Length() {
       </div>
 
       {/* 5. Too Small Popup (Silicone Flow) */}
-      {showPopup && (
+        {showPopup && (
         <LinerRedirectionPopup2
-          onClose={() => setShowPopup(false)}
-          onSelectGel={() => {
-            setShowPopup(false);
+            onClose={() => setShowPopup(false)}
+            onSelectGel={() => {
             localStorage.setItem("liner_material", "gel");
-          }}
-          onHome={() => {
-            setShowPopup(false);
+            // Direct action—let the button's 200ms internal timeout handle the delay
+            setShowPopup(false); 
+            }}
+            onHome={() => {
+            // Direct navigation—let the button's 200ms internal timeout handle the transition delay
             navigate("/");
-          }}
+            }}
         />
-      )}
+        )}
     </PageWrapper>
   );
 }
