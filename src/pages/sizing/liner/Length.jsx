@@ -125,11 +125,9 @@ export default function Length() {
           onClose={() => setShowPopup(false)}
           onSelectGel={() => {
             localStorage.setItem("liner_material", "gel");
-            // Direct action—let the button's 200ms internal timeout handle the delay
-            setShowPopup(false);
+            navigate("/sizing/liner/suspension");
           }}
           onHome={() => {
-            // Direct navigation—let the button's 200ms internal timeout handle the transition delay
             navigate("/");
           }}
         />
