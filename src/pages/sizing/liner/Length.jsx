@@ -43,13 +43,18 @@ export default function Length() {
   // Handlers for option selections
   const handleLeftSelect = () => {
     if (isSilicone) {
-      setSelectedOption("small");
-      setShowPopup(true);
+        // 1. Show click state immediately
+        setSelectedOption("small");
+        // 2. Wait 200ms for visual feedback, then open popup and reset selection
+        setTimeout(() => {
+        setShowPopup(true);
+        setSelectedOption(null);
+        }, 200);
     } else {
-      setSelectedOption("home");
-      setTimeout(() => {
+        setSelectedOption("home");
+        setTimeout(() => {
         navigate("/");
-      }, 200);
+        }, 200);
     }
   };
 
@@ -120,7 +125,6 @@ export default function Length() {
           onSelectGel={() => {
             setShowPopup(false);
             localStorage.setItem("liner_material", "gel");
-            navigate("/sizing/liner/material"); // Adjust to your gel sizing route
           }}
           onHome={() => {
             setShowPopup(false);

@@ -59,6 +59,17 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
               {t("redirectionPopup.cta")}
             </button>
 
+            {/* Contact Line Section */}
+            <p className="text-gray-600 text-sm mt-6">
+              {t("redirectionPopup.contact_line")}
+            </p>
+            <a
+              href="mailto:clinics@ethnocare.ca"
+              className="text-sm font-bold underline text-[#090C41] inline-block"
+            >
+              clinics@ethnocare.ca
+            </a>
+
           </div>
         </PageTransitionWrapper>
       </div>
