@@ -146,5 +146,13 @@
     "description": "The Ethnocare Liner is currently only available for purchase in Canada.",
     "option1": "Go back",
     "option2": "Pursue"
+  },
+  "tooSmallPopup": {
+    "title": "Notice",
+    "description": "Our gel liners are longer than our silicone liners. If the silicone liner is too small, you can opt for a gel option.",
+    "description2": "Gel liners are {{distance}} long",
+    "gelButton": "Gel liner sizing",
+    "homeButton": "Return to home",
+    "contact_line": "If you want to help or have additional questions you can contact us at:"  
   }
 }

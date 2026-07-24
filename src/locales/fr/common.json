@@ -145,5 +145,13 @@
     "description": "Le Liner Ethnocare est seulement disponible à l'achat au Canada.",
     "option1": "Retour",
     "option2": "Continuer"
+  },
+  "tooSmallPopup": {
+    "title": "Avis",
+    "description": "Nos manchons en gel sont plus longs que nos manchons en silicone. Si le manchon en silicone est trop petit, vous pouvez opter pour une option en gel.",
+    "description2": "Les manchons en gel mesurent {{distance}} de long",
+    "gelButton": "Guide des tailles des manchons en gel",
+    "homeButton": "Retour à l'accueil",
+    "contact_line": "Si vous souhaitez nous aider ou avez des questions supplémentaires, vous pouvez nous contacter à :"
   }
 }
