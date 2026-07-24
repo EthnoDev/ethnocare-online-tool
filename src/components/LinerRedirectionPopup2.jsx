@@ -1,9 +1,10 @@
 // src/components/LinerRedirectionPopup2.jsx
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import XIcon from "../assets/x.svg";
 import RedirectLogo from "../assets/redirect-logo.svg";
 import PageTransitionWrapper from "./PageTransitionWrapper";
+import SelectableOption from "./SelectableOption";
 
 export default function LinerRedirectionPopup2({
   onClose,
@@ -11,6 +12,7 @@ export default function LinerRedirectionPopup2({
   onHome,
 }) {
   const { t } = useTranslation("common");
+  const [selectedBtn, setSelectedBtn] = useState(null);
 
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose?.();
@@ -21,6 +23,11 @@ export default function LinerRedirectionPopup2({
   // Determine unit and dynamic gel distance
   const isImperial = localStorage.getItem("units") === "imperial";
   const gelDistance = isImperial ? "15.7 in ± 0.8 in" : "40 cm ± 2 cm";
+
+  const handleHomeClick = () => {
+    setSelectedBtn("home");
+    setTimeout(onHome, 200);
+  };
 
   return (
     <>
@@ -66,7 +73,7 @@ export default function LinerRedirectionPopup2({
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2.5 w-full">
               {/* Gel Option Button */}
               <button
                 onClick={() => setTimeout(onSelectGel, 200)}
@@ -81,13 +88,14 @@ export default function LinerRedirectionPopup2({
                 />
               </button>
 
-              {/* Return to Home Button */}
-              <button
-                onClick={() => setTimeout(onHome, 200)}
-                className="w-full flex items-center justify-center px-4 py-3 border border-slate-300 text-slate-700 rounded-md font-medium text-md hover:bg-slate-50 transition cursor-pointer"
-              >
-                {t("tooSmallPopup.homeButton")}
-              </button>
+              {/* Return to Home Button (SelectableOption) */}
+              <div className="w-full text-md font-semibold [&_button]:w-full [&_button]:py-3 [&_button]:text-md [&_button]:font-semibold">
+                <SelectableOption
+                  label={t("tooSmallPopup.homeButton")}
+                  selected={selectedBtn === "home"}
+                  onClick={handleHomeClick}
+                />
+              </div>
             </div>
 
             {/* Contact Line Section */}
