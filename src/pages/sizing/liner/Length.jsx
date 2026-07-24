@@ -42,12 +42,16 @@ export default function Length() {
   const handleLeftSelect = () => {
     const choice = isSilicone ? "small" : "home";
     setSelectedOption(choice);
-    //localStorage.setItem("length_choice", choice);
+
+    if (choice === "home") {
+      setTimeout(() => {
+        navigate("/");
+      }, 200);
+    }
   };
 
   const handleConfirmSelect = () => {
     setSelectedOption("confirm");
-    //localStorage.setItem("length_choice", "confirm");
 
     // Navigate to suspension page with smooth feedback delay
     setTimeout(() => {
