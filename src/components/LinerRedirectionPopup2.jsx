@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import XIcon from "../assets/x.svg";
+import RedirectLogo from "../assets/redirect-logo.svg";
 import PageTransitionWrapper from "./PageTransitionWrapper";
 
 export default function LinerRedirectionPopup2({
@@ -69,33 +70,27 @@ export default function LinerRedirectionPopup2({
               {/* Gel Option Button */}
               <button
                 onClick={() => setTimeout(onSelectGel, 200)}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#090C41] text-white rounded-md font-semibold text-sm hover:bg-[#1a1e6f] transition cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#090C41] text-white rounded-md font-semibold text-md hover:bg-[#1a1e6f] transition cursor-pointer"
               >
-                <svg
-                  className="w-4 h-4 stroke-current"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2.5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                  />
-                </svg>
                 <span>{t("tooSmallPopup.gelButton")}</span>
+                <img
+                  src={RedirectLogo}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-4 h-4 brightness-0 invert pointer-events-none"
+                />
               </button>
 
               {/* Return to Home Button */}
               <button
                 onClick={() => setTimeout(onHome, 200)}
-                className="w-full flex items-center justify-center px-4 py-3 border border-slate-300 text-slate-700 rounded-md font-medium text-sm hover:bg-slate-50 transition cursor-pointer"
+                className="w-full flex items-center justify-center px-4 py-3 border border-slate-300 text-slate-700 rounded-md font-medium text-md hover:bg-slate-50 transition cursor-pointer"
               >
                 {t("tooSmallPopup.homeButton")}
               </button>
             </div>
 
-            {/* Contact Line Section (Matching Popup.jsx) */}
+            {/* Contact Line Section */}
             <p className="text-gray-600 text-sm mt-6">
               {t("tooSmallPopup.contact_line")}
             </p>

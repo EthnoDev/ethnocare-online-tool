@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import XIcon from "../assets/x.svg";
+import RedirectLogo from "../assets/redirect-logo.svg";
 import PageTransitionWrapper from "./PageTransitionWrapper";
 
 export default function RedirectionPopup({ onClose, onRedirect }) {
@@ -56,7 +57,13 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
               onClick={() => setTimeout(onRedirect, 200)}
               className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#090C41] text-white rounded-md font-semibold text-md hover:bg-[#1a1e6f] transition cursor-pointer"
             >
-              {t("redirectionPopup.cta")}
+              <span>{t("redirectionPopup.cta")}</span>
+              <img
+                src={RedirectLogo}
+                alt=""
+                aria-hidden="true"
+                className="w-4 h-4 brightness-0 invert pointer-events-none"
+              />
             </button>
 
             {/* Contact Line Section */}
