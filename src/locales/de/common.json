@@ -57,7 +57,9 @@
         "tf-distal-locking": "Distale Arretierung",
         "tf-lanyard": "Zugsystem",
         "tf-distal-seal": "Distale Abdichtung",
-        "tf-cushion": "Polster"
+        "tf-cushion": "Polster",
+        "pin": "Pin",
+        "cushion": "Polster"
     },
     "orientation": {
         "left": "Links",

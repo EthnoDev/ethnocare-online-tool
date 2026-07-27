@@ -57,7 +57,10 @@
     "tf-distal-locking": "Distal locking",
     "tf-lanyard": "Lanyard",
     "tf-distal-seal": "Distal seal",
-    "tf-cushion": "Cushion"
+    "tf-cushion": "Cushion",
+
+    "pin": "Pin",
+    "cushion": "Cushion"
   },
   "orientation": {
     "left": "Left",

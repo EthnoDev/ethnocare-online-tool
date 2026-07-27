@@ -57,7 +57,10 @@
     "tf-distal-locking": "Verrouillage distal",
     "tf-lanyard": "Lanière",
     "tf-distal-seal": "Joint distal",
-    "tf-cushion": "Coussin"
+    "tf-cushion": "Coussin",
+
+    "pin": "Pin",
+    "cushion": "Coussin"
   },
   "orientation": {
     "left": "Gauche",

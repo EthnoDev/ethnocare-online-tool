@@ -57,7 +57,10 @@
     "tf-distal-locking": "Bloqueo distal",
     "tf-lanyard": "Cordón",
     "tf-distal-seal": "Sellado distal",
-    "tf-cushion": "Cojín"
+    "tf-cushion": "Cojín",
+
+    "pin": "Pin",
+    "cushion": "Cojín"
   },
   "orientation": {
     "left": "Izquierda",
