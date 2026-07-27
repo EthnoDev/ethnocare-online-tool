@@ -90,7 +90,7 @@ export default function ThicknessSelection() {
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
-            alt={t("common:pages.liner_thickness")}
+            alt={t("common:pages.thickness_liner")}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>

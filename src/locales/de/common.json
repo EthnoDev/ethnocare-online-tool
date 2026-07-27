@@ -31,7 +31,8 @@
         "circumference2_udtt": "Oberer Underlay TT Umfang",
         "circumference_linertt": "TT Liner Umfang",
         "circumference_linertf": "TF Liner Umfang",
-        "liner_thickness": "Liner-Dickenoption"
+        "length_liner": "Liner-Länge",
+        "thickness_liner": "Liner-Dickenoption"
     },
     "amputation": {
         "tt": "Transtibial",

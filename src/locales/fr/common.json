@@ -31,7 +31,8 @@
     "circumference2_udtt": "Circonférence supérieure Underlay TT",
     "circumference_linertt": "Circonférence Liner TT",
     "circumference_linertf": "Circonférence Liner TF",
-    "liner_thickness": "Option d'épaisseur du Liner"
+    "length_liner": "Longueur du Liner",
+    "thickness_liner": "Option d'épaisseur du Liner"
   },
   "amputation": {
     "tt": "Transtibial",

@@ -106,7 +106,7 @@ export default function Length() {
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
-            alt={isSilicone ? "Silicone Liner Length" : "Gel Liner Length"}
+            alt={t("common:pages.length_liner")}
             className="w-74 h-auto object-contain rounded-xl"
           />
         </div>
