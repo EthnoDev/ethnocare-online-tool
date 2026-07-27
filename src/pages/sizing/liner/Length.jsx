@@ -10,6 +10,24 @@ import LinerRedirectionPopup2 from "../../../components/LinerRedirectionPopup2";
 import gelSvg from "../../../assets/lengths/Liner/gel.svg";
 import siliconeSvg from "../../../assets/lengths/Liner/silicone.svg";
 
+// Helper function matching MeasurementInput's Gel mapping rules
+const mapGelCircumference = (rawVal, isImperial) => {
+  const numericVal = parseFloat(rawVal);
+  if (isNaN(numericVal)) return null;
+
+  // Convert to cm if input was saved in inches
+  const valCm = isImperial ? numericVal * 2.54 : numericVal;
+
+  const matches = [];
+  if (valCm >= 15 && valCm <= 22) matches.push("S");
+  if (valCm >= 19 && valCm <= 29) matches.push("M");
+  if (valCm >= 23 && valCm <= 37) matches.push("L");
+  if (valCm >= 27 && valCm <= 40) matches.push("XL");
+  if (valCm >= 31 && valCm <= 53) matches.push("XXL");
+
+  return matches.length > 0 ? matches.join(",") : null;
+};
+
 export default function Length() {
   const { t } = useTranslation(["pages", "common"]);
   const navigate = useNavigate();
@@ -19,10 +37,13 @@ export default function Length() {
 
   // Determine back navigation path based on saved amputation type
   const amputation = localStorage.getItem("amputation");
-  const backPath =
-    amputation === "transfemoral"
-      ? "/sizing/liner/tf/circumference"
-      : "/sizing/liner/tt/circumference";
+  const isTransfemoral = amputation === "transfemoral";
+  const backPath = isTransfemoral
+    ? "/sizing/liner/tf/circumference"
+    : "/sizing/liner/tt/circumference";
+
+  // Product key used for storing liner measurements
+  const productKey = isTransfemoral ? "tfLiner" : "ttLiner";
 
   // Determine dynamic distance string based on units & material
   const isImperial = localStorage.getItem("units") === "imperial";
@@ -43,9 +64,7 @@ export default function Length() {
   // Handlers for option selections
   const handleLeftSelect = () => {
     if (isSilicone) {
-      // 1. Show click state immediately
       setSelectedOption("small");
-      // 2. Wait 200ms for visual feedback, then open popup and reset selection
       setTimeout(() => {
         setShowPopup(true);
         setSelectedOption(null);
@@ -60,8 +79,6 @@ export default function Length() {
 
   const handleConfirmSelect = () => {
     setSelectedOption("confirm");
-
-    // Navigate to suspension page with smooth feedback delay
     setTimeout(() => {
       navigate("/sizing/liner/suspension");
     }, 200);
@@ -124,7 +141,21 @@ export default function Length() {
         <LinerRedirectionPopup2
           onClose={() => setShowPopup(false)}
           onSelectGel={() => {
+            // 1. Switch material to gel
             localStorage.setItem("liner_material", "gel");
+
+            // 2. Retrieve raw circumference saved from previous step
+            const rawCircumference = localStorage.getItem("raw_circumference");
+
+            // 3. Recalculate Gel size mapping
+            const mappedGelSize = mapGelCircumference(rawCircumference, isImperial);
+
+            if (mappedGelSize) {
+              // Store mapped size under both generic and product-specific keys
+              localStorage.setItem("circumference", mappedGelSize);
+            }
+
+            // 4. Navigate to suspension page
             navigate("/sizing/liner/suspension");
           }}
           onHome={() => {
