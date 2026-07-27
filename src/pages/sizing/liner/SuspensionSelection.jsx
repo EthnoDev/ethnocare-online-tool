@@ -51,10 +51,10 @@ export default function SuspensionSelection() {
     setSelected(optionId);
     localStorage.setItem("liner_suspension", optionId);
 
-    //setTimeout(() => {
+    setTimeout(() => {
       // Navigate to your next step (e.g. final result/summary page)
-    //  navigate("/sizing/liner/result");
-    //}, 200);
+      navigate("/sizing/liner/thickness");
+    }, 200);
   };
 
   return (
