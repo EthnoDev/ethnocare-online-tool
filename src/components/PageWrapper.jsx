@@ -51,7 +51,7 @@ export default function PageWrapper({
   } else if (product === "Overlay") {
     totalSteps = (amputation === "transfemoral" || amputation === "tf") ? 4 : 5;
   } else if (product === "Liner") {
-    totalSteps = 6;
+    totalSteps = 7;
   } else {
   }
 
