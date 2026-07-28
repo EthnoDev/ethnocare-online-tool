@@ -1,5 +1,6 @@
 // src/pages/sizing/liner/ThicknessSelection.jsx
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import SelectableOption from "../../../components/SelectableOption";
@@ -37,6 +38,7 @@ import ttSiliconeLocking6Imperial from "../../../assets/thickness/TT Silicone Lo
 import ttSiliconeLocking6Metric from "../../../assets/thickness/TT Silicone Locking/6_metric.svg";
 
 export default function ThicknessSelection() {
+  const navigate = useNavigate();
   const { t } = useTranslation(["pages", "common"]);
 
   const [selectedThickness, setSelectedThickness] = useState(null);
@@ -167,12 +169,12 @@ export default function ThicknessSelection() {
 
   const validate = () => {
     if (!selectedThickness) {
-        // Store the KEY instead of calling t() here
-        setError("thicknessLinerSizing.error"); 
-        return optionsRef.current;
+      // Store the KEY instead of calling t() here
+      setError("thicknessLinerSizing.error"); 
+      return optionsRef.current;
     }
     return null;
-   };
+  };
 
   const handleConfirm = () => {
     setConfirmSelected(true);
@@ -187,7 +189,10 @@ export default function ThicknessSelection() {
     // Save selection to localStorage
     localStorage.setItem("liner_thickness", selectedThickness);
 
-    // Navigation logic paused for now
+    // Navigate to final size result page
+    setTimeout(() => {
+      navigate("/sizing/liner/size");
+    }, 200);
   };
 
   return (
@@ -243,15 +248,15 @@ export default function ThicknessSelection() {
           </div>
 
           {/* Validation Error Message */}
-            {error && (
+          {error && (
             <p
-                className="mt-3 text-center text-sm text-red-600"
-                role="alert"
-                aria-live="polite"
+              className="mt-3 text-center text-sm text-red-600"
+              role="alert"
+              aria-live="polite"
             >
-                {t(error)} {/* <--- Translate here so it updates whenever language changes! */}
+              {t(error)}
             </p>
-            )}
+          )}
         </div>
 
         {/* 5. Secondary Description */}

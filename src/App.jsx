@@ -43,6 +43,7 @@ import SizingLinerTFCircumference from "./pages/sizing/liner/TF/Circumference";
 import SizingLinerLength from "./pages/sizing/liner/Length";
 import SizingLinerSuspensionSelection from "./pages/sizing/liner/SuspensionSelection";
 import SizingLinerThicknessSelection from "./pages/sizing/liner/ThicknessSelection";
+import SizeLiner from "./pages/sizing/liner/Size";
 import AssistanceWelcome from "./pages/assistance/Welcome";
 import AssistanceAmputationSelection from "./pages/assistance/AmputationSelection";
 import AssistanceProductSelection from "./pages/assistance/ProductSelection";
@@ -106,6 +107,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/liner/length" element={<SizingLinerLength />} />
         <Route path="/sizing/liner/suspension" element={<SizingLinerSuspensionSelection />} />
         <Route path="/sizing/liner/thickness" element={<SizingLinerThicknessSelection />} />
+        <Route path="/sizing/liner/size" element={<SizeLiner />} />
       </Routes>
     </AnimatePresence>
   );
