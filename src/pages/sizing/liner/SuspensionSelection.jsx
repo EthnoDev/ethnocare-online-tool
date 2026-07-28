@@ -41,10 +41,15 @@ export default function SuspensionSelection() {
 
   const lang = pickLang(baseLang(i18n.language));
 
-  // Determine liner material ('gel' vs 'silicone')
+  // Determine liner material ('gel' vs 'silicone') & amputation
   const linerMaterial = localStorage.getItem("liner_material");
+  const amputation = localStorage.getItem("amputation"); // 'transfemoral' or 'transtibial'
+
   const isSilicone = linerMaterial === "s30" || linerMaterial === "s40";
   const materialKey = isSilicone ? "silicone" : "gel";
+
+  // Hide Cushion for Transfemoral Silicone
+  const hideCushion = isSilicone && amputation === "transfemoral";
 
   const handleSelect = (optionId) => {
     if (selected) return;
@@ -52,7 +57,7 @@ export default function SuspensionSelection() {
     localStorage.setItem("liner_suspension", optionId);
 
     setTimeout(() => {
-      // Navigate to your next step (e.g. final result/summary page)
+      // Navigate to next step
       navigate("/sizing/liner/thickness");
     }, 200);
   };
@@ -77,29 +82,31 @@ export default function SuspensionSelection() {
 
         {/* 3. Option Selection Container */}
         <div className="mt-8 flex flex-col items-center space-y-6">
-          {/* Option: Cushion */}
-          <button
-            type="button"
-            onClick={() => handleSelect("cushion")}
-            className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
-          >
-            <div
-              className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
-                selected === "cushion"
-                  ? "ring-4 ring-[#090C41]"
-                  : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
-              }`}
+          {/* Option: Cushion (Conditionally Rendered) */}
+          {!hideCushion && (
+            <button
+              type="button"
+              onClick={() => handleSelect("cushion")}
+              className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
             >
-              <img
-                src={
-                  SUSPENSION_IMAGES[materialKey].cushion[lang] ||
-                  SUSPENSION_IMAGES[materialKey].cushion.en
-                }
-                alt={t("common:suspension.cushion")}
-                className="h-auto w-full block rounded-xl max-w-[320px] object-cover"
-              />
-            </div>
-          </button>
+              <div
+                className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
+                  selected === "cushion"
+                    ? "ring-4 ring-[#090C41]"
+                    : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
+                }`}
+              >
+                <img
+                  src={
+                    SUSPENSION_IMAGES[materialKey].cushion[lang] ||
+                    SUSPENSION_IMAGES[materialKey].cushion.en
+                  }
+                  alt={t("common:suspension.cushion")}
+                  className="h-auto w-full block rounded-xl max-w-[320px] object-cover"
+                />
+              </div>
+            </button>
+          )}
 
           {/* Option: Pin */}
           <button
