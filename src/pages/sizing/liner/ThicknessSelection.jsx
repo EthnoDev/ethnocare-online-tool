@@ -1,5 +1,5 @@
 // src/pages/sizing/liner/ThicknessSelection.jsx
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import SelectableOption from "../../../components/SelectableOption";
@@ -26,20 +26,12 @@ import ttSiliconeLocking3Metric from "../../../assets/thickness/TT Silicone Lock
 
 export default function ThicknessSelection() {
   const { t } = useTranslation(["pages", "common"]);
+
   const [selectedThickness, setSelectedThickness] = useState(null);
-
   const [confirmSelected, setConfirmSelected] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleConfirm = () => {
-        if (!selectedThickness) return; // Prevent confirming without a thickness selection
-
-        setConfirmSelected(true);
-        localStorage.setItem("liner_thickness", selectedThickness);
-
-        //setTimeout(() => {
-            //navigate("/sizing/liner/result"); // Navigate to your next route
-        //}, 200);
-    };
+  const optionsRef = useRef(null);
 
   // 1. Get localStorage variables
   const linerMaterial = localStorage.getItem("liner_material");
@@ -122,6 +114,31 @@ export default function ThicknessSelection() {
   const selectedImage = getThicknessImage();
   const options = getThicknessOptions();
 
+  const validate = () => {
+    if (!selectedThickness) {
+      const errText = t("thicknessLinerSizing.error");
+      setError(errText);
+      return optionsRef.current;
+    }
+    return null;
+  };
+
+  const handleConfirm = () => {
+    setConfirmSelected(true);
+    setTimeout(() => setConfirmSelected(false), 200);
+
+    const firstErrorEl = validate();
+    if (firstErrorEl) {
+      firstErrorEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+
+    // Save selection to localStorage
+    localStorage.setItem("liner_thickness", selectedThickness);
+
+    // Navigation logic paused for now
+  };
+
   return (
     <PageWrapper
       showBack={true}
@@ -140,44 +157,64 @@ export default function ThicknessSelection() {
           {t("thicknessLinerSizing.description")}
         </p>
 
-       {/* 3. Image Display */}
+        {/* 3. Image Display */}
         <div className="mt-8 flex justify-center">
-        <img
+          <img
             src={selectedImage}
             alt={t("common:pages.thickness_liner")}
             className="w-74 h-auto object-contain rounded-xl"
-        />
+          />
         </div>
 
-        {/* 4. Options Container (Restricted to exact image width) */}
-        <div className="mt-8 flex items-center justify-center gap-3 w-74 mx-auto">
-        {options.map((opt) => (
-            <div
-            key={opt.id}
-            className="flex-1 [&>div]:items-stretch [&_button]:w-full"
+        {/* 4. Options Container */}
+        <div
+          ref={optionsRef}
+          className="mt-8 flex flex-col items-center w-74 mx-auto"
+          aria-invalid={!!error}
+        >
+          <div className="flex items-center justify-center gap-3 w-full">
+            {options.map((opt) => (
+              <div
+                key={opt.id}
+                className="flex-1 [&>div]:items-stretch [&_button]:w-full"
+              >
+                <SelectableOption
+                  compact
+                  selected={selectedThickness === opt.id}
+                  onClick={() => {
+                    setSelectedThickness(opt.id);
+                    if (error) setError("");
+                  }}
+                  label={opt.label}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Validation Error Message */}
+          {error && (
+            <p
+              className="mt-3 text-center text-sm text-red-600"
+              role="alert"
+              aria-live="polite"
             >
-            <SelectableOption
-                compact
-                selected={selectedThickness === opt.id}
-                onClick={() => setSelectedThickness(opt.id)}
-                label={opt.label}
-            />
-            </div>
-        ))}
+              {error}
+            </p>
+          )}
         </div>
 
         {/* 5. Secondary Description */}
         <p className="mt-2 text-center text-sm text-slate-500">
-        {t("thicknessLinerSizing.description2")}
+          {t("thicknessLinerSizing.description2")}
         </p>
 
         {/* 6. Confirm Button */}
         <div className="mt-12 w-74 mx-auto [&>div]:items-stretch [&_button]:w-full">
-        <SelectableOption
+          <SelectableOption
             label={t("common:cta.confirm")}
             selected={confirmSelected}
             onClick={handleConfirm}
-        />
+          />
         </div>
       </div>
     </PageWrapper>

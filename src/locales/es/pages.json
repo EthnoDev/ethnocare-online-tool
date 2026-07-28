@@ -248,6 +248,7 @@
   "thicknessLinerSizing": {
     "title": "Grosor del perfil",
     "description": "Seleccione el diseño de su sistema de suspensión",
-    "description2": "Seleccione un grosor para ver la sección transversal"
+    "description2": "Seleccione un grosor para ver la sección transversal",
+    "error": "Por favor, elija un grosor."
   }
 }

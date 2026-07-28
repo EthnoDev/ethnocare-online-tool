@@ -248,6 +248,7 @@
   "thicknessLinerSizing": {
     "title": "Épaisseur du profil",
     "description": "Sélectionnez le design de votre système de suspension",
-    "description2": "Sélectionnez une épaisseur pour voir la section transversale"
+    "description2": "Sélectionnez une épaisseur pour voir la section transversale",
+    "error": "Veuillez choisir une épaisseur."
   }
 }

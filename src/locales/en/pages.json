@@ -252,6 +252,7 @@
   "thicknessLinerSizing": {
     "title": "Profile Thickness",
     "description": "Select your suspension system's design",
-    "description2": "Select a thickness to see the cross section"
+    "description2": "Select a thickness to see the cross section",
+    "error": "Please select a thickness."
   }
 }
