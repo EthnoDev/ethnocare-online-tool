@@ -90,7 +90,7 @@ export default function SizeLiner() {
           <img
             src={getProductImage()}
             alt="Liner Product"
-            className="w-[80px] h-auto object-contain rounded-xl"
+            className="w-[90px] h-auto object-contain rounded-xl"
           />
 
           <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
