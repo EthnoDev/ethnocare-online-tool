@@ -247,6 +247,7 @@
   },
   "thicknessLinerSizing": {
     "title": "Profilstärke",
-    "description": "Wählen Sie das Design Ihres Suspensionssystems aus"
+    "description": "Wählen Sie das Design Ihres Suspensionssystems aus",
+    "description2": "Wählen Sie eine Stärke, um den Querschnitt zu sehen"
   }
 }
