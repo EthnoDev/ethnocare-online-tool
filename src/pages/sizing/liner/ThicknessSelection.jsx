@@ -28,6 +28,19 @@ export default function ThicknessSelection() {
   const { t } = useTranslation(["pages", "common"]);
   const [selectedThickness, setSelectedThickness] = useState(null);
 
+  const [confirmSelected, setConfirmSelected] = useState(false);
+
+  const handleConfirm = () => {
+        if (!selectedThickness) return; // Prevent confirming without a thickness selection
+
+        setConfirmSelected(true);
+        localStorage.setItem("liner_thickness", selectedThickness);
+
+        //setTimeout(() => {
+            //navigate("/sizing/liner/result"); // Navigate to your next route
+        //}, 200);
+    };
+
   // 1. Get localStorage variables
   const linerMaterial = localStorage.getItem("liner_material");
   const suspension = localStorage.getItem("liner_suspension"); // 'cushion' or 'pin'
@@ -157,6 +170,15 @@ export default function ThicknessSelection() {
         <p className="mt-2 text-center text-sm text-slate-500">
         {t("thicknessLinerSizing.description2")}
         </p>
+
+        {/* 6. Confirm Button */}
+        <div className="mt-12 w-74 mx-auto [&>div]:items-stretch [&_button]:w-full">
+        <SelectableOption
+            label={t("common:cta.confirm")}
+            selected={confirmSelected}
+            onClick={handleConfirm}
+        />
+        </div>
       </div>
     </PageWrapper>
   );
