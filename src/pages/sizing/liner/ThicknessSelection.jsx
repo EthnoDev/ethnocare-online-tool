@@ -7,22 +7,34 @@ import SelectableOption from "../../../components/SelectableOption";
 // Asset Imports - Gel Cushion
 import gelCushion3Imperial from "../../../assets/thickness/Gel Cushion/3_imperial.svg";
 import gelCushion3Metric from "../../../assets/thickness/Gel Cushion/3_metric.svg";
+import gelCushion6Imperial from "../../../assets/thickness/Gel Cushion/6_imperial.svg";
+import gelCushion6Metric from "../../../assets/thickness/Gel Cushion/6_metric.svg";
+import gelCushion9Imperial from "../../../assets/thickness/Gel Cushion/9_imperial.svg";
+import gelCushion9Metric from "../../../assets/thickness/Gel Cushion/9_metric.svg";
 
 // Asset Imports - Gel Locking (Pin)
 import gelLocking3Imperial from "../../../assets/thickness/Gel Locking/3_imperial.svg";
 import gelLocking3Metric from "../../../assets/thickness/Gel Locking/3_metric.svg";
+import gelLocking6Imperial from "../../../assets/thickness/Gel Locking/6_imperial.svg";
+import gelLocking6Metric from "../../../assets/thickness/Gel Locking/6_metric.svg";
+import gelLocking9Imperial from "../../../assets/thickness/Gel Locking/9_imperial.svg";
+import gelLocking9Metric from "../../../assets/thickness/Gel Locking/9_metric.svg";
 
-// Asset Imports - TF Silicone Locking
+// Asset Imports - TF Silicone Locking (Only 1 size variation)
 import tfSiliconeLockingImperial from "../../../assets/thickness/TF Silicone Locking/imperial.svg";
 import tfSiliconeLockingMetric from "../../../assets/thickness/TF Silicone Locking/metric.svg";
 
 // Asset Imports - TT Silicone Cushion
 import ttSiliconeCushion3Imperial from "../../../assets/thickness/TT Silicone Cushion/3_imperial.svg";
 import ttSiliconeCushion3Metric from "../../../assets/thickness/TT Silicone Cushion/3_metric.svg";
+import ttSiliconeCushion6Imperial from "../../../assets/thickness/TT Silicone Cushion/6_imperial.svg";
+import ttSiliconeCushion6Metric from "../../../assets/thickness/TT Silicone Cushion/6_metric.svg";
 
 // Asset Imports - TT Silicone Locking
 import ttSiliconeLocking3Imperial from "../../../assets/thickness/TT Silicone Locking/3_imperial.svg";
 import ttSiliconeLocking3Metric from "../../../assets/thickness/TT Silicone Locking/3_metric.svg";
+import ttSiliconeLocking6Imperial from "../../../assets/thickness/TT Silicone Locking/6_imperial.svg";
+import ttSiliconeLocking6Metric from "../../../assets/thickness/TT Silicone Locking/6_metric.svg";
 
 export default function ThicknessSelection() {
   const { t } = useTranslation(["pages", "common"]);
@@ -42,39 +54,78 @@ export default function ThicknessSelection() {
   const isSilicone = linerMaterial === "s30" || linerMaterial === "s40";
   const isCushion = suspension === "cushion";
 
-  // 2. Resolve image based on decision tree
+  // 2. Map imported SVG images into clean lookup dictionaries
+  const gelCushionImages = {
+    "3mm_imperial": gelCushion3Imperial,
+    "3mm_metric": gelCushion3Metric,
+    "6mm_imperial": gelCushion6Imperial,
+    "6mm_metric": gelCushion6Metric,
+    "9mm_imperial": gelCushion9Imperial,
+    "9mm_metric": gelCushion9Metric,
+  };
+
+  const gelLockingImages = {
+    "3mm_imperial": gelLocking3Imperial,
+    "3mm_metric": gelLocking3Metric,
+    "6mm_imperial": gelLocking6Imperial,
+    "6mm_metric": gelLocking6Metric,
+    "9mm_imperial": gelLocking9Imperial,
+    "9mm_metric": gelLocking9Metric,
+  };
+
+  const ttSiliconeCushionImages = {
+    "3mm_imperial": ttSiliconeCushion3Imperial,
+    "3mm_metric": ttSiliconeCushion3Metric,
+    "6mm_imperial": ttSiliconeCushion6Imperial,
+    "6mm_metric": ttSiliconeCushion6Metric,
+  };
+
+  const ttSiliconeLockingImages = {
+    "3mm_imperial": ttSiliconeLocking3Imperial,
+    "3mm_metric": ttSiliconeLocking3Metric,
+    "6mm_imperial": ttSiliconeLocking6Imperial,
+    "6mm_metric": ttSiliconeLocking6Metric,
+  };
+
+  // 3. Resolve dynamic image based on selected state + decision tree
   const getThicknessImage = () => {
+    // Determine effective thickness ID (defaults to '3mm' if unselected)
+    const activeThickness = selectedThickness || "3mm";
+    const unitKey = isImperial ? "imperial" : "metric";
+    const imageKey = `${activeThickness}_${unitKey}`;
+
     if (!isSilicone) {
-      // GEL MATERIAL (Amputation doesn't matter)
+      // GEL MATERIAL
       if (isCushion) {
-        return isImperial ? gelCushion3Imperial : gelCushion3Metric;
+        return gelCushionImages[imageKey] || gelCushion3Metric;
       } else {
         // Locking / Pin
-        return isImperial ? gelLocking3Imperial : gelLocking3Metric;
+        return gelLockingImages[imageKey] || gelLocking3Metric;
       }
     } else {
-      // SILICONE MATERIAL (Amputation matters)
+      // SILICONE MATERIAL
       if (amputation === "transfemoral") {
+        // TF Silicone (Has no 3mm/6mm variants)
         return isImperial
           ? tfSiliconeLockingImperial
           : tfSiliconeLockingMetric;
       } else {
         // Transtibial
         if (isCushion) {
-          return isImperial
-            ? ttSiliconeCushion3Imperial
-            : ttSiliconeCushion3Metric;
+          return (
+            ttSiliconeCushionImages[imageKey] || ttSiliconeCushion3Metric
+          );
         } else {
           // Locking / Pin
-          return isImperial
-            ? ttSiliconeLocking3Imperial
-            : ttSiliconeLocking3Metric;
+          return (
+            ttSiliconeLockingImages[imageKey] || ttSiliconeLocking3Metric
+          );
         }
       }
     }
   };
 
-  // 3. Resolve options based on material, amputation, and units
+  // 4. Resolve options based on material, amputation, and units
   const getThicknessOptions = () => {
     if (!isSilicone) {
       // GEL: 3 options
@@ -162,7 +213,7 @@ export default function ThicknessSelection() {
           <img
             src={selectedImage}
             alt={t("common:pages.thickness_liner")}
-            className="w-74 h-auto object-contain rounded-xl"
+            className="w-74 h-auto object-contain rounded-xl transition-all duration-200"
           />
         </div>
 
