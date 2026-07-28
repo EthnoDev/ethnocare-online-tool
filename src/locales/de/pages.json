@@ -250,5 +250,15 @@
     "description": "Wählen Sie das Design Ihres Suspensionssystems aus",
     "description2": "Wählen Sie eine Stärke, um den Querschnitt zu sehen",
     "error": "Bitte wählen Sie eine Profilstärke aus."
+  },
+  "linerSizing": {
+    "title": "Größe",
+    "description": "Basierend auf Ihren Antworten:",
+    "amp": "Amputation",
+    "material": "Material",
+    "circumference": "Umfang",
+    "length": "Länge",
+    "suspension": "Suspension",
+    "thickness": "Stärke"
   }
 }

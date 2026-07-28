@@ -254,5 +254,16 @@
     "description": "Select your suspension system's design",
     "description2": "Select a thickness to see the cross section",
     "error": "Please select a thickness."
+  },
+  "LinerSizing": {
+    "title": "Size",
+    "description": "Based on your answers:",
+    "amp": "Amputation",
+    "activityLevel": "Activity Level",
+    "material": "Material",
+    "circumference": "Circumference",
+    "length": "Length",
+    "suspension": "Suspension",
+    "thickness": "Thickness"
   }
 }

@@ -250,5 +250,16 @@
     "description": "Sélectionnez le design de votre système de suspension",
     "description2": "Sélectionnez une épaisseur pour voir la section transversale",
     "error": "Veuillez choisir une épaisseur."
+  },
+  "LinerSizing": {
+    "title": "Taille",
+    "description": "En fonction de vos réponses:",
+    "amp": "Amputation",
+    "activityLevel": "Niveau d'activité",
+    "material": "Matériau",
+    "circumference": "Circonférence",
+    "length": "Longueur",
+    "suspension": "Suspension",
+    "thickness": "Épaisseur"
   }
 }

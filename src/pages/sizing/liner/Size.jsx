@@ -16,9 +16,39 @@ export default function SizeLiner() {
   const { t } = useTranslation(["pages", "common"]);
 
   /** ---------- Data Retrieval ---------- */
-  const linerMaterial = localStorage.getItem("liner_material");
-  const suspension = localStorage.getItem("liner_suspension"); // 'cushion' or 'pin'
+  const unit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
 
+  // Amputation
+  const rawAmputation = localStorage.getItem("amputation") || "—";
+  const amputation =
+    rawAmputation !== "—"
+      ? rawAmputation.charAt(0).toUpperCase() + rawAmputation.slice(1).toLowerCase()
+      : "—";
+
+  // Activity Level
+  const rawActivity = localStorage.getItem("liner_activity_level") || "—";
+  const activityLevel = rawActivity !== "—" ? rawActivity.toUpperCase() : "—";
+    
+  // Material
+  const linerMaterial = localStorage.getItem("liner_material") || "—";
+  const materialLabel =
+    linerMaterial !== "—" ? linerMaterial.toUpperCase() : "—";
+
+  // Circumference & Length
+  const circumferenceRaw = localStorage.getItem("raw_circumference") || "—";
+  const lengthRaw = localStorage.getItem("raw_length") || "—";
+
+  // Suspension
+  const suspension = localStorage.getItem("liner_suspension") || "—"; // 'cushion' or 'pin'
+  const suspensionLabel =
+    suspension !== "—"
+      ? t(`suspension.${suspension}`, { ns: "common", defaultValue: suspension.charAt(0).toUpperCase() + suspension.slice(1) })
+      : "—";
+
+  // Thickness
+  const thickness = localStorage.getItem("liner_thickness") || "—"; // e.g. '3mm', '6mm'
+
+  // Material Checks
   const isSilicone = linerMaterial === "s30" || linerMaterial === "s40";
   const isCushion = suspension === "cushion";
 
@@ -54,13 +84,33 @@ export default function SizeLiner() {
           <p className="text-4xl font-bold font-sans text-[#090C41]">LNR</p>
         </div>
 
-        {/* 3. Product Summary Card (Image only for now) */}
-        <div className="w-full max-w-md mx-auto flex flex-row items-center justify-center mt-6 mb-10">
+        {/* 3. Product Summary Card */}
+        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
           <img
             src={getProductImage()}
             alt="Liner Product"
-            className="w-[180px] h-auto object-contain rounded-xl"
+            className="w-[80px] h-auto object-contain rounded-xl"
           />
+
+          <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
+            <div className="space-y-1">
+              <p className="text-slate-900">
+                <strong>{t("LinerSizing.description")}</strong>
+              </p>
+              
+              <p>{t("LinerSizing.amp")}: {amputation}</p>
+              <p>{t("LinerSizing.activityLevel")}: {activityLevel}</p>
+              <p>{t("LinerSizing.material")}: {materialLabel}</p>
+              <p>
+                {t("LinerSizing.circumference")}: {circumferenceRaw} {unit}
+              </p>
+              <p>
+                {t("LinerSizing.length")}: {lengthRaw} {unit}
+              </p>
+              <p>{t("LinerSizing.suspension")}: {suspensionLabel}</p>
+              <p>{t("LinerSizing.thickness")}: {thickness}</p>
+            </div>
+          </div>
         </div>
 
         {/* 4. Restart Button */}

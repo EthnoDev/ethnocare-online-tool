@@ -250,5 +250,16 @@
     "description": "Seleccione el diseño de su sistema de suspensión",
     "description2": "Seleccione un grosor para ver la sección transversal",
     "error": "Por favor, elija un grosor."
+  },
+  "LinerSizing": {
+    "title": "Talla",
+    "description": "Basado en sus respuestas:",
+    "amp": "Amputación",
+    "activityLevel": "Nivel de actividad",
+    "material": "Material",
+    "circumference": "Circunferencia",
+    "length": "Longitud",
+    "suspension": "Suspensión",
+    "thickness": "Grosor"
   }
 }
