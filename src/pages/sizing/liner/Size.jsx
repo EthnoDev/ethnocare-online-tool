@@ -18,7 +18,7 @@ export default function SizeLiner() {
   /** ---------- Data Retrieval ---------- */
   const unit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
 
-  // Amputation (Matching SizeTF.jsx logic)
+  // Amputation
   const rawAmputation = localStorage.getItem("amputation") || "tf"; 
   let amputation = rawAmputation.charAt(0).toUpperCase() + rawAmputation.slice(1).toLowerCase();
 
@@ -31,11 +31,11 @@ export default function SizeLiner() {
   const activityLevel = rawActivity !== "—" ? rawActivity.toUpperCase() : "—";
     
   // Material
-  const linerMaterial = localStorage.getItem("liner_material") || "—";
-  const materialLabel =
-    linerMaterial !== "—" ? linerMaterial.toUpperCase() : "—";
+  const linerMaterial = localStorage.getItem("liner_material") || "—"; // 's30', 's40', or 'gel'
+  const materialLabel = linerMaterial !== "—" ? linerMaterial.toUpperCase() : "—";
 
   // Circumference & Length
+  const circumferenceMapped = localStorage.getItem("liner_circumference") || localStorage.getItem("raw_circumference") || "XX";
   const circumferenceRaw = localStorage.getItem("raw_circumference") || "—";
   const lengthRaw = localStorage.getItem("raw_length") || "—";
 
@@ -47,11 +47,45 @@ export default function SizeLiner() {
       : "—";
 
   // Thickness
-  const thickness = localStorage.getItem("liner_thickness") || "—"; // e.g. '3mm', '6mm'
+  const thicknessRaw = localStorage.getItem("liner_thickness") || "—"; // e.g., '3mm', '6mm', '3-6mm', '3-9mm', or just numbers '3', '6'
+  // Extract digits/hyphens for code formatting (e.g., "3mm" -> "3", "3-6mm" -> "3-6")
+  const thicknessCode = thicknessRaw.replace(/[^0-9-]/g, "") || "X";
 
-  // Material Checks
+  // Material & System Checks
   const isSilicone = linerMaterial === "s30" || linerMaterial === "s40";
   const isCushion = suspension === "cushion";
+  const isPin = suspension === "pin";
+  const suspensionCode = isCushion ? "C" : isPin ? "L" : "X";
+
+  const ampKey = rawAmputation.toLowerCase();
+
+  /** ---------- Size Code Logic ---------- */
+  const getSizeCode = () => {
+    // 1. Transtibial + S30 (Pin or Cushion)
+    if (ampKey === "transtibial" && linerMaterial === "s30") {
+      return `LNR-SIL-${suspensionCode}-${thicknessCode}-${circumferenceMapped}-30`;
+    }
+
+    // 2. Transtibial + S40 (Pin or Cushion) -> Fixed thickness 3
+    if (ampKey === "transtibial" && linerMaterial === "s40") {
+      return `LNR-SIL-${suspensionCode}-3-${circumferenceMapped}-40`;
+    }
+
+    // 3. Transfemoral + S40 + Pin -> Fixed thickness 2
+    if (ampKey === "transfemoral" && linerMaterial === "s40" && isPin) {
+      return `LNR-TF-SIL-L-2-${circumferenceMapped}-40`;
+    }
+
+    // 4. Transtibial OR Transfemoral + Gel (Pin or Cushion)
+    if ((ampKey === "transtibial" || ampKey === "transfemoral") && (linerMaterial === "gel" || !isSilicone)) {
+      return `LNR-GEL-${suspensionCode}-${thicknessCode}-${circumferenceMapped}`;
+    }
+
+    // Fallback default format
+    return `LNR-${circumferenceMapped}`;
+  };
+
+  const sizeCode = getSizeCode();
 
   /** ---------- Product Image Selection ---------- */
   const getProductImage = () => {
@@ -80,9 +114,9 @@ export default function SizeLiner() {
           {t("LinerSizing.title")}
         </h1>
 
-        {/* 2. Primary Size Code Placeholder */}
+        {/* 2. Primary Size Code Display */}
         <div className="flex flex-col items-center mb-6">
-          <p className="text-4xl font-bold font-sans text-[#090C41]">LNR</p>
+          <p className="text-4xl font-bold font-sans text-[#090C41]">{sizeCode}</p>
         </div>
 
         {/* 3. Product Summary Card */}
@@ -90,7 +124,7 @@ export default function SizeLiner() {
           <img
             src={getProductImage()}
             alt="Liner Product"
-            className="w-[90px] h-auto object-contain rounded-xl"
+            className="w-[140px] h-auto object-contain rounded-xl"
           />
 
           <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
@@ -109,7 +143,7 @@ export default function SizeLiner() {
                 {t("LinerSizing.length")}: {lengthRaw} {unit}
               </p>
               <p>{t("LinerSizing.suspension")}: {suspensionLabel}</p>
-              <p>{t("LinerSizing.thickness")}: {thickness}</p>
+              <p>{t("LinerSizing.thickness")}: {thicknessRaw}</p>
             </div>
           </div>
         </div>
