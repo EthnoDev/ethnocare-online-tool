@@ -30,13 +30,14 @@ export default function AssistanceSizeSelection() {
   const refSide = useRef(null);
   const refSusp = useRef(null);
 
+  // Updated Group component to dynamically translate error key
   const Group = ({ title, error, sectionRef, children }) => (
     <section ref={sectionRef} className="w-full text-left" aria-invalid={!!error}>
       <h2 className="font-semibold text-[18px] mb-2">{title}</h2>
       <div className="flex flex-wrap gap-3">{children}</div>
       {error && (
         <p className="mt-2 text-sm text-red-600" role="alert" aria-live="polite">
-          {error}
+          {t(error)} {/* <--- Translates key dynamically on render */}
         </p>
       )}
     </section>
@@ -45,14 +46,15 @@ export default function AssistanceSizeSelection() {
   const validate = () => {
     const next = {};
 
-    if (!circumference) next.circumference = t("sizeAssistance.errorCircumference");
-    if (!length)        next.length        = t("sizeAssistance.errorLength");
+    // Store keys instead of translated strings
+    if (!circumference) next.circumference = "sizeAssistance.errorCircumference";
+    if (!length)        next.length        = "sizeAssistance.errorLength";
 
     if (amputation === "transtibial" && !side)
-      next.side = t("sizeAssistance.errorSide");
+      next.side = "sizeAssistance.errorSide";
 
     if (amputation === "transfemoral" && !suspension)
-      next.suspension = t("sizeAssistance.errorSuspension");
+      next.suspension = "sizeAssistance.errorSuspension";
 
     setErrors(next);
 

@@ -167,12 +167,12 @@ export default function ThicknessSelection() {
 
   const validate = () => {
     if (!selectedThickness) {
-      const errText = t("thicknessLinerSizing.error");
-      setError(errText);
-      return optionsRef.current;
+        // Store the KEY instead of calling t() here
+        setError("thicknessLinerSizing.error"); 
+        return optionsRef.current;
     }
     return null;
-  };
+   };
 
   const handleConfirm = () => {
     setConfirmSelected(true);
@@ -243,15 +243,15 @@ export default function ThicknessSelection() {
           </div>
 
           {/* Validation Error Message */}
-          {error && (
+            {error && (
             <p
-              className="mt-3 text-center text-sm text-red-600"
-              role="alert"
-              aria-live="polite"
+                className="mt-3 text-center text-sm text-red-600"
+                role="alert"
+                aria-live="polite"
             >
-              {error}
+                {t(error)} {/* <--- Translate here so it updates whenever language changes! */}
             </p>
-          )}
+            )}
         </div>
 
         {/* 5. Secondary Description */}
