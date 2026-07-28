@@ -79,6 +79,14 @@ export default function Length() {
 
   const handleConfirmSelect = () => {
     setSelectedOption("confirm");
+
+    // Save raw_length based on material and units
+    const lengthVal = isSilicone
+      ? isImperial ? "13.8 ± 0.8" : "35 ± 2"
+      : isImperial ? "15.7 ± 0.8" : "40 ± 2";
+
+    localStorage.setItem("raw_length", lengthVal);
+
     setTimeout(() => {
       navigate("/sizing/liner/suspension");
     }, 200);
@@ -144,18 +152,22 @@ export default function Length() {
             // 1. Switch material to gel
             localStorage.setItem("liner_material", "gel");
 
-            // 2. Retrieve raw circumference saved from previous step
+            // 2. Save corresponding gel length
+            const gelLengthVal = isImperial ? "15.7 ± 0.8" : "40 ± 2";
+            localStorage.setItem("raw_length", gelLengthVal);
+
+            // 3. Retrieve raw circumference saved from previous step
             const rawCircumference = localStorage.getItem("raw_circumference");
 
-            // 3. Recalculate Gel size mapping
+            // 4. Recalculate Gel size mapping
             const mappedGelSize = mapGelCircumference(rawCircumference, isImperial);
 
             if (mappedGelSize) {
-              // Store mapped size under both generic and product-specific keys
+              // Store mapped size under generic key
               localStorage.setItem("circumference", mappedGelSize);
             }
 
-            // 4. Navigate to suspension page
+            // 5. Navigate to suspension page
             navigate("/sizing/liner/suspension");
           }}
           onHome={() => {

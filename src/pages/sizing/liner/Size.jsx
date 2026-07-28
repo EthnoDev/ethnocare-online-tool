@@ -13,17 +13,18 @@ import pinSilLinerImg from "../../../assets/products/pinSilLiner.svg";
 export default function SizeLiner() {
   const navigate = useNavigate();
   const [isRestarting, setIsRestarting] = useState(false);
-  const { t } = useTranslation(["pages", "common"]);
+  const { t, i18n } = useTranslation(["pages", "common"]);
 
   /** ---------- Data Retrieval ---------- */
   const unit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
 
-  // Amputation
-  const rawAmputation = localStorage.getItem("amputation") || "—";
-  const amputation =
-    rawAmputation !== "—"
-      ? rawAmputation.charAt(0).toUpperCase() + rawAmputation.slice(1).toLowerCase()
-      : "—";
+  // Amputation (Matching SizeTF.jsx logic)
+  const rawAmputation = localStorage.getItem("amputation") || "tf"; 
+  let amputation = rawAmputation.charAt(0).toUpperCase() + rawAmputation.slice(1).toLowerCase();
+
+  if (amputation.toLowerCase() === "transfemoral" && i18n.language.startsWith("fr")) {
+    amputation = "Transfémoral";
+  }
 
   // Activity Level
   const rawActivity = localStorage.getItem("liner_activity_level") || "—";
