@@ -22,6 +22,9 @@ export default function ActivityLevelSelection() {
     }, 200);
   };
 
+  // Retrieve amputation level from localStorage ('transfemoral' or 'transtibial')
+  const amputation = localStorage.getItem("amputation")?.toLowerCase();
+
   const activityOptions = [
     {
       level: "K1",
@@ -39,7 +42,7 @@ export default function ActivityLevelSelection() {
       level: "K4",
       description: t("activityLevelLinerSizing.k4_description"),
     },
-  ];
+  ].filter((opt) => !(amputation === "transfemoral" && opt.level === "K4"));
 
   return (
     <PageWrapper 
