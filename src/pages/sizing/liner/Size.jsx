@@ -120,6 +120,47 @@ export default function SizeLiner() {
 
   const sizeCode = getSizeCode();
 
+  /** ---------- Alternate Size Codes Logic ---------- */
+  const getAlternateSizeCodes = () => {
+    const parts = circumferenceMapped.split(",").map((p) => p.trim());
+    if (parts.length <= 1) return [];
+
+    // Helper to format a SKU with a specific circumference part
+    const formatSku = (circPart) => {
+      if (ampKey === "transtibial" && linerMaterial === "s30") {
+        return `LNR-SIL-${suspensionCode}-${thicknessCode}-${circPart}-30`;
+      }
+      if (ampKey === "transtibial" && linerMaterial === "s40") {
+        return `LNR-SIL-${suspensionCode}-3-${circPart}-40`;
+      }
+      if (ampKey === "transfemoral" && linerMaterial === "s40" && isPin) {
+        return `LNR-TF-SIL-L-2-${circPart}-40`;
+      }
+      if ((ampKey === "transtibial" || ampKey === "transfemoral") && (linerMaterial === "gel" || !isSilicone)) {
+        let gelThicknessFormatted = thicknessCode;
+        if (thicknessCode === "6") gelThicknessFormatted = "3-6";
+        if (thicknessCode === "9") gelThicknessFormatted = "3-9";
+
+        return `LNR-GEL-${suspensionCode}-${gelThicknessFormatted}-${circPart}`;
+      }
+      return `LNR-${circPart}`;
+    };
+
+    // 1 comma -> 2 parts -> primary took index 0, so alternate is index 1
+    if (parts.length === 2) {
+      return [formatSku(parts[1])];
+    }
+
+    // 2 commas -> 3 parts -> primary took index 1, so alternates are index 0 and index 2
+    if (parts.length === 3) {
+      return [formatSku(parts[0]), formatSku(parts[2])];
+    }
+
+    return [];
+  };
+
+  const alternateSizeCodes = getAlternateSizeCodes();
+
   /** ---------- Product Image Selection ---------- */
   const getProductImage = () => {
     if (isSilicone) {
@@ -170,7 +211,7 @@ export default function SizeLiner() {
         </div>
 
         {/* 3. Product Summary Card */}
-        <div className="w-full max-w-md mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-6 mb-6">
+        <div className="w-full max-w-md mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-8 mb-6">
           
           {/* Left Column: Image wrapper scales height and lets image enlarge naturally */}
           <div className="shrink-0 flex items-center justify-center">
@@ -247,12 +288,19 @@ export default function SizeLiner() {
           </div>
         </div>
 
-        {/* 3b. Conditional Title Section */}
-        {circumferenceMapped.includes(",") && (
+        {/* 3b. Conditional Title & Alternate Options Section */}
+        {alternateSizeCodes.length > 0 && (
           <div className="w-full max-w-md mx-auto text-left mb-6 font-sans">
-            <p className="text-base font-bold text-slate-900">
+            <p className="text-base font-bold text-slate-900 mb-1">
               {t("LinerSizing.otherTitle")}
             </p>
+            <div className="flex flex-col gap-1">
+              {alternateSizeCodes.map((altCode, index) => (
+                <p key={index} className="text-lg font-semibold font-sans text-[#090C41]">
+                  {altCode}
+                </p>
+              ))}
+            </div>
           </div>
         )}
 
