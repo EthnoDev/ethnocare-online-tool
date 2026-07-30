@@ -264,6 +264,7 @@
     "prodDocTitle": "Documentación del producto",
     "prodDocDescription": "Puede descargar la tabla de tallas del liner y/o el catálogo del liner para acceder a información adicional.",
     "prodDocLinerSizing": "Tabla de tallas del liner",
-    "prodDocLinerCatalog": "Catálogo del liner"
+    "prodDocLinerCatalog": "Catálogo del liner",
+    "otherTitle": "Otras tallas compatibles:"
   }
 }

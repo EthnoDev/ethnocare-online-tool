@@ -123,7 +123,7 @@ export default function SizeLiner() {
       currentStep={7} 
       code={true}
     >
-      <div className="w-full max-w-2xl text-center">
+      <div className="w-full max-w-md text-center">
         {/* 1. Title */}
         <h1 className="text-3xl font-semibold font-sans mb-2 text-slate-900">
           {t("LinerSizing.title")}
@@ -135,7 +135,7 @@ export default function SizeLiner() {
         </div>
 
         {/* 3. Product Summary Card */}
-        <div className="w-full max-w-lg mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-6 mb-10">
+        <div className="w-full max-w-md mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-6 mb-6">
           
           {/* Left Column: Image wrapper scales height and lets image enlarge naturally */}
           <div className="shrink-0 flex items-center justify-center">
@@ -212,11 +212,14 @@ export default function SizeLiner() {
           </div>
         </div>
 
-
-
-
-
-
+        {/* 3b. Conditional Title Section */}
+        {circumferenceMapped.includes(",") && (
+          <div className="w-full max-w-md mx-auto text-left mb-6 font-sans">
+            <p className="text-base font-bold text-slate-900">
+              {t("LinerSizing.otherTitle")}
+            </p>
+          </div>
+        )}
 
         {/* 4. Restart Button */}
         <div className="flex justify-center">
