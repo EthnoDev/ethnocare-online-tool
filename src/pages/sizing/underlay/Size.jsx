@@ -74,7 +74,7 @@ export default function SizeUnderlay() {
         <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
           <img
             src={sealId === "closed-seal" ? ClosedUnderlayImg : OpenUnderlayImg}
-            alt="Underlay TT Product"
+            alt={t("common:products.underlay tt")}
             className="w-[180px] h-auto object-contain rounded-xl"
           />
 
