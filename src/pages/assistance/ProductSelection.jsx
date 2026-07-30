@@ -1,4 +1,3 @@
-// src/pages/assistance/ProductSelection.jsx
 import { useNavigate } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
@@ -56,20 +55,7 @@ export default function ProductSelection() {
             />
           </button>
 
-          {/* Liner */}
-          <button
-            type="button"
-            onClick={() => handleSelect("liner")}
-            className="cursor-pointer focus:outline-none"
-          >
-            <img
-              src={LinerImg}
-              alt="Liner"
-              className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
-            />
-          </button>
-
-          {/* Only show Underlay and Liner for transtibial users */}
+          {/* Underlay - Transtibial users */}
           {amputation === "transtibial" && (
             <button
               type="button"
@@ -83,6 +69,19 @@ export default function ProductSelection() {
               />
             </button>
           )}
+
+          {/* Liner */}
+          <button
+            type="button"
+            onClick={() => handleSelect("liner")}
+            className="cursor-pointer focus:outline-none"
+          >
+            <img
+              src={LinerImg}
+              alt="Liner"
+              className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+            />
+          </button>
         </div>
       </div>
     </PageWrapper>
