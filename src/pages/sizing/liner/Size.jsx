@@ -89,10 +89,8 @@ export default function SizeLiner() {
     let primaryCircumference = circumferenceMapped;
 
     if (commaCount === 1) {
-      // 1 comma -> 2 parts -> take 1st item
       primaryCircumference = parts[0];
     } else if (commaCount === 2) {
-      // 2 commas -> 3 parts -> take 2nd item
       primaryCircumference = parts[1];
     }
 
@@ -109,7 +107,12 @@ export default function SizeLiner() {
     }
 
     if ((ampKey === "transtibial" || ampKey === "transfemoral") && (linerMaterial === "gel" || !isSilicone)) {
-      return `LNR-GEL-${suspensionCode}-${thicknessCode}-${primaryCircumference}`;
+      // Format 6mm and 9mm as tapered profiles (3-6 and 3-9)
+      let gelThicknessFormatted = thicknessCode;
+      if (thicknessCode === "6") gelThicknessFormatted = "3-6";
+      if (thicknessCode === "9") gelThicknessFormatted = "3-9";
+
+      return `LNR-GEL-${suspensionCode}-${gelThicknessFormatted}-${primaryCircumference}`;
     }
 
     return `LNR-${primaryCircumference}`;
