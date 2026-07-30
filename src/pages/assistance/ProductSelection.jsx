@@ -4,9 +4,9 @@ import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 
 // product images
-import OverlayImg from "../../assets/products/overlay.png";
-import UnderlayImg from "../../assets/products/underlay.png";
-import LinerImg from "../../assets/products/liner.png";
+import OverlayImg from "../../assets/products/overlay.svg";
+import UnderlayImg from "../../assets/products/underlay.svg";
+import LinerImg from "../../assets/products/liner.svg";
 
 export default function ProductSelection() {
   const navigate = useNavigate();
