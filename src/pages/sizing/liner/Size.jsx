@@ -35,6 +35,10 @@ export default function SizeLiner() {
     
   // Material
   const linerMaterial = localStorage.getItem("liner_material") || "—"; // 's30', 's40', or 'gel'
+  const materialLabel =
+    linerMaterial !== "—"
+      ? linerMaterial.charAt(0).toUpperCase() + linerMaterial.slice(1)
+      : "—";
 
   // Circumference & Length
   const circumferenceMapped = localStorage.getItem("circumference") || "XX";
@@ -167,7 +171,7 @@ export default function SizeLiner() {
               
               <p>{t("LinerSizing.amp")}: {amputation}</p>
               <p>{t("LinerSizing.activityLevel")}: {activityLevel}</p>
-              <p>{t("LinerSizing.material")}: {linerMaterial}</p>
+              <p>{t("LinerSizing.material")}: {materialLabel}</p>
               <p>
                 {t("LinerSizing.circumference")}: {circumferenceRaw} {unit}
               </p>
