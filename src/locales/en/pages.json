@@ -264,6 +264,10 @@
     "circumference": "Circumference",
     "length": "Length",
     "suspension": "Suspension",
-    "thickness": "Thickness"
+    "thickness": "Thickness",
+    "prodDocTitle": "Product Documentation",
+    "prodDocDescription": "You can download the liner sizing and/or the liner catalog to access additional information.",
+    "prodDocLinerSizing": "Liner sizing chart",
+    "prodDocLinerCatalog": "Liner catalog"
   }
 }

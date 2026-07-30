@@ -260,6 +260,10 @@
     "circumference": "Circonférence",
     "length": "Longueur",
     "suspension": "Suspension",
-    "thickness": "Épaisseur"
+    "thickness": "Épaisseur",
+    "prodDocTitle": "Documentation du produit",
+    "prodDocDescription": "Vous pouvez télécharger le tableau de dimensionnement du manchon et/ou le catalogue du manchon pour accéder à des informations supplémentaires.",
+    "prodDocLinerSizing": "Tableau de dimensionnement du manchon",
+    "prodDocLinerCatalog": "Catalogue du manchon"
   }
 }

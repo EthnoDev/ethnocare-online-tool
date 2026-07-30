@@ -259,6 +259,10 @@
     "circumference": "Umfang",
     "length": "Länge",
     "suspension": "Suspension",
-    "thickness": "Stärke"
+    "thickness": "Stärke",
+    "prodDocTitle": "Produktdokumentation",
+    "prodDocDescription": "Sie können die Liner-Größentabelle und/oder den Liner-Katalog herunterladen, um weitere Informationen zu erhalten.",
+    "prodDocLinerSizing": "Liner-Größentabelle",
+    "prodDocLinerCatalog": "Liner-Katalog"
   }
 }
