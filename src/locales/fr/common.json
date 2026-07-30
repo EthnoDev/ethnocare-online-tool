@@ -41,7 +41,9 @@
   "products": {
     "tt": "Overlay Transtibial",
     "tf": "Overlay Transfémoral",
-    "underlay tt": "Underlay Transtibial"
+    "underlay tt": "Underlay Transtibial",
+    "liner tt": "Liner Transtibial",
+    "liner tf": "Liner Transfémoral"
   },
   "units": {
     "imperial": "Impérial (Pouce)",

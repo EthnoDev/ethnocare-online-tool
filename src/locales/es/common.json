@@ -41,7 +41,9 @@
   "products": {
     "tt": "Overlay Transtibial",
     "tf": "Overlay Transfemoral",
-    "underlay tt": "Underlay Transtibial"
+    "underlay tt": "Underlay Transtibial",
+    "liner tt": "Liner Transtibial",
+    "liner tf": "Liner Transfemoral"
   },
   "units": {
     "imperial": "Imperial (Pulgada)",

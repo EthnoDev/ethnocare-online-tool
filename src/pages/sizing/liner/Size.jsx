@@ -170,6 +170,14 @@ export default function SizeLiner() {
     }
   };
 
+  /** ---------- Dynamic Alt Text ---------- */
+  const getProductImageAlt = () => {
+    if (ampKey === "transfemoral") {
+      return t("products.liner tf", { ns: "common" });
+    }
+    return t("products.liner tt", { ns: "common" });
+  };
+
   /** ---------- Dynamic PDF Handlers ---------- */
   const handleOpenSizingChart = () => {
     const isFrench = i18n.language?.startsWith("fr");
@@ -217,7 +225,7 @@ export default function SizeLiner() {
           <div className="shrink-0 flex items-center justify-center">
             <img
               src={getProductImage()}
-              alt="Liner Product"
+              alt={getProductImageAlt()}
               className="h-full w-auto object-contain rounded-xl"
             />
           </div>
