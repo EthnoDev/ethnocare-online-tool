@@ -52,9 +52,25 @@ export default function SizeLiner() {
       ? t(`suspension.${suspension}`, { ns: "common", defaultValue: suspension.charAt(0).toUpperCase() + suspension.slice(1) })
       : "—";
 
-  // Thickness
-  const thicknessRaw = localStorage.getItem("liner_thickness") || "—"; // e.g., '3mm', '6mm', '3-6mm', '3-9mm', or just numbers '3', '6'
-  const thicknessCode = thicknessRaw.replace(/[^0-9-]/g, "") || "X";
+  // Thickness (Raw label displayed in summary card, e.g. "0.11 in" or "3 mm")
+  const thicknessRaw = localStorage.getItem("liner_thickness") || "—";
+
+  /** ---------- Metric Thickness Conversion for SKU Code ---------- */
+  const getMetricThicknessCode = (raw) => {
+    if (!raw || raw === "—") return "X";
+
+    // Imperial value checks
+    if (raw.includes("0.11")) return "3";
+    if (raw.includes("0.23")) return "6";
+    if (raw.includes("0.35")) return "9";
+    if (raw.includes("0.07")) return "2";
+
+    // Metric fallback: extract numbers/hyphens (e.g. "3 mm" -> "3", "3-6mm" -> "3-6")
+    const cleaned = raw.replace(/[^0-9-]/g, "");
+    return cleaned || "X";
+  };
+
+  const thicknessCode = getMetricThicknessCode(thicknessRaw);
 
   // Material & System Checks
   const isSilicone = linerMaterial === "s30" || linerMaterial === "s40";
