@@ -38,7 +38,7 @@ export default function SizeLiner() {
   const materialLabel = linerMaterial !== "—" ? linerMaterial.toUpperCase() : "—";
 
   // Circumference & Length
-  const circumferenceMapped = localStorage.getItem("liner_circumference") || localStorage.getItem("raw_circumference") || "XX";
+  const circumferenceMapped = localStorage.getItem("circumference") || "XX";
   const circumferenceRaw = localStorage.getItem("raw_circumference") || "—";
   const lengthRaw = localStorage.getItem("raw_length") || "—";
 
@@ -211,6 +211,12 @@ export default function SizeLiner() {
             </div>
           </div>
         </div>
+
+
+
+
+
+
 
         {/* 4. Restart Button */}
         <div className="flex justify-center">
