@@ -48,7 +48,6 @@ export default function SizeLiner() {
 
   // Thickness
   const thicknessRaw = localStorage.getItem("liner_thickness") || "—"; // e.g., '3mm', '6mm', '3-6mm', '3-9mm', or just numbers '3', '6'
-  // Extract digits/hyphens for code formatting (e.g., "3mm" -> "3", "3-6mm" -> "3-6")
   const thicknessCode = thicknessRaw.replace(/[^0-9-]/g, "") || "X";
 
   // Material & System Checks
@@ -61,27 +60,22 @@ export default function SizeLiner() {
 
   /** ---------- Size Code Logic ---------- */
   const getSizeCode = () => {
-    // 1. Transtibial + S30 (Pin or Cushion)
     if (ampKey === "transtibial" && linerMaterial === "s30") {
       return `LNR-SIL-${suspensionCode}-${thicknessCode}-${circumferenceMapped}-30`;
     }
 
-    // 2. Transtibial + S40 (Pin or Cushion) -> Fixed thickness 3
     if (ampKey === "transtibial" && linerMaterial === "s40") {
       return `LNR-SIL-${suspensionCode}-3-${circumferenceMapped}-40`;
     }
 
-    // 3. Transfemoral + S40 + Pin -> Fixed thickness 2
     if (ampKey === "transfemoral" && linerMaterial === "s40" && isPin) {
       return `LNR-TF-SIL-L-2-${circumferenceMapped}-40`;
     }
 
-    // 4. Transtibial OR Transfemoral + Gel (Pin or Cushion)
     if ((ampKey === "transtibial" || ampKey === "transfemoral") && (linerMaterial === "gel" || !isSilicone)) {
       return `LNR-GEL-${suspensionCode}-${thicknessCode}-${circumferenceMapped}`;
     }
 
-    // Fallback default format
     return `LNR-${circumferenceMapped}`;
   };
 
@@ -120,21 +114,25 @@ export default function SizeLiner() {
         </div>
 
         {/* 3. Product Summary Card */}
-        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
-          <img
-            src={getProductImage()}
-            alt="Liner Product"
-            className="w-[140px] h-auto object-contain rounded-xl"
-          />
+        <div className="w-full max-w-lg mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-6 mb-10">
+          
+          {/* Left Column: Image wrapper scales height and lets image enlarge naturally */}
+          <div className="shrink-0 flex items-center justify-center">
+            <img
+              src={getProductImage()}
+              alt="Liner Product"
+              className="h-full w-auto object-contain rounded-xl"
+            />
+          </div>
 
-          <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
+          {/* Right Column: Defines the natural height of the card */}
+          <div className="flex flex-col justify-between text-sm text-gray-700 font-sans flex-1">
             <div className="space-y-1">
               <p className="text-slate-900">
                 <strong>{t("LinerSizing.description")}</strong>
               </p>
               
               <p>{t("LinerSizing.amp")}: {amputation}</p>
-              <p>{t("LinerSizing.activityLevel")}: {activityLevel}</p>
               <p>{t("LinerSizing.material")}: {materialLabel}</p>
               <p>
                 {t("LinerSizing.circumference")}: {circumferenceRaw} {unit}
@@ -144,6 +142,57 @@ export default function SizeLiner() {
               </p>
               <p>{t("LinerSizing.suspension")}: {suspensionLabel}</p>
               <p>{t("LinerSizing.thickness")}: {thicknessRaw}</p>
+              <p>{t("LinerSizing.activityLevel")}: {activityLevel}</p>
+            </div>
+
+            {/* Product Documentation Section */}
+            <div className="p-4 border border-gray-200 rounded-2xl bg-gray-200/80">
+              <h2 className="text-base font-bold text-slate-900 mb-1">
+                {t("LinerSizing.doc_title", { defaultValue: "Product documentation" })}
+              </h2>
+              <p className="text-xs text-slate-700 leading-snug mb-3">
+                {t("LinerSizing.doc_description", {
+                  defaultValue: "You can download the liner sizing and/or the liner catalog to access additional informations"
+                })}
+              </p>
+
+              <div className="flex flex-col gap-1.5">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-slate-800 hover:text-black font-medium text-xs underline transition-colors"
+                >
+                  {t("LinerSizing.doc_chart", { defaultValue: "Liner sizing chart" })}
+                  <svg
+                    className="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-slate-800 hover:text-black font-medium text-xs underline transition-colors"
+                >
+                  {t("LinerSizing.doc_catalog", { defaultValue: "Liner catalog" })}
+                  <svg
+                    className="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
