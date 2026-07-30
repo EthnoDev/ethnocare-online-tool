@@ -89,10 +89,23 @@ export default function ThicknessSelection() {
     "6mm_metric": ttSiliconeLocking6Metric,
   };
 
-  // 3. Resolve dynamic image based on selected state + decision tree
+  // 3. Helper to normalize selected label back to a millimeter key ('3mm', '6mm', '9mm', '2mm') for SVG lookup
+  const getNormalizedThicknessKey = () => {
+    if (!selectedThickness) return "3mm";
+
+    // Imperial to mm mapping
+    if (selectedThickness.includes("0.11")) return "3mm";
+    if (selectedThickness.includes("0.23")) return "6mm";
+    if (selectedThickness.includes("0.35")) return "9mm";
+    if (selectedThickness.includes("0.07")) return "2mm";
+
+    // Metric parsing
+    return selectedThickness.replace(/\s+/g, ""); // "3 mm" -> "3mm"
+  };
+
+  // 4. Resolve dynamic image based on selected state + decision tree
   const getThicknessImage = () => {
-    // Determine effective thickness ID (defaults to '3mm' if unselected)
-    const activeThickness = selectedThickness || "3mm";
+    const activeThickness = getNormalizedThicknessKey();
     const unitKey = isImperial ? "imperial" : "metric";
     const imageKey = `${activeThickness}_${unitKey}`;
 
@@ -127,7 +140,7 @@ export default function ThicknessSelection() {
     }
   };
 
-  // 4. Resolve options based on material, amputation, and units
+  // 5. Resolve options based on material, amputation, and units
   const getThicknessOptions = () => {
     if (!isSilicone) {
       // GEL: 3 options
@@ -169,7 +182,6 @@ export default function ThicknessSelection() {
 
   const validate = () => {
     if (!selectedThickness) {
-      // Store the KEY instead of calling t() here
       setError("thicknessLinerSizing.error"); 
       return optionsRef.current;
     }
@@ -186,7 +198,7 @@ export default function ThicknessSelection() {
       return;
     }
 
-    // Save selection to localStorage
+    // Save unit-aware selection (opt.label) to localStorage
     localStorage.setItem("liner_thickness", selectedThickness);
 
     // Navigate to final size result page
@@ -236,9 +248,9 @@ export default function ThicknessSelection() {
               >
                 <SelectableOption
                   compact
-                  selected={selectedThickness === opt.id}
+                  selected={selectedThickness === opt.label}
                   onClick={() => {
-                    setSelectedThickness(opt.id);
+                    setSelectedThickness(opt.label);
                     if (error) setError("");
                   }}
                   label={opt.label}
