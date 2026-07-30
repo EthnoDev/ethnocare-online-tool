@@ -35,7 +35,6 @@ export default function SizeLiner() {
     
   // Material
   const linerMaterial = localStorage.getItem("liner_material") || "—"; // 's30', 's40', or 'gel'
-  const materialLabel = linerMaterial !== "—" ? linerMaterial.toUpperCase() : "—";
 
   // Circumference & Length
   const circumferenceMapped = localStorage.getItem("circumference") || "XX";
@@ -63,23 +62,37 @@ export default function SizeLiner() {
 
   /** ---------- Size Code Logic ---------- */
   const getSizeCode = () => {
+    // Split circumferenceMapped by commas
+    const parts = circumferenceMapped.split(",").map((p) => p.trim());
+    const commaCount = parts.length - 1;
+
+    let primaryCircumference = circumferenceMapped;
+
+    if (commaCount === 1) {
+      // 1 comma -> 2 parts -> take 1st item
+      primaryCircumference = parts[0];
+    } else if (commaCount === 2) {
+      // 2 commas -> 3 parts -> take 2nd item
+      primaryCircumference = parts[1];
+    }
+
     if (ampKey === "transtibial" && linerMaterial === "s30") {
-      return `LNR-SIL-${suspensionCode}-${thicknessCode}-${circumferenceMapped}-30`;
+      return `LNR-SIL-${suspensionCode}-${thicknessCode}-${primaryCircumference}-30`;
     }
 
     if (ampKey === "transtibial" && linerMaterial === "s40") {
-      return `LNR-SIL-${suspensionCode}-3-${circumferenceMapped}-40`;
+      return `LNR-SIL-${suspensionCode}-3-${primaryCircumference}-40`;
     }
 
     if (ampKey === "transfemoral" && linerMaterial === "s40" && isPin) {
-      return `LNR-TF-SIL-L-2-${circumferenceMapped}-40`;
+      return `LNR-TF-SIL-L-2-${primaryCircumference}-40`;
     }
 
     if ((ampKey === "transtibial" || ampKey === "transfemoral") && (linerMaterial === "gel" || !isSilicone)) {
-      return `LNR-GEL-${suspensionCode}-${thicknessCode}-${circumferenceMapped}`;
+      return `LNR-GEL-${suspensionCode}-${thicknessCode}-${primaryCircumference}`;
     }
 
-    return `LNR-${circumferenceMapped}`;
+    return `LNR-${primaryCircumference}`;
   };
 
   const sizeCode = getSizeCode();
@@ -120,7 +133,6 @@ export default function SizeLiner() {
     <PageWrapper 
       showBack 
       backTo="/sizing/liner/thickness" 
-      currentStep={7} 
       code={true}
     >
       <div className="w-full max-w-md text-center">
@@ -155,7 +167,7 @@ export default function SizeLiner() {
               
               <p>{t("LinerSizing.amp")}: {amputation}</p>
               <p>{t("LinerSizing.activityLevel")}: {activityLevel}</p>
-              <p>{t("LinerSizing.material")}: {materialLabel}</p>
+              <p>{t("LinerSizing.material")}: {linerMaterial}</p>
               <p>
                 {t("LinerSizing.circumference")}: {circumferenceRaw} {unit}
               </p>
@@ -227,7 +239,7 @@ export default function SizeLiner() {
             onClick={handleRestart}
             className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer uppercase
               ${isRestarting
-                ? "bg-[#090C41] text-white border-[#090C41]"
+                ? "bg-[#090C41] text-[#090C41]"
                 : "bg-white text-black border-gray-300 hover:border-black"
               }`}
           >
