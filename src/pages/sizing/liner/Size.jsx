@@ -93,6 +93,19 @@ export default function SizeLiner() {
     }
   };
 
+  /** ---------- Dynamic PDF Handlers ---------- */
+  const handleOpenSizingChart = () => {
+    const isFrench = i18n.language?.startsWith("fr");
+    const chartPath = isFrench
+      ? "/Sizing Charts/LNR_SIZING-CHART_FR.pdf"
+      : "/Sizing Charts/LNR_SIZING-CHART_EN.pdf";
+    openPdf(chartPath);
+  };
+
+  const handleOpenCatalog = () => {
+    openPdf("/Sizing Charts/LNR_CATALOGUE_EN.pdf");
+  };
+
   const openPdf = (url) => {
     if (!url) return;
     window.open(url, "_blank", "noopener,noreferrer");
@@ -141,6 +154,7 @@ export default function SizeLiner() {
               </p>
               
               <p>{t("LinerSizing.amp")}: {amputation}</p>
+              <p>{t("LinerSizing.activityLevel")}: {activityLevel}</p>
               <p>{t("LinerSizing.material")}: {materialLabel}</p>
               <p>
                 {t("LinerSizing.circumference")}: {circumferenceRaw} {unit}
@@ -150,50 +164,47 @@ export default function SizeLiner() {
               </p>
               <p>{t("LinerSizing.suspension")}: {suspensionLabel}</p>
               <p>{t("LinerSizing.thickness")}: {thicknessRaw}</p>
-              <p>{t("LinerSizing.activityLevel")}: {activityLevel}</p>
             </div>
 
-            {/* Product Documentation Section */}            
+            {/* Product Documentation Section */}
             <div className="p-4 border border-gray-200 rounded-2xl bg-gray-200/80">
               <h2 className="text-base font-bold text-slate-900 mb-1">
-                {t("LinerSizing.doc_title", { defaultValue: "Product documentation" })}
+                {t("LinerSizing.prodDocTitle")}
               </h2>
-              <p className="text-sm text-slate-700 leading-snug mb-3">
-                {t("LinerSizing.doc_description", {
-                  defaultValue: "You can download the liner sizing and/or the liner catalog to access additional informations"
-                })}
+              <p className="text-sm text-slate-700 leading-snug mb-2">
+                {t("LinerSizing.prodDocDescription")}
               </p>
 
               <div className="flex flex-col gap-1.5 items-start">
                 <button
                   type="button"
-                  onClick={() => openPdf(/* url */)}
+                  onClick={handleOpenSizingChart}
                   className="flex items-center gap-1 cursor-pointer"
                 >
                   <span className="text-sm underline underline-offset-4 decoration-[1px]">
-                    {t("LinerSizing.doc_chart", { defaultValue: "Liner sizing chart" })}
+                    {t("LinerSizing.prodDocLinerSizing")}
                   </span>
                   <img
                     src={RedirectLogo}
                     alt=""
                     aria-hidden="true"
-                    className="h-2.5 w-3 ml-0 mt-0"
+                    className="h-3 w-4 ml-0 mt-0"
                   />
                 </button>
 
                 <button
                   type="button"
-                  onClick={() => openPdf(/* url */)}
+                  onClick={handleOpenCatalog}
                   className="flex items-center gap-1 cursor-pointer"
                 >
                   <span className="text-sm underline underline-offset-4 decoration-[1px]">
-                    {t("LinerSizing.doc_catalog", { defaultValue: "Liner catalog" })}
+                    {t("LinerSizing.prodDocLinerCatalog")}
                   </span>
                   <img
                     src={RedirectLogo}
                     alt=""
                     aria-hidden="true"
-                    className="h-2.5 w-3 ml-0 mt-0"
+                    className="h-3 w-4 ml-0 mt-0"
                   />
                 </button>
               </div>
