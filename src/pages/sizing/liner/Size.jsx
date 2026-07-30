@@ -10,6 +10,9 @@ import cushionSilLinerImg from "../../../assets/products/cushionSilLiner.svg";
 import pinGelLinerImg from "../../../assets/products/pinGelLiner.svg";
 import pinSilLinerImg from "../../../assets/products/pinSilLiner.svg";
 
+// UI Assets
+import RedirectLogo from "../../../assets/redirect-logo.svg";
+
 export default function SizeLiner() {
   const navigate = useNavigate();
   const [isRestarting, setIsRestarting] = useState(false);
@@ -90,6 +93,11 @@ export default function SizeLiner() {
     }
   };
 
+  const openPdf = (url) => {
+    if (!url) return;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   const handleRestart = () => {
     setIsRestarting(true);
     setTimeout(() => navigate("/sizing/product"), 200);
@@ -145,53 +153,49 @@ export default function SizeLiner() {
               <p>{t("LinerSizing.activityLevel")}: {activityLevel}</p>
             </div>
 
-            {/* Product Documentation Section */}
+            {/* Product Documentation Section */}            
             <div className="p-4 border border-gray-200 rounded-2xl bg-gray-200/80">
               <h2 className="text-base font-bold text-slate-900 mb-1">
                 {t("LinerSizing.doc_title", { defaultValue: "Product documentation" })}
               </h2>
-              <p className="text-xs text-slate-700 leading-snug mb-3">
+              <p className="text-sm text-slate-700 leading-snug mb-3">
                 {t("LinerSizing.doc_description", {
                   defaultValue: "You can download the liner sizing and/or the liner catalog to access additional informations"
                 })}
               </p>
 
-              <div className="flex flex-col gap-1.5">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-slate-800 hover:text-black font-medium text-xs underline transition-colors"
+              <div className="flex flex-col gap-1.5 items-start">
+                <button
+                  type="button"
+                  onClick={() => openPdf(/* url */)}
+                  className="flex items-center gap-1 cursor-pointer"
                 >
-                  {t("LinerSizing.doc_chart", { defaultValue: "Liner sizing chart" })}
-                  <svg
-                    className="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
+                  <span className="text-sm underline underline-offset-4 decoration-[1px]">
+                    {t("LinerSizing.doc_chart", { defaultValue: "Liner sizing chart" })}
+                  </span>
+                  <img
+                    src={RedirectLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-2.5 w-3 ml-0 mt-0"
+                  />
+                </button>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-slate-800 hover:text-black font-medium text-xs underline transition-colors"
+                <button
+                  type="button"
+                  onClick={() => openPdf(/* url */)}
+                  className="flex items-center gap-1 cursor-pointer"
                 >
-                  {t("LinerSizing.doc_catalog", { defaultValue: "Liner catalog" })}
-                  <svg
-                    className="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
+                  <span className="text-sm underline underline-offset-4 decoration-[1px]">
+                    {t("LinerSizing.doc_catalog", { defaultValue: "Liner catalog" })}
+                  </span>
+                  <img
+                    src={RedirectLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-2.5 w-3 ml-0 mt-0"
+                  />
+                </button>
               </div>
             </div>
           </div>
