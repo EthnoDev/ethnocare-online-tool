@@ -219,7 +219,9 @@
     "circumference2": "Circonférence supérieure",
     "length": "Longueur du manchon",
     "seal": "Design",
-    "silicone": "Silicone"
+    "silicone": "Silicone",
+    "email_title": "Sauvegardez votre sélection!",
+    "email_description": "Recevez instantanément votre code produit et les ressources de montage par email."
   },
   "activityLevelLinerSizing": {
     "title": "Niveau d'activité",

@@ -223,7 +223,9 @@
     "circumference2": "Upper Circumference",
     "length": "Liner length",
     "seal": "Design",
-    "silicone": "Silicone"
+    "silicone": "Silicone",
+    "email_title": "Save your selection!",
+    "email_description": "Get your product code and fitting resources by email instantly."
   },
   "activityLevelLinerSizing": {
     "title": "Activity Level",

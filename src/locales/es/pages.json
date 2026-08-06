@@ -219,7 +219,9 @@
     "circumference2": "Circunferencia superior",
     "length": "Longitud del liner",
     "seal": "Diseño",
-    "silicone": "Silicona"
+    "silicone": "Silicona",
+    "email_title": "¡Guarde su selección!",
+    "email_description": "Reciba al instante su código de producto y recursos de ajuste por correo electrónico."
   },
   "activityLevelLinerSizing": {
     "title": "Nivel de actividad",

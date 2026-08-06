@@ -219,7 +219,9 @@
     "circumference2": "Oberer Umfang",
     "length": "Linerlänge",
     "seal": "Design",
-    "silicone": "Silikon"
+    "silicone": "Silikon",
+    "email_title": "Auswahl speichern!",
+    "email_description": "Erhalten Sie Ihren Produktcode und Anpassungshinweise sofort per E-Mail."
   },
   "activityLevelLinerSizing": {
     "title": "Aktivitätsniveau",
