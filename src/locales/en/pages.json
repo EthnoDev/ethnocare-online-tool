@@ -237,7 +237,8 @@
   },
   "materialLinerSizing": {
     "title": "Material",
-    "description": "Select your liner material"
+    "description": "Select your liner material",
+    "notice": "Only one material is available for your amputation and activity level."
   },
   "circumferenceLinerSizing": {
     "title": "Circumference",

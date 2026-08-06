@@ -233,7 +233,8 @@
   },
   "materialLinerSizing": {
     "title": "Material",
-    "description": "Wählen Sie das Material Ihres Liners aus"
+    "description": "Wählen Sie das Material Ihres Liners aus",
+    "notice": "Nur ein Material ist für Ihre Amputation und Ihr Aktivitätsniveau verfügbar."
   },
   "circumferenceLinerSizing": {
     "title": "Umfang",

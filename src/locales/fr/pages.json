@@ -233,7 +233,8 @@
   },
   "materialLinerSizing": {
     "title": "Matériau",
-    "description": "Sélectionnez le matériau de votre manchon"
+    "description": "Sélectionnez le matériau de votre manchon",
+    "notice": "Un seul matériau est disponible pour votre amputation et votre niveau d'activité."
   },
   "circumferenceLinerSizing": {
     "title": "Circonférence",
