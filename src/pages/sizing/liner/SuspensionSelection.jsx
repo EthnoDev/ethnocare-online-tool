@@ -109,28 +109,37 @@ export default function SuspensionSelection() {
           )}
 
           {/* Option: Pin */}
-          <button
-            type="button"
-            onClick={() => handleSelect("pin")}
-            className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
-          >
-            <div
-              className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
-                selected === "pin"
-                  ? "ring-4 ring-[#090C41]"
-                  : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
-              }`}
+          <div className="flex flex-col items-center">
+            <button
+              type="button"
+              onClick={() => handleSelect("pin")}
+              className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
             >
-              <img
-                src={
-                  SUSPENSION_IMAGES[materialKey].pin[lang] ||
-                  SUSPENSION_IMAGES[materialKey].pin.en
-                }
-                alt={t("common:suspension.pin")}
-                className="h-auto w-full block rounded-xl max-w-[320px] object-cover"
-              />
-            </div>
-          </button>
+              <div
+                className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
+                  selected === "pin"
+                    ? "ring-4 ring-[#090C41]"
+                    : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
+                }`}
+              >
+                <img
+                  src={
+                    SUSPENSION_IMAGES[materialKey].pin[lang] ||
+                    SUSPENSION_IMAGES[materialKey].pin.en
+                  }
+                  alt={t("common:suspension.pin")}
+                  className="h-auto w-full block rounded-xl max-w-[320px] object-cover"
+                />
+              </div>
+            </button>
+
+            {/* Notice rendered only if Pin is the only option available */}
+            {hideCushion && (
+              <p className="mt-3 text-sm text-slate-600 text-center max-w-[320px]">
+                {t("suspensionLinerSizing.notice")}
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </PageWrapper>

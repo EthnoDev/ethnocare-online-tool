@@ -245,7 +245,8 @@
   },
   "suspensionLinerSizing": {
     "title": "Suspensión",
-    "description": "Seleccione su sistema de suspensión"
+    "description": "Seleccione su sistema de suspensión",
+    "notice":"Solo un sistema de suspensión está disponible para su configuración seleccionada."
   },
   "thicknessLinerSizing": {
     "title": "Grosor del perfil",
