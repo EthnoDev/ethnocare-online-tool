@@ -118,18 +118,26 @@ export default function MaterialSelection() {
         {/* 3. Filtered Material Options */}
         <div className="mt-8 space-y-6 flex flex-col items-center">
           {availableOptions.map((opt) => (
-            <button
-              key={opt.key}
-              type="button"
-              onClick={() => handleSelect(opt.key)}
-              className="cursor-pointer focus:outline-none"
-            >
-              <img
-                src={opt.imgSrc}
-                alt={opt.key}
-                className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
-              />
-            </button>
+            <div key={opt.key} className="flex flex-col items-center">
+              <button
+                type="button"
+                onClick={() => handleSelect(opt.key)}
+                className="cursor-pointer focus:outline-none"
+              >
+                <img
+                  src={opt.imgSrc}
+                  alt={opt.key}
+                  className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+                />
+              </button>
+
+              {/* Notice rendered only if 1 material option is available */}
+              {availableOptions.length === 1 && (
+                <p className="mt-3 text-sm text-slate-600 text-center max-w-[320px]">
+                  {t("materialLinerSizing.notice")}
+                </p>
+              )}
+            </div>
           ))}
         </div>
       </div>
