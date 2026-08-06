@@ -1,7 +1,9 @@
+// src/pages/assistance/underlay/SizeUnderlay.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
+import EmailCapture from "../../../components/EmailCapture";
 
 // Assets
 import ClosedUnderlayImg from "../../../assets/products/closedUnderlay.svg";
@@ -29,7 +31,9 @@ export default function SizeUnderlay() {
   const lengthMapped = localStorage.getItem("underlay_length") || "—";
 
   /** ---------- Logic & Formatting ---------- */
-  
+  // Combined Product + Amputation Line pulling from common translations
+  const productAmputation = t("common:products.underlay tt");
+
   const sealLabel = sealId !== "—" 
     ? t(`seal.${sealId.toLowerCase()}`, { ns: "common" }) 
     : "—";
@@ -113,6 +117,24 @@ export default function SizeUnderlay() {
           >
             {t("cta.restart", { ns: "common" })}
           </button>
+        </div>
+
+        {/* 5. Email Capture Section */}
+        <div className="mt-10 text-left font-sans max-w-md mx-auto">
+          <h2 className="text-2xl font-semibold text-slate-900">
+            {t("UnderlaySizing.email_title")}
+          </h2>
+          <p className="text-xs text-gray-700 leading-snug mb-2">
+            {t("UnderlaySizing.email_description")}
+          </p>
+
+          <EmailCapture
+            selection={{ sizeCode, product: productAmputation }}
+            onConfirm={(email) => {
+              localStorage.setItem("saved_size_code", sizeCode);
+              console.log("Underlay Result saved for:", email);
+            }}
+          />
         </div>
       </div>
     </PageWrapper>
