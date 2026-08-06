@@ -127,7 +127,7 @@ export default function MaterialSelection() {
                 <img
                   src={opt.imgSrc}
                   alt={opt.key}
-                  className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+                  className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
                 />
               </button>
 
