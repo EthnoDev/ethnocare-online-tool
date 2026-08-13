@@ -24,7 +24,7 @@ export default function LanguageButton() {
         onClick={handleOpen}
         // Added shrink-0 right at the beginning of the className string
         className="shrink-0 px-4 py-2 rounded-xl cursor-pointer font-sans font-medium transition-all border flex items-center gap-2
-                   bg-black text-white border-black hover:bg-[#090C41] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                   bg-black text-white border-black hover:bg-[#090C41] "
         aria-haspopup="dialog"
         aria-expanded={open}
         aria-label="Change language"
