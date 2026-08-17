@@ -76,37 +76,46 @@ export default function SizeTT() {
           )}
         </div>
 
-        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
-          <img
-            src={TTProductImg}
-            alt={t("common:products.tt")}
-            className="w-[180px] h-auto object-contain rounded-xl"
-          />
+        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10"> 
+          <img 
+            src={TTProductImg} 
+            alt={t("common:products.tt")} 
+            className="w-[180px] h-auto object-contain rounded-xl" 
+          /> 
 
-          <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
-            <div className="space-y-1">
-              <p className="text-slate-900"><strong>{t("TTSizing.description")}</strong></p>
-              {/* Product + Amputation Line */}
-              <p>{t("TTSizing.amp")}: {amputation}</p>
-              <p>{t("TTSizing.system")}: {suspensionLabel}</p>
-              <p>{t("TTSizing.circumference")}: {circumferenceRaw} {unit}</p>
-              <p>{t("TTSizing.length")}: {lengthRaw} {unit}</p>
-              <p>{t("TTSizing.orientation")}: {orientationLabel}</p>
-            </div>
-          </div>
-        </div>
+          <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full"> 
+            <div className="space-y-1"> 
+              <p className="text-slate-900">
+                <strong>{t("TTSizing.description")}</strong>
+              </p> 
 
-        <div className="flex justify-center">
+              <p>{t("TTSizing.amp")}: {amputation}</p> 
+              <p>{t("TTSizing.system")}: {suspensionLabel}</p> 
+              <p>{t("TTSizing.circumference")}: {circumferenceRaw} {unit}</p> 
+              <p>{t("TTSizing.length")}: {lengthRaw} {unit}</p> 
+              <p>{t("TTSizing.orientation")}: {orientationLabel}</p> 
+            </div> 
+
+            <div className="mt-3 flex flex-col gap-3 w-full">
           <button
-            onClick={handleRestart}
-            className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer uppercase
-              ${isRestarting
-                ? "bg-[#090C41] text-white border-[#090C41]"
-                : "bg-white text-black border-gray-300 hover:border-black"
+          disabled
+          className="px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer bg-black text-white border-black"
+        >
+          {t("cta.buy", { ns: "common" })} Overlay TT
+        </button>
+
+          <button 
+            onClick={handleRestart} 
+            className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer  
+              ${isRestarting 
+                ? "bg-[#090C41] text-white border-[#090C41]" 
+                : "bg-white text-black border-gray-300 hover:border-black" 
               }`}
-          >
-            {t("cta.restart", { ns: "common" })}
+          > 
+            {t("cta.restart", { ns: "common" })} 
           </button>
+        </div>
+          </div> 
         </div>
 
         <div className="mt-10 text-left font-sans max-w-md mx-auto">

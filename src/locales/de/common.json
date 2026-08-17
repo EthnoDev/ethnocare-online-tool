@@ -15,7 +15,8 @@
         "suspension": "Suspension",
         "pressurePoints": "Overlay-Rotation",
         "small": "ZU KLEIN",
-        "home": "Zurück zur Startseite"
+        "home": "Zurück zur Startseite",
+        "buy": "Erhalten Sie das "
     },
     "pages": {
         "circumference_tt_vac": "TT Umfang distal Seal",
