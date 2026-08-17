@@ -147,9 +147,10 @@ export default function PageWrapper({
           <img
             src={EthnocareLogo}
             alt="Ethnocare"
-            className="h-4 w-auto object-contain"
+            className="h-3 sm:h-4 w-auto object-contain"
           />
-          <div className="flex items-center gap-3">
+
+          <div className="flex items-center gap-2 sm:gap-3">
             {/* Sizing charts button only on /sizing routes */}
             {showSizingCharts && (
               <SelectableOption
@@ -157,18 +158,22 @@ export default function PageWrapper({
                 selected={false}
                 onClick={openCharts}
                 label={
-                  <span className="flex items-center gap-2 justify-center">
+                  <span className="flex items-center gap-1 sm:gap-2 justify-center">
                     <img
                       src={DownloadLogo}
                       alt=""
-                      className="h-4 w-4"
+                      className="h-3 w-3 sm:h-4 sm:w-4"
                       aria-hidden="true"
                     />
-                    <span>{t("cta.sizings")}</span>
+
+                    <span className="text-xs sm:text-base leading-tight">
+                      {t("cta.sizings")}
+                    </span>
                   </span>
                 }
               />
             )}
+
             <LanguageButton />
           </div>
         </div>
