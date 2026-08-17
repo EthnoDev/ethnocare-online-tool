@@ -10,122 +10,239 @@ import TTProductImg from "../../../../assets/products/tt.png";
 
 export default function SizeTT() {
   const navigate = useNavigate();
+  const [isConfirming, setIsConfirming] = useState(false);
   const [isRestarting, setIsRestarting] = useState(false);
   const { t, i18n } = useTranslation(["pages", "common"]);
 
   /** ---------- Data Retrieval ---------- */
-  // Get and capitalize only the first letter
-  const rawAmputation = localStorage.getItem("amputation") || "tt"; 
-  const amputation = rawAmputation.charAt(0).toUpperCase() + rawAmputation.slice(1).toLowerCase();
+  const rawAmputation = localStorage.getItem("amputation") || "tt";
+  const amputation =
+    rawAmputation.charAt(0).toUpperCase() +
+    rawAmputation.slice(1).toLowerCase();
 
-  // Usually 'product' stores "Overlay" or "Underlay"
-  const product = localStorage.getItem("product") || "Overlay"; 
+  const product = localStorage.getItem("product") || "Overlay";
   const suspensionId = localStorage.getItem("suspension") || "—";
-  
-  const circumferenceRaw = localStorage.getItem("raw_circumference") || "—";
-  const circumferenceMapped = localStorage.getItem("circumference") || "—";
-  
+
+  const circumferenceRaw =
+    localStorage.getItem("raw_circumference") || "—";
+  const circumferenceMapped =
+    localStorage.getItem("circumference") || "—";
+
   const lengthRaw = localStorage.getItem("raw_length") || "—";
   const lengthMapped = localStorage.getItem("length") || "—";
-  
+
   const orientation = localStorage.getItem("orientation") || "—";
   const unit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
 
   /** ---------- Logic & Formatting ---------- */
   const currentLang = (i18n.language || "en").split("-")[0];
 
-  // Combined Product + Amputation Line pulling from common translations
   const productAmputation = t("common:products.tt");
 
-  const suspensionLabel = suspensionId !== "—" 
-    ? t(`suspension.${suspensionId.toLowerCase().replace("tt-", "tt-")}`, { ns: "common" }) 
-    : "—";
+  const suspensionLabel =
+    suspensionId !== "—"
+      ? t(
+          `suspension.${suspensionId
+            .toLowerCase()
+            .replace("tt-", "tt-")}`,
+          { ns: "common" }
+        )
+      : "—";
 
-  const orientationLabel = orientation === "—" ? "—" : t(`orientation.${orientation.toLowerCase()}`, { ns: "common" });
+  const orientationLabel =
+    orientation === "—"
+      ? "—"
+      : t(`orientation.${orientation.toLowerCase()}`, {
+          ns: "common",
+        });
 
-  const sizeCode = (circumferenceMapped !== "—" && lengthMapped !== "—" && orientation !== "—")
-    ? `OV${circumferenceMapped}-${lengthMapped}-${orientation.charAt(0).toUpperCase()}`
-    : "XXXXX";
+  const sizeCode =
+    circumferenceMapped !== "—" &&
+    lengthMapped !== "—" &&
+    orientation !== "—"
+      ? `OV${circumferenceMapped}-${lengthMapped}-${orientation
+          .charAt(0)
+          .toUpperCase()}`
+      : "XXXXX";
 
   const germanSizeMap = {
-    "OV35-SH-L": "211B18=1LL", "OV35-SH-R": "211B18=1LR",
-    "OV28-SH-L": "211B18=1ML", "OV28-SH-R": "211B18=1MR",
-    "OV23-SH-L": "211B18=1SL", "OV23-SH-R": "211B18=1SR",
-    "OV35-LG-L": "211B18=2LL", "OV35-LG-R": "211B18=2LR",
-    "OV28-LG-L": "211B18=2ML", "OV28-LG-R": "211B18=2MR",
-    "OV23-LG-L": "211B18=2SL", "OV23-LG-R": "211B18=2SR",
+    "OV35-SH-L": "211B18=1LL",
+    "OV35-SH-R": "211B18=1LR",
+    "OV28-SH-L": "211B18=1ML",
+    "OV28-SH-R": "211B18=1MR",
+    "OV23-SH-L": "211B18=1SL",
+    "OV23-SH-R": "211B18=1SR",
+    "OV35-LG-L": "211B18=2LL",
+    "OV35-LG-R": "211B18=2LR",
+    "OV28-LG-L": "211B18=2ML",
+    "OV28-LG-R": "211B18=2MR",
+    "OV23-LG-L": "211B18=2SL",
+    "OV23-LG-R": "211B18=2SR",
   };
-  const germanAltCode = currentLang === "de" ? germanSizeMap[sizeCode] || "" : "";
 
+  const germanAltCode =
+    currentLang === "de" ? germanSizeMap[sizeCode] || "" : "";
+
+  /** ---------- Shopify Variant Mapping ---------- */
+  const variantMap = {
+    "23-SH-R": "47373038420287",
+    "23-SH-L": "47373038453055",
+    "23-LG-R": "47373038485823",
+    "23-LG-L": "47373038518591",
+    "28-SH-R": "47373038551359",
+    "28-SH-L": "47373038584127",
+    "28-LG-R": "47373038616895",
+    "28-LG-L": "47373038649663",
+    "35-SH-R": "47373038682431",
+    "35-SH-L": "47373038715199",
+    "35-LG-R": "47373038747967",
+    "35-LG-L": "47373038780735",
+  };
+
+  /** ---------- Buy Now ---------- */
+  const handleConfirmClick = () => {
+    setIsConfirming(true);
+
+    if (
+      circumferenceMapped !== "—" &&
+      lengthMapped !== "—" &&
+      orientation !== "—"
+    ) {
+      const key = `${circumferenceMapped}-${lengthMapped}-${orientation
+        .charAt(0)
+        .toUpperCase()}`;
+
+      const variantId = variantMap[key];
+
+      if (variantId) {
+        setTimeout(() => {
+          window.open(
+            `https://ethnocare.ca/products/overlay-transtibial?variant=${variantId}`,
+            "_blank"
+          );
+
+          setIsConfirming(false);
+        }, 200);
+      } else {
+        alert("No matching product found for the selected values.");
+        setIsConfirming(false);
+      }
+    } else {
+      alert("Missing size data. Please complete all steps.");
+      setIsConfirming(false);
+    }
+  };
+
+  /** ---------- Restart ---------- */
   const handleRestart = () => {
     setIsRestarting(true);
-    setTimeout(() => navigate("/sizing/product"), 200);
+
+    setTimeout(() => {
+      navigate("/sizing/product");
+    }, 200);
   };
 
   return (
-    <PageWrapper showBack backTo="/sizing/TTorientation" currentStep={5} totalSteps={5} code={true}>
+    <PageWrapper
+      showBack
+      backTo="/sizing/TTorientation"
+      currentStep={5}
+      totalSteps={5}
+      code={true}
+    >
       <div className="w-full max-w-2xl text-center">
         <h1 className="text-3xl font-semibold font-sans mb-2 text-slate-900">
           {t("TTSizing.title")}
         </h1>
 
         <div className="flex flex-col items-center mb-6">
-          <p className="text-4xl font-bold font-sans text-[#090C41]">{sizeCode}</p>
+          <p className="text-4xl font-bold font-sans text-[#090C41]">
+            {sizeCode}
+          </p>
+
           {germanAltCode && (
-            <p className="text-xl font-bold text-gray-500 font-sans -mt-2">{germanAltCode}</p>
+            <p className="text-xl font-bold text-gray-500 font-sans -mt-2">
+              {germanAltCode}
+            </p>
           )}
         </div>
 
-        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10"> 
-          <img 
-            src={TTProductImg} 
-            alt={t("common:products.tt")} 
-            className="w-[180px] h-auto object-contain rounded-xl" 
-          /> 
+        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
+          <img
+            src={TTProductImg}
+            alt={t("common:products.tt")}
+            className="w-[180px] h-auto object-contain rounded-xl"
+          />
 
-          <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full"> 
-            <div className="space-y-1"> 
+          <div className="flex flex-col justify-between text-sm text-gray-700 font-sans h-full">
+            <div className="space-y-1">
               <p className="text-slate-900">
                 <strong>{t("TTSizing.description")}</strong>
-              </p> 
+              </p>
 
-              <p>{t("TTSizing.amp")}: {amputation}</p> 
-              <p>{t("TTSizing.system")}: {suspensionLabel}</p> 
-              <p>{t("TTSizing.circumference")}: {circumferenceRaw} {unit}</p> 
-              <p>{t("TTSizing.length")}: {lengthRaw} {unit}</p> 
-              <p>{t("TTSizing.orientation")}: {orientationLabel}</p> 
-            </div> 
+              <p>
+                {t("TTSizing.amp")}: {amputation}
+              </p>
+
+              <p>
+                {t("TTSizing.system")}: {suspensionLabel}
+              </p>
+
+              <p>
+                {t("TTSizing.circumference")}: {circumferenceRaw} {unit}
+              </p>
+
+              <p>
+                {t("TTSizing.length")}: {lengthRaw} {unit}
+              </p>
+
+              <p>
+                {t("TTSizing.orientation")}: {orientationLabel}
+              </p>
+            </div>
 
             <div className="mt-3 flex flex-col gap-3 w-full">
-          <button
-          disabled
-          className="px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer bg-black text-white border-black"
-        >
-          {t("cta.buy", { ns: "common" })} Overlay TT
-        </button>
+              <button
+                onClick={handleConfirmClick}
+                className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer
+                  ${
+                    isConfirming
+                      ? "bg-[#090C41] text-white border-[#090C41]"
+                      : "bg-black text-white border-black hover:bg-[#090C41]"
+                  }`}
+              >
+                {t("cta.buy", { ns: "common" })} Overlay TT
+              </button>
 
-          <button 
-            onClick={handleRestart} 
-            className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer  
-              ${isRestarting 
-                ? "bg-[#090C41] text-white border-[#090C41]" 
-                : "bg-white text-black border-gray-300 hover:border-black" 
-              }`}
-          > 
-            {t("cta.restart", { ns: "common" })} 
-          </button>
-        </div>
-          </div> 
+              <button
+                onClick={handleRestart}
+                className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer
+                  ${
+                    isRestarting
+                      ? "bg-[#090C41] text-white border-[#090C41]"
+                      : "bg-white text-black border-gray-300 hover:border-black"
+                  }`}
+              >
+                {t("cta.restart", { ns: "common" })}
+              </button>
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 text-left font-sans max-w-md mx-auto">
-          <h2 className="text-2xl font-semibold text-slate-900">{t("TTSizing.email_title")}</h2>
+          <h2 className="text-2xl font-semibold text-slate-900">
+            {t("TTSizing.email_title")}
+          </h2>
+
           <p className="text-xs text-gray-700 leading-snug mb-2">
             {t("TTSizing.email_description")}
           </p>
 
           <EmailCapture
-            selection={{ sizeCode, product: productAmputation }}
+            selection={{
+              sizeCode,
+              product: productAmputation,
+            }}
             onConfirm={(email) => {
               localStorage.setItem("saved_size_code", sizeCode);
               console.log("Result saved for:", email);
