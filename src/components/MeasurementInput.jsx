@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import Popup from "./Popup";
 
 export default function MeasurementInput({ product, measurement, onConfirm }) {
   const [unit, setUnit] = useState("cm");
   const [value, setValue] = useState("");
+  const [error, setError] = useState(""); // Stores translation key (e.g. "errors:noInput")
   const [showPopup, setShowPopup] = useState(false);
   const [isConfirming, setIsConfirming] = useState(false);
-  const { t } = useTranslation(["common", "pages"]);
+
+  const { t } = useTranslation(["common", "pages", "errors"]);
 
   useEffect(() => {
     const stored = localStorage.getItem("units");
@@ -16,7 +18,10 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
 
   const handleChange = (e) => {
     const input = e.target.value;
-    if (/^\d*\.?\d*$/.test(input)) setValue(input);
+    if (/^\d*\.?\d*$/.test(input)) {
+      setValue(input);
+      if (error) setError(""); // Clear error when typing
+    }
   };
 
   const convertToCm = (val) => (unit === "in" ? val * 2.54 : val);
@@ -28,7 +33,6 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
     // LINER LOGIC (ttLiner & tfLiner)
     // ----------------------------------------------------
     if (product === "ttLiner" || product === "tfLiner") {
-      // GEL Material (Applies to both ttLiner & tfLiner)
       if (material === "gel") {
         const matches = [];
         if (valCm >= 15 && valCm <= 22) matches.push("S");
@@ -40,7 +44,6 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
         return matches.length > 0 ? matches.join(",") : null;
       }
 
-      // TT LINER (s30 / s40)
       if (product === "ttLiner") {
         if (valCm >= 16 && valCm < 18) return 16;
         if (valCm >= 18 && valCm < 20) return 18;
@@ -61,7 +64,6 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
         if (valCm >= 45 && valCm < 47) return 45;
       }
 
-      // TF LINER (s30 / s40)
       if (product === "tfLiner") {
         if (valCm >= 25 && valCm < 26.5) return 25;
         if (valCm >= 26.5 && valCm < 28) return 26.5;
@@ -109,7 +111,6 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           if (valCm >= 30 && valCm <= 42) return 35;
         }
       } else {
-        // open-seal (default)
         if (measurement === "length") {
           if (valCm >= 23 && valCm < 28) return "SH";
           if (valCm >= 28 && valCm < 33) return "MD";
@@ -168,16 +169,20 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
 
   const handleConfirmClick = () => {
     if (isConfirming || showPopup) return;
-    setIsConfirming(true);
+
+    // Set the translation KEY rather than the translated string
+    if (!value.trim()) {
+      setError("errors:noInput");
+      return;
+    }
 
     const numericValue = parseFloat(value);
     if (isNaN(numericValue)) {
-      setTimeout(() => {
-        setShowPopup(true);
-        setIsConfirming(false);
-      }, 200);
+      setError("errors:noInput");
       return;
     }
+
+    setIsConfirming(true);
 
     if (measurement === "circumference") {
       localStorage.setItem("raw_circumference", numericValue);
@@ -227,7 +232,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       {showPopup && <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-10" />}
 
       <form onSubmit={handleSubmit} className="relative z-0 space-y-3">
-        <div className="relative w-full">
+        <div className="relative w-full" aria-invalid={!!error}>
           <input
             type="number"
             inputMode="decimal"
@@ -235,13 +240,22 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
             value={value}
             onChange={handleChange}
             placeholder={t("inputs.enter_measurement")}
-            className="w-full px-4 py-3 pr-16 border border-gray-300 hover:border-black rounded-md font-sans transition-all focus:outline-none"
+            className={`w-full px-4 py-3 pr-16 border rounded-md font-sans transition-all focus:outline-none ${
+              error ? "border-red-500 focus:border-red-500" : "border-gray-300 hover:border-black"
+            }`}
             autoFocus
           />
           <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black font-sans">
             {unit === "in" ? "in" : "cm"}
           </span>
         </div>
+
+        {/* Dynamic translation key rendering + accessibility attributes */}
+        {error && (
+          <p className="text-sm text-red-600 font-sans  text-left" role="alert" aria-live="polite">
+            {t(error)}
+          </p>
+        )}
 
         <div className="flex justify-end px-1">
           <button
