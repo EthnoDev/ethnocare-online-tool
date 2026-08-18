@@ -304,7 +304,7 @@ export default function SizeLiner() {
             </p>
             <div className="flex flex-col gap-1">
               {alternateSizeCodes.map((altCode, index) => (
-                <p key={index} className="text-lg font-semibold font-sans text-[#090C41]">
+                <p key={index} className="text-lg font-semibold font-sans text-black">
                   {altCode}
                 </p>
               ))}
