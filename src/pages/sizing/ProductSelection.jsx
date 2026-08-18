@@ -6,9 +6,9 @@ import { useTranslation } from "react-i18next";
 import LinerPopup from "../../components/LinerRedirectionPopup";
 
 // Product images
-import OverlayImg from "../../assets/products/overlay.svg";
+import OverlayImg from "../../assets/products/overlay.png";
 import UnderlayImg from "../../assets/products/underlay.png"; // or .webp
-import LinerImg from "../../assets/products/liner.svg";
+import LinerImg from "../../assets/products/liner.png";
 
 export default function ProductSelection() {
   const navigate = useNavigate();
