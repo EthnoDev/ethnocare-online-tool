@@ -7,7 +7,7 @@ import LinerPopup from "../../components/LinerRedirectionPopup";
 
 // Product images
 import OverlayImg from "../../assets/products/overlay.svg";
-import UnderlayImg from "../../assets/products/underlay.svg";
+import UnderlayImg from "../../assets/products/underlay.png"; // or .webp
 import LinerImg from "../../assets/products/liner.svg";
 
 export default function ProductSelection() {
