@@ -257,7 +257,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           </p>
         )}
 
-        <div className="flex justify-end px-1">
+        <div className="flex justify-end">
           <button
             type="submit"
             disabled={isConfirming}
