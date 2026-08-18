@@ -55,7 +55,7 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             {/* Redirect button */}
             <button
               onClick={() => setTimeout(onRedirect, 200)}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#090C41] text-white rounded-md font-semibold text-md hover:bg-[#1a1e6f] transition cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-black text-white border border-black rounded-md font-sans font-bold hover:bg-[#090C41] hover:border-[#090C41] transition-all cursor-pointer"
             >
               <span>{t("redirectionPopup.cta")}</span>
               <img
