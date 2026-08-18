@@ -243,15 +243,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           </span>
         </div>
 
-        <div className="flex items-start justify-between gap-4 px-1">
-          <button
-            type="button"
-            onClick={() => setShowPopup(true)}
-            className="text-sm text-slate-600 font-sans leading-tight mt-1 text-left cursor-pointer hover:text-black transition-colors"
-          >
-            {t("inputs.additional_instruction", "Additional instruction")}
-          </button>
-
+        <div className="flex justify-end px-1">
           <button
             type="submit"
             disabled={isConfirming}
