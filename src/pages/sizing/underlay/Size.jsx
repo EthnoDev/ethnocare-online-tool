@@ -6,8 +6,8 @@ import PageWrapper from "../../../components/PageWrapper";
 import EmailCapture from "../../../components/EmailCapture";
 
 // Assets
-import ClosedUnderlayImg from "../../../assets/products/closedUnderlay.svg";
-import OpenUnderlayImg from "../../../assets/products/openUnderlay.svg";
+import ClosedUnderlayImg from "../../../assets/products/closedUnderlay.png";
+import OpenUnderlayImg from "../../../assets/products/openUnderlay.png";
 
 export default function SizeUnderlay() {
   const navigate = useNavigate();
