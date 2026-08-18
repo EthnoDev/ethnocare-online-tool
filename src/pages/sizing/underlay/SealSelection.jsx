@@ -9,15 +9,15 @@ const baseLang = (code) => (code || "en").split("-")[0];
 const pickLang = (code) => (["fr", "es", "de"].includes(code) ? code : "en");
 
 /** ---------- Seal Images (Localized) ---------- */
-import Open_en from "../../../assets/seals/open.svg";
-import Open_fr from "../../../assets/seals/open_fr.svg";
-import Open_es from "../../../assets/seals/open_es.svg";
-import Open_de from "../../../assets/seals/open_de.svg";
+import Open_en from "../../../assets/seals/open.png";
+import Open_fr from "../../../assets/seals/open_fr.png";
+import Open_es from "../../../assets/seals/open_es.png";
+import Open_de from "../../../assets/seals/open_de.png";
 
-import Closed_en from "../../../assets/seals/closed.svg";
-import Closed_fr from "../../../assets/seals/closed_fr.svg";
-import Closed_es from "../../../assets/seals/closed_es.svg";
-import Closed_de from "../../../assets/seals/closed_de.svg";
+import Closed_en from "../../../assets/seals/closed.png";
+import Closed_fr from "../../../assets/seals/closed_fr.png";
+import Closed_es from "../../../assets/seals/closed_es.png";
+import Closed_de from "../../../assets/seals/closed_de.png";
 
 const SEAL_IMAGES = {
   open: { en: Open_en, fr: Open_fr, es: Open_es, de: Open_de },
