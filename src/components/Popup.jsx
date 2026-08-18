@@ -7,12 +7,12 @@ export default function Popup({ type, onClose }) {
   const tableData = {
     tt: {
       title: "Overlay TT",
-      length: "Min: 13.5 cm / 5.3 Inch\nMax: -",
+      length: "Min: 13.5 cm / 5.3 Inch",
       circumference: "Min: 24 cm / 9.4 Inch\nMax: 42 cm / 16.5 Inch",
     },
     tf: {
       title: "Overlay TF",
-      length: "Min: 20 cm / 7.9 Inch\nMax: -",
+      length: "Min: 20 cm / 7.9 Inch",
       circumference: "Min: 32 cm / 12.6 Inch\nMax: 62 cm / 24.4 Inch",
     },
   };
@@ -23,7 +23,7 @@ export default function Popup({ type, onClose }) {
       rows: [
         {
           label: t("popup.label_length"),
-          value: "Min: 23 cm / 9 Inch\nMax: -",
+          value: "Min: 23 cm / 9 Inch",
         },
         {
           label: t("popup.label_circumferenceDistal"),
@@ -40,7 +40,7 @@ export default function Popup({ type, onClose }) {
       rows: [
         {
           label: t("popup.label_length"),
-          value: "Min: 27 cm / 10.6 Inch\nMax: -",
+          value: "Min: 27 cm / 10.6 Inch",
         },
         {
           label: t("popup.label_circumferenceDistal"),
