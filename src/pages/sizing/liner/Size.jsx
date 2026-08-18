@@ -5,10 +5,10 @@ import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 
 // Product Assets
-import cushionGelLinerImg from "../../../assets/products/cushionGelLiner.svg";
-import cushionSilLinerImg from "../../../assets/products/cushionSilLiner.svg";
-import pinGelLinerImg from "../../../assets/products/pinGelLiner.svg";
-import pinSilLinerImg from "../../../assets/products/pinSilLiner.svg";
+import cushionGelLinerImg from "../../../assets/products/cushionGelLiner.png";
+import cushionSilLinerImg from "../../../assets/products/cushionSilLiner.png";
+import pinGelLinerImg from "../../../assets/products/pinGelLiner.png";
+import pinSilLinerImg from "../../../assets/products/pinSilLiner.png";
 
 // UI Assets
 import RedirectLogo from "../../../assets/redirect-logo.svg";
@@ -221,12 +221,12 @@ export default function SizeLiner() {
         {/* 3. Product Summary Card */}
         <div className="w-full max-w-md mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-8 mb-6">
           
-          {/* Left Column: Image wrapper scales height and lets image enlarge naturally */}
+          {/* Left Column: Fixed width image container */}
           <div className="shrink-0 flex items-center justify-center">
             <img
               src={getProductImage()}
               alt={getProductImageAlt()}
-              className="h-full w-auto object-contain rounded-xl"
+              className="h-full w-[160px] object-contain rounded-xl"
             />
           </div>
 
