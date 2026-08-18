@@ -217,7 +217,7 @@ export default function SizeTF() {
         </h1>
 
         <div className="flex flex-col items-center mb-6">
-          <p className="text-4xl font-bold font-sans text-[#090C41]">
+          <p className="text-4xl font-bold font-sans">
             {sizeCode}
           </p>
 

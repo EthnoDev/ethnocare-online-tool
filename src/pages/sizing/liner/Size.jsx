@@ -215,7 +215,7 @@ export default function SizeLiner() {
 
         {/* 2. Primary Size Code Display */}
         <div className="flex flex-col items-center mb-6">
-          <p className="text-4xl font-bold font-sans text-[#090C41]">{sizeCode}</p>
+          <p className="text-4xl font-bold font-sans">{sizeCode}</p>
         </div>
 
         {/* 3. Product Summary Card */}
