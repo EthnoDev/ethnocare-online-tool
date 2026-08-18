@@ -5,20 +5,20 @@ import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 
 // Import material SVGs per language
-import gelDe from "../../../assets/materials/gel_de.svg";
-import gelEn from "../../../assets/materials/gel_en.svg";
-import gelEs from "../../../assets/materials/gel_es.svg";
-import gelFr from "../../../assets/materials/gel_fr.svg";
+import gelDe from "../../../assets/materials/gel_de.png";
+import gelEn from "../../../assets/materials/gel_en.png";
+import gelEs from "../../../assets/materials/gel_es.png";
+import gelFr from "../../../assets/materials/gel_fr.png";
 
-import s30De from "../../../assets/materials/s30_de.svg";
-import s30En from "../../../assets/materials/s30_en.svg";
-import s30Es from "../../../assets/materials/s30_es.svg";
-import s30Fr from "../../../assets/materials/s30_fr.svg";
+import s30De from "../../../assets/materials/s30_de.png";
+import s30En from "../../../assets/materials/s30_en.png";
+import s30Es from "../../../assets/materials/s30_es.png";
+import s30Fr from "../../../assets/materials/s30_fr.png";
 
-import s40De from "../../../assets/materials/s40_de.svg";
-import s40En from "../../../assets/materials/s40_en.svg";
-import s40Es from "../../../assets/materials/s40_es.svg";
-import s40Fr from "../../../assets/materials/s40_fr.svg";
+import s40De from "../../../assets/materials/s40_de.png";
+import s40En from "../../../assets/materials/s40_en.png";
+import s40Es from "../../../assets/materials/s40_es.png";
+import s40Fr from "../../../assets/materials/s40_fr.png";
 
 const IMAGE_MAP = {
   gel: { de: gelDe, en: gelEn, es: gelEs, fr: gelFr },
