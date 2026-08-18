@@ -131,7 +131,7 @@
   },
   "lengthTTSizing": {
     "title": "Longueur",
-    "description": "Mesurez la longueur (L) du haut du joint jusqu'à la ligne de découpe poplitée",
+    "description": "Mesurez la longueur (L) du bas de l'emboîture jusqu'à la ligne de découpe poplitée",
     "note_title": "Patient sans emboîture",
     "note_body": "Vous pouvez mesurer la longueur du bout du manchon à la fosse poplitée et rapporter les dimensions ci-dessus (Assurez-vous de mesurer les dimensions linéaires)."
   },
