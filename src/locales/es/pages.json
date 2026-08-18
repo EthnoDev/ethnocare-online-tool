@@ -137,7 +137,7 @@
   },
   "lengthTTVacSizing": {
     "title": "Longitud",
-    "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea",
+    "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea (Puede colocar una marca en el liner para indicar la altura de la línea de recorte)",
     "note_title": "Paciente sin socket",
     "note_body": "Puede medir la longitud desde el extremo del liner hasta la fosa poplítea (Asegúrese de medir dimensiones lineales)."
   },

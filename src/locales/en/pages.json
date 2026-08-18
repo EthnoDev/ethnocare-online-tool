@@ -141,7 +141,7 @@
   },
   "lengthTTVacSizing": {
     "title": "Length",
-    "description": "Measure the length (L) from the top of the seal to the popliteal trim line",
+    "description": "Measure the length (L) from the top of the seal to the popliteal trim line (you can place a mark on the liner to indicate the height of the trim line)",
     "note_title": "Patient with no socket",
     "note_body": "You can measure the length from the end of the liner to the popliteal fossa and report the dimensions above (Make sure to measure linear dimensions)."
   },
