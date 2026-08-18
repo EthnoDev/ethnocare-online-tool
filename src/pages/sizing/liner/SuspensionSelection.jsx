@@ -10,18 +10,18 @@ const pickLang = (code) => (["fr", "es", "de"].includes(code) ? code : "en");
 
 /** ---------- Suspension Images (Localized) ---------- */
 // Gel Assets
-import gelCushionDe from "../../../assets/suspensionOptions/Liner/gel/cushion_de.svg";
-import gelCushionEn from "../../../assets/suspensionOptions/Liner/gel/cushion_en.svg";
-import gelCushionEs from "../../../assets/suspensionOptions/Liner/gel/cushion_es.svg";
-import gelCushionFr from "../../../assets/suspensionOptions/Liner/gel/cushion_fr.svg";
-import gelPinEn from "../../../assets/suspensionOptions/Liner/gel/pin_en.svg";
+import gelCushionDe from "../../../assets/suspensionOptions/Liner/gel/cushion_de.png";
+import gelCushionEn from "../../../assets/suspensionOptions/Liner/gel/cushion_en.png";
+import gelCushionEs from "../../../assets/suspensionOptions/Liner/gel/cushion_es.png";
+import gelCushionFr from "../../../assets/suspensionOptions/Liner/gel/cushion_fr.png";
+import gelPinEn from "../../../assets/suspensionOptions/Liner/gel/pin_en.png";
 
 // Silicone Assets
-import siliconeCushionDe from "../../../assets/suspensionOptions/Liner/silicone/cushion_de.svg";
-import siliconeCushionEn from "../../../assets/suspensionOptions/Liner/silicone/cushion_en.svg";
-import siliconeCushionEs from "../../../assets/suspensionOptions/Liner/silicone/cushion_es.svg";
-import siliconeCushionFr from "../../../assets/suspensionOptions/Liner/silicone/cushion_fr.svg";
-import siliconePinEn from "../../../assets/suspensionOptions/Liner/silicone/pin_en.svg";
+import siliconeCushionDe from "../../../assets/suspensionOptions/Liner/silicone/cushion_de.png";
+import siliconeCushionEn from "../../../assets/suspensionOptions/Liner/silicone/cushion_en.png";
+import siliconeCushionEs from "../../../assets/suspensionOptions/Liner/silicone/cushion_es.png";
+import siliconeCushionFr from "../../../assets/suspensionOptions/Liner/silicone/cushion_fr.png";
+import siliconePinEn from "../../../assets/suspensionOptions/Liner/silicone/pin_en.png";
 
 const SUSPENSION_IMAGES = {
   gel: {
