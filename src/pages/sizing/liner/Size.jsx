@@ -82,8 +82,6 @@ export default function SizeLiner() {
   const ampKey = rawAmputation.toLowerCase();
 
   /** ---------- Size Code Logic ---------- */
-  const productAmputation = t("common:products.underlay tt");
-
   const getSizeCode = () => {
     // Split circumferenceMapped by commas
     const parts = circumferenceMapped.split(",").map((p) => p.trim());
@@ -342,7 +340,7 @@ export default function SizeLiner() {
           <EmailCapture
             selection={{
               sizeCode,
-              product: productAmputation,
+              product: getProductImageAlt(),
             }}
             onConfirm={(email) => {
               localStorage.setItem("saved_size_code", sizeCode);
