@@ -131,8 +131,12 @@ export default function Length() {
             />
           </div>
 
-          {/* Right Option: Always Confirm - Solid Dark Blue Style */}
-          <div className="flex-1 [&_button]:bg-[#090C41] [&_button]:text-white [&_button]:border-[#090C41] [&_button]:hover:bg-[#1a1e6f]">
+          {/* Right Option: Always Confirm - Styled with Buy Now colors */}
+          <div className={`flex-1 [&_button]:text-white [&_button]:transition-all ${
+            selectedOption === "confirm"
+              ? "[&_button]:bg-[#090C41] [&_button]:border-[#090C41]"
+              : "[&_button]:bg-black [&_button]:border-black hover:[&_button]:bg-[#090C41]"
+          }`}>
             <SelectableOption
               compact
               variant="solid"
