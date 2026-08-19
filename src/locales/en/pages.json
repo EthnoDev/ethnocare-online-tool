@@ -225,7 +225,8 @@
     "seal": "Design",
     "silicone": "Silicone",
     "note_title": "Important notice",
-    "note_body": "xxx",
+    "note_body_closed": "Ensure the Underlay Closed sits <bold>{{measurement}}</bold> under the top edge of the liner.",
+    "note_body_open": "Ensure the Underlay Open sits <bold>{{measurement}}</bold> from distal end.",
     "email_title": "Save your selection!",
     "email_description": "Get your product code and fitting resources by email instantly."
   },

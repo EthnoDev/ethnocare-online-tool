@@ -221,7 +221,8 @@
     "seal": "Design",
     "silicone": "Silikon",
     "note_title": "Wichtiger Hinweis",
-    "note_body": "xxx",
+    "note_body_closed": "Stellen Sie sicher, dass das geschlossene Underlay <bold>{{measurement}}</bold> unter der oberen Kante des Liners sitzt.",
+    "note_body_open": "Stellen Sie sicher, dass das offene Underlay <bold>{{measurement}}</bold> vom distalen Ende entfernt sitzt.",
     "email_title": "Auswahl speichern!",
     "email_description": "Erhalten Sie Ihren Produktcode und Anpassungshinweise sofort per E-Mail."
   },

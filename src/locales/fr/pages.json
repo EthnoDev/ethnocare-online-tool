@@ -221,7 +221,8 @@
     "seal": "Design",
     "silicone": "Silicone",
     "note_title": "Avis important",
-    "note_body": "xxx",
+    "note_body_closed": "Assurez-vous que l'Underlay fermé est <bold>{{measurement}}</bold> sous le bord supérieur du manchon.",
+    "note_body_open": "Assurez-vous que l'Underlay ouvert est <bold>{{measurement}}</bold> de l'extrémité distale.",
     "email_title": "Sauvegardez votre sélection!",
     "email_description": "Recevez instantanément votre code produit et les ressources de montage par email."
   },
