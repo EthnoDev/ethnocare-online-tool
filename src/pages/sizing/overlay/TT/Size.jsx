@@ -211,7 +211,7 @@ export default function SizeTT() {
                       : "bg-black text-white border-black hover:bg-[#090C41]"
                   }`}
               >
-                {t("cta.buy", { ns: "common" })} Overlay TT
+                {t("cta.buy", { ns: "common" })}Overlay TT
               </button>
 
               <button
