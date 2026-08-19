@@ -146,7 +146,7 @@ export default function SizeTT() {
     <PageWrapper
       showBack
       backTo="/sizing/TTorientation"
-      currentStep={5}
+      //currentStep={5}
       totalSteps={5}
       code={true}
     >

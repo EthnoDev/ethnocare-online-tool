@@ -175,7 +175,7 @@ export default function SizeUnderlay() {
     <PageWrapper
       showBack
       backTo={backTo}
-      currentStep={currentStep}
+      //currentStep={currentStep}
       code={true}
     >
       <div className="w-full max-w-2xl text-center">

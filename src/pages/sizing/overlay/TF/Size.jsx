@@ -207,7 +207,7 @@ export default function SizeTF() {
           ? "/sizing/TFcircumference-vac"
           : "/sizing/TFcircumference"
       }
-      currentStep={4}
+      //currentStep={4}
       totalSteps={4}
       code={true}
     >
