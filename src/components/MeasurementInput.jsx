@@ -240,7 +240,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
             value={value}
             onChange={handleChange}
             placeholder={t("inputs.enter_measurement")}
-            className={`w-full px-4 py-3 pr-16 border rounded-md font-sans transition-all focus:outline-none ${
+            className={`w-full px-4 py-3 pr-16 bg-white border rounded-md font-sans transition-all focus:outline-none ${
               error ? "border-red-500 focus:border-red-500" : "border-gray-300 hover:border-black"
             }`}
             autoFocus

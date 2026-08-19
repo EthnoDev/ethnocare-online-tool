@@ -117,7 +117,7 @@ export default function EmailCapture({
                 value={email}
                 onChange={handleChange}
                 placeholder={t("email.placeholder", { ns: "common" })}
-                className="min-w-0 flex-1 h-[42px] px-4 border border-gray-300 hover:border-black rounded-md
+                className="min-w-0 flex-1 h-[42px] px-4 bg-white border border-gray-300 hover:border-black rounded-md
                            font-sans text-base leading-none appearance-none focus:outline-none"
                 autoCorrect="off"
                 autoCapitalize="none"
