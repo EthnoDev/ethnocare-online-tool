@@ -66,6 +66,10 @@ export default function SizeUnderlay() {
     ? "UnderlaySizing.note_body_closed"
     : "UnderlaySizing.note_body_open";
 
+  const noteAltKey = isClosed
+    ? "common:popup.underlay_closed_title"
+    : "common:popup.underlay_open_title";
+
   const measurement = isClosed
     ? (isImperial ? "2 in" : "5 cm")
     : (isImperial ? "4 in" : "10 cm");
@@ -292,7 +296,7 @@ export default function SizeUnderlay() {
                 <div className="mt-4 flex justify-center">
                   <img
                     src={noteImage}
-                    alt={t("UnderlaySizing.note_title")}
+                    alt={t(noteAltKey)}
                     className="w-full max-w-[140px] h-auto object-contain rounded-lg"
                   />
                 </div>
