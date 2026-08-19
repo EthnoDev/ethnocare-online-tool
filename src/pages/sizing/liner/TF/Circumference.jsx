@@ -1,4 +1,3 @@
-// src/pages/sizing/liner/TF/Circumference.jsx
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import PageWrapper from "../../../../components/PageWrapper";
@@ -22,8 +21,18 @@ export default function Circumference() {
   const handleConfirm = (res) => {
     setResult(res);
     localStorage.setItem("circumference", res);
+
+    // Determine raw_length based on material and units
+    const linerMaterial = localStorage.getItem("liner_material");
+    const isSilicone = linerMaterial === "s30" || linerMaterial === "s40";
+    const lengthVal = isSilicone
+      ? isImperial ? "13.8 ± 0.8" : "35 ± 2"
+      : isImperial ? "15.7 ± 0.8" : "40 ± 2";
+
+    localStorage.setItem("raw_length", lengthVal);
+
     // Navigate to next step
-    setTimeout(() => navigate("/sizing/liner/length"), 200);
+    setTimeout(() => navigate("/sizing/liner/suspension"), 200);
   };
 
   return (
@@ -54,11 +63,11 @@ export default function Circumference() {
         </div>
 
         <div className="w-full">
-            <MeasurementInput
-                product="tfLiner"
-                measurement="circumference"
-                onConfirm={handleConfirm}
-            />
+          <MeasurementInput
+            product="tfLiner"
+            measurement="circumference"
+            onConfirm={handleConfirm}
+          />
         </div>
       </div>
     </PageWrapper>

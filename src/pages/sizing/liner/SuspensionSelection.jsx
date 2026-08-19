@@ -45,11 +45,17 @@ export default function SuspensionSelection() {
   const linerMaterial = localStorage.getItem("liner_material");
   const amputation = localStorage.getItem("amputation"); // 'transfemoral' or 'transtibial'
 
+  // Dynamic back navigation route based on amputation type
+  const isTransfemoral = amputation === "transfemoral";
+  const backPath = isTransfemoral
+    ? "/sizing/liner/tf/circumference"
+    : "/sizing/liner/tt/circumference";
+
   const isSilicone = linerMaterial === "s30" || linerMaterial === "s40";
   const materialKey = isSilicone ? "silicone" : "gel";
 
   // Hide Cushion for Transfemoral Silicone
-  const hideCushion = isSilicone && amputation === "transfemoral";
+  const hideCushion = isSilicone && isTransfemoral;
 
   const handleSelect = (optionId) => {
     if (selected) return;
@@ -65,7 +71,7 @@ export default function SuspensionSelection() {
   return (
     <PageWrapper
       showBack={true}
-      backTo="/sizing/liner/length"
+      backTo={backPath}
       currentStep={5}
       code={true}
     >
