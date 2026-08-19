@@ -49,11 +49,11 @@ export default function SizeUnderlay() {
   const lengthRaw =
     localStorage.getItem("raw_length") || "—";
 
-  /** ---------- Note Image Selection ---------- */
-  const getNoteImage = () => {
-    const isImperial = units === "imperial";
-    const isClosed = sealId === "closed-seal";
+  /** ---------- Note Logic & Content ---------- */
+  const isClosed = sealId === "closed-seal";
+  const isImperial = units === "imperial";
 
+  const getNoteImage = () => {
     if (isClosed) {
       return isImperial ? ClosedImperialImg : ClosedMetricImg;
     }
@@ -61,6 +61,14 @@ export default function SizeUnderlay() {
   };
 
   const noteImage = getNoteImage();
+
+  const noteKey = isClosed
+    ? "UnderlaySizing.note_body_closed"
+    : "UnderlaySizing.note_body_open";
+
+  const measurement = isClosed
+    ? (isImperial ? "2 in" : "5 cm")
+    : (isImperial ? "4 in" : "10 cm");
 
   /** ---------- Logic & Formatting ---------- */
   const productAmputation = t("common:products.underlay tt");
@@ -73,17 +81,15 @@ export default function SizeUnderlay() {
   const sizeCode =
     circumferenceMapped !== "—" && lengthMapped !== "—"
       ? `UDTT-${circumferenceMapped}-${lengthMapped}${
-          sealId === "closed-seal" ? "-C" : ""
+          isClosed ? "-C" : ""
         }`
       : "UDTT-XX-XX";
 
-  const backTo =
-    sealId === "closed-seal"
-      ? "/sizing/underlay/circumference"
-      : "/sizing/underlay/length";
+  const backTo = isClosed
+    ? "/sizing/underlay/circumference"
+    : "/sizing/underlay/length";
 
-  const currentStep =
-    sealId === "closed-seal" ? 4 : 5;
+  const currentStep = isClosed ? 4 : 5;
 
   /** ---------- Shopify Variant Mapping ---------- */
   const openVariantMap = {
@@ -124,7 +130,6 @@ export default function SizeUnderlay() {
       sealId !== "—"
     ) {
       const key = `${circumferenceMapped}-${lengthMapped}`;
-      const isClosed = sealId === "closed-seal";
 
       const variantId = isClosed
         ? closedVariantMap[key]
@@ -186,11 +191,7 @@ export default function SizeUnderlay() {
         {/* 3. Product Summary Card */}
         <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-8">
           <img
-            src={
-              sealId === "closed-seal"
-                ? ClosedUnderlayImg
-                : OpenUnderlayImg
-            }
+            src={isClosed ? ClosedUnderlayImg : OpenUnderlayImg}
             alt={t("common:products.underlay tt")}
             className="w-[180px] h-auto object-contain rounded-xl"
           />
@@ -217,7 +218,7 @@ export default function SizeUnderlay() {
                 {circumferenceRaw} {unit}
               </p>
 
-              {sealId === "open-seal" && (
+              {!isClosed && (
                 <p>
                   {t("UnderlaySizing.circumference2")}:{" "}
                   {circumference2Raw} {unit}
@@ -277,21 +278,22 @@ export default function SizeUnderlay() {
                 <p className="mt-1.5 text-sm text-slate-600 leading-snug">
                   <Trans
                     ns="pages"
-                    i18nKey="UnderlaySizing.note_body"
+                    i18nKey={noteKey}
+                    values={{ measurement }}
                     components={{
                       bold: (
-                        <strong className="font-bold underline text-[#090C41]" />
+                        <strong className="font-bold text-black" />
                       ),
                     }}
                   />
                 </p>
 
-                {/* Additional Image for Underlay Note */}
+                {/* Dynamic Diagram Image */}
                 <div className="mt-4 flex justify-center">
                   <img
                     src={noteImage}
                     alt={t("UnderlaySizing.note_title")}
-                    className="w-full max-w-[160px] h-auto object-contain rounded-lg"
+                    className="w-full max-w-[140px] h-auto object-contain rounded-lg"
                   />
                 </div>
               </div>
