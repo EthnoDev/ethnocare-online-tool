@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
+import EmailCapture from "../../../components/EmailCapture";
 
 // Product Assets
 import cushionGelLinerImg from "../../../assets/products/cushionGelLiner.png";
@@ -81,6 +82,8 @@ export default function SizeLiner() {
   const ampKey = rawAmputation.toLowerCase();
 
   /** ---------- Size Code Logic ---------- */
+  const productAmputation = t("common:products.underlay tt");
+
   const getSizeCode = () => {
     // Split circumferenceMapped by commas
     const parts = circumferenceMapped.split(",").map((p) => p.trim());
@@ -207,7 +210,7 @@ export default function SizeLiner() {
       backTo="/sizing/liner/thickness" 
       code={true}
     >
-      <div className="w-full max-w-md text-center">
+      <div className="w-full max-w-2xl text-center">
         {/* 1. Title */}
         <h1 className="text-3xl font-semibold font-sans mb-2 text-slate-900">
           {t("LinerSizing.title")}
@@ -313,7 +316,7 @@ export default function SizeLiner() {
         )}
 
         {/* 4. Restart Button */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-10">
           <button
             onClick={handleRestart}
             className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer uppercase
@@ -324,6 +327,28 @@ export default function SizeLiner() {
           >
             {t("cta.restart", { ns: "common" })}
           </button>
+        </div>
+
+        {/* 5. Email Capture Section */}
+        <div className="mt-10 text-left font-sans max-w-md mx-auto">
+          <h2 className="text-2xl font-semibold text-slate-900">
+            {t("LinerSizing.email_title")}
+          </h2>
+
+          <p className="text-xs text-gray-700 leading-snug mb-2">
+            {t("LinerSizing.email_description")}
+          </p>
+
+          <EmailCapture
+            selection={{
+              sizeCode,
+              product: productAmputation,
+            }}
+            onConfirm={(email) => {
+              localStorage.setItem("saved_size_code", sizeCode);
+              console.log("Result saved for:", email);
+            }}
+          />
         </div>
       </div>
     </PageWrapper>
