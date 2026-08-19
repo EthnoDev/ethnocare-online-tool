@@ -213,9 +213,12 @@ export default function SizeLiner() {
           {t("LinerSizing.title")}
         </h1>
 
-        {/* 2. Primary Size Code Display */}
+        {/* 2. Primary Size Code Display & Length */}
         <div className="flex flex-col items-center mb-6">
           <p className="text-4xl font-bold font-sans">{sizeCode}</p>
+          <p className="text-lg font-medium text-slate-800 font-sans">
+            {t("LinerSizing.length")} {lengthRaw} {unit}
+          </p>
         </div>
 
         {/* 3. Product Summary Card */}
@@ -242,9 +245,6 @@ export default function SizeLiner() {
               <p>{t("LinerSizing.material")}: {materialLabel}</p>
               <p>
                 {t("LinerSizing.circumference")}: {circumferenceRaw} {unit}
-              </p>
-              <p>
-                {t("LinerSizing.length")}: {lengthRaw} {unit}
               </p>
               <p>{t("LinerSizing.suspension")}: {suspensionLabel}</p>
               <p>{t("LinerSizing.thickness")}: {thicknessRaw}</p>
