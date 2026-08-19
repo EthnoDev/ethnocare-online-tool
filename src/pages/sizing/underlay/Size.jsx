@@ -1,13 +1,20 @@
 // src/pages/assistance/underlay/SizeUnderlay.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import EmailCapture from "../../../components/EmailCapture";
 
 // Assets
 import ClosedUnderlayImg from "../../../assets/products/closedUnderlay.png";
 import OpenUnderlayImg from "../../../assets/products/openUnderlay.png";
+import ExclamationIcon from "../../../assets/exclamation.svg";
+
+// Dynamic Note Images
+import ClosedImperialImg from "../../../assets/underlayXtra/closedImperial.svg";
+import ClosedMetricImg from "../../../assets/underlayXtra/closedMetric.svg";
+import OpenImperialImg from "../../../assets/underlayXtra/openImperial.svg";
+import OpenMetricImg from "../../../assets/underlayXtra/openMetric.svg";
 
 export default function SizeUnderlay() {
   const navigate = useNavigate();
@@ -16,7 +23,8 @@ export default function SizeUnderlay() {
   const { t } = useTranslation(["pages", "common"]);
 
   /** ---------- Data Retrieval ---------- */
-  const unit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
+  const units = localStorage.getItem("units");
+  const unit = units === "imperial" ? "in" : "cm";
 
   // Amputation label formatting
   const rawAmputation = localStorage.getItem("amputation") || "tt";
@@ -35,11 +43,24 @@ export default function SizeUnderlay() {
   const circumferenceMapped =
     localStorage.getItem("underlay_circumference") || "—";
 
+  const lengthMapped =
+    localStorage.getItem("underlay_length") || "—";
+
   const lengthRaw =
     localStorage.getItem("raw_length") || "—";
 
-  const lengthMapped =
-    localStorage.getItem("underlay_length") || "—";
+  /** ---------- Note Image Selection ---------- */
+  const getNoteImage = () => {
+    const isImperial = units === "imperial";
+    const isClosed = sealId === "closed-seal";
+
+    if (isClosed) {
+      return isImperial ? ClosedImperialImg : ClosedMetricImg;
+    }
+    return isImperial ? OpenImperialImg : OpenMetricImg;
+  };
+
+  const noteImage = getNoteImage();
 
   /** ---------- Logic & Formatting ---------- */
   const productAmputation = t("common:products.underlay tt");
@@ -163,7 +184,7 @@ export default function SizeUnderlay() {
         </div>
 
         {/* 3. Product Summary Card */}
-        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
+        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-8">
           <img
             src={
               sealId === "closed-seal"
@@ -238,7 +259,47 @@ export default function SizeUnderlay() {
           </div>
         </div>
 
-        {/* 4. Email Capture Section */}
+        {/* 4. Note Section */}
+        <div className="w-full max-w-md mx-auto mt-2 mb-10">
+          <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
+            <div className="flex items-start gap-3 text-left">
+              <img
+                src={ExclamationIcon}
+                alt={t("common:popup.notice_title")}
+                className="shrink-0 w-5 h-5 mt-0.5"
+              />
+
+              <div className="flex-1">
+                <p className="text-md font-bold text-slate-900 leading-tight">
+                  {t("UnderlaySizing.note_title")}
+                </p>
+
+                <p className="mt-1.5 text-sm text-slate-600 leading-snug">
+                  <Trans
+                    ns="pages"
+                    i18nKey="UnderlaySizing.note_body"
+                    components={{
+                      bold: (
+                        <strong className="font-bold underline text-[#090C41]" />
+                      ),
+                    }}
+                  />
+                </p>
+
+                {/* Additional Image for Underlay Note */}
+                <div className="mt-4 flex justify-center">
+                  <img
+                    src={noteImage}
+                    alt={t("UnderlaySizing.note_title")}
+                    className="w-full max-w-[160px] h-auto object-contain rounded-lg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 5. Email Capture Section */}
         <div className="mt-10 text-left font-sans max-w-md mx-auto">
           <h2 className="text-2xl font-semibold text-slate-900">
             {t("UnderlaySizing.email_title")}
