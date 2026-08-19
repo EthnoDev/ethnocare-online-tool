@@ -76,19 +76,21 @@ export default function LengthVac() {
         </div>
 
         {/* Notice Section - Matching the darker design from Length.jsx */}
-        <div className="w-full max-w-sm mx-auto mt-10">
-          <div className="border border-gray-300 rounded-2xl p-4 bg-gray-200">
+        <div className="w-full max-w-md mx-auto mt-10">
+          <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
             <div className="flex items-start gap-3 text-left">
               <img
                 src={ExclamationIcon}
                 alt={t("common:popup.notice_title")}
                 className="shrink-0 w-5 h-5 opacity-100"
               />
+
               <div className="flex-1">
                 <p className="text-md font-bold text-slate-900 leading-tight">
                   {t("lengthTTVacSizing.note_title")}
                 </p>
-                <p className="mt-1.5 text-sm text-slate-700 leading-snug">
+
+                <p className="mt-1.5 text-sm text-slate-600 leading-snug">
                   <Trans
                     ns="pages"
                     i18nKey="lengthTTVacSizing.note_body"
@@ -98,6 +100,7 @@ export default function LengthVac() {
                     }}
                   />
                 </p>
+
               </div>
             </div>
           </div>

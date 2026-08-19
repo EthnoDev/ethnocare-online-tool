@@ -267,7 +267,7 @@ export default function SizeUnderlay() {
               <img
                 src={ExclamationIcon}
                 alt={t("common:popup.notice_title")}
-                className="shrink-0 w-5 h-5 mt-0.5"
+                className="shrink-0 w-5 h-5 opacity-100"
               />
 
               <div className="flex-1">

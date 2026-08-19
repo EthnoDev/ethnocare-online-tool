@@ -75,7 +75,7 @@ export default function Length() {
         </div>
 
         {/* Note Section - Specific to Length Measurement */}
-        <div className="w-full max-w-sm mx-auto mt-10">
+        <div className="w-full max-w-md mx-auto mt-10">
           <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
             <div className="flex items-start gap-3 text-left">
               <img
@@ -83,11 +83,13 @@ export default function Length() {
                 alt={t("common:popup.notice_title")}
                 className="shrink-0 w-5 h-5 opacity-100"
               />
+
               <div className="flex-1">
                 {/* Fixed back to lengthTTSizing.note_title */}
                 <p className="text-md font-bold text-slate-900 leading-tight">
                   {t("lengthTTSizing.note_title")}
                 </p>
+
                 <p className="mt-1.5 text-sm text-slate-600 leading-snug">
                   <Trans
                     ns="pages"
@@ -98,6 +100,7 @@ export default function Length() {
                     }}
                   />
                 </p>
+                
               </div>
             </div>
           </div>
