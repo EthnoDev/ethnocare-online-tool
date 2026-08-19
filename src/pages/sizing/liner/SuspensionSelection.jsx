@@ -72,7 +72,7 @@ export default function SuspensionSelection() {
     <PageWrapper
       showBack={true}
       backTo={backPath}
-      currentStep={5}
+      currentStep={4}
       code={true}
     >
       <div className="w-full max-w-md">

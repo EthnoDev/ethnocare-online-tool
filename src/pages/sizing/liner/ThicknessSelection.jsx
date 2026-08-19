@@ -211,7 +211,7 @@ export default function ThicknessSelection() {
     <PageWrapper
       showBack={true}
       backTo="/sizing/liner/suspension"
-      currentStep={6}
+      currentStep={5}
       code={true}
     >
       <div className="w-full max-w-md">
