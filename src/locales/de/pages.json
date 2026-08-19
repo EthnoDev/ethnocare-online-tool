@@ -271,6 +271,8 @@
     "prodDocDescription": "Sie können die Liner-Größentabelle und/oder den Liner-Katalog herunterladen, um weitere Informationen zu erhalten.",
     "prodDocLinerSizing": "Liner-Größentabelle",
     "prodDocLinerCatalog": "Liner-Katalog",
-    "otherTitle": "Andere kompatible Größen:"
+    "otherTitle": "Andere kompatible Größen:",
+    "email_title": "Auswahl speichern!",
+    "email_description": "Erhalten Sie Ihren Produktcode und Anpassungshinweise sofort per E-Mail."
   }
 }

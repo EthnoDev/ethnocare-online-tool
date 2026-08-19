@@ -276,6 +276,8 @@
     "prodDocDescription": "You can download the liner sizing and/or the liner catalog to access additional information.",
     "prodDocLinerSizing": "Liner sizing chart",
     "prodDocLinerCatalog": "Liner catalog",
-    "otherTitle": "Other compatible sizes:"
+    "otherTitle": "Other compatible sizes:",
+    "email_title": "Save your selection!",
+    "email_description": "Get your product code and fitting resources by email instantly."
   }
 }
