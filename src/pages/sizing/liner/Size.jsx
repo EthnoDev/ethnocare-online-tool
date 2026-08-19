@@ -126,6 +126,8 @@ export default function SizeLiner() {
     const parts = circumferenceMapped.split(",").map((p) => p.trim());
     if (parts.length <= 1) return [];
 
+    const primaryIndex = parts.length === 2 ? 0 : parts.length === 3 ? 1 : 0;
+
     // Helper to format a SKU with a specific circumference part
     const formatSku = (circPart) => {
       if (ampKey === "transtibial" && linerMaterial === "s30") {
@@ -147,17 +149,12 @@ export default function SizeLiner() {
       return `LNR-${circPart}`;
     };
 
-    // 1 comma -> 2 parts -> primary took index 0, so alternate is index 1
-    if (parts.length === 2) {
-      return [formatSku(parts[1])];
-    }
+    const altIndices = parts.length === 2 ? [1] : parts.length === 3 ? [0, 2] : [];
 
-    // 2 commas -> 3 parts -> primary took index 1, so alternates are index 0 and index 2
-    if (parts.length === 3) {
-      return [formatSku(parts[0]), formatSku(parts[2])];
-    }
-
-    return [];
+    return altIndices.map((idx) => ({
+      code: formatSku(parts[idx]),
+      type: idx < primaryIndex ? "moreStretched" : "lessStretched",
+    }));
   };
 
   const alternateSizeCodes = getAlternateSizeCodes();
@@ -300,14 +297,51 @@ export default function SizeLiner() {
         {/* 3b. Conditional Title & Alternate Options Section */}
         {alternateSizeCodes.length > 0 && (
           <div className="w-full max-w-md mx-auto text-left mb-6 font-sans">
-            <p className="text-base font-bold text-slate-900 mb-1">
+            <p className="text-base font-bold text-slate-900 mb-2">
               {t("LinerSizing.otherTitle")}
             </p>
-            <div className="flex flex-col gap-1">
-              {alternateSizeCodes.map((altCode, index) => (
-                <p key={index} className="text-lg font-semibold font-sans text-black">
-                  {altCode}
-                </p>
+            <div className="flex flex-col gap-2.5">
+              {alternateSizeCodes.map((alt, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3.5 p-3.5 bg-gray-200/80 rounded-2xl"
+                >
+                  {alt.type === "moreStretched" ? (
+                    <svg
+                      className="w-5 h-5 text-slate-900 shrink-0 stroke-[2.5]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 15l7-7 7 7"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-5 h-5 text-slate-900 shrink-0 stroke-[2.5]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  )}
+                  <div>
+                    <p className="text-sm font-medium text-slate-900 leading-snug">
+                      {t(`LinerSizing.${alt.type}`)}
+                    </p>
+                    <p className="text-base font-bold font-sans text-slate-900 leading-snug">
+                      {alt.code}
+                    </p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

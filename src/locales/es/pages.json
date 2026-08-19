@@ -273,6 +273,8 @@
     "prodDocLinerSizing": "Tabla de tallas del liner",
     "prodDocLinerCatalog": "Catálogo del liner",
     "otherTitle": "Otras tallas compatibles:",
+    "moreStretched": "Más estirado",
+    "lessStretched": "Menos estirado",
     "email_title": "¡Guarde su selección!",
     "email_description": "Reciba al instante su código de producto y recursos de ajuste por correo electrónico."
   }

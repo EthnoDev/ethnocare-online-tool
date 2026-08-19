@@ -273,6 +273,8 @@
     "prodDocLinerSizing": "Tableau de dimensionnement du manchon",
     "prodDocLinerCatalog": "Catalogue du manchon",
     "otherTitle": "Autres tailles compatibles:",
+    "moreStretched": "Plus étiré",
+    "lessStretched": "Moins étiré",
     "email_title": "Sauvegardez votre sélection!",
     "email_description": "Recevez instantanément votre code produit et les ressources de montage par email."
   }
