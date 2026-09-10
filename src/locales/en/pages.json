@@ -199,7 +199,7 @@
   },
   "lengthUnderlaySizing": {
     "title": "Length",
-    "description": "Measure the length (L) of your cut liner"
+    "description": "Measure the length of the trimmed liner"
   },
   "circumferenceUnderlaySizing": {
     "title": "Circumference",

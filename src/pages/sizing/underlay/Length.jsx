@@ -4,29 +4,12 @@ import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import MeasurementInput from "../../../components/MeasurementInput";
 
-/** ---------- Helpers ---------- */
-const baseLang = (code) => (code || "en").split("-")[0];
-const pickLang = (code) => (["fr", "es", "de"].includes(code) ? code : "en");
-
-/** ---------- Length Images (Localized from assets/lengths/Underlay/) ---------- */
-import Length_en from "../../../assets/lengths/Underlay/en.svg";
-import Length_fr from "../../../assets/lengths/Underlay/fr.svg";
-import Length_es from "../../../assets/lengths/Underlay/es.svg";
-import Length_de from "../../../assets/lengths/Underlay/de.svg";
-
-const LENGTH_IMAGES = { 
-  en: Length_en, 
-  fr: Length_fr, 
-  es: Length_es, 
-  de: Length_de 
-};
+// Length Image
+import NewLengthImg from "../../../assets/lengths/Underlay/newLength.svg";
 
 export default function Length() {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation(["pages", "common"]);
-
-  // Determine current language key
-  const lang = pickLang(baseLang(i18n.language));
+  const { t } = useTranslation(["pages", "common"]);
 
   // Retrieve selected seal type from localStorage
   const seal = localStorage.getItem("underlay_seal");
@@ -65,10 +48,10 @@ export default function Length() {
           {t("lengthUnderlaySizing.description")}
         </p>
 
-        {/* 3. Image (Localized, No borders/rings) */}
+        {/* 3. Image */}
         <div className="mt-8 flex justify-center">
           <img
-            src={LENGTH_IMAGES[lang] || LENGTH_IMAGES.en}
+            src={NewLengthImg}
             alt={t("common:pages.length_udtt")}
             className="w-74 h-auto object-contain rounded-xl"
           />
