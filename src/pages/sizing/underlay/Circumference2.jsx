@@ -1,6 +1,7 @@
+// src/pages/assistance/underlay/Circumference2.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next"; // <-- 1. Import Trans
 import PageWrapper from "../../../components/PageWrapper";
 import MeasurementInput from "../../../components/MeasurementInput";
 import RedirectionPopup from "../../../components/UnderlayRedirectionPopup";
@@ -35,9 +36,13 @@ export default function Circumference2() {
           {t("circumference2UnderlaySizing.title")}
         </h1>
 
-        {/* 2. Description */}
+        {/* 2. Description with bold support */}
         <p className="mt-3 text-center text-base text-slate-500">
-          {t("circumference2UnderlaySizing.description")}
+          <Trans
+            i18nKey="circumference2UnderlaySizing.description"
+            ns="pages"
+            components={{ b: <b className="font-bold text-slate-700" /> }}
+          />
         </p>
 
         {/* 3. Image */}

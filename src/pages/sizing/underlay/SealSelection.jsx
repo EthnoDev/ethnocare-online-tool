@@ -52,6 +52,7 @@ export default function SealSelection() {
       showBack={true} 
       backTo="/sizing/TTsuspension" 
       currentStep={null}
+      code={true}
     >
       <div className="w-full max-w-md">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">

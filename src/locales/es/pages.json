@@ -202,8 +202,8 @@
     "description": "Mida la circunferencia (C) a {{distance}} del extremo distal"
   },
   "circumference2UnderlaySizing": {
-    "title": "Circunferencia",
-    "description": "Mida la circunferencia superior del liner (C2) sobre la piel."
+    "title": "Circunferencia (C2)",
+    "description": "Mida la circunferencia <b>justo por encima del borde superior</b> del liner recortado (sobre la piel)."
   },
   "siliconeUnderlaySizing": {
     "title": "Silicona",

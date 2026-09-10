@@ -202,8 +202,8 @@
     "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende entfernt"
   },
   "circumference2UnderlaySizing": {
-    "title": "Umfang",
-    "description": "Messen Sie den oberen Umfang des Liners (C2) auf der Haut."
+    "title": "Umfang (C2)",
+    "description": "Messen Sie den Umfang <b>direkt oberhalb der oberen Kante</b> des zugeschnittenen Liners (über der Haut)."
   },
   "siliconeUnderlaySizing": {
     "title": "Silikon-Option",
