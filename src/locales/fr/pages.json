@@ -188,7 +188,7 @@
   },
   "sealUnderlaySizing": {
     "title": "Sélection du joint",
-    "description": "Choisissez où le joint sera fait avec votre manchon",
+    "description": "Sélectionnez le design de votre Underlay",
     "open_description": "Nous recommandons d'utiliser la position de scellement ouverte car elle permet à l'underlay de coller au-dessus du manchon et d'évacuer l'excès d'humidité.",
     "closed_description": "Design plus classique pour tous les types de suspension",
     "closed_exception": "L'underlay Fermé est le seul design disponible pour votre type de suspension."

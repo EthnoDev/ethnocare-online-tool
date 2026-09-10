@@ -188,7 +188,7 @@
   },
   "sealUnderlaySizing": {
     "title": "Dichtungsauswahl",
-    "description": "Wählen Sie die Position der Dichtung auf Ihrem Liner",
+    "description": "Wählen Sie das Design Ihres Underlays",
     "open_description": "Wir empfehlen die offene Position, da das Underlay so über den Liner ragen und überschüssige Feuchtigkeit ableiten kann.",
     "closed_description": "Klassischeres Design für alle Aufhängungstypen",
     "closed_exception": "Das geschlossene Underlay ist das einzige Design, das für Ihren Aufhängungstyp verfügbar ist."

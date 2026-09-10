@@ -55,6 +55,8 @@ export default function SuspensionSelection() {
   const { t, i18n } = useTranslation(["pages", "common"]);
 
   const lang = pickLang(baseLang(i18n.language));
+  const product = localStorage.getItem("product");
+  const isUnderlay = product === "Underlay";
 
   const options = [
     { id: "TT-locking", tKey: "tt-locking" },
@@ -74,11 +76,9 @@ export default function SuspensionSelection() {
     setSelected(optionId);
     localStorage.setItem("suspension", optionId);
 
-    const product = localStorage.getItem("product");
-
     setTimeout(() => {
       // 1. Underlay logic
-      if (product === "Underlay") {
+      if (isUnderlay) {
         navigate("/sizing/underlay/seal");
         return;
       }
@@ -93,7 +93,13 @@ export default function SuspensionSelection() {
   };
 
   return (
-    <PageWrapper showBack={true} backTo="/sizing/product" currentStep={1} totalSteps={5} code={true}>
+    <PageWrapper 
+      showBack={true} 
+      backTo="/sizing/product" 
+      currentStep={isUnderlay ? null : 1} 
+      totalSteps={isUnderlay ? null : 5} 
+      code={true}
+    >
       <div className="w-100 max-w-md">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("suspensionSizing.title", { ns: "pages" })}

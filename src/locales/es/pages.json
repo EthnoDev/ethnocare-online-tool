@@ -188,7 +188,7 @@
   },
   "sealUnderlaySizing": {
     "title": "Selección de sello",
-    "description": "Elija dónde se ubicará el sello en su liner",
+    "description": "Seleccione el diseño de su Underlay",
     "open_description": "Recomendamos la posición de sellado abierta, ya que permite que el Underlay se adhiera por encima del liner y evacue el exceso de humedad.",
     "closed_description": "Diseño más clásico para todos los tipos de suspensión",
     "closed_exception": "El Underlay Cerrado es el único diseño disponible para su tipo de suspensión."
