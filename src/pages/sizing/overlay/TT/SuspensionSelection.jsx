@@ -74,8 +74,16 @@ export default function SuspensionSelection() {
     setSelected(optionId);
     localStorage.setItem("suspension", optionId);
 
+    const product = localStorage.getItem("product");
+
     setTimeout(() => {
-      // Logic: If Distal Seal, handle differently. Otherwise, go to Circumference.
+      // 1. Underlay logic
+      if (product === "Underlay") {
+        navigate("/sizing/underlay/seal");
+        return;
+      }
+
+      // 2. Overlay logic
       if (optionId === "TT-distal-seal") {
         navigate("/sizing/TTcircumference-vac");
       } else {
@@ -103,7 +111,6 @@ export default function SuspensionSelection() {
               className="cursor-pointer focus:outline-none transition-all"
               aria-label={t(`suspension.${tKey}`, { ns: "common" })}
             >
-              {/* Added overflow-hidden and matched the AmputationSelection ring logic */}
               <div
                 className={`rounded-xl overflow-hidden transition-all duration-150 ${
                   selected === id

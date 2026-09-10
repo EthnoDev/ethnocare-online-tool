@@ -34,7 +34,7 @@ export default function ProductSelection() {
 
     // 2. Underlay Logic (Transtibial only)
     if (product === "Underlay") {
-      setTimeout(() => navigate("/sizing/underlay/seal"), 200);
+      setTimeout(() => navigate("/sizing/TTsuspension"), 200);
       return;
     }
 

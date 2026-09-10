@@ -30,6 +30,8 @@ export default function SealSelection() {
   const { t, i18n } = useTranslation(["pages", "common"]);
 
   const lang = pickLang(baseLang(i18n.language));
+  const suspension = localStorage.getItem("suspension");
+  const isSleeve = suspension === "TT-suspension-sleeve";
 
   const handleSelect = (optionId) => {
     if (selected) return;
@@ -48,7 +50,7 @@ export default function SealSelection() {
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/sizing/product" 
+      backTo="/sizing/TTsuspension" 
       currentStep={null}
     >
       <div className="w-full max-w-md">
@@ -61,31 +63,33 @@ export default function SealSelection() {
         </p>
 
         <div className="mt-8 flex flex-col items-center space-y-6">
-          {/* Option: Open Seal */}
-          <button
-            type="button"
-            onClick={() => handleSelect("open-seal")}
-            className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
-          >
-            <div
-              className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
-                selected === "open-seal"
-                  ? "ring-4 ring-[#090C41]" 
-                  : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
-              }`}
+          {/* Option: Open Seal (Hidden if TT-suspension-sleeve) */}
+          {!isSleeve && (
+            <button
+              type="button"
+              onClick={() => handleSelect("open-seal")}
+              className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
             >
-              <img
-                src={SEAL_IMAGES.open[lang] || SEAL_IMAGES.open.en}
-                alt={t("common:seal.open-title")}
-                className="h-auto w-full block rounded-xl max-w-[320px] object-cover" 
-              />
-            </div>
-            <div className="mt-2 text-center">
-              <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
-                {t("sealUnderlaySizing.open_description")}
-              </p>
-            </div>
-          </button>
+              <div
+                className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
+                  selected === "open-seal"
+                    ? "ring-4 ring-[#090C41]" 
+                    : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
+                }`}
+              >
+                <img
+                  src={SEAL_IMAGES.open[lang] || SEAL_IMAGES.open.en}
+                  alt={t("common:seal.open-title")}
+                  className="h-auto w-full block rounded-xl max-w-[320px] object-cover" 
+                />
+              </div>
+              <div className="mt-2 text-center">
+                <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
+                  {t("sealUnderlaySizing.open_description")}
+                </p>
+              </div>
+            </button>
+          )}
 
           {/* Option: Closed Seal */}
           <button
@@ -108,7 +112,9 @@ export default function SealSelection() {
             </div>
             <div className="mt-2 text-center">
               <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
-                {t("sealUnderlaySizing.closed_description")}
+                {isSleeve
+                  ? t("sealUnderlaySizing.closed_exception")
+                  : t("sealUnderlaySizing.closed_description")}
               </p>
             </div>
           </button>

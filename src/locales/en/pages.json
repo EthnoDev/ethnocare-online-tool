@@ -194,7 +194,8 @@
     "title": "Seal Selection",
     "description": "Choose where the seal will be done with your liner",
     "open_description": "We recommend using the Open sealing position as it allows the underlay to stick above the liner and evacuate the excess humidity.",
-    "closed_description": "If you prefer a more classical design, or if liner sealing is a concern, you can choose the closed version."
+    "closed_description": "More classical design for all suspension types",
+    "closed_exception": "The underlay Closed is the only design available for your type of suspension."
   },
   "lengthUnderlaySizing": {
     "title": "Length",

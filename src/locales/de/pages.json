@@ -190,7 +190,8 @@
     "title": "Dichtungsauswahl",
     "description": "Wählen Sie die Position der Dichtung auf Ihrem Liner",
     "open_description": "Wir empfehlen die offene Position, da das Underlay so über den Liner ragen und überschüssige Feuchtigkeit ableiten kann.",
-    "closed_description": "Wenn Sie ein klassisches Design bevorzugen oder die Abdichtung des Liners ein Problem darstellt, wählen Sie die geschlossene Version."
+    "closed_description": "Klassischeres Design für alle Aufhängungstypen",
+    "closed_exception": "Das geschlossene Underlay ist das einzige Design, das für Ihren Aufhängungstyp verfügbar ist."
   },
   "lengthUnderlaySizing": {
     "title": "Länge",
