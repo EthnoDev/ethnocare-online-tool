@@ -39,11 +39,7 @@ export default function SealSelection() {
     localStorage.setItem("underlay_seal", optionId);
 
     setTimeout(() => {
-      navigate(
-        optionId === "closed-seal"
-          ? "/sizing/underlay/length"
-          : "/sizing/underlay/circumference"
-      );
+      navigate("/sizing/underlay/circumference");
     }, 200);
   };
 
