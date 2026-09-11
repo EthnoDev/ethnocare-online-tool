@@ -1,4 +1,3 @@
-// src/pages/assistance/overlay/TT/SuspensionSelection.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -58,17 +57,22 @@ export default function SuspensionSelection() {
   const product = localStorage.getItem("product");
   const isUnderlay = product === "Underlay";
 
-  const options = [
+  const rawOptions = [
     { id: "TT-locking", tKey: "tt-locking" },
     { id: "TT-lanyard", tKey: "tt-lanyard" },
+    { id: "TT-cushion", tKey: "tt-cushion" },
     { id: "TT-suspension-sleeve", tKey: "tt-suspension-sleeve" },
     { id: "TT-distal-seal", tKey: "tt-distal-seal" },
     { id: "TT-distal-lanyard", tKey: "tt-distal-lanyard" },
-    { id: "TT-cushion", tKey: "tt-cushion" },
-  ].map((o) => ({
-    ...o,
-    src: TT_IMAGES[o.tKey]?.[lang] || TT_IMAGES[o.tKey]?.en,
-  }));
+  ];
+
+  // Filter out distal lanyard if product is Underlay, then map images
+  const options = rawOptions
+    .filter((o) => !(isUnderlay && o.id === "TT-distal-lanyard"))
+    .map((o) => ({
+      ...o,
+      src: TT_IMAGES[o.tKey]?.[lang] || TT_IMAGES[o.tKey]?.en,
+    }));
 
   const handleSelect = (optionId) => {
     if (selected) return;
