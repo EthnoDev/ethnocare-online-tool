@@ -60,7 +60,7 @@ export default function Circumference() {
     <PageWrapper 
       showBack={true} 
       backTo="/sizing/underlay/seal" 
-      currentStep={1} 
+      currentStep={2} 
       code={true}
     >
       <div className="w-full max-w-md">

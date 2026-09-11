@@ -32,7 +32,7 @@ export default function Length() {
     <PageWrapper 
       showBack={true} 
       backTo={backTo} 
-      currentStep={seal === "closed-seal" ? 2 : 4} 
+      currentStep={seal === "closed-seal" ? 3 : 4} 
       code={true}
     >
       <div className="w-100 max-w-md flex flex-col items-center">

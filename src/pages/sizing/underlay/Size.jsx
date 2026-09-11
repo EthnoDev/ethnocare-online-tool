@@ -89,9 +89,8 @@ export default function SizeUnderlay() {
         }`
       : "UDTT-XX-XX";
 
-  const backTo = isClosed
-    ? "/sizing/underlay/circumference"
-    : "/sizing/underlay/length";
+  // Always route back to the length page
+  const backTo = "/sizing/underlay/length";
 
   const currentStep = isClosed ? 4 : 5;
 
