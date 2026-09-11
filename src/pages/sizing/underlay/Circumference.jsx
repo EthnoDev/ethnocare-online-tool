@@ -1,3 +1,4 @@
+// src/pages/assistance/underlay/Circumference.jsx
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
@@ -14,35 +15,30 @@ export default function Circumference() {
   // Retrieve seal selection from localStorage
   const seal = localStorage.getItem("underlay_seal");
 
-  // Dynamic back path and step based on seal type
-  const backTo = seal === "closed-seal" ? "/sizing/underlay/length" : "/sizing/underlay/seal";
-  const currentStep = seal === "closed-seal" ? 3 : 2;
-
   // Logic for units and image selection
   const isImperial = localStorage.getItem("units") === "imperial";
   const selectedImage = isImperial ? ImperialImg : MetricImg;
-  
+
   // Dynamic distance text: 3.9 in for imperial, 10 cm for metric
   const distance = isImperial ? "3.9 in" : "10 cm";
 
   const handleConfirm = (value) => {
     localStorage.setItem("underlay_circumference", value);
-    
-    // Dynamic navigation based on seal type
+
     setTimeout(() => {
       navigate(
         seal === "closed-seal"
-          ? "/sizing/underlay/size"
+          ? "/sizing/underlay/length"
           : "/sizing/underlay/circumference-2"
-      ); 
+      );
     }, 200);
   };
 
   return (
     <PageWrapper 
       showBack={true} 
-      backTo={backTo} 
-      currentStep={currentStep} 
+      backTo="/sizing/underlay/seal" 
+      currentStep={1} 
       code={true}
     >
       <div className="w-full max-w-md">
@@ -51,7 +47,7 @@ export default function Circumference() {
           {t("circumferenceUnderlaySizing.title")}
         </h1>
 
-        {/* 2. Description with updated 3.9 in / 10 cm distance */}
+        {/* 2. Description with dynamic distance */}
         <p className="mt-3 text-center text-base text-slate-500">
           {t("circumferenceUnderlaySizing.description", { distance })}
         </p>
