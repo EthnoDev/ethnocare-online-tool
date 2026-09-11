@@ -143,8 +143,14 @@
     "submitError": "Nous n'avons pas pu envoyer votre message. Veuillez réessayer."
   },
   "redirectionPopup": {
-    "title": "Avis",
+    "title": "Underlay Ouvert indisponible",
     "description": "Il semble que nous n’ayons pas votre taille pour le moment, cependant vous pouvez choisir l'underlay fermé en cliquant sur le bouton ci-dessous",
+    "description_p1": "Il semble que votre mesure de circonférence proximale se situe en dehors de notre gamme de tailles <bold>le membre est trop conique pour l'Underlay Ouvert.</bold>",
+    "description_p2": "Veuillez vérifier que vos mesures se situent dans les plages suivantes de <bold>votre taille d'underlay ouvert.</bold>",
+    "description_p3": "<bold>Sinon, choisissez l'Underlay Fermé</bold> en cliquant sur le bouton ci-dessous et commencez une nouvelle procédure de dimensionnement.",
+    "measured_size_label": "Underlay ouvert mesuré :",
+    "table_header": "Circonférence proximale maximale (C2)*",
+    "table_footnote": "*juste au-dessus du bord supérieur du manchon découpé (sur la peau).",
     "cta": "Underlay Fermé",
     "contact_line": "Si vous souhaitez nous aider à développer l’underlay fermé, vous pouvez nous envoyer les mesures de votre membre à :"
   },

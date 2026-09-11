@@ -144,8 +144,14 @@
     "submitError": "We couldn't send your message. Please try again."
   },
   "redirectionPopup": {
-    "title": "Notice",
+    "title": "Open Underlay unavailable",
     "description": "It seems that we don't have your size available at the moment, however you can choose the closed underlay by clicking on the button below",
+    "description_p1": "It seems that your proximal circumference measurement fall outside our sizing range <bold>the limb is too conical for the Underlay Open.</bold>",
+    "description_p2": "Please verify that your measurements fall within the following ranges of <bold>your underlay open size.</bold>",
+    "description_p3": "<bold>If not choose the Underlay Closed</bold> instead clicking on the button below and start a new sizing procedure.",
+    "measured_size_label": "Measured open Underlay :",
+    "table_header": "Maximum proximal circumference (C2)*",
+    "table_footnote": "*just above the top edge of the trimmed liner (over the skin).",
     "cta": "Closed Underlay",
     "contact_line": "If you want to help us develop the underlay closed, you can send us your limb measurements at:"
   },

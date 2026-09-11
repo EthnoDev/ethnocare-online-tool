@@ -142,8 +142,13 @@
         "submitError": "Wir konnten Ihre Nachricht nicht senden. Bitte versuchen Sie es erneut."
     },
     "redirectionPopup": {
-        "title": "Hinweis",
-        "description": "Es scheint, dass Ihre Größe derzeit nicht verfügbar ist, aber Sie können die geschlossene Underlay auswählen, indem Sie auf die Schaltfläche unten klicken",
+        "title": "Offenes Underlay nicht verfügbar",
+        "description_p1": "Es scheint, dass Ihre proximale Umfangsmaß außerhalb unseres Größenbereichs liegt <bold>das Glied ist zu konisch für das offene Underlay.</bold>",
+        "description_p2": "Bitte überprüfen Sie, ob Ihre Maße innerhalb der folgenden Bereiche Ihrer <bold>offenen Underlay-Größe.</bold> liegen",
+        "description_p3": "<bold>Andernfalls wählen Sie das geschlossene Underlay</bold>, indem Sie auf die Schaltfläche unten klicken und ein neues Größenverfahren starten",
+        "measured_size_label": "Gemessenes offenes Underlay :",
+        "table_header": "Maximaler proximaler Umfang (C2)*",
+        "table_footnote": "*direkt über dem oberen Rand des zugeschnittenen Liners (auf der Haut).",
         "cta": "Underlay Geschlossen",
         "contact_line": "Wenn Sie uns helfen möchten, das geschlossene Underlay zu entwickeln, können Sie uns Ihre Gliedmaßenmaße senden an:"
     },

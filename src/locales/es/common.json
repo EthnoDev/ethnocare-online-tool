@@ -142,8 +142,13 @@
     "submitError": "No pudimos enviar tu mensaje. Por favor, inténtalo de nuevo."
   },
   "redirectionPopup": {
-    "title": "Aviso",
-    "description": "Parece que no tenemos disponible su talla en este momento, sin embargo, puede elegir la underlay cerrada haciendo clic en el botón a continuación",
+    "title": "Underlay Abierto no disponible",
+    "description_p1": "Parece que su medida de circunferencia proximal se encuentra fuera de nuestro rango de tallas <bold>el miembro es demasiado cónico para el Underlay Abierto.</bold>",
+    "description_p2": "Por favor, verifique que sus medidas se encuentren dentro de los siguientes rangos de <bold>su talla de underlay abierto.</bold>",
+    "description_p3": "<bold>De lo contrario, elija el Underlay Cerrado</bold> haciendo clic en el botón a continuación y comience un nuevo procedimiento de dimensionamiento.",
+    "measured_size_label": "Underlay abierto medido :",
+    "table_header": "Circunferencia proximal máxima (C2)*",
+    "table_footnote": "*justo por encima del borde superior del liner recortado (sobre la piel).",
     "cta": "Underlay Cerrado",
     "contact_line": "Si desea ayudarnos a desarrollar el underlay cerrado, puede enviarnos las medidas de su miembro a:"
   },

@@ -70,7 +70,7 @@ export default function Circumference2() {
           onClose={() => setShowRedirectionPopup(false)}
           onRedirect={() => {
             localStorage.setItem("underlay_seal", "closed-seal");
-            navigate("/sizing/underlay/length");
+            navigate("/sizing/underlay/circumference");
           }}
         />
       )}
