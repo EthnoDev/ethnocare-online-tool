@@ -106,9 +106,9 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           if (valCm >= 27 && valCm <= 37) return "SH";
           if (valCm > 37) return "LG";
         } else if (measurement === "circumference") {
-          if (valCm >= 20 && valCm < 25) return 23;
-          if (valCm >= 25 && valCm < 30) return 28;
-          if (valCm >= 30 && valCm <= 42) return 35;
+          if (valCm >= 23 && valCm < 28) return 23;
+          if (valCm >= 28 && valCm < 35) return 28;
+          if (valCm >= 35 && valCm <= 42) return 35;
         }
       } else {
         if (measurement === "length") {
@@ -117,9 +117,9 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           if (valCm >= 33 && valCm < 38) return "LG";
           if (valCm >= 38) return "XL";
         } else if (measurement === "circumference") {
-          if (valCm >= 20 && valCm < 25) return 23;
-          if (valCm >= 25 && valCm < 30) return 28;
-          if (valCm >= 30 && valCm <= 42) return 35;
+          if (valCm >= 23 && valCm < 28) return 23;
+          if (valCm >= 28 && valCm < 35) return 28;
+          if (valCm >= 35 && valCm <= 42) return 35;
         } else if (measurement === "circumference2") {
           const c1 = parseInt(localStorage.getItem("underlaytt_circumference"));
           const threshold = c1 === 23 ? 35 : c1 === 28 ? 45 : c1 === 35 ? 55 : null;
