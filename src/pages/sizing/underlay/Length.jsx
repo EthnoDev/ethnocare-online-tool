@@ -15,18 +15,16 @@ export default function Length() {
   const seal = localStorage.getItem("underlay_seal");
 
   // Dynamic back path based on seal type
-  const backTo = seal === "closed-seal" ? "/sizing/underlay/seal" : "/sizing/underlay/circumference-2";
+  const backTo = seal === "closed-seal" 
+    ? "/sizing/underlay/circumference" 
+    : "/sizing/underlay/circumference-2";
 
   const handleConfirm = (value) => {
     // Store the value returned from the component
     localStorage.setItem("underlay_length", value);
 
     setTimeout(() => {
-      navigate(
-        seal === "closed-seal"
-          ? "/sizing/underlay/circumference"
-          : "/sizing/underlay/size"
-      );
+      navigate("/sizing/underlay/size");
     }, 200);
   };
 
