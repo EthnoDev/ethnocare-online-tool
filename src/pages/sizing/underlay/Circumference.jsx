@@ -16,12 +16,12 @@ export default function Circumference() {
 
   // Retrieve seal selection from localStorage
   const seal = localStorage.getItem("underlay_seal");
+  const isOpen = seal === "open-seal";
 
   // Logic for units
   const isImperial = localStorage.getItem("units") === "imperial";
 
   // Select image based on seal type and units
-  const isOpen = seal === "open-seal";
   const selectedImage = isOpen
     ? isImperial
       ? C1ImperialImg
@@ -29,6 +29,11 @@ export default function Circumference() {
     : isImperial
     ? CImperialImg
     : CMetricImg;
+
+  // Dynamic title key based on seal type
+  const titleKey = isOpen
+    ? "circumferenceUnderlaySizing.title2"
+    : "circumferenceUnderlaySizing.title";
 
   // Dynamic distance text: 3.9 in for imperial, 10 cm for metric
   const distance = isImperial ? "3.9 in" : "10 cm";
@@ -38,9 +43,9 @@ export default function Circumference() {
 
     setTimeout(() => {
       navigate(
-        seal === "closed-seal"
-          ? "/sizing/underlay/length"
-          : "/sizing/underlay/circumference-2"
+        isOpen
+          ? "/sizing/underlay/circumference-2"
+          : "/sizing/underlay/length"
       );
     }, 200);
   };
@@ -53,9 +58,9 @@ export default function Circumference() {
       code={true}
     >
       <div className="w-full max-w-md">
-        {/* 1. Title */}
+        {/* 1. Title (Dynamic based on open/closed seal) */}
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          {t("circumferenceUnderlaySizing.title")}
+          {t(titleKey)}
         </h1>
 
         {/* 2. Description with dynamic distance */}
