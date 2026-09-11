@@ -35,8 +35,14 @@ export default function Circumference() {
     ? "circumferenceUnderlaySizing.title2"
     : "circumferenceUnderlaySizing.title";
 
-  // Dynamic distance text: 3.9 in for imperial, 10 cm for metric
-  const distance = isImperial ? "3.9 in" : "10 cm";
+  // Dynamic distance text: 3.9 in / 10 cm for open, 1.5 in / 4 cm for closed
+  const distance = isOpen
+    ? isImperial
+      ? "4 in"
+      : "10 cm"
+    : isImperial
+    ? "1.5 in"
+    : "4 cm";
 
   const handleConfirm = (value) => {
     localStorage.setItem("underlay_circumference", value);
