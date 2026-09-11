@@ -199,7 +199,8 @@
   },
   "circumferenceUnderlaySizing": {
     "title": "Circonférence",
-    "description": "Mesurez la circonférence (C) à {{distance}} de l'extrémité distale"
+    "title2": "Circonférence (C1)",
+    "description": "Mesurez la circonférence à {{distance}} de l'extrémité distale (sur la peau)."
   },
   "circumference2UnderlaySizing": {
     "title": "Circonférence (C2)",

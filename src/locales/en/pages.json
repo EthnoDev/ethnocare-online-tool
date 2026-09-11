@@ -203,7 +203,8 @@
   },
   "circumferenceUnderlaySizing": {
     "title": "Circumference",
-    "description": "Measure the circumference (C) at {{distance}} from the distal end"
+    "title2": "Circumference (C1)",
+    "description": "Measure the circumference at {{distance}} from the distal end (over the skin)."
   },
   "circumference2UnderlaySizing": {
   "title": "Circumference (C2)",

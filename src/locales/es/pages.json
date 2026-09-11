@@ -199,7 +199,8 @@
   },
   "circumferenceUnderlaySizing": {
     "title": "Circunferencia",
-    "description": "Mida la circunferencia (C) a {{distance}} del extremo distal"
+    "title2": "Circunferencia (C1)",
+    "description": "Mida la circunferencia a {{distance}} del extremo distal (sobre la piel)."
   },
   "circumference2UnderlaySizing": {
     "title": "Circunferencia (C2)",

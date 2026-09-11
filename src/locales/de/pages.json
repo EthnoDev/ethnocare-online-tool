@@ -199,7 +199,8 @@
   },
   "circumferenceUnderlaySizing": {
     "title": "Umfang",
-    "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende entfernt"
+    "title2": "Umfang (C1)",
+    "description": "Messen Sie den Umfang {{distance}} vom distalen Ende entfernt (über der Haut)."
   },
   "circumference2UnderlaySizing": {
     "title": "Umfang (C2)",

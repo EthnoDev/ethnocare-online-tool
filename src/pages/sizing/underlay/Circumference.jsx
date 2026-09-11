@@ -5,8 +5,10 @@ import PageWrapper from "../../../components/PageWrapper";
 import MeasurementInput from "../../../components/MeasurementInput";
 
 // Assets
-import MetricImg from "../../../assets/circumferences/Underlay/Metric.svg";
-import ImperialImg from "../../../assets/circumferences/Underlay/Imperial.svg";
+import C1ImperialImg from "../../../assets/circumferences/Underlay/C1Imperial.svg";
+import C1MetricImg from "../../../assets/circumferences/Underlay/C1Metric.svg";
+import CImperialImg from "../../../assets/circumferences/Underlay/CImperial.svg";
+import CMetricImg from "../../../assets/circumferences/Underlay/CMetric.svg";
 
 export default function Circumference() {
   const navigate = useNavigate();
@@ -15,9 +17,18 @@ export default function Circumference() {
   // Retrieve seal selection from localStorage
   const seal = localStorage.getItem("underlay_seal");
 
-  // Logic for units and image selection
+  // Logic for units
   const isImperial = localStorage.getItem("units") === "imperial";
-  const selectedImage = isImperial ? ImperialImg : MetricImg;
+
+  // Select image based on seal type and units
+  const isOpen = seal === "open-seal";
+  const selectedImage = isOpen
+    ? isImperial
+      ? C1ImperialImg
+      : C1MetricImg
+    : isImperial
+    ? CImperialImg
+    : CMetricImg;
 
   // Dynamic distance text: 3.9 in for imperial, 10 cm for metric
   const distance = isImperial ? "3.9 in" : "10 cm";
@@ -52,7 +63,7 @@ export default function Circumference() {
           {t("circumferenceUnderlaySizing.description", { distance })}
         </p>
 
-        {/* 3. Image (Conditional based on units) */}
+        {/* 3. Image (Conditional based on seal & units) */}
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
