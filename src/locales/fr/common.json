@@ -59,10 +59,12 @@
     "tt-distal-lanyard": "Lanière distale",
     "tt-cushion": "Coussin",
 
-    "tf-distal-locking": "Verrouillage distal",
+    "tf-distal-locking": "Pin",
     "tf-lanyard": "Lanière",
     "tf-distal-seal": "Joint distal",
-    "tf-cushion": "Coussin",
+    "tf-cushion": "Cushion",
+    "tf-single-seal": "Joint simple",
+    "tf-multi-seal": "Joints multiples",
 
     "pin": "Pin",
     "cushion": "Coussin"

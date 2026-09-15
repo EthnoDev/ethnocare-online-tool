@@ -59,10 +59,13 @@
         "tt-distal-lanyard": "Distales Zugsystem",
         "tt-cushion": "Polster",
 
-        "tf-distal-locking": "Distale Arretierung",
-        "tf-lanyard": "Zugsystem",
+        "tf-distal-locking": "Pin",
+        "tf-lanyard": "Einzugsystem",
         "tf-distal-seal": "Distale Abdichtung",
-        "tf-cushion": "Polster",
+        "tf-cushion": "Cushion",
+        "tf-single-seal": "Einzeldichtung",
+        "tf-multi-seal": "Mehrfachdichtung",
+
         "pin": "Pin",
         "cushion": "Polster"
     },

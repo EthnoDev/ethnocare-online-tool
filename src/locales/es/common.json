@@ -59,10 +59,12 @@
     "tt-distal-lanyard": "Cordón distal",
     "tt-cushion": "Cojín",
 
-    "tf-distal-locking": "Bloqueo distal",
-    "tf-lanyard": "Cordón",
+    "tf-distal-locking": "Pin",
+    "tf-lanyard": "Correa",
     "tf-distal-seal": "Sellado distal",
-    "tf-cushion": "Cojín",
+    "tf-cushion": "Cushion",
+    "tf-single-seal": "Sello simple",
+    "tf-multi-seal": "Sellos múltiples",
 
     "pin": "Pin",
     "cushion": "Cojín"

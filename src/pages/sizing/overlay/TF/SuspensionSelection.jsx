@@ -1,4 +1,3 @@
-// src/pages/assistance/overlay/TF/SuspensionSelection.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -8,36 +7,37 @@ import PageWrapper from "../../../../components/PageWrapper";
 const baseLang = (code) => (code || "en").split("-")[0];
 const pickLang = (code) => (["fr", "es", "de"].includes(code) ? code : "en");
 
-/** ---------- TF images (EN/FR/ES/DE) ---------- */
-// EN
-import TFLocking_en from "../../../../assets/suspensionOptions/TF/TF-distal-locking.svg";
+/** ---------- TF images ---------- */
+// Language Agnostic (Root level)
+import TFLocking from "../../../../assets/suspensionOptions/TF/TF-distal-locking.svg";
+import TFCushion from "../../../../assets/suspensionOptions/TF/TF-cushion.svg";
+
+// EN (Root level)
 import TFLanyard_en from "../../../../assets/suspensionOptions/TF/TF-lanyard.svg";
-import TFSeal_en from "../../../../assets/suspensionOptions/TF/TF-distal-seal.svg";
-import TFCushion_en from "../../../../assets/suspensionOptions/TF/TF-cushion.svg";
+import TFSingleSeal_en from "../../../../assets/suspensionOptions/TF/TF-single-seal.svg";
+import TFMultiSeal_en from "../../../../assets/suspensionOptions/TF/TF-multi-seal.svg";
 
 // FR
-import TFLocking_fr from "../../../../assets/suspensionOptions/TF/fr/TF-distal-locking.svg";
 import TFLanyard_fr from "../../../../assets/suspensionOptions/TF/fr/TF-lanyard.svg";
-import TFSeal_fr from "../../../../assets/suspensionOptions/TF/fr/TF-distal-seal.svg";
-import TFCushion_fr from "../../../../assets/suspensionOptions/TF/fr/TF-cushion.svg";
+import TFSingleSeal_fr from "../../../../assets/suspensionOptions/TF/fr/TF-single-seal.svg";
+import TFMultiSeal_fr from "../../../../assets/suspensionOptions/TF/fr/TF-multi-seal.svg";
 
 // ES
-import TFLocking_es from "../../../../assets/suspensionOptions/TF/es/TF-distal-locking.svg";
 import TFLanyard_es from "../../../../assets/suspensionOptions/TF/es/TF-lanyard.svg";
-import TFSeal_es from "../../../../assets/suspensionOptions/TF/es/TF-distal-seal.svg";
-import TFCushion_es from "../../../../assets/suspensionOptions/TF/es/TF-cushion.svg";
+import TFSingleSeal_es from "../../../../assets/suspensionOptions/TF/es/TF-single-seal.svg";
+import TFMultiSeal_es from "../../../../assets/suspensionOptions/TF/es/TF-multi-seal.svg";
 
 // DE
-import TFLocking_de from "../../../../assets/suspensionOptions/TF/de/TF-distal-locking.svg";
 import TFLanyard_de from "../../../../assets/suspensionOptions/TF/de/TF-lanyard.svg";
-import TFSeal_de from "../../../../assets/suspensionOptions/TF/de/TF-distal-seal.svg";
-import TFCushion_de from "../../../../assets/suspensionOptions/TF/de/TF-cushion.svg";
+import TFSingleSeal_de from "../../../../assets/suspensionOptions/TF/de/TF-single-seal.svg";
+import TFMultiSeal_de from "../../../../assets/suspensionOptions/TF/de/TF-multi-seal.svg";
 
 const TF_IMAGES = {
-  "tf-distal-locking": { en: TFLocking_en, fr: TFLocking_fr, es: TFLocking_es, de: TFLocking_de },
+  "tf-distal-locking": TFLocking,
+  "tf-cushion": TFCushion,
   "tf-lanyard": { en: TFLanyard_en, fr: TFLanyard_fr, es: TFLanyard_es, de: TFLanyard_de },
-  "tf-distal-seal": { en: TFSeal_en, fr: TFSeal_fr, es: TFSeal_es, de: TFSeal_de },
-  "tf-cushion": { en: TFCushion_en, fr: TFCushion_fr, es: TFCushion_es, de: TFCushion_de },
+  "tf-single-seal": { en: TFSingleSeal_en, fr: TFSingleSeal_fr, es: TFSingleSeal_es, de: TFSingleSeal_de },
+  "tf-multi-seal": { en: TFMultiSeal_en, fr: TFMultiSeal_fr, es: TFMultiSeal_es, de: TFMultiSeal_de },
 };
 
 export default function SuspensionSelection() {
@@ -47,15 +47,20 @@ export default function SuspensionSelection() {
 
   const lang = pickLang(baseLang(i18n.language));
 
+  // Ordered: Distal Locking -> Lanyard -> Cushion -> Single Seal -> Multi Seal
   const options = [
     { id: "TF-distal-locking", tKey: "tf-distal-locking" },
     { id: "TF-lanyard", tKey: "tf-lanyard" },
-    { id: "TF-distal-seal", tKey: "tf-distal-seal" },
     { id: "TF-cushion", tKey: "tf-cushion" },
-  ].map((o) => ({
-    ...o,
-    src: TF_IMAGES[o.tKey]?.[lang] || TF_IMAGES[o.tKey]?.en,
-  }));
+    { id: "TF-single-seal", tKey: "tf-single-seal" },
+    { id: "TF-multi-seal", tKey: "tf-multi-seal" },
+  ].map((o) => {
+    const asset = TF_IMAGES[o.tKey];
+    return {
+      ...o,
+      src: typeof asset === "string" ? asset : asset[lang] || asset.en,
+    };
+  });
 
   const handleSelect = (optionId) => {
     if (selected) return;
@@ -63,9 +68,9 @@ export default function SuspensionSelection() {
     setSelected(optionId);
     localStorage.setItem("suspension", optionId);
 
-    // Logic: If distal seal, go to TFlength-vac, otherwise TFlength
+    // Logic: If single seal or multi seal, go to TFlength-vac, otherwise TFlength
     setTimeout(() => {
-      if (optionId === "TF-distal-seal") {
+      if (optionId === "TF-single-seal" || optionId === "TF-multi-seal") {
         navigate("/sizing/TFlength-vac");
       } else {
         navigate("/sizing/TFlength");
@@ -89,7 +94,6 @@ export default function SuspensionSelection() {
           {t("suspensionSizing.description", { ns: "pages" })}
         </p>
 
-        {/* Layout matches TT exactly: gap-6, no extra px-10 padding */}
         <div className="mt-8 grid grid-cols-2 gap-6">
           {options.map(({ id, src, tKey }) => (
             <button

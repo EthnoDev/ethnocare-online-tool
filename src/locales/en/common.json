@@ -59,10 +59,12 @@
     "tt-distal-lanyard": "Distal lanyard",
     "tt-cushion": "Cushion",
 
-    "tf-distal-locking": "Distal locking",
+    "tf-distal-locking": "Pin",
     "tf-lanyard": "Lanyard",
     "tf-distal-seal": "Distal seal",
     "tf-cushion": "Cushion",
+    "tf-single-seal": "Single seal",
+    "tf-multi-seal": "Multi seal",
 
     "pin": "Pin",
     "cushion": "Cushion"
