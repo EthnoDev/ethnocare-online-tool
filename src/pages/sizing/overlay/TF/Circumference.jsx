@@ -20,25 +20,25 @@ export default function Circumference() {
   const handleConfirm = (res) => {
     localStorage.setItem("circumference", res);
     setTimeout(() => {
-      navigate("/sizing/TFsize");
+      navigate("/sizing/TFlength");
     }, 200);
   };
 
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/sizing/TFlength" 
-      currentStep={3} 
+      backTo="/sizing/TFsuspension" 
+      currentStep={2} 
       totalSteps={4} 
       code={true}
     >
       <div className="w-full max-w-md">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          {t("circumferenceTFVacSizing.title", { ns: "pages" })}
+          {t("circumferenceTFSizing.title", { ns: "pages" })}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          {t("circumferenceTFVacSizing.description", { ns: "pages", distance })}
+          {t("circumferenceTFSizing.description", { ns: "pages", distance })}
         </p>
 
         <div className="mt-8 flex justify-center">

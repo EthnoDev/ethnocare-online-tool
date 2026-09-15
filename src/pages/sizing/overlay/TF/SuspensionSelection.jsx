@@ -71,9 +71,9 @@ export default function SuspensionSelection() {
     // Logic: If single seal or multi seal, go to TFlength-vac, otherwise TFlength
     setTimeout(() => {
       if (optionId === "TF-single-seal" || optionId === "TF-multi-seal") {
-        navigate("/sizing/TFlength-vac");
+        navigate("/sizing/TFcircumference-vac");
       } else {
-        navigate("/sizing/TFlength");
+        navigate("/sizing/TFcircumference");
       }
     }, 200);
   };

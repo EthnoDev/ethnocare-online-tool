@@ -168,7 +168,7 @@
   },
   "circumferenceTFSizing": {
     "title": "Circonférence",
-    "description": "Mesurez la circonférence de votre moignon à {{distance}} sous la proéminence osseuse la plus basse"
+    "description": "Mesurez la circonférence à {{distance}} de l'extrémité distale (sur le manchon)"
   },
   "circumferenceTFVacSizing": {
     "title": "Circonférence",

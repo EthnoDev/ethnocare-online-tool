@@ -168,7 +168,7 @@
   },
   "circumferenceTFSizing": {
     "title": "Circunferencia",
-    "description": "Mida la circunferencia (C) de su muñón a {{distance}} del extremo distal"
+    "description": "Mida la circunferencia a {{distance}} del extremo distal (sobre el liner)"
   },
   "circumferenceTFVacSizing": {
     "title": "Circunferencia",

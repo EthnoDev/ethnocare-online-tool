@@ -168,7 +168,7 @@
   },
   "circumferenceTFSizing": {
     "title": "Umfang",
-    "description": "Messen Sie den Umfang (C) Ihres Stumpfes {{distance}} vom distalen Ende entfernt"
+    "description": "Messen Sie den Umfang {{distance}} vom distalen Ende entfernt (über dem Liner)"
   },
   "circumferenceTFVacSizing": {
     "title": "Umfang",
