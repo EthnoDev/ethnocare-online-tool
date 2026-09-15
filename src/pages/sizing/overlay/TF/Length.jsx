@@ -8,7 +8,6 @@ import MeasurementInput from "../../../../components/MeasurementInput";
 import TF_Pin_en from "../../../../assets/lengths/TF/pin.svg";
 import TF_Pin_fr from "../../../../assets/lengths/TF/pin_fr.svg";
 import TF_Pin_es from "../../../../assets/lengths/TF/pin_es.svg";
-import TF_Pin_de from "../../../../assets/lengths/TF/pin_de.svg";
 
 /** ---------- Helpers ---------- */
 const baseLang = (code) => (code || "en").split("-")[0];
@@ -18,11 +17,12 @@ export default function Length() {
   const { t, i18n } = useTranslation(["pages", "common"]);
 
   const lang = baseLang(i18n.language);
+  
+  // German (de) automatically falls back to TF_Pin_en
   const imgMap = {
     en: TF_Pin_en,
     fr: TF_Pin_fr,
     es: TF_Pin_es,
-    de: TF_Pin_de,
   };
 
   const selectedImage = imgMap[lang] || TF_Pin_en;
@@ -30,15 +30,15 @@ export default function Length() {
   const handleConfirm = (res) => {
     localStorage.setItem("length", res);
     setTimeout(() => {
-      navigate("/sizing/TFcircumference");
+      navigate("/sizing/TFsize");
     }, 200);
   };
 
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/sizing/TFsuspension" 
-      currentStep={2} 
+      backTo="/sizing/TFcircumference" 
+      currentStep={3} 
       totalSteps={4} 
       code={true}
     >

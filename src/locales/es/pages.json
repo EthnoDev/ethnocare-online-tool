@@ -160,7 +160,7 @@
   },
   "lengthTFSizing": {
     "title": "Longitud",
-    "description": "Mida la longitud (L) desde el extremo del liner hasta el periné"
+    "description": "Mida la longitud desde el extremo distal del liner hasta el periné"
   },
   "lengthTFVacSizing": {
     "title": "Longitud",
