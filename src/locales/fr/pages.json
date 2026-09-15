@@ -143,9 +143,9 @@
   },
   "orientationTTSizing": {
     "title": "Orientation",
-    "description": "Choisissez l'orientation de votre produit",
+    "description": "Choisissez la position de la pompe et de la valve",
     "note_title": "L'orientation est basée sur la préférence",
-    "note_body": "La plupart des utilisateurs choisissent la même orientation que le côté où l'Overlay sera porté."
+    "note_body": "La plupart des utilisateurs préfèrent la pompe et la valve du côté latéral."
   },
   "TTSizing": {
     "title": "Taille",

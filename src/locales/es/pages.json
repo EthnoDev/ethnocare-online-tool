@@ -143,9 +143,9 @@
   },
   "orientationTTSizing": {
     "title": "Orientación",
-    "description": "Elija la orientación de su producto",
+    "description": "Elija la posición de la bomba y la válvula",
     "note_title": "La orientación se basa en la preferencia",
-    "note_body": "La mayoría de los usuarios eligen el mismo lado donde se usará el Overlay."
+    "note_body": "La mayoría de los usuarios prefieren la bomba y la válvula en el lado lateral."
   },
   "TTSizing": {
     "title": "Talla",

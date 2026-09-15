@@ -143,9 +143,9 @@
   },
   "orientationTTSizing": {
     "title": "Ausrichtung",
-    "description": "Wählen Sie die Ausrichtung Ihres Produkts",
+    "description": "Wählen Sie die Position von Pumpe und Ventil",
     "note_title": "Die Ausrichtung basiert auf persönlicher Vorliebe",
-    "note_body": "Die meisten Benutzer wählen die gleiche Seite, an der das Overlay getragen wird."
+    "note_body": "Die meisten Benutzer bevorzugen die Pumpe und das Ventil auf der lateralen Seite."
   },
   "TTSizing": {
     "title": "Größe",
