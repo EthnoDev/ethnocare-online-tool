@@ -164,7 +164,8 @@
   },
   "lengthTFVacSizing": {
     "title": "Longitud",
-    "description": "Mida la longitud (L) desde la parte superior del sello hasta el periné"
+    "descriptionSingle": "Mida la longitud debajo del anillo de sellado reflejado hasta el periné",
+    "descriptionMulti": "Mida la longitud justo por encima del sello superior hasta el periné"
   },
   "circumferenceTFSizing": {
     "title": "Circunferencia",

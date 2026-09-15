@@ -168,7 +168,8 @@
   },
   "lengthTFVacSizing": {
     "title": "Length",
-    "description": "Measure the length (L) from the top of the seal to the perineum"
+    "descriptionSingle": "Measure the length under the reflected sealing ring to the perineum",
+    "descriptionMulti": "Measure the length just above the top seal to the perineum"
   },
   "circumferenceTFSizing": {
     "title": "Circumference",

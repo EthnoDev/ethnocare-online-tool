@@ -164,7 +164,8 @@
   },
   "lengthTFVacSizing": {
     "title": "Longueur",
-    "description": "Mesurez la longueur (L) du haut du joint jusqu'à la ligne de découpe poplitée"
+    "descriptionSingle": "Mesurez la longueur sous le joint réfléchissant jusqu'au périnée",
+    "descriptionMulti": "Mesurez la longueur juste au-dessus du joint supérieur jusqu'au périnée"
   },
   "circumferenceTFSizing": {
     "title": "Circonférence",
