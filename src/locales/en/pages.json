@@ -176,7 +176,8 @@
   },
   "circumferenceTFVacSizing": {
     "title": "Circumference",
-    "description": "Measure the circumference (C) at {{distance}} from the top of the seal"
+    "descriptionSingle": "Measure the circumference under the reflected sealing ring",
+    "descriptionMulti": "Measure the circumference just above the top seal"
   },
   "TFSizing": {
     "title": "Size",

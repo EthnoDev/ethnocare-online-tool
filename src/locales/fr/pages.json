@@ -172,7 +172,8 @@
   },
   "circumferenceTFVacSizing": {
     "title": "Circonférence",
-    "description": "Mesurez la circonférence (C) à {{distance}} du haut du joint"
+    "descriptionSingle": "Mesurez la circonférence sous le joint réfléchissant",
+    "descriptionMulti": "Mesurez la circonférence juste au-dessus du joint supérieur"
   },
   "TFSizing": {
     "title": "Taille",

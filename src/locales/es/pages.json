@@ -172,7 +172,8 @@
   },
   "circumferenceTFVacSizing": {
     "title": "Circunferencia",
-    "description": "Mida la circunferencia (C) a {{distance}} de la parte superior del sello"
+    "descriptionSingle": "Mida la circunferencia debajo del anillo de sellado reflejado",
+    "descriptionMulti": "Mida la circunferencia justo por encima del sello superior"
   },
   "TFSizing": {
     "title": "Talla",

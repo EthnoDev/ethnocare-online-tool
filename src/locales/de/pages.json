@@ -172,7 +172,8 @@
   },
   "circumferenceTFVacSizing": {
     "title": "Umfang",
-    "description": "Messen Sie den Umfang (C) Ihres Stumpfes {{distance}} oberhalb der Dichtung"
+    "descriptionSingle": "Messen Sie den Umfang unter dem reflektierten Dichtungsring",
+    "descriptionMulti": "Messen Sie den Umfang direkt oberhalb der oberen Dichtung"
   },
   "TFSizing": {
     "title": "Größe",

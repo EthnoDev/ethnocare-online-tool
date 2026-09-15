@@ -5,8 +5,8 @@ import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
 
 // Assets
-import VacCImg from "../../../../assets/circumferences/TF/vacC.svg";
-import VacIImg from "../../../../assets/circumferences/TF/vacI.svg";
+import SingleSealImg from "../../../../assets/circumferences/TF/singleSeal.svg";
+import MultiSealImg from "../../../../assets/circumferences/TF/multiSeal.svg";
 
 /** ---------- Helpers ---------- */
 const baseLang = (code) => (code || "en").split("-")[0];
@@ -15,23 +15,32 @@ export default function CircumferenceVac() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation(["pages", "common"]);
 
-  // Logic to determine if we show Metric (C) or Imperial (I) image
+  // Retrieve stored suspension and unit values
+  const suspension = localStorage.getItem("suspension");
   const isImperial = localStorage.getItem("units") === "imperial";
-  const selectedImage = isImperial ? VacIImg : VacCImg;
+  
+  const isMultiSeal = suspension === "TF-multi-seal";
+
+  // Dynamic Image & Description Key
+  const selectedImage = isMultiSeal ? MultiSealImg : SingleSealImg;
+  const descriptionKey = isMultiSeal
+    ? "circumferenceTFVacSizing.descriptionMulti"
+    : "circumferenceTFVacSizing.descriptionSingle";
+
   const distance = isImperial ? "2.4 in" : "6 cm";
 
   const handleConfirm = (res) => {
     localStorage.setItem("circumference", res);
     setTimeout(() => {
-      navigate("/sizing/TFsize");
+      navigate("/sizing/TFlength-vac");
     }, 200);
   };
 
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/sizing/TFlength-vac" 
-      currentStep={3} 
+      backTo="/sizing/TFsuspension" 
+      currentStep={2} 
       totalSteps={4} 
       code={true}
     >
@@ -41,12 +50,12 @@ export default function CircumferenceVac() {
           {t("circumferenceTFVacSizing.title", { ns: "pages" })}
         </h1>
 
-        {/* 2. Description */}
+        {/* 2. Description (Switches between descriptionSingle and descriptionMulti) */}
         <p className="mt-3 text-center text-base text-slate-500">
-          {t("circumferenceTFVacSizing.description", { ns: "pages", distance })}
+          {t(descriptionKey, { ns: "pages", distance })}
         </p>
 
-        {/* 3. Image (Switches between Inch and CM version) */}
+        {/* 3. Image (Switches between Single Seal and Multi Seal) */}
         <div className="mt-8 flex justify-center">
           <img
             src={selectedImage}
