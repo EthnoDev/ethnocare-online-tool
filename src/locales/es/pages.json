@@ -127,7 +127,8 @@
   },
   "circumferenceTTVacSizing": {
     "title": "Circunferencia",
-    "description": "Mida la circunferencia (C) de su muñón en la parte superior del sello"
+    "descriptionSingle": "Mida la circunferencia debajo del anillo de sellado reflejado",
+    "descriptionMulti": "Mida la circunferencia justo por encima del sello superior"
   },
   "lengthTTSizing": {
     "title": "Longitud",

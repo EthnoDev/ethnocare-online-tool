@@ -1,4 +1,3 @@
-// src/pages/assistance/overlay/TT/CircumferenceVac.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -6,7 +5,8 @@ import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
 
 // Assets
-import TTCircumferenceVac from "../../../../assets/circumferences/TT/vac.svg";
+import TTSingleVac from "../../../../assets/circumferences/TT/SingleVac.svg";
+import TTMultiVac from "../../../../assets/circumferences/TT/MultiVac.svg";
 
 export default function CircumferenceVac() {
   const [result, setResult] = useState(null);
@@ -14,6 +14,17 @@ export default function CircumferenceVac() {
   
   // Loaded both "pages" and "common" namespaces
   const { t } = useTranslation(["pages", "common"]);
+
+  // Retrieve selected suspension option from localStorage
+  const suspension = localStorage.getItem("suspension");
+  const isMultiSeal = suspension === "TT-multi-seal";
+
+  // Dynamic description and image selection based on suspension type
+  const descriptionKey = isMultiSeal
+    ? "circumferenceTTVacSizing.descriptionMulti"
+    : "circumferenceTTVacSizing.descriptionSingle";
+
+  const selectedImage = isMultiSeal ? TTMultiVac : TTSingleVac;
 
   const handleConfirm = (value) => {
     setResult(value);
@@ -38,12 +49,12 @@ export default function CircumferenceVac() {
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          {t("circumferenceTTVacSizing.description")}
+          {t(descriptionKey)}
         </p>
 
         <div className="mt-8 flex justify-center">
           <img
-            src={TTCircumferenceVac}
+            src={selectedImage}
             alt={t("common:pages.circumference_tt_vac")}
             className="w-74 h-auto object-contain rounded-xl"
           />

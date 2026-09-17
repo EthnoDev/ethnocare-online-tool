@@ -131,7 +131,8 @@
   },
   "circumferenceTTVacSizing": {
     "title": "Circumference",
-    "description": "Measure the circumference (C) at the top of the seal"
+    "descriptionSingle": "Measure the circumference under the reflected sealing ring",
+    "descriptionMulti": "Measure the circumference just above the top seal"
   },
   "lengthTTSizing": {
     "title": "Length",
