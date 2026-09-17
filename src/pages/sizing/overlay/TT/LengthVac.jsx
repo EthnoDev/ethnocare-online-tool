@@ -1,37 +1,31 @@
-// src/pages/assistance/overlay/TT/LengthVac.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
 
-// Import localized "vac" images
-import TLVac_en from "../../../../assets/lengths/TT/vac.svg";
-import TLVac_fr from "../../../../assets/lengths/TT/vac_fr.svg";
-import TLVac_es from "../../../../assets/lengths/TT/vac_es.svg";
-import TLVac_de from "../../../../assets/lengths/TT/vac_de.svg";
+// Assets
+import TLSingleVac from "../../../../assets/lengths/TT/SingleVac.svg";
+import TLMultiVac from "../../../../assets/lengths/TT/MultiVac.svg";
 import ExclamationIcon from "../../../../assets/exclamation.svg";
-
-/** ---------- Helpers ---------- */
-const baseLang = (code) => (code || "en").split("-")[0];
 
 export default function LengthVac() {
   const [result, setResult] = useState(null);
   const navigate = useNavigate();
   
-  // Loaded both namespaces to get access to common.json
-  const { t, i18n } = useTranslation(["pages", "common"]);
+  // Loaded both "pages" and "common" namespaces
+  const { t } = useTranslation(["pages", "common"]);
 
-  // Pick the localized image
-  const lang = baseLang(i18n.language);
-  const imgMap = {
-    en: TLVac_en,
-    fr: TLVac_fr,
-    es: TLVac_es,
-    de: TLVac_de,
-  };
+  // Retrieve selected suspension option from localStorage
+  const suspension = localStorage.getItem("suspension");
+  const isMultiSeal = suspension === "TT-multi-seal";
 
-  const selectedImage = imgMap[lang] || TLVac_en;
+  // Dynamic description and image selection based on suspension type
+  const descriptionKey = isMultiSeal
+    ? "lengthTTVacSizing.descriptionMulti"
+    : "lengthTTVacSizing.descriptionSingle";
+
+  const selectedImage = isMultiSeal ? TLMultiVac : TLSingleVac;
 
   const handleConfirm = (res) => {
     setResult(res);
@@ -50,13 +44,13 @@ export default function LengthVac() {
       totalSteps={5} 
       code={true}
     >
-      <div className="w-full max-w-md ">
+      <div className="w-full max-w-md">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("lengthTTVacSizing.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          {t("lengthTTVacSizing.description")}
+          {t(descriptionKey)}
         </p>
 
         <div className="mt-8 flex justify-center">
@@ -75,7 +69,7 @@ export default function LengthVac() {
           />
         </div>
 
-        {/* Notice Section - Matching the darker design from Length.jsx */}
+        {/* Notice Section - Matching the design from Length.jsx */}
         <div className="w-full max-w-md mx-auto mt-10">
           <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
             <div className="flex items-start gap-3 text-left">
@@ -95,12 +89,12 @@ export default function LengthVac() {
                     ns="pages"
                     i18nKey="lengthTTVacSizing.note_body"
                     components={{ 
-                        bold: <strong className="font-bold text-[#090C41]" />,
-                        underline: <span className="underline" />
+                      bold: <strong className="font-bold text-[#090C41]" />,
+                      underline: <span className="underline" />,
+                      br: <br />
                     }}
                   />
                 </p>
-
               </div>
             </div>
           </div>

@@ -138,9 +138,10 @@
   },
   "lengthTTVacSizing": {
     "title": "Longitud",
-    "description": "Mida la longitud (L) desde la parte superior del sello hasta la línea de recorte poplítea (Puede colocar una marca en el liner para indicar la altura de la línea de recorte)",
+    "descriptionSingle": "Mida la longitud debajo del anillo de sellado reflejado hasta la línea de recorte proximal posterior",
+    "descriptionMulti": "Mida la longitud justo por encima del sello superior hasta la línea de recorte proximal posterior",
     "note_title": "Paciente sin socket",
-    "note_body": "Puede medir la longitud desde el extremo del liner hasta la fosa poplítea (Asegúrese de medir dimensiones lineales)."
+    "note_body": "Si el usuario no está usando un socket, mida la longitud desde debajo del anillo de sellado reflejado hasta el punto medio del tendón rotuliano.<br/><br/>Esta medida puede ser ligeramente más larga que la línea de recorte proximal posterior del socket, por lo que si el paciente está entre dos tallas, elija la talla de Overlay más corta."
   },
   "orientationTTSizing": {
     "title": "Orientación",

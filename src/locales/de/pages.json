@@ -138,9 +138,10 @@
   },
   "lengthTTVacSizing": {
     "title": "Länge",
-    "description": "Messen Sie die Länge (L) von der Oberseite der Dichtung bis zur Kniekehle (Sie können eine Markierung auf dem Liner anbringen, um die Höhe der Schnittlinie anzuzeigen)",
+    "descriptionSingle": "Messen Sie die Länge unter dem reflektierten Dichtungsring bis zur posterior proximalen Schnittlinie",
+    "descriptionMulti": "Messen Sie die Länge direkt oberhalb der oberen Dichtung bis zur posterior proximalen Schnittlinie",
     "note_title": "Patient ohne Prothesenschaft",
-    "note_body": "Sie können die Länge vom Ende des Liners bis zur Kniekehle messen (Stellen Sie sicher, dass Sie linear messen)."
+    "note_body": "Wenn der Patient keinen Prothesenschaft trägt, messen Sie die Länge vom Ende des Liners bis zur Mitte der Patellarsehne.<br/><br/>Diese Messung kann etwas länger sein als die posterior proximale Schnittlinie des Prothesenschafts, daher wählen Sie bei Patienten zwischen zwei Größen die kürzere Overlay-Größe."
   },
   "orientationTTSizing": {
     "title": "Ausrichtung",

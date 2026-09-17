@@ -138,9 +138,10 @@
   },
   "lengthTTVacSizing": {
     "title": "Longueur",
-    "description": "Mesurez la longueur (L) du haut du joint jusqu'à la ligne de découpe poplitée (vous pouvez placer un repère sur le manchon pour indiquer la hauteur de la ligne de découpe)",
+    "descriptionSingle": "Mesurez la longueur sous le joint réfléchissant jusqu'à la ligne de découpe proximale postérieure",
+    "descriptionMulti": "Mesurez la longueur juste au-dessus du joint supérieur jusqu'à la ligne de découpe proximale postérieure",
     "note_title": "Patient sans emboîture",
-    "note_body": "Vous pouvez mesurer la longueur du bout du manchon à la fosse poplitée et rapporter les dimensions ci-dessus (Assurez-vous de mesurer les dimensions linéaires)."
+    "note_body": "Si l'utilisateur ne porte pas d'emboîture, mesurez la longueur du dessous du joint réfléchissant jusqu'au milieu du tendon rotulien.<br/><br/>Cette mesure peut être légèrement plus longue que la ligne de découpe proximale postérieure de l'emboîture, donc si le patient est entre deux tailles, choisissez la taille d'Overlay la plus courte."
   },
   "orientationTTSizing": {
     "title": "Orientation",
