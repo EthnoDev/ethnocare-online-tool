@@ -7,45 +7,47 @@ import PageWrapper from "../../../../components/PageWrapper";
 const baseLang = (code) => (code || "en").split("-")[0];
 const pickLang = (code) => (["fr", "es", "de"].includes(code) ? code : "en");
 
-/** ---------- TT images (EN/FR/ES/DE) ---------- */
-import TTLocking_en from "../../../../assets/suspensionOptions/TT/TT-distal-locking.svg";
+/** ---------- TT images ---------- */
+// Language Agnostic (Root level only)
+import TTLocking from "../../../../assets/suspensionOptions/TT/TT-distal-locking.svg";
+import TTCushion from "../../../../assets/suspensionOptions/TT/TT-cushion.svg";
+
+// EN (Root level)
 import TTLanyard_en from "../../../../assets/suspensionOptions/TT/TT-lanyard.svg";
+import TTDistalSeal_en from "../../../../assets/suspensionOptions/TT/TT-distal-seal.svg";
+import TTSingleSeal_en from "../../../../assets/suspensionOptions/TT/TT-single-seal.svg";
+import TTMultiSeal_en from "../../../../assets/suspensionOptions/TT/TT-multi-seal.svg";
 import TTSleeve_en from "../../../../assets/suspensionOptions/TT/TT-suspension-sleeve.svg";
-import TTSeal_en from "../../../../assets/suspensionOptions/TT/TT-distal-seal.svg";
-import TTLanyardDistal_en from "../../../../assets/suspensionOptions/TT/TT-distal-lanyard.svg";
-import TTCushion_en from "../../../../assets/suspensionOptions/TT/TT-cushion.svg";
 
 // FR
-import TTLocking_fr from "../../../../assets/suspensionOptions/TT/fr/TT-distal-locking.svg";
 import TTLanyard_fr from "../../../../assets/suspensionOptions/TT/fr/TT-lanyard.svg";
+import TTDistalSeal_fr from "../../../../assets/suspensionOptions/TT/fr/TT-distal-seal.svg";
+import TTSingleSeal_fr from "../../../../assets/suspensionOptions/TT/fr/TT-single-seal.svg";
+import TTMultiSeal_fr from "../../../../assets/suspensionOptions/TT/fr/TT-multi-seal.svg";
 import TTSleeve_fr from "../../../../assets/suspensionOptions/TT/fr/TT-suspension-sleeve.svg";
-import TTSeal_fr from "../../../../assets/suspensionOptions/TT/fr/TT-distal-seal.svg";
-import TTLanyardDistal_fr from "../../../../assets/suspensionOptions/TT/fr/TT-distal-lanyard.svg";
-import TTCushion_fr from "../../../../assets/suspensionOptions/TT/fr/TT-cushion.svg";
 
 // ES
-import TTLocking_es from "../../../../assets/suspensionOptions/TT/es/TT-distal-locking.svg";
 import TTLanyard_es from "../../../../assets/suspensionOptions/TT/es/TT-lanyard.svg";
+import TTDistalSeal_es from "../../../../assets/suspensionOptions/TT/es/TT-distal-seal.svg";
+import TTSingleSeal_es from "../../../../assets/suspensionOptions/TT/es/TT-single-seal.svg";
+import TTMultiSeal_es from "../../../../assets/suspensionOptions/TT/es/TT-multi-seal.svg";
 import TTSleeve_es from "../../../../assets/suspensionOptions/TT/es/TT-suspension-sleeve.svg";
-import TTSeal_es from "../../../../assets/suspensionOptions/TT/es/TT-distal-seal.svg";
-import TTLanyardDistal_es from "../../../../assets/suspensionOptions/TT/es/TT-distal-lanyard.svg";
-import TTCushion_es from "../../../../assets/suspensionOptions/TT/es/TT-cushion.svg";
 
 // DE
-import TTLocking_de from "../../../../assets/suspensionOptions/TT/de/TT-distal-locking.svg";
 import TTLanyard_de from "../../../../assets/suspensionOptions/TT/de/TT-lanyard.svg";
+import TTDistalSeal_de from "../../../../assets/suspensionOptions/TT/de/TT-distal-seal.svg";
+import TTSingleSeal_de from "../../../../assets/suspensionOptions/TT/de/TT-single-seal.svg";
+import TTMultiSeal_de from "../../../../assets/suspensionOptions/TT/de/TT-multi-seal.svg";
 import TTSleeve_de from "../../../../assets/suspensionOptions/TT/de/TT-suspension-sleeve.svg";
-import TTSeal_de from "../../../../assets/suspensionOptions/TT/de/TT-distal-seal.svg";
-import TTLanyardDistal_de from "../../../../assets/suspensionOptions/TT/de/TT-distal-lanyard.svg";
-import TTCushion_de from "../../../../assets/suspensionOptions/TT/de/TT-cushion.svg";
 
 const TT_IMAGES = {
-  "tt-locking": { en: TTLocking_en, fr: TTLocking_fr, es: TTLocking_es, de: TTLocking_de },
-  "tt-lanyard": { en: TTLanyard_en, fr: TTLanyard_fr, es: TTLanyard_es, de: TTLanyard_de },
+  "tt-locking": TTLocking,
+  "tt-cushion": TTCushion,
   "tt-suspension-sleeve": { en: TTSleeve_en, fr: TTSleeve_fr, es: TTSleeve_es, de: TTSleeve_de },
-  "tt-distal-seal": { en: TTSeal_en, fr: TTSeal_fr, es: TTSeal_es, de: TTSeal_de },
-  "tt-distal-lanyard": { en: TTLanyardDistal_en, fr: TTLanyardDistal_fr, es: TTLanyardDistal_es, de: TTLanyardDistal_de },
-  "tt-cushion": { en: TTCushion_en, fr: TTCushion_fr, es: TTCushion_es, de: TTCushion_de },
+  "tt-lanyard": { en: TTLanyard_en, fr: TTLanyard_fr, es: TTLanyard_es, de: TTLanyard_de },
+  "tt-distal-seal": { en: TTDistalSeal_en, fr: TTDistalSeal_fr, es: TTDistalSeal_es, de: TTDistalSeal_de },
+  "tt-single-seal": { en: TTSingleSeal_en, fr: TTSingleSeal_fr, es: TTSingleSeal_es, de: TTSingleSeal_de },
+  "tt-multi-seal": { en: TTMultiSeal_en, fr: TTMultiSeal_fr, es: TTMultiSeal_es, de: TTMultiSeal_de },
 };
 
 export default function SuspensionSelection() {
@@ -63,16 +65,26 @@ export default function SuspensionSelection() {
     { id: "TT-cushion", tKey: "tt-cushion" },
     { id: "TT-suspension-sleeve", tKey: "tt-suspension-sleeve" },
     { id: "TT-distal-seal", tKey: "tt-distal-seal" },
-    { id: "TT-distal-lanyard", tKey: "tt-distal-lanyard" },
+    { id: "TT-single-seal", tKey: "tt-single-seal" },
+    { id: "TT-multi-seal", tKey: "tt-multi-seal" },
   ];
 
-  // Filter out distal lanyard if product is Underlay, then map images
+  // Underlay: Hide single seal & multi seal (show distal seal)
+  // Overlay: Hide distal seal (show single seal & multi seal)
   const options = rawOptions
-    .filter((o) => !(isUnderlay && o.id === "TT-distal-lanyard"))
-    .map((o) => ({
-      ...o,
-      src: TT_IMAGES[o.tKey]?.[lang] || TT_IMAGES[o.tKey]?.en,
-    }));
+    .filter((o) => {
+      if (isUnderlay) {
+        return o.id !== "TT-single-seal" && o.id !== "TT-multi-seal";
+      }
+      return o.id !== "TT-distal-seal";
+    })
+    .map((o) => {
+      const asset = TT_IMAGES[o.tKey];
+      return {
+        ...o,
+        src: typeof asset === "string" ? asset : asset[lang] || asset.en,
+      };
+    });
 
   const handleSelect = (optionId) => {
     if (selected) return;
@@ -88,7 +100,7 @@ export default function SuspensionSelection() {
       }
 
       // 2. Overlay logic
-      if (optionId === "TT-distal-seal") {
+      if (optionId === "TT-single-seal" || optionId === "TT-multi-seal") {
         navigate("/sizing/TTcircumference-vac");
       } else {
         navigate("/sizing/TTcircumference");
