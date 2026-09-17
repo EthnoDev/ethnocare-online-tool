@@ -1,4 +1,3 @@
-// src/pages/assistance/overlay/TT/Length.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
@@ -6,31 +5,14 @@ import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
 
 // Assets
-import TLPin_en from "../../../../assets/lengths/TT/pin.svg";
-import TLPin_fr from "../../../../assets/lengths/TT/pin_fr.svg";
-import TLPin_es from "../../../../assets/lengths/TT/pin_es.svg";
-import TLPin_de from "../../../../assets/lengths/TT/pin_de.svg";
+import TLPin from "../../../../assets/lengths/TT/pin.svg";
 import ExclamationIcon from "../../../../assets/exclamation.svg";
-
-/** ---------- Helpers ---------- */
-const baseLang = (code) => (code || "en").split("-")[0];
 
 export default function Length() {
   const [result, setResult] = useState(null);
   const navigate = useNavigate();
   
-  // Loaded both "pages" and "common" namespaces
-  const { t, i18n } = useTranslation(["pages", "common"]);
-
-  const lang = baseLang(i18n.language);
-  const imgMap = {
-    en: TLPin_en,
-    fr: TLPin_fr,
-    es: TLPin_es,
-    de: TLPin_de,
-  };
-
-  const selectedImage = imgMap[lang] || TLPin_en;
+  const { t } = useTranslation(["pages", "common"]);
 
   const handleConfirm = (res) => {
     setResult(res);
@@ -51,7 +33,7 @@ export default function Length() {
     >
       <div className="w-full max-w-md">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-            {t("lengthTTSizing.title")}
+          {t("lengthTTSizing.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
@@ -60,7 +42,7 @@ export default function Length() {
 
         <div className="mt-8 flex justify-center">
           <img
-            src={selectedImage}
+            src={TLPin}
             alt={t("common:pages.length_tt")}
             className="w-74 h-auto object-contain rounded-xl"
           />
@@ -85,7 +67,6 @@ export default function Length() {
               />
 
               <div className="flex-1">
-                {/* Fixed back to lengthTTSizing.note_title */}
                 <p className="text-md font-bold text-slate-900 leading-tight">
                   {t("lengthTTSizing.note_title")}
                 </p>
@@ -95,12 +76,12 @@ export default function Length() {
                     ns="pages"
                     i18nKey="lengthTTSizing.note_body"
                     components={{ 
-                        bold: <strong className="font-bold text-[#090C41]" />,
-                        underline: <span className="underline" />
+                      bold: <strong className="font-bold text-[#090C41]" />,
+                      underline: <span className="underline" />,
+                      br: <br />
                     }}
                   />
                 </p>
-                
               </div>
             </div>
           </div>

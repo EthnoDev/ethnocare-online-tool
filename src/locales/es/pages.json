@@ -122,8 +122,8 @@
   },
   "circumferenceTTSizing": {
     "title": "Circunferencia",
-    "description_metric": "Mida la circunferencia de su muñón a 4 cm del extremo distal",
-    "description_imperial": "Mida la circunferencia de su muñón a 1.5 pulgadas del extremo distal"
+    "description_metric": "Mida la circunferencia de su muñón a 4 cm del extremo distal sobre el liner",
+    "description_imperial": "Mida la circunferencia de su muñón a 1.5 pulgadas del extremo distal sobre el liner"
   },
   "circumferenceTTVacSizing": {
     "title": "Circunferencia",
@@ -131,9 +131,9 @@
   },
   "lengthTTSizing": {
     "title": "Longitud",
-    "description": "Mida la longitud (L) desde la parte inferior del socket hasta la línea de recorte poplítea",
+    "description": "Mida la longitud desde la parte inferior del socket hasta la línea de recorte proximal posterior",
     "note_title": "Paciente sin socket",
-    "note_body": "Puede medir la longitud desde el extremo del liner hasta la fosa poplítea (Asegúrese de medir dimensiones lineales)."
+    "note_body": "Si el usuario no está usando un socket, mida la longitud desde debajo del anillo de sellado reflejado hasta el punto medio del tendón rotuliano.<br/><br/>Esta medida puede ser ligeramente más larga que la línea de recorte proximal posterior del socket, por lo que si el paciente está entre dos tallas, elija la talla de Overlay más corta."
   },
   "lengthTTVacSizing": {
     "title": "Longitud",
