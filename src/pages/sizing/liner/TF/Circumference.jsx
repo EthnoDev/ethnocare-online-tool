@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { useState } from "react";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
@@ -48,9 +48,18 @@ export default function Circumference() {
           {t("circumferenceLinerSizing.title")}
         </h1>
 
-        {/* 2. Dynamic Description */}
+        {/* 2. Dynamic Description using <Trans> for formatting tags */}
         <p className="mt-3 text-center text-base text-slate-500">
-          {t("circumferenceLinerSizing.description", { distance })}
+          <Trans
+            ns="pages"
+            i18nKey="circumferenceLinerSizing.description"
+            values={{ distance }}
+            components={{
+              bold: <strong className="font-bold text-black" />,
+              underline: <span className="underline" />,
+              br: <br />
+            }}
+          />
         </p>
 
         {/* 3. Circumference Image */}

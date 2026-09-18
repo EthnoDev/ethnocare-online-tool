@@ -247,7 +247,7 @@
   },
   "circumferenceLinerSizing": {
     "title": "Circunferencia",
-    "description": "Mida la circunferencia (C) a {{distance}} del extremo distal"
+    "description": "Mida la circunferencia a <bold>{{distance}}</bold> del extremo distal"
   },
   "lengthLinerSizing": {
     "title": "Longitud",

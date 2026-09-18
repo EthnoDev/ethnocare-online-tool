@@ -247,7 +247,7 @@
   },
   "circumferenceLinerSizing": {
     "title": "Umfang",
-    "description": "Messen Sie den Umfang (C) {{distance}} vom distalen Ende entfernt"
+    "description": "Messen Sie den Umfang <bold>{{distance}}</bold> vom distalen Ende entfernt"
   },
   "lengthLinerSizing": {
     "title": "Länge",

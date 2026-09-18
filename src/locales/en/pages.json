@@ -251,7 +251,7 @@
   },
   "circumferenceLinerSizing": {
     "title": "Circumference",
-    "description": "Measure the circumference (C) at {{distance}} from the distal end"
+    "description": "Measure the circumference at <bold>{{distance}}</bold> from the distal end"
   },
   "lengthLinerSizing": {
     "title": "Length",
