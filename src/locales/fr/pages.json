@@ -204,11 +204,11 @@
   "circumferenceUnderlaySizing": {
     "title": "Circonférence",
     "title2": "Circonférence (C1)",
-    "description": "Mesurez la circonférence à {{distance}} de l'extrémité distale (sur la peau)."
+    "description": "Mesurez la circonférence à <bold>{{distance}}</bold> de l'extrémité distale (sur la peau)."
   },
   "circumference2UnderlaySizing": {
     "title": "Circonférence (C2)",
-    "description": "Mesurez la circonférence <b>juste au-dessus du bord supérieur</b> du manchon coupé (sur la peau)."
+    "description": "Mesurez la circonférence <bold>juste au-dessus du bord supérieur</bold> du manchon coupé (sur la peau)."
   },
   "siliconeUnderlaySizing": {
     "title": "Silicone",

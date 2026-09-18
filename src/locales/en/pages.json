@@ -208,11 +208,11 @@
   "circumferenceUnderlaySizing": {
     "title": "Circumference",
     "title2": "Circumference (C1)",
-    "description": "Measure the circumference at {{distance}} from the distal end (over the skin)."
+    "description": "Measure the circumference at <bold>{{distance}}</bold> from the distal end (over the skin)."
   },
   "circumference2UnderlaySizing": {
-  "title": "Circumference (C2)",
-  "description": "Measure the circumference <b>just above the top edge</b> of the trimmed liner (over the skin)."
+    "title": "Circumference (C2)",
+    "description": "Measure the circumference <bold>just above the top edge</bold> of the trimmed liner (over the skin)."
   },
   "siliconeUnderlaySizing": {
     "title": "Silicone",

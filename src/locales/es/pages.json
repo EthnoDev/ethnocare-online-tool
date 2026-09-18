@@ -204,11 +204,11 @@
   "circumferenceUnderlaySizing": {
     "title": "Circunferencia",
     "title2": "Circunferencia (C1)",
-    "description": "Mida la circunferencia a {{distance}} del extremo distal (sobre la piel)."
+    "description": "Mida la circunferencia a <bold>{{distance}}</bold> del extremo distal (sobre la piel)."
   },
   "circumference2UnderlaySizing": {
     "title": "Circunferencia (C2)",
-    "description": "Mida la circunferencia <b>justo por encima del borde superior</b> del liner recortado (sobre la piel)."
+    "description": "Mida la circunferencia <bold>justo por encima del borde superior</bold> del liner recortado (sobre la piel)."
   },
   "siliconeUnderlaySizing": {
     "title": "Silicona",
