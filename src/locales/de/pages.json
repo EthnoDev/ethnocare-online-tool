@@ -122,8 +122,8 @@
   },
   "circumferenceTTSizing": {
     "title": "Umfang",
-    "description_metric": "Messen Sie den Umfang Ihres Stumpfes 4 cm über dem distalen Ende über dem Liner",
-    "description_imperial": "Messen Sie den Umfang Ihres Stumpfes 1,5 Zoll über dem distalen Ende über dem Liner"
+    "description_metric": "Messen Sie den Umfang Ihres Stumpfes <bold>4 cm</bold> über dem distalen Ende über dem Liner",
+    "description_imperial": "Messen Sie den Umfang Ihres Stumpfes <bold>1,5 Zoll</bold> über dem distalen Ende über dem Liner"
   },
   "circumferenceTTVacSizing": {
     "title": "Umfang",
@@ -132,7 +132,7 @@
   },
   "lengthTTSizing": {
     "title": "Länge",
-    "description": "Messen Sie die Länge von der Unterseite der Prothesenfassung bis zur posterior proximalen Schnittlinie",
+    "description": "Messen Sie die Länge von der <bold>Unterseite der Prothesenfassung</bold> bis zur posterior proximalen Schnittlinie",
     "note_title": "Patient ohne Prothesenschaft",
     "note_body": "Wenn der Patient keinen Prothesenschaft trägt, messen Sie die Länge vom Ende des Liners bis zur Mitte der Patellarsehne.<br/><br/>Diese Messung kann etwas länger sein als die posterior proximale Schnittlinie des Prothesenschafts, daher wählen Sie bei Patienten zwischen zwei Größen die kürzere Overlay-Größe."
   },

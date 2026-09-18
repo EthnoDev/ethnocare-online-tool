@@ -37,7 +37,15 @@ export default function Length() {
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          {t("lengthTTSizing.description")}
+          <Trans
+            ns="pages"
+            i18nKey="lengthTTSizing.description"
+            components={{
+              bold: <strong className="font-bold text-black" />,
+              underline: <span className="underline" />,
+              br: <br />
+            }}
+          />
         </p>
 
         <div className="mt-8 flex justify-center">

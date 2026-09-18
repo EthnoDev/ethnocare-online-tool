@@ -122,8 +122,8 @@
   },
   "circumferenceTTSizing": {
     "title": "Circonférence",
-    "description_metric": "Mesurez la circonférence de votre moignon à 4 cm sous la proéminence osseuse la plus basse au-dessus du manchon",
-    "description_imperial": "Mesurez la circonférence de votre moignon à 1,5 pouces sous la proéminence osseuse la plus basse au-dessus du manchon"
+    "description_metric": "Mesurez la circonférence de votre moignon à <bold>4 cm</bold> sous la proéminence osseuse la plus basse au-dessus du manchon",
+    "description_imperial": "Mesurez la circonférence de votre moignon à <bold>1,5 pouces</bold> sous la proéminence osseuse la plus basse au-dessus du manchon"
   },
   "circumferenceTTVacSizing": {
     "title": "Circonférence",
@@ -132,7 +132,7 @@
   },
   "lengthTTSizing": {
     "title": "Longueur",
-    "description": "Mesurez la longueur du bas de l'emboîture jusqu'à la ligne de découpe proximale postérieure",
+    "description": "Mesurez la longueur du <bold>bas de l'emboîture</bold> jusqu'à la ligne de découpe proximale postérieure",
     "note_title": "Patient sans emboîture",
     "note_body": "Si l'utilisateur ne porte pas d'emboîture, mesurez la longueur du dessous du joint réfléchissant jusqu'au milieu du tendon rotulien.<br/><br/>Cette mesure peut être légèrement plus longue que la ligne de découpe proximale postérieure de l'emboîture, donc si le patient est entre deux tailles, choisissez la taille d'Overlay la plus courte."
   },
