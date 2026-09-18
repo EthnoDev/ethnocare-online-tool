@@ -131,8 +131,8 @@
   },
   "circumferenceTTVacSizing": {
     "title": "Circumference",
-    "descriptionSingle": "Measure the circumference under the reflected sealing ring",
-    "descriptionMulti": "Measure the circumference just above the top seal"
+    "descriptionSingle": "Measure the circumference <bold>under</bold> the reflected sealing ring",
+    "descriptionMulti": "Measure the circumference <bold>just above the top seal</bold>"
   },
   "lengthTTSizing": {
     "title": "Length",
@@ -142,8 +142,8 @@
   },
   "lengthTTVacSizing": {
     "title": "Length",
-    "descriptionSingle": "Measure the length under the reflected sealing ring to the posterior proximal trim line",
-    "descriptionMulti": "Measure length just above top seal to the posterior proximal trim line",
+    "descriptionSingle": "Measure the length <bold>under</bold> the reflected sealing ring to the posterior proximal trim line",
+    "descriptionMulti": "Measure the length <bold>just above the top seal</bold> to the posterior proximal trim line",
     "note_title": "Patient with no socket",
     "note_body": "If the user is not wearing a socket, measure the length from under the reflected sealing ring to the midpoint of the patellar tendon.<br/><br/>This measurement can be slightly longer than the socket’s posterior proximal trim line, so if the patient is between sizes, choose the shorter Overlay size."
   },

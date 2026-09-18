@@ -127,8 +127,8 @@
   },
   "circumferenceTTVacSizing": {
     "title": "Circonférence",
-    "descriptionSingle": "Mesurez la circonférence sous le joint réfléchissant",
-    "descriptionMulti": "Mesurez la circonférence juste au-dessus du joint supérieur"
+    "descriptionSingle": "Mesurez la circonférence <bold>sous</bold> le joint réfléchissant",
+    "descriptionMulti": "Mesurez la circonférence <bold>juste au-dessus du joint supérieur</bold>"
   },
   "lengthTTSizing": {
     "title": "Longueur",
@@ -138,8 +138,8 @@
   },
   "lengthTTVacSizing": {
     "title": "Longueur",
-    "descriptionSingle": "Mesurez la longueur sous le joint réfléchissant jusqu'à la ligne de découpe proximale postérieure",
-    "descriptionMulti": "Mesurez la longueur juste au-dessus du joint supérieur jusqu'à la ligne de découpe proximale postérieure",
+    "descriptionSingle": "Mesurez la longueur <bold>sous</bold> le joint réfléchissant jusqu'à la ligne de découpe proximale postérieure",
+    "descriptionMulti": "Mesurez la longueur <bold>juste au-dessus du joint supérieur</bold> jusqu'à la ligne de découpe proximale postérieure",
     "note_title": "Patient sans emboîture",
     "note_body": "Si l'utilisateur ne porte pas d'emboîture, mesurez la longueur du dessous du joint réfléchissant jusqu'au milieu du tendon rotulien.<br/><br/>Cette mesure peut être légèrement plus longue que la ligne de découpe proximale postérieure de l'emboîture, donc si le patient est entre deux tailles, choisissez la taille d'Overlay la plus courte."
   },

@@ -50,7 +50,15 @@ export default function LengthVac() {
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          {t(descriptionKey)}
+          <Trans
+            ns="pages"
+            i18nKey={descriptionKey}
+            components={{
+              bold: <strong className="font-bold text-black" />,
+              underline: <span className="underline" />,
+              br: <br />
+            }}
+          />
         </p>
 
         <div className="mt-8 flex justify-center">
@@ -89,7 +97,7 @@ export default function LengthVac() {
                     ns="pages"
                     i18nKey="lengthTTVacSizing.note_body"
                     components={{ 
-                      bold: <strong className="font-bold text-[#090C41]" />,
+                      bold: <strong className="font-bold text-black" />,
                       underline: <span className="underline" />,
                       br: <br />
                     }}

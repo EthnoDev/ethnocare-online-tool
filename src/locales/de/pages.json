@@ -127,8 +127,8 @@
   },
   "circumferenceTTVacSizing": {
     "title": "Umfang",
-    "descriptionSingle": "Messen Sie den Umfang unter dem reflektierten Dichtungsring",
-    "descriptionMulti": "Messen Sie den Umfang direkt oberhalb der oberen Dichtung"
+    "descriptionSingle": "Messen Sie den Umfang <bold>unter</bold> dem reflektierten Dichtungsring",
+    "descriptionMulti": "Messen Sie den Umfang <bold>direkt oberhalb der oberen Dichtung</bold>"
   },
   "lengthTTSizing": {
     "title": "Länge",
@@ -138,8 +138,8 @@
   },
   "lengthTTVacSizing": {
     "title": "Länge",
-    "descriptionSingle": "Messen Sie die Länge unter dem reflektierten Dichtungsring bis zur posterior proximalen Schnittlinie",
-    "descriptionMulti": "Messen Sie die Länge direkt oberhalb der oberen Dichtung bis zur posterior proximalen Schnittlinie",
+    "descriptionSingle": "Messen Sie die Länge <bold>unter</bold> dem reflektierten Dichtungsring bis zur posterior proximalen Schnittlinie",
+    "descriptionMulti": "Messen Sie die Länge <bold>direkt oberhalb der oberen Dichtung</bold> bis zur posterior proximalen Schnittlinie",
     "note_title": "Patient ohne Prothesenschaft",
     "note_body": "Wenn der Patient keinen Prothesenschaft trägt, messen Sie die Länge vom Ende des Liners bis zur Mitte der Patellarsehne.<br/><br/>Diese Messung kann etwas länger sein als die posterior proximale Schnittlinie des Prothesenschafts, daher wählen Sie bei Patienten zwischen zwei Größen die kürzere Overlay-Größe."
   },
