@@ -162,7 +162,7 @@
   },
   "lengthTFSizing": {
     "title": "Longueur",
-    "description": "Mesurez la longueur du bout du manchon jusqu'au périnée"
+    "description": "Mesurez la longueur du <bold>bout distal</bold> du manchon jusqu'au périnée"
   },
   "lengthTFVacSizing": {
     "title": "Longueur",
@@ -171,7 +171,7 @@
   },
   "circumferenceTFSizing": {
     "title": "Circonférence",
-    "description": "Mesurez la circonférence à {{distance}} de l'extrémité distale (sur le manchon)"
+    "description": "Mesurez la circonférence à <bold>{{distance}}</bold> de l'extrémité distale (sur le manchon)"
   },
   "circumferenceTFVacSizing": {
     "title": "Circonférence",

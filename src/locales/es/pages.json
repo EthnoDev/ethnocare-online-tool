@@ -162,7 +162,7 @@
   },
   "lengthTFSizing": {
     "title": "Longitud",
-    "description": "Mida la longitud desde el extremo distal del liner hasta el periné"
+    "description": "Mida la longitud desde el <bold>extremo distal</bold> del liner hasta el periné"
   },
   "lengthTFVacSizing": {
     "title": "Longitud",
@@ -171,7 +171,7 @@
   },
   "circumferenceTFSizing": {
     "title": "Circunferencia",
-    "description": "Mida la circunferencia a {{distance}} del extremo distal (sobre el liner)"
+    "description": "Mida la circunferencia a <bold>{{distance}}</bold> del extremo distal (sobre el liner)"
   },
   "circumferenceTFVacSizing": {
     "title": "Circunferencia",

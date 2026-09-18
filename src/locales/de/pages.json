@@ -162,7 +162,7 @@
   },
   "lengthTFSizing": {
     "title": "Länge",
-    "description": "Messen Sie die Länge vom distalen Ende des Liners bis zum Damm (Perineum)"
+    "description": "Messen Sie die Länge vom <bold>distalen Ende</bold> des Liners bis zum Damm (Perineum)"
   },
   "lengthTFVacSizing": {
     "title": "Länge",
@@ -171,7 +171,7 @@
   },
   "circumferenceTFSizing": {
     "title": "Umfang",
-    "description": "Messen Sie den Umfang {{distance}} vom distalen Ende entfernt (über dem Liner)"
+    "description": "Messen Sie den Umfang <bold>{{distance}}</bold> vom distalen Ende entfernt (über dem Liner)"
   },
   "circumferenceTFVacSizing": {
     "title": "Umfang",

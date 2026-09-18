@@ -166,7 +166,7 @@
   },
   "lengthTFSizing": {
     "title": "Length",
-    "description": "Measure the length from the distal end of the liner to the perineum"
+    "description": "Measure the length from the <bold>distal end</bold> of the liner to the perineum"
   },
   "lengthTFVacSizing": {
     "title": "Length",
@@ -175,7 +175,7 @@
   },
   "circumferenceTFSizing": {
     "title": "Circumference",
-    "description": "Measure the circumference at {{distance}} from the distal end over the liner"
+    "description": "Measure the circumference at <bold>{{distance}}</bold> from the distal end over the liner"
   },
   "circumferenceTFVacSizing": {
     "title": "Circumference",
