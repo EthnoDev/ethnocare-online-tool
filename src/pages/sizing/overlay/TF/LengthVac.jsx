@@ -68,9 +68,17 @@ export default function LengthVac() {
           {t("lengthTFVacSizing.title", { ns: "pages" })}
         </h1>
 
-        {/* 2. Description (Switches between descriptionSingle and descriptionMulti) */}
+        {/* 2. Description (Switches between descriptionSingle and descriptionMulti with Trans support) */}
         <p className="mt-3 text-center text-base text-slate-500">
-          {t(descriptionKey, { ns: "pages" })}
+          <Trans
+            ns="pages"
+            i18nKey={descriptionKey}
+            components={{
+              bold: <strong className="font-bold text-black" />,
+              underline: <span className="underline" />,
+              br: <br />
+            }}
+          />
         </p>
 
         {/* 3. Image (Single Seal / Multi Seal variant based on suspension & lang) */}

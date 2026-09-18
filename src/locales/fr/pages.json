@@ -166,8 +166,8 @@
   },
   "lengthTFVacSizing": {
     "title": "Longueur",
-    "descriptionSingle": "Mesurez la longueur sous le joint réfléchissant jusqu'au périnée",
-    "descriptionMulti": "Mesurez la longueur juste au-dessus du joint supérieur jusqu'au périnée"
+    "descriptionSingle": "Mesurez la longueur <bold>sous</bold> le joint réfléchissant jusqu'au périnée",
+    "descriptionMulti": "Mesurez la longueur <bold>juste au-dessus du joint supérieur</bold> jusqu'au périnée"
   },
   "circumferenceTFSizing": {
     "title": "Circonférence",
@@ -175,8 +175,8 @@
   },
   "circumferenceTFVacSizing": {
     "title": "Circonférence",
-    "descriptionSingle": "Mesurez la circonférence sous le joint réfléchissant",
-    "descriptionMulti": "Mesurez la circonférence juste au-dessus du joint supérieur"
+    "descriptionSingle": "Mesurez la circonférence <bold>sous</bold> le joint réfléchissant",
+    "descriptionMulti": "Mesurez la circonférence <bold>juste au-dessus du joint supérieur</bold>"
   },
   "TFSizing": {
     "title": "Taille",

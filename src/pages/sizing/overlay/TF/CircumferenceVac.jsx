@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
 
@@ -8,12 +8,9 @@ import MeasurementInput from "../../../../components/MeasurementInput";
 import SingleSealImg from "../../../../assets/circumferences/TF/singleSeal.svg";
 import MultiSealImg from "../../../../assets/circumferences/TF/multiSeal.svg";
 
-/** ---------- Helpers ---------- */
-const baseLang = (code) => (code || "en").split("-")[0];
-
 export default function CircumferenceVac() {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation(["pages", "common"]);
+  const { t } = useTranslation(["pages", "common"]);
 
   // Retrieve stored suspension and unit values
   const suspension = localStorage.getItem("suspension");
@@ -50,9 +47,18 @@ export default function CircumferenceVac() {
           {t("circumferenceTFVacSizing.title", { ns: "pages" })}
         </h1>
 
-        {/* 2. Description (Switches between descriptionSingle and descriptionMulti) */}
+        {/* 2. Description (Switches between descriptionSingle and descriptionMulti with Trans support) */}
         <p className="mt-3 text-center text-base text-slate-500">
-          {t(descriptionKey, { ns: "pages", distance })}
+          <Trans
+            ns="pages"
+            i18nKey={descriptionKey}
+            values={{ distance }}
+            components={{
+              bold: <strong className="font-bold text-black" />,
+              underline: <span className="underline" />,
+              br: <br />
+            }}
+          />
         </p>
 
         {/* 3. Image (Switches between Single Seal and Multi Seal) */}

@@ -166,8 +166,8 @@
   },
   "lengthTFVacSizing": {
     "title": "Länge",
-    "descriptionSingle": "Messen Sie die Länge unter dem reflektierten Dichtungsring bis zum Damm (Perineum)",
-    "descriptionMulti": "Messen Sie die Länge direkt oberhalb der oberen Dichtung bis zum Damm (Perineum)"
+    "descriptionSingle": "Messen Sie die Länge <bold>unter</bold> dem reflektierten Dichtungsring bis zum Damm (Perineum)",
+    "descriptionMulti": "Messen Sie die Länge <bold>direkt oberhalb der oberen Dichtung</bold> bis zum Damm (Perineum)"
   },
   "circumferenceTFSizing": {
     "title": "Umfang",
@@ -175,8 +175,8 @@
   },
   "circumferenceTFVacSizing": {
     "title": "Umfang",
-    "descriptionSingle": "Messen Sie den Umfang unter dem reflektierten Dichtungsring",
-    "descriptionMulti": "Messen Sie den Umfang direkt oberhalb der oberen Dichtung"
+    "descriptionSingle": "Messen Sie den Umfang <bold>unter</bold> dem reflektierten Dichtungsring",
+    "descriptionMulti": "Messen Sie den Umfang <bold>direkt oberhalb der oberen Dichtung</bold>"
   },
   "TFSizing": {
     "title": "Größe",

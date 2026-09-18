@@ -166,8 +166,8 @@
   },
   "lengthTFVacSizing": {
     "title": "Longitud",
-    "descriptionSingle": "Mida la longitud debajo del anillo de sellado reflejado hasta el periné",
-    "descriptionMulti": "Mida la longitud justo por encima del sello superior hasta el periné"
+    "descriptionSingle": "Mida la longitud <bold>debajo</bold> del anillo de sellado reflejado hasta el periné",
+    "descriptionMulti": "Mida la longitud <bold>justo por encima del sello superior</bold> hasta el periné"
   },
   "circumferenceTFSizing": {
     "title": "Circunferencia",
@@ -175,8 +175,8 @@
   },
   "circumferenceTFVacSizing": {
     "title": "Circunferencia",
-    "descriptionSingle": "Mida la circunferencia debajo del anillo de sellado reflejado",
-    "descriptionMulti": "Mida la circunferencia justo por encima del sello superior"
+    "descriptionSingle": "Mida la circunferencia <bold>debajo</bold> del anillo de sellado reflejado",
+    "descriptionMulti": "Mida la circunferencia <bold>justo por encima del sello superior</bold>"
   },
   "TFSizing": {
     "title": "Talla",
