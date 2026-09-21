@@ -58,7 +58,7 @@ export default function LinerRedirectionPopup2({
             </button>
 
             {/* Title */}
-            <h2 className="text-xl font-semibold mb-4 mt-2 text-slate-900">
+            <h2 className="text-2xl font-semibold mb-4 mt-2 text-slate-900">
               {t("tooSmallPopup.title")}
             </h2>
 

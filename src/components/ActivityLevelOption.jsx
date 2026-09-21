@@ -20,7 +20,7 @@ export default function ActivityLevelOption({
       className={`${base} ${selected ? selectedStyle : outline}`}
     >
       {/* Big Bold Level (e.g. K1) */}
-      <span className="text-3xl font-extrabold tracking-tight leading-none">
+      <span className="text-2xl font-extrabold tracking-tight leading-none">
         {level}
       </span>
 

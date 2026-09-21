@@ -47,7 +47,7 @@ export default function LinerPopup({ onClose, onConfirm }) {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Title */}
-            <h2 className="text-xl font-bold text-slate-900 mb-3">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">
               {t("linerPopup.title")}
             </h2>
 

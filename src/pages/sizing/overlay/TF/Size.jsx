@@ -222,7 +222,7 @@ export default function SizeTF() {
           </p>
 
           {germanAltCode && (
-            <p className="text-xl font-bold text-gray-500 font-sans -mt-2">
+            <p className="text-2xl font-bold text-gray-500 font-sans -mt-2">
               {germanAltCode}
             </p>
           )}

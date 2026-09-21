@@ -63,7 +63,7 @@ export default function LanguagePopup({ onClose }) {
               <img src={XIcon} alt="" className="w-5 h-5" />
             </button>
 
-            <p className="text-xl font-semibold mb-4">
+            <p className="text-2xl font-semibold mb-4">
               {t("footer.select_language")}
             </p>
 
