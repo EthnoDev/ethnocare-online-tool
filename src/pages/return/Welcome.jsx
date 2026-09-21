@@ -20,7 +20,7 @@ export default function Welcome() {
   };
 
   return (
-    <PageWrapper showBack={true} backTo="/" code={true}>
+    <PageWrapper showBack={true} backTo="/">
       <div className="w-full max-w-sm">
         <h1 className="text-4xl font-bold text-center text-slate-900 leading-tight">
           {t("welcomeReturn.title")}

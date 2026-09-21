@@ -39,7 +39,6 @@ export default function ReturnAssistanceTool() {
     <PageWrapper
       showBack={true}
       backTo="/return/identification"
-      code={true}
       currentStep={2}
       totalSteps={3}
     >

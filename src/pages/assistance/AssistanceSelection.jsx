@@ -1,4 +1,3 @@
-// src/pages/assistance/AssistanceSelection.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -53,7 +52,7 @@ export default function AssistanceSelection() {
     <PageWrapper 
       showBack={true} 
       backTo="/assistance/product" 
-      code={true}
+      code={product === "overlay"}
     >
       <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
