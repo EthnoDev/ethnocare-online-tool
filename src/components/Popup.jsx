@@ -1,140 +1,313 @@
+import { useEffect } from "react";
 import PageTransitionWrapper from "./PageTransitionWrapper";
 import { useTranslation } from "react-i18next";
+import XIcon from "../assets/x.svg";
 
-export default function Popup({ type, onClose }) {
+export default function Popup({ type, measurement, onClose }) {
   const { t } = useTranslation(["common", "errors"]);
+  
+  // Units & suspension context
+  const isImperial = localStorage.getItem("units") === "imperial";
+  const suspension = localStorage.getItem("suspension");
 
-  const tableData = {
-    tt: {
-      title: "Overlay TT",
-      length: "Min: 13.5 cm / 5.3 Inch",
-      circumference: "Min: 24 cm / 9.4 Inch\nMax: 42 cm / 16.5 Inch",
-    },
-    tf: {
-      title: "Overlay TF",
-      length: "Min: 20 cm / 7.9 Inch",
-      circumference: "Min: 32 cm / 12.6 Inch\nMax: 62 cm / 24.4 Inch",
-    },
+  useEffect(() => {
+    const onKey = (e) => e.key === "Escape" && onClose?.();
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  const getTableConfigs = () => {
+    // ----------------------------------------------------
+    // TT OVERLAY
+    // ----------------------------------------------------
+    if (type === "tt") {
+      if (measurement === "length") {
+        return [
+          {
+            title: t("popup.ttLockCush"),
+            rows: [
+              {
+                label: t("popup.label_length"),
+                value: isImperial
+                  ? "Min : 4.7 in\nMax : None"
+                  : "Min : 12 cm\nMax : None",
+              },
+            ],
+            footnote: t("popup.ttLLockCushNote"),
+          },
+          {
+            title: t("popup.ttDistal"),
+            rows: [
+              {
+                label: t("popup.label_length"),
+                value: isImperial
+                  ? "Min : 3.1 in\nMax : None"
+                  : "Min : 8 cm\nMax : None",
+              },
+            ],
+            footnote: t("popup.ttLDistalNote"),
+          },
+        ];
+      }
+
+      // Circumference
+      return [
+        {
+          title: t("popup.ttLockCush"),
+          rows: [
+            {
+              label: t("popup.label_circumference"),
+              value: isImperial
+                ? "Min : 9.4 in\nMax : 16.5 in"
+                : "Min : 24 cm\nMax : 42 cm",
+            },
+          ],
+          footnote: t("popup.ttCLockCushNote"),
+        },
+        {
+          title: t("popup.ttDistal"),
+          rows: [
+            {
+              label: t("popup.label_circumference"),
+              value: isImperial
+                ? "Min : 9.4 in\nMax : 16.5 in"
+                : "Min : 24 cm\nMax : 42 cm",
+            },
+          ],
+          footnote: t("popup.ttCDistalNote"),
+        },
+      ];
+    }
+
+    // ----------------------------------------------------
+    // TF OVERLAY
+    // ----------------------------------------------------
+    if (type === "tf") {
+      const isPin = suspension === "TF-pin";
+
+      if (measurement === "length") {
+        return [
+          {
+            title: isPin ? t("popup.tfPin") : t("popup.tfVac"),
+            rows: [
+              {
+                label: t("popup.label_length"),
+                value: isImperial
+                  ? "Min : 7.8 in\nMax : None"
+                  : "Min : 20 cm\nMax : None",
+              },
+            ],
+            footnote: isPin
+              ? t("popup.tfLPinNote")
+              : t("popup.tfLVacNote"),
+          },
+        ];
+      }
+
+      // Circumference
+      return [
+        {
+          title: isPin ? t("popup.tfPin") : t("popup.tfVac"),
+          rows: [
+            {
+              label: t("popup.label_circumference"),
+              value: isImperial
+                ? "Min : 12.6 in\nMax : 24.4 in"
+                : "Min : 32 cm\nMax : 62 cm",
+            },
+          ],
+          footnote: isPin
+              ? t("popup.tfCPinNote")
+              : t("popup.tfCVacNote"),
+        },
+      ];
+    }
+
+    // ----------------------------------------------------
+    // TT UNDERLAY
+    // ----------------------------------------------------
+    if (type === "underlaytt") {
+      if (measurement === "length") {
+        return [
+          {
+            title: t("popup.uttOpen"),
+            rows: [
+              {
+                label: t("popup.label_length"),
+                value: isImperial
+                  ? "Min : 9 in\nMax : None"
+                  : "Min : 23 cm\nMax : None",
+              },
+            ],
+            footnote: t("popup.uttLOpenNote"),
+          },
+          {
+            title: t("popup.uttClosed"),
+            rows: [
+              {
+                label: t("popup.label_length"),
+                value: isImperial
+                  ? "Min : 10.6 in\nMax : None"
+                  : "Min : 27 cm\nMax : None",
+              },
+            ],
+            footnote: t("popup.uttLClosedNote"),
+          },
+        ];
+      }
+
+      // Circumference
+      return [
+        {
+          title: t("popup.uttOpen"),
+          rows: [
+            {
+              label: t("popup.label_circumference"),
+              value: isImperial
+                ? "Min : 9 in\nMax : 16.5 in"
+                : "Min : 23 cm\nMax : 42 cm",
+            },
+          ],
+          footnote: t("popup.uttCOpenNote"),
+        },
+        {
+          title: t("popup.uttClosed"),
+          rows: [
+            {
+              label: t("popup.label_circumference"),
+              value: isImperial
+                ? "Min : 9 in\nMax : 16.5 in"
+                : "Min : 23 cm\nMax : 42 cm",
+            },
+          ],
+          footnote: t("popup.uttCClosedNote"),
+        },
+      ];
+    }
+
+    // ----------------------------------------------------
+    // TT LINER
+    // ----------------------------------------------------
+    if (type === "ttLiner") {
+      return [
+        {
+          title: `Liner TT - ${t("popup.silicone", "Silicone")}`,
+          rows: [
+            {
+              label: t("popup.labelDistal", "Distal"),
+              value: isImperial
+                ? "Min : 6.2 in\nMax : 17.7 in"
+                : "Min : 16 cm\nMax : 45 cm",
+            },
+            {
+              label: t("popup.labelProximal", "Proximal"),
+              value: isImperial
+                ? "Min : 7.8 in\nMax : 19 in"
+                : "Min : 20 cm\nMax : 48.5 cm",
+            },
+          ],
+        },
+        {
+          title: "Liner TT - Gel",
+          rows: [
+            {
+              label: t("popup.labelDistal", "Distal"),
+              value: isImperial
+                ? "Min : 5.9 in\nMax : 20.8 in"
+                : "Min : 15 cm\nMax : 53 cm",
+            },
+            {
+              label: t("popup.labelProximal", "Proximal"),
+              value: isImperial
+                ? "Min : 9.4 in\nMax : 27.5 in"
+                : "Min : 24 cm\nMax : 70 cm",
+            },
+          ],
+        },
+      ];
+    }
+
+    // ----------------------------------------------------
+    // TF LINER
+    // ----------------------------------------------------
+    if (type === "tfLiner") {
+      return [
+        {
+          title: `Liner TF - ${t("popup.silicone", "Silicone")}`,
+          rows: [
+            {
+              label: t("popup.labelDistal", "Distal"),
+              value: isImperial
+                ? "Min : 9.8 in\nMax : 21.6 in"
+                : "Min : 25 cm\nMax : 55 cm",
+            },
+            {
+              label: t("popup.labelProximal", "Proximal"),
+              value: isImperial
+                ? "Min : 11.2 in\nMax : 24.8 in"
+                : "Min : 28.5 cm\nMax : 63 cm",
+            },
+          ],
+        },
+        {
+          title: "Liner TF - Gel",
+          rows: [
+            {
+              label: t("popup.labelDistal", "Distal"),
+              value: isImperial
+                ? "Min : 5.9 in\nMax : 20.8 in"
+                : "Min : 15 cm\nMax : 53 cm",
+            },
+            {
+              label: t("popup.labelProximal", "Proximal"),
+              value: isImperial
+                ? "Min : 9.4 in\nMax : 27.5 in"
+                : "Min : 24 cm\nMax : 70 cm",
+            },
+          ],
+        },
+      ];
+    }
+
+    return [];
   };
 
-  const underlayTTTables = [
-    {
-      title: t("popup.underlay_open_title"),
-      rows: [
-        {
-          label: t("popup.label_length"),
-          value: "Min: 23 cm / 9 Inch",
-        },
-        {
-          label: t("popup.label_circumferenceDistal"),
-          value: "Min: 20 cm / 7.8 Inch\nMax: 42 cm / 16.5 Inch",
-        },
-        {
-          label: t("popup.label_circumferenceUpper"),
-          value: "Min: 20 cm / 7.8 Inch\nMax: 55 cm / 21.6 Inch",
-        },
-      ],
-    },
-    {
-      title: t("popup.underlay_closed_title"),
-      rows: [
-        {
-          label: t("popup.label_length"),
-          value: "Min: 27 cm / 10.6 Inch",
-        },
-        {
-          label: t("popup.label_circumferenceDistal"),
-          value: "Min: 20 cm / 7.8 Inch\nMax: 42 cm / 16.5 Inch",
-        },
-      ],
-    },
-  ];
-
-  const ttLinerTables = [
-    {
-      title: `Liner TT - ${t("popup.silicone")}`,
-      rows: [
-        {
-          label: t("popup.labelDistal"),
-          value: "Min : 16 cm / 6.2 Inch\nMax : 45 cm / 17.7 Inch",
-        },
-        {
-          label: t("popup.labelProximal"),
-          value: "Min : 20 cm / 7.8 Inch\nMax : 48.5 cm / 19 Inch",
-        },
-      ],
-    },
-    {
-      title: "Liner TT - Gel",
-      rows: [
-        {
-          label: t("popup.labelDistal"),
-          value: "Min : 15 cm / 5.9 Inch\nMax : 53 cm / 20.8 Inch",
-        },
-        {
-          label: t("popup.labelProximal"),
-          value: "Min : 24 cm / 9.4 Inch\nMax : 70 cm / 27.5 Inch",
-        },
-      ],
-    },
-  ];
-
-  const tfLinerTables = [
-    {
-      title: `Liner TF - ${t("popup.silicone")}`,
-      rows: [
-        {
-          label: t("popup.labelDistal"),
-          value: "Min : 25 cm / 9.8 Inch\nMax : 55 cm / 21.6 Inch",
-        },
-        {
-          label: t("popup.labelProximal"),
-          value: "Min : 28.5 cm / 11.2 Inch\nMax : 63 cm / 24.8 Inch",
-        },
-      ],
-    },
-    {
-      title: "Liner TF - Gel",
-      rows: [
-        {
-          label: t("popup.labelDistal"),
-          value: "Min : 15 cm / 5.9 Inch\nMax : 53 cm / 20.8 Inch",
-        },
-        {
-          label: t("popup.labelProximal"),
-          value: "Min : 24 cm / 9.4 Inch\nMax : 70 cm / 27.5 Inch",
-        },
-      ],
-    },
-  ];
-
-  const multiTables =
-    type === "underlaytt"
-      ? underlayTTTables
-      : type === "ttLiner"
-      ? ttLinerTables
-      : type === "tfLiner"
-      ? tfLinerTables
-      : null;
-
-  const { title, length, circumference } = tableData[type] || {};
+  const tables = getTableConfigs();
 
   return (
     <PageTransitionWrapper>
       <div className="w-full flex justify-center px-4">
-        <div className="bg-white shadow-xl rounded-xl p-6 w-full max-w-sm text-center font-sans border border-gray-200 max-h-[90vh] overflow-y-auto">
-          <h2 className="text-xl font-semibold mb-4">{t("popup.notice_title")}</h2>
-          <p className="text-gray-600 text-sm mb-6">
+        <div className="bg-white p-6 rounded-2xl shadow-xl relative w-full max-w-[360px] text-center font-sans border border-gray-100 max-h-[90vh] overflow-y-auto">
+          {/* Close Button (X) */}
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 w-6 h-6 cursor-pointer flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors"
+            aria-label="Close"
+          >
+            <img src={XIcon} alt="" className="w-5 h-5 pointer-events-none" />
+          </button>
+
+          {/* Main Title */}
+          <h2 className="text-2xl font-bold mb-3 mt-1 text-slate-900 leading-tight">
+            {t("popup.notice_title")}
+          </h2>
+
+          {/* Subtitle / Description */}
+          <p className="text-slate-700 text-sm mb-6 leading-relaxed">
             {t("popup.notice_description")}
           </p>
 
-          {multiTables ? (
-            <div className="flex flex-col gap-4 mb-4">
-              {multiTables.map((table) => (
-                <table key={table.title} className="w-full border border-gray-300 text-sm">
+          {/* Dynamic Table Section */}
+          <div className="flex flex-col gap-4 mb-2">
+            {tables.map((table, idx) => (
+              <div key={idx} className="w-full">
+                <table className="w-full border border-gray-300 text-sm border-collapse">
                   <thead>
                     <tr>
-                      <th colSpan="2" className="bg-gray-100 border-b border-gray-300 p-2 font-semibold">
+                      <th
+                        colSpan="2"
+                        className="bg-gray-100 border-b border-gray-300 p-2 font-semibold text-gray-800 text-center"
+                      >
                         {table.title}
                       </th>
                     </tr>
@@ -142,51 +315,36 @@ export default function Popup({ type, onClose }) {
                   <tbody>
                     {table.rows.map((row, i) => (
                       <tr key={i}>
-                        <td className="border border-gray-300 p-2 font-medium text-left whitespace-pre-line">
+                        <td className="border border-gray-300 p-2 font-medium text-left w-1/3 align-middle text-gray-800">
                           {row.label}
                         </td>
-                        <td className="border border-gray-300 p-2 text-left whitespace-pre-line">
+                        <td className="border border-gray-300 p-2 text-left whitespace-pre-line align-middle text-gray-700">
                           {row.value}
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
-              ))}
-            </div>
-          ) : (
-            <table className="w-full mb-4 border border-gray-300 text-sm">
-              <thead>
-                <tr>
-                  <th colSpan="2" className="bg-gray-100 border-b border-gray-300 p-2 font-semibold">
-                    {title}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-medium text-left">{t("popup.label_length")}</td>
-                  <td className="border border-gray-300 p-2 text-left whitespace-pre-line">{length}</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-medium text-left">{t("popup.label_circumference")}</td>
-                  <td className="border border-gray-300 p-2 text-left whitespace-pre-line">{circumference}</td>
-                </tr>
-              </tbody>
-            </table>
-          )}
 
-          <p className="text-gray-600 text-sm">
-            {t("popup.contact_line")}
-          </p>
-          <p className="text-sm font-bold underline text-[#090C41] mb-6">Clinics@ethnocare.ca</p>
+                {/* Footnote under the table */}
+                {table.footnote && (
+                  <p className="text-xs text-slate-500 text-left mt-1 leading-tight">
+                    {table.footnote}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
 
-          <button
-            onClick={() => setTimeout(onClose, 100)}
-            className="px-4 py-2 bg-[#090C41] text-white rounded-md hover:bg-[#1a1e6f] transition cursor-pointer"
-          >
-            OK
-          </button>
+          {/* Contact Line */}
+          <div className="mt-6 mb-2">
+            <p className="text-gray-600 text-sm">
+              {t("popup.contact_line")}
+            </p>
+            <p className="text-sm font-bold underline text-[#090C41] mt-0.5">
+              Clinics@ethnocare.ca
+            </p>
+          </div>
         </div>
       </div>
     </PageTransitionWrapper>

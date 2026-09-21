@@ -170,7 +170,6 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
   const handleConfirmClick = () => {
     if (isConfirming || showPopup) return;
 
-    // Set the translation KEY rather than the translated string
     if (!value.trim()) {
       setError("errors:noInput");
       return;
@@ -250,9 +249,8 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           </span>
         </div>
 
-        {/* Dynamic translation key rendering + accessibility attributes */}
         {error && (
-          <p className="text-sm text-red-600 font-sans  text-left" role="alert" aria-live="polite">
+          <p className="text-sm text-red-600 font-sans text-left" role="alert" aria-live="polite">
             {t(error)}
           </p>
         )}
@@ -274,9 +272,10 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       </form>
 
       {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center z-20">
+        <div className="fixed inset-0 flex items-center justify-center z-25">
           <Popup
             type={popupType}
+            measurement={measurement}
             onClose={() => setTimeout(() => setShowPopup(false), 200)}
           />
         </div>
