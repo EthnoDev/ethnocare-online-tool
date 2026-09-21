@@ -77,7 +77,7 @@ export default function LinerRedirectionPopup2({
               {/* Gel Option Button */}
               <button
                 onClick={() => setTimeout(onSelectGel, 200)}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#090C41] text-white rounded-md font-semibold text-md hover:bg-[#1a1e6f] transition cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#090C41] text-white rounded-md font-semibold text-base hover:bg-[#1a1e6f] transition cursor-pointer"
               >
                 <span>{t("tooSmallPopup.gelButton")}</span>
                 <img
@@ -89,7 +89,7 @@ export default function LinerRedirectionPopup2({
               </button>
 
               {/* Return to Home Button (SelectableOption) */}
-              <div className="w-full text-md font-semibold [&_button]:w-full [&_button]:py-3 [&_button]:text-md [&_button]:font-semibold">
+              <div className="w-full text-base font-semibold [&_button]:w-full [&_button]:py-3 [&_button]:text-base [&_button]:font-semibold">
                 <SelectableOption
                   label={t("tooSmallPopup.homeButton")}
                   selected={selectedBtn === "home"}

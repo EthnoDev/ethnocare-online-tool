@@ -113,7 +113,7 @@ export default function OrientationSelection() {
               />
 
               <div className="flex-1">
-                <p className="text-md font-bold text-slate-900 leading-tight">
+                <p className="text-base font-bold text-slate-900 leading-tight">
                   {t("orientationTTSizing.note_title")}
                 </p>
 

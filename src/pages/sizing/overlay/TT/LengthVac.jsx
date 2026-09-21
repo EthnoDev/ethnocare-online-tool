@@ -88,7 +88,7 @@ export default function LengthVac() {
               />
 
               <div className="flex-1">
-                <p className="text-md font-bold text-slate-900 leading-tight">
+                <p className="text-base font-bold text-slate-900 leading-tight">
                   {t("lengthTTVacSizing.note_title")}
                 </p>
 
