@@ -310,7 +310,7 @@ export default function SizeUnderlay() {
             {t("UnderlaySizing.email_title")}
           </h2>
 
-          <p className="text-xs text-gray-700 leading-snug mb-2">
+          <p className="text-sm text-gray-700 leading-snug mb-2">
             {t("UnderlaySizing.email_description")}
           </p>
 

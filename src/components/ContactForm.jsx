@@ -164,7 +164,7 @@ export default function ContactForm({
                 }`}
               />
               {errors.message ? (
-                <p className="text-xs text-red-500">{errors.message}</p>
+                <p className="text-sm text-red-500">{errors.message}</p>
               ) : null}
 
               {/* Email */}
@@ -187,7 +187,7 @@ export default function ContactForm({
                 }`}
               />
               {errors.email ? (
-                <p className="text-xs text-red-500">{errors.email}</p>
+                <p className="text-sm text-red-500">{errors.email}</p>
               ) : null}
             </form>
 
@@ -241,7 +241,7 @@ export default function ContactForm({
 
             {/* Inline error (kept; will disappear on success) */}
             {submitError && (
-              <p className="mt-2 text-xs text-red-600">{submitError}</p>
+              <p className="mt-2 text-sm text-red-600">{submitError}</p>
             )}
           </motion.div>
         )}

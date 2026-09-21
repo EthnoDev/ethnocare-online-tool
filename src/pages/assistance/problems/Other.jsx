@@ -38,8 +38,8 @@ export default function Other() {
 
         <div className="mt-8 text-left space-y-6">
         <div>
-          <p className="text-sm font-semibold">{t("common:contactForm.question")}</p>
-          <p className="text-xs">{t("common:contactForm.order")}</p>
+          <p className="text-base font-semibold">{t("common:contactForm.question")}</p>
+          <p className="text-sm">{t("common:contactForm.order")}</p>
         </div>
 
         <ContactForm

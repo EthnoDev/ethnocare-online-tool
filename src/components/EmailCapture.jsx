@@ -153,7 +153,7 @@ export default function EmailCapture({
                 </span>
               </button>
             </div>
-            {error && <p className="text-xs text-red-600 font-sans">{error}</p>}
+            {error && <p className="text-sm text-red-600 font-sans">{error}</p>}
           </motion.form>
         )}
       </AnimatePresence>
