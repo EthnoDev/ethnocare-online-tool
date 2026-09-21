@@ -108,7 +108,7 @@ export default function SuspensionSelection() {
                     SUSPENSION_IMAGES[materialKey].cushion.en
                   }
                   alt={t("common:suspension.cushion")}
-                  className="h-auto w-full block rounded-xl max-w-[320px] object-cover"
+                  className="h-auto w-full block rounded-xl max-w-xs object-cover"
                 />
               </div>
             </button>
@@ -134,14 +134,14 @@ export default function SuspensionSelection() {
                     SUSPENSION_IMAGES[materialKey].pin.en
                   }
                   alt={t("common:suspension.pin")}
-                  className="h-auto w-full block rounded-xl max-w-[320px] object-cover"
+                  className="h-auto w-full block rounded-xl max-w-xs object-cover"
                 />
               </div>
             </button>
 
             {/* Notice rendered only if Pin is the only option available */}
             {hideCushion && (
-              <p className="mt-3 text-sm text-slate-600 text-center max-w-[320px]">
+              <p className="mt-3 text-sm text-slate-600 text-center max-w-xs">
                 {t("suspensionLinerSizing.notice")}
               </p>
             )}

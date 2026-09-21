@@ -29,13 +29,13 @@ export default function Stirrup() {
             <img
               src={StirrupImg}
               alt="Stirrup illustration"
-              className="h-auto w-full block rounded-xl max-w-[320px] object-cover"
+              className="h-auto w-full block rounded-xl max-w-xs object-cover"
             />
           </div>
 
           {/* Description Text block (Formatted precisely like reference file) */}
           <div className="mt-2 text-center">
-            <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
+            <p className="text-sm max-w-xs leading-snug text-slate-500 italic">
               {t("stirrupAssistance.imageDescription")}
             </p>
           </div>

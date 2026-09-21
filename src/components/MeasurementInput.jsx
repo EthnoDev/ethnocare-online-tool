@@ -227,7 +227,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       : "tt";
 
   return (
-    <div className="relative w-full max-w-[320px] mx-auto mt-10">
+    <div className="relative w-full max-w-xs mx-auto mt-10">
       {showPopup && <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-10" />}
 
       <form onSubmit={handleSubmit} className="relative z-0 space-y-3">

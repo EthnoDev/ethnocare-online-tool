@@ -53,7 +53,7 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
       >
         <PageTransitionWrapper>
           <div
-            className="bg-white p-6 rounded-2xl shadow-xl relative w-full max-w-[360px] text-center font-sans pointer-events-auto border border-gray-100 max-h-[90vh] overflow-y-auto"
+            className="bg-white p-6 rounded-2xl shadow-xl relative w-full max-w-sm text-center font-sans pointer-events-auto border border-gray-100 max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button (X) */}

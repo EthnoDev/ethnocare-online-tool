@@ -43,7 +43,7 @@ export default function LinerPopup({ onClose, onConfirm }) {
       >
         <PageTransitionWrapper>
           <div
-            className="bg-white p-6 rounded-2xl shadow-xl relative w-full max-w-[340px] text-center font-sans pointer-events-auto"
+            className="bg-white p-6 rounded-2xl shadow-xl relative w-full max-w-xs text-center font-sans pointer-events-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Title */}

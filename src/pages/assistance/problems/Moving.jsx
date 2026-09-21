@@ -95,13 +95,13 @@ export default function Moving() {
         </p>
 
         {/* Options Grid (2x2) */}
-        <div className="mt-8 grid grid-cols-2 gap-y-6 gap-x-6 justify-center mx-auto max-w-[340px]">
+        <div className="mt-8 grid grid-cols-2 gap-y-6 gap-x-6 justify-center mx-auto max-w-xs">
           {slideOptions.map((option) => (
             <button
               key={option.id}
               type="button"
               onClick={() => handleSelect(option.id)}
-              className="cursor-pointer focus:outline-none w-full max-w-[160px]"
+              className="cursor-pointer focus:outline-none w-full max-w-xs"
               aria-label={option.label}
               title={option.label}
             >
