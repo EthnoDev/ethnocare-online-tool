@@ -49,13 +49,13 @@ export default function SiliconeSelection() {
           <img
             src={SiliconeImg}
             alt="Silicone Selection Diagram"
-            className="h-auto w-full block max-w-[320px]"
+            className="h-auto w-full block max-w-xs"
           />
         </div>
 
         {/* 4. Description under the image */}
         <div className="mt-2 text-center">
-          <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
+          <p className="text-sm max-w-xs leading-snug text-slate-500 italic">
             {t("siliconeUnderlaySizing.image_caption")}
           </p>
         </div>

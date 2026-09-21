@@ -77,11 +77,11 @@ export default function SealSelection() {
                 <img
                   src={SEAL_IMAGES.open[lang] || SEAL_IMAGES.open.en}
                   alt={t("common:seal.open-title")}
-                  className="h-auto w-full block rounded-xl max-w-[320px] object-cover" 
+                  className="h-auto w-full block rounded-xl max-w-xs object-cover" 
                 />
               </div>
               <div className="mt-2 text-center">
-                <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
+                <p className="text-sm max-w-xs leading-snug text-slate-500 italic">
                   {t("sealUnderlaySizing.open_description")}
                 </p>
               </div>
@@ -104,11 +104,11 @@ export default function SealSelection() {
               <img
                 src={SEAL_IMAGES.closed[lang] || SEAL_IMAGES.closed.en}
                 alt={t("common:seal.closed-title")}
-                className="h-auto w-full block rounded-xl max-w-[320px] object-cover" 
+                className="h-auto w-full block rounded-xl max-w-xs object-cover" 
               />
             </div>
             <div className="mt-2 text-center">
-              <p className="text-sm max-w-[300px] leading-snug text-slate-500 italic">
+              <p className="text-sm max-w-xs leading-snug text-slate-500 italic">
                 {isSleeve
                   ? t("sealUnderlaySizing.closed_exception")
                   : t("sealUnderlaySizing.closed_description")}
