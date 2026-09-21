@@ -62,7 +62,9 @@ export default function Popup({ type, measurement, onClose }) {
                 : "Min : 24 cm\nMax : 42 cm",
             },
           ],
-          footnote: t("popup.ttCLockCushNote"),
+          footnote: t("popup.ttCLockCushNote", {
+            distance: isImperial ? "1.5 in" : "4 cm",
+          }),
         },
         {
           title: t("popup.ttDistal"),
@@ -117,8 +119,10 @@ export default function Popup({ type, measurement, onClose }) {
             },
           ],
           footnote: isPin
-              ? t("popup.tfCPinNote")
-              : t("popup.tfCVacNote"),
+            ? t("popup.tfCPinNote", {
+                distance: isImperial ? "3.1 in" : "8 cm",
+              })
+            : t("popup.tfCVacNote"),
         },
       ];
     }
@@ -168,7 +172,9 @@ export default function Popup({ type, measurement, onClose }) {
                 : "Min : 23 cm\nMax : 42 cm",
             },
           ],
-          footnote: t("popup.uttCOpenNote"),
+          footnote: t("popup.uttCOpenNote", {
+            distance: isImperial ? "3.9 in" : "10 cm",
+          }),
         },
         {
           title: t("popup.uttClosed"),
@@ -180,7 +186,9 @@ export default function Popup({ type, measurement, onClose }) {
                 : "Min : 23 cm\nMax : 42 cm",
             },
           ],
-          footnote: t("popup.uttCClosedNote"),
+          footnote: t("popup.uttCClosedNote", {
+            distance: isImperial ? "1.5 in" : "4 cm",
+          }),
         },
       ];
     }
