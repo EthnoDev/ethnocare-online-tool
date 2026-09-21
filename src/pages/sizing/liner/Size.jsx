@@ -214,7 +214,7 @@ export default function SizeLiner() {
         {/* 2. Primary Size Code Display & Length */}
         <div className="flex flex-col items-center mb-6">
           <p className="text-4xl font-bold font-sans">{sizeCode}</p>
-          <p className="text-lg font-medium text-slate-800 font-sans">
+          <p className="text-xl font-medium text-slate-800 font-sans">
             {t("LinerSizing.length")} {lengthRaw} {unit}
           </p>
         </div>
