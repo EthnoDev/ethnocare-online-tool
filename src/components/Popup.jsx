@@ -349,7 +349,7 @@ export default function Popup({ type, measurement, onClose }) {
             <p className="text-gray-600 text-sm">
               {t("popup.contact_line")}
             </p>
-            <p className="text-sm font-bold underline text-[#090C41] mt-0.5">
+            <p className="text-sm font-bold underline text-black mt-0.5">
               Clinics@ethnocare.ca
             </p>
           </div>

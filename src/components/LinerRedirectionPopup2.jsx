@@ -102,7 +102,7 @@ export default function LinerRedirectionPopup2({
             <p className="text-gray-600 text-sm mt-6">
               {t("tooSmallPopup.contact_line")}
             </p>
-            <p className="text-sm font-bold underline text-[#090C41]">
+            <p className="text-sm font-bold underline text-black">
               Clinics@ethnocare.ca
             </p>
           </div>

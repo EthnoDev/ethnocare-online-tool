@@ -308,7 +308,7 @@ export default function SizeTF() {
                       i18nKey="TFSizing.note_cushion_body"
                       components={{
                         bold: (
-                          <strong className="font-bold underline text-[#090C41]" />
+                          <strong className="font-bold underline text-black" />
                         ),
                       }}
                     />

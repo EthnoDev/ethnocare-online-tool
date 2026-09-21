@@ -84,7 +84,7 @@ export default function Length() {
                     ns="pages"
                     i18nKey="lengthTTSizing.note_body"
                     components={{ 
-                      bold: <strong className="font-bold text-[#090C41]" />,
+                      bold: <strong className="font-bold text-black" />,
                       underline: <span className="underline" />,
                       br: <br />
                     }}

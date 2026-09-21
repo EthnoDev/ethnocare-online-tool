@@ -122,7 +122,7 @@ export default function OrientationSelection() {
                     ns="pages"
                     i18nKey="orientationTTSizing.note_body"
                     components={{ 
-                        bold: <strong className="font-bold text-[#090C41]" />,
+                        bold: <strong className="font-bold text-black" />,
                         underline: <span className="underline" />
                     }}
                   />

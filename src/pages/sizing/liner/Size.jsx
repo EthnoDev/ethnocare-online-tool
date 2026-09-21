@@ -353,7 +353,7 @@ export default function SizeLiner() {
             onClick={handleRestart}
             className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer
               ${isRestarting
-                ? "bg-[#090C41] text-white text-[#090C41]"
+                ? "bg-[#090C41] text-white border-[#090C41]"
                 : "bg-white text-black border-gray-300 hover:border-black"
               }`}
           >
