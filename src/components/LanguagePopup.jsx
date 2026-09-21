@@ -52,7 +52,7 @@ export default function LanguagePopup({ onClose }) {
       >
         {/* Animate only the card */}
         <PageTransitionWrapper>
-          <div className="bg-white p-6 rounded-xl shadow-lg relative w-[300px] text-center font-sans">
+          <div className="bg-white p-6 rounded-xl shadow-lg relative max-w-sm text-center font-sans">
             {/* Close (X) */}
             <button
               onClick={onClose}
