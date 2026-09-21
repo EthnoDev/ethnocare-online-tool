@@ -42,11 +42,8 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
 
   return (
     <>
-      {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/40 backdrop-blur-sm z-10 cursor-default"
-        onClick={onClose}
-      />
+      {/* Backdrop - onClick={onClose} removed */}
+      <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-10 cursor-default" />
 
       {/* Centered Modal Container */}
       <div
