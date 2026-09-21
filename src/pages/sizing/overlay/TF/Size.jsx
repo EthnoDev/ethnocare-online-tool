@@ -228,7 +228,7 @@ export default function SizeTF() {
           )}
         </div>
 
-        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-8">
+        <div className="w-full max-w-sm mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-8">
           <img
             src={TFProductImg}
             alt={t("common:products.tf")}
@@ -288,7 +288,7 @@ export default function SizeTF() {
 
         {/* Cushion Specific Note */}
         {isCushion && (
-          <div className="w-full max-w-md mx-auto mt-2 mb-10">
+          <div className="w-full max-w-sm mx-auto mt-2 mb-10">
             <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
               <div className="flex items-start gap-3 text-left">
                 <img
@@ -320,7 +320,7 @@ export default function SizeTF() {
           </div>
         )}
 
-        <div className="mt-10 text-left font-sans max-w-md mx-auto">
+        <div className="mt-10 text-left font-sans max-w-sm mx-auto">
           <h2 className="text-2xl font-semibold text-slate-900">
             {t("TFSizing.email_title")}
           </h2>

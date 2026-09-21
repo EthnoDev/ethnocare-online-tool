@@ -28,7 +28,7 @@ export default function Identification() {
       currentStep={1}
       totalSteps={3}
     >
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("identificationReturn.title")}
         </h1>

@@ -22,7 +22,7 @@ export default function Welcome() {
 
   return (
     <PageWrapper showBack={true} backTo="/" code={true}>
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-sm">
         <h1 className="text-4xl font-bold text-center text-slate-900 leading-tight">
           {t("welcomeRecommendation.title")}
         </h1>

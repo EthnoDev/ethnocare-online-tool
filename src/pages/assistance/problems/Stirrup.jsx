@@ -15,7 +15,7 @@ export default function Stirrup() {
       showBack={true} 
       backTo="/assistance/problem/moving"
     >
-      <div className="w-full max-w-md flex flex-col items-center">
+      <div className="w-full max-w-sm flex flex-col items-center">
         {/* Title */}
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("stirrupAssistance.title")}

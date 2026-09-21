@@ -31,7 +31,7 @@ export default function Length() {
       totalSteps={5} 
       code={true}
     >
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("lengthTTSizing.title")}
         </h1>
@@ -65,7 +65,7 @@ export default function Length() {
         </div>
 
         {/* Note Section - Specific to Length Measurement */}
-        <div className="w-full max-w-md mx-auto mt-10">
+        <div className="w-full max-w-sm mx-auto mt-10">
           <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
             <div className="flex items-start gap-3 text-left">
               <img

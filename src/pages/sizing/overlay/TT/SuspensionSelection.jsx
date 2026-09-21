@@ -116,7 +116,7 @@ export default function SuspensionSelection() {
       totalSteps={isUnderlay ? null : 5} 
       code={true}
     >
-      <div className="w-100 max-w-md">
+      <div className="w-100 max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("suspensionSizing.title", { ns: "pages" })}
         </h1>

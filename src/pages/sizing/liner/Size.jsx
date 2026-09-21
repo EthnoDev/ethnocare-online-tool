@@ -220,7 +220,7 @@ export default function SizeLiner() {
         </div>
 
         {/* 3. Product Summary Card */}
-        <div className="w-full max-w-md mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-8 mb-6">
+        <div className="w-full max-w-sm mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-8 mb-6">
           
           {/* Left Column: Fixed width image container */}
           <div className="shrink-0 flex items-center justify-center">
@@ -296,7 +296,7 @@ export default function SizeLiner() {
 
         {/* 3b. Conditional Title & Alternate Options Section */}
         {alternateSizeCodes.length > 0 && (
-          <div className="w-full max-w-md mx-auto text-left mb-6 font-sans">
+          <div className="w-full max-w-sm mx-auto text-left mb-6 font-sans">
             <p className="text-base font-bold text-slate-900 mb-2">
               {t("LinerSizing.otherTitle")}
             </p>
@@ -362,7 +362,7 @@ export default function SizeLiner() {
         </div>
 
         {/* 5. Email Capture Section */}
-        <div className="mt-10 text-left font-sans max-w-md mx-auto">
+        <div className="mt-10 text-left font-sans max-w-sm mx-auto">
           <h2 className="text-2xl font-semibold text-slate-900">
             {t("LinerSizing.email_title")}
           </h2>

@@ -167,7 +167,7 @@ export default function SizeTT() {
           )}
         </div>
 
-        <div className="w-full max-w-md mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
+        <div className="w-full max-w-sm mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
           <img
             src={TTProductImg}
             alt={t("common:products.tt")}
@@ -229,7 +229,7 @@ export default function SizeTT() {
           </div>
         </div>
 
-        <div className="mt-10 text-left font-sans max-w-md mx-auto">
+        <div className="mt-10 text-left font-sans max-w-sm mx-auto">
           <h2 className="text-2xl font-semibold text-slate-900">
             {t("TTSizing.email_title")}
           </h2>

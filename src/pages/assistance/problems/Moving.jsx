@@ -83,7 +83,7 @@ export default function Moving() {
       showBack={true} 
       backTo="/assistance/problem/bad-fit"
     >
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-sm">
         {/* Title */}
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("movingAssistance.title")}

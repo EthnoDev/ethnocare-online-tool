@@ -99,7 +99,7 @@ export default function Length() {
       currentStep={4}
       code={true}
     >
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-sm">
         {/* 1. Title */}
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("lengthLinerSizing.title")}
