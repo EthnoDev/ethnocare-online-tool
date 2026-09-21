@@ -179,7 +179,7 @@ export default function Popup({ type, onClose }) {
           <p className="text-gray-600 text-sm">
             {t("popup.contact_line")}
           </p>
-          <p className="text-sm font-bold underline text-[#090C41] mb-6">clinics@ethnocare.ca</p>
+          <p className="text-sm font-bold underline text-[#090C41] mb-6">Clinics@ethnocare.ca</p>
 
           <button
             onClick={() => setTimeout(onClose, 100)}

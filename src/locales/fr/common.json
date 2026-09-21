@@ -108,8 +108,8 @@
     "success": "Merci! Votre soumission a été reçue!"
   },
   "popup": {
-    "notice_title": "Avis",
-    "notice_description": "Il semble que nous n’ayons pas votre taille pour le moment. Veuillez vérifier que vos mesures se situent dans nos plages disponibles :",
+    "notice_title": "Taille Indisponible",
+    "notice_description": "Il semble que nous n'ayons actuellement pas de taille correspondant à vos mesures. Veuillez vérifier que vos mesures se situent dans les plages suivantes:",
     "label_length": "Longueur",
     "label_circumference": "Circonférence",
     "contact_line": "Si vos mesures se trouvent en dehors de notre gamme de tailles, veuillez nous contacter à :",

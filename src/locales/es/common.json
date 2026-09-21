@@ -108,8 +108,8 @@
     "success": "¡Gracias! ¡Hemos recibido tu envío!"
   },
   "popup": {
-    "notice_title": "Aviso",
-    "notice_description": "Parece que no tenemos disponible su talla en este momento. Por favor, verifique que sus medidas se encuentren dentro de nuestros rangos:",
+    "notice_title": "Talla No Disponible",
+    "notice_description": "Parece que actualmente no tenemos una talla que coincida con tus medidas. Por favor, verifica que tus medidas se encuentren dentro de los siguientes rangos:",
     "label_length": "Longitud",
     "label_circumference": "Circunferencia",
     "contact_line": "Si sus medidas están fuera de nuestro rango de tallas, contáctenos en:",

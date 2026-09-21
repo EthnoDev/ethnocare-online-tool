@@ -108,8 +108,8 @@
         "success": "Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt."   
     },
     "popup": {
-        "notice_title": "Hinweis",
-        "notice_description": "Es scheint, dass Ihre Größe derzeit nicht verfügbar ist. Bitte überprüfen Sie, ob Ihre Maße innerhalb unserer Größenbereiche liegen:",
+        "notice_title": "Größe nicht verfügbar",
+        "notice_description": "Es scheint, dass wir derzeit keine Größe haben, die Ihren Maßen entspricht. Bitte überprüfen Sie, ob Ihre Maße innerhalb der folgenden Bereiche liegen:",
         "label_length": "Länge",
         "label_circumference": "Umfang",
         "contact_line": "Wenn Ihre Maße außerhalb unseres Größenbereichs liegen, kontaktieren Sie uns bitte unter:",
