@@ -143,7 +143,7 @@ export default function PageWrapper({
         )}
 
         {/* Logo + Actions Row */}
-        <div className="w-full mt-4 flex items-center justify-between">
+        <div className="w-full mt-3 flex items-center justify-between">
           <img
             src={EthnocareLogo}
             alt="Ethnocare"

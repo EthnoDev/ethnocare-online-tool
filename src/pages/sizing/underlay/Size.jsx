@@ -292,7 +292,7 @@ export default function SizeUnderlay() {
                 </p>
 
                 {/* Dynamic Diagram Image */}
-                <div className="mt-4 flex justify-center">
+                <div className="mt-3 flex justify-center">
                   <img
                     src={noteImage}
                     alt={t(noteAltKey)}

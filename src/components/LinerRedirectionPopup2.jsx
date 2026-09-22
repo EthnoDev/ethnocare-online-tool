@@ -63,7 +63,7 @@ export default function LinerRedirectionPopup2({
             </h2>
 
             {/* Description 1 */}
-            <p className="text-gray-600 text-sm mt-4 mb-3 leading-snug">
+            <p className="text-gray-600 text-sm mt-3 mb-3 leading-snug">
               {t("tooSmallPopup.description")}
             </p>
 
