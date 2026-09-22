@@ -296,7 +296,7 @@ export default function SizeUnderlay() {
                   <img
                     src={noteImage}
                     alt={t(noteAltKey)}
-                    className="w-full max-w-[140px] h-auto object-contain rounded-lg"
+                    className="w-full max-w-[140px] h-auto object-contain rounded-xl"
                   />
                 </div>
               </div>
