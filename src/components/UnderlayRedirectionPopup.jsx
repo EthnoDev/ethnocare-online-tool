@@ -98,7 +98,7 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             </div>
 
             {/* Gray Pill Section for Current Size */}
-            <div className="w-full mt-6 bg-gray-200/80 rounded-xl py-3 px-4 text-slate-900 text-sm font-medium">
+            <div className="w-full mt-3 bg-gray-200/80 rounded-xl py-3 px-4 text-slate-900 text-sm font-medium">
               {t("redirectionPopup.measured_size_label", "Measured Underlay open :")}{" "}
               <strong className="font-bold text-black">
                 {selectedSize ? `Size ${selectedSize}` : "—"}
@@ -106,7 +106,7 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             </div>
 
             {/* Table Section */}
-            <div className="w-full mt-4">
+            <div className="w-full mt-3">
               <table className="w-full border border-gray-300 text-sm border-collapse">
                 <thead>
                   <tr>
