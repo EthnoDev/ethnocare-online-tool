@@ -249,7 +249,7 @@ export default function SizeLiner() {
             </div>
 
             {/* Product Documentation Section */}
-            <div className="p-4 border border-gray-200 rounded-2xl bg-gray-200/80">
+            <div className="p-4 border border-gray-200 rounded-xl bg-gray-200/80">
               <h2 className="text-base font-bold text-slate-900">
                 {t("LinerSizing.prodDocTitle")}
               </h2>
@@ -304,7 +304,7 @@ export default function SizeLiner() {
               {alternateSizeCodes.map((alt, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3.5 p-3.5 bg-gray-200/80 rounded-2xl"
+                  className="flex items-center gap-3.5 p-3.5 bg-gray-200/80 rounded-xl"
                 >
                   {alt.type === "moreStretched" ? (
                     <svg

@@ -285,7 +285,7 @@ export default function Popup({ type, measurement, onClose }) {
   return (
     <PageTransitionWrapper>
       <div className="w-full flex justify-center px-4">
-        <div className="bg-white p-6 rounded-2xl shadow-xl relative w-full max-w-sm text-center font-sans border border-gray-100 max-h-[90vh] overflow-y-auto">
+        <div className="bg-white p-6 rounded-xl shadow-xl relative w-full max-w-sm text-center font-sans border border-gray-100 max-h-[90vh] overflow-y-auto">
           {/* Close Button (X) */}
           <button
             onClick={onClose}

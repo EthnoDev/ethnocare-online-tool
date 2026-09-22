@@ -289,7 +289,7 @@ export default function SizeTF() {
         {/* Cushion Specific Note */}
         {isCushion && (
           <div className="w-full max-w-sm mx-auto mt-2">
-            <div className="border border-gray-200 rounded-2xl p-4 bg-gray-200/80">
+            <div className="border border-gray-200 rounded-xl p-4 bg-gray-200/80">
               <div className="flex items-start gap-3 text-left">
                 <img
                   src={ExclamationIcon}

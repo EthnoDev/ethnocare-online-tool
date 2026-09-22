@@ -5,7 +5,7 @@ export default function ActivityLevelOption({
   onClick,
 }) {
   const base =
-    "w-full max-w-xs p-5 cursor-pointer rounded-2xl text-center font-sans transition-all duration-200 border flex flex-col items-center justify-center gap-2";
+    "w-full max-w-xs p-5 cursor-pointer rounded-xl text-center font-sans transition-all duration-200 border flex flex-col items-center justify-center gap-2";
 
   const outline =
     "bg-white text-slate-900 border-gray-300 hover:border-black";
