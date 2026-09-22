@@ -51,7 +51,7 @@ export default function Length() {
           <img
             src={NewLengthImg}
             alt={t("common:pages.length_udtt")}
-            className="w-74 h-auto object-contain rounded-xl"
+            className="w-70 h-auto object-contain rounded-xl"
           />
         </div>
 

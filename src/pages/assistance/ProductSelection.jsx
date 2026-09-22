@@ -51,7 +51,7 @@ export default function ProductSelection() {
             <img
               src={OverlayImg}
               alt="Overlay"
-              className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+              className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
             />
           </button>
 
@@ -65,7 +65,7 @@ export default function ProductSelection() {
               <img
                 src={UnderlayImg}
                 alt="Underlay"
-                className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+                className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
               />
             </button>
           )}
@@ -79,7 +79,7 @@ export default function ProductSelection() {
             <img
               src={LinerImg}
               alt="Liner"
-              className="w-60 h-auto object-contain transition-opacity hover:opacity-70"
+              className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
             />
           </button>
         </div>

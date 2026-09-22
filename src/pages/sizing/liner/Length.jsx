@@ -115,7 +115,7 @@ export default function Length() {
           <img
             src={selectedImage}
             alt={t("common:pages.length_liner")}
-            className="w-74 h-auto object-contain rounded-xl"
+            className="w-70 h-auto object-contain rounded-xl"
           />
         </div>
 

@@ -67,7 +67,7 @@ export default function Circumference() {
           <img
             src={selectedImage}
             alt={t("common:pages.circumference_linertf")}
-            className="w-74 h-auto object-contain rounded-xl"
+            className="w-70 h-auto object-contain rounded-xl"
           />
         </div>
 

@@ -66,7 +66,7 @@ export default function CircumferenceVac() {
           <img
             src={selectedImage}
             alt={t("common:pages.circumference_tf_vac")}
-            className="w-74 h-auto object-contain rounded-xl"
+            className="w-70 h-auto object-contain rounded-xl"
           />
         </div>
 

@@ -230,14 +230,14 @@ export default function ThicknessSelection() {
           <img
             src={selectedImage}
             alt={t("common:pages.thickness_liner")}
-            className="w-74 h-auto object-contain rounded-xl transition-all duration-200"
+            className="w-70 h-auto object-contain rounded-xl transition-all duration-200"
           />
         </div>
 
         {/* 4. Options Container */}
         <div
           ref={optionsRef}
-          className="mt-8 flex flex-col items-center w-74 mx-auto"
+          className="mt-8 flex flex-col items-center w-70 mx-auto"
           aria-invalid={!!error}
         >
           <div className="flex items-center justify-center gap-3 w-full">
@@ -277,7 +277,7 @@ export default function ThicknessSelection() {
         </p>
 
         {/* 6. Confirm Button */}
-        <div className="mt-10 w-74 mx-auto [&>div]:items-stretch [&_button]:w-full">
+        <div className="mt-10 w-70 mx-auto [&>div]:items-stretch [&_button]:w-full">
           <SelectableOption
             label={t("common:cta.confirm")}
             selected={confirmSelected}

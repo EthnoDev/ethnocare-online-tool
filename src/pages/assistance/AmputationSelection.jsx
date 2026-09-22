@@ -56,7 +56,7 @@ export default function AssistanceAmputationSelection() {
               <img
                 src={TT}
                 alt={t("common:amputation.tt")}
-                className="w-60 h-auto object-contain rounded-xl block"
+                className="w-70 h-auto object-contain rounded-xl block"
               />
             </div>
           </button>
@@ -78,7 +78,7 @@ export default function AssistanceAmputationSelection() {
               <img
                 src={tfImage}
                 alt={t("common:amputation.tf")}
-                className="w-60 h-auto object-contain rounded-xl block"
+                className="w-70 h-auto object-contain rounded-xl block"
               />
             </div>
           </button>

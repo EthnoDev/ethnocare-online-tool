@@ -53,7 +53,7 @@ export default function Circumference2() {
           <img
             src={Circumference2Img}
             alt={t("pages.circumference2_udtt", { ns: "common" })}
-            className="w-74 h-auto object-contain rounded-xl"
+            className="w-70 h-auto object-contain rounded-xl"
           />
         </div>
 
