@@ -214,7 +214,7 @@ export default function SizeLiner() {
         {/* 2. Primary Size Code Display & Length */}
         <div className="flex flex-col items-center mt-3">
           <p className="text-4xl font-bold font-sans">{sizeCode}</p>
-          <p className="text-xl font-medium text-slate-800 font-sans">
+          <p className="text-xl font-medium text-slate-900 font-sans">
             {t("LinerSizing.length")} {lengthRaw} {unit}
           </p>
         </div>
@@ -253,7 +253,7 @@ export default function SizeLiner() {
               <h2 className="text-base font-bold text-slate-900">
                 {t("LinerSizing.prodDocTitle")}
               </h2>
-              <p className="text-sm text-slate-700 leading-snug mt-1">
+              <p className="text-sm text-slate-600 leading-snug mt-1">
                 {t("LinerSizing.prodDocDescription")}
               </p>
 
