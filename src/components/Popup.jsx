@@ -301,7 +301,7 @@ export default function Popup({ type, measurement, onClose }) {
           </h2>
 
           {/* Subtitle / Description */}
-          <p className="text-slate-700 mt-3 text-sm leading-relaxed">
+          <p className="mt-3 text-sm text-slate-500 leading-relaxed">
             {t("popup.notice_description")}
           </p>
 
