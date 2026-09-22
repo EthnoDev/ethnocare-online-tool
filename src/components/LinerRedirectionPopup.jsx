@@ -47,17 +47,17 @@ export default function LinerPopup({ onClose, onConfirm }) {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Title */}
-            <h2 className="text-2xl font-bold text-slate-900 mb-3">
+            <h2 className="text-2xl font-bold text-slate-900">
               {t("linerPopup.title")}
             </h2>
 
             {/* Description */}
-            <p className="text-slate-600 text-sm leading-snug mb-6">
+            <p className="text-slate-600 text-sm leading-snug mt-1">
               {t("linerPopup.description")}
             </p>
 
             {/* Action Buttons using SelectableOption */}
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center mt-4">
               <div className="flex-1">
                 <SelectableOption
                   compact

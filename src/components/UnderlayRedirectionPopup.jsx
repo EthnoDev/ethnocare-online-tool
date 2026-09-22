@@ -71,7 +71,7 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             </h2>
 
             {/* Description / Instructions */}
-            <div className="mt-3 text-sm text-slate-500 space-y-2 leading-relaxed mb-6">
+            <div className="mt-3 text-sm text-slate-500 space-y-2 leading-relaxed">
               <p>
                 <Trans
                   ns="common"
@@ -98,7 +98,7 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             </div>
 
             {/* Gray Pill Section for Current Size */}
-            <div className="w-full bg-gray-200/80 rounded-xl py-3 px-4 mb-4 text-slate-800 text-sm font-medium">
+            <div className="w-full mt-6 bg-gray-200/80 rounded-xl py-3 px-4 text-slate-800 text-sm font-medium">
               {t("redirectionPopup.measured_size_label", "Measured Underlay open :")}{" "}
               <strong className="font-bold text-black">
                 {selectedSize ? `Size ${selectedSize}` : "—"}
@@ -106,7 +106,7 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             </div>
 
             {/* Table Section */}
-            <div className="w-full mb-1">
+            <div className="w-full mt-4">
               <table className="w-full border border-gray-300 text-sm border-collapse">
                 <thead>
                   <tr>
@@ -134,14 +134,14 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             </div>
 
             {/* Sub-table asterisk note */}
-            <p className="text-xs text-slate-500 text-left mb-10 leading-tight">
+            <p className="text-xs text-slate-500 text-left mt-1 leading-tight">
               {t("redirectionPopup.table_footnote")}
             </p>
 
             {/* Redirect CTA Button */}
             <button
               onClick={() => setTimeout(onRedirect, 200)}
-              className="w-full flex items-center justify-center gap-2.5 px-4 py-3 bg-black text-white rounded-xl font-sans font-bold hover:bg-[#090C41] transition-all cursor-pointer text-base"
+              className="w-full mt-10 flex items-center justify-center gap-2.5 px-4 py-3 bg-black text-white rounded-xl font-sans font-bold hover:bg-[#090C41] transition-all cursor-pointer text-base"
             >
               <img
                 src={RedirectLogo}

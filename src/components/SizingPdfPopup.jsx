@@ -69,17 +69,17 @@ export default function SizingPdfPopup({
             </button>
 
             {/* Title */}
-            <p className="text-2xl font-semibold mb-6">{t("cta.sizingsPopup")}</p>
+            <p className="text-2xl font-semibold">{t("cta.sizingsPopup")}</p>
 
             {/* Overlay */}
-            <p className="text-xl font-semibold">Overlay</p>
-            <div className="space-y-1 flex flex-col items-center mb-6">
+            <p className="text-xl mt-3 font-semibold">Overlay</p>
+            <div className="space-y-1 flex flex-col items-center">
               <LinkRow label="Overlay TT" url={ttPdfPath} />
               <LinkRow label="Overlay TF" url={tfPdfPath} />
             </div>
 
             {/* Underlay */}
-            <p className="text-xl font-semibold">Underlay</p>
+            <p className="text-xl mt-3 font-semibold">Underlay</p>
             <div className="space-y-1 flex flex-col items-center">
               <LinkRow label="Underlay TT" url={underlayTtPdfPath} />
             </div>

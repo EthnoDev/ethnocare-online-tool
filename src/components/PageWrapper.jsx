@@ -93,7 +93,7 @@ export default function PageWrapper({
       )}
 
       {/* Top: Back + Progress */}
-      <div className="w-full flex flex-col mt-2 gap-3 mb-4 sm:grid sm:grid-cols-3 sm:items-center sm:gap-0">
+      <div className="w-full flex flex-col mt-2 gap-3 sm:grid sm:grid-cols-3 sm:items-center sm:gap-0">
         <div className="flex justify-start">
           {showBack && (
             <button
@@ -117,7 +117,7 @@ export default function PageWrapper({
       </div>
 
       {/* Main content */}
-      <div className="flex-grow w-full flex flex-col items-center">
+      <div className="flex-grow w-full flex flex-col mt-4 items-center">
         {children}
       </div>
 

@@ -220,7 +220,7 @@ export default function SizeLiner() {
         </div>
 
         {/* 3. Product Summary Card */}
-        <div className="w-full max-w-sm mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-6 mb-8">
+        <div className="w-full max-w-sm mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-6">
           
           {/* Left Column: Fixed width image container */}
           <div className="shrink-0 flex items-center justify-center">
@@ -296,11 +296,11 @@ export default function SizeLiner() {
 
         {/* 3b. Conditional Title & Alternate Options Section */}
         {alternateSizeCodes.length > 0 && (
-          <div className="w-full max-w-sm mx-auto text-left mb-6 font-sans">
-            <p className="text-base font-bold text-slate-900 mb-2">
+          <div className="w-full max-w-sm mx-auto text-left font-sans">
+            <p className="text-base font-bold text-slate-900">
               {t("LinerSizing.otherTitle")}
             </p>
-            <div className="flex flex-col gap-2.5">
+            <div className="mt-2 flex flex-col gap-2.5">
               {alternateSizeCodes.map((alt, index) => (
                 <div
                   key={index}
@@ -348,7 +348,7 @@ export default function SizeLiner() {
         )}
 
         {/* 4. Restart Button */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mt-6">
           <button
             onClick={handleRestart}
             className={`px-6 py-3 text-base rounded-md border font-sans font-bold transition-all cursor-pointer

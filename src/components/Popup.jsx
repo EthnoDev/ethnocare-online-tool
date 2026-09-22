@@ -309,7 +309,7 @@ export default function Popup({ type, measurement, onClose }) {
           <div className="flex flex-col gap-4">
             {tables.map((table, idx) => (
               <div key={idx} className="w-full">
-                <table className="w-full border border-gray-300 text-sm border-collapse mb-1">
+                <table className="w-full border border-gray-300 text-sm border-collapse">
                   <thead>
                     <tr>
                       <th
@@ -336,7 +336,7 @@ export default function Popup({ type, measurement, onClose }) {
 
                 {/* Footnote under the table */}
                 {table.footnote && (
-                  <p className="text-xs text-slate-500 text-left leading-tight">
+                  <p className="text-xs text-slate-500 text-left mt-1 leading-tight">
                     {table.footnote}
                   </p>
                 )}

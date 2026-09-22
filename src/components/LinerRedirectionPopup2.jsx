@@ -58,22 +58,22 @@ export default function LinerRedirectionPopup2({
             </button>
 
             {/* Title */}
-            <h2 className="text-2xl font-semibold mb-4 mt-2 text-slate-900">
+            <h2 className="text-2xl font-semibold mt-2 text-slate-900">
               {t("tooSmallPopup.title")}
             </h2>
 
             {/* Description 1 */}
-            <p className="text-gray-600 text-sm mt-3 mb-3 leading-snug">
+            <p className="text-gray-600 text-sm mt-3 leading-snug">
               {t("tooSmallPopup.description")}
             </p>
 
             {/* Description 2 (Bold Gel Distance) */}
-            <p className="text-slate-900 font-bold text-sm mb-6 leading-snug">
+            <p className="mt-3 text-slate-900 font-bold text-sm leading-snug">
               {t("tooSmallPopup.description2", { distance: gelDistance })}
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-col gap-2.5 w-full">
+            <div className="flex flex-col gap-2.5 w-full mt-6">
               {/* Gel Option Button */}
               <button
                 onClick={() => setTimeout(onSelectGel, 200)}

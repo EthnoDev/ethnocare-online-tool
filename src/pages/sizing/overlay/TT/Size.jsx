@@ -167,7 +167,7 @@ export default function SizeTT() {
           )}
         </div>
 
-        <div className="w-full max-w-sm mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-8">
+        <div className="w-full max-w-sm mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6">
           <img
             src={TTProductImg}
             alt={t("common:products.tt")}
