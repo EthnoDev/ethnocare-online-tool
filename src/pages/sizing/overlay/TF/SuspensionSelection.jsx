@@ -86,7 +86,7 @@ export default function SuspensionSelection() {
       totalSteps={4} 
       code={true}
     >
-      <div className="w-100 max-w-sm">
+      <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("suspensionSizing.title", { ns: "pages" })}
         </h1>

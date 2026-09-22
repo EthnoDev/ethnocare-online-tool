@@ -35,7 +35,7 @@ export default function Length() {
       currentStep={seal === "closed-seal" ? 3 : 4} 
       code={true}
     >
-      <div className="w-100 max-w-sm flex flex-col items-center">
+      <div className="w-full max-w-sm flex flex-col items-center">
         {/* 1. Title */}
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("lengthUnderlaySizing.title")}
