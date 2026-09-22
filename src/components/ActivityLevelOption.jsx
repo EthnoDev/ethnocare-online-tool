@@ -27,7 +27,7 @@ export default function ActivityLevelOption({
       {/* Description Inside Card */}
       {description && (
         <span
-          className={`text-sm leading-snug font-normal ${
+          className={`text-sm italic leading-snug font-normal ${
             selected ? "text-gray-200" : "text-slate-600"
           }`}
         >
