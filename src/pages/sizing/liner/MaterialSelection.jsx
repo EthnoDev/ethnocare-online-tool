@@ -100,7 +100,7 @@ export default function MaterialSelection() {
   return (
     <PageWrapper
       showBack={true}
-      backTo="/sizing/liner/activity-level"
+      backTo="/sizing/liner/activity"
       currentStep={2}
       code={true}
     >

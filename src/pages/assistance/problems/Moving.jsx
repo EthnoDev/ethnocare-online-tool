@@ -81,7 +81,7 @@ export default function Moving() {
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/assistance/problem/bad-fit"
+      backTo="/assistance/problem/fit"
     >
       <div className="w-full max-w-sm">
         {/* Title */}

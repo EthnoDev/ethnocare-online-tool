@@ -64,7 +64,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<MainWelcome />} />
         <Route path="/return" element={<ReturnWelcome />} />
         <Route path="/return/identification" element={<ReturnIdentification />} />
-        <Route path="/return/assistance-tool" element={<ReturnAssistanceTool />} />
+        <Route path="/return/assistance" element={<ReturnAssistanceTool />} />
         <Route path="/recommendation" element={<RecommendationWelcome />} />
         <Route path="/sizing" element={<SizingWelcome />} />
         <Route path="/sizing/units" element={<SizingUnitsSelection />} />
@@ -89,8 +89,8 @@ function AnimatedRoutes() {
         <Route path="/assistance/selection" element={<AssistanceSelection />} />
         <Route path="/assistance/size" element={<AssistanceSizeSelection />} />
         <Route path="/assistance/problem" element={<AssistanceProblemSelection />} />
-        <Route path="/assistance/problem/pressure-points" element={<AssistancePressurePoints />} />
-        <Route path="/assistance/problem/bad-fit" element={<AssistanceBadFit />} />
+        <Route path="/assistance/problem/pressure" element={<AssistancePressurePoints />} />
+        <Route path="/assistance/problem/fit" element={<AssistanceBadFit />} />
         <Route path="/assistance/problem/moving" element={<AssistanceMoving />} />
         <Route path="/assistance/problem/stirrup" element={<AssistanceStirrup />} />
         <Route path="/assistance/problem/other" element={<AssistanceOther />} />
@@ -100,7 +100,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/underlay/circumference-2" element={<SizingUnderlayCircumference2 />} />
         <Route path="/sizing/underlay/silicone" element={<SizingUnderlaySiliconeSelection />} />
         <Route path="/sizing/underlay/size" element={<SizeUnderlay />} />
-        <Route path="/sizing/liner/activity-level" element={<SizingLinerActivityLevelSelection />} />
+        <Route path="/sizing/liner/activity" element={<SizingLinerActivityLevelSelection />} />
         <Route path="/sizing/liner/material" element={<SizingLinerMaterialSelection />} />
         <Route path="/sizing/liner/tt/circumference" element={<SizingLinerTTCircumference />} />
         <Route path="/sizing/liner/tf/circumference" element={<SizingLinerTFCircumference />} />

@@ -16,7 +16,7 @@ export default function Identification() {
     localStorage.setItem("user", key);
 
     setTimeout(() => {
-      navigate("/return/assistance-tool");
+      navigate("/return/assistance");
     }, 200);
   };
 

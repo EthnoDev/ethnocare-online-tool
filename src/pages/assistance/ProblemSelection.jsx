@@ -12,8 +12,8 @@ export default function ProblemSelection() {
   const [selectedProblemKey, setSelectedProblemKey] = useState(null);
 
   const problems = [
-    { key: "pressurePoints",     label: t("problemAssistance.pressurePoints"),     route: "/assistance/problem/pressure-points" },
-    { key: "badFit",             label: t("problemAssistance.badFit"),             route: "/assistance/problem/bad-fit" },
+    { key: "pressurePoints",     label: t("problemAssistance.pressurePoints"),     route: "/assistance/problem/pressure" },
+    { key: "badFit",             label: t("problemAssistance.badFit"),             route: "/assistance/problem/fit" },
     { key: "airLoss",            label: t("problemAssistance.airLoss"),            route: "/assistance/problem/air-loss" },
     { key: "inflationDeflation", label: t("problemAssistance.inflationDeflation"), route: "/assistance/problem/inflation-deflation" },
     { key: "other",              label: t("problemAssistance.other"),              route: "/assistance/problem/other" },

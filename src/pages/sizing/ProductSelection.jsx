@@ -46,7 +46,7 @@ export default function ProductSelection() {
 
   const handleConfirmLiner = () => {
     setShowLinerPopup(false);
-    setTimeout(() => navigate("/sizing/liner/activity-level"), 200);
+    setTimeout(() => navigate("/sizing/liner/activity"), 200);
   };
 
   return (
