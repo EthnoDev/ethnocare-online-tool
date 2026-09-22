@@ -66,12 +66,12 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             </button>
 
             {/* Main Title */}
-            <h2 className="text-2xl font-bold mb-5 mt-2 text-slate-900 leading-tight">
+            <h2 className="text-2xl font-bold mt-2 text-slate-900 leading-tight">
               {t("redirectionPopup.title")}
             </h2>
 
             {/* Description / Instructions */}
-            <div className="space-y-4 text-sm text-slate-700 leading-relaxed mb-6">
+            <div className="space-y-2 mt-3 text-sm text-slate-700 leading-relaxed mb-6">
               <p>
                 <Trans
                   ns="common"

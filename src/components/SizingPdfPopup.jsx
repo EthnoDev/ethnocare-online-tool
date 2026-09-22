@@ -35,7 +35,7 @@ export default function SizingPdfPopup({
         src={RedirectLogo}
         alt=""
         aria-hidden="true"
-        className="h-3 w-4 ml-0 mt-0"
+        className="h-3 w-4"
       />
     </button>
   );

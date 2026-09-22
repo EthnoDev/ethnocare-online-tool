@@ -296,12 +296,12 @@ export default function Popup({ type, measurement, onClose }) {
           </button>
 
           {/* Main Title */}
-          <h2 className="text-2xl font-bold mb-3 mt-1 text-slate-900 leading-tight">
+          <h2 className="text-2xl font-bold mt-2 text-slate-900 leading-tight">
             {t("popup.notice_title")}
           </h2>
 
           {/* Subtitle / Description */}
-          <p className="text-slate-700 text-sm mb-6 leading-relaxed">
+          <p className="text-slate-700 mt-3 text-sm leading-relaxed">
             {t("popup.notice_description")}
           </p>
 
@@ -309,7 +309,7 @@ export default function Popup({ type, measurement, onClose }) {
           <div className="flex flex-col gap-4 mb-2">
             {tables.map((table, idx) => (
               <div key={idx} className="w-full">
-                <table className="w-full border border-gray-300 text-sm border-collapse">
+                <table className="w-full border border-gray-300 text-sm border-collapse mb-1">
                   <thead>
                     <tr>
                       <th
@@ -336,7 +336,7 @@ export default function Popup({ type, measurement, onClose }) {
 
                 {/* Footnote under the table */}
                 {table.footnote && (
-                  <p className="text-xs text-slate-500 text-left mt-1 leading-tight">
+                  <p className="text-xs text-slate-500 text-left leading-tight">
                     {table.footnote}
                   </p>
                 )}
@@ -349,7 +349,7 @@ export default function Popup({ type, measurement, onClose }) {
             <p className="text-gray-600 text-sm">
               {t("popup.contact_line")}
             </p>
-            <p className="text-sm font-bold underline text-black mt-0.5">
+            <p className="text-sm font-bold underline text-black">
               Clinics@ethnocare.ca
             </p>
           </div>
