@@ -211,7 +211,7 @@ export default function SizeTF() {
       totalSteps={4}
       code={true}
     >
-      <div className="w-full max-w-2xl text-center">
+      <div className="w-full max-w-sm text-center">
         <h1 className="text-3xl font-semibold font-sans text-slate-900">
           {t("TFSizing.title")}
         </h1>

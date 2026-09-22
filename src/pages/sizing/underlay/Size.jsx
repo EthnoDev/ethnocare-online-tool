@@ -177,7 +177,7 @@ export default function SizeUnderlay() {
       //currentStep={currentStep}
       code={true}
     >
-      <div className="w-full max-w-2xl text-center">
+      <div className="w-full max-w-sm text-center">
 
         {/* 1. Title */}
         <h1 className="text-3xl font-semibold font-sans text-slate-900">

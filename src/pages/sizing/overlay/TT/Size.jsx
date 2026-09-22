@@ -150,7 +150,7 @@ export default function SizeTT() {
       totalSteps={5}
       code={true}
     >
-      <div className="w-full max-w-2xl text-center">
+      <div className="w-full max-w-sm text-center">
         <h1 className="text-3xl font-semibold font-sans text-slate-900">
           {t("TTSizing.title")}
         </h1>
