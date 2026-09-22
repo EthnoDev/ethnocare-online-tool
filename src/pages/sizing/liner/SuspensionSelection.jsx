@@ -96,7 +96,7 @@ export default function SuspensionSelection() {
               className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
             >
               <div
-                className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
+                className={`rounded-md overflow-hidden transition-all duration-150 flex ${
                   selected === "cushion"
                     ? "ring-4 ring-[#090C41]"
                     : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
@@ -108,7 +108,7 @@ export default function SuspensionSelection() {
                     SUSPENSION_IMAGES[materialKey].cushion.en
                   }
                   alt={t("common:suspension.cushion")}
-                  className="h-auto w-full block rounded-xl max-w-xs object-cover"
+                  className="h-auto w-full block rounded-md max-w-xs object-cover"
                 />
               </div>
             </button>
@@ -122,7 +122,7 @@ export default function SuspensionSelection() {
               className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
             >
               <div
-                className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
+                className={`rounded-md overflow-hidden transition-all duration-150 flex ${
                   selected === "pin"
                     ? "ring-4 ring-[#090C41]"
                     : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
@@ -134,7 +134,7 @@ export default function SuspensionSelection() {
                     SUSPENSION_IMAGES[materialKey].pin.en
                   }
                   alt={t("common:suspension.pin")}
-                  className="h-auto w-full block rounded-xl max-w-xs object-cover"
+                  className="h-auto w-full block rounded-md max-w-xs object-cover"
                 />
               </div>
             </button>

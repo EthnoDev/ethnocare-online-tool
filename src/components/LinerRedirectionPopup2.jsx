@@ -77,7 +77,7 @@ export default function LinerRedirectionPopup2({
               {/* Gel Option Button */}
               <button
                 onClick={() => setTimeout(onSelectGel, 200)}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#090C41] text-white rounded-xl font-semibold text-base hover:bg-[#1a1e6f] transition cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#090C41] text-white rounded-md font-semibold text-base hover:bg-[#1a1e6f] transition cursor-pointer"
               >
                 <span>{t("tooSmallPopup.gelButton")}</span>
                 <img

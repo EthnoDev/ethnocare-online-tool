@@ -50,7 +50,7 @@ export default function SizingAmputationSelection() {
             title={t("common:amputation.tt")}
           >
             <div
-              className={`rounded-xl ${
+              className={`rounded-md ${
                 selected === "transtibial"
                   ? "ring-4 ring-[#090C41]"
                   : "ring-1 ring-gray-300 hover:ring-2 hover:ring-black"
@@ -59,7 +59,7 @@ export default function SizingAmputationSelection() {
               <img
                 src={TT}
                 alt={t("common:amputation.tt")}
-                className="w-70 h-auto object-contain rounded-xl block"
+                className="w-70 h-auto object-contain rounded-md block"
               />
             </div>
           </button>
@@ -73,7 +73,7 @@ export default function SizingAmputationSelection() {
             title={t("common:amputation.tf")}
           >
             <div
-              className={`rounded-xl ${
+              className={`rounded-md ${
                 selected === "transfemoral"
                   ? "ring-4 ring-[#090C41]"
                   : "ring-1 ring-gray-300 hover:ring-2 hover:ring-black"
@@ -82,7 +82,7 @@ export default function SizingAmputationSelection() {
               <img
                 src={tfImage}
                 alt={t("common:amputation.tf")}
-                className="w-70 h-auto object-contain rounded-xl block"
+                className="w-70 h-auto object-contain rounded-md block"
               />
             </div>
           </button>

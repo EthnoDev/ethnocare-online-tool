@@ -141,7 +141,7 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             {/* Redirect CTA Button */}
             <button
               onClick={() => setTimeout(onRedirect, 200)}
-              className="w-full mt-10 flex items-center justify-center gap-2.5 px-4 py-3 bg-black text-white rounded-xl font-sans font-bold hover:bg-[#090C41] transition-all cursor-pointer text-base"
+              className="w-full mt-10 flex items-center justify-center gap-2.5 px-4 py-3 bg-black text-white rounded-md font-sans font-bold hover:bg-[#090C41] transition-all cursor-pointer text-base"
             >
               <img
                 src={RedirectLogo}

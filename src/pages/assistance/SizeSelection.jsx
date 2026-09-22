@@ -208,7 +208,7 @@ export default function AssistanceSizeSelection() {
         <button
           type="button"
           onClick={handleSkip}
-          className="w-full py-3 rounded-xl text-gray-400 hover:text-gray-600 transition cursor-pointer"
+          className="w-full py-3 rounded-md text-gray-400 hover:text-gray-600 transition cursor-pointer"
         >
           {t("common:cta.skip")}
         </button>

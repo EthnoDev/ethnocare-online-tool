@@ -106,7 +106,7 @@ export default function Moving() {
               title={option.label}
             >
               <div
-                className={`rounded-xl overflow-hidden transition-[box-shadow] duration-150 ${
+                className={`rounded-md overflow-hidden transition-[box-shadow] duration-150 ${
                   selected === option.id
                     ? "ring-4 ring-[#090C41]"
                     : "ring-1 ring-gray-300 hover:ring-2 hover:ring-black"
@@ -115,7 +115,7 @@ export default function Moving() {
                 <img
                   src={option.src}
                   alt={option.label}
-                  className="w-full h-auto object-contain block rounded-xl"
+                  className="w-full h-auto object-contain block rounded-md"
                 />
               </div>
             </button>

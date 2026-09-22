@@ -85,7 +85,7 @@ export default function OrientationSelection() {
               aria-label={t(`common:orientation.${id.toLowerCase()}`)}
             >
               <div
-                className={`rounded-xl overflow-hidden transition-all duration-150 max-w-xs ${
+                className={`rounded-md overflow-hidden transition-all duration-150 max-w-xs ${
                   selected === id
                     ? "ring-4 ring-[#090C41] bg-slate-50" 
                     : "ring-1 ring-gray-300 hover:ring-2 hover:ring-black bg-white"

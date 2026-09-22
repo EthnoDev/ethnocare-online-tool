@@ -134,7 +134,7 @@ export default function SuspensionSelection() {
               aria-label={t(`suspension.${tKey}`, { ns: "common" })}
             >
               <div
-                className={`rounded-xl overflow-hidden transition-all duration-150 ${
+                className={`rounded-md overflow-hidden transition-all duration-150 ${
                   selected === id
                     ? "ring-4 ring-[#090C41]" 
                     : "ring-1 ring-gray-300 hover:ring-2 hover:ring-black"
@@ -143,7 +143,7 @@ export default function SuspensionSelection() {
                 <img
                   src={src}
                   alt={t(`suspension.${tKey}`, { ns: "common" })}
-                  className="w-full h-auto block rounded-xl" 
+                  className="w-full h-auto block rounded-md" 
                 />
               </div>
             </button>
