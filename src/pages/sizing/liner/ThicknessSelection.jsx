@@ -277,7 +277,7 @@ export default function ThicknessSelection() {
         </p>
 
         {/* 6. Confirm Button */}
-        <div className="mt-12 w-74 mx-auto [&>div]:items-stretch [&_button]:w-full">
+        <div className="mt-10 w-74 mx-auto [&>div]:items-stretch [&_button]:w-full">
           <SelectableOption
             label={t("common:cta.confirm")}
             selected={confirmSelected}
