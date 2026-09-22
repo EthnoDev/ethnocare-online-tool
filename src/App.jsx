@@ -97,7 +97,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/underlay/seal" element={<SizingUnderlaySealSelection />} />
         <Route path="/sizing/underlay/length" element={<SizingUnderlayLength />} />
         <Route path="/sizing/underlay/circumference" element={<SizingUnderlayCircumference />} />
-        <Route path="/sizing/underlay/circumference-2" element={<SizingUnderlayCircumference2 />} />
+        <Route path="/sizing/underlay/circumference2" element={<SizingUnderlayCircumference2 />} />
         <Route path="/sizing/underlay/silicone" element={<SizingUnderlaySiliconeSelection />} />
         <Route path="/sizing/underlay/size" element={<SizeUnderlay />} />
         <Route path="/sizing/liner/activity" element={<SizingLinerActivityLevelSelection />} />

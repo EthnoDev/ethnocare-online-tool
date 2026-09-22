@@ -17,7 +17,7 @@ export default function Length() {
   // Dynamic back path based on seal type
   const backTo = seal === "closed-seal" 
     ? "/sizing/underlay/circumference" 
-    : "/sizing/underlay/circumference-2";
+    : "/sizing/underlay/circumference2";
 
   const handleConfirm = (value) => {
     // Store the value returned from the component

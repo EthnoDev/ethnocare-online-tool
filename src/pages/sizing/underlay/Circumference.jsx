@@ -49,7 +49,7 @@ export default function Circumference() {
     setTimeout(() => {
       navigate(
         isOpen
-          ? "/sizing/underlay/circumference-2"
+          ? "/sizing/underlay/circumference2"
           : "/sizing/underlay/length"
       );
     }, 200);
