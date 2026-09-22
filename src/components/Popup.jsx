@@ -296,7 +296,7 @@ export default function Popup({ type, measurement, onClose }) {
           </button>
 
           {/* Main Title */}
-          <h2 className="text-2xl font-bold mt-2 text-slate-900 leading-tight">
+          <h2 className="text-2xl font-bold mt-3 text-slate-900 leading-tight">
             {t("popup.notice_title")}
           </h2>
 

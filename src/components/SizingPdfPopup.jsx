@@ -69,7 +69,7 @@ export default function SizingPdfPopup({
             </button>
 
             {/* Title */}
-            <p className="text-2xl font-semibold">{t("cta.sizingsPopup")}</p>
+            <p className="text-2xl mt-3 font-semibold">{t("cta.sizingsPopup")}</p>
 
             {/* Overlay */}
             <p className="text-xl mt-3 font-semibold">Overlay</p>
