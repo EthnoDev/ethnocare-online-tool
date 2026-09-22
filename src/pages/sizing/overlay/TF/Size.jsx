@@ -222,7 +222,7 @@ export default function SizeTF() {
           </p>
 
           {germanAltCode && (
-            <p className="text-2xl font-bold text-gray-500 font-sans -mt-2">
+            <p className="text-2xl font-bold text-gray-500 font-sans">
               {germanAltCode}
             </p>
           )}
@@ -302,7 +302,7 @@ export default function SizeTF() {
                     {t("TFSizing.note_cushion_title")}
                   </p>
 
-                  <p className="mt-1.5 text-sm text-slate-600 leading-snug">
+                  <p className="mt-2 text-sm text-slate-600 leading-snug">
                     <Trans
                       ns="pages"
                       i18nKey="TFSizing.note_cushion_body"
