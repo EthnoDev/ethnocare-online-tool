@@ -180,12 +180,12 @@ export default function SizeUnderlay() {
       <div className="w-full max-w-2xl text-center">
 
         {/* 1. Title */}
-        <h1 className="text-3xl font-semibold font-sans mb-2 text-slate-900">
+        <h1 className="text-3xl font-semibold font-sans text-slate-900">
           {t("UnderlaySizing.title")}
         </h1>
 
         {/* 2. Primary Size Code */}
-        <div className="flex flex-col items-center mb-6">
+        <div className="flex flex-col items-center mt-3">
           <p className="text-4xl font-bold font-sans">
             {sizeCode}
           </p>

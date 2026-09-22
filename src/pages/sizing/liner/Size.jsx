@@ -207,12 +207,12 @@ export default function SizeLiner() {
     >
       <div className="w-full max-w-2xl text-center">
         {/* 1. Title */}
-        <h1 className="text-3xl font-semibold font-sans mb-2 text-slate-900">
+        <h1 className="text-3xl font-semibold font-sans text-slate-900">
           {t("LinerSizing.title")}
         </h1>
 
         {/* 2. Primary Size Code Display & Length */}
-        <div className="flex flex-col items-center mb-6">
+        <div className="flex flex-col items-center mt-3">
           <p className="text-4xl font-bold font-sans">{sizeCode}</p>
           <p className="text-xl font-medium text-slate-800 font-sans">
             {t("LinerSizing.length")} {lengthRaw} {unit}
@@ -220,7 +220,7 @@ export default function SizeLiner() {
         </div>
 
         {/* 3. Product Summary Card */}
-        <div className="w-full max-w-sm mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-8 mb-6">
+        <div className="w-full max-w-sm mx-auto flex flex-row items-stretch justify-center gap-8 text-left mt-6 mb-8">
           
           {/* Left Column: Fixed width image container */}
           <div className="shrink-0 flex items-center justify-center">

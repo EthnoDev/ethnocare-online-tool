@@ -99,7 +99,7 @@ export default function LinerRedirectionPopup2({
             </div>
 
             {/* Contact Line Section */}
-            <p className="text-gray-600 text-sm mt-6">
+            <p className="text-gray-600 text-sm mt-4">
               {t("tooSmallPopup.contact_line")}
             </p>
             <p className="text-sm font-bold underline text-black">

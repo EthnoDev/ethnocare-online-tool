@@ -345,7 +345,7 @@ export default function Popup({ type, measurement, onClose }) {
           </div>
 
           {/* Contact Line */}
-          <div className="mt-6 mb-2">
+          <div className="mt-4">
             <p className="text-gray-600 text-sm">
               {t("popup.contact_line")}
             </p>

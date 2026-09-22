@@ -151,11 +151,11 @@ export default function SizeTT() {
       code={true}
     >
       <div className="w-full max-w-2xl text-center">
-        <h1 className="text-3xl font-semibold font-sans mb-2 text-slate-900">
+        <h1 className="text-3xl font-semibold font-sans text-slate-900">
           {t("TTSizing.title")}
         </h1>
 
-        <div className="flex flex-col items-center mb-6">
+        <div className="flex flex-col items-center mt-3">
           <p className="text-4xl font-bold font-sans">
             {sizeCode}
           </p>
@@ -167,7 +167,7 @@ export default function SizeTT() {
           )}
         </div>
 
-        <div className="w-full max-w-sm mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-10">
+        <div className="w-full max-w-sm mx-auto flex flex-row items-start justify-center gap-8 text-left mt-6 mb-8">
           <img
             src={TTProductImg}
             alt={t("common:products.tt")}

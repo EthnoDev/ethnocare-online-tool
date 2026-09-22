@@ -212,11 +212,11 @@ export default function SizeTF() {
       code={true}
     >
       <div className="w-full max-w-2xl text-center">
-        <h1 className="text-3xl font-semibold font-sans mb-2 text-slate-900">
+        <h1 className="text-3xl font-semibold font-sans text-slate-900">
           {t("TFSizing.title")}
         </h1>
 
-        <div className="flex flex-col items-center mb-6">
+        <div className="flex flex-col items-center mt-3">
           <p className="text-4xl font-bold font-sans">
             {sizeCode}
           </p>
