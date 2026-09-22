@@ -250,14 +250,14 @@ export default function SizeLiner() {
 
             {/* Product Documentation Section */}
             <div className="p-4 border border-gray-200 rounded-2xl bg-gray-200/80">
-              <h2 className="text-base font-bold text-slate-900 mb-1">
+              <h2 className="text-base font-bold text-slate-900">
                 {t("LinerSizing.prodDocTitle")}
               </h2>
-              <p className="text-sm text-slate-700 leading-snug mb-2">
+              <p className="text-sm text-slate-700 leading-snug mt-1">
                 {t("LinerSizing.prodDocDescription")}
               </p>
 
-              <div className="flex flex-col gap-1.5 items-start">
+              <div className="flex flex-col gap-1.5 items-start mt-1">
                 <button
                   type="button"
                   onClick={handleOpenSizingChart}
