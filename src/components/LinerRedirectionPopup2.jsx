@@ -45,7 +45,7 @@ export default function LinerRedirectionPopup2({
       >
         <PageTransitionWrapper>
           <div
-            className="bg-white p-6 rounded-xl shadow-lg relative max-w-sm text-center font-sans pointer-events-auto"
+            className="bg-white p-6 rounded-xl shadow-xl relative max-w-sm text-center font-sans pointer-events-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button (X) */}

@@ -57,7 +57,7 @@ export default function SizingPdfPopup({
         onClick={(e) => e.stopPropagation()}
       >
         <PageTransitionWrapper>
-          <div className="bg-white p-6 rounded-xl shadow-lg relative max-w-sm text-center font-sans">
+          <div className="bg-white p-6 rounded-xl shadow-xl relative max-w-sm text-center font-sans">
             {/* Close */}
             <button
               onClick={onClose}
