@@ -84,12 +84,25 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
     // ----------------------------------------------------
     // TT OVERLAY
     // ----------------------------------------------------
-    if (product === "ttdistal" || product === "ttstandard") {
+    if (product === "ttstandard") {
       if (measurement === "circumference") {
         if (valCm >= 24 && valCm < 29.5) return 23;
         if (valCm >= 29.5 && valCm < 36) return 28;
         if (valCm >= 36 && valCm <= 42) return 35;
       } else if (measurement === "length") {
+        if (valCm >= 12 && valCm < 17.5) return "XSH";
+        if (valCm >= 17.5 && valCm < 23) return "SH";
+        if (valCm >= 23) return "LG";
+      }
+    }
+
+    if (product === "ttdistal") {
+      if (measurement === "circumference") {
+        if (valCm >= 24 && valCm < 29.5) return 23;
+        if (valCm >= 29.5 && valCm < 36) return 28;
+        if (valCm >= 36 && valCm <= 42) return 35;
+      } else if (measurement === "length") {
+        if (valCm >= 8 && valCm < 13.5) return "XSH";
         if (valCm >= 13.5 && valCm < 19) return "SH";
         if (valCm >= 19) return "LG";
       }
@@ -134,14 +147,15 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
     // ----------------------------------------------------
     if (product === "tfstandard") {
       if (measurement === "length") {
-        if (valCm >= 20 && valCm < 24) return "SH";
-        if (valCm >= 24 && valCm < 32) return "LG";
-        if (valCm >= 32) return "XL";
+        if (valCm >= 15 && valCm < 20) return "XSH";
+        if (valCm >= 20 && valCm < 25) return "SH";
+        if (valCm >= 25 && valCm < 30) return "LG";
+        if (valCm >= 30) return "XL";
       } else if (measurement === "circumference") {
         if (valCm >= 32 && valCm < 36) return 32;
         if (valCm >= 36 && valCm < 40) return 38;
-        if (valCm >= 40 && valCm < 45) return 40;
-        if (valCm >= 45 && valCm < 48) return 44;
+        if (valCm >= 40 && valCm < 44.5) return 40;
+        if (valCm >= 44.5 && valCm < 48) return 44;
         if (valCm >= 48 && valCm < 52) return 48;
         if (valCm >= 52 && valCm <= 62) return 52;
       }
@@ -152,8 +166,8 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
     // ----------------------------------------------------
     if (product === "tfdistal") {
       if (measurement === "length") {
-        if (valCm >= 20 && valCm < 24) return "SH";
-        if (valCm >= 24) return "LG";
+        if (valCm >= 20 && valCm < 25) return "SH";
+        if (valCm >= 25) return "LG";
       } else if (measurement === "circumference") {
         if (valCm >= 32 && valCm < 38) return 32;
         if (valCm >= 38 && valCm < 42) return 38;

@@ -43,20 +43,17 @@ export default function EmailCapture({
         selection.product || localStorage.getItem("overlay_product") || "";
 
       // ---- HubSpot Forms API config ----
-      // Put these in your .env.local (Vite uses VITE_ prefix client-side):
-      // VITE_HS_PORTAL_ID=12345678
-      // VITE_HS_FORM_GUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
       const portalId = import.meta.env.VITE_HS_PORTAL_ID;
       const formGuid = import.meta.env.VITE_HS_FORM_GUID;
 
       const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
 
-      // Standard HubSpot "fields" payload; property names must exist in HubSpot
+      // Standard HubSpot "fields" payload
       const payload = {
         fields: [
           { name: "email", value: email.trim() },
-          { name: "overlay_size_code", value: sizeCode }, // create this property in HS
-          { name: "overlay_product", value: product },    // create this property in HS
+          { name: "overlay_size_code", value: sizeCode },
+          { name: "overlay_product", value: product },
         ],
         context: {
           pageUri: window.location.href,
@@ -75,7 +72,6 @@ export default function EmailCapture({
         throw new Error(data?.message || "HubSpot submission failed");
       }
 
-      // match your 200ms “fill” before swapping to success
       setTimeout(() => {
         setSent(true);
         setIsSubmitting(false);
@@ -130,7 +126,7 @@ export default function EmailCapture({
                 aria-disabled={isSubmitting}
                 aria-busy={isSubmitting}
                 className={`relative h-[42px] px-6 rounded-md border font-sans text-base font-semibold leading-none shrink-0
-                            transition-colors duration-200
+                            cursor-pointer disabled:cursor-not-allowed transition-colors duration-200
                             ${isSubmitting
                               ? "bg-[#090C41] text-white border-[#090C41]"
                               : "bg-white text-black border-gray-300 hover:border-black"}`}
