@@ -96,7 +96,7 @@ export default function SuspensionSelection() {
               className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
             >
               <div
-                className={`rounded-md overflow-hidden transition-all duration-150 flex ${
+                className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
                   selected === "cushion"
                     ? "ring-4 ring-[#090C41]"
                     : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
@@ -122,7 +122,7 @@ export default function SuspensionSelection() {
               className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
             >
               <div
-                className={`rounded-md overflow-hidden transition-all duration-150 flex ${
+                className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
                   selected === "pin"
                     ? "ring-4 ring-[#090C41]"
                     : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
