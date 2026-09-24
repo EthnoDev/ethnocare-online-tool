@@ -7,8 +7,8 @@
     "confirm": "CONFIRMAR",
     "restart": "Buscar otra talla",
     "sizings": "Tallas en PDF",
-    "sizingsPopup": "Guía de Tallas en PDF",
-    "header":"CÓDIGO DE REEMBOLSO OVERLAY : L-5657 (USA)",
+    "sizingsPopup": "Tablas de tallas en PDF",
+    "header": "CÓDIGO DE REEMBOLSO OVERLAY: L-5657 (USA)",
     "circumference": "Circunferencia",
     "length": "Longitud",
     "orientation": "Lado",
@@ -47,8 +47,8 @@
     "liner tf": "Liner Transfemoral"
   },
   "units": {
-    "imperial": "Imperial (Pulgada)",
-    "metric": "Métrico (Centímetro)"
+    "imperial": "Imperial (Pulgadas)",
+    "metric": "Métrico (Centímetros)"
   },
   "suspension": {
     "title": "Elige tu suspensión",
@@ -79,13 +79,13 @@
     "up": "Hacia arriba",
     "down": "Hacia abajo",
     "rotate": "Rotación",
-    "roll": "Dobladillo superior enrollado hacia abajo"
+    "roll": "El dobladillo superior se enrolla hacia abajo"
   },
   "seal": {
     "open-seal": "Abierto",
     "closed-seal": "Cerrado",
-    "open-title": "Sello Abierto",
-    "closed-title": "Sello Cerrado"
+    "open-title": "Sello abierto",
+    "closed-title": "Sello cerrado"
   },
   "silicone": {
     "yes-silicone": "Sí",
@@ -93,13 +93,14 @@
   },
   "footer": {
     "select_language": "Selecciona tu idioma",
-    "sizing_pdfs_title": "Tablas de tallas en PDF :",
-    "contact_us": "Contáctanos :",
-    "mail":"Correo : ",
-    "phone":"Teléfono : "
+    "sizing_pdfs_title": "Tablas de tallas en PDF:",
+    "contact_us": "Contáctanos:",
+    "mail": "Correo electrónico:",
+    "phone": "Teléfono:"
   },
-  "inputs": { "enter_measurement": "Ingresar medida",
-   "additional_instruction": "Instrucción adicional"
+  "inputs": {
+    "enter_measurement": "Ingresar medida",
+    "additional_instruction": "Instrucción adicional"
   },
   "email": {
     "placeholder": "ejemplo@correo.com",
@@ -108,36 +109,36 @@
     "success": "¡Gracias! ¡Hemos recibido tu envío!"
   },
   "popup": {
-    "notice_title": "Talla No Disponible",
+    "notice_title": "Talla no disponible",
     "notice_description": "Parece que actualmente no tenemos una talla que coincida con tus medidas. Por favor, verifica que tus medidas se encuentren dentro de los siguientes rangos:",
-    "ttLockCush": "Overlay TT - Bloqueo & Cushion",
-    "ttDistal": "Overlay TT - Sellado Distal",
-    "tfPin":"Overlay TF - PIN",
+    "ttLockCush": "Overlay TT - Bloqueo y cushion",
+    "ttDistal": "Overlay TT - Sellado distal",
+    "tfPin": "Overlay TF - PIN",
     "tfVac": "Overlay TF - VAC",
     "uttOpen": "Underlay TT - ABIERTO",
     "uttClosed": "Underlay TT - CERRADO",
     "label_length": "Longitud*",
     "label_circumference": "Circunferencia*",
     "ttCLockCushNote": "*A {{distance}} del extremo distal sobre el liner",
-    "ttCDistalNote": "*Por encima del sello superior o debajo del anillo de sellado reflejado",
+    "ttCDistalNote": "*Por encima del sello superior o debajo del anillo de sellado replegado",
     "ttLLockCushNote": "*Desde la parte inferior del socket hasta la línea de recorte posterior proximal",
-    "ttLDistalNote": "*Desde justo por encima del sello superior o debajo del anillo de sellado reflejado hasta la línea de recorte posterior proximal",
+    "ttLDistalNote": "*Desde justo por encima del sello superior o debajo del anillo de sellado replegado hasta la línea de recorte posterior proximal",
     "tfCPinNote": "*A {{distance}} del extremo distal sobre el liner",
-    "tfCVacNote": "*Por encima del sello superior o debajo del anillo de sellado reflejado",
+    "tfCVacNote": "*Por encima del sello superior o debajo del anillo de sellado replegado",
     "tfLPinNote": "*Desde el extremo distal del liner hasta el perineo",
-    "tfLVacNote": "*Desde justo por encima del sello superior o debajo del anillo de sellado reflejado hasta el perineo",
+    "tfLVacNote": "*Desde justo por encima del sello superior o debajo del anillo de sellado replegado hasta el perineo",
     "uttCOpenNote": "*A {{distance}} del extremo distal sobre la piel",
     "uttCClosedNote": "*A {{distance}} del extremo distal sobre la piel",
     "uttLOpenNote": "*Longitud del liner recortado",
     "uttLClosedNote": "*Longitud del liner recortado",
-    "contact_line": "Si sus medidas están fuera de nuestro rango de tallas, contáctenos en:",
+    "contact_line": "Si tus medidas están fuera de nuestro rango de tallas, contáctanos en:",
     "cta_ok": "OK",
     "underlay_open_title": "Underlay TT - Abierto",
     "underlay_closed_title": "Underlay TT - Cerrado",
-    "label_circumferenceDistal": "Circunferencia\n10 cm / 3.9 Inch del extremo distal",
+    "label_circumferenceDistal": "Circunferencia\n10 cm / 3.9 pulgadas del extremo distal",
     "label_circumferenceUpper": "Circunferencia\nParte superior del liner",
-    "labelDistal": "Circunferencia Extremo Distal",
-    "labelProximal": "Circunferencia Extremo Proximal",
+    "labelDistal": "Circunferencia extremo distal",
+    "labelProximal": "Circunferencia extremo proximal",
     "silicone": "Silicona"
   },
   "contactForm": {
@@ -148,42 +149,44 @@
 
     "success": "¡Gracias! Tu mensaje ha sido recibido.",
     "labelMessage": "Tu mensaje",
-    "labelEmail": "Tu correo",
+    "labelEmail": "Tu correo electrónico",
     "placeholderMessage": "Ejemplo de mensaje…",
     "placeholderEmail": "contacto@correo.com",
-    "errorMessageRequired": "Por favor ingresa un mensaje.",
-    "errorEmailRequired": "Por favor ingresa un correo.",
-    "errorEmailInvalid": "Por favor ingresa un correo válido.",
 
-    "summaryHeadingDefault": "Basado en tus respuestas :",
-    "summaryProduct": "Producto :",
-    "summaryIssue": "Problema :",
-    "summaryDetail": "Detalle :",
+    "errorMessageRequired": "Por favor, ingresa un mensaje.",
+    "errorEmailRequired": "Por favor, ingresa un correo electrónico.",
+    "errorEmailInvalid": "Por favor, ingresa un correo electrónico válido.",
+
+    "summaryHeadingDefault": "Según tus respuestas:",
+    "summaryProduct": "Producto:",
+    "summaryIssue": "Problema:",
+    "summaryDetail": "Detalle:",
 
     "buttonSend": "Enviar",
     "submitError": "No pudimos enviar tu mensaje. Por favor, inténtalo de nuevo."
   },
   "redirectionPopup": {
     "title": "Underlay Abierto no disponible",
-    "description_p1": "Parece que su medida de circunferencia proximal se encuentra fuera de nuestro rango de tallas <bold>el miembro es demasiado cónico para el Underlay Abierto.</bold>",
-    "description_p2": "Por favor, verifique que sus medidas se encuentren dentro de los siguientes rangos de <bold>su talla de underlay abierto.</bold>",
-    "description_p3": "<bold>De lo contrario, elija el Underlay Cerrado</bold> haciendo clic en el botón a continuación y comience un nuevo procedimiento de dimensionamiento.",
-    "measured_size_label": "Underlay abierto medido :",
+    "description": "Parece que no tenemos tu talla disponible en este momento. Sin embargo, puedes elegir el Underlay Cerrado haciendo clic en el botón a continuación.",
+    "description_p1": "Parece que la medida de tu circunferencia proximal se encuentra fuera de nuestro rango de tallas. <bold>Tu miembro puede ser demasiado cónico para el Underlay Abierto.</bold>",
+    "description_p2": "Por favor, verifica que tus medidas se encuentren dentro de los siguientes rangos para <bold>tu talla de Underlay Abierto.</bold>",
+    "description_p3": "<bold>De lo contrario, elige el Underlay Cerrado</bold> haciendo clic en el botón a continuación y comienza un nuevo procedimiento de dimensionamiento.",
+    "measured_size_label": "Underlay Abierto medido:",
     "table_header": "Circunferencia proximal máxima (C2)*",
     "table_footnote": "*Justo por encima del borde superior del liner recortado (sobre la piel).",
     "cta": "Underlay Cerrado",
-    "contact_line": "Si desea ayudarnos a desarrollar el underlay cerrado, puede enviarnos las medidas de su miembro a:"
+    "contact_line": "Si deseas ayudarnos a ampliar el rango de tallas del Underlay Abierto, puedes enviarnos las medidas de tu miembro a:"
   },
   "linerPopup": {
     "title": "Aviso",
-    "description": "El Liner Ethnocare solo está disponible para su compra en Canadá.",
+    "description": "El Liner Ethnocare actualmente solo está disponible para su compra en Canadá.",
     "option1": "Regresar",
     "option2": "Continuar"
   },
   "tooSmallPopup": {
     "title": "Aviso",
     "description": "Nuestros liners de gel son más largos que nuestros liners de silicona. Si el liner de silicona es demasiado pequeño, puedes optar por una opción de gel.",
-    "description2": "Los liners de gel miden {{distance}} de largo",
+    "description2": "Los liners de gel miden {{distance}} de largo.",
     "gelButton": "Guía de tallas de liners de gel",
     "homeButton": "Volver a la página de inicio",
     "contact_line": "Si deseas ayudarnos o tienes preguntas adicionales, puedes contactarnos en:"
