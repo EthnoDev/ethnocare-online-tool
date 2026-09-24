@@ -1,5 +1,5 @@
 {
-  "missingData": "Faltan datos. Completa todos los pasos.",
+  "missingData": "Faltan datos de dimensionamiento. Completa todos los pasos.",
   "noMatch": "No se encontró ningún producto para los valores seleccionados.",
   "invalid_email": "Por favor, introduce un correo electrónico válido.",
   "submit_failed": "No pudimos enviar el correo. Inténtalo de nuevo.",
