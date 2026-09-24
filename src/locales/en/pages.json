@@ -3,7 +3,7 @@
     "title": "Ethnocare Online Tool",
     "description": "Select the tool you want to use",
     "option1":"Sizing",
-    "description1": "The sizing tool aims to guide you in finding the right size of Ethnocare product.",
+    "description1": "The sizing tool helps you find the right size for your Ethnocare product.",
     "option2":"Assistance",
     "description2":"The assistance tool provides help and support for using Ethnocare products.",
     "option3":"Return",
@@ -11,7 +11,7 @@
     "option4":"FAQ",
     "description4":"The FAQ tool provides answers to frequently asked questions about Ethnocare products.",
     "option5":"Recommendation",
-    "description5":"The recommendation tool helps you find the best Ethnocare products based on your needs."
+    "description5":"The recommendation tool helps you find the most suitable Ethnocare products."
   },
   "welcomeRecommendation": {
     "title": "Solution Finder",
@@ -25,7 +25,7 @@
   },
   "identificationReturn": {
     "title": "Identification",
-    "description": "Are you a user/clinic or a distributor?",
+    "description": "Are you a user/clinic or distributor?",
     "option1": "User/Clinic",
     "option2": "Distributor"
   },
@@ -75,7 +75,7 @@
   },
   "pressurePointsAssistance": {
     "title": "Rotation",
-    "description": "Rotate your Overlay between 30 and 180 degrees"
+    "description": "Rotate your Overlay between 30° and 180°"
   },
   "badFitAssistance": {
     "title": "Bad Fit",
@@ -95,7 +95,7 @@
   },
   "stirrupAssistance": {
     "title": "Stirrup",
-    "imageDescription": "The stirrup is designed specifically for when the integrated sillicone is not enough to hold the Overlay in place. This solution will keep your Overlay secure all day long."
+    "imageDescription": "The stirrup is designed specifically for when the integrated silicone is not enough to hold the Overlay in place. This solution will keep your Overlay secure all day long."
   },
   "otherAssistance": {
     "title": "Contact Us",
@@ -103,7 +103,7 @@
   },
   "welcomeSizing": {
     "title": "Sizing Tool",
-    "description": "Use this tool to find the right size of Ethnocare product for you",
+    "description": "Use this tool to find the right size for your Ethnocare product",
     "startButton": "Start"
   },
   "unitsSizing": {
@@ -118,7 +118,7 @@
   },
   "productSizing": {
     "title": "Product",
-    "description": "Select the product you want to find a size for"
+    "description": "Select the product you want to size"
   },
   "suspensionSizing": {
     "title": "Suspension Type",
@@ -137,14 +137,14 @@
   "lengthTTSizing": {
     "title": "Length",
     "description": "Measure the length from the <bold>bottom of the socket</bold> to the posterior proximal trim line",
-    "note_title": "Patient with no socket",
+    "note_title": "Patient without a socket",
     "note_body": "If the user is not wearing a socket, measure the length from under the reflected sealing ring to the midpoint of the patellar tendon.<br/><br/>This measurement can be slightly longer than the socket’s posterior proximal trim line, so if the patient is between sizes, choose the shorter Overlay size."
   },
   "lengthTTVacSizing": {
     "title": "Length",
     "descriptionSingle": "Measure the length <bold>under</bold> the reflected sealing ring to the posterior proximal trim line",
     "descriptionMulti": "Measure the length <bold>just above the top seal</bold> to the posterior proximal trim line",
-    "note_title": "Patient with no socket",
+    "note_title": "Patient without a socket",
     "note_body": "If the user is not wearing a socket, measure the length from under the reflected sealing ring to the midpoint of the patellar tendon.<br/><br/>This measurement can be slightly longer than the socket’s posterior proximal trim line, so if the patient is between sizes, choose the shorter Overlay size."
   },
   "orientationTTSizing": {
@@ -197,9 +197,9 @@
   "sealUnderlaySizing": {
     "title": "Seal Selection",
     "description": "Select your Underlay design",
-    "open_description": "We recommend using the Open sealing position as it allows the underlay to stick above the liner and evacuate the excess humidity.",
-    "closed_description": "More classical design for all suspension types",
-    "closed_exception": "The underlay Closed is the only design available for your type of suspension."
+    "open_description": "We recommend using the Open sealing position as it allows the Underlay to stick above the liner and release excess moisture.",
+    "closed_description": "More conventional design for all suspension types",
+    "closed_exception": "The Closed Underlay is the only design available for your type of suspension."
   },
   "lengthUnderlaySizing": {
     "title": "Length",
@@ -217,7 +217,7 @@
   "siliconeUnderlaySizing": {
     "title": "Silicone",
     "description": "Optional for added grip",
-    "image_caption": "You can choose to add silicone for added grip on the liner and residual limb. This option is recommended for people who are concerned about underlay movement on the limb.",
+    "image_caption": "You can choose to add silicone for added grip on the liner and residual limb. This option is recommended for people who are concerned about Underlay movement on the limb.",
     "option1": "With silicone",
     "option2": "Without silicone"
   },
@@ -240,7 +240,7 @@
     "title": "Activity Level",
     "description": "Select your activity level",
     "k1_description": "Limited household ambulator; walks on level surfaces",
-    "k2_description": "Ability for traversing curbs, stairs, or uneven surfaces",
+    "k2_description": "Ability to traverse curbs, stairs, or uneven surfaces",
     "k3_description": "Community ambulator; varied cadence, traverses most barriers",
     "k4_description": "High-impact user; active adult, athlete, or child"
   },
@@ -255,7 +255,7 @@
   },
   "lengthLinerSizing": {
     "title": "Length",
-    "description":"Please note that our liners are {{distance}}. Please verify that you do not need a longer size."
+    "description":"Please note that our liners are {{distance}} long. Please verify that you do not need a longer size."
   },
   "suspensionLinerSizing": {
     "title": "Suspension",
@@ -264,8 +264,8 @@
   },
   "thicknessLinerSizing": {
     "title": "Profile Thickness",
-    "description": "Select your suspension system's design",
-    "description2": "Select a thickness to see the cross section",
+    "description": "Select the liner profile thickness",
+    "description2": "Select a thickness to view the cross section",
     "error": "Please select a thickness."
   },
   "LinerSizing": {
