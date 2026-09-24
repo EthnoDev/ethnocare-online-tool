@@ -71,7 +71,7 @@ export default function RedirectionPopup({ onClose, onRedirect }) {
             </h2>
 
             {/* Description / Instructions */}
-            <div className="mt-3 text-sm text-slate-500 space-y-2 leading-relaxed">
+            <div className="mt-3 text-sm text-slate-500 space-y-1 leading-relaxed">
               <p>
                 <Trans
                   ns="common"
