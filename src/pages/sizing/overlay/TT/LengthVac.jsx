@@ -92,7 +92,7 @@ export default function LengthVac() {
                   {t("lengthTTVacSizing.note_title")}
                 </p>
 
-                <p className="mt-2 text-sm text-slate-600 leading-snug">
+                <p className="mt-3 text-sm text-slate-600 leading-snug">
                   <Trans
                     ns="pages"
                     i18nKey="lengthTTVacSizing.note_body"
