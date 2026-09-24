@@ -302,7 +302,7 @@ export default function SizeTF() {
                     {t("TFSizing.note_cushion_title")}
                   </p>
 
-                  <p className="mt-2 text-sm text-slate-600 leading-snug">
+                  <p className="mt-3 text-sm text-slate-600 leading-snug">
                     <Trans
                       ns="pages"
                       i18nKey="TFSizing.note_cushion_body"
