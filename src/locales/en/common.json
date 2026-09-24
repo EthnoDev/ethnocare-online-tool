@@ -106,7 +106,7 @@
     "placeholder": "example@mail.com",
     "send": "Send",
     "please_wait": "Please wait...",
-    "success": "Thank you! Your submission has been received!"
+    "success": "Thank you ! Your submission has been received !"
   },
   "popup": {
     "notice_title": "Size Unavailable",
@@ -147,7 +147,7 @@
     "question2": "Write us a message",
     "order2": "Explain your issue, give us details and your contact information",
 
-    "success": "Thank you! Your message has been received.",
+    "success": "Thank you ! Your message has been received.",
     "labelMessage": "Your message",
     "labelEmail": "Your email",
     "placeholderMessage": "Example message…",
