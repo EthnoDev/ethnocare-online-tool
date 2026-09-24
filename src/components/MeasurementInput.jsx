@@ -147,7 +147,6 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
     // ----------------------------------------------------
     if (product === "tfstandard") {
       if (measurement === "length") {
-        if (valCm >= 15 && valCm < 20) return "XSH";
         if (valCm >= 20 && valCm < 25) return "SH";
         if (valCm >= 25 && valCm < 30) return "LG";
         if (valCm >= 30) return "XL";

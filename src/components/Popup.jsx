@@ -93,8 +93,8 @@ export default function Popup({ type, measurement, onClose }) {
               {
                 label: t("popup.label_length"),
                 value: isImperial
-                  ? "Min : 5.9 in\nMax : None"
-                  : "Min : 15 cm\nMax : None",
+                  ? "Min : 7.8 in\nMax : None"
+                  : "Min : 20 cm\nMax : None",
               },
             ],
             footnote: t("popup.tfLPinNote"),
