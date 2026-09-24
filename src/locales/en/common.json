@@ -8,7 +8,7 @@
     "restart": "Find a new size",
     "sizings": "Sizings in PDF",
     "sizingsPopup": "Sizing Charts in PDF",
-    "header":"OVERLAY REIMBURSEMENT CODE : L-5657 (USA)",
+    "header":"OVERLAY REIMBURSEMENT CODE: L-5657 (USA)",
     "circumference": "Circumference",
     "length": "Length",
     "orientation": "Side",
@@ -47,8 +47,8 @@
     "liner tf": "Liner Transfemoral"
   },
   "units": {
-    "imperial": "Imperial (Inch)",
-    "metric": "Metric (Centimeter)"
+    "imperial": "Imperial (Inches)",
+    "metric": "Metric (Centimeters)"
   },
   "suspension": {
     "title": "Choose your suspension",
@@ -93,10 +93,10 @@
   },
   "footer": {
     "select_language": "Select your language",
-    "sizing_pdfs_title": "Sizing Charts in PDF :",
-    "contact_us": "Contact us :",
-    "mail":"Mail : ",
-    "phone":"Phone : "
+    "sizing_pdfs_title": "Sizing Charts in PDF:",
+    "contact_us": "Contact us:",
+    "mail":"Email:",
+    "phone":"Phone:"
   },
   "inputs": {
     "enter_measurement": "Enter measurement",
@@ -142,7 +142,7 @@
     "silicone": "Silicone"
   },
   "contactForm": {
-    "question": "Do you need additional assistance ?",
+    "question": "Do you need additional assistance?",
     "order": "Send us a message",
     "question2": "Write us a message",
     "order2": "Explain your issue, give us details and your contact information",
@@ -157,38 +157,38 @@
     "errorEmailRequired": "Please enter an email.",
     "errorEmailInvalid": "Please enter a valid email.",
 
-    "summaryHeadingDefault": "Based on your answers :",
-    "summaryProduct": "Product :",
-    "summaryIssue": "Issue :",
-    "summaryDetail": "Detail :",
+    "summaryHeadingDefault": "Based on your answers:",
+    "summaryProduct": "Product:",
+    "summaryIssue": "Issue:",
+    "summaryDetail": "Detail:",
 
     "buttonSend": "Send",
     "submitError": "We couldn't send your message. Please try again."
   },
   "redirectionPopup": {
-    "title": "Open Underlay unavailable",
-    "description": "It seems that we don't have your size available at the moment, however you can choose the closed underlay by clicking on the button below",
-    "description_p1": "It seems that your proximal circumference measurement fall outside our sizing range <bold>the limb is too conical for the Underlay Open.</bold>",
-    "description_p2": "Please verify that your measurements fall within the following ranges of <bold>your underlay open size.</bold>",
-    "description_p3": "<bold>If not choose the Underlay Closed</bold> instead clicking on the button below and start a new sizing procedure.",
-    "measured_size_label": "Measured open Underlay :",
+    "title": "Underlay Open Unavailable",
+    "description": "It seems that we don't have your size available at the moment. However, you can choose the Underlay Closed by clicking the button below.",
+    "description_p1": "It seems that your proximal circumference measurement falls outside our sizing range. <bold>Your limb may be too conical for the Underlay Open.</bold>",
+    "description_p2": "Please verify that your measurements fall within the following ranges for <bold>your Underlay Open size.</bold>",
+    "description_p3": "<bold>If not, choose the Underlay Closed</bold> by clicking the button below and start a new sizing procedure.",
+    "measured_size_label": "Measured Underlay Open:",
     "table_header": "Maximum proximal circumference (C2)*",
     "table_footnote": "*Just above the top edge of the trimmed liner (over the skin).",
-    "cta": "Closed Underlay",
-    "contact_line": "If you want to help us develop the underlay closed, you can send us your limb measurements at:"
+    "cta": "Underlay Closed",
+    "contact_line": "If you want to help us expand the sizing range of the Underlay Open, you can send us your limb measurements at:"
   },
   "linerPopup": {
     "title": "Notice",
     "description": "The Ethnocare Liner is currently only available for purchase in Canada.",
     "option1": "Go back",
-    "option2": "Pursue"
+    "option2": "Continue"
   },
   "tooSmallPopup": {
     "title": "Notice",
     "description": "Our gel liners are longer than our silicone liners. If the silicone liner is too small, you can opt for a gel option.",
-    "description2": "Gel liners are {{distance}} long",
+    "description2": "Gel liners are {{distance}} in length.",
     "gelButton": "Gel liner sizing",
-    "homeButton": "Return to home",
+    "homeButton": "Return to Home",
     "contact_line": "If you want to help or have additional questions you can contact us at:"  
   }
 }
