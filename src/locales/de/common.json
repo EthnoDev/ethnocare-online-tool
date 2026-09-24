@@ -1,192 +1,194 @@
 {
-    "cta": {
-        "start": "START",
-        "next": "Weiter",
-        "back": "Zurück",
-        "skip": "Überspringen",
-        "confirm": "BESTÄTIGEN",
-        "restart": "Neue Größe finden",
-        "sizings": "Größentabellen als PDF",
-        "sizingsPopup": "Größentabellen als PDF",
-        "header":"OVERLAY-ERSTATTUNGSCODE : L-5657 (USA)",
-        "circumference": "Umfang",
-        "length": "Länge",
-        "orientation": "Seite",
-        "suspension": "Suspension",
-        "pressurePoints": "Overlay-Rotation",
-        "small": "ZU KLEIN",
-        "home": "Zurück zur Startseite",
-        "buy": "Erhalten Sie das "
-    },
-    "pages": {
-        "circumference_tt_vac": "TT Umfang distal Seal",
-        "length_tt_vac": "TT Länge distal Seal",
-        "circumference_tt": "TT Umfang",
-        "length_tt": "TT Länge",
-        "circumference_tf": "TF Umfang",
-        "length_tf": "TF Länge",
-        "circumference_tf_vac": "TF Umfang distal Seal",
-        "length_tf_vac": "TF Länge distal Seal",
-        "length_udtt": "Underlay TT Länge",
-        "circumference_udtt": "Underlay TT Umfang",
-        "circumference2_udtt": "Oberer Underlay TT Umfang",
-        "circumference_linertt": "TT Liner Umfang",
-        "circumference_linertf": "TF Liner Umfang",
-        "length_liner": "Liner-Länge",
-        "thickness_liner": "Liner-Dickenoption"
-    },
-    "amputation": {
-        "tt": "Transtibial",
-        "tf": "Transfemoral"
-    },
-    "products": {
-        "tt": "Overlay Transtibial",
-        "tf": "Overlay Transfemoral",
-        "underlay tt": "Underlay Transtibial",
-        "liner tt": "Liner Transtibial",
-        "liner tf": "Liner Transfemoral"
-    },
-    "units": {
-        "imperial": "Imperial (Zoll)",
-        "metric": "Metrisch (Zentimeter)"
-    },
-    "suspension": {
-        "title": "Wählen Sie Ihr Suspensionssystem",
-        "tt-locking": "Distale Arretierung",
-        "tt-lanyard": "Zugsystem",
-        "tt-suspension-sleeve": "Suspensionsmanschette",
-        "tt-distal-seal": "Distale Abdichtung",
-        "tt-distal-lanyard": "Distales Zugsystem",
-        "tt-cushion": "Polster",
-        "tt-single-seal": "Einzeldichtung",
-        "tt-multi-seal": "Mehrfachdichtung",
+  "cta": {
+    "start": "START",
+    "next": "Weiter",
+    "back": "Zurück",
+    "skip": "Überspringen",
+    "confirm": "BESTÄTIGEN",
+    "restart": "Neue Größe finden",
+    "sizings": "Größentabellen als PDF",
+    "sizingsPopup": "Größentabellen als PDF",
+    "header": "OVERLAY-ERSTATTUNGSCODE: L-5657 (USA)",
+    "circumference": "Umfang",
+    "length": "Länge",
+    "orientation": "Seite",
+    "suspension": "Suspension",
+    "pressurePoints": "Overlay-Rotation",
+    "small": "ZU KLEIN",
+    "home": "Zurück zur Startseite",
+    "buy": "Erhalten Sie das "
+  },
+  "pages": {
+    "circumference_tt_vac": "TT-Umfang distale Abdichtung",
+    "length_tt_vac": "TT-Länge distale Abdichtung",
+    "circumference_tt": "TT-Umfang",
+    "length_tt": "TT-Länge",
+    "circumference_tf": "TF-Umfang",
+    "length_tf": "TF-Länge",
+    "circumference_tf_vac": "TF-Umfang distale Abdichtung",
+    "length_tf_vac": "TF-Länge distale Abdichtung",
+    "length_udtt": "Underlay TT-Länge",
+    "circumference_udtt": "Underlay TT-Umfang",
+    "circumference2_udtt": "Oberer Underlay TT-Umfang",
+    "circumference_linertt": "TT-Liner-Umfang",
+    "circumference_linertf": "TF-Liner-Umfang",
+    "length_liner": "Liner-Länge",
+    "thickness_liner": "Option für die Liner-Dicke"
+  },
+  "amputation": {
+    "tt": "Transtibial",
+    "tf": "Transfemoral"
+  },
+  "products": {
+    "tt": "Overlay Transtibial",
+    "tf": "Overlay Transfemoral",
+    "underlay tt": "Underlay Transtibial",
+    "liner tt": "Liner Transtibial",
+    "liner tf": "Liner Transfemoral"
+  },
+  "units": {
+    "imperial": "Imperial (Zoll)",
+    "metric": "Metrisch (Zentimeter)"
+  },
+  "suspension": {
+    "title": "Wählen Sie Ihr Suspensionssystem",
+    "tt-locking": "Distale Arretierung",
+    "tt-lanyard": "Zugsystem",
+    "tt-suspension-sleeve": "Suspensionsmanschette",
+    "tt-distal-seal": "Distale Abdichtung",
+    "tt-distal-lanyard": "Distales Zugsystem",
+    "tt-cushion": "Cushion",
+    "tt-single-seal": "Einzeldichtung",
+    "tt-multi-seal": "Mehrfachdichtung",
 
-        "tf-distal-locking": "Pin",
-        "tf-lanyard": "Einzugsystem",
-        "tf-distal-seal": "Distale Abdichtung",
-        "tf-cushion": "Cushion",
-        "tf-single-seal": "Einzeldichtung",
-        "tf-multi-seal": "Mehrfachdichtung",
+    "tf-distal-locking": "Pin",
+    "tf-lanyard": "Zugsystem",
+    "tf-distal-seal": "Distale Abdichtung",
+    "tf-cushion": "Cushion",
+    "tf-single-seal": "Einzeldichtung",
+    "tf-multi-seal": "Mehrfachdichtung",
 
-        "pin": "Pin",
-        "cushion": "Polster"
-    },
-    "orientation": {
-        "left": "Links",
-        "right": "Rechts"
-    },
-    "sliding": {
-        "up": "Nach oben",
-        "down": "Nach unten",
-        "rotate": "Rotation",
-        "roll": "Oberer Saum rollt nach unten"
-    },
-    "seal": {
-        "open-seal": "Offen",
-        "closed-seal": "Geschlossen",
-        "open-title": "Offene Abdichtung",
-        "closed-title": "Geschlossene Abdichtung"
-    },
-    "silicone": {
-        "yes-silicone": "Ja",
-        "no-silicone": "Nein"
-    },
-    "footer": {
-        "select_language": "Sprache auswählen",
-        "sizing_pdfs_title": "Größentabellen als PDF :",
-        "contact_us": "Kontaktieren Sie uns :",
-        "mail":"E-Mail : ",
-        "phone":"Telefon : "
-    },
-    "inputs": { "enter_measurement": "Messwert eingeben",
-     "additional_instruction": "Zusätzliche Anweisung"
-    },
-    "email": {
-        "placeholder": "beispiel@mail.com",
-        "send": "Senden",
-        "please_wait": "Bitte warten...",
-        "success": "Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt."   
-    },
-    "popup": {
-        "notice_title": "Größe nicht verfügbar",
-        "notice_description": "Es scheint, dass wir derzeit keine Größe haben, die Ihren Maßen entspricht. Bitte überprüfen Sie, ob Ihre Maße innerhalb der folgenden Bereiche liegen:",
-        "ttLockCush": "Overlay TT - Verriegelung & Polster",
-        "tfPin":"Overlay TF - PIN",
-        "tfVac": "Overlay TF - VAC",
-        "uttOpen": "Underlay TT - OFFEN",
-        "uttClosed": "Underlay TT - GESCHLOSSEN",
-        "ttDistal": "Overlay TT - Distale Abdichtung",
-        "label_length": "Länge*",
-        "label_circumference": "Umfang*",
-        "ttCLockCushNote": "*Abstand {{distance}} vom distalen Ende über dem Liner",
-        "ttCDistalNote": "*Über dem oberen Siegel oder unter dem reflektierten Dichtungsring",
-        "ttLLockCushNote": "*Vom unteren Ende der Buchse bis zur hinteren proximalen Schnittlinie",
-        "ttLDistalNote": "*Von knapp über dem oberen Siegel oder unter dem reflektierten Dichtungsring bis zur hinteren proximalen Schnittlinie",
-        "tfCPinNote": "*Abstand {{distance}} vom distalen Ende über dem Liner",
-        "tfCVacNote": "*Über dem oberen Siegel oder unter dem reflektierten Dichtungsring",
-        "tfLPinNote": "*Vom distalen Ende des Liners bis zum Perineum",
-        "tfLVacNote": "*Von knapp über dem oberen Siegel oder unter dem reflektierten Dichtungsring bis zum Perineum",
-        "uttCOpenNote": "*Abstand {{distance}} vom distalen Ende über der Haut",
-        "uttCClosedNote": "*Abstand {{distance}} vom distalen Ende über der Haut",
-        "uttLOpenNote": "*Länge des zugeschnittenen Liners",
-        "uttLClosedNote": "*Länge des zugeschnittenen Liners",
-        "contact_line": "Wenn Ihre Maße außerhalb unseres Größenbereichs liegen, kontaktieren Sie uns bitte unter:",
-        "cta_ok": "OK",
-        "underlay_open_title": "Underlay TT - Offen",
-        "underlay_closed_title": "Underlay TT - Geschlossen",
-        "label_circumferenceDistal": "Umfang\n10 cm / 3.9 Inch vom distalen Ende",
-        "label_circumferenceUpper": "Umfang\nOberes Liner",
-        "labelDistal": "Umfang Distales Ende",
-        "labelProximal": "Umfang Proximales Ende",
-        "silicone": "Silikon"
-    },
-    "contactForm": {
-        "question": "Benötigen Sie weitere Hilfe ?",
-        "order": "Senden Sie uns eine Nachricht",
-        "question2": "Schreiben Sie uns eine Nachricht",
-        "order2": "Erklären Sie Ihr Problem, geben Sie uns Details und Ihre Kontaktinformationen",
+    "pin": "Pin",
+    "cushion": "Cushion"
+  },
+  "orientation": {
+    "left": "Links",
+    "right": "Rechts"
+  },
+  "sliding": {
+    "up": "Nach oben",
+    "down": "Nach unten",
+    "rotate": "Rotation",
+    "roll": "Der obere Saum rollt nach unten"
+  },
+  "seal": {
+    "open-seal": "Offen",
+    "closed-seal": "Geschlossen",
+    "open-title": "Offene Abdichtung",
+    "closed-title": "Geschlossene Abdichtung"
+  },
+  "silicone": {
+    "yes-silicone": "Ja",
+    "no-silicone": "Nein"
+  },
+  "footer": {
+    "select_language": "Sprache auswählen",
+    "sizing_pdfs_title": "Größentabellen als PDF:",
+    "contact_us": "Kontaktieren Sie uns:",
+    "mail": "E-Mail:",
+    "phone": "Telefon:"
+  },
+  "inputs": {
+    "enter_measurement": "Messwert eingeben",
+    "additional_instruction": "Zusätzliche Anweisung"
+  },
+  "email": {
+    "placeholder": "beispiel@mail.com",
+    "send": "Senden",
+    "please_wait": "Bitte warten...",
+    "success": "Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt."
+  },
+  "popup": {
+    "notice_title": "Größe nicht verfügbar",
+    "notice_description": "Es scheint, dass wir derzeit keine Größe haben, die Ihren Maßen entspricht. Bitte überprüfen Sie, ob Ihre Maße innerhalb der folgenden Bereiche liegen:",
+    "ttLockCush": "Overlay TT - Arretierung & Polster",
+    "ttDistal": "Overlay TT - Distale Abdichtung",
+    "tfPin": "Overlay TF - PIN",
+    "tfVac": "Overlay TF - VAC",
+    "uttOpen": "Underlay TT - OFFEN",
+    "uttClosed": "Underlay TT - GESCHLOSSEN",
+    "label_length": "Länge*",
+    "label_circumference": "Umfang*",
+    "ttCLockCushNote": "*Bei {{distance}} vom distalen Ende über dem Liner",
+    "ttCDistalNote": "*Über der oberen Dichtung oder unter dem umgeschlagenen Dichtungsring",
+    "ttLLockCushNote": "*Vom unteren Ende des Schafts bis zur posterioren proximalen Schnittlinie",
+    "ttLDistalNote": "*Von direkt über der oberen Dichtung oder unter dem umgeschlagenen Dichtungsring bis zur posterioren proximalen Schnittlinie",
+    "tfCPinNote": "*Bei {{distance}} vom distalen Ende über dem Liner",
+    "tfCVacNote": "*Über der oberen Dichtung oder unter dem umgeschlagenen Dichtungsring",
+    "tfLPinNote": "*Vom distalen Ende des Liners bis zum Perineum",
+    "tfLVacNote": "*Von direkt über der oberen Dichtung oder unter dem umgeschlagenen Dichtungsring bis zum Perineum",
+    "uttCOpenNote": "*Bei {{distance}} vom distalen Ende über der Haut",
+    "uttCClosedNote": "*Bei {{distance}} vom distalen Ende über der Haut",
+    "uttLOpenNote": "*Länge des zugeschnittenen Liners",
+    "uttLClosedNote": "*Länge des zugeschnittenen Liners",
+    "contact_line": "Wenn Ihre Maße außerhalb unseres Größenbereichs liegen, kontaktieren Sie uns bitte unter:",
+    "cta_ok": "OK",
+    "underlay_open_title": "Underlay TT - Offen",
+    "underlay_closed_title": "Underlay TT - Geschlossen",
+    "label_circumferenceDistal": "Umfang\n10 cm / 3,9 Zoll vom distalen Ende",
+    "label_circumferenceUpper": "Umfang\nOberer Liner",
+    "labelDistal": "Umfang distales Ende",
+    "labelProximal": "Umfang proximales Ende",
+    "silicone": "Silikon"
+  },
+  "contactForm": {
+    "question": "Benötigen Sie weitere Hilfe?",
+    "order": "Senden Sie uns eine Nachricht",
+    "question2": "Schreiben Sie uns eine Nachricht",
+    "order2": "Erklären Sie Ihr Problem, geben Sie uns Details und Ihre Kontaktinformationen",
 
-        "success": "Danke! Ihre Nachricht wurde empfangen.",
-        "labelMessage": "Ihre Nachricht",
-        "labelEmail": "Ihre E-Mail",
-        "placeholderMessage": "Beispielnachricht…",
-        "placeholderEmail": "beispiel@email.com",
+    "success": "Vielen Dank! Ihre Nachricht wurde empfangen.",
+    "labelMessage": "Ihre Nachricht",
+    "labelEmail": "Ihre E-Mail",
+    "placeholderMessage": "Beispielnachricht…",
+    "placeholderEmail": "beispiel@email.com",
 
-        "errorMessageRequired": "Bitte geben Sie eine Nachricht ein.",
-        "errorEmailRequired": "Bitte geben Sie eine E-Mail ein.",
-        "errorEmailInvalid": "Bitte geben Sie eine gültige E-Mail ein.",
+    "errorMessageRequired": "Bitte geben Sie eine Nachricht ein.",
+    "errorEmailRequired": "Bitte geben Sie eine E-Mail ein.",
+    "errorEmailInvalid": "Bitte geben Sie eine gültige E-Mail ein.",
 
-        "summaryHeadingDefault": "Basierend auf Ihren Antworten :",
-        "summaryProduct": "Produkt :",
-        "summaryIssue": "Problem :",
-        "summaryDetail": "Detail :",
+    "summaryHeadingDefault": "Basierend auf Ihren Antworten:",
+    "summaryProduct": "Produkt:",
+    "summaryIssue": "Problem:",
+    "summaryDetail": "Detail:",
 
-        "buttonSend": "Senden",
-        "submitError": "Wir konnten Ihre Nachricht nicht senden. Bitte versuchen Sie es erneut."
-    },
-    "redirectionPopup": {
-        "title": "Offenes Underlay nicht verfügbar",
-        "description_p1": "Es scheint, dass Ihre proximale Umfangsmaß außerhalb unseres Größenbereichs liegt <bold>das Glied ist zu konisch für das offene Underlay.</bold>",
-        "description_p2": "Bitte überprüfen Sie, ob Ihre Maße innerhalb der folgenden Bereiche Ihrer <bold>offenen Underlay-Größe.</bold> liegen",
-        "description_p3": "<bold>Andernfalls wählen Sie das geschlossene Underlay</bold>, indem Sie auf die Schaltfläche unten klicken und ein neues Größenverfahren starten",
-        "measured_size_label": "Gemessenes offenes Underlay :",
-        "table_header": "Maximaler proximaler Umfang (C2)*",
-        "table_footnote": "*Direkt über dem oberen Rand des zugeschnittenen Liners (auf der Haut).",
-        "cta": "Underlay Geschlossen",
-        "contact_line": "Wenn Sie uns helfen möchten, das geschlossene Underlay zu entwickeln, können Sie uns Ihre Gliedmaßenmaße senden an:"
-    },
-    "linerPopup": {
-        "title": "Hinweis",
-        "description": "Der Ethnocare Liner ist nur in Kanada erhältlich.",
-        "option1": "Zurück",
-        "option2": "Weiter"
-    },
-    "tooSmallPopup": {
-        "title": "Hinweis",
-        "description": "Unsere Gel-Liner sind länger als unsere Silikon-Liner. Wenn der Silikon-Liner zu klein ist, können Sie eine Gel-Option wählen.",
-        "description2": "Die Gel-Liner sind {{distance}} lang",
-        "gelButton": "Gel-Liner Größentabelle",
-        "homeButton": "Zurück zur Startseite",
-        "contact_line": "Wenn Sie uns helfen möchten oder weitere Fragen haben, können Sie uns kontaktieren unter:"
-    }
+    "buttonSend": "Senden",
+    "submitError": "Wir konnten Ihre Nachricht nicht senden. Bitte versuchen Sie es erneut."
+  },
+  "redirectionPopup": {
+    "title": "Underlay Offen nicht verfügbar",
+    "description": "Es scheint, dass Ihre Größe derzeit nicht verfügbar ist. Sie können jedoch das Underlay Geschlossen auswählen, indem Sie auf die Schaltfläche unten klicken.",
+    "description_p1": "Es scheint, dass Ihr proximaler Umfang außerhalb unseres Größenbereichs liegt. <bold>Ihr Stumpf ist möglicherweise zu konisch für das Underlay Offen.</bold>",
+    "description_p2": "Bitte überprüfen Sie, ob Ihre Maße innerhalb der folgenden Bereiche für <bold>Ihre Underlay-Offen-Größe.</bold> liegen",
+    "description_p3": "<bold>Andernfalls wählen Sie das Underlay Geschlossen</bold>, indem Sie auf die Schaltfläche unten klicken und einen neuen Größenbestimmungsvorgang starten.",
+    "measured_size_label": "Gemessenes Underlay Offen:",
+    "table_header": "Maximaler proximaler Umfang (C2)*",
+    "table_footnote": "*Direkt über dem oberen Rand des zugeschnittenen Liners (auf der Haut).",
+    "cta": "Underlay Geschlossen",
+    "contact_line": "Wenn Sie uns helfen möchten, den Größenbereich des Underlay Offen zu erweitern, können Sie uns Ihre Stumpfmaße senden an:"
+  },
+  "linerPopup": {
+    "title": "Hinweis",
+    "description": "Der Ethnocare Liner ist derzeit nur in Kanada erhältlich.",
+    "option1": "Zurück",
+    "option2": "Weiter"
+  },
+  "tooSmallPopup": {
+    "title": "Hinweis",
+    "description": "Unsere Gel-Liner sind länger als unsere Silikon-Liner. Wenn der Silikon-Liner zu klein ist, können Sie eine Gel-Option wählen.",
+    "description2": "Die Gel-Liner sind {{distance}} lang.",
+    "gelButton": "Größentabelle für Gel-Liner",
+    "homeButton": "Zurück zur Startseite",
+    "contact_line": "Wenn Sie uns helfen möchten oder weitere Fragen haben, können Sie uns kontaktieren unter:"
+  }
 }
