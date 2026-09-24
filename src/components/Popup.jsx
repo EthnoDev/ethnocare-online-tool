@@ -85,12 +85,22 @@ export default function Popup({ type, measurement, onClose }) {
     // TF OVERLAY
     // ----------------------------------------------------
     if (type === "tf") {
-      const isPin = suspension === "TF-pin";
-
       if (measurement === "length") {
         return [
           {
-            title: isPin ? t("popup.tfPin") : t("popup.tfVac"),
+            title: t("popup.tfPin"),
+            rows: [
+              {
+                label: t("popup.label_length"),
+                value: isImperial
+                  ? "Min : 5.9 in\nMax : None"
+                  : "Min : 15 cm\nMax : None",
+              },
+            ],
+            footnote: t("popup.tfLPinNote"),
+          },
+          {
+            title: t("popup.tfVac"),
             rows: [
               {
                 label: t("popup.label_length"),
@@ -99,9 +109,7 @@ export default function Popup({ type, measurement, onClose }) {
                   : "Min : 20 cm\nMax : None",
               },
             ],
-            footnote: isPin
-              ? t("popup.tfLPinNote")
-              : t("popup.tfLVacNote"),
+            footnote: t("popup.tfLVacNote"),
           },
         ];
       }
@@ -109,7 +117,7 @@ export default function Popup({ type, measurement, onClose }) {
       // Circumference
       return [
         {
-          title: isPin ? t("popup.tfPin") : t("popup.tfVac"),
+          title: t("popup.tfPin"),
           rows: [
             {
               label: t("popup.label_circumference"),
@@ -118,11 +126,21 @@ export default function Popup({ type, measurement, onClose }) {
                 : "Min : 32 cm\nMax : 62 cm",
             },
           ],
-          footnote: isPin
-            ? t("popup.tfCPinNote", {
-                distance: isImperial ? "3.1 in" : "8 cm",
-              })
-            : t("popup.tfCVacNote"),
+          footnote: t("popup.tfCPinNote", {
+            distance: isImperial ? "3.1 in" : "8 cm",
+          }),
+        },
+        {
+          title: t("popup.tfVac"),
+          rows: [
+            {
+              label: t("popup.label_circumference"),
+              value: isImperial
+                ? "Min : 12.6 in\nMax : 24.4 in"
+                : "Min : 32 cm\nMax : 62 cm",
+            },
+          ],
+          footnote: t("popup.tfCVacNote"),
         },
       ];
     }
