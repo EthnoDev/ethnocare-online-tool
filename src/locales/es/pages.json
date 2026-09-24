@@ -3,7 +3,7 @@
     "title": "Herramienta en línea Ethnocare",
     "description": "Seleccione la herramienta que desea usar",
     "option1": "Talla",
-    "description1": "La herramienta de talla tiene como objetivo guiarlo para encontrar la talla correcta del producto Ethnocare.",
+    "description1": "La herramienta de talla le ayuda a encontrar la talla correcta para su producto Ethnocare.",
     "option2": "Asistencia",
     "description2": "La herramienta de asistencia proporciona ayuda y soporte para el uso de los productos Ethnocare.",
     "option3": "Devolución",
@@ -11,50 +11,59 @@
     "option4": "FAQ",
     "description4": "La herramienta de preguntas frecuentes proporciona respuestas a las preguntas más comunes sobre los productos Ethnocare.",
     "option5": "Recomendación",
-    "description5": "La herramienta de recomendación lo ayuda a encontrar los mejores productos Ethnocare según sus necesidades."
+    "description5": "La herramienta de recomendación le ayuda a encontrar los productos Ethnocare más adecuados para sus necesidades."
   },
+
   "welcomeRecommendation": {
     "title": "Buscador de soluciones",
     "description": "Responda las siguientes preguntas para obtener una recomendación de producto personalizada",
     "startButton": "Comenzar"
   },
+
   "welcomeReturn": {
     "title": "Herramienta de devolución",
     "description": "Use esta herramienta para devolver un producto",
     "startButton": "Comenzar"
   },
+
   "identificationReturn": {
     "title": "Identificación",
-    "description": "¿Es usted un usuario/clínica o un distribuidor?",
+    "description": "¿Es usted un usuario/clínica o distribuidor?",
     "option1": "Usuario/Clínica",
     "option2": "Distribuidor"
   },
+
   "assistanceToolReturn": {
     "title": "Herramienta de asistencia",
     "descriptionClinic": "¿Probó los pasos de solución de problemas proporcionados en la herramienta de asistencia?",
-    "descriptionDistributor": "¿El remitente intentó los pasos de solución de problemas proporcionados en la herramienta de asistencia?",
+    "descriptionDistributor": "¿El cliente probó los pasos de solución de problemas proporcionados en la herramienta de asistencia?",
     "option1": "Sí, continuar",
     "option2": "No, intentemos"
   },
+
   "welcomeAssistance": {
     "title": "Herramienta de asistencia",
     "description": "Use esta herramienta para obtener ayuda y soporte para el uso de los productos Ethnocare",
     "startButton": "Comenzar"
   },
+
   "amputationAssistance": {
     "title": "Amputación",
     "description": "¿Cuál es su tipo de amputación?"
   },
+
   "productAssistance": {
     "title": "Producto",
     "description": "¿Con qué producto necesita ayuda?"
   },
+
   "assistanceAssistance": {
     "title": "Solicitud",
     "description": "¿Qué está buscando?",
     "option1": "Guía del usuario",
     "option2": "Asistencia"
   },
+
   "sizeAssistance": {
     "title": "Talla",
     "description": "¿Cuál es la talla de su producto?",
@@ -63,92 +72,113 @@
     "errorSide": "Por favor, elija un lado.",
     "errorSuspension": "Por favor, elija una suspensión."
   },
+
   "problemAssistance": {
     "title": "Problema",
     "description": "Seleccione el problema con su producto",
-    "pressurePoints": "Puntos de Presión",
-    "badFit": "Mala Adaptación",
-    "airLoss": "Pérdida de Aire",
+    "pressurePoints": "Puntos de presión",
+    "badFit": "Mal ajuste",
+    "airLoss": "Pérdida de aire",
     "overlaySlide": "Deslizamiento del Overlay",
     "inflationDeflation": "Inflado/Desinflado",
     "other": "Otro"
   },
+
   "pressurePointsAssistance": {
     "title": "Rotación",
-    "description": "Gire su Overlay entre 30 y 180 grados"
+    "description": "Gire su Overlay entre 30° y 180°"
   },
+
   "badFitAssistance": {
-    "title": "Mal Ajuste",
-    "description": "¿Cuál es el problema que encuentra con el ajuste de su producto?",
-    "option1": "Tamaño",
+    "title": "Mal ajuste",
+    "description": "¿Cuál es el problema que experimenta con el ajuste de su producto?",
+    "option1": "Talla",
     "option2": "Deslizamiento del Overlay",
-    "sizing": "Tamaño",
+    "sizing": "Talla",
     "overlay-movement": "Deslizamiento del Overlay"
   },
+
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",
     "description": "¿Su Overlay se desliza sobre su liner?",
     "slides-up": "Hacia arriba",
     "slides-down": "Hacia abajo",
     "shifts-sideways": "Rotación",
-    "rolls": "Dobladillo superior enrollándose hacia abajo"
+    "rolls": "El borde superior se enrolla hacia abajo"
   },
+
+  "stirrupAssistance": {
+    "title": "Estribo",
+    "imageDescription": "El estribo está diseñado específicamente para situaciones en las que la silicona integrada no es suficiente para mantener el Overlay en su lugar. Esta solución mantendrá su Overlay seguro durante todo el día."
+  },
+
   "otherAssistance": {
     "title": "Contáctenos",
     "description": "Parece que necesitamos más información para ayudarlo"
   },
+
   "welcomeSizing": {
     "title": "Herramienta de tallas",
-    "description": "Use esta herramienta para encontrar la talla de producto Ethnocare adecuada para usted",
+    "description": "Use esta herramienta para encontrar la talla correcta para su producto Ethnocare",
     "startButton": "Comenzar"
   },
+
   "unitsSizing": {
     "title": "Unidades",
     "description": "Seleccione sus unidades de medida preferidas",
     "option1": "Imperial (Pulgadas)",
     "option2": "Métrico (Centímetros)"
   },
+
   "amputationSizing": {
     "title": "Amputación",
     "description": "¿Cuál es su tipo de amputación?"
   },
+
   "productSizing": {
     "title": "Producto",
-    "description": "Seleccione el producto para el cual desea encontrar una talla"
+    "description": "Seleccione el producto que desea dimensionar"
   },
+
   "suspensionSizing": {
     "title": "Tipo de suspensión",
     "description": "Seleccione su sistema de suspensión"
   },
+
   "circumferenceTTSizing": {
     "title": "Circunferencia",
-    "description_metric": "Mida la circunferencia de su muñón a <bold>4 cm</bold> del extremo distal sobre el liner",
-    "description_imperial": "Mida la circunferencia de su muñón a <bold>1.5 pulgadas</bold> del extremo distal sobre el liner"
+    "description_metric": "Mida la circunferencia a <bold>4 cm</bold> del extremo distal sobre el liner",
+    "description_imperial": "Mida la circunferencia a <bold>1.5 in</bold> del extremo distal sobre el liner"
   },
+
   "circumferenceTTVacSizing": {
     "title": "Circunferencia",
-    "descriptionSingle": "Mida la circunferencia <bold>debajo</bold> del anillo de sellado reflejado",
+    "descriptionSingle": "Mida la circunferencia <bold>debajo</bold> del anillo de sellado replegado",
     "descriptionMulti": "Mida la circunferencia <bold>justo por encima del sello superior</bold>"
   },
+
   "lengthTTSizing": {
     "title": "Longitud",
-    "description": "Mida la longitud desde la parte <bold>inferior del socket</bold> hasta la línea de recorte proximal posterior",
+    "description": "Mida la longitud desde la <bold>parte inferior del socket</bold> hasta la línea de recorte proximal posterior",
     "note_title": "Paciente sin socket",
-    "note_body": "Si el usuario no está usando un socket, mida la longitud desde debajo del anillo de sellado reflejado hasta el punto medio del tendón rotuliano.<br/><br/>Esta medida puede ser ligeramente más larga que la línea de recorte proximal posterior del socket, por lo que si el paciente está entre dos tallas, elija la talla de Overlay más corta."
+    "note_body": "Si el usuario no está usando un socket, mida la longitud desde debajo del anillo de sellado replegado hasta el punto medio del tendón rotuliano.<br/><br/>Esta medida puede ser ligeramente más larga que la línea de recorte proximal posterior del socket, por lo que si el paciente está entre dos tallas, elija la talla de Overlay más corta."
   },
+
   "lengthTTVacSizing": {
     "title": "Longitud",
-    "descriptionSingle": "Mida la longitud <bold>debajo</bold> del anillo de sellado reflejado hasta la línea de recorte proximal posterior",
+    "descriptionSingle": "Mida la longitud <bold>debajo</bold> del anillo de sellado replegado hasta la línea de recorte proximal posterior",
     "descriptionMulti": "Mida la longitud <bold>justo por encima del sello superior</bold> hasta la línea de recorte proximal posterior",
     "note_title": "Paciente sin socket",
-    "note_body": "Si el usuario no está usando un socket, mida la longitud desde debajo del anillo de sellado reflejado hasta el punto medio del tendón rotuliano.<br/><br/>Esta medida puede ser ligeramente más larga que la línea de recorte proximal posterior del socket, por lo que si el paciente está entre dos tallas, elija la talla de Overlay más corta."
+    "note_body": "Si el usuario no está usando un socket, mida la longitud desde debajo del anillo de sellado replegado hasta el punto medio del tendón rotuliano.<br/><br/>Esta medida puede ser ligeramente más larga que la línea de recorte proximal posterior del socket, por lo que si el paciente está entre dos tallas, elija la talla de Overlay más corta."
   },
+
   "orientationTTSizing": {
     "title": "Orientación",
     "description": "Elija la posición de la bomba y la válvula",
-    "note_title": "La orientación se basa en la preferencia",
+    "note_title": "La orientación depende de la preferencia",
     "note_body": "La mayoría de los usuarios prefieren la bomba y la válvula en el lado lateral."
   },
+
   "TTSizing": {
     "title": "Talla",
     "description": "Basado en sus respuestas:",
@@ -160,24 +190,29 @@
     "email_title": "¡Guarde su selección!",
     "email_description": "Reciba al instante su código de producto y recursos de ajuste por correo electrónico."
   },
+
   "lengthTFSizing": {
     "title": "Longitud",
     "description": "Mida la longitud desde el <bold>extremo distal</bold> del liner hasta el periné"
   },
+
   "lengthTFVacSizing": {
     "title": "Longitud",
-    "descriptionSingle": "Mida la longitud <bold>debajo</bold> del anillo de sellado reflejado hasta el periné",
+    "descriptionSingle": "Mida la longitud <bold>debajo</bold> del anillo de sellado replegado hasta el periné",
     "descriptionMulti": "Mida la longitud <bold>justo por encima del sello superior</bold> hasta el periné"
   },
+
   "circumferenceTFSizing": {
     "title": "Circunferencia",
-    "description": "Mida la circunferencia a <bold>{{distance}}</bold> del extremo distal (sobre el liner)"
+    "description": "Mida la circunferencia a <bold>{{distance}}</bold> del extremo distal sobre el liner"
   },
+
   "circumferenceTFVacSizing": {
     "title": "Circunferencia",
-    "descriptionSingle": "Mida la circunferencia <bold>debajo</bold> del anillo de sellado reflejado",
+    "descriptionSingle": "Mida la circunferencia <bold>debajo</bold> del anillo de sellado replegado",
     "descriptionMulti": "Mida la circunferencia <bold>justo por encima del sello superior</bold>"
   },
+
   "TFSizing": {
     "title": "Talla",
     "description": "Basado en sus respuestas:",
@@ -188,35 +223,41 @@
     "email_title": "¡Guarde su selección!",
     "email_description": "Reciba al instante su código de producto y recursos de ajuste por correo electrónico.",
     "note_cushion_title": "Aviso importante",
-    "note_cushion_body": "Los sistemas de cojín pueden requerir modificaciones personalizadas del Overlay. Contáctenos en <bold>Clinics@ethnocare.ca</bold> con sus medidas y detalles sobre su sistema de suspensión."
+    "note_cushion_body": "Los sistemas Cushion pueden requerir modificaciones personalizadas del Overlay. Contáctenos en <bold>Clinics@ethnocare.ca</bold> con sus tallas y detalles sobre su sistema de suspensión."
   },
+
   "sealUnderlaySizing": {
     "title": "Selección de sello",
     "description": "Seleccione el diseño de su Underlay",
-    "open_description": "Recomendamos la posición de sellado abierta, ya que permite que el Underlay se adhiera por encima del liner y evacue el exceso de humedad.",
-    "closed_description": "Diseño más clásico para todos los tipos de suspensión",
+    "open_description": "Recomendamos el diseño Abierto, ya que permite que el Underlay sobresalga por encima del liner y libere el exceso de humedad.",
+    "closed_description": "Diseño más convencional para todos los tipos de suspensión",
     "closed_exception": "El Underlay Cerrado es el único diseño disponible para su tipo de suspensión."
   },
+
   "lengthUnderlaySizing": {
     "title": "Longitud",
-    "description": "Mida la longitud de su liner recortado"
+    "description": "Mida la longitud del liner recortado"
   },
+
   "circumferenceUnderlaySizing": {
     "title": "Circunferencia",
     "title2": "Circunferencia (C1)",
     "description": "Mida la circunferencia a <bold>{{distance}}</bold> del extremo distal (sobre la piel)."
   },
+
   "circumference2UnderlaySizing": {
     "title": "Circunferencia (C2)",
     "description": "Mida la circunferencia <bold>justo por encima del borde superior</bold> del liner recortado (sobre la piel)."
   },
+
   "siliconeUnderlaySizing": {
     "title": "Silicona",
     "description": "Opcional para mayor agarre",
-    "image_caption": "Puede optar por agregar silicona para mayor agarre en el liner y el muñón. Se recomienda si le preocupa el movimiento del Underlay.",
+    "image_caption": "Puede optar por agregar silicona para mayor agarre en el liner y el muñón. Esta opción se recomienda para las personas preocupadas por el movimiento del Underlay en el miembro.",
     "option1": "Con silicona",
     "option2": "Sin silicona"
   },
+
   "UnderlaySizing": {
     "title": "Talla",
     "description": "Basado en sus respuestas:",
@@ -227,43 +268,50 @@
     "seal": "Diseño",
     "silicone": "Silicona",
     "note_title": "Aviso importante",
-    "note_body_closed": "Asegúrese de que el Underlay Cerrado esté <bold>{{measurement}}</bold> por debajo del borde superior del liner.",
-    "note_body_open": "Asegúrese de que el Underlay Abierto esté <bold>{{measurement}}</bold> desde el extremo distal.",
+    "note_body_closed": "Asegúrese de que el Underlay Cerrado se encuentre <bold>{{measurement}}</bold> por debajo del borde superior del liner.",
+    "note_body_open": "Asegúrese de que el Underlay Abierto se encuentre a <bold>{{measurement}}</bold> del extremo distal.",
     "email_title": "¡Guarde su selección!",
     "email_description": "Reciba al instante su código de producto y recursos de ajuste por correo electrónico."
   },
+
   "activityLevelLinerSizing": {
     "title": "Nivel de actividad",
     "description": "Seleccione su nivel de actividad",
-    "k1_description": "Ambulante doméstico limitado; camina en superficies planas",
+    "k1_description": "Ambulante doméstico limitado; camina sobre superficies planas",
     "k2_description": "Capacidad para atravesar bordillos, escaleras o superficies irregulares",
     "k3_description": "Ambulante comunitario; cadencia variada, atraviesa la mayoría de las barreras",
     "k4_description": "Usuario de alto impacto; adulto activo, atleta o niño"
   },
+
   "materialLinerSizing": {
     "title": "Material",
     "description": "Seleccione el material de su liner",
     "notice": "Solo un material está disponible para su amputación y nivel de actividad."
   },
+
   "circumferenceLinerSizing": {
     "title": "Circunferencia",
     "description": "Mida la circunferencia a <bold>{{distance}}</bold> del extremo distal"
   },
+
   "lengthLinerSizing": {
     "title": "Longitud",
-    "description":"Tenga en cuenta que nuestros liners son {{distance}}. Verifique que no necesite un tamaño más largo."
+    "description": "Tenga en cuenta que nuestros liners miden {{distance}} de largo. Verifique que no necesite una talla más larga."
   },
+
   "suspensionLinerSizing": {
     "title": "Suspensión",
     "description": "Seleccione su sistema de suspensión",
-    "notice":"Solo un sistema de suspensión está disponible para su configuración seleccionada."
+    "notice": "Solo un sistema de suspensión está disponible para su configuración seleccionada."
   },
+
   "thicknessLinerSizing": {
     "title": "Grosor del perfil",
-    "description": "Seleccione el diseño de su sistema de suspensión",
+    "description": "Seleccione el grosor del perfil del liner",
     "description2": "Seleccione un grosor para ver la sección transversal",
     "error": "Por favor, elija un grosor."
   },
+
   "LinerSizing": {
     "title": "Talla",
     "description": "Basado en sus respuestas:",
@@ -271,7 +319,7 @@
     "activityLevel": "Nivel de actividad",
     "material": "Material",
     "circumference": "Circunferencia",
-    "length": "Longitud liner: ",
+    "length": "Longitud del liner: ",
     "suspension": "Suspensión",
     "thickness": "Grosor",
     "prodDocTitle": "Documentación del producto",
