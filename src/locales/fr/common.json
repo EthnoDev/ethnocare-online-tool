@@ -7,8 +7,8 @@
     "confirm": "CONFIRMER",
     "restart": "Trouver une nouvelle taille",
     "sizings": "Tailles en PDF",
-    "sizingsPopup": "Guide des Tailles en PDF",
-    "header":"CODE DE REMBOURSEMENT OVERLAY : L-5657 (USA)",
+    "sizingsPopup": "Guides des tailles en PDF",
+    "header": "CODE DE REMBOURSEMENT OVERLAY: L-5657 (USA)",
     "circumference": "Circonférence",
     "length": "Longueur",
     "orientation": "Côté",
@@ -47,8 +47,8 @@
     "liner tf": "Liner Transfémoral"
   },
   "units": {
-    "imperial": "Impérial (Pouce)",
-    "metric": "Métrique (Centimètre)"
+    "imperial": "Impérial (Pouces)",
+    "metric": "Métrique (Centimètres)"
   },
   "suspension": {
     "title": "Choisissez votre suspension",
@@ -57,7 +57,7 @@
     "tt-suspension-sleeve": "Gaine de suspension",
     "tt-distal-seal": "Joint distal",
     "tt-distal-lanyard": "Lanière distale",
-    "tt-cushion": "Coussin",
+    "tt-cushion": "Cushion",
     "tt-single-seal": "Joint simple",
     "tt-multi-seal": "Joints multiples",
 
@@ -69,7 +69,7 @@
     "tf-multi-seal": "Joints multiples",
 
     "pin": "Pin",
-    "cushion": "Coussin"
+    "cushion": "Cushion"
   },
   "orientation": {
     "left": "Gauche",
@@ -79,13 +79,13 @@
     "up": "Vers le haut",
     "down": "Vers le bas",
     "rotate": "Rotation",
-    "roll": "Roulement de l'ourlet supérieur vers le bas"
+    "roll": "L'ourlet supérieur roule vers le bas"
   },
   "seal": {
     "open-seal": "Ouvert",
     "closed-seal": "Fermé",
-    "open-title": "Joint Ouvert",
-    "closed-title": "Joint Fermé"
+    "open-title": "Joint ouvert",
+    "closed-title": "Joint fermé"
   },
   "silicone": {
     "yes-silicone": "Oui",
@@ -93,51 +93,52 @@
   },
   "footer": {
     "select_language": "Sélectionnez votre langue",
-    "sizing_pdfs_title": "Guide des Tailles en PDF :",
-    "contact_us": "Contactez-nous :",
-    "mail":"Mail : ",
-    "phone":"Téléphone : "
+    "sizing_pdfs_title": "Guides des tailles en PDF:",
+    "contact_us": "Contactez-nous:",
+    "mail": "Courriel:",
+    "phone": "Téléphone:"
   },
-  "inputs": { "enter_measurement": "Saisir la mesure",
-   "additional_instruction": "Instruction supplémentaire"
+  "inputs": {
+    "enter_measurement": "Saisir la mesure",
+    "additional_instruction": "Instruction supplémentaire"
   },
   "email": {
     "placeholder": "exemple@courriel.com",
     "send": "Envoyer",
     "please_wait": "Veuillez patienter...",
-    "success": "Merci! Votre soumission a été reçue!"
+    "success": "Merci ! Votre soumission a été reçue !"
   },
   "popup": {
-    "notice_title": "Taille Indisponible",
+    "notice_title": "Taille indisponible",
     "notice_description": "Il semble que nous n'ayons actuellement pas de taille correspondant à vos mesures. Veuillez vérifier que vos mesures se situent dans les plages suivantes:",
-    "ttLockCush": "Overlay TT - Verrouillage & Cushion",
-    "ttDistal": "Overlay TT - Joint Distal",
-    "tfPin":"Overlay TF - PIN",
+    "ttLockCush": "Overlay TT - Verrouillage et Cushion",
+    "ttDistal": "Overlay TT - Joint distal",
+    "tfPin": "Overlay TF - PIN",
     "tfVac": "Overlay TF - VAC",
     "uttOpen": "Underlay TT - OUVERT",
     "uttClosed": "Underlay TT - FERMÉ",
     "label_length": "Longueur*",
     "label_circumference": "Circonférence*",
     "ttCLockCushNote": "*À {{distance}} de l'extrémité distale sur le manchon",
-    "ttCDistalNote": "*Au-dessus du joint supérieur ou sous l'anneau de scellement réfléchi",
+    "ttCDistalNote": "*Au-dessus du joint supérieur ou sous l'anneau d'étanchéité replié",
     "ttLLockCushNote": "*Du bas de la douille à la ligne de coupe postérieure proximale",
-    "ttLDistalNote": "*De juste au-dessus du joint supérieur ou sous l'anneau de scellement réfléchi à la ligne de coupe postérieure proximale",
+    "ttLDistalNote": "*De juste au-dessus du joint supérieur ou sous l'anneau d'étanchéité replié à la ligne de coupe postérieure proximale",
     "tfCPinNote": "*À {{distance}} de l'extrémité distale sur le manchon",
-    "tfCVacNote": "*Au-dessus du joint supérieur ou sous l'anneau de scellement réfléchi",
+    "tfCVacNote": "*Au-dessus du joint supérieur ou sous l'anneau d'étanchéité replié",
     "tfLPinNote": "*De l'extrémité distale du manchon au périnée",
-    "tfLVacNote": "*De juste au-dessus du joint supérieur ou sous l'anneau de scellement réfléchi au périnée",
+    "tfLVacNote": "*De juste au-dessus du joint supérieur ou sous l'anneau d'étanchéité replié au périnée",
     "uttCOpenNote": "*À {{distance}} de l'extrémité distale sur la peau",
     "uttCClosedNote": "*À {{distance}} de l'extrémité distale sur la peau",
     "uttLOpenNote": "*Longueur du manchon coupé",
     "uttLClosedNote": "*Longueur du manchon coupé",
-    "contact_line": "Si vos mesures se trouvent en dehors de notre gamme de tailles, veuillez nous contacter à :",
+    "contact_line": "Si vos mesures se trouvent en dehors de notre gamme de tailles, veuillez nous contacter à:",
     "cta_ok": "OK",
     "underlay_open_title": "Underlay TT - Ouvert",
     "underlay_closed_title": "Underlay TT - Fermé",
-    "label_circumferenceDistal": "Circonférence\n10 cm / 3.9 Inch de l'extrémité distale",
+    "label_circumferenceDistal": "Circonférence\n10 cm / 3,9 pouces de l'extrémité distale",
     "label_circumferenceUpper": "Circonférence\nManchon supérieur",
-    "labelDistal": "Circonférence Extrémité Distale",
-    "labelProximal": "Circonférence Extrémité Proximale",
+    "labelDistal": "Circonférence extrémité distale",
+    "labelProximal": "Circonférence extrémité proximale",
     "silicone": "Silicone"
   },
   "contactForm": {
@@ -148,46 +149,46 @@
 
     "success": "Merci ! Votre message a été reçu.",
     "labelMessage": "Votre message",
-    "labelEmail": "Votre email",
+    "labelEmail": "Votre courriel",
     "placeholderMessage": "Exemple de message…",
     "placeholderEmail": "contact@mail.com",
 
     "errorMessageRequired": "Veuillez entrer un message.",
-    "errorEmailRequired": "Veuillez entrer un email.",
-    "errorEmailInvalid": "Veuillez entrer un email valide.",
+    "errorEmailRequired": "Veuillez entrer une adresse courriel.",
+    "errorEmailInvalid": "Veuillez entrer une adresse courriel valide.",
 
-    "summaryHeadingDefault": "En fonction de vos réponses :",
-    "summaryProduct": "Produit :",
-    "summaryIssue": "Problème :",
-    "summaryDetail": "Détail :",
+    "summaryHeadingDefault": "En fonction de vos réponses:",
+    "summaryProduct": "Produit:",
+    "summaryIssue": "Problème:",
+    "summaryDetail": "Détail:",
 
     "buttonSend": "Envoyer",
     "submitError": "Nous n'avons pas pu envoyer votre message. Veuillez réessayer."
   },
   "redirectionPopup": {
     "title": "Underlay Ouvert indisponible",
-    "description": "Il semble que nous n’ayons pas votre taille pour le moment, cependant vous pouvez choisir l'underlay fermé en cliquant sur le bouton ci-dessous",
-    "description_p1": "Il semble que votre mesure de circonférence proximale se situe en dehors de notre gamme de tailles <bold>le membre est trop conique pour l'Underlay Ouvert.</bold>",
-    "description_p2": "Veuillez vérifier que vos mesures se situent dans les plages suivantes de <bold>votre taille d'underlay ouvert.</bold>",
+    "description": "Il semble que nous n'ayons pas votre taille disponible pour le moment. Cependant, vous pouvez choisir l'Underlay Fermé en cliquant sur le bouton ci-dessous.",
+    "description_p1": "Il semble que votre mesure de circonférence proximale se situe en dehors de notre gamme de tailles. <bold>Votre membre est peut-être trop conique pour l'Underlay Ouvert.</bold>",
+    "description_p2": "Veuillez vérifier que vos mesures se situent dans les plages suivantes pour <bold>votre taille d'Underlay Ouvert.</bold>",
     "description_p3": "<bold>Sinon, choisissez l'Underlay Fermé</bold> en cliquant sur le bouton ci-dessous et commencez une nouvelle procédure de dimensionnement.",
-    "measured_size_label": "Underlay ouvert mesuré :",
+    "measured_size_label": "Underlay Ouvert mesuré:",
     "table_header": "Circonférence proximale maximale (C2)*",
     "table_footnote": "*Juste au-dessus du bord supérieur du manchon découpé (sur la peau).",
     "cta": "Underlay Fermé",
-    "contact_line": "Si vous souhaitez nous aider à développer l’underlay fermé, vous pouvez nous envoyer les mesures de votre membre à :"
+    "contact_line": "Si vous souhaitez nous aider à élargir la gamme de tailles de l'Underlay Ouvert, vous pouvez nous envoyer les mesures de votre membre à:"
   },
   "linerPopup": {
     "title": "Avis",
-    "description": "Le Liner Ethnocare est seulement disponible à l'achat au Canada.",
+    "description": "Le Liner Ethnocare est actuellement disponible à l'achat uniquement au Canada.",
     "option1": "Retour",
     "option2": "Continuer"
   },
   "tooSmallPopup": {
     "title": "Avis",
     "description": "Nos manchons en gel sont plus longs que nos manchons en silicone. Si le manchon en silicone est trop petit, vous pouvez opter pour une option en gel.",
-    "description2": "Les manchons en gel mesurent {{distance}} de long",
+    "description2": "Les manchons en gel mesurent {{distance}} de long.",
     "gelButton": "Guide des tailles des manchons en gel",
     "homeButton": "Retour à l'accueil",
-    "contact_line": "Si vous souhaitez nous aider ou avez des questions supplémentaires, vous pouvez nous contacter à :"
+    "contact_line": "Si vous souhaitez nous aider ou avez des questions supplémentaires, vous pouvez nous contacter à:"
   }
 }
