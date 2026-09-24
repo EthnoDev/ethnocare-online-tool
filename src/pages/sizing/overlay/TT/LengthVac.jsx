@@ -99,7 +99,7 @@ export default function LengthVac() {
                     components={{ 
                       bold: <strong className="font-bold text-black" />,
                       underline: <span className="underline" />,
-                      br: <br />
+                      br: <span className="block mt-2" />
                     }}
                   />
                 </p>
