@@ -4,14 +4,9 @@ import RedirectLogo from "../assets/redirect-logo.svg";
 import PageTransitionWrapper from "./PageTransitionWrapper";
 import { useTranslation } from "react-i18next";
 
-export default function SizingPdfPopup({
-  onClose,
-  ttPdfPath,
-  tfPdfPath,
-  underlayTtPdfPath,
-}) {
+export default function SizingPdfPopup({ onClose }) {
+  const { t } = useTranslation("common");
 
-    const { t, i18n } = useTranslation("common");
   // Close on Escape
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose?.();
@@ -39,6 +34,12 @@ export default function SizingPdfPopup({
       />
     </button>
   );
+
+  const pdfs = {
+    overlayTT: "/Sizing Charts/OVTT_SIZING-CHART_EN.pdf",
+    overlayTF: "/Sizing Charts/OVTF_SIZING-CHART_EN.pdf",
+    underlayTT: "/Sizing Charts/UDTT_SIZING-CHART_EN.pdf",
+  };
 
   return (
     <>
@@ -69,19 +70,21 @@ export default function SizingPdfPopup({
             </button>
 
             {/* Title */}
-            <p className="text-2xl mt-3 font-bold">{t("cta.sizingsPopup")}</p>
+            <p className="text-2xl mt-3 font-bold">
+              {t("cta.sizingsPopup")}
+            </p>
 
             {/* Overlay */}
             <p className="text-xl mt-3 font-semibold">Overlay</p>
             <div className="space-y-1 flex flex-col items-center">
-              <LinkRow label="Overlay TT" url={ttPdfPath} />
-              <LinkRow label="Overlay TF" url={tfPdfPath} />
+              <LinkRow label="Overlay TT" url={pdfs.overlayTT} />
+              <LinkRow label="Overlay TF" url={pdfs.overlayTF} />
             </div>
 
             {/* Underlay */}
             <p className="text-xl mt-3 font-semibold">Underlay</p>
             <div className="space-y-1 flex flex-col items-center">
-              <LinkRow label="Underlay TT" url={underlayTtPdfPath} />
+              <LinkRow label="Underlay TT" url={pdfs.underlayTT} />
             </div>
           </div>
         </PageTransitionWrapper>
