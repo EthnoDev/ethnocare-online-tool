@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
 
 // assets
-import TT from "../../assets/amputation/transtibial.png";
-import TF from "../../assets/amputation/transfemoral.png";
-import TF_FR from "../../assets/amputation/transfemoral_FR.png";
+import TT from "../../assets/amputation/transtibial.svg";
+import TF from "../../assets/amputation/transfemoral.svg";
+import TF_FR from "../../assets/amputation/transfemoral_FR.svg";
 
 export default function SizingAmputationSelection() {
   const navigate = useNavigate();
