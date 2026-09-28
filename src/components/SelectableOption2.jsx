@@ -28,15 +28,15 @@ export default function SelectableOption2({
         // color branches – keep ALL color classes inside the conditional
         selected
           ? "bg-[#090C41] text-white border border-[#090C41]"
-          : "bg-[#D9D9D9] text-black border border-gray-300 hover:border-black",
+          : "bg-white text-black border border-gray-300 hover:border-black",
         className,
       ].join(" ")}
     >
       {/* Checkbox (scaled a bit smaller to fit fixed height) */}
         <span
         className={[
-            "grid place-items-center w-5 h-5 rounded-md border transition-colors",
-            selected ? "border-white bg-white/10" : "border-black bg-[#D9D9D9]",
+            "grid place-items-center w-4.5 h-4.5 rounded-full border transition-colors",
+            selected ? "border-white bg-white/10" : "border-black bg-white",
         ].join(" ")}
         aria-hidden="true"
         >
