@@ -22,6 +22,10 @@ export default function AirLoss() {
           playsInline
           className="w-full h-auto mt-8 rounded-xl"
         />
+
+        <p className="mt-2 text-center text-xl font-semibold">
+          {t("airLossAssistance.demand")}
+        </p>
       </div>
     </PageWrapper>
   );

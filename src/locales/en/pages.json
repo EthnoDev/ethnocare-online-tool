@@ -80,7 +80,8 @@
   },
   "airLossAssistance": {
     "title": "Leak Testing",
-    "description": "Follow the instuctions on the video below carefully"
+    "description": "Follow the instuctions on the video below carefully",
+    "demand": "Once completed choose the issue:"
   },
   "badFitAssistance": {
     "title": "Bad Fit",

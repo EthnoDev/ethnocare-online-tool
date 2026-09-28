@@ -92,7 +92,8 @@
 
   "airLossAssistance": {
     "title": "Prueba de fuga",
-    "description": "Siga cuidadosamente las instrucciones del video a continuación"
+    "description": "Siga cuidadosamente las instrucciones del video a continuación",
+    "demand": "Una vez completado, elija el problema:"
   },
   "badFitAssistance": {
     "title": "Mal ajuste",

@@ -92,7 +92,8 @@
 
   "airLossAssistance": {
     "title": "Dichtigkeitstest",
-    "description": "Befolgen Sie die Anweisungen im Video unten sorgfältig"
+    "description": "Befolgen Sie die Anweisungen im Video unten sorgfältig",
+    "demand": "Sobald abgeschlossen, wählen Sie das Problem aus:"
   },
   "badFitAssistance": {
     "title": "Schlechte Passform",

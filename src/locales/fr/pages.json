@@ -92,7 +92,8 @@
 
   "airLossAssistance": {
     "title": "Test de fuite",
-    "description": "Suivez attentivement les instructions de la vidéo ci-dessous"
+    "description": "Suivez attentivement les instructions de la vidéo ci-dessous",
+    "demand": "Une fois terminé, choisissez le problème:"
   },
   "badFitAssistance": {
     "title": "Mauvais ajustement",
