@@ -77,6 +77,7 @@
     "title": "Problème",
     "description": "Sélectionnez le problème avec votre produit",
     "pressurePoints": "Points de pression",
+    "tibialPressurePoint": "Point de pression tibial",
     "badFit": "Mauvais ajustement",
     "airLoss": "Perte d'air",
     "overlaySlide": "Glissement de l'Overlay",
