@@ -81,7 +81,10 @@
   "airLossAssistance": {
     "title": "Leak Testing",
     "description": "Follow the instuctions on the video below carefully",
-    "demand": "Once completed choose the issue:"
+    "demand": "Once completed choose the issue:",
+    "valve": "Bubbles coming from the Valve",
+    "pump": "Bubbles coming from the Pump",
+    "none": "No bubbles or they are coming from elsewhere"
   },
   "badFitAssistance": {
     "title": "Bad Fit",

@@ -93,7 +93,10 @@
   "airLossAssistance": {
     "title": "Dichtigkeitstest",
     "description": "Befolgen Sie die Anweisungen im Video unten sorgfältig",
-    "demand": "Sobald abgeschlossen, wählen Sie das Problem aus:"
+    "demand": "Sobald abgeschlossen, wählen Sie das Problem aus:",
+    "valve": "Blasen kommen aus dem Ventil",
+    "pump": "Blasen kommen aus der Pumpe",
+    "none": "Es kommen keine Luftblasen oder sie kommen von woanders"
   },
   "badFitAssistance": {
     "title": "Schlechte Passform",

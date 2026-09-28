@@ -93,7 +93,10 @@
   "airLossAssistance": {
     "title": "Prueba de fuga",
     "description": "Siga cuidadosamente las instrucciones del video a continuación",
-    "demand": "Una vez completado, elija el problema:"
+    "demand": "Una vez completado, elija el problema:",
+    "valve": "Salen burbujas de la Válvula",
+    "pump": "Salen burbujas de la Bomba",
+    "none": "No hay burbujas o provienen de otro lugar"
   },
   "badFitAssistance": {
     "title": "Mal ajuste",

@@ -93,7 +93,10 @@
   "airLossAssistance": {
     "title": "Test de fuite",
     "description": "Suivez attentivement les instructions de la vidéo ci-dessous",
-    "demand": "Une fois terminé, choisissez le problème:"
+    "demand": "Une fois terminé, choisissez le problème:",
+    "valve": "Bulles sortent de la Valve",
+    "pump": "Bulles sortent de la Pompe",
+    "none": "Pas de bulles ou elles proviennent d'ailleurs"
   },
   "badFitAssistance": {
     "title": "Mauvais ajustement",
