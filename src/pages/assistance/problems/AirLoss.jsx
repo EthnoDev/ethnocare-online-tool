@@ -14,8 +14,14 @@ export default function AirLoss() {
     if (selected) return;
 
     setSelected(option);
+    localStorage.setItem("detail", option);
+    localStorage.setItem("detail_key", `pages:airLossAssistance.${option}`);
 
-    if (option === "valve" || option === "none") {
+    if (option === "pump") {
+      setTimeout(() => {
+        navigate("/assistance/problem/pump-maintenance");
+      }, 200);
+    } else if (option === "valve" || option === "none") {
       setTimeout(() => {
         navigate("/assistance/problem/other");
       }, 200);

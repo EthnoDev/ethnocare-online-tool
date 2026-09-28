@@ -98,6 +98,10 @@
     "pump": "Salen burbujas de la Bomba",
     "none": "No hay burbujas o provienen de otro lugar"
   },
+  "pumpMaintenanceAssistance": {
+    "title": "Mantenimiento de la bomba",
+    "description": "Describa el problema de mantenimiento de su bomba."
+  },
   "badFitAssistance": {
     "title": "Mal ajuste",
     "description": "¿Cuál es el problema que experimenta con el ajuste de su producto?",

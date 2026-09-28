@@ -56,6 +56,7 @@ import AssistanceMoving from "./pages/assistance/problems/Moving";
 import AssistanceStirrup from "./pages/assistance/problems/Stirrup";
 import AssistanceOther from "./pages/assistance/problems/Other";
 import AssistanceAirLoss from "./pages/assistance/problems/AirLoss";
+import AssistancePumpMaintenance from "./pages/assistance/problems/PumpMaintenance";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -96,6 +97,7 @@ function AnimatedRoutes() {
         <Route path="/assistance/problem/stirrup" element={<AssistanceStirrup />} />
         <Route path="/assistance/problem/other" element={<AssistanceOther />} />
         <Route path="/assistance/problem/air-loss" element={<AssistanceAirLoss />} />
+        <Route path="/assistance/problem/pump-maintenance" element={<AssistancePumpMaintenance />} />
         <Route path="/sizing/underlay/seal" element={<SizingUnderlaySealSelection />} />
         <Route path="/sizing/underlay/length" element={<SizingUnderlayLength />} />
         <Route path="/sizing/underlay/circumference" element={<SizingUnderlayCircumference />} />

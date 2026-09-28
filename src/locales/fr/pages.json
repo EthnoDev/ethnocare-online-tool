@@ -98,6 +98,10 @@
     "pump": "Bulles sortent de la Pompe",
     "none": "Pas de bulles ou elles proviennent d'ailleurs"
   },
+  "pumpMaintenanceAssistance": {
+    "title": "Entretien de la pompe",
+    "description": "Décrivez le problème d'entretien de votre pompe."
+  },
   "badFitAssistance": {
     "title": "Mauvais ajustement",
     "description": "Quel est le problème que vous rencontrez avec l'ajustement de votre produit ?",

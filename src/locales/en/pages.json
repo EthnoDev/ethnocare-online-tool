@@ -86,6 +86,10 @@
     "pump": "Bubbles coming from the Pump",
     "none": "No bubbles or they are coming from elsewhere"
   },
+  "pumpMaintenanceAssistance": {
+    "title": "Pump Maintenance",
+    "description": "Please describe the maintenance issue with your pump."
+  },
   "badFitAssistance": {
     "title": "Bad Fit",
     "description": "What is the problem you are experiencing with the fit of your product?",
