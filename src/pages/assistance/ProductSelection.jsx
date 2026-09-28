@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
+import LinerPopup from "../../components/LinerRedirectionPopup";
 
 // product images
 import OverlayImg from "../../assets/products/overlay.png";
@@ -10,11 +12,18 @@ import LinerImg from "../../assets/products/liner.png";
 export default function ProductSelection() {
   const navigate = useNavigate();
   const { t } = useTranslation("pages");
+  const [showLinerPopup, setShowLinerPopup] = useState(false);
   
   // Retrieve the amputation type to filter available products
   const amputation = localStorage.getItem("amputation");
 
   const handleSelect = (productName) => {
+    if (productName === "liner") {
+      localStorage.setItem("product", productName);
+      setShowLinerPopup(true);
+      return;
+    }
+
     // Save the selection to localStorage
     localStorage.setItem("product", productName);
 
@@ -22,6 +31,11 @@ export default function ProductSelection() {
     setTimeout(() => {
       navigate("/assistance/selection");
     }, 200);
+  };
+
+  const handleConfirmLiner = () => {
+    setShowLinerPopup(false);
+    setTimeout(() => navigate("/assistance/selection"), 200);
   };
 
   return (
@@ -84,6 +98,13 @@ export default function ProductSelection() {
           </button>
         </div>
       </div>
+
+      {showLinerPopup && (
+        <LinerPopup
+          onClose={() => setShowLinerPopup(false)}
+          onConfirm={handleConfirmLiner}
+        />
+      )}
     </PageWrapper>
   );
 }
