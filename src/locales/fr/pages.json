@@ -90,6 +90,10 @@
     "description": "Faites pivoter votre Overlay entre 30° et 180°"
   },
 
+  "airLossAssistance": {
+    "title": "Test de fuite",
+    "description": "Suivez attentivement les instructions de la vidéo ci-dessous"
+  },
   "badFitAssistance": {
     "title": "Mauvais ajustement",
     "description": "Quel est le problème que vous rencontrez avec l'ajustement de votre produit ?",

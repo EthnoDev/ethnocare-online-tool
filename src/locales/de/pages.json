@@ -90,6 +90,10 @@
     "description": "Drehen Sie Ihr Overlay zwischen 30° und 180°"
   },
 
+  "airLossAssistance": {
+    "title": "Dichtigkeitstest",
+    "description": "Befolgen Sie die Anweisungen im Video unten sorgfältig"
+  },
   "badFitAssistance": {
     "title": "Schlechte Passform",
     "description": "Welches Problem haben Sie mit der Passform Ihres Produkts?",

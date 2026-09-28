@@ -90,6 +90,10 @@
     "description": "Gire su Overlay entre 30° y 180°"
   },
 
+  "airLossAssistance": {
+    "title": "Prueba de fuga",
+    "description": "Siga cuidadosamente las instrucciones del video a continuación"
+  },
   "badFitAssistance": {
     "title": "Mal ajuste",
     "description": "¿Cuál es el problema que experimenta con el ajuste de su producto?",
