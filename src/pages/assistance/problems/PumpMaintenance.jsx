@@ -1,10 +1,18 @@
 import PageWrapper from "../../../components/PageWrapper";
 import SelectableOption from "../../../components/SelectableOption";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import leakTestVideo from "../../../assets/videos/leak-test.mp4";
 
 export default function PumpMaintenance() {
+  const navigate = useNavigate();
   const { t } = useTranslation("pages");
+
+  const handleNext = () => {
+    setTimeout(() => {
+      navigate("/assistance/problem/return");
+    }, 200);
+  };
 
   return (
     <PageWrapper showBack={true} backTo="/assistance/problem/air-loss">
@@ -27,6 +35,7 @@ export default function PumpMaintenance() {
         <div className="mt-6">
           <SelectableOption
             label={t("pumpMaintenanceAssistance.next")}
+            onClick={handleNext}
           />
         </div>
       </div>

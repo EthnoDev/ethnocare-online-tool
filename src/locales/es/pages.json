@@ -104,6 +104,10 @@
     "description": "Siga las instrucciones en el video a continuación",
     "next": "Procedimiento completado"
   },
+  "returnAssistance": {
+    "title": "Devolución",
+    "description": "Siga las instrucciones de devolución de su producto."
+  },
 
   "badFitAssistance": {
     "title": "Mal ajuste",
