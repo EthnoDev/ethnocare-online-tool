@@ -157,7 +157,7 @@ export default function ContactForm({
                 rows={5}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className={`w-full rounded-md border px-4 py-3 text-sm outline-none placeholder-gray-400 focus:ring-2 focus:border-transparent ${
+                className={`w-full rounded-md border bg-white px-4 py-3 text-sm outline-none placeholder-gray-400 focus:ring-2 focus:border-transparent ${
                   errors.message
                     ? "border-red-400 focus:ring-red-400"
                     : "border-gray-200 focus:ring-[#090C41]"
@@ -180,7 +180,7 @@ export default function ContactForm({
                 )}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={`w-full h-10 rounded-md border px-4 text-sm outline-none placeholder-gray-400 focus:ring-2 focus:border-transparent ${
+                className={`w-full h-10 rounded-md border bg-white px-4 text-sm outline-none placeholder-gray-400 focus:ring-2 focus:border-transparent ${
                   errors.email
                     ? "border-red-400 focus:ring-red-400"
                     : "border-gray-200 focus:ring-[#090C41]"
