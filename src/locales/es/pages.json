@@ -101,7 +101,8 @@
 
   "pumpMaintenanceAssistance": {
     "title": "Mantenimiento de la bomba",
-    "description": "Siga las instrucciones en el video a continuación"
+    "description": "Siga las instrucciones en el video a continuación",
+    "next": "Procedimiento completado"
   },
 
   "badFitAssistance": {

@@ -88,7 +88,8 @@
   },
   "pumpMaintenanceAssistance": {
     "title": "Pump Maintenance",
-    "description": "Follow the instuctions in the video below"
+    "description": "Follow the instuctions in the video below",
+    "next": "Procedure Completed"
   },
   "badFitAssistance": {
     "title": "Bad Fit",

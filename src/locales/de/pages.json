@@ -101,7 +101,8 @@
 
   "pumpMaintenanceAssistance": {
     "title": "Pumpenwartung",
-    "description": "Befolgen Sie die Anweisungen im Video unten"
+    "description": "Befolgen Sie die Anweisungen im Video unten",
+    "next": "Verfahren abgeschlossen"
   },
 
   "badFitAssistance": {
