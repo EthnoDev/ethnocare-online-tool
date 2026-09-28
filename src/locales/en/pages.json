@@ -80,7 +80,7 @@
   },
   "airLossAssistance": {
     "title": "Leak Testing",
-    "description": "Follow the instuctions on the video below carefully",
+    "description": "Follow the instructions in the video below",
     "demand": "Once completed choose the issue:",
     "valve": "Bubbles coming from the Valve",
     "pump": "Bubbles coming from the Pump",
@@ -88,7 +88,7 @@
   },
   "pumpMaintenanceAssistance": {
     "title": "Pump Maintenance",
-    "description": "Please describe the maintenance issue with your pump."
+    "description": "Follow the instuctions in the video below"
   },
   "badFitAssistance": {
     "title": "Bad Fit",

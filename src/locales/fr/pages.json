@@ -92,16 +92,18 @@
 
   "airLossAssistance": {
     "title": "Test de fuite",
-    "description": "Suivez attentivement les instructions de la vidéo ci-dessous",
+    "description": "Suivez les instructions dans la vidéo ci-dessous",
     "demand": "Une fois terminé, choisissez le problème:",
     "valve": "Bulles sortent de la Valve",
     "pump": "Bulles sortent de la Pompe",
     "none": "Pas de bulles ou elles proviennent d'ailleurs"
   },
+
   "pumpMaintenanceAssistance": {
     "title": "Entretien de la pompe",
-    "description": "Décrivez le problème d'entretien de votre pompe."
+    "description": "Suivez les instructions dans la vidéo ci-dessous"
   },
+
   "badFitAssistance": {
     "title": "Mauvais ajustement",
     "description": "Quel est le problème que vous rencontrez avec l'ajustement de votre produit ?",

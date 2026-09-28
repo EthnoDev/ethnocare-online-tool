@@ -92,16 +92,18 @@
 
   "airLossAssistance": {
     "title": "Dichtigkeitstest",
-    "description": "Befolgen Sie die Anweisungen im Video unten sorgfältig",
+    "description": "Befolgen Sie die Anweisungen im Video unten",
     "demand": "Sobald abgeschlossen, wählen Sie das Problem aus:",
     "valve": "Blasen kommen aus dem Ventil",
     "pump": "Blasen kommen aus der Pumpe",
     "none": "Es kommen keine Luftblasen oder sie kommen von woanders"
   },
+
   "pumpMaintenanceAssistance": {
     "title": "Pumpenwartung",
-    "description": "Bitte beschreiben Sie das Wartungsproblem mit Ihrer Pumpe."
+    "description": "Befolgen Sie die Anweisungen im Video unten"
   },
+
   "badFitAssistance": {
     "title": "Schlechte Passform",
     "description": "Welches Problem haben Sie mit der Passform Ihres Produkts?",
