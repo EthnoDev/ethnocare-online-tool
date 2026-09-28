@@ -33,7 +33,7 @@ export default function AssistanceSizeSelection() {
   // Updated Group component to dynamically translate error key
   const Group = ({ title, error, sectionRef, children }) => (
     <section ref={sectionRef} className="w-full text-left" aria-invalid={!!error}>
-      <h2 className="font-semibold text-sm">{title}</h2>
+      <h2 className="font-semibold text-base">{title}</h2>
       <div className="flex flex-wrap gap-3 mt-2">{children}</div>
       {error && (
         <p className="mt-2 text-sm text-red-600" role="alert" aria-live="polite">

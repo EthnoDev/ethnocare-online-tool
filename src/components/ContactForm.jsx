@@ -164,7 +164,7 @@ export default function ContactForm({
                 }`}
               />
               {errors.message ? (
-                <p className="text-sm text-red-500">{errors.message}</p>
+                <p className="text-sm text-red-600">{errors.message}</p>
               ) : null}
 
               {/* Email */}
@@ -187,7 +187,7 @@ export default function ContactForm({
                 }`}
               />
               {errors.email ? (
-                <p className="text-sm text-red-500">{errors.email}</p>
+                <p className="text-sm text-red-600">{errors.email}</p>
               ) : null}
             </form>
 
