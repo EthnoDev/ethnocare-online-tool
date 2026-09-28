@@ -1,12 +1,26 @@
 import PageWrapper from "../../../components/PageWrapper";
 import SelectableOption from "../../../components/SelectableOption";
 import { Trans, useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import leakTestVideo from "../../../assets/videos/leak-test.mp4";
 
 export default function AirLoss() {
+  const navigate = useNavigate();
   const { t } = useTranslation("pages");
   const [selected, setSelected] = useState(null);
+
+  const handleSelect = (option) => {
+    if (selected) return;
+
+    setSelected(option);
+
+    if (option === "valve" || option === "none") {
+      setTimeout(() => {
+        navigate("/assistance/problem/other");
+      }, 200);
+    }
+  };
 
   return (
     <PageWrapper showBack={true} backTo="/assistance/problem">
@@ -42,7 +56,7 @@ export default function AirLoss() {
               />
             }
             selected={selected === "valve"}
-            onClick={() => setSelected("valve")}
+            onClick={() => handleSelect("valve")}
           />
 
           <SelectableOption
@@ -56,7 +70,7 @@ export default function AirLoss() {
               />
             }
             selected={selected === "pump"}
-            onClick={() => setSelected("pump")}
+            onClick={() => handleSelect("pump")}
           />
 
           <SelectableOption
@@ -70,7 +84,7 @@ export default function AirLoss() {
               />
             }
             selected={selected === "none"}
-            onClick={() => setSelected("none")}
+            onClick={() => handleSelect("none")}
           />
         </div>
       </div>
