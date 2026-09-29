@@ -1,9 +1,9 @@
-import PageWrapper from "../../../components/PageWrapper";
-import SelectableOption from "../../../components/SelectableOption";
+import PageWrapper from "../../../../components/PageWrapper";
+import SelectableOption from "../../../../components/SelectableOption";
 import { Trans, useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import leakTestVideo from "../../../assets/videos/leak-test.mp4";
+import leakTestVideo from "../../../../assets/videos/leak-test.mp4";
 
 export default function AirLoss() {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export default function AirLoss() {
 
     if (option === "pump") {
       setTimeout(() => {
-        navigate("/assistance/problem/pump-maintenance");
+        navigate("/assistance/problem/air-loss/pump-maintenance");
       }, 200);
     } else if (option === "valve" || option === "none") {
       setTimeout(() => {

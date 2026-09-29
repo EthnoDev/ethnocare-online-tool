@@ -52,9 +52,9 @@ import AssistanceBadFit from "./pages/assistance/problems/BadFit";
 import AssistanceMoving from "./pages/assistance/problems/Moving";
 import AssistanceStirrup from "./pages/assistance/problems/Stirrup";
 import AssistanceOther from "./pages/assistance/problems/Other";
-import AssistanceAirLoss from "./pages/assistance/problems/AirLoss";
-import AssistancePumpMaintenance from "./pages/assistance/problems/PumpMaintenance";
-import AssistanceReturn from "./pages/assistance/problems/Return";
+import AssistanceAirLoss from "./pages/assistance/problems/AirLoss/AirLoss";
+import AssistancePumpMaintenance from "./pages/assistance/problems/AirLoss/PumpMaintenance";
+import AssistanceReturn from "./pages/assistance/problems/AirLoss/Return";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -94,8 +94,8 @@ function AnimatedRoutes() {
         <Route path="/assistance/problem/stirrup" element={<AssistanceStirrup />} />
         <Route path="/assistance/problem/other" element={<AssistanceOther />} />
         <Route path="/assistance/problem/air-loss" element={<AssistanceAirLoss />} />
-        <Route path="/assistance/problem/pump-maintenance" element={<AssistancePumpMaintenance />} />
-        <Route path="/assistance/problem/return" element={<AssistanceReturn />} />
+        <Route path="/assistance/problem/air-loss/pump-maintenance" element={<AssistancePumpMaintenance />} />
+        <Route path="/assistance/problem/air-loss/return" element={<AssistanceReturn />} />
         <Route path="/sizing/underlay/seal" element={<SizingUnderlaySealSelection />} />
         <Route path="/sizing/underlay/length" element={<SizingUnderlayLength />} />
         <Route path="/sizing/underlay/circumference" element={<SizingUnderlayCircumference />} />

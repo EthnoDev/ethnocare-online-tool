@@ -1,5 +1,5 @@
-import PageWrapper from "../../../components/PageWrapper";
-import ContactForm from "../../../components/ContactForm";
+import PageWrapper from "../../../../components/PageWrapper";
+import ContactForm from "../../../../components/ContactForm";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -39,7 +39,7 @@ export default function Return() {
   };
 
   return (
-    <PageWrapper showBack={true} backTo="/assistance/problem/pump-maintenance">
+    <PageWrapper showBack={true} backTo="/assistance/problem/air-loss/pump-maintenance">
       <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("returnAssistance.title")}

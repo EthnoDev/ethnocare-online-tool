@@ -1,9 +1,9 @@
-import PageWrapper from "../../../components/PageWrapper";
-import SelectableOption from "../../../components/SelectableOption";
+import PageWrapper from "../../../../components/PageWrapper";
+import SelectableOption from "../../../../components/SelectableOption";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import leakTestVideo from "../../../assets/videos/leak-test.mp4";
+import leakTestVideo from "../../../../assets/videos/leak-test.mp4";
 
 export default function PumpMaintenance() {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function PumpMaintenance() {
 
     setSelected("next");
     setTimeout(() => {
-      navigate("/assistance/problem/return");
+      navigate("/assistance/problem/air-loss/return");
     }, 200);
   };
 
