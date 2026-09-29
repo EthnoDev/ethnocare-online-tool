@@ -89,7 +89,7 @@ export default function Welcome() {
           />
         </div>
 
-        <div className="mt-20">
+        <div className="mt-12">
           <SelectableOption
             label={t("welcome.option5")}
             description={t("welcome.description5")}

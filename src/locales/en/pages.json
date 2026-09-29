@@ -3,15 +3,15 @@
     "title": "Ethnocare Online Tool",
     "description": "Select the tool you want to use",
     "option1":"Sizing",
-    "description1": "Find the right size for your Ethnocare product",
+    "description1": "Find the right size for your Ethnocare products",
     "option2":"Assistance",
-    "description2":"Get help and support for using Ethnocare products",
+    "description2":"Get help using Ethnocare products",
     "option3":"Return",
-    "description3":"Manage product returns and exchanges of Ethnocare products",
+    "description3":"Start a return or exchange for an Ethnocare product",
     "option4":"FAQ",
-    "description4":"Find answers to frequently asked questions about Ethnocare products",
+    "description4":"Find answers to common questions about Ethnocare products",
     "option5":"Recommendation",
-    "description5":"Find the most suitable Ethnocare products"
+    "description5":"Find the most suitable Ethnocare products for you"
   },
   "welcomeRecommendation": {
     "title": "Solution Finder",

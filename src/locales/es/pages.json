@@ -3,15 +3,15 @@
     "title": "Herramienta en línea Ethnocare",
     "description": "Seleccione la herramienta que desea usar",
     "option1": "Talla",
-    "description1": "La herramienta de talla le ayuda a encontrar la talla correcta para su producto Ethnocare.",
+    "description1": "Encuentre la talla correcta para sus productos Ethnocare",
     "option2": "Asistencia",
-    "description2": "La herramienta de asistencia proporciona ayuda y soporte para el uso de los productos Ethnocare.",
+    "description2": "Obtenga ayuda para el uso de los productos Ethnocare",
     "option3": "Devolución",
-    "description3": "La herramienta de devolución le permite gestionar las devoluciones y cambios de productos Ethnocare.",
+    "description3": "Inicie una devolución o un cambio de un producto Ethnocare",
     "option4": "FAQ",
-    "description4": "La herramienta de preguntas frecuentes proporciona respuestas a las preguntas más comunes sobre los productos Ethnocare.",
+    "description4": "Encuentre respuestas a las preguntas comunes sobre los productos Ethnocare",
     "option5": "Recomendación",
-    "description5": "La herramienta de recomendación le ayuda a encontrar los productos Ethnocare más adecuados para sus necesidades."
+    "description5": "Encuentre los productos Ethnocare más adecuados para sus necesidades"
   },
 
   "welcomeRecommendation": {
