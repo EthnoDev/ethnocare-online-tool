@@ -23,7 +23,7 @@ export default function Identification() {
   return (
     <PageWrapper
       showBack={true}
-      backTo="/return"
+      backTo="/"
       currentStep={1}
       totalSteps={3}
     >

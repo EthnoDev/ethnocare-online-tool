@@ -35,21 +35,27 @@ export default function Welcome() {
             label={t("welcome.option1")}
             description={t("welcome.description1")}
             selected={goingTo === "sizing"}
-            onClick={() => delayedNav("sizing", () => navigate("/sizing"))}
+            onClick={() =>
+              delayedNav("sizing", () => navigate("/sizing/units"))
+            }
           />
 
           <SelectableOption
             label={t("welcome.option2")}
             description={t("welcome.description2")}
             selected={goingTo === "assistance"}
-            onClick={() => delayedNav("assistance", () => navigate("/assistance"))}
+            onClick={() =>
+              delayedNav("assistance", () => navigate("/assistance/amputation"))
+            }
           />
 
           <SelectableOption
             label={t("welcome.option3")}
             description={t("welcome.description3")}
             selected={goingTo === "return"}
-            onClick={() => delayedNav("return", () => navigate("/return"))}
+            onClick={() =>
+              delayedNav("return", () => navigate("/return/identification"))
+            }
           />
 
           <SelectableOption
