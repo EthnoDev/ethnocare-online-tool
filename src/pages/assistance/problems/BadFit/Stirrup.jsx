@@ -1,10 +1,10 @@
-// src/pages/assistance/Stirrup.jsx
+// src/pages/assistance/problems/BadFit/Stirrup.jsx
 import { useNavigate } from "react-router-dom";
-import PageWrapper from "../../../components/PageWrapper";
+import PageWrapper from "../../../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 
 // assets
-import StirrupImg from "../../../assets/stirrup.svg";
+import StirrupImg from "../../../../assets/stirrup.svg";
 
 export default function Stirrup() {
   const navigate = useNavigate();
