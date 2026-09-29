@@ -91,7 +91,11 @@
   },
   "inflDeflAssistance": {
     "title": "Probleme beim Aufblasen und Entleeren",
-    "description": "Geben Sie das Problem an"
+    "description": "Geben Sie das Problem an",
+    "deflate": "Schwer zu entleeren",
+    "inflateInteg": "Schwer mit der integrierten Pumpe aufzublasen",
+    "inflateExtern": "Schwer mit der externen Pumpe aufzublasen",
+    "pressure": "Schwer, immer den gleichen Druck zu erreichen"
   },
 
   "pressurePointsAssistance": {

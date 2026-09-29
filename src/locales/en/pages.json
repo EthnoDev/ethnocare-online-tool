@@ -81,7 +81,11 @@
   },
   "inflDeflAssistance": {
     "title": "Inflation, Deflation Issues",
-    "description": "Specify the problem"
+    "description": "Specify the problem",
+    "deflate": "Hard to Deflate",
+    "inflateInteg": "Hard to Inflate with the Integrated Pump",
+    "inflateExtern": "Hard to Inflate with the External Pump",
+    "pressure": "Hard to always reach the same Pressure"
   },
   "pressurePointsAssistance": {
     "title": "Rotation",

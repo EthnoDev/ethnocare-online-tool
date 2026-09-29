@@ -91,7 +91,11 @@
   },
   "inflDeflAssistance": {
     "title": "Problèmes de gonflage et de dégonflage",
-    "description": "Précisez le problème"
+    "description": "Précisez le problème",
+    "deflate": "Difficile à dégonfler",
+    "inflateInteg": "Difficile à gonfler avec la pompe intégrée",
+    "inflateExtern": "Difficile à gonfler avec une pompe externe",
+    "pressure": "Difficile d'atteindre toujours la même pression"
   },
 
   "pressurePointsAssistance": {

@@ -91,7 +91,11 @@
   },
   "inflDeflAssistance": {
     "title": "Problemas de inflado y desinflado",
-    "description": "Especifique el problema"
+    "description": "Especifique el problema",
+    "deflate": "Difícil de desinflar",
+    "inflateInteg": "Difícil de inflar con la bomba integrada",
+    "inflateExtern": "Difícil de inflar con la bomba externa",
+    "pressure": "Difícil de alcanzar siempre la misma presión"
   },
 
   "pressurePointsAssistance": {
