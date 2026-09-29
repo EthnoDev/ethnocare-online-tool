@@ -296,7 +296,7 @@ export default function SizeLiner() {
 
         {/* 3b. Conditional Title & Alternate Options Section */}
         {alternateSizeCodes.length > 0 && (
-          <div className="w-full max-w-sm mx-auto text-left font-sans">
+          <div className="mt-4 w-full max-w-sm mx-auto text-left font-sans">
             <p className="text-base font-bold text-slate-900">
               {t("LinerSizing.otherTitle")}
             </p>
