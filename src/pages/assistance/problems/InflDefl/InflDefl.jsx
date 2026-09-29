@@ -1,13 +1,27 @@
 import PageWrapper from "../../../../components/PageWrapper";
 import SelectableOption from "../../../../components/SelectableOption";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function InflDefl() {
+  const navigate = useNavigate();
   const { t } = useTranslation("pages");
   const [selected, setSelected] = useState(null);
 
   const options = ["deflate", "inflateInteg", "inflateExtern", "pressure"];
+
+  const handleSelect = (option) => {
+    if (selected) return;
+
+    setSelected(option);
+    localStorage.setItem("detail", option);
+    localStorage.setItem("detail_key", `pages:inflDeflAssistance.${option}`);
+
+    setTimeout(() => {
+      navigate("/assistance/problem/other");
+    }, 200);
+  };
 
   return (
     <PageWrapper showBack={true} backTo="/assistance/problem">
@@ -25,7 +39,7 @@ export default function InflDefl() {
               key={option}
               label={t(`inflDeflAssistance.${option}`)}
               selected={selected === option}
-              onClick={() => setSelected(option)}
+              onClick={() => handleSelect(option)}
             />
           ))}
         </div>
