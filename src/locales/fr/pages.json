@@ -89,6 +89,10 @@
     "inflationDeflation": "Gonflage/Dégonflage",
     "other": "Autre"
   },
+  "inflDeflAssistance": {
+    "title": "Problèmes de gonflage et de dégonflage",
+    "description": "Précisez le problème"
+  },
 
   "pressurePointsAssistance": {
     "title": "Rotation",

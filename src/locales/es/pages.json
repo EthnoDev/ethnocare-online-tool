@@ -89,6 +89,10 @@
     "inflationDeflation": "Inflado/Desinflado",
     "other": "Otro"
   },
+  "inflDeflAssistance": {
+    "title": "Problemas de inflado y desinflado",
+    "description": "Especifique el problema"
+  },
 
   "pressurePointsAssistance": {
     "title": "Rotación",

@@ -79,6 +79,10 @@
     "inflationDeflation": "Inflation/Deflation",
     "other": "Other"
   },
+  "inflDeflAssistance": {
+    "title": "Inflation, Deflation Issues",
+    "description": "Specify the problem"
+  },
   "pressurePointsAssistance": {
     "title": "Rotation",
     "description": "Rotate your Overlay between 30° and 180°"

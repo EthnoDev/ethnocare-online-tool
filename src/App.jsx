@@ -52,6 +52,7 @@ import AssistanceBadFit from "./pages/assistance/problems/BadFit/BadFit";
 import AssistanceMoving from "./pages/assistance/problems/BadFit/Moving";
 import AssistanceStirrup from "./pages/assistance/problems/BadFit/Stirrup";
 import AssistanceOther from "./pages/assistance/problems/Other";
+import AssistanceInflDefl from "./pages/assistance/problems/InflDefl/InflDefl";
 import AssistanceAirLoss from "./pages/assistance/problems/AirLoss/AirLoss";
 import AssistancePumpMaintenance from "./pages/assistance/problems/AirLoss/PumpMaintenance";
 import AssistanceReturn from "./pages/assistance/problems/AirLoss/Return";
@@ -93,6 +94,7 @@ function AnimatedRoutes() {
         <Route path="/assistance/problem/bad-fit/moving" element={<AssistanceMoving />} />
         <Route path="/assistance/problem/bad-fit/stirrup" element={<AssistanceStirrup />} />
         <Route path="/assistance/problem/other" element={<AssistanceOther />} />
+        <Route path="/assistance/problem/inflation-deflation" element={<AssistanceInflDefl />} />
         <Route path="/assistance/problem/air-loss" element={<AssistanceAirLoss />} />
         <Route path="/assistance/problem/air-loss/pump-maintenance" element={<AssistancePumpMaintenance />} />
         <Route path="/assistance/problem/air-loss/return" element={<AssistanceReturn />} />

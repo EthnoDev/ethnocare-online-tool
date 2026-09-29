@@ -89,6 +89,10 @@
     "inflationDeflation": "Aufblasen/Entleeren",
     "other": "Andere"
   },
+  "inflDeflAssistance": {
+    "title": "Probleme beim Aufblasen und Entleeren",
+    "description": "Geben Sie das Problem an"
+  },
 
   "pressurePointsAssistance": {
     "title": "Rotation",
