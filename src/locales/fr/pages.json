@@ -19,6 +19,11 @@
     "description": "Répondez aux questions suivantes pour obtenir une recommandation de produit personnalisée",
     "startButton": "Commencer"
   },
+  "welcomeRecommendationNotice": {
+    "title": "Bientôt disponible",
+    "description": "La section Recommandation n'est pas encore disponible.",
+    "closeButton": "OK"
+  },
 
   "welcomeReturn": {
     "title": "Outil de retour",

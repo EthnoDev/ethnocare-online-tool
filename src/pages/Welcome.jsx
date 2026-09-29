@@ -1,14 +1,27 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageWrapper from "../components/PageWrapper";
 import SelectableOption from "../components/SelectableOption";
+import PageTransitionWrapper from "../components/PageTransitionWrapper";
 import RedirectLogo from "../assets/redirect-logo.svg";
 import { useTranslation } from "react-i18next";
 
 export default function Welcome() {
   const navigate = useNavigate();
   const [goingTo, setGoingTo] = useState(null);
+  const [showRecommendationNotice, setShowRecommendationNotice] = useState(false);
   const { t } = useTranslation("pages");
+
+  useEffect(() => {
+    if (!showRecommendationNotice) return;
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setShowRecommendationNotice(false);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [showRecommendationNotice]);
 
   const delayedNav = (key, action) => {
     if (goingTo) return;
@@ -94,15 +107,47 @@ export default function Welcome() {
             label={t("welcome.option5")}
             description={t("welcome.description5")}
             variant="solid"
-            selected={goingTo === "recommendation"}
-            onClick={() =>
-              delayedNav("recommendation", () =>
-                navigate("/recommendation")
-              )
-            }
+            onClick={() => setShowRecommendationNotice(true)}
           />
         </div>
       </div>
+
+      {showRecommendationNotice && (
+        <>
+          <div
+            className="fixed inset-0 z-10 bg-black/40 backdrop-blur-sm"
+            onClick={() => setShowRecommendationNotice(false)}
+          />
+          <div
+            className="fixed inset-0 z-20 flex items-center justify-center px-4"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="recommendation-notice-title"
+          >
+            <PageTransitionWrapper>
+              <div className="w-full max-w-xs rounded-xl bg-white p-6 text-center font-sans shadow-xl">
+                <h2
+                  id="recommendation-notice-title"
+                  className="text-2xl font-bold text-slate-900"
+                >
+                  {t("welcomeRecommendationNotice.title")}
+                </h2>
+                <p className="mt-2 text-sm leading-snug text-slate-600">
+                  {t("welcomeRecommendationNotice.description")}
+                </p>
+                <button
+                  type="button"
+                  autoFocus
+                  onClick={() => setShowRecommendationNotice(false)}
+                  className="mt-5 cursor-pointer rounded-md border border-black bg-black px-6 py-2 font-medium text-white transition-colors hover:bg-[#090C41]"
+                >
+                  {t("welcomeRecommendationNotice.closeButton")}
+                </button>
+              </div>
+            </PageTransitionWrapper>
+          </div>
+        </>
+      )}
     </PageWrapper>
   );
 }

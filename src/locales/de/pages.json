@@ -19,6 +19,11 @@
     "description": "Beantworten Sie die folgenden Fragen, um eine personalisierte Produktempfehlung zu erhalten",
     "startButton": "Starten"
   },
+  "welcomeRecommendationNotice": {
+    "title": "Demnächst verfügbar",
+    "description": "Der Empfehlungsbereich ist noch nicht verfügbar.",
+    "closeButton": "OK"
+  },
 
   "welcomeReturn": {
     "title": "Rückgabetool",
