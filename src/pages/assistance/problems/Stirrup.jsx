@@ -13,7 +13,7 @@ export default function Stirrup() {
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/assistance/problem/moving"
+      backTo="/assistance/problem/bad-fit/moving"
     >
       <div className="w-full max-w-sm flex flex-col items-center">
         {/* Title */}

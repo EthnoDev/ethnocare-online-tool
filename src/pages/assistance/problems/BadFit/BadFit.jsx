@@ -1,8 +1,8 @@
-// src/pages/assistance/BadFit.jsx
+// src/pages/assistance/problems/BadFit/BadFit.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import PageWrapper from "../../../components/PageWrapper";
-import SelectableOption from "../../../components/SelectableOption";
+import PageWrapper from "../../../../components/PageWrapper";
+import SelectableOption from "../../../../components/SelectableOption";
 import { useTranslation } from "react-i18next";
 
 export default function BadFit() {
@@ -24,7 +24,7 @@ export default function BadFit() {
     // Navigation logic with standard 200ms delay
     setTimeout(() => {
       if (fitIssue === "overlay-movement") {
-        navigate("/assistance/problem/moving");
+        navigate("/assistance/problem/bad-fit/moving");
       }
       // You can add your "sizing" destination condition here later if needed
     }, 200);

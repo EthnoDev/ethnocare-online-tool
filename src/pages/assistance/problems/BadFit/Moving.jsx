@@ -1,32 +1,32 @@
-// src/pages/assistance/Moving.jsx
+// src/pages/assistance/problems/BadFit/Moving.jsx
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import PageWrapper from "../../../components/PageWrapper";
+import PageWrapper from "../../../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 
 // DE Assets
-import DownDE from "../../../assets/slides/down_DE.svg";
-import RollDE from "../../../assets/slides/roll_DE.svg";
-import ShiftDE from "../../../assets/slides/shift_DE.svg";
-import UpDE from "../../../assets/slides/up_DE.svg";
+import DownDE from "../../../../assets/slides/down_DE.svg";
+import RollDE from "../../../../assets/slides/roll_DE.svg";
+import ShiftDE from "../../../../assets/slides/shift_DE.svg";
+import UpDE from "../../../../assets/slides/up_DE.svg";
 
 // EN Assets
-import DownEN from "../../../assets/slides/down_EN.svg";
-import RollEN from "../../../assets/slides/roll_EN.svg";
-import ShiftEN from "../../../assets/slides/shift_EN.svg";
-import UpEN from "../../../assets/slides/up_EN.svg";
+import DownEN from "../../../../assets/slides/down_EN.svg";
+import RollEN from "../../../../assets/slides/roll_EN.svg";
+import ShiftEN from "../../../../assets/slides/shift_EN.svg";
+import UpEN from "../../../../assets/slides/up_EN.svg";
 
 // ES Assets
-import DownES from "../../../assets/slides/down_ES.svg";
-import RollES from "../../../assets/slides/roll_ES.svg";
-import ShiftES from "../../../assets/slides/shift_ES.svg";
-import UpES from "../../../assets/slides/up_ES.svg";
+import DownES from "../../../../assets/slides/down_ES.svg";
+import RollES from "../../../../assets/slides/roll_ES.svg";
+import ShiftES from "../../../../assets/slides/shift_ES.svg";
+import UpES from "../../../../assets/slides/up_ES.svg";
 
 // FR Assets
-import DownFR from "../../../assets/slides/down_FR.svg";
-import RollFR from "../../../assets/slides/roll_FR.svg";
-import ShiftFR from "../../../assets/slides/shift_FR.svg";
-import UpFR from "../../../assets/slides/up_FR.svg";
+import DownFR from "../../../../assets/slides/down_FR.svg";
+import RollFR from "../../../../assets/slides/roll_FR.svg";
+import ShiftFR from "../../../../assets/slides/shift_FR.svg";
+import UpFR from "../../../../assets/slides/up_FR.svg";
 
 export default function Moving() {
   const navigate = useNavigate();
@@ -81,7 +81,7 @@ export default function Moving() {
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/assistance/problem/fit"
+      backTo="/assistance/problem/bad-fit"
     >
       <div className="w-full max-w-sm">
         {/* Title */}

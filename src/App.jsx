@@ -48,8 +48,8 @@ import AssistanceSelection from "./pages/assistance/AssistanceSelection";
 import AssistanceSizeSelection from "./pages/assistance/SizeSelection";
 import AssistanceProblemSelection from "./pages/assistance/ProblemSelection";
 import AssistancePressurePoints from "./pages/assistance/problems/PressurePoints";
-import AssistanceBadFit from "./pages/assistance/problems/BadFit";
-import AssistanceMoving from "./pages/assistance/problems/Moving";
+import AssistanceBadFit from "./pages/assistance/problems/BadFit/BadFit";
+import AssistanceMoving from "./pages/assistance/problems/BadFit/Moving";
 import AssistanceStirrup from "./pages/assistance/problems/Stirrup";
 import AssistanceOther from "./pages/assistance/problems/Other";
 import AssistanceAirLoss from "./pages/assistance/problems/AirLoss/AirLoss";
@@ -89,8 +89,8 @@ function AnimatedRoutes() {
         <Route path="/assistance/size" element={<AssistanceSizeSelection />} />
         <Route path="/assistance/problem" element={<AssistanceProblemSelection />} />
         <Route path="/assistance/problem/pressure" element={<AssistancePressurePoints />} />
-        <Route path="/assistance/problem/fit" element={<AssistanceBadFit />} />
-        <Route path="/assistance/problem/moving" element={<AssistanceMoving />} />
+        <Route path="/assistance/problem/bad-fit" element={<AssistanceBadFit />} />
+        <Route path="/assistance/problem/bad-fit/moving" element={<AssistanceMoving />} />
         <Route path="/assistance/problem/stirrup" element={<AssistanceStirrup />} />
         <Route path="/assistance/problem/other" element={<AssistanceOther />} />
         <Route path="/assistance/problem/air-loss" element={<AssistanceAirLoss />} />

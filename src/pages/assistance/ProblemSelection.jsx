@@ -17,7 +17,7 @@ export default function ProblemSelection() {
     ...(amputation === "transtibial"
       ? [{ key: "tibialPressurePoint", label: t("problemAssistance.tibialPressurePoint"), route: "/assistance/problem/pressure" }]
       : []),
-    { key: "badFit",             label: t("problemAssistance.badFit"),             route: "/assistance/problem/fit" },
+    { key: "badFit",             label: t("problemAssistance.badFit"),             route: "/assistance/problem/bad-fit" },
     { key: "airLoss",            label: t("problemAssistance.airLoss"),            route: "/assistance/problem/air-loss" },
     { key: "inflationDeflation", label: t("problemAssistance.inflationDeflation"), route: "/assistance/problem/inflation-deflation" },
     { key: "other",              label: t("problemAssistance.other"),              route: "/assistance/problem/other" },
