@@ -164,7 +164,8 @@
     "summaryDetail": "Detalle:",
 
     "buttonSend": "Enviar",
-    "submitError": "No pudimos enviar tu mensaje. Por favor, inténtalo de nuevo."
+    "submitError": "No pudimos enviar tu mensaje. Por favor, inténtalo de nuevo.",
+    "buttonSeeMore": "Ver más"
   },
   "redirectionPopup": {
     "title": "Underlay Abierto no disponible",

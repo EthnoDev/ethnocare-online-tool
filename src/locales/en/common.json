@@ -164,7 +164,9 @@
     "summaryDetail": "Detail:",
 
     "buttonSend": "Send",
-    "submitError": "We couldn't send your message. Please try again."
+    "submitError": "We couldn't send your message. Please try again.",
+
+    "buttonSeeMore": "See More"
   },
   "redirectionPopup": {
     "title": "Underlay Open Unavailable",
