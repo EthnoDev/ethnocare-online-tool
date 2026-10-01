@@ -147,7 +147,8 @@
 
   "stirrupAssistance": {
     "title": "Étrier",
-    "imageDescription": "L'étrier est spécialement conçu pour les situations où le silicone intégré ne suffit pas à maintenir l'Overlay en place. Cette solution permet de garder votre Overlay bien en place toute la journée."
+    "descriptionTitle": "Pourquoi ?",
+    "descriptionSec": "L'étrier est spécialement conçu pour les situations où le silicone intégré ne suffit pas à maintenir l'Overlay en place. Cette solution permet de garder votre Overlay bien en place toute la journée."
   },
 
   "otherAssistance": {

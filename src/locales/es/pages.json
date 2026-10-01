@@ -147,7 +147,8 @@
 
   "stirrupAssistance": {
     "title": "Estribo",
-    "imageDescription": "El estribo está diseñado específicamente para situaciones en las que la silicona integrada no es suficiente para mantener el Overlay en su lugar. Esta solución mantendrá su Overlay seguro durante todo el día."
+    "descriptionTitle": "¿Por qué?",
+    "descriptionSec": "El estribo está diseñado específicamente para situaciones en las que la silicona integrada no es suficiente para mantener el Overlay en su lugar. Esta solución mantendrá su Overlay seguro durante todo el día."
   },
 
   "otherAssistance": {

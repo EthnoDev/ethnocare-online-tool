@@ -130,8 +130,9 @@
     "rolls": "Top hem rolling down"
   },
   "stirrupAssistance": {
-    "title": "Stirrup"
-    
+    "title": "Stirrup",
+    "descriptionTitle": "Why ?",
+    "descriptionSec": "The stirrup is designed specifically for when the integrated sillicone is not enough to hold the Overlay. This solution will keep your Overlay secure all day long."
   },
   "otherAssistance": {
     "title": "Contact Us",

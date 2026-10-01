@@ -147,7 +147,8 @@
 
   "stirrupAssistance": {
     "title": "Steigbügel",
-    "imageDescription": "Der Steigbügel wurde speziell für Situationen entwickelt, in denen das integrierte Silikon nicht ausreicht, um das Overlay an Ort und Stelle zu halten. Diese Lösung hält Ihr Overlay den ganzen Tag sicher in Position."
+    "descriptionTitle": "Warum?",
+    "descriptionSec": "Der Steigbügel wurde speziell für Situationen entwickelt, in denen das integrierte Silikon nicht ausreicht, um das Overlay an Ort und Stelle zu halten. Diese Lösung hält Ihr Overlay den ganzen Tag sicher in Position."
   },
 
   "otherAssistance": {
