@@ -146,7 +146,9 @@
   },
   "adjustmentGuidesAssistance": {
     "title": "Anpassungsanleitungen",
-    "description": "Unser Lycra-Overlay kann angepasst werden, um besser zu verschiedenen Körpertypen zu passen. Die nachstehenden Anleitungen zeigen die wichtigsten Anpassungsbereiche und Vorschläge zur Verbesserung von Passform und Komfort."
+    "description": "Unser Lycra-Overlay kann angepasst werden, um besser zu verschiedenen Körpertypen zu passen. Die nachstehenden Anleitungen zeigen die wichtigsten Anpassungsbereiche und Vorschläge zur Verbesserung von Passform und Komfort.",
+    "enlargement": "Overlay vergrößern",
+    "reduction": "Overlay verkleinern"
   },
 
   "stirrupAssistance": {

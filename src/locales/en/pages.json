@@ -131,7 +131,9 @@
   },
   "adjustmentGuidesAssistance": {
     "title": "Adjustment Guides",
-    "description": "Our Lycra Overlay can be tailored to better fit different body shapes. The guides below show key adjustment areas and suggestions to improve fit and comfort."
+    "description": "Our Lycra Overlay can be tailored to better fit different body shapes. The guides below show key adjustment areas and suggestions to improve fit and comfort.",
+    "enlargement": "Enlarge Overlay",
+    "reduction": "Reduce Overlay"
   },
   "stirrupAssistance": {
     "title": "Stirrup",

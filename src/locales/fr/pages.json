@@ -146,7 +146,9 @@
   },
   "adjustmentGuidesAssistance": {
     "title": "Guides d’ajustement",
-    "description": "Notre Overlay en Lycra peut être ajusté pour mieux s'adapter à différentes morphologies. Les guides ci-dessous montrent les zones clés d'ajustement et des suggestions pour améliorer l'ajustement et le confort."
+    "description": "Notre Overlay en Lycra peut être ajusté pour mieux s'adapter à différentes morphologies. Les guides ci-dessous montrent les zones clés d'ajustement et des suggestions pour améliorer l'ajustement et le confort.",
+    "enlargement": "Agrandir l'Overlay",
+    "reduction": "Réduire l'Overlay"
   },
 
   "stirrupAssistance": {

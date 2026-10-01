@@ -144,9 +144,11 @@
     "shifts-sideways": "Rotación",
     "rolls": "El borde superior se enrolla hacia abajo"
   },
-  "adjustmentGuidesAssistance": {
+  "adjustmentGuidesAssistance": { 
     "title": "Guías de ajuste",
-    "description": "Nuestro Overlay de Lycra se puede ajustar para adaptarse mejor a diferentes tipos de cuerpo. Las guías a continuación muestran las áreas clave de ajuste y sugerencias para mejorar el ajuste y la comodidad."
+    "description": "Nuestro Overlay de Lycra se puede ajustar para adaptarse mejor a diferentes tipos de cuerpo. Las guías a continuación muestran las áreas clave de ajuste y sugerencias para mejorar el ajuste y la comodidad.",
+    "enlargement": "Agrandar el Overlay",
+    "reduction": "Reducir el Overlay"
   },
 
   "stirrupAssistance": {
