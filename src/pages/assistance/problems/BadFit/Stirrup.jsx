@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import SeeMore from "../../../../components/SeeMore";
 
 // assets
-import StirrupImg from "../../../../assets/stirrup.svg";
+import StirrupImg from "../../../../assets/stirrup.png";
 
 export default function Stirrup() {
   const { t } = useTranslation(["pages", "common"]);
