@@ -98,8 +98,7 @@
     "pressure": "Difficile d'atteindre toujours la même pression"
   },
   "smartPumpAssistance": {
-    "title": "Smart Pump",
-    "description": "Aide pour maintenir une pression constante avec votre Smart Pump."
+    "title": "Smart Pump"
   },
 
   "pressurePointsAssistance": {

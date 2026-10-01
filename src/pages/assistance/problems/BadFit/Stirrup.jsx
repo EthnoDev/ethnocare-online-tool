@@ -28,8 +28,8 @@ export default function Stirrup() {
           <div className="rounded-xl overflow-hidden flex">
             <img
               src={StirrupImg}
-              alt="Stirrup illustration"
-              className="h-auto w-full block rounded-xl max-w-xs object-cover"
+              alt="Stirrup"
+              className="w-70 h-auto block rounded-xl object-contain"
             />
           </div>
 
