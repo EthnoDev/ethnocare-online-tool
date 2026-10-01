@@ -144,6 +144,10 @@
     "shifts-sideways": "Rotation",
     "rolls": "Der obere Saum rollt nach unten"
   },
+  "adjustmentGuidesAssistance": {
+    "title": "Anpassungsanleitungen",
+    "description": "Unser Lycra-Overlay kann angepasst werden, um besser zu verschiedenen Körpertypen zu passen. Die nachstehenden Anleitungen zeigen die wichtigsten Anpassungsbereiche und Vorschläge zur Verbesserung von Passform und Komfort."
+  },
 
   "stirrupAssistance": {
     "title": "Steigbügel",

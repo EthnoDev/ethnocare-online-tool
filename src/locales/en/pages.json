@@ -129,6 +129,10 @@
     "shifts-sideways": "Rotation",
     "rolls": "Top hem rolling down"
   },
+  "adjustmentGuidesAssistance": {
+    "title": "Adjustment Guides",
+    "description": "Our Lycra Overlay can be tailored to better fit different body shapes. The guides below show key adjustment areas and suggestions to improve fit and comfort."
+  },
   "stirrupAssistance": {
     "title": "Stirrup",
     "descriptionTitle": "Why ?",

@@ -144,6 +144,10 @@
     "shifts-sideways": "Rotation",
     "rolls": "L'ourlet supérieur roule vers le bas"
   },
+  "adjustmentGuidesAssistance": {
+    "title": "Guides d’ajustement",
+    "description": "Notre Overlay en Lycra peut être ajusté pour mieux s'adapter à différentes morphologies. Les guides ci-dessous montrent les zones clés d'ajustement et des suggestions pour améliorer l'ajustement et le confort."
+  },
 
   "stirrupAssistance": {
     "title": "Étrier",

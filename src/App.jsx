@@ -51,6 +51,7 @@ import AssistancePressurePoints from "./pages/assistance/problems/PressurePoints
 import AssistanceBadFit from "./pages/assistance/problems/BadFit/BadFit";
 import AssistanceMoving from "./pages/assistance/problems/BadFit/Moving";
 import AssistanceStirrup from "./pages/assistance/problems/BadFit/Stirrup";
+import AssistanceAdjustmentGuides from "./pages/assistance/problems/BadFit/AdjustmentGuides";
 import AssistanceOther from "./pages/assistance/problems/Other";
 import AssistanceInflDefl from "./pages/assistance/problems/InflDefl/InflDefl";
 import AssistanceSmartPump from "./pages/assistance/problems/InflDefl/SmartPump";
@@ -94,6 +95,7 @@ function AnimatedRoutes() {
         <Route path="/assistance/problem/bad-fit" element={<AssistanceBadFit />} />
         <Route path="/assistance/problem/bad-fit/moving" element={<AssistanceMoving />} />
         <Route path="/assistance/problem/bad-fit/stirrup" element={<AssistanceStirrup />} />
+        <Route path="/assistance/problem/bad-fit/adjustment-guides" element={<AssistanceAdjustmentGuides />} />
         <Route path="/assistance/problem/other" element={<AssistanceOther />} />
         <Route path="/assistance/problem/inflation-deflation" element={<AssistanceInflDefl />} />
         <Route path="/assistance/problem/inflation-deflation/smart-pump" element={<AssistanceSmartPump />} />
