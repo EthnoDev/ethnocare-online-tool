@@ -98,7 +98,9 @@
     "pressure": "Difficile d'atteindre toujours la même pression"
   },
   "smartPumpAssistance": {
-    "title": "Smart Pump"
+    "title": "Smart Pump",
+    "descriptionTitle": "Pourquoi ?",
+    "descriptionSec": "La Smart Pump facilite le réglage de votre Overlay à la pression souhaitée, garantissant un gonflage et un dégonflage cohérents à chaque fois."
   },
 
   "pressurePointsAssistance": {

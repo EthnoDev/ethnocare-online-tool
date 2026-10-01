@@ -98,7 +98,9 @@
     "pressure": "Schwer, immer den gleichen Druck zu erreichen"
   },
   "smartPumpAssistance": {
-    "title": "Smart Pump"
+    "title": "Smart Pump",
+    "descriptionTitle": "Warum?",
+    "descriptionSec": "Die Smart Pump erleichtert das Einstellen Ihres Overlays auf den gewünschten Druck und sorgt dafür, dass das Aufblasen und Entleeren jedes Mal konsistent erfolgt."
   },
 
   "pressurePointsAssistance": {
