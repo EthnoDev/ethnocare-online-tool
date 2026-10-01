@@ -57,8 +57,8 @@ export default function Moving() {
   // 2. Updated labels to reference the keys from common.json
   const slideOptions = [
     { id: "slides-up", src: images.up, label: t("common:sliding.up") },
-    { id: "slides-down", src: images.down, label: t("common:sliding.down") },
     { id: "shifts-sideways", src: images.shift, label: t("common:sliding.rotate") },
+    { id: "slides-down", src: images.down, label: t("common:sliding.down") },
     { id: "rolls", src: images.roll, label: t("common:sliding.roll") },
   ];
 

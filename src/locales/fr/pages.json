@@ -138,7 +138,7 @@
 
   "movingAssistance": {
     "title": "Glissement de l'Overlay",
-    "description": "Votre Overlay glisse-t-il sur votre liner ?",
+    "description": "Comment votre Overlay glisse-t-il sur votre liner ?",
     "slides-up": "Vers le haut",
     "slides-down": "Vers le bas",
     "shifts-sideways": "Rotation",

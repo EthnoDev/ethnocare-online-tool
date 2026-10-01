@@ -138,7 +138,7 @@
 
   "movingAssistance": {
     "title": "Overlay rutscht",
-    "description": "Rutscht Ihr Overlay auf Ihrem Liner?",
+    "description": "Wie rutscht Ihr Overlay auf Ihrem Liner?",
     "slides-up": "Nach oben",
     "slides-down": "Nach unten",
     "shifts-sideways": "Rotation",

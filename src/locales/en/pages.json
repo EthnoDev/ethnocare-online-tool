@@ -123,7 +123,7 @@
   },
   "movingAssistance": {
     "title": "Overlay Slipping",
-    "description": "Does your Overlay slip on your liner?",
+    "description": "How does your Overlay slip on your liner?",
     "slides-up": "Upward",
     "slides-down": "Downward",
     "shifts-sideways": "Rotation",
