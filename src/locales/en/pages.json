@@ -87,6 +87,10 @@
     "inflateExtern": "Hard to Inflate with the External Pump",
     "pressure": "Hard to always reach the same Pressure"
   },
+  "smartPumpAssistance": {
+    "title": "Smart Pump",
+    "description": "Support for maintaining consistent pressure with your Smart Pump."
+  },
   "pressurePointsAssistance": {
     "title": "Rotation",
     "description": "Rotate your Overlay between 30° and 180°"

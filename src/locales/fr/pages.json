@@ -97,6 +97,10 @@
     "inflateExtern": "Difficile à gonfler avec une pompe externe",
     "pressure": "Difficile d'atteindre toujours la même pression"
   },
+  "smartPumpAssistance": {
+    "title": "Smart Pump",
+    "description": "Aide pour maintenir une pression constante avec votre Smart Pump."
+  },
 
   "pressurePointsAssistance": {
     "title": "Rotation",

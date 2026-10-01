@@ -19,7 +19,11 @@ export default function InflDefl() {
     localStorage.setItem("detail_key", `pages:inflDeflAssistance.${option}`);
 
     setTimeout(() => {
-      navigate("/assistance/problem/other");
+      navigate(
+        option === "pressure"
+          ? "/assistance/problem/inflation-deflation/smart-pump"
+          : "/assistance/problem/other",
+      );
     }, 200);
   };
 

@@ -97,6 +97,10 @@
     "inflateExtern": "Schwer mit der externen Pumpe aufzublasen",
     "pressure": "Schwer, immer den gleichen Druck zu erreichen"
   },
+  "smartPumpAssistance": {
+    "title": "Smart Pump",
+    "description": "Unterstützung dabei, mit Ihrer Smart Pump einen konstanten Druck zu erreichen."
+  },
 
   "pressurePointsAssistance": {
     "title": "Rotation",
