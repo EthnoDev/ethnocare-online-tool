@@ -48,6 +48,14 @@ export default function SmartPump() {
             detail: translatedDetail,
           }}
         />
+        <section className="w-full mt-3 text-left">
+          <h2 className="text-xl font-bold text-slate-900">
+            {t("smartPumpAssistance.descriptionTitle")}
+          </h2>
+          <p className="mt-1 text-sm text-slate-600">
+            {t("smartPumpAssistance.descriptionSec")}
+          </p>
+        </section>
       </div>
     </PageWrapper>
   );
