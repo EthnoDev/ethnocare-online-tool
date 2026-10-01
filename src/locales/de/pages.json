@@ -148,7 +148,9 @@
     "title": "Anpassungsanleitungen",
     "description": "Unser Lycra-Overlay kann angepasst werden, um besser zu verschiedenen Körpertypen zu passen. Die nachstehenden Anleitungen zeigen die wichtigsten Anpassungsbereiche und Vorschläge zur Verbesserung von Passform und Komfort.",
     "enlargement": "Overlay vergrößern",
-    "reduction": "Overlay verkleinern"
+    "reduction": "Overlay verkleinern",
+    "note_title": "Änderungswarnung",
+    "note_body": "Overlay-Änderungen müssen von einem Kliniker durchgeführt werden. Nach der Änderung entspricht das Produkt möglicherweise nicht mehr den Ethnocare-Spezifikationen, und die Verantwortung für Garantie oder Leistung kann betroffen sein."
   },
 
   "stirrupAssistance": {

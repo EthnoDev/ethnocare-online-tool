@@ -148,7 +148,9 @@
     "title": "Guides d’ajustement",
     "description": "Notre Overlay en Lycra peut être ajusté pour mieux s'adapter à différentes morphologies. Les guides ci-dessous montrent les zones clés d'ajustement et des suggestions pour améliorer l'ajustement et le confort.",
     "enlargement": "Agrandir l'Overlay",
-    "reduction": "Réduire l'Overlay"
+    "reduction": "Réduire l'Overlay",
+    "note_title": "Avertissement de modification",
+    "note_body": "Les modifications de l'Overlay doivent être effectuées par un clinicien. Une fois modifié, le produit peut ne plus répondre aux spécifications d'Ethnocare, et la responsabilité de la garantie ou de la performance peut être affectée."
   },
 
   "stirrupAssistance": {

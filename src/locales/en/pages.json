@@ -133,7 +133,9 @@
     "title": "Adjustment Guides",
     "description": "Our Lycra Overlay can be tailored to better fit different body shapes. The guides below show key adjustment areas and suggestions to improve fit and comfort.",
     "enlargement": "Enlarge Overlay",
-    "reduction": "Reduce Overlay"
+    "reduction": "Reduce Overlay",
+    "note_title": "Modification Warning",
+    "note_body": "Overlay modifications must be performed by a clinician. Once modified, the product may no longer meet Ethnocare specifications, and warranty or performance responsibility may be affected."
   },
   "stirrupAssistance": {
     "title": "Stirrup",
