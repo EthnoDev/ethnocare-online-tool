@@ -1,14 +1,30 @@
-// src/pages/assistance/problems/BadFit/Stirrup.jsx
-import { useNavigate } from "react-router-dom";
 import PageWrapper from "../../../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
+import SeeMore from "../../../../components/SeeMore";
 
 // assets
 import StirrupImg from "../../../../assets/stirrup.svg";
 
 export default function Stirrup() {
-  const navigate = useNavigate();
-  const { t } = useTranslation("pages");
+  const { t } = useTranslation(["pages", "common"]);
+
+  const productCode = localStorage.getItem("product_code") || "N/A";
+  const savedProblemKey = localStorage.getItem("problem_key");
+  const savedDetailKey = localStorage.getItem("detail_key");
+
+  const translatedProblem = savedProblemKey ? t(savedProblemKey) : "N/A";
+
+  let translatedDetail = "N/A";
+  if (savedDetailKey) {
+    try {
+      const parsed = JSON.parse(savedDetailKey);
+      translatedDetail = Array.isArray(parsed)
+        ? parsed.map((key) => t(key)).join(", ")
+        : t(parsed);
+    } catch {
+      translatedDetail = t(savedDetailKey);
+    }
+  }
 
   return (
     <PageWrapper 
@@ -33,14 +49,16 @@ export default function Stirrup() {
             />
           </div>
 
-          {/* Description Text block (Formatted precisely like reference file) */}
-          <div className="mt-2 text-center">
-            <p className="text-sm max-w-xs leading-snug text-slate-500 italic">
-              {t("stirrupAssistance.imageDescription")}
-            </p>
-          </div>
-
         </div>
+        <SeeMore
+          className="w-full"
+          summary={{
+            heading: t("contactForm.summaryHeadingDefault", { ns: "common" }),
+            product: productCode,
+            issue: translatedProblem,
+            detail: translatedDetail,
+          }}
+        />
       </div>
     </PageWrapper>
   );
