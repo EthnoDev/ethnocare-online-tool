@@ -1,9 +1,10 @@
 import PageWrapper from "../../../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 import RedirectLogo from "../../../../assets/redirect-logo.svg";
+import ExclamationIcon from "../../../../assets/exclamation.svg";
 
 export default function AdjustmentGuides() {
-  const { t } = useTranslation("pages");
+  const { t } = useTranslation(["pages", "common"]);
   const openGuides = () =>
     window.open("https://ethnocare.ca/", "_blank", "noopener,noreferrer");
 
@@ -33,6 +34,26 @@ export default function AdjustmentGuides() {
               />
             </button>
           ))}
+        </div>
+
+        <div className="w-full max-w-sm mx-auto mt-8">
+          <div className="border border-gray-200 rounded-xl p-4 bg-gray-200/80">
+            <div className="flex items-start gap-3 text-left">
+              <img
+                src={ExclamationIcon}
+                alt={t("common:popup.notice_title")}
+                className="shrink-0 w-5 h-5 opacity-100"
+              />
+              <div className="flex-1">
+                <p className="text-base font-bold text-slate-900 leading-tight">
+                  {t("adjustmentGuidesAssistance.note_title")}
+                </p>
+                <p className="mt-3 text-sm text-slate-600 leading-snug">
+                  {t("adjustmentGuidesAssistance.note_body")}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </PageWrapper>
