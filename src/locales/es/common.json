@@ -145,8 +145,8 @@
   "contactForm": {
     "question": "¿Necesitas asistencia adicional ?",
     "order": "Envíanos un mensaje",
-    "question2": "Escríbenos un mensaje",
-    "order2": "Explica tu problema, danos detalles y tu información de contacto",
+    "question2": "Envíanos un mensaje",
+    "order2": "Describe el problema con el mayor detalle posible. Tus comentarios ayudarán a nuestro equipo a investigar el problema y mejorar nuestros productos.",
 
     "success": "¡Gracias! Tu mensaje ha sido recibido.",
     "labelMessage": "Tu mensaje",
