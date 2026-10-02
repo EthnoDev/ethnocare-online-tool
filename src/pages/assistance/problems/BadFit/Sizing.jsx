@@ -1,11 +1,24 @@
 import PageWrapper from "../../../../components/PageWrapper";
 import SelectableOption from "../../../../components/SelectableOption";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function Sizing() {
   const { t } = useTranslation("pages");
+  const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
+
+  const handleSelect = (issue) => {
+    if (selected) return;
+    setSelected(issue);
+
+    if (localStorage.getItem("product_code") !== "N/A") {
+      setTimeout(() => {
+        navigate("/assistance/problem/bad-fit/verify-size");
+      }, 200);
+    }
+  };
 
   return (
     <PageWrapper showBack={true} backTo="/assistance/problem/bad-fit">
@@ -25,7 +38,7 @@ export default function Sizing() {
               fullWidth
               label={t(`sizingBadFitAssistance.${issue}`)}
               selected={selected === issue}
-              onClick={() => setSelected(issue)}
+              onClick={() => handleSelect(issue)}
             />
           ))}
         </div>
