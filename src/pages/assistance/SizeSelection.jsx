@@ -100,6 +100,8 @@ export default function AssistanceSizeSelection() {
     if (isRouting) return;
     setIsRouting(true);
     localStorage.setItem("product_code", "N/A");
+    localStorage.removeItem("product_circumference");
+    localStorage.removeItem("product_length");
     setTimeout(() => {
       navigate("/assistance/problem"); // update to your actual next route
     }, 200);
