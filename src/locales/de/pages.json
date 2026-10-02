@@ -138,7 +138,11 @@
 
   "sizingBadFitAssistance": {
     "title": "Overlay-Passung",
-    "description": "Welches Problem haben Sie mit dem Overlay?"
+    "description": "Welches Problem haben Sie mit dem Overlay?",
+    "loose": "Zu locker",
+    "tight": "Zu eng",
+    "long": "Zu lang",
+    "short": "Zu kurz"
   },
   "movingAssistance": {
     "title": "Overlay rutscht",

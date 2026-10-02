@@ -4,9 +4,14 @@ export default function SelectableOption({
   selected = false,
   onClick,
   compact = false,
+  fullWidth = false,
   variant = "outline", // "outline" | "solid"
 }) {
-  const sizeClasses = compact ? "px-4 py-2" : "py-3 w-[200px]";
+  const sizeClasses = fullWidth
+    ? "py-3 w-full"
+    : compact
+    ? "px-4 py-2"
+    : "py-3 w-[200px]";
 
   const base =
     "cursor-pointer rounded-md text-center font-medium font-sans transition-all duration-200 border";

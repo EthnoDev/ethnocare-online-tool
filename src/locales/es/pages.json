@@ -138,7 +138,11 @@
 
   "sizingBadFitAssistance": {
     "title": "Ajuste del Overlay",
-    "description": "¿Cuál es su problema con el Overlay?"
+    "description": "¿Cuál es su problema con el Overlay?",
+    "loose": "Demasiado suelto",
+    "tight": "Demasiado ajustado",
+    "long": "Demasiado largo",
+    "short": "Demasiado corto"
   },
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",

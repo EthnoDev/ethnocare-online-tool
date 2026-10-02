@@ -123,7 +123,11 @@
   },
   "sizingBadFitAssistance": {
     "title": "Overlay Fit",
-    "description": "What is your issue with the Overlay ?"
+    "description": "What is your issue with the Overlay ?",
+    "loose": "Too loose",
+    "tight": "Too tight",
+    "long": "Too long",
+    "short": "Too short"
   },
   "movingAssistance": {
     "title": "Overlay Slipping",
