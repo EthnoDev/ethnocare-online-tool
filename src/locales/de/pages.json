@@ -136,6 +136,10 @@
     "overlay-movement": "Overlay rutscht"
   },
 
+  "sizingBadFitAssistance": {
+    "title": "Overlay-Passung",
+    "description": "Welches Problem haben Sie mit dem Overlay? (Sie können mehrere Optionen auswählen)"
+  },
   "movingAssistance": {
     "title": "Overlay rutscht",
     "description": "Wie rutscht Ihr Overlay auf Ihrem Liner?",

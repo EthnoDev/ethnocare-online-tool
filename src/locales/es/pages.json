@@ -136,6 +136,10 @@
     "overlay-movement": "Deslizamiento del Overlay"
   },
 
+  "sizingBadFitAssistance": {
+    "title": "Ajuste del Overlay",
+    "description": "¿Cuál es su problema con el Overlay? (Puede seleccionar múltiples opciones)"
+  },
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",
     "description": "¿Cómo se desliza su Overlay sobre su liner?",

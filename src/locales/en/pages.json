@@ -121,6 +121,10 @@
     "sizing": "Sizing",
     "overlay-movement": "Overlay Slipping"
   },
+  "sizingBadFitAssistance": {
+    "title": "Overlay Fit",
+    "description": "What is your issue with the Overlay ? (You can select multiple options)"
+  },
   "movingAssistance": {
     "title": "Overlay Slipping",
     "description": "How does your Overlay slip on your liner?",

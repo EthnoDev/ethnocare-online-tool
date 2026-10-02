@@ -26,7 +26,9 @@ export default function BadFit() {
       if (fitIssue === "overlay-movement") {
         navigate("/assistance/problem/bad-fit/moving");
       }
-      // You can add your "sizing" destination condition here later if needed
+      if (fitIssue === "sizing") {
+        navigate("/assistance/problem/bad-fit/sizing");
+      }
     }, 200);
   };
 
