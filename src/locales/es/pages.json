@@ -138,7 +138,7 @@
 
   "sizingBadFitAssistance": {
     "title": "Ajuste del Overlay",
-    "description": "¿Cuál es su problema con el Overlay? (Puede seleccionar múltiples opciones)"
+    "description": "¿Cuál es su problema con el Overlay?"
   },
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",

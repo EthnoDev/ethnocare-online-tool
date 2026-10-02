@@ -123,7 +123,7 @@
   },
   "sizingBadFitAssistance": {
     "title": "Overlay Fit",
-    "description": "What is your issue with the Overlay ? (You can select multiple options)"
+    "description": "What is your issue with the Overlay ?"
   },
   "movingAssistance": {
     "title": "Overlay Slipping",
