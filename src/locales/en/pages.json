@@ -129,6 +129,10 @@
     "long": "Too long",
     "short": "Too short"
   },
+  "verifySizeAssistance": {
+    "title": "Verify your Size",
+    "description": "To adress your sizing problem we need to verify that you have the correct product size"
+  },
   "movingAssistance": {
     "title": "Overlay Slipping",
     "description": "How does your Overlay slip on your liner?",

@@ -144,6 +144,10 @@
     "long": "Demasiado largo",
     "short": "Demasiado corto"
   },
+  "verifySizeAssistance": {
+    "title": "Verifique su talla",
+    "description": "Para abordar su problema de tallas, necesitamos verificar que tiene la talla correcta del producto"
+  },
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",
     "description": "¿Cómo se desliza su Overlay sobre su liner?",

@@ -144,6 +144,10 @@
     "long": "Zu lang",
     "short": "Zu kurz"
   },
+  "verifySizeAssistance": {
+    "title": "Überprüfen Sie Ihre Größe",
+    "description": "Um Ihr Größenproblem zu lösen, müssen wir überprüfen, ob Sie die richtige Produktgröße haben"
+  },
   "movingAssistance": {
     "title": "Overlay rutscht",
     "description": "Wie rutscht Ihr Overlay auf Ihrem Liner?",
