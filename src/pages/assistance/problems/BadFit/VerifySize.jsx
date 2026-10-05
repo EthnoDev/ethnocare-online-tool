@@ -14,13 +14,13 @@ export default function VerifySize() {
         <p className="mt-3 text-center text-base text-slate-500">
           {t("verifySizeAssistance.description")}
         </p>
-        <p className="mt-3 text-left text-xl font-semibold">
+        <p className="mt-8 text-left text-xl font-semibold">
           {t("verifySizeAssistance.step1")}
         </p>
         <p className="text-left text-sm text-slate-600">
           {t("verifySizeAssistance.descriptionStep1")}
         </p>
-        <div className="mt-4 flex justify-center">
+        <div className="mt-2 flex justify-center">
           <a
             href="/sizing"
             target="_blank"
