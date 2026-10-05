@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import XIcon from "../assets/x.svg";
-import RedirectLogo from "../assets/redirect-logo.svg";
+import RedirectIcon from "./RedirectIcon";
 import PageTransitionWrapper from "./PageTransitionWrapper";
 import { useTranslation } from "react-i18next";
 
@@ -23,15 +23,15 @@ export default function SizingPdfPopup({ onClose }) {
     <button
       type="button"
       onClick={() => openPdf(url)}
-      className="flex items-center gap-1 text-sm underline underline-offset-4 decoration-[1px] cursor-pointer"
+      className="group flex items-center gap-1 text-sm underline underline-offset-4 decoration-[1px] cursor-pointer hover:font-bold"
     >
-      <span>{label}</span>
-      <img
-        src={RedirectLogo}
-        alt=""
-        aria-hidden="true"
-        className="h-3 w-4"
-      />
+      <span
+        data-label={label}
+        className="inline-flex flex-col items-center after:invisible after:block after:h-0 after:overflow-hidden after:font-bold after:content-[attr(data-label)]"
+      >
+        {label}
+      </span>
+      <RedirectIcon className="h-3 w-4" />
     </button>
   );
 

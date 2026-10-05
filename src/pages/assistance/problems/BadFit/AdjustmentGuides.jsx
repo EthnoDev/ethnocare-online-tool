@@ -1,6 +1,6 @@
 import PageWrapper from "../../../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
-import RedirectLogo from "../../../../assets/redirect-logo.svg";
+import RedirectIcon from "../../../../components/RedirectIcon";
 import ExclamationIcon from "../../../../assets/exclamation.svg";
 
 export default function AdjustmentGuides() {
@@ -23,15 +23,15 @@ export default function AdjustmentGuides() {
               key={guide}
               type="button"
               onClick={openGuides}
-              className="flex items-center gap-1 text-base underline underline-offset-4 decoration-[1px] cursor-pointer"
+              className="group flex items-center gap-1 text-base underline underline-offset-4 decoration-[1px] cursor-pointer hover:font-bold"
             >
-              <span>{t(`adjustmentGuidesAssistance.${guide}`)}</span>
-              <img
-                src={RedirectLogo}
-                alt=""
-                aria-hidden="true"
-                className="h-4 w-5"
-              />
+              <span
+                data-label={t(`adjustmentGuidesAssistance.${guide}`)}
+                className="inline-flex flex-col items-center after:invisible after:block after:h-0 after:overflow-hidden after:font-bold after:content-[attr(data-label)]"
+              >
+                {t(`adjustmentGuidesAssistance.${guide}`)}
+              </span>
+              <RedirectIcon className="h-4 w-5" />
             </button>
           ))}
         </div>
