@@ -70,11 +70,11 @@ export default function Moving() {
     localStorage.setItem("detail_key", `pages:movingAssistance.${id}`);
 
     setTimeout(() => {
-      if (id === "slides-up") {
+      if (id === "slides-up" || id === "shifts-sideways") {
         navigate("/assistance/problem/coming-soon");
       } else if (id === "rolls") {
         navigate("/assistance/problem/bad-fit/adjustment-guides");
-      } else if (id === "slides-down" || id === "shifts-sideways") {
+      } else if (id === "slides-down") {
         navigate("/assistance/problem/other");
       }
     }, 200);
