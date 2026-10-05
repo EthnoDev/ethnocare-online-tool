@@ -146,7 +146,10 @@
   },
   "verifySizeAssistance": {
     "title": "Überprüfen Sie Ihre Größe",
-    "description": "Um Ihr Größenproblem zu lösen, müssen wir überprüfen, ob Sie die richtige Produktgröße haben"
+    "description": "Um Ihr Größenproblem zu lösen, müssen wir überprüfen, ob Sie die richtige Produktgröße haben",
+    "step1": "Schritt 1",
+    "descriptionStep1": "Bestimmen Sie Ihre empfohlene Größe mit dem Ethnocare-Größentool",
+    "startButton": "Starten"
   },
   "movingAssistance": {
     "title": "Overlay rutscht",

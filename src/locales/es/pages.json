@@ -146,7 +146,10 @@
   },
   "verifySizeAssistance": {
     "title": "Verifique su talla",
-    "description": "Para abordar su problema de tallas, necesitamos verificar que tiene la talla correcta del producto"
+    "description": "Para abordar su problema de tallas, necesitamos verificar que tiene la talla correcta del producto",
+    "step1": "Paso 1",
+    "descriptionStep1": "Determine su talla recomendada con la herramienta de tallas de Ethnocare",
+    "startButton": "Comenzar"
   },
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",
