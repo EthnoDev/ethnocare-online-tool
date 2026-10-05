@@ -147,6 +147,8 @@
     "order": "Send us a message",
     "question2": "Send us a message",
     "order2": "Describe the issue in as much detail as possible. Your feedback will help our team investigate the problem and improve our products.",
+    "question3": "Help us improve",
+    "order3": "Tell us what you're experiencing, what you would like to improve, and anything else you think could help our team.",
 
     "success": "Thank you ! Your message has been received.",
     "labelMessage": "Your message",

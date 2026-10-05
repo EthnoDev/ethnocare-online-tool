@@ -147,6 +147,8 @@
     "order": "Senden Sie uns eine Nachricht",
     "question2": "Senden Sie uns eine Nachricht",
     "order2": "Beschreiben Sie das Problem so detailliert wie möglich. Ihr Feedback hilft unserem Team, das Problem zu untersuchen und unsere Produkte zu verbessern.",
+    "question3": "Helfen Sie uns, uns zu verbessern",
+    "order3": "Teilen Sie uns mit, was Sie erleben, was Sie verbessern möchten und alles andere, was unserem Team helfen könnte.",
 
     "success": "Vielen Dank! Ihre Nachricht wurde empfangen.",
     "labelMessage": "Ihre Nachricht",

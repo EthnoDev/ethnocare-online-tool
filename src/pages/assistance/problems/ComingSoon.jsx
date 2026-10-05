@@ -1,9 +1,30 @@
 // src/pages/assistance/problems/ComingSoon.jsx
 import PageWrapper from "../../../components/PageWrapper";
+import ContactForm from "../../../components/ContactForm";
 import { useTranslation } from "react-i18next";
 
 export default function ComingSoon() {
-  const { t } = useTranslation("pages");
+  const { t } = useTranslation(["pages", "common"]);
+
+  const productCode = localStorage.getItem("product_code") || "N/A";
+  const savedProblemKey = localStorage.getItem("problem_key");
+  const savedDetailKey = localStorage.getItem("detail_key");
+
+  const translatedProblem = savedProblemKey ? t(savedProblemKey) : "N/A";
+
+  let translatedDetail = "N/A";
+  if (savedDetailKey) {
+    try {
+      const parsed = JSON.parse(savedDetailKey);
+      if (Array.isArray(parsed)) {
+        translatedDetail = parsed.map((k) => t(k)).join(", ");
+      } else {
+        translatedDetail = t(parsed);
+      }
+    } catch (e) {
+      translatedDetail = t(savedDetailKey);
+    }
+  }
 
   return (
     <PageWrapper showBack={true} backTo="/assistance/problem/inflation-deflation">
@@ -14,6 +35,23 @@ export default function ComingSoon() {
         <p className="mt-3 text-center text-base text-slate-500">
           {t("comingSoonAssistance.description")}
         </p>
+
+        <div className="mt-8 text-left space-y-6">
+          <div>
+            <p className="text-base font-semibold">{t("common:contactForm.question2")}</p>
+            <p className="text-sm">{t("common:contactForm.order2")}</p>
+          </div>
+
+          <ContactForm
+            summary={{
+              heading: t("common:contactForm.summaryHeadingDefault"),
+              product: productCode,
+              issue: translatedProblem,
+              detail: translatedDetail,
+            }}
+            onSubmit={({ message, email }) => {}}
+          />
+        </div>
       </div>
     </PageWrapper>
   );

@@ -147,7 +147,9 @@
     "order": "Envoyez-nous un message",
     "question2": "Envoyez-nous un message",
     "order2": "Décrivez le problème aussi en détail que possible. Vos commentaires aideront notre équipe à enquêter sur le problème et à améliorer nos produits.",
-
+    "question3": "Aidez-nous à nous améliorer",
+    "order3": "Dites-nous ce que vous vivez, ce que vous aimeriez améliorer et tout autre élément qui pourrait aider notre équipe.",
+    
     "success": "Merci ! Votre message a été reçu.",
     "labelMessage": "Votre message",
     "labelEmail": "Votre courriel",
