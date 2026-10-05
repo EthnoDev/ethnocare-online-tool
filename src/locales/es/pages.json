@@ -149,8 +149,10 @@
     "description": "Para abordar su problema de tallas, necesitamos verificar que tiene la talla correcta del producto",
     "step1": "Paso 1",
     "descriptionStep1": "Determine su talla recomendada con la herramienta de tallas de Ethnocare",
-    "startButton": "Comenzar"
-  },
+    "startButton": "Comenzar",
+    "step2": "Paso 2",
+    "descriptionStep2": "Compare la talla recomendada con     la talla del producto que está utilizando",
+        "additionalInfo": "Si su talla no coincide con la talla recomendada, contáctenos para recibir más ayuda."  },
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",
     "description": "¿Cómo se desliza su Overlay sobre su liner?",

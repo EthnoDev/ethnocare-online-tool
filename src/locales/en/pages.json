@@ -133,8 +133,11 @@
     "title": "Verify your Size",
     "description": "To adress your sizing problem we need to verify that you have the correct product size",
     "step1": "Step 1",
-    "descriptionStep1": "Determine your recommended size with the Ethnocare Sizing Tool",
-    "startButton": "Start"
+    "descriptionStep1": "Determine your recommended size with the Ethnocare Sizing Tool.",
+    "startButton": "Start",
+    "step2": "Step 2",
+    "descriptionStep2": "If you need another size than what you already have, please send us a message.",
+    "additionalInfo": "Explain your issue, give us details and your contact information."
   },
   "movingAssistance": {
     "title": "Overlay Slipping",

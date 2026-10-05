@@ -149,8 +149,10 @@
     "description": "Um Ihr Größenproblem zu lösen, müssen wir überprüfen, ob Sie die richtige Produktgröße haben",
     "step1": "Schritt 1",
     "descriptionStep1": "Bestimmen Sie Ihre empfohlene Größe mit dem Ethnocare-Größentool",
-    "startButton": "Starten"
-  },
+    "startButton": "Starten",
+    "step2": "Schritt 2",
+    "descriptionStep2": "Vergleichen Sie die empfohlene Größe mit     der Größe des Produkts, das Sie verwenden",
+        "additionalInfo": "Wenn Ihre Größe nicht mit der empfohlenen Größe übereinstimmt, kontaktieren Sie uns bitte für weitere Unterstützung."  },
   "movingAssistance": {
     "title": "Overlay rutscht",
     "description": "Wie rutscht Ihr Overlay auf Ihrem Liner?",

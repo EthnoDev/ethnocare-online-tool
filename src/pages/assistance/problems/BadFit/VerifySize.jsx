@@ -1,9 +1,30 @@
 import PageWrapper from "../../../../components/PageWrapper";
+import ContactForm from "../../../../components/ContactForm";
 import { useTranslation } from "react-i18next";
 import RedirectLogo from "../../../../assets/redirect-logo.svg";
 
 export default function VerifySize() {
-  const { t } = useTranslation("pages");
+  const { t } = useTranslation(["pages", "common"]);
+
+  const productCode = localStorage.getItem("product_code") || "N/A";
+  const savedProblemKey = localStorage.getItem("problem_key");
+  const savedDetailKey = localStorage.getItem("detail_key");
+
+  const translatedProblem = savedProblemKey ? t(savedProblemKey) : "N/A";
+
+  let translatedDetail = "N/A";
+  if (savedDetailKey) {
+    try {
+      const parsed = JSON.parse(savedDetailKey);
+      if (Array.isArray(parsed)) {
+        translatedDetail = parsed.map((k) => t(k)).join(", ");
+      } else {
+        translatedDetail = t(parsed);
+      }
+    } catch (e) {
+      translatedDetail = t(savedDetailKey);
+    }
+  }
 
   return (
     <PageWrapper showBack={true} backTo="/assistance/problem/bad-fit/sizing">
@@ -35,6 +56,26 @@ export default function VerifySize() {
               className="ml-2 h-4 w-5 invert"
             />
           </a>
+        </div>
+        <p className="mt-6 text-left text-xl font-semibold">
+          {t("verifySizeAssistance.step2")}
+        </p>
+        <p className="text-left text-sm text-slate-600">
+          {t("verifySizeAssistance.descriptionStep2")}
+        </p>
+        <p className="mt-8 text-xs text-slate-600">
+          {t("verifySizeAssistance.additionalInfo")}
+        </p>
+        <div className="mt-1">
+          <ContactForm
+            summary={{
+              heading: t("common:contactForm.summaryHeadingDefault"),
+              product: productCode,
+              issue: translatedProblem,
+              detail: translatedDetail,
+            }}
+            onSubmit={({ message, email }) => {}}
+          />
         </div>
       </div>
     </PageWrapper>

@@ -149,8 +149,10 @@
     "description": "Pour résoudre votre problème de dimensionnement, nous devons vérifier que vous avez la bonne taille de produit",
     "step1": "Étape 1",
     "descriptionStep1": "Déterminez votre taille recommandée avec l'outil de dimensionnement Ethnocare",
-    "startButton": "Commencer"
-  },
+    "startButton": "Commencer",
+    "step2": "Étape 2",
+    "descriptionStep2": "Comparez la taille recommandée avec     la taille du produit que vous utilisez",
+        "additionalInfo": "Si votre taille ne correspond pas à la taille recommandée, veuillez nous contacter pour obtenir de l'aide."  },
   "movingAssistance": {
     "title": "Glissement de l'Overlay",
     "description": "Comment votre Overlay glisse-t-il sur votre liner ?",
