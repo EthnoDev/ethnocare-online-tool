@@ -36,6 +36,7 @@ export default function Sizing() {
   const handleSelect = (issue) => {
     if (selected) return;
     setSelected(issue);
+    localStorage.setItem("detail_key", `pages:sizingBadFitAssistance.${issue}`);
 
     const hasCode = localStorage.getItem("product_code") !== "N/A";
     const route =
