@@ -1,6 +1,6 @@
 // src/pages/assistance/SizeSelection.jsx
 import { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 import SelectableOption from "../../components/SelectableOption";
@@ -8,6 +8,8 @@ import SelectableOption2 from "../../components/SelectableOption2";
 
 export default function AssistanceSizeSelection() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const fromBadFit = searchParams.get("from") === "bad-fit";
   const { t } = useTranslation(["pages", "common"]);
 
   const product = localStorage.getItem("product");
@@ -92,7 +94,11 @@ export default function AssistanceSizeSelection() {
 
     setIsRouting(true);
     setTimeout(() => {
-      navigate("/assistance/problem");
+      navigate(
+        fromBadFit
+          ? "/assistance/problem/bad-fit/sizing"
+          : "/assistance/problem"
+      );
     }, 200);
   };
 
@@ -118,7 +124,7 @@ export default function AssistanceSizeSelection() {
   return (
     <PageWrapper
       showBack={true}
-      backTo="/assistance/selection"
+      backTo={fromBadFit ? "/assistance/problem/bad-fit" : "/assistance/selection"}
       code={true}
     >
       <div className="w-full max-w-sm">
@@ -207,13 +213,15 @@ export default function AssistanceSizeSelection() {
           onClick={handleConfirm}
         />
 
-        <button
-          type="button"
-          onClick={handleSkip}
-          className="w-full py-3 rounded-md text-gray-400 hover:text-gray-600 transition cursor-pointer"
-        >
-          {t("common:cta.skip")}
-        </button>
+        {!fromBadFit && (
+          <button
+            type="button"
+            onClick={handleSkip}
+            className="w-full py-3 rounded-md text-gray-400 hover:text-gray-600 transition cursor-pointer"
+          >
+            {t("common:cta.skip")}
+          </button>
+        )}
       </div>
     </PageWrapper>
   );

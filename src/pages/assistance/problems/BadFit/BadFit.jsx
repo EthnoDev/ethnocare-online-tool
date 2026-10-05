@@ -27,7 +27,12 @@ export default function BadFit() {
         navigate("/assistance/problem/bad-fit/moving");
       }
       if (fitIssue === "sizing") {
-        navigate("/assistance/problem/bad-fit/sizing");
+        const hasCode = localStorage.getItem("product_code") !== "N/A";
+        navigate(
+          hasCode
+            ? "/assistance/problem/bad-fit/sizing"
+            : "/assistance/size?from=bad-fit"
+        );
       }
     }, 200);
   };
