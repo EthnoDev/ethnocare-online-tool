@@ -71,7 +71,7 @@ export default function Moving() {
 
     setTimeout(() => {
       if (id === "slides-up") {
-        navigate("/assistance/problem/bad-fit/stirrup");
+        navigate("/assistance/problem/coming-soon");
       } else if (id === "rolls") {
         navigate("/assistance/problem/bad-fit/adjustment-guides");
       } else if (id === "slides-down" || id === "shifts-sideways") {
