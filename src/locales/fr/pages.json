@@ -152,7 +152,7 @@
     "startButton": "Commencer",
     "step2": "Étape 2",
     "descriptionStep2": "Comparez la taille recommandée avec     la taille du produit que vous utilisez",
-        "additionalInfo": "Si votre taille ne correspond pas à la taille recommandée, veuillez nous contacter pour obtenir de l'aide."  },
+    "additionalInfo": "Si votre taille ne correspond pas à la taille recommandée, veuillez nous contacter pour obtenir de l'aide."  },
   "movingAssistance": {
     "title": "Glissement de l'Overlay",
     "description": "Comment votre Overlay glisse-t-il sur votre liner ?",
@@ -176,6 +176,10 @@
     "descriptionSec": "L'étrier est spécialement conçu pour les situations où le silicone intégré ne suffit pas à maintenir l'Overlay en place. Cette solution permet de garder votre Overlay bien en place toute la journée."
   },
 
+  "comingSoonAssistance": {
+    "title": "Nous y travaillons !",
+    "description": "C'est un défi que notre équipe explore activement. Nous travaillons avec des utilisateurs de prothèses et des cliniciens pour développer des solutions aux problèmes quotidiens réels. Vos commentaires peuvent nous aider à orienter ce que nous construisons ensuite."
+  },
   "otherAssistance": {
     "title": "Nous avons besoin de quelques informations supplémentaires",
     "description": "Parlez-nous davantage du problème que vous rencontrez afin que notre équipe puisse vous aider à trouver la meilleure solution."

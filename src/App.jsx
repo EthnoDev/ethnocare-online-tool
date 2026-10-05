@@ -55,6 +55,7 @@ import AssistanceAdjustmentGuides from "./pages/assistance/problems/BadFit/Adjus
 import AssistanceBadFitSizing from "./pages/assistance/problems/BadFit/Sizing";
 import AssistanceBadFitVerifySize from "./pages/assistance/problems/BadFit/VerifySize";
 import AssistanceOther from "./pages/assistance/problems/Other";
+import AssistanceComingSoon from "./pages/assistance/problems/ComingSoon";
 import AssistanceInflDefl from "./pages/assistance/problems/InflDefl/InflDefl";
 import AssistanceSmartPump from "./pages/assistance/problems/InflDefl/SmartPump";
 import AssistanceAirLoss from "./pages/assistance/problems/AirLoss/AirLoss";
@@ -101,6 +102,7 @@ function AnimatedRoutes() {
         <Route path="/assistance/problem/bad-fit/stirrup" element={<AssistanceStirrup />} />
         <Route path="/assistance/problem/bad-fit/adjustment-guides" element={<AssistanceAdjustmentGuides />} />
         <Route path="/assistance/problem/other" element={<AssistanceOther />} />
+        <Route path="/assistance/problem/coming-soon" element={<AssistanceComingSoon />} />
         <Route path="/assistance/problem/inflation-deflation" element={<AssistanceInflDefl />} />
         <Route path="/assistance/problem/inflation-deflation/smart-pump" element={<AssistanceSmartPump />} />
         <Route path="/assistance/problem/air-loss" element={<AssistanceAirLoss />} />

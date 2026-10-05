@@ -21,7 +21,7 @@ export default function InflDefl() {
     setTimeout(() => {
       navigate(
         option === "pressure"
-          ? "/assistance/problem/inflation-deflation/smart-pump"
+          ? "/assistance/problem/coming-soon"
           : "/assistance/problem/other",
       );
     }, 200);

@@ -152,7 +152,7 @@
     "startButton": "Comenzar",
     "step2": "Paso 2",
     "descriptionStep2": "Compare la talla recomendada con     la talla del producto que está utilizando",
-        "additionalInfo": "Si su talla no coincide con la talla recomendada, contáctenos para recibir más ayuda."  },
+    "additionalInfo": "Si su talla no coincide con la talla recomendada, contáctenos para recibir más ayuda."  },
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",
     "description": "¿Cómo se desliza su Overlay sobre su liner?",
@@ -176,6 +176,10 @@
     "descriptionSec": "El estribo está diseñado específicamente para situaciones en las que la silicona integrada no es suficiente para mantener el Overlay en su lugar. Esta solución mantendrá su Overlay seguro durante todo el día."
   },
 
+  "comingSoonAssistance": {
+    "title": "¡Estamos trabajando en ello!",
+    "description": "Este es un desafío que nuestro equipo está explorando activamente. Trabajamos con usuarios de prótesis y clínicos para desarrollar soluciones a problemas cotidianos reales. Sus comentarios pueden ayudarnos a guiar lo que construimos a continuación."
+  },
   "otherAssistance": {
     "title": "Necesitamos un poco más de información",
     "description": "Cuéntenos más sobre el problema que está experimentando para que nuestro equipo pueda ayudar a encontrar la mejor solución."

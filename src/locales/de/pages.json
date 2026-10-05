@@ -152,7 +152,7 @@
     "startButton": "Starten",
     "step2": "Schritt 2",
     "descriptionStep2": "Vergleichen Sie die empfohlene Größe mit     der Größe des Produkts, das Sie verwenden",
-        "additionalInfo": "Wenn Ihre Größe nicht mit der empfohlenen Größe übereinstimmt, kontaktieren Sie uns bitte für weitere Unterstützung."  },
+    "additionalInfo": "Wenn Ihre Größe nicht mit der empfohlenen Größe übereinstimmt, kontaktieren Sie uns bitte für weitere Unterstützung."  },
   "movingAssistance": {
     "title": "Overlay rutscht",
     "description": "Wie rutscht Ihr Overlay auf Ihrem Liner?",
@@ -176,6 +176,10 @@
     "descriptionSec": "Der Steigbügel wurde speziell für Situationen entwickelt, in denen das integrierte Silikon nicht ausreicht, um das Overlay an Ort und Stelle zu halten. Diese Lösung hält Ihr Overlay den ganzen Tag sicher in Position."
   },
 
+  "comingSoonAssistance": {
+    "title": "Wir arbeiten daran!",
+    "description": "Dies ist eine Herausforderung, die unser Team aktiv untersucht. Wir arbeiten mit Prothesennutzern und Klinikern zusammen, um Lösungen für reale Alltagsprobleme zu entwickeln. Ihr Feedback kann uns helfen, zu bestimmen, was wir als Nächstes entwickeln."
+  },
   "otherAssistance": {
     "title": "Wir benötigen noch ein paar Informationen",
     "description": "Erzählen Sie uns mehr über das Problem, das Sie haben, damit unser Team die beste Lösung finden kann."

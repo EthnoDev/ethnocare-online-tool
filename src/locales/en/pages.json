@@ -160,6 +160,10 @@
     "descriptionTitle": "Why ?",
     "descriptionSec": "The stirrup is designed specifically for when the integrated sillicone is not enough to hold the Overlay. This solution will keep your Overlay secure all day long."
   },
+  "comingSoonAssistance": {
+    "title": "We are working on it !",
+    "description": "This is a challenge our team is actively exploring. We work with prosthetic users and clinicians to develop solutions to real everyday problems. Your feedback can help guide what we build next."
+  },
   "otherAssistance": {
     "title": "We need a little more information",
     "description": "Tell us more about the issue you're experiencing so our team can help find the best solution."
