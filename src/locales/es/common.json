@@ -101,7 +101,7 @@
   },
   "inputs": {
     "enter_measurement": "Ingresar medida",
-    "additional_instruction": "Instrucción adicional"
+    "additional_instruction": "Instrucciones adicionales"
   },
   "email": {
     "placeholder": "ejemplo@correo.com",
@@ -143,7 +143,7 @@
     "silicone": "Silicona"
   },
   "contactForm": {
-    "question": "¿Necesitas asistencia adicional ?",
+    "question": "¿Necesitas asistencia adicional?",
     "order": "Envíanos un mensaje",
     "question2": "Envíanos un mensaje",
     "order2": "Describe el problema con el mayor detalle posible. Tus comentarios ayudarán a nuestro equipo a investigar el problema y mejorar nuestros productos.",
@@ -171,7 +171,7 @@
   },
   "redirectionPopup": {
     "title": "Underlay Abierto no disponible",
-    "description": "Parece que no tenemos tu talla disponible en este momento. Sin embargo, puedes elegir el Underlay Cerrado haciendo clic en el botón a continuación.",
+    "description": "Parece que tu talla no está disponible en este momento. Sin embargo, puedes elegir el Underlay Cerrado haciendo clic en el botón a continuación.",
     "description_p1": "Parece que la medida de tu circunferencia proximal se encuentra fuera de nuestro rango de tallas. <bold>Tu miembro puede ser demasiado cónico para el Underlay Abierto.</bold>",
     "description_p2": "Por favor, verifica que tus medidas se encuentren dentro de los siguientes rangos para <bold>tu talla de Underlay Abierto.</bold>",
     "description_p3": "<bold>De lo contrario, elige el Underlay Cerrado</bold> haciendo clic en el botón a continuación y comienza un nuevo procedimiento de dimensionamiento.",
@@ -189,7 +189,7 @@
   },
   "tooSmallPopup": {
     "title": "Aviso",
-    "description": "Nuestros liners de gel son más largos que nuestros liners de silicona. Si el liner de silicona es demasiado pequeño, puedes optar por una opción de gel.",
+    "description": "Nuestros liners de gel son más largos que nuestros liners de silicona. Si el liner de silicona es demasiado pequeño, puedes optar por un liner de gel.",
     "description2": "Los liners de gel miden {{distance}} de largo.",
     "gelButton": "Guía de tallas de liners de gel",
     "homeButton": "Volver a la página de inicio",
