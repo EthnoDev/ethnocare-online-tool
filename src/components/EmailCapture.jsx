@@ -106,7 +106,7 @@ export default function EmailCapture({
             {t("email.success", { ns: "common" })}
           </motion.div>
         ) : (
-          <motion.form key="form" layout onSubmit={handleSubmit} noValidate {...xfade} className="relative z-0 space-y-2">
+          <motion.form key="form" layout onSubmit={handleSubmit} noValidate {...xfade} className="relative z-0 space-y-1">
             <div className="flex items-stretch gap-2">
               <input
                 type="email"

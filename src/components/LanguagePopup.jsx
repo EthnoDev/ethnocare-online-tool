@@ -67,7 +67,7 @@ export default function LanguagePopup({ onClose }) {
               {t("footer.select_language")}
             </p>
 
-            <div className="space-y-3 mt-4">
+            <div className="space-y-6 mt-8">
               {options.map((opt) => (
                 <SelectableOption
                   key={opt.code}

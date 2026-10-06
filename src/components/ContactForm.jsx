@@ -142,8 +142,8 @@ export default function ContactForm({
           </motion.div>
         ) : (
           // FORM + SUMMARY + BUTTON
-          <motion.div key="form" {...xfade} className="space-y-2">
-            <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
+          <motion.div key="form" {...xfade} className="space-y-1">
+            <form className="space-y-1" onSubmit={(e) => e.preventDefault()}>
               {/* Message */}
               <label htmlFor="assist-message" className="sr-only">
                 {t("contactForm.labelMessage", "Your message")}
