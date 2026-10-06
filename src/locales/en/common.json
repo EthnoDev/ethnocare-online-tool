@@ -190,7 +190,7 @@
   },
   "tooSmallPopup": {
     "title": "Notice",
-    "description": "Our gel liners are longer than our silicone liners. If the silicone liner is too small, you can opt for a gel option.",
+    "description": "Our gel liners are longer than our silicone liners. If the silicone liner is too small, you can opt for a gel liner.",
     "description2": "Gel liners are {{distance}} in length.",
     "gelButton": "Gel Liner Sizing",
     "homeButton": "Return to Home",
