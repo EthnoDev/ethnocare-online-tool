@@ -59,7 +59,7 @@ export default function ContactForm({
 
     // HubSpot Forms API
     const portalId = import.meta.env.VITE_HS_PORTAL_ID;
-    const formGuid = import.meta.env.VITE_HS_FORM_GUID; // ensure this env var exists
+    const formGuid = import.meta.env.VITE_HS_CONTACT_FORM_GUID;
     const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
 
     const overlaySizeCode = localStorage.getItem("product_code") || "N/A";

@@ -44,7 +44,7 @@ export default function EmailCapture({
 
       // ---- HubSpot Forms API config ----
       const portalId = import.meta.env.VITE_HS_PORTAL_ID;
-      const formGuid = import.meta.env.VITE_HS_FORM_GUID;
+      const formGuid = import.meta.env.VITE_HS_EMAIL_FORM_GUID;
 
       const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
 
