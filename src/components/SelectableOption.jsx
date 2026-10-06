@@ -10,8 +10,8 @@ export default function SelectableOption({
   const sizeClasses = fullWidth
     ? "py-3 w-full"
     : compact
-    ? "px-4 py-2"
-    : "px-4 py-3 w-[200px]";
+    ? "px-3 py-2"
+    : "px-3 py-3 w-[200px]";
 
   const base =
     "cursor-pointer rounded-md text-center font-medium font-sans transition-all duration-200 border";
