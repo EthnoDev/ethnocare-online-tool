@@ -101,7 +101,7 @@
   },
   "inputs": {
     "enter_measurement": "Messwert eingeben",
-    "additional_instruction": "Zusätzliche Anweisung"
+    "additional_instruction": "Zusätzliche Anweisungen"
   },
   "email": {
     "placeholder": "beispiel@mail.com",
@@ -173,13 +173,13 @@
     "title": "Underlay Offen nicht verfügbar",
     "description": "Es scheint, dass Ihre Größe derzeit nicht verfügbar ist. Sie können jedoch das Underlay Geschlossen auswählen, indem Sie auf die Schaltfläche unten klicken.",
     "description_p1": "Es scheint, dass Ihr proximaler Umfang außerhalb unseres Größenbereichs liegt. <bold>Ihr Stumpf ist möglicherweise zu konisch für das Underlay Offen.</bold>",
-    "description_p2": "Bitte überprüfen Sie, ob Ihre Maße innerhalb der folgenden Bereiche für <bold>Ihre Underlay-Offen-Größe.</bold> liegen",
+    "description_p2": "Bitte überprüfen Sie, ob Ihre Maße innerhalb der folgenden Bereiche für <bold>Ihre Underlay-Offen-Größe</bold> liegen.",
     "description_p3": "<bold>Andernfalls wählen Sie das Underlay Geschlossen</bold>, indem Sie auf die Schaltfläche unten klicken und einen neuen Größenbestimmungsvorgang starten.",
     "measured_size_label": "Gemessenes Underlay Offen:",
     "table_header": "Maximaler proximaler Umfang (C2)*",
     "table_footnote": "*Direkt über dem oberen Rand des zugeschnittenen Liners (auf der Haut).",
     "cta": "Underlay Geschlossen",
-    "contact_line": "Wenn Sie uns helfen möchten, den Größenbereich des Underlay Offen zu erweitern, können Sie uns Ihre Stumpfmaße senden an:"
+    "contact_line": "Wenn Sie uns helfen möchten, den Größenbereich des Underlay Offen zu erweitern, können Sie uns Ihre Stumpfmaße an folgende Adresse senden:"
   },
   "linerPopup": {
     "title": "Liner-Verfügbarkeit",
@@ -189,10 +189,10 @@
   },
   "tooSmallPopup": {
     "title": "Hinweis",
-    "description": "Unsere Gel-Liner sind länger als unsere Silikon-Liner. Wenn der Silikon-Liner zu klein ist, können Sie eine Gel-Option wählen.",
+    "description": "Unsere Gel-Liner sind länger als unsere Silikon-Liner. Wenn der Silikon-Liner zu klein ist, können Sie einen Gel-Liner wählen.",
     "description2": "Die Gel-Liner sind {{distance}} lang.",
     "gelButton": "Größentabelle für Gel-Liner",
     "homeButton": "Zurück zur Startseite",
-    "contact_line": "Wenn Sie uns helfen möchten oder weitere Fragen haben, können Sie uns kontaktieren unter:"
+    "contact_line": "Wenn Sie uns helfen möchten oder weitere Fragen haben, können Sie uns unter folgender Adresse kontaktieren:"
   }
 }
