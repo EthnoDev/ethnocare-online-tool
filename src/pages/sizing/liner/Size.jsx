@@ -4,15 +4,13 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import EmailCapture from "../../../components/EmailCapture";
+import RedirectIcon from "../../../components/RedirectIcon";
 
 // Product Assets
 import cushionGelLinerImg from "../../../assets/products/cushionGelLiner.png";
 import cushionSilLinerImg from "../../../assets/products/cushionSilLiner.png";
 import pinGelLinerImg from "../../../assets/products/pinGelLiner.png";
 import pinSilLinerImg from "../../../assets/products/pinSilLiner.png";
-
-// UI Assets
-import RedirectLogo from "../../../assets/redirect-logo.svg";
 
 export default function SizeLiner() {
   const navigate = useNavigate();
@@ -257,37 +255,33 @@ export default function SizeLiner() {
                 {t("LinerSizing.prodDocDescription")}
               </p>
 
-              <div className="flex flex-col gap-1.5 items-start mt-1">
+              <div className="flex flex-col gap-1 items-start mt-1">
                 <button
                   type="button"
                   onClick={handleOpenSizingChart}
-                  className="flex items-center gap-1 cursor-pointer"
+                  className="group flex items-center gap-1 cursor-pointer hover:font-bold"
                 >
-                  <span className="text-sm underline underline-offset-4 decoration-[1px]">
+                  <span
+                    data-label={t("LinerSizing.prodDocLinerSizing")}
+                    className="inline-flex flex-col items-center text-sm underline underline-offset-4 decoration-[1px] after:invisible after:block after:h-0 after:overflow-hidden after:font-bold after:content-[attr(data-label)]"
+                  >
                     {t("LinerSizing.prodDocLinerSizing")}
                   </span>
-                  <img
-                    src={RedirectLogo}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-3 w-4"
-                  />
+                  <RedirectIcon className="h-3 w-4" />
                 </button>
 
                 <button
                   type="button"
                   onClick={handleOpenCatalog}
-                  className="flex items-center gap-1 cursor-pointer"
+                  className="group flex items-center gap-1 cursor-pointer hover:font-bold"
                 >
-                  <span className="text-sm underline underline-offset-4 decoration-[1px]">
+                  <span
+                    data-label={t("LinerSizing.prodDocLinerCatalog")}
+                    className="inline-flex flex-col items-center text-sm underline underline-offset-4 decoration-[1px] after:invisible after:block after:h-0 after:overflow-hidden after:font-bold after:content-[attr(data-label)]"
+                  >
                     {t("LinerSizing.prodDocLinerCatalog")}
                   </span>
-                  <img
-                    src={RedirectLogo}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-3 w-4"
-                  />
+                  <RedirectIcon className="h-3 w-4" />
                 </button>
               </div>
             </div>
