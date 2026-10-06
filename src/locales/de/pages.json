@@ -34,7 +34,7 @@
   "identificationReturn": {
     "title": "Identifikation",
     "description": "Sind Sie ein Anwender/eine Klinik oder ein Fachhändler?",
-    "option1": "Anwender/Klinik",
+    "option1": "Anwender oder Klinik",
     "option2": "Fachhändler"
   },
 
@@ -48,7 +48,7 @@
 
   "welcomeAssistance": {
     "title": "Unterstützungstool",
-    "description": "Verwenden Sie dieses Tool, um Hilfe und Unterstützung bei der Verwendung von Ethnocare-Produkten zu erhalten",
+    "description": "Verwenden Sie dieses Tool, um Hilfe und Unterstützung zu Ethnocare-Produkten zu erhalten",
     "startButton": "Starten"
   },
 
@@ -80,7 +80,7 @@
 
   "problemAssistance": {
     "title": "Problem",
-    "description": "Wählen Sie das Problem mit Ihrem Produkt aus",
+    "description": "Wählen Sie das Problem aus, das bei Ihrem Produkt auftritt",
     "pressurePoints": "Druckpunkte",
     "tibialPressurePoint": "Tibialer Druckpunkt",
     "badFit": "Schlechte Passform",
@@ -95,7 +95,7 @@
     "deflate": "Schwer zu entleeren",
     "inflateInteg": "Schwer mit der integrierten Pumpe aufzublasen",
     "inflateExtern": "Schwer mit der externen Pumpe aufzublasen",
-    "pressure": "Schwer, immer den gleichen Druck zu erreichen"
+    "pressure": "Schwierigkeit, konstant den gleichen Druck zu erreichen"
   },
   "smartPumpAssistance": {
     "title": "Smart Pump",
@@ -114,7 +114,7 @@
     "demand": "Sobald abgeschlossen, wählen Sie das Problem aus:",
     "valve": "Blasen kommen aus dem Ventil",
     "pump": "Blasen kommen aus der Pumpe",
-    "none": "Es kommen keine Luftblasen oder sie kommen von woanders"
+    "none": "Keine Luftblasen oder sie kommen von einer anderen Stelle"
   },
 
   "pumpMaintenanceAssistance": {
@@ -145,17 +145,18 @@
     "short": "Zu kurz"
   },
   "verifySizeAssistance": {
-    "title": "Überprüfen Sie Ihre Größe",
-    "description": "Um Ihr Größenproblem zu lösen, müssen wir überprüfen, ob Sie die richtige Produktgröße haben",
-    "step1": "Schritt 1",
-    "descriptionStep1": "Bestimmen Sie Ihre empfohlene Größe mit dem Ethnocare-Größentool",
-    "startButton": "Starten",
-    "step2": "Schritt 2",
-    "descriptionStep2": "Vergleichen Sie die empfohlene Größe mit     der Größe des Produkts, das Sie verwenden",
-    "additionalInfo": "Wenn Ihre Größe nicht mit der empfohlenen Größe übereinstimmt, kontaktieren Sie uns bitte für weitere Unterstützung."  },
+  "title": "Überprüfen Sie Ihre Größe",
+  "description": "Um Ihr Größenproblem zu lösen, müssen wir überprüfen, ob Sie die richtige Produktgröße haben",
+  "step1": "Schritt 1",
+  "descriptionStep1": "Bestimmen Sie Ihre empfohlene Größe mit dem Ethnocare-Größentool.",
+  "startButton": "Starten",
+  "step2": "Schritt 2",
+  "descriptionStep2": "Wenn Sie eine andere Größe als die derzeit verwendete benötigen, senden Sie uns bitte eine Nachricht.",
+  "additionalInfo": "Beschreiben Sie Ihr Problem, geben Sie weitere Details an und hinterlassen Sie Ihre Kontaktdaten."
+  },
   "movingAssistance": {
     "title": "Overlay rutscht",
-    "description": "Wie rutscht Ihr Overlay auf Ihrem Liner?",
+    "description": "Wie bewegt sich Ihr Overlay auf Ihrem Liner?",
     "slides-up": "Nach oben",
     "slides-down": "Nach unten",
     "shifts-sideways": "Rotation",
@@ -395,8 +396,8 @@
     "prodDocLinerSizing": "Liner-Größentabelle",
     "prodDocLinerCatalog": "Liner-Katalog",
     "otherTitle": "Andere kompatible Größen:",
-    "moreStretched": "Mehr gedehnt",
-    "lessStretched": "Weniger gedehnt",
+    "moreStretched": "Mehr Dehnung",
+    "lessStretched": "Weniger Dehnung",
     "email_title": "Auswahl speichern!",
     "email_description": "Erhalten Sie Ihren Produktcode und Anpassungshinweise sofort per E-Mail."
   }
