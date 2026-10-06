@@ -34,7 +34,7 @@
   "identificationReturn": {
     "title": "Identification",
     "description": "Êtes-vous un utilisateur/clinique ou un distributeur ?",
-    "option1": "Utilisateur/Clinique",
+    "option1": "Utilisateur ou Clinique",
     "option2": "Distributeur"
   },
 
@@ -48,7 +48,7 @@
 
   "welcomeAssistance": {
     "title": "Outil d'assistance",
-    "description": "Utilisez cet outil pour obtenir de l'aide et du support pour l'utilisation des produits Ethnocare",
+    "description": "Utilisez cet outil pour obtenir de l'aide et du soutien concernant les produits Ethnocare",
     "startButton": "Commencer"
   },
 
@@ -80,7 +80,7 @@
 
   "problemAssistance": {
     "title": "Problème",
-    "description": "Sélectionnez le problème avec votre produit",
+    "description": "Sélectionnez le problème que vous rencontrez avec votre produit",
     "pressurePoints": "Points de pression",
     "tibialPressurePoint": "Point de pression tibial",
     "badFit": "Mauvais ajustement",
@@ -95,7 +95,7 @@
     "deflate": "Difficile à dégonfler",
     "inflateInteg": "Difficile à gonfler avec la pompe intégrée",
     "inflateExtern": "Difficile à gonfler avec une pompe externe",
-    "pressure": "Difficile d'atteindre toujours la même pression"
+    "pressure": "Difficulté à atteindre la même pression de façon constante"
   },
   "smartPumpAssistance": {
     "title": "Smart Pump",
@@ -146,16 +146,17 @@
   },
   "verifySizeAssistance": {
     "title": "Vérifiez votre taille",
-    "description": "Pour résoudre votre problème de dimensionnement, nous devons vérifier que vous avez la bonne taille de produit",
+    "description": "Pour résoudre votre problème de taille, nous devons vérifier que vous avez la bonne taille de produit",
     "step1": "Étape 1",
-    "descriptionStep1": "Déterminez votre taille recommandée avec l'outil de dimensionnement Ethnocare",
+    "descriptionStep1": "Déterminez votre taille recommandée avec l'outil de dimensionnement Ethnocare.",
     "startButton": "Commencer",
     "step2": "Étape 2",
-    "descriptionStep2": "Comparez la taille recommandée avec     la taille du produit que vous utilisez",
-    "additionalInfo": "Si votre taille ne correspond pas à la taille recommandée, veuillez nous contacter pour obtenir de l'aide."  },
+    "descriptionStep2": "Si vous avez besoin d'une taille différente de celle que vous utilisez actuellement, veuillez nous envoyer un message.",
+    "additionalInfo": "Expliquez votre problème, fournissez des détails et incluez vos coordonnées."
+  },
   "movingAssistance": {
     "title": "Glissement de l'Overlay",
-    "description": "Comment votre Overlay glisse-t-il sur votre liner ?",
+    "description": "Comment votre Overlay se déplace-t-il sur votre liner?",
     "slides-up": "Vers le haut",
     "slides-down": "Vers le bas",
     "shifts-sideways": "Rotation",
@@ -395,8 +396,8 @@
     "prodDocLinerSizing": "Tableau des tailles du liner",
     "prodDocLinerCatalog": "Catalogue du liner",
     "otherTitle": "Autres tailles compatibles:",
-    "moreStretched": "Plus étiré",
-    "lessStretched": "Moins étiré",
+    "moreStretched": "Plus d'étirement",
+    "lessStretched": "Moins d'étirement",
     "email_title": "Sauvegardez votre sélection!",
     "email_description": "Recevez instantanément votre code produit et les ressources d'ajustement par courriel."
   }
