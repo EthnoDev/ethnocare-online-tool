@@ -125,7 +125,7 @@ export default function EmailCapture({
                 disabled={isSubmitting}
                 aria-disabled={isSubmitting}
                 aria-busy={isSubmitting}
-                className={`relative h-[42px] px-6 rounded-md border font-sans text-base font-semibold leading-none shrink-0
+                className={`relative h-[42px] px-8 rounded-md border font-sans text-base font-semibold leading-none shrink-0
                             cursor-pointer disabled:cursor-not-allowed transition-colors duration-200
                             ${isSubmitting
                               ? "bg-[#090C41] text-white border-[#090C41]"
