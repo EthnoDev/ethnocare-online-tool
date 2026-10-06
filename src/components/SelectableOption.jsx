@@ -8,7 +8,7 @@ export default function SelectableOption({
   variant = "outline", // "outline" | "solid"
 }) {
   const sizeClasses = fullWidth
-    ? "py-3 w-full"
+    ? "px-1 py-3 w-full"
     : compact
     ? "px-3 py-2"
     : "px-3 py-3 w-[200px]";

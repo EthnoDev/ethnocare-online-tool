@@ -124,7 +124,6 @@ export default function Length() {
           {/* Left Option: Dynamic (Small for Silicone, Home for Gel) - Outline Style */}
           <div className="flex-1">
             <SelectableOption
-              compact
               selected={selectedOption === (isSilicone ? "small" : "home")}
               onClick={handleLeftSelect}
               label={isSilicone ? t("common:cta.small") : t("common:cta.home")}
@@ -138,7 +137,6 @@ export default function Length() {
               : "[&_button]:bg-black [&_button]:border-black hover:[&_button]:bg-[#090C41]"
           }`}>
             <SelectableOption
-              compact
               variant="solid"
               selected={selectedOption === "confirm"}
               onClick={handleConfirmSelect}

@@ -247,7 +247,6 @@ export default function ThicknessSelection() {
                 className="flex-1 [&>div]:items-stretch [&_button]:w-full"
               >
                 <SelectableOption
-                  compact
                   selected={selectedThickness === opt.label}
                   onClick={() => {
                     setSelectedThickness(opt.label);

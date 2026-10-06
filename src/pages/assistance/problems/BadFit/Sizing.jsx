@@ -61,7 +61,6 @@ export default function Sizing() {
           {["loose", "tight", "long", "short"].map((issue) => (
             <SelectableOption
               key={issue}
-              compact
               fullWidth
               label={t(`sizingBadFitAssistance.${issue}`)}
               selected={selected === issue}
