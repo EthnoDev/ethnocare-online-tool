@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
-import EmailCapture from "../../../components/EmailCapture";
 import RedirectIcon from "../../../components/RedirectIcon";
 
 // Product Assets
@@ -353,28 +352,6 @@ export default function SizeLiner() {
           >
             {t("cta.restart", { ns: "common" })}
           </button>
-        </div>
-
-        {/* 5. Email Capture Section */}
-        <div className="mt-10 text-left font-sans max-w-sm mx-auto">
-          <h2 className="text-2xl font-semibold text-slate-900">
-            {t("LinerSizing.email_title")}
-          </h2>
-
-          <p className="text-sm text-gray-700 leading-snug mb-2">
-            {t("LinerSizing.email_description")}
-          </p>
-
-          <EmailCapture
-            selection={{
-              sizeCode,
-              product: getProductImageAlt(),
-            }}
-            onConfirm={(email) => {
-              localStorage.setItem("saved_size_code", sizeCode);
-              console.log("Result saved for:", email);
-            }}
-          />
         </div>
       </div>
     </PageWrapper>
