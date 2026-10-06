@@ -17,7 +17,7 @@ export default function AdjustmentGuides() {
         <p className="mt-3 text-center text-base text-slate-500">
           {t("adjustmentGuidesAssistance.description")}
         </p>
-        <div className="mt-8 flex flex-col items-center gap-4">
+        <div className="mt-8 flex flex-col items-center gap-3">
           {["enlargement", "reduction"].map((guide) => (
             <button
               key={guide}

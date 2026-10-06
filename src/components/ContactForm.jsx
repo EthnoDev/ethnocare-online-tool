@@ -192,7 +192,7 @@ export default function ContactForm({
             </form>
 
             {/* Summary + Send */}
-            <div className="w-full mt-3 flex items-center justify-between gap-4">
+            <div className="w-full mt-3 flex items-center justify-between gap-3">
               {summary ? (
                 <div className="text-sm leading-snug text-slate-600 flex-1">
                   <p className="font-semibold text-slate-900">

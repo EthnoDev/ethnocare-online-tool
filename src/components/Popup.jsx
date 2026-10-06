@@ -324,7 +324,7 @@ export default function Popup({ type, measurement, onClose }) {
           </p>
 
           {/* Dynamic Table Section */}
-          <div className="flex flex-col gap-4 mt-3">
+          <div className="flex flex-col gap-3 mt-3">
             {tables.map((table, idx) => (
               <div key={idx} className="w-full">
                 <table className="w-full border border-gray-300 text-sm border-collapse">
