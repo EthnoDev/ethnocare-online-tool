@@ -31,15 +31,15 @@
   "identificationReturn": {
     "title": "Identification",
     "description": "Are you a user/clinic or distributor?",
-    "option1": "User/Clinic",
+    "option1": "User or Clinic",
     "option2": "Distributor"
   },
   "assistanceToolReturn": {
     "title": "Assistance Tool",
     "descriptionClinic": "Did you try the troubleshooting steps provided in the assistance tool?",
     "descriptionDistributor": "Did the returnee try the troubleshooting steps provided in the assistance tool?",
-    "option1": "Yes, continue",
-    "option2": "No, let's try"
+    "option1": "Yes, Continue",
+    "option2": "No, Let's Try"
   },
   "welcomeAssistance": {
     "title": "Assistance Tool",
@@ -107,7 +107,7 @@
   "pumpMaintenanceAssistance": {
     "title": "Pump Maintenance",
     "description": "Follow the instructions in the video below",
-    "next": "Procedure Completed"
+    "next": "Procedure Complete"
   },
   "returnAssistance": {
     "title": "Return",
@@ -145,7 +145,7 @@
     "slides-up": "Upward",
     "slides-down": "Downward",
     "shifts-sideways": "Rotation",
-    "rolls": "Top hem rolling down"
+    "rolls": "Top Hem Rolling Down"
   },
   "adjustmentGuidesAssistance": {
     "title": "Adjustment Guides",
@@ -204,20 +204,20 @@
   "lengthTTSizing": {
     "title": "Length",
     "description": "Measure the length from the <bold>bottom of the socket</bold> to the posterior proximal trim line",
-    "note_title": "Patient without a socket",
+    "note_title": "Patient Without a Socket",
     "note_body": "If the user is not wearing a socket, measure the length from under the reflected sealing ring to the midpoint of the patellar tendon.<br/><br/>This measurement can be slightly longer than the socket’s posterior proximal trim line, so if the patient is between sizes, choose the shorter Overlay size."
   },
   "lengthTTVacSizing": {
     "title": "Length",
     "descriptionSingle": "Measure the length <bold>under</bold> the reflected sealing ring to the posterior proximal trim line",
     "descriptionMulti": "Measure the length <bold>just above the top seal</bold> to the posterior proximal trim line",
-    "note_title": "Patient without a socket",
+    "note_title": "Patient Without a Socket",
     "note_body": "If the user is not wearing a socket, measure the length from under the reflected sealing ring to the midpoint of the patellar tendon.<br/><br/>This measurement can be slightly longer than the socket’s posterior proximal trim line, so if the patient is between sizes, choose the shorter Overlay size."
   },
   "orientationTTSizing": {
     "title": "Orientation",
     "description": "Choose the pump and valve position",
-    "note_title": "Orientation is based on preference",
+    "note_title": "Orientation Based on Preference",
     "note_body": "Most users prefer the pump and valve on the lateral side."
   },
   "TTSizing": {
@@ -228,7 +228,7 @@
     "circumference": "Circumference",
     "length": "Length",
     "orientation": "Orientation",
-    "email_title": "Save your selection!",
+    "email_title": "Save Your Selection!",
     "email_description": "Get your product code and fitting resources by email instantly."
   },
   "lengthTFSizing": {
@@ -256,9 +256,9 @@
     "system": "System",
     "circumference": "Circumference",
     "length": "Length",
-    "email_title": "Save your selection!",
+    "email_title": "Save Your Selection!",
     "email_description": "Get your product code and fitting resources by email instantly.",
-    "note_cushion_title": "Important notice",
+    "note_cushion_title": "Important Notice",
     "note_cushion_body": "Cushion systems may require custom modifications to the Overlay. Please contact us at <bold>Clinics@ethnocare.ca</bold> with your sizes and details about your suspension system."
   },
   "sealUnderlaySizing": {
@@ -285,8 +285,8 @@
     "title": "Silicone",
     "description": "Optional for added grip",
     "image_caption": "You can choose to add silicone for added grip on the liner and residual limb. This option is recommended for people who are concerned about Underlay movement on the limb.",
-    "option1": "With silicone",
-    "option2": "Without silicone"
+    "option1": "With Silicone",
+    "option2": "Without Silicone"
   },
   "UnderlaySizing": {
     "title": "Size",
@@ -294,13 +294,13 @@
     "amp": "Amputation",
     "circumference": "Circumference",
     "circumference2": "Upper Circumference",
-    "length": "Liner length",
+    "length": "Liner Length",
     "seal": "Design",
     "silicone": "Silicone",
-    "note_title": "Important notice",
+    "note_title": "Important Notice",
     "note_body_closed": "Ensure the Closed Underlay sits <bold>{{measurement}}</bold> under the top edge of the liner.",
     "note_body_open": "Ensure the Open Underlay sits <bold>{{measurement}}</bold> from the distal end.",
-    "email_title": "Save your selection!",
+    "email_title": "Save Your Selection!",
     "email_description": "Get your product code and fitting resources by email instantly."
   },
   "activityLevelLinerSizing": {
@@ -342,17 +342,17 @@
     "activityLevel": "Activity Level",
     "material": "Material",
     "circumference": "Circumference",
-    "length": "Liner length: ",
+    "length": "Liner Length: ",
     "suspension": "Suspension",
     "thickness": "Thickness",
     "prodDocTitle": "Product Documentation",
     "prodDocDescription": "You can download the liner sizing and/or the liner catalog to access additional information.",
-    "prodDocLinerSizing": "Liner sizing chart",
-    "prodDocLinerCatalog": "Liner catalog",
-    "otherTitle": "Other compatible sizes:",
-    "moreStretched": "More stretched",
-    "lessStretched": "Less stretched",
-    "email_title": "Save your selection!",
+    "prodDocLinerSizing": "Liner Sizing Chart",
+    "prodDocLinerCatalog": "Liner Catalog",
+    "otherTitle": "Other Compatible Sizes:",
+    "moreStretched": "More Stretch",
+    "lessStretched": "Less Stretch",
+    "email_title": "Save Your Selection!",
     "email_description": "Get your product code and fitting resources by email instantly."
   }
 }
