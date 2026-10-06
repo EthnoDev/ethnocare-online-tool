@@ -52,7 +52,7 @@ export default function LinerPopup({ onClose, onConfirm }) {
             </h2>
 
             {/* Description */}
-            <p className="text-slate-600 text-sm leading-snug mt-1">
+            <p className="text-slate-600 text-sm leading-snug mt-3">
               {t("linerPopup.description")}
             </p>
 
