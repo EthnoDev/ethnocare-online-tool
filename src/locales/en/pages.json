@@ -43,7 +43,7 @@
   },
   "welcomeAssistance": {
     "title": "Assistance Tool",
-    "description": "Use this tool to get help and support for using Ethnocare products",
+    "description": "Use this tool to get help and support with Ethnocare products",
     "startButton": "Start"
   },
   "amputationAssistance": {
@@ -70,26 +70,26 @@
   },
   "problemAssistance": {
     "title": "Problem",
-    "description": "Select the issue with your product",
+    "description": "Select the issue you are experiencing with your product",
     "pressurePoints": "Pressure Points",
     "tibialPressurePoint": "Tibial Pressure Point",
     "badFit": "Bad Fit",
     "airLoss": "Air Loss",
-    "overlaySlide": "Overlay Slides",
+    "overlaySlide": "Overlay Slipping",
     "inflationDeflation": "Inflation/Deflation",
     "other": "Other"
   },
   "inflDeflAssistance": {
-    "title": "Inflation, Deflation Issues",
+    "title": "Inflation/Deflation Issues",
     "description": "Specify the problem",
     "deflate": "Hard to Deflate",
     "inflateInteg": "Hard to Inflate with the Integrated Pump",
     "inflateExtern": "Hard to Inflate with the External Pump",
-    "pressure": "Hard to always reach the same Pressure"
+    "pressure": "Difficulty Reaching the Same Pressure Consistently"
   },
   "smartPumpAssistance": {
     "title": "Smart Pump",
-    "descriptionTitle": "Why ?",
+    "descriptionTitle": "Why?",
     "descriptionSec": "The Smart Pump makes it easy to adjust your Overlay to your desired pressure, ensuring consistent inflation and deflation every time."
   },
   "pressurePointsAssistance": {
@@ -99,19 +99,19 @@
   "airLossAssistance": {
     "title": "Leak Testing",
     "description": "Follow the instructions in the video below",
-    "demand": "Once completed choose the issue:",
+    "demand": "Once completed, choose the issue:",
     "valve": "Bubbles coming from the Valve",
     "pump": "Bubbles coming from the Pump",
-    "none": "No bubbles or they are coming from elsewhere"
+    "none": "No bubbles, or bubbles coming from elsewhere"
   },
   "pumpMaintenanceAssistance": {
     "title": "Pump Maintenance",
-    "description": "Follow the instuctions in the video below",
+    "description": "Follow the instructions in the video below",
     "next": "Procedure Completed"
   },
   "returnAssistance": {
     "title": "Return",
-    "description": "If the problem persists after cleaning the pump use the return widget to send us back your product"
+    "description": "If the problem persists after cleaning the pump, use the return widget to send your product back to us"
   },
   "badFitAssistance": {
     "title": "Bad Fit",
@@ -123,7 +123,7 @@
   },
   "sizingBadFitAssistance": {
     "title": "Overlay Fit",
-    "description": "What is your issue with the Overlay ?",
+    "description": "What is your issue with the Overlay?",
     "loose": "Too loose",
     "tight": "Too tight",
     "long": "Too long",
@@ -131,17 +131,17 @@
   },
   "verifySizeAssistance": {
     "title": "Verify your Size",
-    "description": "To adress your sizing problem we need to verify that you have the correct product size",
+    "description": "To address your sizing problem, we need to verify that you have the correct product size",
     "step1": "Step 1",
     "descriptionStep1": "Determine your recommended size with the Ethnocare Sizing Tool.",
     "startButton": "Start",
     "step2": "Step 2",
-    "descriptionStep2": "If you need another size than what you already have, please send us a message.",
-    "additionalInfo": "Explain your issue, give us details and your contact information."
+    "descriptionStep2": "If you need a different size from the one you currently have, please send us a message.",
+    "additionalInfo": "Explain your issue, provide details, and include your contact information."
   },
   "movingAssistance": {
     "title": "Overlay Slipping",
-    "description": "How does your Overlay slip on your liner?",
+    "description": "How does your Overlay move on your liner?",
     "slides-up": "Upward",
     "slides-down": "Downward",
     "shifts-sideways": "Rotation",
@@ -157,11 +157,11 @@
   },
   "stirrupAssistance": {
     "title": "Stirrup",
-    "descriptionTitle": "Why ?",
-    "descriptionSec": "The stirrup is designed specifically for when the integrated sillicone is not enough to hold the Overlay. This solution will keep your Overlay secure all day long."
+    "descriptionTitle": "Why?",
+    "descriptionSec": "The stirrup is designed specifically for situations where the integrated silicone is not enough to hold the Overlay in place. This solution will keep your Overlay secure all day long."
   },
   "comingSoonAssistance": {
-    "title": "We are working on it !",
+    "title": "We are working on it!",
     "description": "This is a challenge our team is actively exploring. We work with prosthetic users and clinicians to develop solutions to real everyday problems. Your feedback can help guide what we build next."
   },
   "otherAssistance": {
