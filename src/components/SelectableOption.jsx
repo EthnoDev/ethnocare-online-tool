@@ -11,7 +11,7 @@ export default function SelectableOption({
     ? "py-3 w-full"
     : compact
     ? "px-4 py-2"
-    : "py-3 w-[200px]";
+    : "px-4 py-3 w-[200px]";
 
   const base =
     "cursor-pointer rounded-md text-center font-medium font-sans transition-all duration-200 border";
