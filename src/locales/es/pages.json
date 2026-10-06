@@ -34,7 +34,7 @@
   "identificationReturn": {
     "title": "Identificación",
     "description": "¿Es usted un usuario/clínica o distribuidor?",
-    "option1": "Usuario/Clínica",
+    "option1": "Usuario o Clínica",
     "option2": "Distribuidor"
   },
 
@@ -48,7 +48,7 @@
 
   "welcomeAssistance": {
     "title": "Herramienta de asistencia",
-    "description": "Use esta herramienta para obtener ayuda y soporte para el uso de los productos Ethnocare",
+    "description": "Use esta herramienta para obtener ayuda y soporte con los productos Ethnocare",
     "startButton": "Comenzar"
   },
 
@@ -80,7 +80,7 @@
 
   "problemAssistance": {
     "title": "Problema",
-    "description": "Seleccione el problema con su producto",
+    "description": "Seleccione el problema que está experimentando con su producto",
     "pressurePoints": "Puntos de presión",
     "tibialPressurePoint": "Punto de presión tibial",
     "badFit": "Mal ajuste",
@@ -95,7 +95,7 @@
     "deflate": "Difícil de desinflar",
     "inflateInteg": "Difícil de inflar con la bomba integrada",
     "inflateExtern": "Difícil de inflar con la bomba externa",
-    "pressure": "Difícil de alcanzar siempre la misma presión"
+    "pressure": "Dificultad para alcanzar la misma presión de forma constante"
   },
   "smartPumpAssistance": {
     "title": "Smart Pump",
@@ -145,17 +145,18 @@
     "short": "Demasiado corto"
   },
   "verifySizeAssistance": {
-    "title": "Verifique su talla",
-    "description": "Para abordar su problema de tallas, necesitamos verificar que tiene la talla correcta del producto",
-    "step1": "Paso 1",
-    "descriptionStep1": "Determine su talla recomendada con la herramienta de tallas de Ethnocare",
-    "startButton": "Comenzar",
-    "step2": "Paso 2",
-    "descriptionStep2": "Compare la talla recomendada con     la talla del producto que está utilizando",
-    "additionalInfo": "Si su talla no coincide con la talla recomendada, contáctenos para recibir más ayuda."  },
+  "title": "Verifique su talla",
+  "description": "Para abordar su problema de talla, necesitamos verificar que tiene la talla correcta del producto",
+  "step1": "Paso 1",
+  "descriptionStep1": "Determine su talla recomendada con la herramienta de tallas de Ethnocare.",
+  "startButton": "Comenzar",
+  "step2": "Paso 2",
+  "descriptionStep2": "Si necesita una talla diferente de la que utiliza actualmente, envíenos un mensaje.",
+  "additionalInfo": "Explique su problema, proporcione detalles e incluya su información de contacto."
+  },
   "movingAssistance": {
     "title": "Deslizamiento del Overlay",
-    "description": "¿Cómo se desliza su Overlay sobre su liner?",
+    "description": "¿Cómo se mueve su Overlay sobre su liner?",
     "slides-up": "Hacia arriba",
     "slides-down": "Hacia abajo",
     "shifts-sideways": "Rotación",
@@ -395,8 +396,8 @@
     "prodDocLinerSizing": "Tabla de tallas del liner",
     "prodDocLinerCatalog": "Catálogo del liner",
     "otherTitle": "Otras tallas compatibles:",
-    "moreStretched": "Más estirado",
-    "lessStretched": "Menos estirado",
+    "moreStretched": "Más estiramiento",
+    "lessStretched": "Menos estiramiento",
     "email_title": "¡Guarde su selección!",
     "email_description": "Reciba al instante su código de producto y recursos de ajuste por correo electrónico."
   }
