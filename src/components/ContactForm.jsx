@@ -170,7 +170,7 @@ export default function ContactForm({
                 className={`block w-full rounded-md border bg-white px-4 py-3 text-sm outline-none placeholder-gray-400 focus:ring-2 focus:border-transparent ${
                   errors.message
                     ? "border-red-400 focus:ring-red-400"
-                    : "border-gray-200 focus:ring-[#090C41]"
+                    : "mb-3 border-gray-200 focus:ring-[#090C41]"
                 }`}
               />
               {errors.message ? (
