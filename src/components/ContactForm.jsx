@@ -62,9 +62,19 @@ export default function ContactForm({
     const formGuid = import.meta.env.VITE_HS_CONTACT_FORM_GUID;
     const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
 
-    const overlaySizeCode = localStorage.getItem("product_code") || "N/A";
-    const problem = localStorage.getItem("problem") || "N/A";
-    const detail = localStorage.getItem("detail") || "N/A";
+    // "problem" is never stored in localStorage (only "problem_key"), so prefer the summary values
+    const overlaySizeCode =
+      summary?.product || localStorage.getItem("product_code") || "N/A";
+    const problem =
+      summary?.issue ||
+      localStorage.getItem("problem") ||
+      (localStorage.getItem("problem_key")
+        ? t(localStorage.getItem("problem_key"), {
+            defaultValue: localStorage.getItem("problem_key"),
+          })
+        : "N/A");
+    const detail =
+      summary?.detail || localStorage.getItem("detail") || "N/A";
 
     const payload = {
       fields: [
