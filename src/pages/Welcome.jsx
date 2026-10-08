@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 export default function Welcome() {
   const navigate = useNavigate();
   const [goingTo, setGoingTo] = useState(null);
-  const { t } = useTranslation("pages");
+  const { t, i18n } = useTranslation("pages");
 
   const delayedNav = (key, action) => {
     if (goingTo) return;
@@ -70,7 +70,9 @@ export default function Welcome() {
             onClick={() =>
               delayedNav("faq", () => {
                 window.open(
-                  "https://ethnocare.ca/pages/information",
+                  i18n.language?.toLowerCase().startsWith("fr")
+                    ? "https://ethnocare.ca/fr/pages/information"
+                    : "https://ethnocare.ca/pages/information",
                   "_blank",
                   "noopener,noreferrer"
                 );
