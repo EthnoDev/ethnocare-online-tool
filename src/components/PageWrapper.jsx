@@ -55,6 +55,11 @@ export default function PageWrapper({
   } else {
   }
 
+  // Distributors flow has its own fixed step count
+  if (location.pathname.startsWith("/distributors")) {
+    totalSteps = 4;
+  }
+
   // --- Language-dependent PDF suffix helpers ---
   const getOverlayPdfSuffix = () => {
     const lang = i18n.language || "en";

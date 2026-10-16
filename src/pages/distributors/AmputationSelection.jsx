@@ -27,7 +27,12 @@ export default function DistributorsAmputationSelection() {
   };
 
   return (
-    <PageWrapper showBack={true} backTo="/" code={true}>
+    <PageWrapper
+      showBack={true}
+      backTo="/"
+      code={true}
+      currentStep={1}
+    >
       <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("amputationSizing.title")}

@@ -32,7 +32,12 @@ export default function DistributorsRegionSelection() {
   };
 
   return (
-    <PageWrapper showBack={true} backTo="/distributors/product" code={true}>
+    <PageWrapper
+      showBack={true}
+      backTo="/distributors/product"
+      code={true}
+      currentStep={3}
+    >
       <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("regionDistributors.title")}

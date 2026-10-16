@@ -26,7 +26,12 @@ export default function DistributorsProductSelection() {
   };
 
   return (
-    <PageWrapper showBack={true} backTo="/distributors/amputation" code={true}>
+    <PageWrapper
+      showBack={true}
+      backTo="/distributors/amputation"
+      code={true}
+      currentStep={2}
+    >
       <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("productSizing.title")}
