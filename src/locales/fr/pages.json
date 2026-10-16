@@ -206,7 +206,16 @@
 
   "regionDistributors": {
     "title": "Région",
-    "description": "Sélectionnez votre région pour trouver un distributeur"
+    "description": "Sélectionnez votre région pour trouver un distributeur",
+    "regions": {
+      "africa": "Afrique",
+      "asia": "Asie",
+      "europe": "Europe",
+      "middleEast": "Moyen-Orient",
+      "northAmerica": "Amérique du Nord",
+      "oceania": "Océanie",
+      "southAmerica": "Amérique du Sud"
+    }
   },
   "productSizing": {
     "title": "Produit",

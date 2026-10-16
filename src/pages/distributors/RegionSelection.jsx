@@ -1,8 +1,29 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
+import SelectableOption from "../../components/SelectableOption";
+
+const UNDERLAY_REGIONS = ["europe", "northAmerica", "oceania", "southAmerica"];
+const OVERLAY_REGIONS = [...UNDERLAY_REGIONS, "africa", "asia", "middleEast"];
 
 export default function DistributorsRegionSelection() {
-  const { t } = useTranslation("pages");
+  const { t, i18n } = useTranslation("pages");
+  const [selected, setSelected] = useState(null);
+
+  const product = localStorage.getItem("product");
+  const regionKeys = product === "underlay" ? UNDERLAY_REGIONS : OVERLAY_REGIONS;
+
+  // Sorted by the translated label so the order is alphabetical in every language
+  const regions = regionKeys
+    .map((key) => ({ key, label: t(`regionDistributors.regions.${key}`) }))
+    .sort((a, b) => a.label.localeCompare(b.label, i18n.language));
+
+  const handleSelect = (region) => {
+    if (selected) return;
+
+    setSelected(region);
+    localStorage.setItem("region", region);
+  };
 
   return (
     <PageWrapper showBack={true} backTo="/distributors/product" code={true}>
@@ -14,6 +35,18 @@ export default function DistributorsRegionSelection() {
         <p className="mt-3 text-center text-base text-slate-500">
           {t("regionDistributors.description")}
         </p>
+
+        <div className="mt-8 grid grid-cols-2 gap-6">
+          {regions.map(({ key, label }) => (
+            <SelectableOption
+              key={key}
+              fullWidth
+              label={label}
+              selected={selected === key}
+              onClick={() => handleSelect(key)}
+            />
+          ))}
+        </div>
       </div>
     </PageWrapper>
   );
