@@ -93,8 +93,8 @@
     "descriptionSec": "The Smart Pump makes it easy to adjust your Overlay to your desired pressure, ensuring consistent inflation and deflation every time."
   },
   "pressurePointsAssistance": {
-    "title": "Rotation",
-    "description": "Rotate your Overlay between 30° and 180°"
+    "title": "Product Rotation",
+    "description": "Remove your prosthesis, press the valve, then slightly rotate the Overlay left or right. Put your prosthesis back on, reinflate the Overlay, and check whether the pressure points remain."
   },
   "airLossAssistance": {
     "title": "Leak Testing",

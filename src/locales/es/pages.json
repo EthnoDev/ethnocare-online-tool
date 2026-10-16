@@ -104,8 +104,8 @@
   },
 
   "pressurePointsAssistance": {
-    "title": "Rotación",
-    "description": "Gire su Overlay entre 30° y 180°"
+    "title": "Rotación del producto",
+    "description": "Retire su prótesis, presione la válvula y luego gire ligeramente el Overlay hacia la izquierda o la derecha. Vuelva a colocarse la prótesis, vuelva a inflar el Overlay y verifique si los puntos de presión persisten."
   },
 
   "airLossAssistance": {

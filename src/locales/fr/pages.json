@@ -104,8 +104,8 @@
   },
 
   "pressurePointsAssistance": {
-    "title": "Rotation",
-    "description": "Faites pivoter votre Overlay entre 30° et 180°"
+    "title": "Rotation du produit",
+    "description": "Retirez votre prothèse, appuyez sur la valve, puis faites légèrement pivoter l'Overlay vers la gauche ou la droite. Remettez votre prothèse, regonflez l'Overlay et vérifiez si les points de pression persistent."
   },
 
   "airLossAssistance": {
