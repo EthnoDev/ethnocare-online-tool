@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
@@ -8,6 +9,7 @@ const OVERLAY_REGIONS = [...UNDERLAY_REGIONS, "africa", "asia", "middleEast"];
 
 export default function DistributorsRegionSelection() {
   const { t, i18n } = useTranslation("pages");
+  const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
 
   const product = localStorage.getItem("product");
@@ -23,6 +25,10 @@ export default function DistributorsRegionSelection() {
 
     setSelected(region);
     localStorage.setItem("region", region);
+
+    setTimeout(() => {
+      navigate("/distributors/list");
+    }, 200);
   };
 
   return (

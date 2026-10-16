@@ -217,6 +217,10 @@
       "southAmerica": "Südamerika"
     }
   },
+  "distributors": {
+    "title": "Händler",
+    "description": "Kontaktieren Sie einen unserer Händler in Ihrer Region"
+  },
   "productSizing": {
     "title": "Produkt",
     "description": "Wählen Sie das Produkt aus, dessen Größe Sie bestimmen möchten"

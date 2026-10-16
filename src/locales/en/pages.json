@@ -196,6 +196,10 @@
       "southAmerica": "South America"
     }
   },
+  "distributors": {
+    "title": "Distributors",
+    "description": "Contact one of our distributors in your region"
+  },
   "productSizing": {
     "title": "Product",
     "description": "Select the product you want to size"
