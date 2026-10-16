@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
@@ -8,6 +9,7 @@ import TF from "../../assets/amputation/transfemoral.svg";
 import TF_FR from "../../assets/amputation/transfemoral_FR.svg";
 
 export default function DistributorsAmputationSelection() {
+  const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
   const { t, i18n } = useTranslation(["pages", "common"]);
 
@@ -18,6 +20,10 @@ export default function DistributorsAmputationSelection() {
 
     setSelected(type);
     localStorage.setItem("amputation", type);
+
+    setTimeout(() => {
+      navigate("/distributors/product");
+    }, 200);
   };
 
   return (
