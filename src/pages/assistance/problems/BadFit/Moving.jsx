@@ -70,7 +70,9 @@ export default function Moving() {
     localStorage.setItem("detail_key", `pages:movingAssistance.${id}`);
 
     setTimeout(() => {
-      if (id === "slides-up" || id === "shifts-sideways" || id === "rolls") {
+      if (id === "rolls") {
+        navigate("/assistance/problem/bad-fit/adjustment-guides");
+      } else if (id === "slides-up" || id === "shifts-sideways") {
         navigate("/assistance/problem/coming-soon");
       } else if (id === "slides-down") {
         navigate("/assistance/problem/other");

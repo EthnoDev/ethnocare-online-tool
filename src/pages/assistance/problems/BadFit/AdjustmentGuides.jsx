@@ -5,8 +5,12 @@ import ExclamationIcon from "../../../../assets/exclamation.svg";
 
 export default function AdjustmentGuides() {
   const { t } = useTranslation(["pages", "common"]);
-  const openGuides = () =>
-    window.open("https://ethnocare.ca/", "_blank", "noopener,noreferrer");
+  const guidePdfs = {
+    enlargement: "/Adjustment Guides/Enlarge.pdf",
+    reduction: "/Adjustment Guides/Reduce.pdf",
+  };
+  const openGuide = (guide) =>
+    window.open(encodeURI(guidePdfs[guide]), "_blank", "noopener,noreferrer");
 
   return (
     <PageWrapper showBack={true} backTo="/assistance/problem/bad-fit/moving">
@@ -18,11 +22,11 @@ export default function AdjustmentGuides() {
           {t("adjustmentGuidesAssistance.description")}
         </p>
         <div className="mt-8 flex flex-col items-center gap-3">
-          {["enlargement", "reduction"].map((guide) => (
+          {Object.keys(guidePdfs).map((guide) => (
             <button
               key={guide}
               type="button"
-              onClick={openGuides}
+              onClick={() => openGuide(guide)}
               className="group flex items-center gap-1 text-base underline underline-offset-4 decoration-[1px] cursor-pointer hover:font-bold"
             >
               <span
