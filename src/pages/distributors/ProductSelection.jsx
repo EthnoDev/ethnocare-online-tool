@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
@@ -7,6 +8,7 @@ import OverlayImg from "../../assets/products/overlay.png";
 import UnderlayImg from "../../assets/products/underlay.png";
 
 export default function DistributorsProductSelection() {
+  const navigate = useNavigate();
   const { t } = useTranslation("pages");
   const [selected, setSelected] = useState(null);
 
@@ -17,6 +19,10 @@ export default function DistributorsProductSelection() {
 
     setSelected(productName);
     localStorage.setItem("product", productName);
+
+    setTimeout(() => {
+      navigate("/distributors/region");
+    }, 200);
   };
 
   return (

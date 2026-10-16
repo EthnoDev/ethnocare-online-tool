@@ -204,6 +204,10 @@
     "description": "Quel est votre type d'amputation ?"
   },
 
+  "regionDistributors": {
+    "title": "Région",
+    "description": "Sélectionnez votre région pour trouver un distributeur"
+  },
   "productSizing": {
     "title": "Produit",
     "description": "Sélectionnez le produit que vous souhaitez dimensionner"

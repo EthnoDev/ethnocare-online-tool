@@ -204,6 +204,10 @@
     "description": "Welche Art der Amputation liegt vor?"
   },
 
+  "regionDistributors": {
+    "title": "Region",
+    "description": "Wählen Sie Ihre Region aus, um einen Händler zu finden"
+  },
   "productSizing": {
     "title": "Produkt",
     "description": "Wählen Sie das Produkt aus, dessen Größe Sie bestimmen möchten"

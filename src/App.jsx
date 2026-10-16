@@ -53,6 +53,7 @@ import AssistanceMoving from "./pages/assistance/problems/BadFit/Moving";
 import AssistanceStirrup from "./pages/assistance/problems/BadFit/Stirrup";
 import DistributorsAmputationSelection from "./pages/distributors/AmputationSelection";
 import DistributorsProductSelection from "./pages/distributors/ProductSelection";
+import DistributorsRegionSelection from "./pages/distributors/RegionSelection";
 import AssistanceAdjustmentGuides from "./pages/assistance/problems/BadFit/AdjustmentGuides";
 import AssistanceBadFitSizing from "./pages/assistance/problems/BadFit/Sizing";
 import AssistanceBadFitVerifySize from "./pages/assistance/problems/BadFit/VerifySize";
@@ -72,6 +73,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<MainWelcome />} />
         <Route path="/distributors/amputation" element={<DistributorsAmputationSelection />} />
         <Route path="/distributors/product" element={<DistributorsProductSelection />} />
+        <Route path="/distributors/region" element={<DistributorsRegionSelection />} />
         <Route path="/return" element={<Navigate to="/return/identification" replace />} />
         <Route path="/return/identification" element={<ReturnIdentification />} />
         <Route path="/return/assistance" element={<ReturnAssistanceTool />} />
