@@ -1,10 +1,11 @@
 // src/pages/assistance/overlay/TF/SizeTF.jsx
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import EmailCapture from "../../../../components/EmailCapture";
 import { trackBuyClick } from "../../../../components/trackBuyClick";
+import { trackSizingCompleted } from "../../../../components/trackSizingCompleted";
 
 // Assets
 import TFProductImg from "../../../../assets/products/tf.png";
@@ -157,6 +158,10 @@ export default function SizeTF() {
     "VAC-LG-48": "50916154278207",
     "VAC-LG-52": "50916154310975",
   };
+
+  useEffect(() => {
+    trackSizingCompleted("Overlay TF", sizeCode);
+  }, [sizeCode]);
 
   /** ---------- Buy Now ---------- */
   const handleConfirmClick = () => {

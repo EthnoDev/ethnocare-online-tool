@@ -1,10 +1,11 @@
 // src/pages/assistance/overlay/TT/SizeTT.jsx
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import EmailCapture from "../../../../components/EmailCapture";
 import { trackBuyClick } from "../../../../components/trackBuyClick";
+import { trackSizingCompleted } from "../../../../components/trackSizingCompleted";
 
 // Assets
 import TTProductImg from "../../../../assets/products/tt.png";
@@ -105,6 +106,10 @@ export default function SizeTT() {
     "35-LG-R": "47373038747967",
     "35-LG-L": "47373038780735",
   };
+
+  useEffect(() => {
+    trackSizingCompleted("Overlay TT", sizeCode);
+  }, [sizeCode]);
 
   /** ---------- Buy Now ---------- */
   const handleConfirmClick = () => {

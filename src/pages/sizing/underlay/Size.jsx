@@ -1,10 +1,11 @@
 // src/pages/assistance/underlay/SizeUnderlay.jsx
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import EmailCapture from "../../../components/EmailCapture";
 import { trackBuyClick } from "../../../components/trackBuyClick";
+import { trackSizingCompleted } from "../../../components/trackSizingCompleted";
 
 // Assets
 import ClosedUnderlayImg from "../../../assets/products/closedUnderlay.png";
@@ -123,6 +124,10 @@ export default function SizeUnderlay() {
     "35-SH": "52286326243647",
     "35-LG": "52286326309183",
   };
+
+  useEffect(() => {
+    trackSizingCompleted("Underlay", sizeCode);
+  }, [sizeCode]);
 
   /** ---------- Buy Now ---------- */
   const handleConfirmClick = () => {
