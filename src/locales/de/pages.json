@@ -6,8 +6,8 @@
     "description1": "Finden Sie die richtige Größe für Ihre Ethnocare-Produkte",
     "option2": "Unterstützung",
     "description2": "Erhalten Sie Hilfe bei der Verwendung von Ethnocare-Produkten",
-    "option3": "Händler",
-    "description3": "Finden Sie Ihren lokalen Ethnocare-Händler",
+    "option3": "Rückgabe",
+    "description3": "Starten Sie eine Rückgabe oder einen Umtausch für ein Ethnocare-Produkt",
     "option4": "FAQ",
     "description4": "Finden Sie Antworten auf häufig gestellte Fragen zu Ethnocare-Produkten",
     "option5": "Empfehlung",
@@ -204,23 +204,6 @@
     "description": "Welche Art der Amputation liegt vor?"
   },
 
-  "regionDistributors": {
-    "title": "Region",
-    "description": "Wählen Sie Ihre Region aus, um einen Händler zu finden",
-    "regions": {
-      "africa": "Afrika",
-      "asia": "Asien",
-      "europe": "Europa",
-      "middleEast": "Naher Osten",
-      "northAmerica": "Nordamerika",
-      "oceania": "Ozeanien",
-      "southAmerica": "Südamerika"
-    }
-  },
-  "distributors": {
-    "title": "Händler",
-    "description": "Kontaktieren Sie einen unserer Händler in Ihrer Region"
-  },
   "productSizing": {
     "title": "Produkt",
     "description": "Wählen Sie das Produkt aus, dessen Größe Sie bestimmen möchten"
