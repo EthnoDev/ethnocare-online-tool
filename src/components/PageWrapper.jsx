@@ -25,6 +25,7 @@ export default function PageWrapper({
   children,
   showBack = false,
   backTo = "/",
+  backFallback = "/",
   currentStep = null,
   code = false,
 }) {
@@ -102,7 +103,15 @@ export default function PageWrapper({
         <div className="flex justify-start">
           {showBack && (
             <button
-              onClick={() => navigate(backTo)}
+              onClick={() => {
+                if (typeof backTo === "number") {
+                  // location.key is "default" when there is no in-app history (direct load)
+                  if (location.key !== "default") navigate(backTo);
+                  else navigate(backFallback);
+                } else {
+                  navigate(backTo);
+                }
+              }}
               className="flex items-center gap-2 text-lg text-black font-sans cursor-pointer"
               aria-label={t("cta.back")}
               title={t("cta.back")}
