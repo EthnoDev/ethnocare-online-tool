@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import EmailCapture from "../../../components/EmailCapture";
+import { trackBuyClick } from "../../../components/trackBuyClick";
 
 // Assets
 import ClosedUnderlayImg from "../../../assets/products/closedUnderlay.png";
@@ -144,6 +145,7 @@ export default function SizeUnderlay() {
 
       if (variantId) {
         setTimeout(() => {
+          trackBuyClick("Underlay", sizeCode);
           window.open(
             `${productUrl}?variant=${variantId}`,
             "_blank"

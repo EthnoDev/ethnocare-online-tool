@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import EmailCapture from "../../../../components/EmailCapture";
+import { trackBuyClick } from "../../../../components/trackBuyClick";
 
 // Assets
 import TTProductImg from "../../../../assets/products/tt.png";
@@ -122,6 +123,7 @@ export default function SizeTT() {
 
       if (variantId) {
         setTimeout(() => {
+          trackBuyClick("Overlay TT", sizeCode);
           window.open(
             `https://ethnocare.ca/products/overlay-transtibial?variant=${variantId}`,
             "_blank"

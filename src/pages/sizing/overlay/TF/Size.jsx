@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import EmailCapture from "../../../../components/EmailCapture";
+import { trackBuyClick } from "../../../../components/trackBuyClick";
 
 // Assets
 import TFProductImg from "../../../../assets/products/tf.png";
@@ -169,6 +170,7 @@ export default function SizeTF() {
 
       if (variantId) {
         setTimeout(() => {
+          trackBuyClick("Overlay TF", sizeCode);
           window.open(
             `https://ethnocare.ca/products/overlay-transfemoral?variant=${variantId}`,
             "_blank"
