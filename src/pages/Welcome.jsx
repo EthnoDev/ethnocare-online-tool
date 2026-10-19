@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import PageWrapper from "../components/PageWrapper";
 import SelectableOption from "../components/SelectableOption";
+import { trackSizingStarted } from "../components/trackSizingStarted";
 import RedirectLogo from "../assets/redirect-logo.svg";
 import { useTranslation } from "react-i18next";
 
@@ -13,6 +14,7 @@ export default function Welcome() {
   const delayedNav = (key, action) => {
     if (goingTo) return;
     setGoingTo(key);
+    if (key === "sizing") trackSizingStarted();
 
     setTimeout(() => {
       action?.();
