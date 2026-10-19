@@ -219,8 +219,18 @@
   },
   "distributors": {
     "title": "Distribuidores",
-    "description": "Póngase en contacto con uno de nuestros distribuidores en su región"
-  },
+    "description": "Póngase en contacto con     uno de nuestros distribuidores en su región",
+        "countries": {
+          "Egypt": "Egipto", "Kenya": "Kenia", "Libya": "Libia", "SouthAfrica": "Sudáfrica", "Tunisia": "Túnez",
+          "Japan": "Japón", "Malaysia": "Malasia", "Singapore": "Singapur", "Taiwan": "Taiwán",
+          "Austria": "Austria", "Belgium": "Bélgica", "Denmark": "Dinamarca", "Finland": "Finlandia", "Georgia": "Georgia",
+          "Germany": "Alemania", "Ireland": "Irlanda", "Italy": "Italia", "Luxembourg": "Luxemburgo", "Netherlands": "Países Bajos",
+          "Norway": "Noruega", "Poland": "Polonia", "Portugal": "Portugal", "Spain": "España", "Sweden": "Suecia",
+          "Switzerland": "Suiza", "Ukraine": "Ucrania", "UnitedKingdom": "Reino Unido", "SaudiArabia": "Arabia Saudita",
+          "Canada": "Canadá", "Mexico": "México", "USA": "EE. UU.", "Australia": "Australia", "NewZealand": "Nueva Zelanda",
+          "Argentina": "Argentina", "Chile": "Chile"
+        }
+      },
   "productSizing": {
     "title": "Producto",
     "description": "Seleccione el producto que desea dimensionar"

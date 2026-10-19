@@ -219,7 +219,17 @@
   },
   "distributors": {
     "title": "Händler",
-    "description": "Kontaktieren Sie einen unserer Händler in Ihrer Region"
+    "description": "Kontaktieren Sie einen unserer Händler in Ihrer Region",
+    "countries": {
+      "Egypt": "Ägypten", "Kenya": "Kenia", "Libya": "Libyen", "SouthAfrica": "Südafrika", "Tunisia": "Tunesien",
+      "Japan": "Japan", "Malaysia": "Malaysia", "Singapore": "Singapur", "Taiwan": "Taiwan",
+      "Austria": "Österreich", "Belgium": "Belgien", "Denmark": "Dänemark", "Finland": "Finnland", "Georgia": "Georgien",
+      "Germany": "Deutschland", "Ireland": "Irland", "Italy": "Italien", "Luxembourg": "Luxemburg", "Netherlands": "Niederlande",
+      "Norway": "Norwegen", "Poland": "Polen", "Portugal": "Portugal", "Spain": "Spanien", "Sweden": "Schweden",
+      "Switzerland": "Schweiz", "Ukraine": "Ukraine", "UnitedKingdom": "Vereinigtes Königreich", "SaudiArabia": "Saudi-Arabien",
+      "Canada": "Kanada", "Mexico": "Mexiko", "USA": "USA", "Australia": "Australien", "NewZealand": "Neuseeland",
+      "Argentina": "Argentinien", "Chile": "Chile"
+    }
   },
   "productSizing": {
     "title": "Produkt",
