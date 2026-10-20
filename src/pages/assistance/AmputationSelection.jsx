@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
+import { trackAmputationSelected } from "../../components/trackAmputationSelected";
 
 // assets
 import TT from "../../assets/amputation/transtibial.svg";
@@ -21,6 +22,7 @@ export default function AssistanceAmputationSelection() {
 
     setSelected(type);
     localStorage.setItem("amputation", type);
+    trackAmputationSelected(type);
 
     setTimeout(() => {
       navigate("/assistance/product");
