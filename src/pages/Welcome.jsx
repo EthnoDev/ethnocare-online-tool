@@ -53,6 +53,15 @@ export default function Welcome() {
           />
 
           <SelectableOption
+            label={t("welcome.option3")}
+            description={t("welcome.description3")}
+            selected={goingTo === "distributors"}
+            onClick={() =>
+              delayedNav("distributors", () => navigate("/distributors/amputation"))
+            }
+          />
+
+          <SelectableOption
             label={
               <span className="flex items-center justify-center gap-2">
                 <span>{t("welcome.option4")}</span>
