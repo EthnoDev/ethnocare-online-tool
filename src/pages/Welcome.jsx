@@ -59,6 +59,11 @@ export default function Welcome() {
           />
 
           <SelectableOption
+            label={t("welcome.option5")}
+            description={t("welcome.description5")}
+          />
+
+          <SelectableOption
             label={
               <span className="flex items-center justify-center gap-2">
                 <span>{t("welcome.option4")}</span>
