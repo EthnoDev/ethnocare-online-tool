@@ -3,6 +3,7 @@ import { useState } from "react";
 import PageWrapper from "../components/PageWrapper";
 import SelectableOption from "../components/SelectableOption";
 import { trackSizingStarted } from "../components/trackSizingStarted";
+import { trackAssistanceStarted } from "../components/trackAssistanceStarted";
 import RedirectLogo from "../assets/redirect-logo.svg";
 import { useTranslation } from "react-i18next";
 
@@ -15,7 +16,7 @@ export default function Welcome() {
     if (goingTo) return;
     setGoingTo(key);
     if (key === "sizing") trackSizingStarted();
-
+        if (key === "assistance") trackAssistanceStarted();
     setTimeout(() => {
       action?.();
     }, 200);
