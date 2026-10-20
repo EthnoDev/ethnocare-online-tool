@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { trackEmailSent } from "./trackEmailSent";
 
 export default function EmailCapture({
   onConfirm,
@@ -71,6 +72,8 @@ export default function EmailCapture({
         const data = await res.json().catch(() => ({}));
         throw new Error(data?.message || "HubSpot submission failed");
       }
+
+      trackEmailSent();
 
       setTimeout(() => {
         setSent(true);
