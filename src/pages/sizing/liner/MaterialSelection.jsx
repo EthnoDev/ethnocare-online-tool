@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
+import { trackMaterialSelected } from "../../../components/trackMaterialSelected";
 
 // Import material SVGs per language
 import gelDe from "../../../assets/materials/gel_de.png";
@@ -87,6 +88,7 @@ export default function MaterialSelection() {
   const handleSelect = (materialKey) => {
     setSelectedMaterial(materialKey);
     localStorage.setItem("liner_material", materialKey);
+    trackMaterialSelected(materialKey);
 
     const targetPath = isTranstibial
       ? "/sizing/liner/tt/circumference"
