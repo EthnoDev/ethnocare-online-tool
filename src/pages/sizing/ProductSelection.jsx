@@ -4,6 +4,7 @@ import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 import LinerPopup from "../../components/LinerRedirectionPopup";
+import { trackProductSelected } from "../../components/trackProductSelected";
 
 // Product images
 import OverlayImg from "../../assets/products/overlay.png";
@@ -19,6 +20,7 @@ export default function ProductSelection() {
 
   const handleSelect = (product) => {
     localStorage.setItem("product", product);
+    trackProductSelected(product);
 
     // 1. Overlay Logic
     if (product === "Overlay") {

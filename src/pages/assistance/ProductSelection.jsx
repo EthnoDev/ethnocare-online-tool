@@ -3,6 +3,7 @@ import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 import LinerPopup from "../../components/LinerRedirectionPopup";
+import { trackProductSelected } from "../../components/trackProductSelected";
 
 // product images
 import OverlayImg from "../../assets/products/overlay.png";
@@ -18,6 +19,7 @@ export default function ProductSelection() {
   const amputation = localStorage.getItem("amputation");
 
   const handleSelect = (productName) => {
+    trackProductSelected(productName);
     if (productName === "liner") {
       localStorage.setItem("product", productName);
       setShowLinerPopup(true);
