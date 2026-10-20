@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
 import { trackAmputationSelected } from "../../components/trackAmputationSelected";
+import { trackAssistanceStarted } from "../../components/trackAssistanceStarted";
 
 // assets
 import TT from "../../assets/amputation/transtibial.svg";
@@ -11,6 +12,10 @@ import TF_FR from "../../assets/amputation/transfemoral_FR.svg";
 
 export default function AssistanceAmputationSelection() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    trackAssistanceStarted();
+  }, []);
   const { i18n } = useTranslation();
   const [selected, setSelected] = useState(null);
   const { t } = useTranslation(["pages", "common"]);

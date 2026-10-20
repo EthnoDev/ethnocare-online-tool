@@ -1,12 +1,17 @@
 // src/pages/sizing/UnitsSelection.jsx
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
+import { trackSizingStarted } from "../../components/trackSizingStarted";
 import SelectableOption from "../../components/SelectableOption";
 import { useTranslation } from "react-i18next";
 
 export default function SizingUnitsSelection() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    trackSizingStarted();
+  }, []);
   const [selected, setSelected] = useState(null); // "imperial" | "metric"
   const { t } = useTranslation("pages");
 
