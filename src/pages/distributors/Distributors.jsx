@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
 import RedirectIcon from "../../components/RedirectIcon";
+import { trackDistributorsCompleted } from "../../components/trackDistributorsCompleted";
 import { regions } from "../../data/distributors";
 
 export default function Distributors() {
   const { t, i18n } = useTranslation("pages");
+
+  useEffect(() => {
+    trackDistributorsCompleted();
+  }, []);
 
   const product = (localStorage.getItem("product") || "").toLowerCase();
   const regionId = localStorage.getItem("region");
