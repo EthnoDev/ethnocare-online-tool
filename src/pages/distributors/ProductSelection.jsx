@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
+import { trackProductSelected } from "../../components/trackProductSelected";
 import { useTranslation } from "react-i18next";
 
 // product images
@@ -19,6 +20,7 @@ export default function DistributorsProductSelection() {
 
     setSelected(productName);
     localStorage.setItem("product", productName);
+    trackProductSelected(productName);
 
     setTimeout(() => {
       navigate("/distributors/region");

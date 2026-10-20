@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
 import SelectableOption from "../../components/SelectableOption";
+import { trackRegionSelected } from "../../components/trackRegionSelected";
 
 const UNDERLAY_REGIONS = ["europe", "northAmerica", "oceania", "southAmerica"];
 const OVERLAY_REGIONS = [...UNDERLAY_REGIONS, "africa", "asia", "middleEast"];
@@ -25,6 +26,7 @@ export default function DistributorsRegionSelection() {
 
     setSelected(region);
     localStorage.setItem("region", region);
+    trackRegionSelected(region);
 
     setTimeout(() => {
       navigate("/distributors/list");
