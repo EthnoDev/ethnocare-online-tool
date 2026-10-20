@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
+import { trackSealSelected } from "../../../components/trackSealSelected";
 
 /** ---------- Helpers ---------- */
 const baseLang = (code) => (code || "en").split("-")[0];
@@ -37,6 +38,7 @@ export default function SealSelection() {
     if (selected) return;
     setSelected(optionId);
     localStorage.setItem("underlay_seal", optionId);
+    trackSealSelected(optionId);
 
     setTimeout(() => {
       navigate("/sizing/underlay/circumference");
