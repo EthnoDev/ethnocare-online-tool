@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 import SelectableOption from "../../components/SelectableOption";
+import { trackProblemSelected } from "../../components/trackProblemSelected";
 
 export default function ProblemSelection() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ export default function ProblemSelection() {
     
     // 2. State update handles the visual selection fill color
     setSelectedProblemKey(problem.key);
+    trackProblemSelected(problem.key);
     localStorage.setItem("problem_key", `pages:problemAssistance.${problem.key}`);
 
     // 3. Uniform 200ms delay for button feedback transition

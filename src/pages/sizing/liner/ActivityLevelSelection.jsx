@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import ActivityLevelOption from "../../../components/ActivityLevelOption";
+import { trackActivityLevelSelected } from "../../../components/trackActivityLevelSelected";
 
 export default function ActivityLevelSelection() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export default function ActivityLevelSelection() {
   const handleSelect = (level) => {
     setSelectedLevel(level);
     localStorage.setItem("liner_activity_level", level);
+    trackActivityLevelSelected(level);
 
     // Timeout delay consistent with the rest of your app selection flows
     setTimeout(() => {

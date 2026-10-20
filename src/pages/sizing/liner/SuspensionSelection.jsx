@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
+import { trackSuspensionSelected } from "../../../components/trackSuspensionSelected";
 
 /** ---------- Helpers ---------- */
 const baseLang = (code) => (code || "en").split("-")[0];
@@ -61,6 +62,7 @@ export default function SuspensionSelection() {
     if (selected) return;
     setSelected(optionId);
     localStorage.setItem("liner_suspension", optionId);
+    trackSuspensionSelected(optionId);
 
     setTimeout(() => {
       // Navigate to next step

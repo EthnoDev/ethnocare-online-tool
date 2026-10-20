@@ -1,9 +1,10 @@
 // src/pages/sizing/liner/Size.jsx
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import RedirectIcon from "../../../components/RedirectIcon";
+import { trackSizingCompleted } from "../../../components/trackSizingCompleted";
 
 // Product Assets
 import cushionGelLinerImg from "../../../assets/products/cushionGelLiner.png";
@@ -190,6 +191,10 @@ export default function SizeLiner() {
     if (!url) return;
     window.open(url, "_blank", "noopener,noreferrer");
   };
+
+  useEffect(() => {
+    trackSizingCompleted("Liner", sizeCode);
+  }, [sizeCode]);
 
   const handleRestart = () => {
     setIsRestarting(true);

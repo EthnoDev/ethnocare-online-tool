@@ -1,9 +1,11 @@
 // src/pages/assistance/underlay/SizeUnderlay.jsx
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import EmailCapture from "../../../components/EmailCapture";
+import { trackBuyClick } from "../../../components/trackBuyClick";
+import { trackSizingCompleted } from "../../../components/trackSizingCompleted";
 
 // Assets
 import ClosedUnderlayImg from "../../../assets/products/closedUnderlay.png";
@@ -123,6 +125,10 @@ export default function SizeUnderlay() {
     "35-LG": "52286326309183",
   };
 
+  useEffect(() => {
+    trackSizingCompleted("Underlay", sizeCode);
+  }, [sizeCode]);
+
   /** ---------- Buy Now ---------- */
   const handleConfirmClick = () => {
     setIsConfirming(true);
@@ -144,6 +150,7 @@ export default function SizeUnderlay() {
 
       if (variantId) {
         setTimeout(() => {
+          trackBuyClick("Underlay", sizeCode);
           window.open(
             `${productUrl}?variant=${variantId}`,
             "_blank"

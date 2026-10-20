@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
+import { trackSuspensionSelected } from "../../../../components/trackSuspensionSelected";
 
 /** ---------- Helpers ---------- */
 const baseLang = (code) => (code || "en").split("-")[0];
@@ -67,6 +68,7 @@ export default function SuspensionSelection() {
 
     setSelected(optionId);
     localStorage.setItem("suspension", optionId);
+    trackSuspensionSelected(optionId);
 
     // Logic: If single seal or multi seal, go to TFlength-vac, otherwise TFlength
     setTimeout(() => {

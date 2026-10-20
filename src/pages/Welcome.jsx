@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import PageWrapper from "../components/PageWrapper";
 import SelectableOption from "../components/SelectableOption";
+import { trackSizingStarted } from "../components/trackSizingStarted";
+import { trackAssistanceStarted } from "../components/trackAssistanceStarted";
 import RedirectLogo from "../assets/redirect-logo.svg";
 import { useTranslation } from "react-i18next";
 
@@ -13,7 +15,8 @@ export default function Welcome() {
   const delayedNav = (key, action) => {
     if (goingTo) return;
     setGoingTo(key);
-
+    if (key === "sizing") trackSizingStarted();
+        if (key === "assistance") trackAssistanceStarted();
     setTimeout(() => {
       action?.();
     }, 200);
@@ -46,15 +49,6 @@ export default function Welcome() {
             selected={goingTo === "assistance"}
             onClick={() =>
               delayedNav("assistance", () => navigate("/assistance/amputation"))
-            }
-          />
-
-          <SelectableOption
-            label={t("welcome.option3")}
-            description={t("welcome.description3")}
-            selected={goingTo === "distributors"}
-            onClick={() =>
-              delayedNav("distributors", () => navigate("/distributors/amputation"))
             }
           />
 
