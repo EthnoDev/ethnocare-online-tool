@@ -90,9 +90,9 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
         if (valCm >= 29.5 && valCm < 36) return 28;
         if (valCm >= 36 && valCm <= 42) return 35;
       } else if (measurement === "length") {
-        if (valCm >= 12 && valCm < 17.5) return "XSH";
-        if (valCm >= 17.5 && valCm < 23) return "SH";
-        if (valCm >= 23) return "LG";
+        if (valCm >= 10 && valCm < 15.5) return "XSH";
+        if (valCm >= 15.5 && valCm < 21) return "SH";
+        if (valCm >= 21) return "LG";
       }
     }
 
