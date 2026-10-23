@@ -41,6 +41,7 @@
     "tf": "Transfémoral"
   },
   "products": {
+    "linerAvailability": "Le Liner est uniquement disponible au Canada",
     "tt": "Overlay Transtibial",
     "tf": "Overlay Transfémoral",
     "underlay tt": "Underlay Transtibial",
