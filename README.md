@@ -1,5 +1,13 @@
 # React + Vite
 
+## Distributor flow
+
+The distributor section starts at `/distributors/product`, followed by region
+selection and the distributor list. Both Overlay and Underlay are available
+without selecting an amputation type. The `Distributors Started` analytics event
+fires when ProductSelection mounts. `/distributors` and the legacy
+`/distributors/amputation` URL redirect to `/distributors/product`.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

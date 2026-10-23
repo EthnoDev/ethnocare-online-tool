@@ -54,7 +54,7 @@ export default function Welcome() {
             description={t("welcome.description3")}
             selected={goingTo === "distributors"}
             onClick={() =>
-              delayedNav("distributors", () => navigate("/distributors/amputation"))
+              delayedNav("distributors", () => navigate("/distributors/product"))
             }
           />
 
