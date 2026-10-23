@@ -183,6 +183,10 @@
     "title": "Amputation",
     "description": "What is your amputation type?"
   },
+  "productDistributors": {
+    "title": "Product",
+    "description": "Select the product you want to find a distributor for"
+  },
   "regionDistributors": {
     "title": "Region",
     "description": "Select your region to find a distributor",

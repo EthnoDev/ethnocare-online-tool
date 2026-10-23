@@ -204,6 +204,10 @@
     "description": "¿Cuál es su tipo de amputación?"
   },
 
+  "productDistributors": {
+    "title": "Producto",
+    "description": "Seleccione el producto para el que desea encontrar un distribuidor"
+  },
   "regionDistributors": {
     "title": "Región",
     "description": "Seleccione su región para encontrar un distribuidor",
