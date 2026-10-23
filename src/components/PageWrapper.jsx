@@ -58,7 +58,7 @@ export default function PageWrapper({
 
   // Distributors flow has its own fixed step count
   if (location.pathname.startsWith("/distributors")) {
-    totalSteps = 4;
+    totalSteps = 3;
   }
 
   // --- Language-dependent PDF suffix helpers ---

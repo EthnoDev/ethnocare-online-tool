@@ -49,7 +49,6 @@ import AssistancePressurePoints from "./pages/assistance/problems/PressurePoints
 import AssistanceBadFit from "./pages/assistance/problems/BadFit/BadFit";
 import AssistanceMoving from "./pages/assistance/problems/BadFit/Moving";
 import AssistanceStirrup from "./pages/assistance/problems/BadFit/Stirrup";
-import DistributorsAmputationSelection from "./pages/distributors/AmputationSelection";
 import DistributorsProductSelection from "./pages/distributors/ProductSelection";
 import DistributorsRegionSelection from "./pages/distributors/RegionSelection";
 import Distributors from "./pages/distributors/Distributors";
@@ -70,7 +69,8 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<MainWelcome />} />
-        <Route path="/distributors/amputation" element={<DistributorsAmputationSelection />} />
+        <Route path="/distributors" element={<Navigate to="/distributors/product" replace />} />
+        <Route path="/distributors/amputation" element={<Navigate to="/distributors/product" replace />} />
         <Route path="/distributors/product" element={<DistributorsProductSelection />} />
         <Route path="/distributors/region" element={<DistributorsRegionSelection />} />
         <Route path="/distributors/list" element={<Distributors />} />

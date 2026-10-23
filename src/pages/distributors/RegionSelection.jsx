@@ -38,7 +38,7 @@ export default function DistributorsRegionSelection() {
       showBack={true}
       backTo="/distributors/product"
       code={true}
-      currentStep={3}
+      currentStep={2}
     >
       <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">

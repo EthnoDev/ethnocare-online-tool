@@ -135,7 +135,7 @@ export default function MaterialSelection() {
 
               {/* Notice rendered only if 1 material option is available */}
               {availableOptions.length === 1 && (
-                <p className="mt-3 text-sm text-slate-600 text-center max-w-xs">
+                <p className="mt-2 text-sm text-slate-600 text-center max-w-xs">
                   {t("materialLinerSizing.notice")}
                 </p>
               )}

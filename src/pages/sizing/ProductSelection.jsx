@@ -102,6 +102,9 @@ export default function ProductSelection() {
               alt="Liner"
               className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
             />
+            <span className="mt-2 block text-center text-sm text-slate-600">
+              {t("common:products.linerAvailability")}
+            </span>
           </button>
         </div>
       </div>

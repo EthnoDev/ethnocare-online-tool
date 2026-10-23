@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { trackProductSelected } from "../../components/trackProductSelected";
+import { trackDistributorsStarted } from "../../components/trackDistributorsStarted";
 import { useTranslation } from "react-i18next";
 
 // product images
@@ -13,7 +14,9 @@ export default function DistributorsProductSelection() {
   const { t } = useTranslation("pages");
   const [selected, setSelected] = useState(null);
 
-  const amputation = localStorage.getItem("amputation");
+  useEffect(() => {
+    trackDistributorsStarted();
+  }, []);
 
   const handleSelect = (productName) => {
     if (selected) return;
@@ -30,21 +33,20 @@ export default function DistributorsProductSelection() {
   return (
     <PageWrapper
       showBack={true}
-      backTo="/distributors/amputation"
+      backTo="/"
       code={true}
-      currentStep={2}
+      currentStep={1}
     >
       <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
-          {t("productSizing.title")}
+          {t("productDistributors.title")}
         </h1>
 
         <p className="mt-3 text-center text-base text-slate-500">
-          {t("productSizing.description")}
+          {t("productDistributors.description")}
         </p>
 
         <div className="mt-8 space-y-6 flex flex-col items-center">
-          {/* Overlay - Always visible */}
           <button
             type="button"
             onClick={() => handleSelect("overlay")}
@@ -57,20 +59,17 @@ export default function DistributorsProductSelection() {
             />
           </button>
 
-          {/* Underlay - Transtibial only */}
-          {amputation === "transtibial" && (
-            <button
-              type="button"
-              onClick={() => handleSelect("underlay")}
-              className="cursor-pointer focus:outline-none"
-            >
-              <img
-                src={UnderlayImg}
-                alt="Underlay"
-                className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
-              />
-            </button>
-          )}
+          <button
+            type="button"
+            onClick={() => handleSelect("underlay")}
+            className="cursor-pointer focus:outline-none"
+          >
+            <img
+              src={UnderlayImg}
+              alt="Underlay"
+              className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
+            />
+          </button>
         </div>
       </div>
     </PageWrapper>
