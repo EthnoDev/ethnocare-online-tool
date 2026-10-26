@@ -40,7 +40,7 @@ export default function AirLoss() {
         </p>
 
         <YouTubeEmbed
-          videoId="mxA4KCOqC-U"
+          videoId="5hTt8cSpexo"
           title={t("airLossAssistance.title")}
           className="mt-8"
         />
