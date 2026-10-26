@@ -58,7 +58,12 @@
     "title": "Request",
     "description": "What are you looking for?",
     "option1": "User Guide",
-    "option2": "Assistance"
+    "option2": "Assistance",
+    "visualGuide": "Visual Guide",
+    "visualGuidePin": "Visual Guide Pin",
+    "visualGuideVacuum": "Visual Guide Vacuum",
+    "visualGuideOpen": "Visual Guide Open",
+    "visualGuideClosed": "Visual Guide Closed"
   },
   "sizeAssistance": {
     "title": "Size",

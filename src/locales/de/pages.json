@@ -66,7 +66,12 @@
     "title": "Anfrage",
     "description": "Wonach suchen Sie?",
     "option1": "Benutzerhandbuch",
-    "option2": "Unterstützung"
+    "option2": "Unterstützung",
+    "visualGuide": "Visuelle Anleitung",
+    "visualGuidePin": "Visuelle Anleitung Pin",
+    "visualGuideVacuum": "Visuelle Anleitung Vakuum",
+    "visualGuideOpen": "Visuelle Anleitung offen",
+    "visualGuideClosed": "Visuelle Anleitung geschlossen"
   },
 
   "sizeAssistance": {

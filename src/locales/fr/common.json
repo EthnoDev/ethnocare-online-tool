@@ -3,6 +3,7 @@
     "start": "COMMENCER",
     "next": "Suivant",
     "back": "Retour",
+    "back_description": "Page précédente",
     "skip": "Passer",
     "confirm": "CONFIRMER",
     "restart": "Trouver une nouvelle taille",
@@ -16,7 +17,7 @@
     "suspension": "Suspension",
     "pressurePoints": "Rotation de l'Overlay",
     "small": "TROP PETIT",
-    "home": "Retour à la page d'accueil",
+    "home": "Page d'accueil",
     "buy": "Obtenir l'"
   },
   "pages": {
