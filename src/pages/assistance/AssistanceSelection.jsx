@@ -28,6 +28,29 @@ export default function AssistanceSelection() {
     return null;
   };
 
+  const getVisualGuides = () => {
+    if (product === "underlay") {
+      return [
+        { id: "Visual Guide Open", labelKey: "visualGuideOpen", path: "/3Step/ETH_3STEP_UNTT-OPEN.pdf" },
+        { id: "Visual Guide Closed", labelKey: "visualGuideClosed", path: "/3Step/ETH_3STEP_UNTT-CLOSED.pdf" },
+      ];
+    }
+    if (product === "overlay") {
+      if (amputation === "transfemoral") {
+        return [
+          { id: "Visual Guide Pin", labelKey: "visualGuidePin", path: "/3Step/ETH_3STEP_TF_PIN.pdf" },
+          { id: "Visual Guide Vacuum", labelKey: "visualGuideVacuum", path: "/3Step/ETH_3STEP_TF_VAC.pdf" },
+        ];
+      }
+      return [
+        { id: "Visual Guide", labelKey: "visualGuide", path: "/3Step/ETH_3STEP_TT.pdf" },
+      ];
+    }
+    return [];
+  };
+
+  const visualGuides = getVisualGuides();
+
   const handleSelect = (value) => {
     if (isRouting) return; 
     
@@ -35,8 +58,9 @@ export default function AssistanceSelection() {
     setIsRouting(true);
 
     setTimeout(() => {
-      if (value === "User Guide") {
-        const path = getUserGuidePath();
+      const visualGuide = visualGuides.find((guide) => guide.id === value);
+      if (value === "User Guide" || visualGuide) {
+        const path = visualGuide ? visualGuide.path : getUserGuidePath();
         if (path) window.open(path, "_blank");
         setIsRouting(false);
         setSelected(null);
@@ -85,6 +109,30 @@ export default function AssistanceSelection() {
             onClick={() => handleSelect("User Guide")}
             className={isRouting ? "pointer-events-none opacity-80" : ""}
           />
+
+          {visualGuides.map((guide) => (
+            <SelectableOption
+              key={guide.id}
+              label={
+                <span className="flex items-center justify-center gap-1">
+                  {t(`assistanceAssistance.${guide.labelKey}`)}
+                  <img
+                    src={RedirectLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className={`h-4 w-4 ml-1 transition-all ${
+                      selected === guide.id
+                        ? "brightness-0 invert"
+                        : "opacity-100"
+                    }`}
+                  />
+                </span>
+              }
+              selected={selected === guide.id}
+              onClick={() => handleSelect(guide.id)}
+              className={isRouting ? "pointer-events-none opacity-80" : ""}
+            />
+          ))}
 
           {/* Assistance Flow Option - only for overlay */}
           {product === "overlay" && (

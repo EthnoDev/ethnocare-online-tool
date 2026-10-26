@@ -66,7 +66,12 @@
     "title": "Solicitud",
     "description": "¿Qué está buscando?",
     "option1": "Guía del usuario",
-    "option2": "Asistencia"
+    "option2": "Asistencia",
+    "visualGuide": "Guía visual",
+    "visualGuidePin": "Guía visual Pin",
+    "visualGuideVacuum": "Guía visual Vacío",
+    "visualGuideOpen": "Guía visual abierta",
+    "visualGuideClosed": "Guía visual cerrada"
   },
 
   "sizeAssistance": {
