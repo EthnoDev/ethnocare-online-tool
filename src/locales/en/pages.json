@@ -111,7 +111,7 @@
   },
   "returnAssistance": {
     "title": "Return",
-    "description": "If the problem persists after cleaning the pump, use the return widget to send your product back to us"
+    "description": "If the problem persists after cleaning the pump, your product is defective and should be returned."
   },
   "badFitAssistance": {
     "title": "Bad Fit",
