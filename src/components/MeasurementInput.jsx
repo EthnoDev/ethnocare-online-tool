@@ -35,11 +35,11 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
     if (product === "ttLiner" || product === "tfLiner") {
       if (material === "gel") {
         const matches = [];
-        if (valCm >= 15 && valCm <= 22) matches.push("S");
-        if (valCm >= 19 && valCm <= 29) matches.push("M");
-        if (valCm >= 23 && valCm <= 37) matches.push("L");
-        if (valCm >= 27 && valCm <= 40) matches.push("XL");
-        if (valCm >= 31 && valCm <= 53) matches.push("XXL");
+        if (valCm >= 17 && valCm <= 21) matches.push("S");
+        if (valCm >= 21 && valCm <= 25) matches.push("M");
+        if (valCm >= 25 && valCm <= 29) matches.push("L");
+        if (valCm >= 29 && valCm <= 35) matches.push("XL");
+        if (valCm >= 33 && valCm <= 42) matches.push("XXL");
 
         return matches.length > 0 ? matches.join(",") : null;
       }
