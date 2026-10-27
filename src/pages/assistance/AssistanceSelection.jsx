@@ -18,12 +18,12 @@ export default function AssistanceSelection() {
   const amputation = localStorage.getItem("amputation");
 
   const getUserGuidePath = () => {
-    if (product === "liner") return "/User Guides/Liner_User_Guide.pdf";
-    if (product === "underlay") return "/User Guides/Underlay_User_Guide.pdf";
+    if (product === "liner") return "/User Guides/LNR_USER-GUIDE_EN.pdf";
+    if (product === "underlay") return "/User Guides/UDTT_USER-GUIDE_EN.pdf";
     if (product === "overlay") {
       return amputation === "transfemoral"
-        ? "/User Guides/OV_TF_User_Guide.pdf"
-        : "/User Guides/OV_TT_User_Guide.pdf";
+        ? "/User Guides/OVTF_USER-GUIDE_EN.pdf"
+        : "/User Guides/OVTT_USER-GUIDE_EN.pdf";
     }
     return null;
   };
