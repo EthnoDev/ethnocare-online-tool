@@ -239,8 +239,8 @@ export default function Popup({ type, measurement, onClose }) {
             {
               label: t("popup.labelDistal", "Distal"),
               value: isImperial
-                ? "Min : 5.9 in\nMax : 20.8 in"
-                : "Min : 15 cm\nMax : 53 cm",
+                ? "Min : 6.7 in\nMax : 16.5 in"
+                : "Min : 17 cm\nMax : 42 cm",
             },
             {
               label: t("popup.labelProximal", "Proximal"),
@@ -281,8 +281,8 @@ export default function Popup({ type, measurement, onClose }) {
             {
               label: t("popup.labelDistal", "Distal"),
               value: isImperial
-                ? "Min : 5.9 in\nMax : 20.8 in"
-                : "Min : 15 cm\nMax : 53 cm",
+                ? "Min : 6.7 in\nMax : 16.5 in"
+                : "Min : 17 cm\nMax : 42 cm",
             },
             {
               label: t("popup.labelProximal", "Proximal"),
