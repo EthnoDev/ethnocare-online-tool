@@ -74,7 +74,7 @@ function AnimatedRoutes() {
         <Route path="/distributors/product" element={<DistributorsProductSelection />} />
         <Route path="/distributors/region" element={<DistributorsRegionSelection />} />
         <Route path="/distributors/list" element={<Distributors />} />
-        <Route path="/sizing" element={<Navigate to="/sizing/units" replace />} />
+        <Route path="/sizing" element={<Navigate to="/sizing/product" replace />} />
         <Route path="/sizing/units" element={<SizingUnitsSelection />} />
         <Route path="/sizing/amputation" element={<SizingAmputationSelection />} />
         <Route path="/sizing/product" element={<SizingProductSelection />} />
@@ -91,7 +91,7 @@ function AnimatedRoutes() {
         <Route path="/sizing/TFcircumference" element={<SizingTFCircumference />} />
         <Route path="/sizing/TFcircumference-vac" element={<SizingTFCircumferenceVac />} />
         <Route path="/sizing/TFsize" element={<SizeTF />} />
-        <Route path="/assistance" element={<Navigate to="/assistance/amputation" replace />} />
+        <Route path="/assistance" element={<Navigate to="/assistance/product" replace />} />
         <Route path="/assistance/amputation" element={<AssistanceAmputationSelection />} />
         <Route path="/assistance/product" element={<AssistanceProductSelection />} />
         <Route path="/assistance/selection" element={<AssistanceSelection />} />

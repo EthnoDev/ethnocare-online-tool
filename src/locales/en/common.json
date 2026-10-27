@@ -39,7 +39,8 @@
   },
   "amputation": {
     "tt": "Transtibial",
-    "tf": "Transfemoral"
+    "tf": "Transfemoral",
+    "tfSoon": "Transfemoral - coming soon"
   },
   "products": {
     "linerAvailability": "The Liner is only available in Canada",

@@ -75,7 +75,7 @@ export default function AssistanceSelection() {
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/assistance/product" 
+      backTo="/assistance/amputation"
       code={product === "overlay"}
     >
       <div className="w-full max-w-sm">
