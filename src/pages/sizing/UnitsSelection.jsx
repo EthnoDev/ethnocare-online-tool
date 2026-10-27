@@ -1,17 +1,22 @@
 // src/pages/sizing/UnitsSelection.jsx
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
-import { trackSizingStarted } from "../../components/trackSizingStarted";
 import SelectableOption from "../../components/SelectableOption";
 import { useTranslation } from "react-i18next";
 
+const getNextSizingPath = (product, amputation) => {
+  if (product === "Liner") return "/sizing/liner/activity";
+  if (product === "Underlay") return "/sizing/TTsuspension";
+  if (product === "Overlay") {
+    if (amputation === "transtibial") return "/sizing/TTsuspension";
+    if (amputation === "transfemoral") return "/sizing/TFsuspension";
+  }
+  return "/sizing/product";
+};
+
 export default function SizingUnitsSelection() {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    trackSizingStarted();
-  }, []);
   const [selected, setSelected] = useState(null); // "imperial" | "metric"
   const { t } = useTranslation("pages");
 
@@ -19,16 +24,20 @@ export default function SizingUnitsSelection() {
     if (selected) return; // prevent double clicks
     setSelected(unit);
 
-    // ✅ save for future pages
     localStorage.setItem("units", unit); // "imperial" or "metric"
 
+    const nextPath = getNextSizingPath(
+      localStorage.getItem("product"),
+      localStorage.getItem("amputation")
+    );
+
     setTimeout(() => {
-      navigate("/sizing/amputation"); // ✅ goes to AmputationSelection.jsx
+      navigate(nextPath);
     }, 200);
   };
 
   return (
-    <PageWrapper showBack={true} backTo="/" code={true}>
+    <PageWrapper showBack={true} backTo="/sizing/amputation" code={true}>
       <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("unitsSizing.title")}

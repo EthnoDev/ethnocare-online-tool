@@ -36,7 +36,7 @@ export default function Welcome() {
             description={t("welcome.description1")}
             selected={goingTo === "sizing"}
             onClick={() =>
-              delayedNav("sizing", () => navigate("/sizing/units"))
+              delayedNav("sizing", () => navigate("/sizing/product"))
             }
           />
 
@@ -45,7 +45,7 @@ export default function Welcome() {
             description={t("welcome.description2")}
             selected={goingTo === "assistance"}
             onClick={() =>
-              delayedNav("assistance", () => navigate("/assistance/amputation"))
+              delayedNav("assistance", () => navigate("/assistance/product"))
             }
           />
 

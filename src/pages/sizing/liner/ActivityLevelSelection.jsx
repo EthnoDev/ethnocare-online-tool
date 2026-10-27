@@ -49,7 +49,7 @@ export default function ActivityLevelSelection() {
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/sizing/product" 
+      backTo="/sizing/units"
       currentStep={1} 
       code={true}
     >

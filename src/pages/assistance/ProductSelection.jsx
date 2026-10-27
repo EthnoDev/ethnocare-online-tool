@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 import LinerPopup from "../../components/LinerRedirectionPopup";
 import { trackProductSelected } from "../../components/trackProductSelected";
+import { trackAssistanceStarted } from "../../components/trackAssistanceStarted";
 
 // product images
 import OverlayImg from "../../assets/products/overlay.png";
@@ -14,9 +15,10 @@ export default function ProductSelection() {
   const navigate = useNavigate();
   const { t } = useTranslation("pages");
   const [showLinerPopup, setShowLinerPopup] = useState(false);
-  
-  // Retrieve the amputation type to filter available products
-  const amputation = localStorage.getItem("amputation");
+
+  useEffect(() => {
+    trackAssistanceStarted();
+  }, []);
 
   const handleSelect = (productName) => {
     trackProductSelected(productName);
@@ -31,19 +33,19 @@ export default function ProductSelection() {
 
     // Brief delay for visual feedback before navigating
     setTimeout(() => {
-      navigate("/assistance/selection");
+      navigate("/assistance/amputation");
     }, 200);
   };
 
   const handleConfirmLiner = () => {
     setShowLinerPopup(false);
-    setTimeout(() => navigate("/assistance/selection"), 200);
+    setTimeout(() => navigate("/assistance/amputation"), 200);
   };
 
   return (
     <PageWrapper
       showBack={true}
-      backTo="/assistance/amputation"
+      backTo="/"
       code={true}
     >
       <div className="w-full max-w-sm">
@@ -71,20 +73,18 @@ export default function ProductSelection() {
             />
           </button>
 
-          {/* Underlay - Transtibial users */}
-          {amputation === "transtibial" && (
-            <button
-              type="button"
-              onClick={() => handleSelect("underlay")}
-              className="cursor-pointer focus:outline-none"
-            >
-              <img
-                src={UnderlayImg}
-                alt="Underlay"
-                className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
-              />
-            </button>
-          )}
+          {/* Underlay - transtibial only, enforced on the amputation step */}
+          <button
+            type="button"
+            onClick={() => handleSelect("underlay")}
+            className="cursor-pointer focus:outline-none"
+          >
+            <img
+              src={UnderlayImg}
+              alt="Underlay"
+              className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
+            />
+          </button>
 
           {/* Liner */}
           <button

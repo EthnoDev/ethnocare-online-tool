@@ -1,10 +1,11 @@
 // src/pages/sizing/ProductSelection.jsx
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { useTranslation } from "react-i18next";
 import LinerPopup from "../../components/LinerRedirectionPopup";
 import { trackProductSelected } from "../../components/trackProductSelected";
+import { trackSizingStarted } from "../../components/trackSizingStarted";
 
 // Product images
 import OverlayImg from "../../assets/products/overlay.png";
@@ -14,45 +15,32 @@ import LinerImg from "../../assets/products/liner.png";
 export default function ProductSelection() {
   const navigate = useNavigate();
   const { t } = useTranslation("pages");
-  const amputation = localStorage.getItem("amputation");
 
   const [showLinerPopup, setShowLinerPopup] = useState(false);
+
+  useEffect(() => {
+    trackSizingStarted();
+  }, []);
 
   const handleSelect = (product) => {
     localStorage.setItem("product", product);
     trackProductSelected(product);
 
-    // 1. Overlay Logic
-    if (product === "Overlay") {
-      if (amputation === "transtibial") {
-        setTimeout(() => navigate("/sizing/TTsuspension"), 200);
-        return;
-      }
-      if (amputation === "transfemoral") {
-        setTimeout(() => navigate("/sizing/TFsuspension"), 200);
-        return;
-      }
-    }
-
-    // 2. Underlay Logic (Transtibial only)
-    if (product === "Underlay") {
-      setTimeout(() => navigate("/sizing/TTsuspension"), 200);
+    if (product === "Liner") {
+      setShowLinerPopup(true);
       return;
     }
 
-    // 3. Liner Logic - Opens Popup
-    if (product === "Liner") {
-      setShowLinerPopup(true);
-    }
+    setTimeout(() => navigate("/sizing/amputation"), 200);
   };
 
   const handleConfirmLiner = () => {
     setShowLinerPopup(false);
-    setTimeout(() => navigate("/sizing/liner/activity"), 200);
+    setTimeout(() => navigate("/sizing/amputation"), 200);
   };
 
   return (
-    <PageWrapper showBack={true} backTo="/sizing/amputation" code={true}>
+    <PageWrapper showBack={true} backTo="/" code={true}>
       <div className="w-full max-w-sm">
         <h1 className="text-3xl font-bold text-center text-slate-900 leading-tight">
           {t("productSizing.title")}
@@ -76,20 +64,18 @@ export default function ProductSelection() {
             />
           </button>
 
-          {/* Underlay - Transtibial Only */}
-          {amputation === "transtibial" && (
-            <button
-              type="button"
-              onClick={() => handleSelect("Underlay")}
-              className="cursor-pointer focus:outline-none"
-            >
-              <img
-                src={UnderlayImg}
-                alt="Underlay"
-                className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
-              />
-            </button>
-          )}
+          {/* Underlay - transtibial only, enforced on the amputation step */}
+          <button
+            type="button"
+            onClick={() => handleSelect("Underlay")}
+            className="cursor-pointer focus:outline-none"
+          >
+            <img
+              src={UnderlayImg}
+              alt="Underlay"
+              className="w-70 h-auto object-contain transition-opacity hover:opacity-70"
+            />
+          </button>
 
           {/* Liner - Always Shown */}
           <button
