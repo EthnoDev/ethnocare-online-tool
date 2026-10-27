@@ -6,8 +6,8 @@ import ExclamationIcon from "../../../../assets/exclamation.svg";
 export default function AdjustmentGuides() {
   const { t } = useTranslation(["pages", "common"]);
   const guidePdfs = {
-    enlargement: "/Adjustment Guides/Enlarge.pdf",
-    reduction: "/Adjustment Guides/Reduce.pdf",
+    enlargement: "/Adjustment Guides/OV_ENLARGE.pdf",
+    reduction: "/Adjustment Guides/OV_REDUCE.pdf",
   };
   const openGuide = (guide) =>
     window.open(encodeURI(guidePdfs[guide]), "_blank", "noopener,noreferrer");

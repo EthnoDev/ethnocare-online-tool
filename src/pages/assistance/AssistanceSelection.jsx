@@ -18,12 +18,12 @@ export default function AssistanceSelection() {
   const amputation = localStorage.getItem("amputation");
 
   const getUserGuidePath = () => {
-    if (product === "liner") return "/User Guides/Liner_User_Guide.pdf";
-    if (product === "underlay") return "/User Guides/Underlay_User_Guide.pdf";
+    if (product === "liner") return "/User Guides/LNR_USER-GUIDE_EN.pdf";
+    if (product === "underlay") return "/User Guides/UDTT_USER-GUIDE_EN.pdf";
     if (product === "overlay") {
       return amputation === "transfemoral"
-        ? "/User Guides/OV_TF_User_Guide.pdf"
-        : "/User Guides/OV_TT_User_Guide.pdf";
+        ? "/User Guides/OVTF_USER-GUIDE_EN.pdf"
+        : "/User Guides/OVTT_USER-GUIDE_EN.pdf";
     }
     return null;
   };
@@ -31,19 +31,19 @@ export default function AssistanceSelection() {
   const getVisualGuides = () => {
     if (product === "underlay") {
       return [
-        { id: "Visual Guide Open", labelKey: "visualGuideOpen", path: "/3Step/ETH_3STEP_UNTT-OPEN.pdf" },
-        { id: "Visual Guide Closed", labelKey: "visualGuideClosed", path: "/3Step/ETH_3STEP_UNTT-CLOSED.pdf" },
+        { id: "Visual Guide Open", labelKey: "visualGuideOpen", path: "/3Step/UDTT_OPEN_3STEP_EN.pdf" },
+        { id: "Visual Guide Closed", labelKey: "visualGuideClosed", path: "/3Step/UDTT_CLOSED_3STEP_EN.pdf" },
       ];
     }
     if (product === "overlay") {
       if (amputation === "transfemoral") {
         return [
-          { id: "Visual Guide Pin", labelKey: "visualGuidePin", path: "/3Step/ETH_3STEP_TF_PIN.pdf" },
-          { id: "Visual Guide Vacuum", labelKey: "visualGuideVacuum", path: "/3Step/ETH_3STEP_TF_VAC.pdf" },
+          { id: "Visual Guide Pin", labelKey: "visualGuidePin", path: "/3Step/OVTF_PIN_3STEP_EN.pdf" },
+          { id: "Visual Guide Vacuum", labelKey: "visualGuideVacuum", path: "/3Step/OVTF_VAC_3STEP_EN.pdf" },
         ];
       }
       return [
-        { id: "Visual Guide", labelKey: "visualGuide", path: "/3Step/ETH_3STEP_TT.pdf" },
+        { id: "Visual Guide", labelKey: "visualGuide", path: "/3Step/OVTT_3STEP_EN.pdf" },
       ];
     }
     return [];
