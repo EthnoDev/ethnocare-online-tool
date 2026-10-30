@@ -58,10 +58,12 @@ export default function SizeTF() {
 
   const productAmputation = t("common:products.tf");
 
-  const isDistalSeal = suspensionId === "TF-distal-seal";
+  const isVacSuspension =
+    suspensionId === "TF-single-seal" ||
+    suspensionId === "TF-multi-seal";
   const isCushion = suspensionId === "TF-cushion";
 
-  const suffix = isDistalSeal ? "VAC" : "PIN";
+  const suffix = isVacSuspension ? "VAC" : "PIN";
 
   const suspensionLabel =
     suspensionId !== "—"
@@ -210,7 +212,7 @@ export default function SizeTF() {
     <PageWrapper
       showBack
       backTo={
-        isDistalSeal
+        isVacSuspension
           ? "/sizing/TFcircumference-vac"
           : "/sizing/TFcircumference"
       }
