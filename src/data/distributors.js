@@ -73,6 +73,16 @@ export const regions = [
           ],
         },
         {
+          name: "Saudi Arabia",
+          distributors: [
+            {
+              name: "Al Ewan",
+              url: "https://alewan.com/",
+              products: ["Overlay"],
+            },
+          ],
+        },
+        {
           name: "Malaysia",
           distributors: [
             {
@@ -99,6 +109,16 @@ export const regions = [
               name: "Johnson Prosthetic",
               url: "https://www.johnson-yeh.com.tw/",
               products: ["Overlay"],
+            },
+          ],
+        },
+        {
+          name: "Türkiye",
+          distributors: [
+            {
+              name: "Proten Ortopedi",
+              url: "https://www.protenortopedi.com/",
+              products: ["Overlay", "Underlay"],
             },
           ],
         },
@@ -271,6 +291,16 @@ export const regions = [
           ],
         },
         {
+          name: "Türkiye",
+          distributors: [
+            {
+              name: "Proten Ortopedi",
+              url: "https://www.protenortopedi.com/",
+              products: ["Overlay", "Underlay"],
+            },
+          ],
+        },
+        {
           name: "Ukraine",
           distributors: [
             {
@@ -287,24 +317,6 @@ export const regions = [
               name: "Ortho Europe",
               url: "https://www.ortho-europe.com/",
               products: ["Overlay", "Underlay"],
-            },
-          ],
-        },
-      ],
-    },
-
-    // MIDDLE EAST
-    {
-      id: "middleEast",
-      label: "Middle East",
-      countries: [
-        {
-          name: "Saudi Arabia",
-          distributors: [
-            {
-              name: "Al Ewan",
-              url: "https://alewan.com/",
-              products: ["Overlay"],
             },
           ],
         },

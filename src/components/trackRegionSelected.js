@@ -4,7 +4,6 @@ const REGION_LABELS = {
   africa: "africa",
   asia: "asia",
   europe: "europe",
-  middleEast: "middle east",
   northAmerica: "north america",
   oceania: "oceania",
   southAmerica: "south america",
