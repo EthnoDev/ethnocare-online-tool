@@ -92,7 +92,7 @@ export default function SuspensionSelection() {
 
     setSelected(optionId);
     localStorage.setItem("suspension", optionId);
-    trackSuspensionSelected(optionId);
+    trackSuspensionSelected(optionId, isUnderlay ? "Underlay" : "Overlay");
 
     setTimeout(() => {
       // 1. Underlay logic

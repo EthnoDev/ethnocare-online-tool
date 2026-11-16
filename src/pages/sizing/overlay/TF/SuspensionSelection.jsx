@@ -68,7 +68,7 @@ export default function SuspensionSelection() {
 
     setSelected(optionId);
     localStorage.setItem("suspension", optionId);
-    trackSuspensionSelected(optionId);
+    trackSuspensionSelected(optionId, "Overlay");
 
     // Logic: If single seal or multi seal, go to TFlength-vac, otherwise TFlength
     setTimeout(() => {
