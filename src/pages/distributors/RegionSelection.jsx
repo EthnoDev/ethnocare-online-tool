@@ -5,8 +5,14 @@ import PageWrapper from "../../components/PageWrapper";
 import SelectableOption from "../../components/SelectableOption";
 import { trackRegionSelected } from "../../components/trackRegionSelected";
 
-const UNDERLAY_REGIONS = ["europe", "northAmerica", "oceania", "southAmerica"];
-const OVERLAY_REGIONS = [...UNDERLAY_REGIONS, "africa", "asia", "middleEast"];
+const UNDERLAY_REGIONS = [
+  "europe",
+  "asia",
+  "northAmerica",
+  "oceania",
+  "southAmerica",
+];
+const OVERLAY_REGIONS = [...UNDERLAY_REGIONS, "africa"];
 
 export default function DistributorsRegionSelection() {
   const { t, i18n } = useTranslation("pages");

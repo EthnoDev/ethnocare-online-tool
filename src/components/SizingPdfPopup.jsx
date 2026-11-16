@@ -3,9 +3,12 @@ import XIcon from "../assets/x.svg";
 import RedirectIcon from "./RedirectIcon";
 import PageTransitionWrapper from "./PageTransitionWrapper";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
+import { getSizingChartPaths } from "../data/sizingCharts";
 
 export default function SizingPdfPopup({ onClose }) {
   const { t } = useTranslation("common");
+  const { pathname } = useLocation();
 
   // Close on Escape
   useEffect(() => {
@@ -35,11 +38,12 @@ export default function SizingPdfPopup({ onClose }) {
     </button>
   );
 
-  const pdfs = {
-    overlayTT: "/Sizing Charts/OVTT_SIZING-CHART_EN.pdf",
-    overlayTF: "/Sizing Charts/OVTF_SIZING-CHART_EN.pdf",
-    underlayTT: "/Sizing Charts/UDTT_SIZING-CHART_EN.pdf",
-  };
+  const pdfs = getSizingChartPaths({
+    pathname,
+    product: localStorage.getItem("product"),
+    suspension: localStorage.getItem("suspension"),
+    underlaySeal: localStorage.getItem("underlay_seal"),
+  });
 
   return (
     <>
