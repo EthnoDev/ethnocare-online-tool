@@ -31,7 +31,7 @@ export default function PageWrapper({
 }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const { t, i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   const [chartsOpen, setChartsOpen] = useState(false);
   const [navigationTarget, setNavigationTarget] = useState(null);
@@ -76,28 +76,6 @@ export default function PageWrapper({
   if (location.pathname.startsWith("/distributors")) {
     totalSteps = 3;
   }
-
-  // --- Language-dependent PDF suffix helpers ---
-  const getOverlayPdfSuffix = () => {
-    const lang = i18n.language || "en";
-    if (lang.startsWith("fr")) return "FR";
-    if (lang.startsWith("es")) return "ES";
-    if (lang.startsWith("de")) return "DE";
-    return "EN";
-  };
-
-  const getUnderlayPdfSuffix = () => {
-    const lang = i18n.language || "en";
-    if (lang.startsWith("fr")) return "FR";
-    return "EN";
-  };
-
-  const overlayPdfSuffix = getOverlayPdfSuffix();
-  const underlayPdfSuffix = getUnderlayPdfSuffix();
-
-  const ttPdfPath = `/Sizing%20Charts/OVTT_SIZING-CHART_${overlayPdfSuffix}.pdf`;
-  const tfPdfPath = `/Sizing%20Charts/OVTF_SIZING-CHART_${overlayPdfSuffix}.pdf`;
-  const underlayTtPdfPath = `/Sizing%20Charts/UDTT_SIZING-CHART_${underlayPdfSuffix}.pdf`;
 
   return (
     <motion.div
@@ -230,12 +208,7 @@ export default function PageWrapper({
       </footer>
 
       {chartsOpen && (
-        <SizingChartsPopup
-          onClose={closeCharts}
-          ttPdfPath={ttPdfPath}
-          tfPdfPath={tfPdfPath}
-          underlayTtPdfPath={underlayTtPdfPath}
-        />
+        <SizingChartsPopup onClose={closeCharts} />
       )}
     </motion.div>
   );

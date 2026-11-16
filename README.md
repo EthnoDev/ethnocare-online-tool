@@ -19,6 +19,12 @@ documents.
   product-specific characteristics.
 - Size results, downloadable sizing charts, and an email capture form for sizing
   information.
+- The PDF popup shows generic charts before suspension/seal selection. Later
+  steps use Overlay TT SEAL for single/multi-seal or LOCKING for
+  locking/lanyard/cushion/sleeve; Overlay TF VAC for single/multi-seal or PIN for
+  locking/lanyard/cushion; and Underlay OPEN or CLOSED for the selected seal.
+  Other product links remain generic. These charts are currently English PDFs
+  in every interface language.
 
 ### Product assistance
 
