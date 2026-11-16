@@ -183,6 +183,13 @@ that this also removes saved preferences and any locally stored email.
   their references. Preserve filename casing and account for spaces in URLs.
 - **Analytics:** reuse the `track*.js` helpers in [src/components](./src/components)
   and verify event placement when adding or removing steps.
+  Suspension selections use `Overlay TT Suspension Selected`,
+  `Overlay TF Suspension Selected`, and `Underlay Suspension Selected` events
+  so each event's suspension breakdown is scoped to its product and, for Overlay,
+  amputation group. Underlay retains the `TT-` suspension labels.
+  Liner selections use `Liner Suspension Selected`, combining TT and TF with
+  `pin` and `cushion` values. Existing historical
+  events are not reclassified; the split applies to new events after deployment.
 
 ## Deployment
 

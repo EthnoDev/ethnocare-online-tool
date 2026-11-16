@@ -7,8 +7,12 @@ const SUSPENSION_LABELS = {
   "TT-suspension-sleeve": "TT-sleeve",
 };
 
-export const trackSuspensionSelected = (suspension) => {
-  track("Suspension Selected", {
+export const trackSuspensionSelected = (suspension, product) => {
+  const eventName = product === "Overlay"
+    ? `Overlay ${suspension.startsWith("TF-") ? "TF" : "TT"} Suspension Selected`
+    : `${product} Suspension Selected`;
+
+  track(eventName, {
     suspension: SUSPENSION_LABELS[suspension] ?? suspension,
   });
 };

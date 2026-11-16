@@ -62,7 +62,7 @@ export default function SuspensionSelection() {
     if (selected) return;
     setSelected(optionId);
     localStorage.setItem("liner_suspension", optionId);
-    trackSuspensionSelected(optionId);
+    trackSuspensionSelected(optionId, "Liner");
 
     setTimeout(() => {
       // Navigate to next step
