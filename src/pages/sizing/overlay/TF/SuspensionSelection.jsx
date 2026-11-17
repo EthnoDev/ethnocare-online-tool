@@ -83,7 +83,7 @@ export default function SuspensionSelection() {
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/sizing/units"
+      backTo="/sizing/amputation"
       currentStep={1} 
       totalSteps={4} 
       code={true}

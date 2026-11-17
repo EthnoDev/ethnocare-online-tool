@@ -197,13 +197,6 @@
     "startButton": "Commencer"
   },
 
-  "unitsSizing": {
-    "title": "Unités",
-    "description": "Sélectionnez vos unités de mesure préférées",
-    "option1": "Impérial (Pouces)",
-    "option2": "Métrique (Centimètres)"
-  },
-
   "amputationSizing": {
     "title": "Amputation",
     "description": "Quel est votre type d'amputation ?"

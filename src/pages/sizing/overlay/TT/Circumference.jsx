@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
+import useMeasurementUnit from "../../../../hooks/useMeasurementUnit";
 
 // Assets
 import TTCircumferenceC from "../../../../assets/circumferences/TT/pinC.svg";
@@ -16,7 +17,7 @@ export default function Circumference() {
   const { t } = useTranslation(["pages", "common"]);
 
   // Logic for units and image selection
-  const isImperial = localStorage.getItem("units") === "imperial";
+  const isImperial = useMeasurementUnit() === "in";
   const selectedImage = isImperial ? TTCircumferenceI : TTCircumferenceC;
   const distance = isImperial ? "1.5 in" : "4 cm";
   const descriptionKey = `circumferenceTTSizing.description_${isImperial ? "imperial" : "metric"}`;

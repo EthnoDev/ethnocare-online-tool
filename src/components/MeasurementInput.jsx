@@ -1,20 +1,39 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Popup from "./Popup";
+import useMeasurementUnit, { setMeasurementUnit } from "../hooks/useMeasurementUnit";
 
 export default function MeasurementInput({ product, measurement, onConfirm }) {
-  const [unit, setUnit] = useState("cm");
+  const unit = useMeasurementUnit();
   const [value, setValue] = useState("");
   const [error, setError] = useState(""); // Stores translation key (e.g. "errors:noInput")
   const [showPopup, setShowPopup] = useState(false);
   const [isConfirming, setIsConfirming] = useState(false);
+  const [isUnitMenuOpen, setIsUnitMenuOpen] = useState(false);
+  const unitSelectorRef = useRef(null);
+  const unitButtonRef = useRef(null);
 
   const { t } = useTranslation(["common", "pages", "errors"]);
 
   useEffect(() => {
-    const stored = localStorage.getItem("units");
-    setUnit(stored === "imperial" ? "in" : "cm");
-  }, []);
+    if (!isUnitMenuOpen) return undefined;
+
+    const handlePointerDown = (event) => {
+      if (!unitSelectorRef.current?.contains(event.target)) {
+        setIsUnitMenuOpen(false);
+      }
+    };
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setIsUnitMenuOpen(false);
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isUnitMenuOpen]);
 
   const handleChange = (e) => {
     const input = e.target.value;
@@ -25,6 +44,12 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
   };
 
   const convertToCm = (val) => (unit === "in" ? val * 2.54 : val);
+
+  const handleUnitSelect = (nextUnit) => {
+    setMeasurementUnit(nextUnit);
+    setIsUnitMenuOpen(false);
+    unitButtonRef.current?.focus();
+  };
 
   const mapMeasurement = (valCm) => {
     const material = (localStorage.getItem("liner_material") || "").toLowerCase();
@@ -196,12 +221,15 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
 
     setIsConfirming(true);
 
-    if (measurement === "circumference") {
-      localStorage.setItem("raw_circumference", numericValue);
-    } else if (measurement === "length") {
-      localStorage.setItem("raw_length", numericValue);
-    } else if (measurement === "circumference2") {
-      localStorage.setItem("raw_circumference2", numericValue);
+    const rawMeasurementKey = {
+      circumference: "raw_circumference",
+      length: "raw_length",
+      circumference2: "raw_circumference2",
+    }[measurement];
+
+    if (rawMeasurementKey) {
+      localStorage.setItem(rawMeasurementKey, numericValue);
+      localStorage.setItem(`${rawMeasurementKey}_unit`, unit);
     }
 
     const valCm = convertToCm(numericValue);
@@ -244,7 +272,13 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       {showPopup && <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-10" />}
 
       <form onSubmit={handleSubmit} className="relative z-0 space-y-3">
-        <div className="relative w-full" aria-invalid={!!error}>
+        <div
+          ref={unitSelectorRef}
+          className={`relative flex w-full rounded-lg border bg-white transition-colors focus-within:border-black ${
+            error ? "border-red-500" : "border-gray-300 hover:border-black"
+          }`}
+          aria-invalid={!!error}
+        >
           <input
             type="number"
             inputMode="decimal"
@@ -252,14 +286,42 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
             value={value}
             onChange={handleChange}
             placeholder={t("inputs.enter_measurement")}
-            className={`w-full px-4 py-3 pr-16 bg-white border rounded-md font-sans transition-all focus:outline-none ${
-              error ? "border-red-500 focus:border-red-500" : "border-gray-300 hover:border-black"
-            }`}
+            className="min-w-0 w-full rounded-l-lg px-4 py-3 font-sans focus:outline-none"
             autoFocus
           />
-          <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black font-sans">
-            {unit === "in" ? "in" : "cm"}
-          </span>
+          <button
+            ref={unitButtonRef}
+            type="button"
+            className="flex w-[76px] shrink-0 cursor-pointer items-center justify-center gap-2 rounded-r-lg border-l border-gray-300 px-3 font-sans text-black hover:font-bold focus:outline-none focus-visible:font-bold focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-black"
+            aria-label={`Measurement unit: ${unit}`}
+            aria-haspopup="true"
+            aria-expanded={isUnitMenuOpen}
+            onClick={() => setIsUnitMenuOpen((isOpen) => !isOpen)}
+          >
+            <span>{unit}</span>
+            <svg
+              aria-hidden="true"
+              className={`h-3 w-3 transition-transform ${isUnitMenuOpen ? "rotate-180" : ""}`}
+              viewBox="0 0 12 8"
+              fill="none"
+            >
+              <path d="m1 1 5 5 5-5" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </button>
+          {isUnitMenuOpen && (
+            <div
+              className="absolute right-0 top-full z-20 w-[76px] rounded-b-lg border-x border-b border-t-0 border-gray-300 bg-white shadow-sm"
+            >
+              <button
+                type="button"
+                aria-pressed="false"
+                className="block w-full cursor-pointer px-3 py-3 text-center font-sans text-black hover:font-bold focus-visible:font-bold focus-visible:outline-none"
+                onClick={() => handleUnitSelect(unit === "cm" ? "in" : "cm")}
+              >
+                {unit === "cm" ? "in" : "cm"}
+              </button>
+            </div>
+          )}
         </div>
 
         {error && (

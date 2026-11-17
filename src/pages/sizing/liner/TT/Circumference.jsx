@@ -2,6 +2,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { useState } from "react";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
+import useMeasurementUnit from "../../../../hooks/useMeasurementUnit";
 import { useNavigate } from "react-router-dom";
 
 // SVG Imports
@@ -14,7 +15,7 @@ export default function Circumference() {
   const { t } = useTranslation(["pages", "common"]);
 
   // Unit and dynamic distance / asset selection
-  const isImperial = localStorage.getItem("units") === "imperial";
+  const isImperial = useMeasurementUnit() === "in";
   const distance = isImperial ? "1.5 in" : "4 cm";
   const selectedImage = isImperial ? ttImperialSvg : ttMetricSvg;
 
@@ -30,6 +31,7 @@ export default function Circumference() {
       : isImperial ? "15.7 ± 0.8" : "40 ± 2";
 
     localStorage.setItem("raw_length", lengthVal);
+    localStorage.setItem("raw_length_unit", isImperial ? "in" : "cm");
 
     // Navigate to next step
     setTimeout(() => navigate("/sizing/liner/suspension"), 200);

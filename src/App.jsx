@@ -10,7 +10,6 @@ import { Analytics } from "@vercel/analytics/react";
 
 // Pages
 import MainWelcome from "./pages/Welcome";
-import SizingUnitsSelection from "./pages/sizing/UnitsSelection";
 import SizingAmputationSelection from "./pages/sizing/AmputationSelection";
 import SizingProductSelection from "./pages/sizing/ProductSelection";
 import SizingTTSuspensionSelection from "./pages/sizing/overlay/TT/SuspensionSelection";
@@ -75,7 +74,7 @@ function AnimatedRoutes() {
         <Route path="/distributors/region" element={<DistributorsRegionSelection />} />
         <Route path="/distributors/list" element={<Distributors />} />
         <Route path="/sizing" element={<Navigate to="/sizing/product" replace />} />
-        <Route path="/sizing/units" element={<SizingUnitsSelection />} />
+        <Route path="/sizing/units" element={<Navigate to="/sizing/product" replace />} />
         <Route path="/sizing/amputation" element={<SizingAmputationSelection />} />
         <Route path="/sizing/product" element={<SizingProductSelection />} />
         <Route path="/sizing/TTsuspension" element={<SizingTTSuspensionSelection />} />

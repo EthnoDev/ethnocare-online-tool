@@ -86,6 +86,7 @@ export default function Length() {
       : isImperial ? "15.7 ± 0.8" : "40 ± 2";
 
     localStorage.setItem("raw_length", lengthVal);
+    localStorage.setItem("raw_length_unit", isImperial ? "in" : "cm");
 
     setTimeout(() => {
       navigate("/sizing/liner/suspension");
@@ -157,6 +158,7 @@ export default function Length() {
             // 2. Save corresponding gel length
             const gelLengthVal = isImperial ? "15.7 ± 0.8" : "40 ± 2";
             localStorage.setItem("raw_length", gelLengthVal);
+            localStorage.setItem("raw_length_unit", isImperial ? "in" : "cm");
 
             // 3. Retrieve raw circumference saved from previous step
             const rawCircumference = localStorage.getItem("raw_circumference");

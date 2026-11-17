@@ -49,7 +49,7 @@ export default function ActivityLevelSelection() {
   return (
     <PageWrapper 
       showBack={true} 
-      backTo="/sizing/units"
+      backTo="/sizing/amputation"
       currentStep={1} 
       code={true}
     >

@@ -33,34 +33,36 @@ export default function SizeTF() {
 
   const product = localStorage.getItem("product") || "Overlay";
   const suspensionId = localStorage.getItem("suspension") || "—";
+  const isVacSuspension =
+    suspensionId === "TF-single-seal" ||
+    suspensionId === "TF-multi-seal";
+  const measurementProduct = isVacSuspension ? "tfdistal" : "tfstandard";
 
   const circumferenceMapped =
-    localStorage.getItem("tfstandard_circumference") ||
-    localStorage.getItem("tfdistal_circumference") ||
+    localStorage.getItem(`${measurementProduct}_circumference`) ||
     "—";
 
   const circumferenceRaw =
     localStorage.getItem("raw_circumference") || "—";
 
   const lengthMapped =
-    localStorage.getItem("tfstandard_length") ||
-    localStorage.getItem("tfdistal_length") ||
+    localStorage.getItem(`${measurementProduct}_length`) ||
     "—";
 
   const lengthRaw =
     localStorage.getItem("raw_length") || "—";
 
-  const unit =
+  const defaultUnit =
     localStorage.getItem("units") === "imperial" ? "in" : "cm";
+  const circumferenceUnit =
+    localStorage.getItem("raw_circumference_unit") || defaultUnit;
+  const lengthUnit = localStorage.getItem("raw_length_unit") || defaultUnit;
 
   /** ---------- Logic & Formatting ---------- */
   const currentLang = (i18n.language || "en").split("-")[0];
 
   const productAmputation = t("common:products.tf");
 
-  const isVacSuspension =
-    suspensionId === "TF-single-seal" ||
-    suspensionId === "TF-multi-seal";
   const isCushion = suspensionId === "TF-cushion";
 
   const suffix = isVacSuspension ? "VAC" : "PIN";
@@ -213,8 +215,8 @@ export default function SizeTF() {
       showBack
       backTo={
         isVacSuspension
-          ? "/sizing/TFcircumference-vac"
-          : "/sizing/TFcircumference"
+          ? "/sizing/TFlength-vac"
+          : "/sizing/TFlength"
       }
       //currentStep={4}
       totalSteps={4}
@@ -259,11 +261,11 @@ export default function SizeTF() {
               </p>
 
               <p>
-                {t("TFSizing.circumference")}: {circumferenceRaw} {unit}
+                {t("TFSizing.circumference")}: {circumferenceRaw} {circumferenceUnit}
               </p>
 
               <p>
-                {t("TFSizing.length")}: {lengthRaw} {unit}
+                {t("TFSizing.length")}: {lengthRaw} {lengthUnit}
               </p>
             </div>
 

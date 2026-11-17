@@ -27,6 +27,11 @@ export default function SizeUnderlay() {
   /** ---------- Data Retrieval ---------- */
   const units = localStorage.getItem("units");
   const unit = units === "imperial" ? "in" : "cm";
+  const circumferenceUnit =
+    localStorage.getItem("raw_circumference_unit") || unit;
+  const circumference2Unit =
+    localStorage.getItem("raw_circumference2_unit") || unit;
+  const lengthUnit = localStorage.getItem("raw_length_unit") || unit;
 
   // Amputation label formatting
   const rawAmputation = localStorage.getItem("amputation") || "tt";
@@ -225,19 +230,19 @@ export default function SizeUnderlay() {
 
               <p>
                 {t("UnderlaySizing.circumference")}:{" "}
-                {circumferenceRaw} {unit}
+                {circumferenceRaw} {circumferenceUnit}
               </p>
 
               {!isClosed && (
                 <p>
                   {t("UnderlaySizing.circumference2")}:{" "}
-                  {circumference2Raw} {unit}
+                  {circumference2Raw} {circumference2Unit}
                 </p>
               )}
 
               <p>
                 {t("UnderlaySizing.length")}:{" "}
-                {lengthRaw} {unit}
+                {lengthRaw} {lengthUnit}
               </p>
             </div>
 

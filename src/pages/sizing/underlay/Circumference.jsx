@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import MeasurementInput from "../../../components/MeasurementInput";
+import useMeasurementUnit from "../../../hooks/useMeasurementUnit";
 
 // Assets
 import C1ImperialImg from "../../../assets/circumferences/Underlay/C1Imperial.svg";
@@ -18,7 +19,7 @@ export default function Circumference() {
   const isOpen = seal === "open-seal";
 
   // Logic for units
-  const isImperial = localStorage.getItem("units") === "imperial";
+  const isImperial = useMeasurementUnit() === "in";
 
   // Select image based on seal type and units
   const selectedImage = isOpen

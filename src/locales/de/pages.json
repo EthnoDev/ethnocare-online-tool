@@ -197,13 +197,6 @@
     "startButton": "Starten"
   },
 
-  "unitsSizing": {
-    "title": "Einheiten",
-    "description": "Wählen Sie Ihre bevorzugten Maßeinheiten aus",
-    "option1": "Imperial (Zoll)",
-    "option2": "Metrisch (Zentimeter)"
-  },
-
   "amputationSizing": {
     "title": "Amputation",
     "description": "Welche Art der Amputation liegt vor?"

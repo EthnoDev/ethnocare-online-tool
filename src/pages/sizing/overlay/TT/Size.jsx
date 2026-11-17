@@ -34,7 +34,10 @@ export default function SizeTT() {
   const lengthMapped = localStorage.getItem("length") || "—";
 
   const orientation = localStorage.getItem("orientation") || "—";
-  const unit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
+  const defaultUnit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
+  const circumferenceUnit =
+    localStorage.getItem("raw_circumference_unit") || defaultUnit;
+  const lengthUnit = localStorage.getItem("raw_length_unit") || defaultUnit;
 
   /** ---------- Logic & Formatting ---------- */
   const currentLang = (i18n.language || "en").split("-")[0];
@@ -202,11 +205,11 @@ export default function SizeTT() {
               </p>
 
               <p>
-                {t("TTSizing.circumference")}: {circumferenceRaw} {unit}
+                {t("TTSizing.circumference")}: {circumferenceRaw} {circumferenceUnit}
               </p>
 
               <p>
-                {t("TTSizing.length")}: {lengthRaw} {unit}
+                {t("TTSizing.length")}: {lengthRaw} {lengthUnit}
               </p>
 
               <p>

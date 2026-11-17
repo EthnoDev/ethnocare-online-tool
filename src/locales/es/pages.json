@@ -197,13 +197,6 @@
     "startButton": "Comenzar"
   },
 
-  "unitsSizing": {
-    "title": "Unidades",
-    "description": "Seleccione sus unidades de medida preferidas",
-    "option1": "Imperial (Pulgadas)",
-    "option2": "Métrico (Centímetros)"
-  },
-
   "amputationSizing": {
     "title": "Amputación",
     "description": "¿Cuál es su tipo de amputación?"

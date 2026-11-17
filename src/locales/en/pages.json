@@ -178,12 +178,6 @@
     "description": "Use this tool to find the right size for your Ethnocare product",
     "startButton": "Start"
   },
-  "unitsSizing": {
-    "title": "Units",
-    "description": "Select your preferred units of measurement",
-    "option1": "Imperial (Inches)",
-    "option2": "Metric (Centimeters)"
-  },
   "amputationSizing": {
     "title": "Amputation",
     "description": "What is your amputation type?"
