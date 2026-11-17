@@ -251,7 +251,7 @@
   },
   "TTSizing": {
     "title": "Size",
-    "description": "Based on your answers:",
+    "description": "Your answers:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Circumference",
@@ -280,7 +280,7 @@
   },
   "TFSizing": {
     "title": "Size",
-    "description": "Based on your answers:",
+    "description": "Your answers:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Circumference",
@@ -319,10 +319,10 @@
   },
   "UnderlaySizing": {
     "title": "Size",
-    "description": "Based on your answers:",
+    "description": "Your answers:",
     "amp": "Amputation",
     "circumference": "Circumference",
-    "circumference2": "Upper Circumference",
+    "circumference2": "Upper circ.",
     "length": "Liner Length",
     "seal": "Design",
     "silicone": "Silicone",
@@ -366,7 +366,7 @@
   },
   "LinerSizing": {
     "title": "Size",
-    "description": "Based on your answers:",
+    "description": "Your answers:",
     "amp": "Amputation",
     "activityLevel": "Activity Level",
     "material": "Material",

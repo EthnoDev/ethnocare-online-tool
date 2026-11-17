@@ -278,7 +278,7 @@
 
   "TTSizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten:",
+    "description": "Ihre Antworten:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Umfang",
@@ -312,7 +312,7 @@
 
   "TFSizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten:",
+    "description": "Ihre Antworten:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Umfang",
@@ -357,10 +357,10 @@
 
   "UnderlaySizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten:",
+    "description": "Ihre Antworten:",
     "amp": "Amputation",
     "circumference": "Umfang",
-    "circumference2": "Oberer Umfang",
+    "circumference2": "Oberer Umf.",
     "length": "Linerlänge",
     "seal": "Design",
     "silicone": "Silikon",
@@ -411,7 +411,7 @@
 
   "LinerSizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten:",
+    "description": "Ihre Antworten:",
     "amp": "Amputation",
     "activityLevel": "Aktivitätsniveau",
     "material": "Material",
