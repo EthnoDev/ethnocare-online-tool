@@ -18,8 +18,10 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
   useEffect(() => {
     if (!isUnitMenuOpen) return undefined;
 
-    const handlePointerDown = (event) => {
+    const handleClick = (event) => {
       if (!unitSelectorRef.current?.contains(event.target)) {
+        event.preventDefault();
+        event.stopPropagation();
         setIsUnitMenuOpen(false);
       }
     };
@@ -27,10 +29,10 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       if (event.key === "Escape") setIsUnitMenuOpen(false);
     };
 
-    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("click", handleClick, true);
     document.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("click", handleClick, true);
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isUnitMenuOpen]);
