@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
+import useMeasurementUnit from "../../../../hooks/useMeasurementUnit";
 
 // Assets
 import SingleSealImg from "../../../../assets/circumferences/TF/singleSeal.svg";
@@ -14,7 +15,7 @@ export default function CircumferenceVac() {
 
   // Retrieve stored suspension and unit values
   const suspension = localStorage.getItem("suspension");
-  const isImperial = localStorage.getItem("units") === "imperial";
+  const isImperial = useMeasurementUnit() === "in";
   
   const isMultiSeal = suspension === "TF-multi-seal";
 

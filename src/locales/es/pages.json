@@ -197,13 +197,6 @@
     "startButton": "Comenzar"
   },
 
-  "unitsSizing": {
-    "title": "Unidades",
-    "description": "Seleccione sus unidades de medida preferidas",
-    "option1": "Imperial (Pulgadas)",
-    "option2": "Métrico (Centímetros)"
-  },
-
   "amputationSizing": {
     "title": "Amputación",
     "description": "¿Cuál es su tipo de amputación?"
@@ -285,7 +278,7 @@
 
   "TTSizing": {
     "title": "Talla",
-    "description": "Basado en sus respuestas:",
+    "description": "Sus respuestas:",
     "amp": "Amputación",
     "system": "Sistema",
     "circumference": "Circunferencia",
@@ -319,7 +312,7 @@
 
   "TFSizing": {
     "title": "Talla",
-    "description": "Basado en sus respuestas:",
+    "description": "Sus respuestas:",
     "amp": "Amputación",
     "system": "Sistema",
     "circumference": "Circunferencia",
@@ -333,9 +326,10 @@
   "sealUnderlaySizing": {
     "title": "Selección de sello",
     "description": "Seleccione el diseño de su Underlay",
-    "open_description": "Recomendamos el diseño Abierto, ya que permite que el Underlay sobresalga por encima del liner y libere el exceso de humedad.",
-    "closed_description": "Diseño más convencional para todos los tipos de suspensión",
-    "closed_exception": "El Underlay Cerrado es el único diseño disponible para su tipo de suspensión."
+    "open_description": "Contacto entre la piel y el liner en el extremo distal. El sudor se absorbe y se expulsa hacia fuera del liner. Ideal para usar con liners de bloqueo y de anillo de sellado.",
+    "closed_description": "Contacto entre la piel y el liner en el extremo proximal. El sudor se absorbe, con cobertura completa del extremo distal. Preferido para extremidades cónicas o para usar con fundas de sellado.",
+    "closed_exception": "El Underlay Cerrado se recomienda para su tipo de suspensión.",
+    "open_exception": "Cómo usar el <underline>Underlay Abierto con sistemas de vacío</underline>."
   },
 
   "lengthUnderlaySizing": {
@@ -364,14 +358,17 @@
 
   "UnderlaySizing": {
     "title": "Talla",
-    "description": "Basado en sus respuestas:",
+    "description": "Sus respuestas:",
     "amp": "Amputación",
     "circumference": "Circunferencia",
-    "circumference2": "Circunferencia superior",
+    "circumference2": "Circ. superior",
     "length": "Longitud del liner",
     "seal": "Diseño",
     "silicone": "Silicona",
-    "note_title": "Aviso importante",
+    "note_title": "Instrucción de ajuste",
+    "notice_title": "Aviso importante",
+    "notice_body": "Cuando se combina con una rodillera, el Underlay Abierto requiere un procedimiento de ajuste especial.",
+    "see_instructions": "Ver instrucciones",
     "note_body_closed": "Asegúrese de que el Underlay Cerrado se encuentre <bold>{{measurement}}</bold> por debajo del borde superior del liner.",
     "note_body_open": "Asegúrese de que el Underlay Abierto se encuentre a <bold>{{measurement}}</bold> del extremo distal.",
     "email_title": "¡Guarde su selección!",
@@ -418,7 +415,7 @@
 
   "LinerSizing": {
     "title": "Talla",
-    "description": "Basado en sus respuestas:",
+    "description": "Sus respuestas:",
     "amp": "Amputación",
     "activityLevel": "Nivel de actividad",
     "material": "Material",

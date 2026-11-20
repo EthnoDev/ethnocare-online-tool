@@ -197,13 +197,6 @@
     "startButton": "Starten"
   },
 
-  "unitsSizing": {
-    "title": "Einheiten",
-    "description": "Wählen Sie Ihre bevorzugten Maßeinheiten aus",
-    "option1": "Imperial (Zoll)",
-    "option2": "Metrisch (Zentimeter)"
-  },
-
   "amputationSizing": {
     "title": "Amputation",
     "description": "Welche Art der Amputation liegt vor?"
@@ -285,7 +278,7 @@
 
   "TTSizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten:",
+    "description": "Ihre Antworten:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Umfang",
@@ -319,7 +312,7 @@
 
   "TFSizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten:",
+    "description": "Ihre Antworten:",
     "amp": "Amputation",
     "system": "System",
     "circumference": "Umfang",
@@ -333,9 +326,10 @@
   "sealUnderlaySizing": {
     "title": "Dichtungsauswahl",
     "description": "Wählen Sie das Design Ihres Underlays",
-    "open_description": "Wir empfehlen das offene Design, da das Underlay so über den Liner hinausragen und überschüssige Feuchtigkeit ableiten kann.",
-    "closed_description": "Konventionelleres Design für alle Suspensionssysteme",
-    "closed_exception": "Das geschlossene Underlay ist das einzige Design, das für Ihr Suspensionssystem verfügbar ist."
+    "open_description": "Haut-Liner-Kontakt am distalen Ende. Schweiß wird absorbiert und aus dem Liner nach außen transportiert. Ideal für die Verwendung mit Linern mit Verriegelung und Dichtungsring.",
+    "closed_description": "Haut-Liner-Kontakt am proximalen Ende. Schweiß wird absorbiert, während das distale Ende vollständig abgedeckt ist. Bevorzugt bei konischen Gliedmaßen oder in Kombination mit Dichtmanschetten.",
+    "closed_exception": "Das geschlossene Underlay wird für Ihr Suspensionssystem empfohlen.",
+    "open_exception": "So verwenden Sie das <underline>offene Underlay mit Vakuumsystemen</underline>."
   },
 
   "lengthUnderlaySizing": {
@@ -364,14 +358,17 @@
 
   "UnderlaySizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten:",
+    "description": "Ihre Antworten:",
     "amp": "Amputation",
     "circumference": "Umfang",
-    "circumference2": "Oberer Umfang",
+    "circumference2": "Oberer Umf.",
     "length": "Linerlänge",
     "seal": "Design",
     "silicone": "Silikon",
-    "note_title": "Wichtiger Hinweis",
+    "note_title": "Anpassungsanleitung",
+    "notice_title": "Wichtiger Hinweis",
+    "notice_body": "In Kombination mit einer Kniekappe erfordert das offene Underlay ein spezielles Anpassungsverfahren.",
+    "see_instructions": "Anleitung ansehen",
     "note_body_closed": "Stellen Sie sicher, dass das geschlossene Underlay <bold>{{measurement}}</bold> unter der oberen Kante des Liners sitzt.",
     "note_body_open": "Stellen Sie sicher, dass das offene Underlay <bold>{{measurement}}</bold> vom distalen Ende entfernt sitzt.",
     "email_title": "Auswahl speichern!",
@@ -418,7 +415,7 @@
 
   "LinerSizing": {
     "title": "Größe",
-    "description": "Basierend auf Ihren Antworten:",
+    "description": "Ihre Antworten:",
     "amp": "Amputation",
     "activityLevel": "Aktivitätsniveau",
     "material": "Material",

@@ -21,6 +21,16 @@ const tfSoonImages = {
   de: TF_SOON_DE,
 };
 
+const getNextSizingPath = (product, amputation) => {
+  if (product === "Liner") return "/sizing/liner/activity";
+  if (product === "Underlay") return "/sizing/TTsuspension";
+  if (product === "Overlay") {
+    if (amputation === "transtibial") return "/sizing/TTsuspension";
+    if (amputation === "transfemoral") return "/sizing/TFsuspension";
+  }
+  return "/sizing/product";
+};
+
 export default function SizingAmputationSelection() {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
@@ -40,8 +50,11 @@ export default function SizingAmputationSelection() {
     localStorage.setItem("amputation", type);
     trackAmputationSelected(type);
 
+    const product = localStorage.getItem("product");
+    const nextPath = getNextSizingPath(product, type);
+
     setTimeout(() => {
-      navigate("/sizing/units");
+      navigate(nextPath);
     }, 200);
   };
 

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../../components/PageWrapper";
 import MeasurementInput from "../../../../components/MeasurementInput";
+import useMeasurementUnit from "../../../../hooks/useMeasurementUnit";
 
 // Assets
 import PinCImg from "../../../../assets/circumferences/TF/pinC.svg";
@@ -13,7 +14,7 @@ export default function Circumference() {
   const { t } = useTranslation(["pages", "common"]);
 
   // Logic to determine if we show Metric (C) or Imperial (I) image
-  const isImperial = localStorage.getItem("units") === "imperial";
+  const isImperial = useMeasurementUnit() === "in";
   const selectedImage = isImperial ? PinIImg : PinCImg;
   const distance = isImperial ? "3.1 in" : "8 cm";
 

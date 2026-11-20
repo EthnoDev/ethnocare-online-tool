@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import EmailCapture from "../../../components/EmailCapture";
+import RedirectIcon from "../../../components/RedirectIcon";
 import { trackBuyClick } from "../../../components/trackBuyClick";
 import { trackSizingCompleted } from "../../../components/trackSizingCompleted";
 
@@ -27,6 +28,11 @@ export default function SizeUnderlay() {
   /** ---------- Data Retrieval ---------- */
   const units = localStorage.getItem("units");
   const unit = units === "imperial" ? "in" : "cm";
+  const circumferenceUnit =
+    localStorage.getItem("raw_circumference_unit") || unit;
+  const circumference2Unit =
+    localStorage.getItem("raw_circumference2_unit") || unit;
+  const lengthUnit = localStorage.getItem("raw_length_unit") || unit;
 
   // Amputation label formatting
   const rawAmputation = localStorage.getItem("amputation") || "tt";
@@ -225,19 +231,19 @@ export default function SizeUnderlay() {
 
               <p>
                 {t("UnderlaySizing.circumference")}:{" "}
-                {circumferenceRaw} {unit}
+                {circumferenceRaw} {circumferenceUnit}
               </p>
 
               {!isClosed && (
                 <p>
                   {t("UnderlaySizing.circumference2")}:{" "}
-                  {circumference2Raw} {unit}
+                  {circumference2Raw} {circumference2Unit}
                 </p>
               )}
 
               <p>
                 {t("UnderlaySizing.length")}:{" "}
-                {lengthRaw} {unit}
+                {lengthRaw} {lengthUnit}
               </p>
             </div>
 
@@ -274,12 +280,6 @@ export default function SizeUnderlay() {
         <div className="w-full max-w-sm mx-auto mt-4">
           <div className="border border-gray-200 rounded-xl p-4 bg-gray-200/80">
             <div className="flex items-start gap-3 text-left">
-              <img
-                src={ExclamationIcon}
-                alt={t("common:popup.notice_title")}
-                className="shrink-0 w-5 h-5 opacity-100"
-              />
-
               <div className="flex-1">
                 <p className="text-base font-bold text-slate-900 leading-tight">
                   {t("UnderlaySizing.note_title")}
@@ -306,6 +306,40 @@ export default function SizeUnderlay() {
                     className="w-full max-w-[140px] h-auto object-contain rounded-xl"
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full max-w-sm mx-auto mt-4">
+          <div className="border border-gray-200 rounded-xl p-4 bg-gray-200/80">
+            <div className="flex items-start gap-3 text-left">
+              <img
+                src={ExclamationIcon}
+                alt=""
+                className="shrink-0 w-5 h-5"
+              />
+              <div className="flex-1">
+                <p className="text-base font-bold text-slate-900 leading-tight">
+                  {t("UnderlaySizing.notice_title")}
+                </p>
+                <p className="mt-3 text-sm text-slate-600 leading-snug">
+                  {t("UnderlaySizing.notice_body")}
+                </p>
+                <a
+                  href="/User%20Guides/UDTT_OPEN-VACUUM-INSTRUCTIONS.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group mt-1 flex w-fit items-center gap-1 cursor-pointer hover:font-bold"
+                >
+                  <span
+                    data-label={t("UnderlaySizing.see_instructions")}
+                    className="inline-flex flex-col items-center text-sm underline underline-offset-4 decoration-[1px] after:invisible after:block after:h-0 after:overflow-hidden after:font-bold after:content-[attr(data-label)]"
+                  >
+                    {t("UnderlaySizing.see_instructions")}
+                  </span>
+                  <RedirectIcon className="h-3 w-4" />
+                </a>
               </div>
             </div>
           </div>

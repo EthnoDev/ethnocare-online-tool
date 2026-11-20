@@ -18,7 +18,10 @@ export default function SizeLiner() {
   const { t, i18n } = useTranslation(["pages", "common"]);
 
   /** ---------- Data Retrieval ---------- */
-  const unit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
+  const defaultUnit = localStorage.getItem("units") === "imperial" ? "in" : "cm";
+  const circumferenceUnit =
+    localStorage.getItem("raw_circumference_unit") || defaultUnit;
+  const lengthUnit = localStorage.getItem("raw_length_unit") || defaultUnit;
 
   // Amputation
   const rawAmputation = localStorage.getItem("amputation") || "tf"; 
@@ -217,7 +220,7 @@ export default function SizeLiner() {
         <div className="flex flex-col items-center mt-3">
           <p className="text-4xl font-bold font-sans">{sizeCode}</p>
           <p className="text-xl font-medium text-slate-900 font-sans">
-            {t("LinerSizing.length")} {lengthRaw} {unit}
+            {t("LinerSizing.length")} {lengthRaw} {lengthUnit}
           </p>
         </div>
 
@@ -244,7 +247,7 @@ export default function SizeLiner() {
               <p>{t("LinerSizing.activityLevel")}: {activityLevel}</p>
               <p>{t("LinerSizing.material")}: {materialLabel}</p>
               <p>
-                {t("LinerSizing.circumference")}: {circumferenceRaw} {unit}
+                {t("LinerSizing.circumference")}: {circumferenceRaw} {circumferenceUnit}
               </p>
               <p>{t("LinerSizing.suspension")}: {suspensionLabel}</p>
               <p>{t("LinerSizing.thickness")}: {thicknessRaw}</p>
