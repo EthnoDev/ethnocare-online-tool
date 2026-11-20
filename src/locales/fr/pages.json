@@ -328,7 +328,8 @@
     "description": "Sélectionnez le design de votre Underlay",
     "open_description": "Nous recommandons la configuration ouverte, car elle permet à l'Underlay de dépasser du liner et d'évacuer l'excès d'humidité.",
     "closed_description": "Design plus conventionnel pour tous les types de suspension",
-    "closed_exception": "L'Underlay Fermé est le seul design disponible pour votre type de suspension."
+    "closed_exception": "L'Underlay Fermé est recommandé pour votre type de suspension.",
+    "open_exception": "Comment utiliser l'<underline>Underlay Ouvert avec les systèmes vacuum</underline>."
   },
 
   "lengthUnderlaySizing": {
@@ -364,7 +365,10 @@
     "length": "Longueur du liner",
     "seal": "Design",
     "silicone": "Silicone",
-    "note_title": "Avis important",
+    "note_title": "Instruction d'ajustement",
+    "notice_title": "Avis important",
+    "notice_body": "Associé à une genouillère, l'Underlay Ouvert nécessite une procédure d'ajustement spéciale.",
+    "see_instructions": "Voir les instructions",
     "note_body_closed": "Assurez-vous que l'Underlay Fermé se trouve <bold>{{measurement}}</bold> sous le bord supérieur du liner.",
     "note_body_open": "Assurez-vous que l'Underlay Ouvert se trouve à <bold>{{measurement}}</bold> de l'extrémité distale.",
     "email_title": "Sauvegardez votre sélection!",

@@ -328,7 +328,8 @@
     "description": "Seleccione el diseño de su Underlay",
     "open_description": "Recomendamos el diseño Abierto, ya que permite que el Underlay sobresalga por encima del liner y libere el exceso de humedad.",
     "closed_description": "Diseño más convencional para todos los tipos de suspensión",
-    "closed_exception": "El Underlay Cerrado es el único diseño disponible para su tipo de suspensión."
+    "closed_exception": "El Underlay Cerrado se recomienda para su tipo de suspensión.",
+    "open_exception": "Cómo usar el <underline>Underlay Abierto con sistemas de vacío</underline>."
   },
 
   "lengthUnderlaySizing": {
@@ -364,7 +365,10 @@
     "length": "Longitud del liner",
     "seal": "Diseño",
     "silicone": "Silicona",
-    "note_title": "Aviso importante",
+    "note_title": "Instrucción de ajuste",
+    "notice_title": "Aviso importante",
+    "notice_body": "Cuando se combina con una rodillera, el Underlay Abierto requiere un procedimiento de ajuste especial.",
+    "see_instructions": "Ver instrucciones",
     "note_body_closed": "Asegúrese de que el Underlay Cerrado se encuentre <bold>{{measurement}}</bold> por debajo del borde superior del liner.",
     "note_body_open": "Asegúrese de que el Underlay Abierto se encuentre a <bold>{{measurement}}</bold> del extremo distal.",
     "email_title": "¡Guarde su selección!",

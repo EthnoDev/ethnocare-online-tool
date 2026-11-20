@@ -295,7 +295,8 @@
     "description": "Select your Underlay design",
     "open_description": "We recommend using the Open sealing position as it allows the Underlay to stick above the liner and release excess moisture.",
     "closed_description": "More conventional design for all suspension types",
-    "closed_exception": "The Closed Underlay is the only design available for your type of suspension."
+    "closed_exception": "The Closed Underlay is recommended for your type of suspension.",
+    "open_exception": "How to use the <underline>Open Underlay with vacuum systems</underline>."
   },
   "lengthUnderlaySizing": {
     "title": "Length",
@@ -326,7 +327,10 @@
     "length": "Liner Length",
     "seal": "Design",
     "silicone": "Silicone",
-    "note_title": "Important Notice",
+    "note_title": "Fitting Instruction",
+    "notice_title": "Important Notice",
+    "notice_body": "When paired with a suspension sleeve the Open Underlay requires a special fitting procedure.",
+    "see_instructions": "See instructions",
     "note_body_closed": "Ensure the Closed Underlay sits <bold>{{measurement}}</bold> under the top edge of the liner.",
     "note_body_open": "Ensure the Open Underlay sits <bold>{{measurement}}</bold> from the distal end.",
     "email_title": "Save Your Selection!",

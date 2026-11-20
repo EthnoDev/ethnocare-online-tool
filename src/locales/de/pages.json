@@ -328,7 +328,8 @@
     "description": "Wählen Sie das Design Ihres Underlays",
     "open_description": "Wir empfehlen das offene Design, da das Underlay so über den Liner hinausragen und überschüssige Feuchtigkeit ableiten kann.",
     "closed_description": "Konventionelleres Design für alle Suspensionssysteme",
-    "closed_exception": "Das geschlossene Underlay ist das einzige Design, das für Ihr Suspensionssystem verfügbar ist."
+    "closed_exception": "Das geschlossene Underlay wird für Ihr Suspensionssystem empfohlen.",
+    "open_exception": "So verwenden Sie das <underline>offene Underlay mit Vakuumsystemen</underline>."
   },
 
   "lengthUnderlaySizing": {
@@ -364,7 +365,10 @@
     "length": "Linerlänge",
     "seal": "Design",
     "silicone": "Silikon",
-    "note_title": "Wichtiger Hinweis",
+    "note_title": "Anpassungsanleitung",
+    "notice_title": "Wichtiger Hinweis",
+    "notice_body": "In Kombination mit einer Kniekappe erfordert das offene Underlay ein spezielles Anpassungsverfahren.",
+    "see_instructions": "Anleitung ansehen",
     "note_body_closed": "Stellen Sie sicher, dass das geschlossene Underlay <bold>{{measurement}}</bold> unter der oberen Kante des Liners sitzt.",
     "note_body_open": "Stellen Sie sicher, dass das offene Underlay <bold>{{measurement}}</bold> vom distalen Ende entfernt sitzt.",
     "email_title": "Auswahl speichern!",

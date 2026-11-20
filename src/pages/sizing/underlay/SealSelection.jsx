@@ -1,7 +1,7 @@
 // src/pages/assistance/underlay/SealSelection.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import PageWrapper from "../../../components/PageWrapper";
 import { trackSealSelected } from "../../../components/trackSealSelected";
 
@@ -33,6 +33,7 @@ export default function SealSelection() {
   const lang = pickLang(baseLang(i18n.language));
   const suspension = localStorage.getItem("suspension");
   const isSleeve = suspension === "TT-suspension-sleeve";
+  const options = isSleeve ? ["closed", "open"] : ["open", "closed"];
 
   const handleSelect = (optionId) => {
     if (selected) return;
@@ -62,62 +63,48 @@ export default function SealSelection() {
         </p>
 
         <div className="mt-8 flex flex-col items-center space-y-6">
-          {/* Option: Open Seal (Hidden if TT-suspension-sleeve) */}
-          {!isSleeve && (
-            <button
-              type="button"
-              onClick={() => handleSelect("open-seal")}
-              className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
+          {options.map((option) => (
+            <div
+              key={option}
+              className="w-fit flex flex-col items-center"
             >
-              <div
-                className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
-                  selected === "open-seal"
+              <button
+                type="button"
+                onClick={() => handleSelect(`${option}-seal`)}
+                className={`cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 rounded-xl overflow-hidden transition-all duration-150 flex ${
+                  selected === `${option}-seal`
                     ? "ring-4 ring-[#090C41]" 
-                    : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
+                    : "ring-1 ring-gray-300 hover:ring-2 hover:ring-black"
                 }`}
               >
                 <img
-                  src={SEAL_IMAGES.open[lang] || SEAL_IMAGES.open.en}
-                  alt={t("common:seal.open-title")}
+                  src={SEAL_IMAGES[option][lang] || SEAL_IMAGES[option].en}
+                  alt={t(`common:seal.${option}-title`)}
                   className="h-auto w-full block rounded-md max-w-xs object-cover" 
                 />
-              </div>
+              </button>
               <div className="mt-2 text-center">
                 <p className="text-sm max-w-xs leading-snug text-slate-500 italic">
-                  {t("sealUnderlaySizing.open_description")}
+                  <Trans
+                    ns="pages"
+                    i18nKey={`sealUnderlaySizing.${option}_${
+                      isSleeve ? "exception" : "description"
+                    }`}
+                    components={{
+                      underline: (
+                        <a
+                          href="/User%20Guides/UDTT_OPEN-VACUUM-INSTRUCTIONS.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cursor-pointer underline underline-offset-4 decoration-[1px] hover:font-bold"
+                        />
+                      ),
+                    }}
+                  />
                 </p>
               </div>
-            </button>
-          )}
-
-          {/* Option: Closed Seal */}
-          <button
-            type="button"
-            onClick={() => handleSelect("closed-seal")}
-            className="cursor-pointer focus:outline-none transition-all w-fit flex flex-col items-center group"
-          >
-            <div
-              className={`rounded-xl overflow-hidden transition-all duration-150 flex ${
-                selected === "closed-seal"
-                  ? "ring-4 ring-[#090C41]" 
-                  : "ring-1 ring-gray-300 group-hover:ring-2 group-hover:ring-black"
-              }`}
-            >
-              <img
-                src={SEAL_IMAGES.closed[lang] || SEAL_IMAGES.closed.en}
-                alt={t("common:seal.closed-title")}
-                className="h-auto w-full block rounded-md max-w-xs object-cover" 
-              />
             </div>
-            <div className="mt-2 text-center">
-              <p className="text-sm max-w-xs leading-snug text-slate-500 italic">
-                {isSleeve
-                  ? t("sealUnderlaySizing.closed_exception")
-                  : t("sealUnderlaySizing.closed_description")}
-              </p>
-            </div>
-          </button>
-
+          ))}
         </div>
       </div>
     </PageWrapper>
