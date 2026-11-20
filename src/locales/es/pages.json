@@ -326,8 +326,8 @@
   "sealUnderlaySizing": {
     "title": "Selección de sello",
     "description": "Seleccione el diseño de su Underlay",
-    "open_description": "Recomendamos el diseño Abierto, ya que permite que el Underlay sobresalga por encima del liner y libere el exceso de humedad.",
-    "closed_description": "Diseño más convencional para todos los tipos de suspensión",
+    "open_description": "Contacto entre la piel y el liner en el extremo distal. El sudor se absorbe y se expulsa hacia fuera del liner. Ideal para usar con liners de bloqueo y de anillo de sellado.",
+    "closed_description": "Contacto entre la piel y el liner en el extremo proximal. El sudor se absorbe, con cobertura completa del extremo distal. Preferido para extremidades cónicas o para usar con fundas de sellado.",
     "closed_exception": "El Underlay Cerrado se recomienda para su tipo de suspensión.",
     "open_exception": "Cómo usar el <underline>Underlay Abierto con sistemas de vacío</underline>."
   },

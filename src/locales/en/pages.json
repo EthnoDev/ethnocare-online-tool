@@ -293,8 +293,8 @@
   "sealUnderlaySizing": {
     "title": "Seal Selection",
     "description": "Select your Underlay design",
-    "open_description": "We recommend using the Open sealing position as it allows the Underlay to stick above the liner and release excess moisture.",
-    "closed_description": "More conventional design for all suspension types",
+    "open_description": "Skin-to-liner contact at the distal end. Sweat is absorbed and wicked out of the liner. Ideal for use with locking and sealing-ring liners.",
+    "closed_description": "Skin-to-liner contact at the proximal end. Sweat is absorbed, with full distal-end coverage. Preferred for conical limbs or use with sealing sleeves.",
     "closed_exception": "The Closed Underlay is recommended for your type of suspension.",
     "open_exception": "How to use the <underline>Open Underlay with vacuum systems</underline>."
   },

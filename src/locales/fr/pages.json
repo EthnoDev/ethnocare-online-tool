@@ -326,8 +326,8 @@
   "sealUnderlaySizing": {
     "title": "Sélection du joint",
     "description": "Sélectionnez le design de votre Underlay",
-    "open_description": "Nous recommandons la configuration ouverte, car elle permet à l'Underlay de dépasser du liner et d'évacuer l'excès d'humidité.",
-    "closed_description": "Design plus conventionnel pour tous les types de suspension",
+    "open_description": "Contact entre la peau et le liner à l'extrémité distale. La transpiration est absorbée et évacuée hors du liner. Idéal avec les liners à verrouillage et à anneau d'étanchéité.",
+    "closed_description": "Contact peau-liner à l'extrémité proximale. Absorbe la transpiration et couvre entièrement l'extrémité distale. Recommandé en cas de membre conique ou avec un manchon d'étanchéité.",
     "closed_exception": "L'Underlay Fermé est recommandé pour votre type de suspension.",
     "open_exception": "Comment utiliser l'<underline>Underlay Ouvert avec les systèmes vacuum</underline>."
   },

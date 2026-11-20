@@ -326,8 +326,8 @@
   "sealUnderlaySizing": {
     "title": "Dichtungsauswahl",
     "description": "Wählen Sie das Design Ihres Underlays",
-    "open_description": "Wir empfehlen das offene Design, da das Underlay so über den Liner hinausragen und überschüssige Feuchtigkeit ableiten kann.",
-    "closed_description": "Konventionelleres Design für alle Suspensionssysteme",
+    "open_description": "Haut-Liner-Kontakt am distalen Ende. Schweiß wird absorbiert und aus dem Liner nach außen transportiert. Ideal für die Verwendung mit Linern mit Verriegelung und Dichtungsring.",
+    "closed_description": "Haut-Liner-Kontakt am proximalen Ende. Schweiß wird absorbiert, während das distale Ende vollständig abgedeckt ist. Bevorzugt bei konischen Gliedmaßen oder in Kombination mit Dichtmanschetten.",
     "closed_exception": "Das geschlossene Underlay wird für Ihr Suspensionssystem empfohlen.",
     "open_exception": "So verwenden Sie das <underline>offene Underlay mit Vakuumsystemen</underline>."
   },
