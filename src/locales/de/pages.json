@@ -42,6 +42,7 @@
 
   "assistanceToolReturn": {
     "title": "Unterstützungstool",
+    "description": "Haben Sie das Ethnocare-Unterstützungstool ausprobiert?*",
     "descriptionClinic": "Haben Sie die im Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
     "descriptionDistributor": "Hat der Kunde die im Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
     "option1": "Ja, weiter",

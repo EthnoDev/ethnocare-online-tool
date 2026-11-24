@@ -38,10 +38,11 @@
   },
   "assistanceToolReturn": {
     "title": "Assistance Tool",
+    "description": "Did you try the Ethnocare assistance tool?*",
     "descriptionClinic": "Did you try the troubleshooting steps provided in the assistance tool?",
     "descriptionDistributor": "Did the returnee try the troubleshooting steps provided in the assistance tool?",
-    "option1": "Yes, Continue",
-    "option2": "No, Let's Try"
+    "option1": "Yes, continue",
+    "option2": "No, let's try"
   },
   "welcomeAssistance": {
     "title": "Assistance Tool",

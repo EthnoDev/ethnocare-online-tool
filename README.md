@@ -43,7 +43,8 @@ documents.
 
 ### Returns
 
-- The home-page Return option is a placeholder and does not yet start a flow.
+- The Return section opens an assistance-tool question; the remaining return
+  flow is not yet available.
 
 ### Languages and supporting tools
 
@@ -147,7 +148,7 @@ src/
     Welcome.jsx           Tool selection and external FAQ link
     sizing/               Product sizing flows and results
     assistance/           User guides and troubleshooting flows
-    return/               Placeholder for the future return flow
+    return/               Return flow pages
     distributors/         Product selection, regions, and distributor results
 public/                   Static PDFs, sizing charts, user guides, and icons
 ```
@@ -163,6 +164,7 @@ welcome page.
 | Home | `/` | Choose a tool or open the external FAQ |
 | Sizing | `/sizing` | Units, amputation type, product, product-specific measurements, result |
 | Assistance | `/assistance` | Amputation type, product, user guide or troubleshooting |
+| Return | `/return` | Assistance-tool question (flow in progress) |
 | Distributors | `/distributors` | Product, region, distributor list |
 
 The distributor entry route redirects to `/distributors/product`. The legacy

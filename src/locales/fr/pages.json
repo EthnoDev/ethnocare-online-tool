@@ -42,6 +42,7 @@
 
   "assistanceToolReturn": {
     "title": "Outil d'assistance",
+    "description": "Avez-vous essayé l'outil d'assistance Ethnocare ?*",
     "descriptionClinic": "Avez-vous essayé les étapes de dépannage fournies dans l'outil d'assistance ?",
     "descriptionDistributor": "Le client a-t-il essayé les étapes de dépannage fournies dans l'outil d'assistance ?",
     "option1": "Oui, continuer",

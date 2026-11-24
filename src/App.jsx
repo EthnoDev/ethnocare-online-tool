@@ -61,6 +61,7 @@ import AssistanceSmartPump from "./pages/assistance/problems/InflDefl/SmartPump"
 import AssistanceAirLoss from "./pages/assistance/problems/AirLoss/AirLoss";
 import AssistancePumpMaintenance from "./pages/assistance/problems/AirLoss/PumpMaintenance";
 import AssistanceReturn from "./pages/assistance/problems/AirLoss/Return";
+import ReturnAssistanceTool from "./pages/return/AssistanceTool";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -68,6 +69,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<MainWelcome />} />
+        <Route path="/return" element={<ReturnAssistanceTool />} />
         <Route path="/distributors" element={<Navigate to="/distributors/product" replace />} />
         <Route path="/distributors/amputation" element={<Navigate to="/distributors/product" replace />} />
         <Route path="/distributors/product" element={<DistributorsProductSelection />} />

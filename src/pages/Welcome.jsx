@@ -52,6 +52,10 @@ export default function Welcome() {
           <SelectableOption
             label={t("welcome.option6")}
             description={t("welcome.description6")}
+            selected={goingTo === "return"}
+            onClick={() =>
+              delayedNav("return", () => navigate("/return"))
+            }
           />
 
           <SelectableOption
