@@ -13,6 +13,9 @@ export default function BasicInformations() {
         <p className="mt-3 text-center text-base text-slate-500">
           {t("basicInformationsReturn.description")}
         </p>
+        <p className="mt-8 text-left text-xl font-semibold">
+          {t("basicInformationsReturn.product")}
+        </p>
       </div>
     </PageWrapper>
   );

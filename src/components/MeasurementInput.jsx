@@ -276,8 +276,10 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
       <form onSubmit={handleSubmit} className="relative z-0 space-y-3">
         <div
           ref={unitSelectorRef}
-          className={`relative flex w-full rounded-lg border bg-white transition-colors focus-within:border-black ${
-            error ? "border-red-500" : "border-gray-300 hover:border-black"
+          className={`relative flex w-full rounded-md border bg-white focus-within:border-transparent focus-within:hover:border-transparent focus-within:ring-2 ${
+            error
+              ? "border-red-400 focus-within:ring-red-400"
+              : "border-gray-200 hover:border-black focus-within:ring-[#090C41]"
           }`}
           aria-invalid={!!error}
         >
@@ -288,13 +290,13 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
             value={value}
             onChange={handleChange}
             placeholder={t("inputs.enter_measurement")}
-            className="min-w-0 w-full rounded-l-lg px-4 py-3 font-sans focus:outline-none"
+            className="min-w-0 w-full rounded-l-md px-4 py-3 font-sans focus:outline-none"
             autoFocus
           />
           <button
             ref={unitButtonRef}
             type="button"
-            className="flex w-[76px] shrink-0 cursor-pointer items-center justify-center gap-2 rounded-r-lg border-l border-gray-300 px-3 font-sans text-black hover:font-bold focus:outline-none focus-visible:font-bold focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-black"
+            className="flex w-[76px] shrink-0 cursor-pointer items-center justify-center gap-2 rounded-r-md border-l border-gray-300 px-3 font-sans text-black hover:font-bold focus:outline-none focus-visible:font-bold focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-black"
             aria-label={`Measurement unit: ${unit}`}
             aria-haspopup="true"
             aria-expanded={isUnitMenuOpen}
@@ -312,7 +314,7 @@ export default function MeasurementInput({ product, measurement, onConfirm }) {
           </button>
           {isUnitMenuOpen && (
             <div
-              className="absolute right-0 top-full z-20 w-[76px] rounded-b-lg border-x border-b border-t-0 border-gray-300 bg-white shadow-sm"
+              className="absolute right-0 top-full z-20 w-[76px] rounded-b-md border-x border-b border-t-0 border-gray-300 bg-white shadow-sm"
             >
               <button
                 type="button"

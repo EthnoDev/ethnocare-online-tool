@@ -47,7 +47,8 @@
   },
   "basicInformationsReturn": {
     "title": "Basic Informations",
-    "description": "Fill out the return information"
+    "description": "Fill out the return information",
+    "product": "Product :"
   },
   "welcomeAssistance": {
     "title": "Assistance Tool",

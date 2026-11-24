@@ -52,7 +52,8 @@
 
   "basicInformationsReturn": {
     "title": "Informations de base",
-    "description": "Remplissez les informations de retour"
+    "description": "Remplissez les informations de retour",
+    "product": "Produit :"
   },
 
   "welcomeAssistance": {
