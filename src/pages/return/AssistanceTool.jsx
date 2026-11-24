@@ -1,10 +1,20 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 import SelectableOption from "../../components/SelectableOption";
 import RedirectLogo from "../../assets/redirect-logo.svg";
 
 export default function AssistanceTool() {
   const { t } = useTranslation("pages");
+  const navigate = useNavigate();
+  const [isContinuing, setIsContinuing] = useState(false);
+
+  const handleContinue = () => {
+    if (isContinuing) return;
+    setIsContinuing(true);
+    setTimeout(() => navigate("/return/basic-information"), 200);
+  };
 
   return (
     <PageWrapper showBack={true} backTo="/" code={true}>
@@ -17,7 +27,11 @@ export default function AssistanceTool() {
         </p>
 
         <div className="mt-8 flex flex-col items-center space-y-6">
-          <SelectableOption label={t("assistanceToolReturn.option1")} />
+          <SelectableOption
+            label={t("assistanceToolReturn.option1")}
+            selected={isContinuing}
+            onClick={handleContinue}
+          />
           <SelectableOption
             onClick={() =>
               window.open("/assistance/product", "_blank", "noopener,noreferrer")

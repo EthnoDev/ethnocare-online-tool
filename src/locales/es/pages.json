@@ -49,6 +49,11 @@
     "option2": "No, intentemos"
   },
 
+  "basicInformationsReturn": {
+    "title": "Información básica",
+    "description": "Complete la información de devolución"
+  },
+
   "welcomeAssistance": {
     "title": "Herramienta de asistencia",
     "description": "Use esta herramienta para obtener ayuda y soporte con los productos Ethnocare",

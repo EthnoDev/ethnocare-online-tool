@@ -43,8 +43,8 @@ documents.
 
 ### Returns
 
-- The Return section opens an assistance-tool question; the remaining return
-  flow is not yet available.
+- The Return section includes an assistance-tool question and a basic
+  information page; the remaining return flow is not yet available.
 
 ### Languages and supporting tools
 
@@ -164,7 +164,7 @@ welcome page.
 | Home | `/` | Choose a tool or open the external FAQ |
 | Sizing | `/sizing` | Units, amputation type, product, product-specific measurements, result |
 | Assistance | `/assistance` | Amputation type, product, user guide or troubleshooting |
-| Return | `/return` | Assistance-tool question (flow in progress) |
+| Return | `/return` | Assistance-tool question, basic information (flow in progress) |
 | Distributors | `/distributors` | Product, region, distributor list |
 
 The distributor entry route redirects to `/distributors/product`. The legacy

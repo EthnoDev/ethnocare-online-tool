@@ -44,6 +44,10 @@
     "option1": "Yes, continue",
     "option2": "No, let's try"
   },
+  "basicInformationsReturn": {
+    "title": "Basic Informations",
+    "description": "Fill out the return information"
+  },
   "welcomeAssistance": {
     "title": "Assistance Tool",
     "description": "Use this tool to get help and support with Ethnocare products",

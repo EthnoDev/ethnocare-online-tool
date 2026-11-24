@@ -49,6 +49,11 @@
     "option2": "Nein, versuchen wir es"
   },
 
+  "basicInformationsReturn": {
+    "title": "Grundinformationen",
+    "description": "Füllen Sie die Rückgabeinformationen aus"
+  },
+
   "welcomeAssistance": {
     "title": "Unterstützungstool",
     "description": "Verwenden Sie dieses Tool, um Hilfe und Unterstützung zu Ethnocare-Produkten zu erhalten",
