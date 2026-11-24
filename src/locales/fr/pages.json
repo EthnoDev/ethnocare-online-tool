@@ -46,7 +46,8 @@
     "descriptionClinic": "Avez-vous essayé les étapes de dépannage fournies dans l'outil d'assistance ?",
     "descriptionDistributor": "Le client a-t-il essayé les étapes de dépannage fournies dans l'outil d'assistance ?",
     "option1": "Oui, continuer",
-    "option2": "Non, essayons"
+    "option2": "Non, essayons",
+    "note": "*Si ce n'est pas le cas, essayez notre outil d'assistance pour voir s'il peut vous proposer une solution avant de poursuivre le retour."
   },
 
   "basicInformationsReturn": {

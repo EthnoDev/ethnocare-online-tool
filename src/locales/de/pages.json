@@ -46,7 +46,8 @@
     "descriptionClinic": "Haben Sie die im Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
     "descriptionDistributor": "Hat der Kunde die im Unterstützungstool bereitgestellten Schritte zur Fehlerbehebung ausprobiert?",
     "option1": "Ja, weiter",
-    "option2": "Nein, versuchen wir es"
+    "option2": "Nein, versuchen wir es",
+    "note": "*Falls nicht, probieren Sie unser Unterstützungstool aus, um zu sehen, ob es eine Lösung bieten kann, bevor Sie mit der Rückgabe fortfahren."
   },
 
   "basicInformationsReturn": {

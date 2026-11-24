@@ -49,6 +49,9 @@ export default function AssistanceTool() {
             }
           />
         </div>
+        <p className="mx-auto mt-6 max-w-xs text-center text-sm text-slate-500">
+          {t("assistanceToolReturn.note")}
+        </p>
       </div>
     </PageWrapper>
   );
