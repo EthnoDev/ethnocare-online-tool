@@ -44,7 +44,8 @@ documents.
 ### Returns
 
 - The Return section includes an assistance-tool question and a basic
-  information page with a product selector and initial-fit and failure dates.
+  information page with product and return-reason selectors and initial-fit and
+  failure dates. The last four return reasons show an additional-comments field.
   The date fields use MM/DD/YYYY; validation and the remaining return flow are
   not yet available.
 

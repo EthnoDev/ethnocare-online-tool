@@ -3,6 +3,11 @@ import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
 
 const products = ["Overlay TT", "Overlay TF", "Underlay TT", "Liner TT", "Liner TF"];
+const returnReasons = [
+  "airLeak", "badFit", "fabricTear", "tornHandle", "bladderBulge",
+  "incorrectProduct", "orderError", "trialReturn", "other",
+];
+const reasonsWithAdditionalComments = ["incorrectProduct", "orderError", "trialReturn", "other"];
 const fitDatePlaceholder = "MM/DD/YYYY";
 
 const formatFitDate = (digits) =>
@@ -91,33 +96,30 @@ function DateSection({ id, title, note, checkboxLabel, neverFitted, onNeverFitte
   );
 }
 
-export default function BasicInformations() {
-  const { t } = useTranslation("pages");
-  const [product, setProduct] = useState("");
-  const [neverFitted, setNeverFitted] = useState(false);
-  const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
-  const productMenuRef = useRef(null);
-  const productButtonRef = useRef(null);
+function DropdownSection({ id, title, placeholder, options, value, onChange, className }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
+  const selectedIndex = options.findIndex((option) => option.value === value);
 
   useEffect(() => {
-    if (!isProductMenuOpen) return undefined;
+    if (!isOpen) return undefined;
 
-    const options = productMenuRef.current.querySelectorAll('[role="option"]');
-    const selectedIndex = products.indexOf(product);
-    options[selectedIndex < 0 ? 0 : selectedIndex]?.focus();
+    const optionElements = menuRef.current.querySelectorAll('[role="option"]');
+    optionElements[selectedIndex < 0 ? 0 : selectedIndex]?.focus();
 
     const handleOutsidePointerDown = (event) => {
-      if (!productMenuRef.current?.contains(event.target)) {
+      if (!menuRef.current?.contains(event.target)) {
         event.preventDefault();
         event.stopPropagation();
       }
     };
     const handleOutsideClick = (event) => {
-      if (!productMenuRef.current?.contains(event.target)) {
+      if (!menuRef.current?.contains(event.target)) {
         event.preventDefault();
         event.stopPropagation();
-        setIsProductMenuOpen(false);
-        productButtonRef.current?.focus();
+        setIsOpen(false);
+        buttonRef.current?.focus();
       }
     };
     document.addEventListener("pointerdown", handleOutsidePointerDown, true);
@@ -126,30 +128,104 @@ export default function BasicInformations() {
       document.removeEventListener("pointerdown", handleOutsidePointerDown, true);
       document.removeEventListener("click", handleOutsideClick, true);
     };
-  }, [isProductMenuOpen, product]);
+  }, [isOpen, selectedIndex]);
 
-  const handleProductKeyDown = (event) => {
-    if (event.key === "Escape" && isProductMenuOpen) {
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape" && isOpen) {
       event.preventDefault();
-      setIsProductMenuOpen(false);
-      productButtonRef.current?.focus();
+      setIsOpen(false);
+      buttonRef.current?.focus();
     } else if (event.key === "ArrowDown" || event.key === "ArrowUp") {
       event.preventDefault();
-      if (!isProductMenuOpen) {
-        setIsProductMenuOpen(true);
+      if (!isOpen) {
+        setIsOpen(true);
         return;
       }
-      const options = Array.from(productMenuRef.current.querySelectorAll('[role="option"]'));
-      const currentIndex = options.indexOf(document.activeElement);
+      const optionElements = Array.from(menuRef.current.querySelectorAll('[role="option"]'));
+      const currentIndex = optionElements.indexOf(document.activeElement);
       const direction = event.key === "ArrowDown" ? 1 : -1;
-      const nextIndex = (currentIndex + direction + options.length) % options.length;
-      options[nextIndex]?.focus();
-    } else if (isProductMenuOpen && (event.key === "Home" || event.key === "End")) {
+      const nextIndex = (currentIndex + direction + optionElements.length) % optionElements.length;
+      optionElements[nextIndex]?.focus();
+    } else if (isOpen && (event.key === "Home" || event.key === "End")) {
       event.preventDefault();
-      const options = productMenuRef.current.querySelectorAll('[role="option"]');
-      options[event.key === "Home" ? 0 : options.length - 1]?.focus();
+      const optionElements = menuRef.current.querySelectorAll('[role="option"]');
+      optionElements[event.key === "Home" ? 0 : optionElements.length - 1]?.focus();
     }
   };
+
+  return (
+    <section className={className}>
+      <label id={`${id}-label`} htmlFor={id} className="block text-left text-xl font-semibold">
+        {title}
+      </label>
+      <div
+        ref={menuRef}
+        className="relative mt-2"
+        onKeyDown={handleKeyDown}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) setIsOpen(false);
+        }}
+      >
+        <button
+          ref={buttonRef}
+          id={id}
+          type="button"
+          aria-labelledby={`${id}-label ${id}-value`}
+          aria-haspopup="listbox"
+          aria-expanded={isOpen}
+          aria-controls={isOpen ? `${id}-options` : undefined}
+          onClick={() => setIsOpen((open) => !open)}
+          className={`flex h-10 w-full cursor-pointer items-center justify-between rounded-md border border-gray-200 bg-white px-4 text-left text-base outline-none hover:border-black focus:border-transparent focus:ring-2 focus:ring-[#090C41] ${
+            value ? "text-black" : "text-gray-400"
+          }`}
+        >
+          <span id={`${id}-value`}>{selectedIndex < 0 ? placeholder : options[selectedIndex].label}</span>
+          <svg
+            aria-hidden="true"
+            className={`h-3 w-3 text-black transition-transform ${isOpen ? "rotate-180" : ""}`}
+            viewBox="0 0 12 8"
+            fill="none"
+          >
+            <path d="m1 1 5 5 5-5" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
+        </button>
+        {isOpen && (
+          <div
+            id={`${id}-options`}
+            role="listbox"
+            aria-labelledby={`${id}-label`}
+            className="w-full rounded-b-md border-x border-b border-t-0 border-gray-300 bg-white shadow-sm"
+          >
+            {options.map((option) => (
+              <button
+                key={option.value}
+                type="button"
+                role="option"
+                aria-selected={value === option.value}
+                tabIndex={-1}
+                className="block w-full cursor-pointer px-3 py-3 text-center font-sans text-black hover:font-bold focus-visible:font-bold focus-visible:outline-none"
+                onClick={() => {
+                  onChange(option.value);
+                  setIsOpen(false);
+                  buttonRef.current?.focus();
+                }}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
+export default function BasicInformations() {
+  const { t } = useTranslation("pages");
+  const [product, setProduct] = useState("");
+  const [reason, setReason] = useState("");
+  const [neverFitted, setNeverFitted] = useState(false);
+  const [additionalComments, setAdditionalComments] = useState("");
 
   return (
     <PageWrapper showBack={true} backTo="/return" code={true}>
@@ -160,67 +236,15 @@ export default function BasicInformations() {
         <p className="mt-3 text-center text-base text-slate-500">
           {t("basicInformationsReturn.description")}
         </p>
-        <label id="return-product-label" htmlFor="return-product" className="mt-8 block text-left text-xl font-semibold">
-          {t("basicInformationsReturn.product")}
-        </label>
-        <div
-          ref={productMenuRef}
-          className="relative mt-2"
-          onKeyDown={handleProductKeyDown}
-          onBlur={(event) => {
-            if (!event.currentTarget.contains(event.relatedTarget)) setIsProductMenuOpen(false);
-          }}
-        >
-          <button
-            ref={productButtonRef}
-            id="return-product"
-            type="button"
-            aria-labelledby="return-product-label return-product-value"
-            aria-haspopup="listbox"
-            aria-expanded={isProductMenuOpen}
-            aria-controls={isProductMenuOpen ? "return-product-options" : undefined}
-            onClick={() => setIsProductMenuOpen((open) => !open)}
-            className={`flex h-10 w-full cursor-pointer items-center justify-between rounded-md border border-gray-200 bg-white px-4 text-left text-base outline-none hover:border-black focus:border-transparent focus:ring-2 focus:ring-[#090C41] ${
-              product ? "text-black" : "text-gray-400"
-            }`}
-          >
-            <span id="return-product-value">{product || t("basicInformationsReturn.productPlaceholder")}</span>
-            <svg
-              aria-hidden="true"
-              className={`h-3 w-3 text-black transition-transform ${isProductMenuOpen ? "rotate-180" : ""}`}
-              viewBox="0 0 12 8"
-              fill="none"
-            >
-              <path d="m1 1 5 5 5-5" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
-          </button>
-          {isProductMenuOpen && (
-            <div
-              id="return-product-options"
-              role="listbox"
-              aria-labelledby="return-product-label"
-              className="absolute left-0 top-full z-20 w-full rounded-b-md border-x border-b border-t-0 border-gray-300 bg-white shadow-sm"
-            >
-              {products.map((option) => (
-                <button
-                  key={option}
-                  type="button"
-                  role="option"
-                  aria-selected={product === option}
-                  tabIndex={-1}
-                  className="block w-full cursor-pointer px-3 py-3 text-center font-sans text-black hover:font-bold focus-visible:font-bold focus-visible:outline-none"
-                  onClick={() => {
-                    setProduct(option);
-                    setIsProductMenuOpen(false);
-                    productButtonRef.current?.focus();
-                  }}
-                >
-                  {option}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
+        <DropdownSection
+          id="return-product"
+          title={t("basicInformationsReturn.product")}
+          placeholder={t("basicInformationsReturn.productPlaceholder")}
+          options={products.map((option) => ({ value: option, label: option }))}
+          value={product}
+          onChange={setProduct}
+          className="mt-8"
+        />
         <DateSection
           id="return-initial-fit-date"
           title={t("basicInformationsReturn.initialFitDate")}
@@ -237,6 +261,39 @@ export default function BasicInformations() {
           neverFitted={neverFitted}
           onNeverFittedChange={setNeverFitted}
         />
+        <DropdownSection
+          id="return-reason"
+          title={t("basicInformationsReturn.reason")}
+          placeholder={t("basicInformationsReturn.reasonPlaceholder")}
+          options={returnReasons.map((option) => ({
+            value: option,
+            label: t(`basicInformationsReturn.returnReasons.${option}`),
+          }))}
+          value={reason}
+          onChange={setReason}
+          className="mt-6"
+        />
+        {reasonsWithAdditionalComments.includes(reason) && (
+          <section className="mt-4">
+            <h2 id="return-additional-comments-label" className="text-left text-xl font-semibold">
+              {t("basicInformationsReturn.additionalComments")}
+            </h2>
+            <p id="return-additional-comments-description" className="text-left text-sm text-slate-600">
+              {t("basicInformationsReturn.additionalCommentsDescription")}
+            </p>
+            <textarea
+              id="return-additional-comments"
+              name="additionalComments"
+              rows={5}
+              aria-labelledby="return-additional-comments-label"
+              aria-describedby="return-additional-comments-description"
+              placeholder={t("basicInformationsReturn.additionalCommentsPlaceholder")}
+              value={additionalComments}
+              onChange={(event) => setAdditionalComments(event.target.value)}
+              className="mt-2 block w-full rounded-md border border-gray-200 bg-white px-4 py-3 text-base outline-none placeholder-gray-400 hover:border-black focus:border-transparent focus:ring-2 focus:ring-[#090C41]"
+            />
+          </section>
+        )}
       </div>
     </PageWrapper>
   );

@@ -53,7 +53,23 @@
     "initialFitDate": "Initial fit date :",
     "productFailureDate": "Failure date :",
     "initialFitDateNote": "An approximate date is acceptable",
-    "neverFitted": "The product has never been fitted"
+    "neverFitted": "The product has never been fitted",
+    "reason": "Reason of return :",
+    "reasonPlaceholder": "Reason",
+    "additionalComments": "Additional comments :",
+    "additionalCommentsPlaceholder": "Example message...",
+    "additionalCommentsDescription": "Please fill in additional comments to help us have a better understanding of the issue.",
+    "returnReasons": {
+      "airLeak": "Air leak",
+      "badFit": "Bad fit",
+      "fabricTear": "Fabric tear",
+      "tornHandle": "Torn handle",
+      "bladderBulge": "Bladder bulge",
+      "incorrectProduct": "Incorrect product",
+      "orderError": "Order error",
+      "trialReturn": "Trial return",
+      "other": "Other"
+    }
   },
   "welcomeAssistance": {
     "title": "Assistance Tool",

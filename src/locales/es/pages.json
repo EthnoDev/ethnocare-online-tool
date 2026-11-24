@@ -58,7 +58,23 @@
     "initialFitDate": "Fecha de ajuste inicial:",
     "productFailureDate": "Fecha de fallo:",
     "initialFitDateNote": "Se acepta una fecha aproximada",
-    "neverFitted": "El producto nunca se ha ajustado"
+    "neverFitted": "El producto nunca se ha ajustado",
+    "reason": "Motivo de la devolución:",
+    "reasonPlaceholder": "Motivo",
+    "additionalComments": "Comentarios adicionales:",
+    "additionalCommentsPlaceholder": "Ejemplo de mensaje...",
+    "additionalCommentsDescription": "Añada comentarios adicionales para ayudarnos a comprender mejor su problema.",
+    "returnReasons": {
+      "airLeak": "Fuga de aire",
+      "badFit": "Mal ajuste",
+      "fabricTear": "Desgarro del tejido",
+      "tornHandle": "Asa rota",
+      "bladderBulge": "Abultamiento de la cámara de aire",
+      "incorrectProduct": "Producto incorrecto",
+      "orderError": "Error en el pedido",
+      "trialReturn": "Devolución tras una prueba",
+      "other": "Otro"
+    }
   },
 
   "welcomeAssistance": {

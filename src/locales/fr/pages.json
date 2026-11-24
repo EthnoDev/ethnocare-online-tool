@@ -58,7 +58,23 @@
     "initialFitDate": "Date de l'ajustement initial :",
     "productFailureDate": "Date de défaillance :",
     "initialFitDateNote": "Une date approximative est acceptable",
-    "neverFitted": "Le produit n'a jamais été ajusté"
+    "neverFitted": "Le produit n'a jamais été ajusté",
+    "reason": "Raison du retour :",
+    "reasonPlaceholder": "Raison",
+    "additionalComments": "Commentaires supplémentaires :",
+    "additionalCommentsPlaceholder": "Exemple de message...",
+    "additionalCommentsDescription": "Veuillez ajouter des commentaires pour nous aider à mieux comprendre le problème.",
+    "returnReasons": {
+      "airLeak": "Fuite d'air",
+      "badFit": "Mauvais ajustement",
+      "fabricTear": "Déchirure du tissu",
+      "tornHandle": "Poignée déchirée",
+      "bladderBulge": "Gonflement de la poche d'air",
+      "incorrectProduct": "Produit incorrect",
+      "orderError": "Erreur de commande",
+      "trialReturn": "Retour après essai",
+      "other": "Autre"
+    }
   },
 
   "welcomeAssistance": {
