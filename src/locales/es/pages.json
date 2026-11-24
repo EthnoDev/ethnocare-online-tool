@@ -53,7 +53,8 @@
   "basicInformationsReturn": {
     "title": "Información básica",
     "description": "Complete la información de devolución",
-    "product": "Producto:"
+    "product": "Producto:",
+    "productPlaceholder": "Producto Ethnocare"
   },
 
   "welcomeAssistance": {

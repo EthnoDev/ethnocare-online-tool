@@ -96,7 +96,7 @@ export default function BasicInformations() {
               product ? "text-black" : "text-gray-400"
             }`}
           >
-            <span id="return-product-value">{product || "..."}</span>
+            <span id="return-product-value">{product || t("basicInformationsReturn.productPlaceholder")}</span>
             <svg
               aria-hidden="true"
               className={`h-3 w-3 text-black transition-transform ${isProductMenuOpen ? "rotate-180" : ""}`}
