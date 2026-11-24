@@ -44,7 +44,8 @@ documents.
 ### Returns
 
 - The Return section includes an assistance-tool question and a basic
-  information page; the remaining return flow is not yet available.
+  information page with a product selector; the remaining return flow is not
+  yet available.
 
 ### Languages and supporting tools
 
