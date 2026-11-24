@@ -50,6 +50,11 @@ export default function Welcome() {
           />
 
           <SelectableOption
+            label={t("welcome.option6")}
+            description={t("welcome.description6")}
+          />
+
+          <SelectableOption
             label={t("welcome.option3")}
             description={t("welcome.description3")}
             selected={goingTo === "distributors"}

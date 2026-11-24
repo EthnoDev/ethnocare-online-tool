@@ -11,7 +11,9 @@
     "option4": "FAQ",
     "description4": "Finden Sie Antworten auf häufig gestellte Fragen zu Ethnocare-Produkten",
     "option5": "Empfehlung",
-    "description5": "Finden Sie die für Ihre Bedürfnisse am besten geeigneten Ethnocare-Produkte"
+    "description5": "Finden Sie die für Ihre Bedürfnisse am besten geeigneten Ethnocare-Produkte",
+    "option6": "Rückgabe",
+    "description6": "Geben Sie ein Ethnocare-Produkt zurück"
   },
 
   "welcomeRecommendation": {

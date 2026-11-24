@@ -41,6 +41,10 @@ documents.
 - Region and country labels are sorted alphabetically in the selected language.
 - No amputation selection is required.
 
+### Returns
+
+- The home-page Return option is a placeholder and does not yet start a flow.
+
 ### Languages and supporting tools
 
 - English, French, Spanish, and German, with automatic language detection and a
@@ -143,6 +147,7 @@ src/
     Welcome.jsx           Tool selection and external FAQ link
     sizing/               Product sizing flows and results
     assistance/           User guides and troubleshooting flows
+    return/               Placeholder for the future return flow
     distributors/         Product selection, regions, and distributor results
 public/                   Static PDFs, sizing charts, user guides, and icons
 ```

@@ -11,7 +11,9 @@
     "option4":"FAQ",
     "description4":"Find answers to common questions about Ethnocare products",
     "option5":"Recommendation",
-    "description5":"Find the most suitable Ethnocare products for you"
+    "description5":"Find the most suitable Ethnocare products for you",
+    "option6":"Return",
+    "description6":"Return an Ethnocare product"
   },
   "welcomeRecommendation": {
     "title": "Solution Finder",
