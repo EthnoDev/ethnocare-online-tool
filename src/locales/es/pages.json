@@ -56,7 +56,9 @@
     "product": "Producto:",
     "productPlaceholder": "Producto Ethnocare",
     "initialFitDate": "Fecha de ajuste inicial:",
-    "initialFitDateNote": "Se acepta una fecha aproximada"
+    "productFailureDate": "Fecha de fallo:",
+    "initialFitDateNote": "Se acepta una fecha aproximada",
+    "neverFitted": "El producto nunca se ha ajustado"
   },
 
   "welcomeAssistance": {

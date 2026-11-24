@@ -44,8 +44,9 @@ documents.
 ### Returns
 
 - The Return section includes an assistance-tool question and a basic
-  information page with a product selector and a date field. The date field
-  uses MM/DD/YYYY; validation and the remaining return flow are not yet available.
+  information page with a product selector and initial-fit and failure dates.
+  The date fields use MM/DD/YYYY; validation and the remaining return flow are
+  not yet available.
 
 ### Languages and supporting tools
 
