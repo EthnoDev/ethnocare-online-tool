@@ -55,6 +55,7 @@
     "description": "Füllen Sie die Rückgabeinformationen aus",
     "product": "Produkt:",
     "productPlaceholder": "Ethnocare-Produkt",
+    "productRequired": "Bitte wählen Sie das Produkt aus, das zurückgegeben werden soll.",
     "initialFitDate": "Datum der Erstanpassung:",
     "productFailureDate": "Datum des Defekts:",
     "initialFitDateNote": "Ein ungefähres Datum ist ausreichend",

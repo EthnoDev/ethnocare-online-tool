@@ -55,6 +55,7 @@
     "description": "Complete la información de devolución",
     "product": "Producto:",
     "productPlaceholder": "Producto Ethnocare",
+    "productRequired": "Seleccione el producto que desea devolver.",
     "initialFitDate": "Fecha de ajuste inicial:",
     "productFailureDate": "Fecha de fallo:",
     "initialFitDateNote": "Se acepta una fecha aproximada",

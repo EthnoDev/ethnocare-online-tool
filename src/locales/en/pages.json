@@ -50,6 +50,7 @@
     "description": "Fill out the return information",
     "product": "Product :",
     "productPlaceholder": "Ethnocare product",
+    "productRequired": "Please select the product to be returned.",
     "initialFitDate": "Initial fit date :",
     "productFailureDate": "Failure date :",
     "initialFitDateNote": "An approximate date is acceptable",

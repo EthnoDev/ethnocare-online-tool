@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
+import SelectableOption from "../../components/SelectableOption";
 
 const products = ["Overlay TT", "Overlay TF", "Underlay TT", "Liner TT", "Liner TF"];
 const returnReasons = [
@@ -96,7 +97,7 @@ function DateSection({ id, title, note, checkboxLabel, neverFitted, onNeverFitte
   );
 }
 
-function DropdownSection({ id, title, placeholder, options, value, onChange, className }) {
+function DropdownSection({ id, title, placeholder, options, value, onChange, className, error, onRequestOpen }) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
@@ -130,6 +131,11 @@ function DropdownSection({ id, title, placeholder, options, value, onChange, cla
     };
   }, [isOpen, selectedIndex]);
 
+  const openMenu = () => {
+    if (onRequestOpen && !onRequestOpen()) return;
+    setIsOpen(true);
+  };
+
   const handleKeyDown = (event) => {
     if (event.key === "Escape" && isOpen) {
       event.preventDefault();
@@ -138,7 +144,7 @@ function DropdownSection({ id, title, placeholder, options, value, onChange, cla
     } else if (event.key === "ArrowDown" || event.key === "ArrowUp") {
       event.preventDefault();
       if (!isOpen) {
-        setIsOpen(true);
+        openMenu();
         return;
       }
       const optionElements = Array.from(menuRef.current.querySelectorAll('[role="option"]'));
@@ -174,8 +180,11 @@ function DropdownSection({ id, title, placeholder, options, value, onChange, cla
           aria-haspopup="listbox"
           aria-expanded={isOpen}
           aria-controls={isOpen ? `${id}-options` : undefined}
-          onClick={() => setIsOpen((open) => !open)}
-          className={`flex h-10 w-full cursor-pointer items-center justify-between rounded-md border border-gray-200 bg-white px-4 text-left text-base outline-none hover:border-black focus:border-transparent focus:ring-2 focus:ring-[#090C41] ${
+          aria-describedby={error ? `${id}-error` : undefined}
+          onClick={() => isOpen ? setIsOpen(false) : openMenu()}
+          className={`flex h-10 w-full cursor-pointer items-center justify-between rounded-md border bg-white px-4 text-left text-base outline-none focus:border-transparent focus:ring-2 ${
+            error ? "border-red-400 focus:ring-red-400" : "border-gray-200 hover:border-black focus:ring-[#090C41]"
+          } ${
             value ? "text-black" : "text-gray-400"
           }`}
         >
@@ -216,13 +225,19 @@ function DropdownSection({ id, title, placeholder, options, value, onChange, cla
           </div>
         )}
       </div>
+      {error && (
+        <p id={`${id}-error`} className="mt-2 text-left text-sm text-red-600 font-sans" role="alert" aria-live="polite">
+          {error}
+        </p>
+      )}
     </section>
   );
 }
 
 export default function BasicInformations() {
-  const { t } = useTranslation("pages");
+  const { t } = useTranslation(["pages", "common"]);
   const [product, setProduct] = useState("");
+  const [productError, setProductError] = useState(false);
   const [reason, setReason] = useState("");
   const [neverFitted, setNeverFitted] = useState(false);
   const [additionalComments, setAdditionalComments] = useState("");
@@ -242,7 +257,11 @@ export default function BasicInformations() {
           placeholder={t("basicInformationsReturn.productPlaceholder")}
           options={products.map((option) => ({ value: option, label: option }))}
           value={product}
-          onChange={setProduct}
+          onChange={(value) => {
+            setProduct(value);
+            setProductError(false);
+          }}
+          error={productError ? t("basicInformationsReturn.productRequired") : ""}
           className="mt-8"
         />
         <DateSection
@@ -271,6 +290,13 @@ export default function BasicInformations() {
           }))}
           value={reason}
           onChange={setReason}
+          onRequestOpen={() => {
+            if (!product) {
+              setProductError(true);
+              return false;
+            }
+            return true;
+          }}
           className="mt-6"
         />
         {reasonsWithAdditionalComments.includes(reason) && (
@@ -294,6 +320,8 @@ export default function BasicInformations() {
             />
           </section>
         )}
+        <div className="mt-10" />
+        <SelectableOption label={t("common:cta.confirm")} />
       </div>
     </PageWrapper>
   );

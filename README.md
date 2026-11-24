@@ -46,8 +46,9 @@ documents.
 - The Return section includes an assistance-tool question and a basic
   information page with product and return-reason selectors and initial-fit and
   failure dates. The last four return reasons show an additional-comments field.
-  The date fields use MM/DD/YYYY; validation and the remaining return flow are
-  not yet available.
+  A product must be selected before choosing a return reason.
+  The date fields use MM/DD/YYYY; the confirm button is a placeholder, and
+  validation and the remaining return flow are not yet available.
 
 ### Languages and supporting tools
 
