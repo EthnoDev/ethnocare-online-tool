@@ -54,7 +54,9 @@
     "title": "Informations de base",
     "description": "Remplissez les informations de retour",
     "product": "Produit :",
-    "productPlaceholder": "Produit Ethnocare"
+    "productPlaceholder": "Produit Ethnocare",
+    "initialFitDate": "Date de l'ajustement initial :",
+    "initialFitDateNote": "Une date approximative est acceptable"
   },
 
   "welcomeAssistance": {

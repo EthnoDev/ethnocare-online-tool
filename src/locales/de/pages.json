@@ -54,7 +54,9 @@
     "title": "Grundinformationen",
     "description": "Füllen Sie die Rückgabeinformationen aus",
     "product": "Produkt:",
-    "productPlaceholder": "Ethnocare-Produkt"
+    "productPlaceholder": "Ethnocare-Produkt",
+    "initialFitDate": "Datum der Erstanpassung:",
+    "initialFitDateNote": "Ein ungefähres Datum ist ausreichend"
   },
 
   "welcomeAssistance": {

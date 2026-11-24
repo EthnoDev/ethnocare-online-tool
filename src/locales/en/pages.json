@@ -49,7 +49,9 @@
     "title": "Basic Informations",
     "description": "Fill out the return information",
     "product": "Product :",
-    "productPlaceholder": "Ethnocare product"
+    "productPlaceholder": "Ethnocare product",
+    "initialFitDate": "Initial fit date :",
+    "initialFitDateNote": "An approximate date is acceptable"
   },
   "welcomeAssistance": {
     "title": "Assistance Tool",

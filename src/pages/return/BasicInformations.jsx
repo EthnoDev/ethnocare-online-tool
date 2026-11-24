@@ -3,13 +3,21 @@ import { useTranslation } from "react-i18next";
 import PageWrapper from "../../components/PageWrapper";
 
 const products = ["Overlay TT", "Overlay TF", "Underlay TT", "Liner TT", "Liner TF"];
+const fitDatePlaceholder = "MM/DD/YYYY";
+
+const formatFitDate = (digits) =>
+  [digits.slice(0, 2), digits.slice(2, 4), digits.slice(4, 8)]
+    .filter(Boolean)
+    .join("/");
 
 export default function BasicInformations() {
   const { t } = useTranslation("pages");
   const [product, setProduct] = useState("");
+  const [initialFitDate, setInitialFitDate] = useState("");
   const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
   const productMenuRef = useRef(null);
   const productButtonRef = useRef(null);
+  const fitDateInputRef = useRef(null);
 
   useEffect(() => {
     if (!isProductMenuOpen) return undefined;
@@ -61,6 +69,29 @@ export default function BasicInformations() {
       const options = productMenuRef.current.querySelectorAll('[role="option"]');
       options[event.key === "Home" ? 0 : options.length - 1]?.focus();
     }
+  };
+
+  const handleFitDateChange = (event) => {
+    const input = event.target;
+    const position = input.selectionStart;
+    let digits = input.value.replace(/\D/g, "").slice(0, 8);
+    let cursorDigits = Math.min(input.value.slice(0, position).replace(/\D/g, "").length, 8);
+    const previousDigits = initialFitDate.replace(/\D/g, "");
+
+    if (digits === previousDigits) {
+      if (event.nativeEvent.inputType === "deleteContentBackward" && cursorDigits > 0) {
+        digits = digits.slice(0, cursorDigits - 1) + digits.slice(cursorDigits);
+        cursorDigits -= 1;
+      } else if (event.nativeEvent.inputType === "deleteContentForward" && cursorDigits < digits.length) {
+        digits = digits.slice(0, cursorDigits) + digits.slice(cursorDigits + 1);
+      }
+    }
+
+    setInitialFitDate(formatFitDate(digits));
+    const cursorPosition = formatFitDate(digits.slice(0, cursorDigits)).length;
+    requestAnimationFrame(() => {
+      if (document.activeElement === input) input.setSelectionRange(cursorPosition, cursorPosition);
+    });
   };
 
   return (
@@ -132,6 +163,35 @@ export default function BasicInformations() {
               ))}
             </div>
           )}
+        </div>
+        <label htmlFor="return-initial-fit-date" className="mt-6 block text-left text-xl font-semibold">
+          {t("basicInformationsReturn.initialFitDate")}
+        </label>
+        <p id="return-initial-fit-date-note" className="text-left text-sm text-slate-600">
+          {t("basicInformationsReturn.initialFitDateNote")}
+        </p>
+        <div
+          className="mt-2 flex h-10 w-full cursor-text items-center justify-center rounded-md border border-gray-200 bg-white px-4 text-base hover:border-black focus-within:border-transparent focus-within:hover:border-transparent focus-within:ring-2 focus-within:ring-[#090C41]"
+          onClick={() => fitDateInputRef.current?.focus()}
+        >
+          <div className="relative">
+            <span aria-hidden="true" className="pointer-events-none block whitespace-nowrap">
+              <span className="invisible">{initialFitDate}</span>
+              <span className="text-gray-400">{fitDatePlaceholder.slice(initialFitDate.length)}</span>
+            </span>
+            <input
+              ref={fitDateInputRef}
+              id="return-initial-fit-date"
+              type="text"
+              inputMode="numeric"
+              autoComplete="off"
+              aria-describedby="return-initial-fit-date-note"
+              placeholder={fitDatePlaceholder}
+              value={initialFitDate}
+              onChange={handleFitDateChange}
+              className="absolute inset-0 w-full bg-transparent text-left outline-none placeholder-transparent"
+            />
+          </div>
         </div>
       </div>
     </PageWrapper>
